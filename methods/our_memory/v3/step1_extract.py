@@ -1,0 +1,912 @@
+"""
+Our Memory — Step 1: Latent Preference Extraction.
+
+Processes each user's session history through a generate → verify → refine loop
+and writes per-user preference records to a JSONL file.
+
+Supports OpenAI (including vLLM-hosted models) and Google Gemini providers.
+"""
+
+import argparse
+import asyncio
+import json
+import os
+import re
+import sys
+from collections import Counter, defaultdict
+from dataclasses import dataclass, field
+from typing import Any, Dict, List, Optional, Tuple
+
+from tqdm import tqdm
+from openai import AsyncOpenAI
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+
+from src.prompts import (
+    LATENT_PREF_SYSTEM_PROMPT,
+    LATENT_PREF_INITIAL_PROMPT,
+    LATENT_PREF_VERIFIER_PROMPT,
+    LATENT_PREF_REFINEMENT_PROMPT,
+)
+import src.evaluation.metrics as eval_metrics
+
+
+LATENT_PREF_BLIND_REFINEMENT_PROMPT = """
+### Task: Refine Preference Without Verifier Feedback
+
+Review the previous preference abstraction against the accumulated dialogue and API-call evidence already provided in the system context.
+
+You must:
+- Preserve only claims that are directly supported by the logs.
+- Increase abstraction if details are over-specified.
+- Keep the preference actionable for future API argument selection.
+- Do NOT add unsupported details.
+- Do NOT rely on external verifier feedback; no verifier feedback is available.
+
+### Input
+Draft Preference:
+"{previous_draft}"
+
+### Output Format (JSON)
+{{
+  "reasoning": "How the draft was tightened against the evidence",
+  "implicit_pref": "The revised preference constraint"
+}}
+"""
+
+LATENT_PREF_SCORE_VERIFIER_PROMPT = """
+You are a strict Preference Verification Module for a tool-calling memory system.
+
+Your task is to judge whether the candidate preference is safe and useful as
+long-term memory for future API argument selection.
+
+Reject candidates that are merely plausible prose. A candidate should be valid
+only when it is evidence-backed, actionable, and unlikely to add wrong slots in
+future tool calls.
+
+Evaluation Criteria:
+1. Evidence Support:
+   - Claims must be supported by repeated or consistent signals in the logs.
+   - Slot-like claims must identify a stable preference rather than a one-off
+     value from a single request.
+2. Actionability:
+   - The preference must help select or avoid concrete schema-valid API
+     arguments.
+   - Generic claims such as "prefer exact details", "confirm information", or
+     "prioritize verified details" are low actionability unless they map to a
+     concrete future API decision.
+3. Scope Safety:
+   - Reject memories that may over-apply a value to unrelated domains, slots, or
+     future requests.
+   - Reject slot-value lists without a clear applicability scope.
+4. Abstraction:
+   - Reject pure summaries of past actions.
+   - Reject over-specific restatements of exact past slot values unless the
+     evidence shows a stable reusable preference.
+
+### Evidence (Logs)
+**Dialogue**:
+{full_dialogue}
+
+**API Calls**:
+{full_api_calls}
+
+### Candidate Preference to Verify
+{candidate_pref}
+
+### Output Format (JSON)
+{{
+  "valid": true/false,
+  "actionability_score": 1-5,
+  "evidence_support_count": 0,
+  "risk": "none | over_applies_to_unrelated_slots | unsupported_claim | generic_non_actionable | over_specific | hallucination",
+  "unsupported_claims": [],
+  "feedback": "If invalid or risky, give concrete feedback for refinement."
+}}
+"""
+
+try:
+    import google.generativeai as genai
+    GOOGLE_AVAILABLE = True
+except ImportError:
+    GOOGLE_AVAILABLE = False
+
+
+# ---------------------------------------------------------------------------
+# Memory state
+# ---------------------------------------------------------------------------
+
+@dataclass
+class MemoryState:
+    implicit_pref: str = "{}"
+    typed_slot_memories: List[Dict[str, Any]] = field(default_factory=list)
+    accumulated_dialogue: str = ""
+    accumulated_api_calls: List[str] = field(default_factory=list)
+    session_count: int = 0
+    evolution_log: List[Dict] = field(default_factory=list)
+
+
+# ---------------------------------------------------------------------------
+# Preference aggregator
+# ---------------------------------------------------------------------------
+
+class PreferenceAggregator:
+    def __init__(self, model: str, provider: str, api_key: str,
+                 api_base: Optional[str] = None, max_retries: int = 3,
+                 memory_mode: str = "typed_slots_v3",
+                 pref_map: Optional[Dict[str, List[str]]] = None,
+                 v3_min_support: int = 1):
+        self.model = model
+        self.provider = provider.lower()
+        self.api_key = api_key
+        self.api_base = api_base
+        self.max_retries = max_retries
+        self.memory_mode = memory_mode
+        self.pref_map = pref_map or {}
+        self.v3_min_support = max(1, int(v3_min_support))
+
+        valid_memory_modes = {
+            "verified_refine",
+            "verified_refine_v2",
+            "typed_slots_v3",
+            "generation_only",
+            "blind_refine_1",
+            "blind_refine_2",
+            "blind_refine_3",
+        }
+        if self.memory_mode not in valid_memory_modes:
+            raise ValueError(
+                f"Unsupported memory_mode={self.memory_mode}. "
+                f"Choose one of {sorted(valid_memory_modes)}."
+            )
+
+        if self.provider == "openai":
+            self.client = AsyncOpenAI(api_key=self.api_key, base_url=self.api_base)
+        elif self.provider == "google":
+            if not GOOGLE_AVAILABLE:
+                raise ImportError("google-generativeai is required for Google provider.")
+            genai.configure(api_key=self.api_key)
+        else:
+            raise ValueError(f"Unsupported provider: {self.provider}")
+
+    async def _call_llm(self, system_prompt: str, user_prompt: str,
+                        temperature: float = 0.0) -> str:
+        if self.provider == "openai":
+            try:
+                response = await self.client.chat.completions.create(
+                    model=self.model,
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": user_prompt},
+                    ],
+                    temperature=temperature,
+                    max_tokens=2048,
+                    response_format={"type": "json_object"},
+                )
+                return response.choices[0].message.content
+            except Exception as e:
+                print(f"[OpenAI Error] {e}")
+                return "{}"
+
+        elif self.provider == "google":
+            try:
+                model = genai.GenerativeModel(
+                    model_name=self.model,
+                    system_instruction=system_prompt,
+                )
+                generation_config = genai.types.GenerationConfig(
+                    candidate_count=1,
+                    temperature=temperature,
+                    max_output_tokens=2048,
+                    response_mime_type="application/json",
+                )
+                response = await model.generate_content_async(
+                    user_prompt, generation_config=generation_config
+                )
+                return response.text
+            except Exception as e:
+                print(f"[Google Error] {e}")
+                return "{}"
+
+        return "{}"
+
+    async def update_memory(self, current_state: MemoryState,
+                            session_dialogue: str,
+                            session_api_calls: List[str]) -> MemoryState:
+        session_idx = current_state.session_count + 1
+        full_dialogue = (
+            current_state.accumulated_dialogue
+            + f"\n=== Session {session_idx} ===\n"
+            + session_dialogue
+        )
+        current_session_apis = [f"[Session {session_idx}] {api}" for api in session_api_calls]
+        full_api_list = current_state.accumulated_api_calls + current_session_apis
+        full_api_str = "\n".join(full_api_list) if full_api_list else "No API calls recorded."
+
+        candidate_pref = current_state.implicit_pref
+        if candidate_pref == "{}":
+            candidate_pref = "None"
+
+        feedback = ""
+        updated_log = list(current_state.evolution_log)
+        session_attempts_log = []
+        candidate_pref_str = (
+            candidate_pref if isinstance(candidate_pref, str)
+            else json.dumps(candidate_pref)
+        )
+
+        if self.memory_mode == "typed_slots_v3":
+            typed_memories = self._build_typed_slot_memories(full_api_list)
+            candidate_pref_json = {
+                "memory_version": "ours_memory_v3",
+                "policy": (
+                    "Use typed_slot_memories only as patch candidates for missing "
+                    "preference slots in the current target domain. Current dialogue "
+                    "and explicit slot values override memory."
+                ),
+                "typed_slot_memories": typed_memories,
+            }
+            candidate_pref = json.dumps(candidate_pref_json, ensure_ascii=False, indent=2)
+            updated_log.append({
+                "session_index": session_idx,
+                "memory_mode": self.memory_mode,
+                "selection_policy": "deterministic_schema_slot_evidence",
+                "refinement_process": [{
+                    "step": 1,
+                    "mode": self.memory_mode,
+                    "stage": "typed_slot_extraction",
+                    "draft_preference": candidate_pref_json,
+                    "parse_failed": False,
+                    "is_valid": True,
+                    "verifier_feedback": "",
+                }],
+                "final_preference_at_session": candidate_pref_json,
+            })
+            return MemoryState(
+                implicit_pref=candidate_pref,
+                typed_slot_memories=typed_memories,
+                accumulated_dialogue=full_dialogue,
+                accumulated_api_calls=full_api_list,
+                session_count=session_idx,
+                evolution_log=updated_log,
+            )
+
+        if self.memory_mode not in {"verified_refine", "verified_refine_v2"}:
+            blind_refine_steps = {
+                "generation_only": 0,
+                "blind_refine_1": 1,
+                "blind_refine_2": 2,
+                "blind_refine_3": 3,
+            }[self.memory_mode]
+
+            for i in range(blind_refine_steps + 1):
+                candidate_pref_json = await self._generate_preference(
+                    prev_implicit=current_state.implicit_pref,
+                    full_dialogue=full_dialogue,
+                    full_api_calls=full_api_str,
+                    previous_draft=candidate_pref if i > 0 else None,
+                    force_blind_refine=i > 0,
+                )
+
+                if not candidate_pref_json:
+                    session_attempts_log.append({
+                        "step": i + 1,
+                        "mode": self.memory_mode,
+                        "stage": "blind_refinement" if i > 0 else "initial_generation",
+                        "draft_preference": {},
+                        "parse_failed": True,
+                        "is_valid": None,
+                        "verifier_feedback": "",
+                    })
+                    continue
+
+                candidate_pref_str = json.dumps(candidate_pref_json, ensure_ascii=False, indent=2)
+                candidate_pref = candidate_pref_str
+                session_attempts_log.append({
+                    "step": i + 1,
+                    "mode": self.memory_mode,
+                    "stage": "blind_refinement" if i > 0 else "initial_generation",
+                    "draft_preference": candidate_pref_json,
+                    "parse_failed": False,
+                    "is_valid": None,
+                    "verifier_feedback": "",
+                })
+
+            updated_log.append({
+                "session_index": session_idx,
+                "memory_mode": self.memory_mode,
+                "refinement_process": session_attempts_log,
+                "final_preference_at_session": (
+                    json.loads(candidate_pref)
+                    if isinstance(candidate_pref, str) and candidate_pref not in ["None", "{}"]
+                    else {}
+                ),
+            })
+
+            return MemoryState(
+                implicit_pref=candidate_pref,
+                typed_slot_memories=[],
+                accumulated_dialogue=full_dialogue,
+                accumulated_api_calls=full_api_list,
+                session_count=session_idx,
+                evolution_log=updated_log,
+            )
+
+        if self.memory_mode == "verified_refine_v2":
+            return await self._update_memory_v2(
+                current_state=current_state,
+                session_idx=session_idx,
+                full_dialogue=full_dialogue,
+                full_api_str=full_api_str,
+                full_api_list=full_api_list,
+                candidate_pref=candidate_pref,
+                candidate_pref_str=candidate_pref_str,
+                updated_log=updated_log,
+                session_attempts_log=session_attempts_log,
+            )
+
+        for i in range(self.max_retries):
+            candidate_pref_json = await self._generate_preference(
+                prev_implicit=current_state.implicit_pref,
+                full_dialogue=full_dialogue,
+                full_api_calls=full_api_str,
+                feedback=feedback,
+                previous_draft=candidate_pref if i > 0 else None,
+            )
+
+            if not candidate_pref_json:
+                continue
+
+            candidate_pref_str = json.dumps(candidate_pref_json, ensure_ascii=False, indent=2)
+
+            is_valid, new_feedback, verifier_input, verifier_output_json = await self._verify_preference(
+                full_dialogue=full_dialogue,
+                full_api_calls=full_api_str,
+                candidate_pref=candidate_pref_str,
+            )
+
+            session_attempts_log.append({
+                "step": i + 1,
+                "mode": self.memory_mode,
+                "stage": "verifier_refinement" if i > 0 else "initial_generation",
+                "draft_preference": candidate_pref_json,
+                "parse_failed": False,
+                "is_valid": is_valid,
+                "verifier_feedback": new_feedback,
+                "verifier_input": verifier_input,
+                "verifier_output": verifier_output_json,
+            })
+
+            if is_valid:
+                candidate_pref = candidate_pref_str
+                break
+            else:
+                feedback = new_feedback
+                candidate_pref = candidate_pref_str
+
+        updated_log.append({
+            "session_index": session_idx,
+            "memory_mode": self.memory_mode,
+            "refinement_process": session_attempts_log,
+            "final_preference_at_session": (
+                json.loads(candidate_pref)
+                if isinstance(candidate_pref, str) and candidate_pref not in ["None", "{}"]
+                else {}
+            ),
+        })
+
+        return MemoryState(
+            implicit_pref=candidate_pref,
+            typed_slot_memories=[],
+            accumulated_dialogue=full_dialogue,
+            accumulated_api_calls=full_api_list,
+            session_count=session_idx,
+            evolution_log=updated_log,
+        )
+
+    async def _update_memory_v2(
+        self,
+        current_state: MemoryState,
+        session_idx: int,
+        full_dialogue: str,
+        full_api_str: str,
+        full_api_list: List[str],
+        candidate_pref: str,
+        candidate_pref_str: str,
+        updated_log: List[Dict],
+        session_attempts_log: List[Dict],
+    ) -> MemoryState:
+        feedback = ""
+        initial_candidate: Optional[Tuple[int, str, Dict]] = None
+        best_valid: Optional[Tuple[int, str, Dict, Dict]] = None
+        selected_step: Optional[int] = None
+        selection_reason = "fallback_previous_memory_no_parseable_candidate"
+
+        for i in range(self.max_retries):
+            candidate_pref_json = await self._generate_preference(
+                prev_implicit=current_state.implicit_pref,
+                full_dialogue=full_dialogue,
+                full_api_calls=full_api_str,
+                feedback=feedback,
+                previous_draft=candidate_pref if i > 0 else None,
+            )
+
+            if not candidate_pref_json:
+                session_attempts_log.append({
+                    "step": i + 1,
+                    "mode": self.memory_mode,
+                    "stage": "verifier_refinement" if i > 0 else "initial_generation",
+                    "draft_preference": {},
+                    "parse_failed": True,
+                    "is_valid": False,
+                    "verifier_feedback": "Failed to parse generator output",
+                    "verifier_input": "",
+                    "verifier_output": {},
+                    "selection_candidate": False,
+                })
+                continue
+
+            candidate_pref_str = json.dumps(candidate_pref_json, ensure_ascii=False, indent=2)
+            if initial_candidate is None:
+                initial_candidate = (i + 1, candidate_pref_str, candidate_pref_json)
+
+            is_valid, new_feedback, verifier_input, verifier_output_json = await self._verify_preference_v2(
+                full_dialogue=full_dialogue,
+                full_api_calls=full_api_str,
+                candidate_pref=candidate_pref_str,
+            )
+
+            session_attempts_log.append({
+                "step": i + 1,
+                "mode": self.memory_mode,
+                "stage": "verifier_refinement" if i > 0 else "initial_generation",
+                "draft_preference": candidate_pref_json,
+                "parse_failed": False,
+                "is_valid": is_valid,
+                "verifier_feedback": new_feedback,
+                "verifier_input": verifier_input,
+                "verifier_output": verifier_output_json,
+                "selection_candidate": is_valid,
+            })
+
+            if is_valid:
+                best_valid = (i + 1, candidate_pref_str, candidate_pref_json, verifier_output_json)
+                selected_step = i + 1
+                selection_reason = "accepted_by_v2_score_policy"
+                break
+
+            feedback = new_feedback
+            candidate_pref = candidate_pref_str
+
+        if best_valid is not None:
+            _, candidate_pref, _, _ = best_valid
+        elif initial_candidate is not None:
+            selected_step, candidate_pref, _ = initial_candidate
+            selection_reason = "fallback_initial_generation_no_v2_policy_accept"
+        else:
+            selected_step = None
+            candidate_pref = (
+                current_state.implicit_pref
+                if current_state.implicit_pref not in ["None", "{}"]
+                else "{}"
+            )
+
+        updated_log.append({
+            "session_index": session_idx,
+            "memory_mode": self.memory_mode,
+            "selection_policy": "score_based_verifier_with_initial_fallback",
+            "selected_step": selected_step,
+            "selection_reason": selection_reason,
+            "refinement_process": session_attempts_log,
+            "final_preference_at_session": (
+                json.loads(candidate_pref)
+                if isinstance(candidate_pref, str) and candidate_pref not in ["None", "{}"]
+                else {}
+            ),
+        })
+
+        return MemoryState(
+            implicit_pref=candidate_pref,
+            typed_slot_memories=[],
+            accumulated_dialogue=full_dialogue,
+            accumulated_api_calls=full_api_list,
+            session_count=session_idx,
+            evolution_log=updated_log,
+        )
+
+    def _build_typed_slot_memories(self, full_api_list: List[str]) -> List[Dict[str, Any]]:
+        counts: Dict[Tuple[str, str], Counter] = defaultdict(Counter)
+        evidence: Dict[Tuple[str, str, str], List[Dict[str, Any]]] = defaultdict(list)
+        latest_seen: Dict[Tuple[str, str, str], int] = defaultdict(int)
+
+        for idx, api_text in enumerate(full_api_list, start=1):
+            session_idx = self._extract_session_index(api_text) or idx
+            for call in eval_metrics.extract_calls(api_text):
+                for domain, slot, value in eval_metrics.parse_call_to_slotvals(call):
+                    pref_slots = set(self.pref_map.get(domain, []))
+                    if slot not in pref_slots:
+                        continue
+                    value = str(value)
+                    key = (domain, slot)
+                    counts[key][value] += 1
+                    latest_seen[(domain, slot, value)] = max(
+                        latest_seen[(domain, slot, value)], session_idx
+                    )
+                    evidence[(domain, slot, value)].append({
+                        "session": session_idx,
+                        "api_call": call,
+                    })
+
+        memories: List[Dict[str, Any]] = []
+        for (domain, slot), value_counts in sorted(counts.items()):
+            total = sum(value_counts.values())
+            if total <= 0:
+                continue
+            ranked = sorted(
+                value_counts.items(),
+                key=lambda item: (
+                    item[1],
+                    latest_seen.get((domain, slot, item[0]), 0),
+                    item[0],
+                ),
+                reverse=True,
+            )
+            value, support_count = ranked[0]
+            if support_count < self.v3_min_support:
+                continue
+            confidence = support_count / total
+            memories.append({
+                "domain": domain,
+                "slot": slot,
+                "value": value,
+                "support_count": support_count,
+                "observed_count_for_slot": total,
+                "confidence": round(confidence, 4),
+                "last_seen_session": latest_seen.get((domain, slot, value), 0),
+                "alternatives": [
+                    {"value": alt_value, "count": alt_count}
+                    for alt_value, alt_count in ranked[1:4]
+                ],
+                "evidence": evidence[(domain, slot, value)][:5],
+                "applicability": (
+                    f"Apply only when the current target domain is {domain}, "
+                    f"the schema contains slot {slot}, and the current dialogue "
+                    "does not explicitly provide a different value."
+                ),
+            })
+        return memories
+
+    @staticmethod
+    def _extract_session_index(api_text: str) -> Optional[int]:
+        match = re.search(r"\[Session\s+(\d+)\]", api_text or "")
+        return int(match.group(1)) if match else None
+
+    async def _generate_preference(self, prev_implicit: str, full_dialogue: str,
+                                   full_api_calls: str, feedback: str = "",
+                                   previous_draft: Optional[str] = None,
+                                   force_blind_refine: bool = False) -> dict:
+        context_prompt = LATENT_PREF_SYSTEM_PROMPT.format(
+            prev_implicit=prev_implicit or "None",
+            full_dialogue=full_dialogue,
+            full_api_calls=full_api_calls,
+        )
+        if previous_draft and force_blind_refine:
+            task_prompt = LATENT_PREF_BLIND_REFINEMENT_PROMPT.format(
+                previous_draft=previous_draft,
+            )
+        elif previous_draft and feedback:
+            task_prompt = LATENT_PREF_REFINEMENT_PROMPT.format(
+                previous_draft=previous_draft,
+                feedback=feedback,
+            )
+        else:
+            task_prompt = LATENT_PREF_INITIAL_PROMPT
+
+        content = await self._call_llm(context_prompt, task_prompt, temperature=0.4)
+        return self._parse_json(content)
+
+    async def _verify_preference(self, full_dialogue: str, full_api_calls: str,
+                                 candidate_pref: str) -> Tuple[bool, str, str, Dict]:
+        prompt = LATENT_PREF_VERIFIER_PROMPT.format(
+            full_dialogue=full_dialogue,
+            full_api_calls=full_api_calls,
+            candidate_pref=candidate_pref,
+        )
+        content = await self._call_llm(
+            "You are a Preference Verification Module. Output JSON only.",
+            prompt,
+            temperature=0.0,
+        )
+        res_json = self._parse_json(content)
+        if not res_json:
+            return False, "Failed to parse verifier output", prompt, {}
+        return res_json.get("valid", False), res_json.get("feedback", ""), prompt, res_json
+
+    async def _verify_preference_v2(self, full_dialogue: str, full_api_calls: str,
+                                    candidate_pref: str) -> Tuple[bool, str, str, Dict]:
+        prompt = LATENT_PREF_SCORE_VERIFIER_PROMPT.format(
+            full_dialogue=full_dialogue,
+            full_api_calls=full_api_calls,
+            candidate_pref=candidate_pref,
+        )
+        content = await self._call_llm(
+            "You are a strict Preference Verification Module. Output JSON only.",
+            prompt,
+            temperature=0.0,
+        )
+        res_json = self._parse_json(content)
+        if not res_json:
+            return False, "Failed to parse verifier output", prompt, {}
+
+        accepted, policy_feedback = self._accepts_v2_verifier(res_json)
+        feedback = str(res_json.get("feedback") or policy_feedback)
+        if not accepted and policy_feedback and policy_feedback not in feedback:
+            feedback = f"{feedback} Policy note: {policy_feedback}".strip()
+        res_json["accepted_by_v2_policy"] = accepted
+        res_json["policy_feedback"] = policy_feedback
+        return accepted, feedback, prompt, res_json
+
+    def _accepts_v2_verifier(self, verifier_json: Dict) -> Tuple[bool, str]:
+        raw_valid = verifier_json.get("valid") is True
+        actionability_score = self._coerce_int(
+            verifier_json.get("actionability_score"), default=0
+        )
+        support_count = self._coerce_int(
+            verifier_json.get("evidence_support_count"), default=0
+        )
+        risk = str(verifier_json.get("risk", "") or "").strip().lower()
+        unsupported_claims = verifier_json.get("unsupported_claims") or []
+        if isinstance(unsupported_claims, str):
+            unsupported_claims = [unsupported_claims] if unsupported_claims.strip() else []
+
+        risky_labels = {
+            "over_applies_to_unrelated_slots",
+            "unsupported_claim",
+            "generic_non_actionable",
+            "over_specific",
+            "hallucination",
+            "high",
+        }
+        no_risk_labels = {"", "none", "no", "low", "minimal", "n/a", "na"}
+        has_risk = risk not in no_risk_labels
+        has_known_risk = risk in risky_labels or has_risk
+
+        reasons = []
+        if not raw_valid:
+            reasons.append("verifier marked valid=false")
+        if actionability_score < 4:
+            reasons.append(f"actionability_score {actionability_score} < 4")
+        if support_count < 2:
+            reasons.append(f"evidence_support_count {support_count} < 2")
+        if has_known_risk:
+            reasons.append(f"risk={risk}")
+        if unsupported_claims:
+            reasons.append("unsupported_claims present")
+
+        return not reasons, "; ".join(reasons)
+
+    @staticmethod
+    def _coerce_int(value: Any, default: int = 0) -> int:
+        try:
+            return int(value)
+        except (TypeError, ValueError):
+            try:
+                return int(float(value))
+            except (TypeError, ValueError):
+                return default
+
+    def _parse_json(self, content: str) -> dict:
+        if not content:
+            return {}
+        try:
+            return json.loads(content)
+        except json.JSONDecodeError:
+            pass
+        if "```json" in content:
+            content = re.sub(r"```json\s*", "", content)
+            content = re.sub(r"\s*```", "", content)
+        elif "```" in content:
+            content = content.replace("```", "")
+        start_idx = content.find("{")
+        end_idx = content.rfind("}")
+        if start_idx != -1 and end_idx != -1 and end_idx > start_idx:
+            json_str = content[start_idx: end_idx + 1]
+            try:
+                return json.loads(json_str)
+            except json.JSONDecodeError:
+                try:
+                    cleaned = re.sub(r",\s*([\]}])", r"\1", json_str)
+                    return json.loads(cleaned)
+                except Exception:
+                    return {}
+        return {}
+
+
+# ---------------------------------------------------------------------------
+# Processing logic
+# ---------------------------------------------------------------------------
+
+def _format_dialogue(dialogue_list: List[Dict]) -> str:
+    return "\n".join(
+        f"{t.get('role', 'User')}: {t.get('message', '')}"
+        for t in dialogue_list
+    )
+
+
+def _load_dataset(filepath: str) -> List[Dict]:
+    if not os.path.exists(filepath):
+        print(f"[Error] File not found: {filepath}")
+        return []
+    with open(filepath, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    return data if isinstance(data, list) else [data]
+
+
+async def process_single_user(
+    example: Dict,
+    aggregator: PreferenceAggregator,
+    file_lock: asyncio.Lock,
+    output_file: str,
+    verifier_file: str,
+    refinement_file: str,
+    semaphore: asyncio.Semaphore,
+    pbar: tqdm,
+) -> None:
+    async with semaphore:
+        example_id = example.get("example_id", "unknown")
+        sessions = example.get("sessions", [])
+        current_state = MemoryState()
+
+        for session in sessions:
+            dialogue_text = _format_dialogue(session.get("dialogue", []))
+            api_calls = session.get("api_call", [])
+            current_state = await aggregator.update_memory(current_state, dialogue_text, api_calls)
+
+        result_record = {
+            "example_id": example_id,
+            "memory_mode": aggregator.memory_mode,
+            "final_implicit_preference": current_state.implicit_pref,
+            "typed_slot_memories": current_state.typed_slot_memories,
+            "final_accumulated_api_calls": current_state.accumulated_api_calls,
+            "total_sessions_processed": current_state.session_count,
+            "preference_evolution_history": current_state.evolution_log,
+        }
+
+        refinement_logs = []
+        verifier_logs = []
+        for log_entry in current_state.evolution_log:
+            session_idx = log_entry.get("session_index")
+            for step_info in log_entry.get("refinement_process", []):
+                base_meta = {"example_id": example_id, "session_index": session_idx,
+                             "step": step_info.get("step")}
+                r_log = {**base_meta,
+                         "memory_mode": step_info.get("mode"),
+                         "stage": step_info.get("stage"),
+                         "draft_preference": step_info.get("draft_preference"),
+                         "parse_failed": step_info.get("parse_failed")}
+                refinement_logs.append(json.dumps(r_log, ensure_ascii=False))
+                if "verifier_input" in step_info or "verifier_output" in step_info:
+                    v_log = {**base_meta, "is_valid": step_info.get("is_valid"),
+                             "verifier_input": step_info.get("verifier_input"),
+                             "verifier_output": step_info.get("verifier_output")}
+                    verifier_logs.append(json.dumps(v_log, ensure_ascii=False))
+
+        async with file_lock:
+            with open(output_file, "a", encoding="utf-8") as f:
+                f.write(json.dumps(result_record, ensure_ascii=False) + "\n")
+            if refinement_logs:
+                with open(refinement_file, "a", encoding="utf-8") as f:
+                    for line in refinement_logs:
+                        f.write(line + "\n")
+            if verifier_logs:
+                with open(verifier_file, "a", encoding="utf-8") as f:
+                    for line in verifier_logs:
+                        f.write(line + "\n")
+
+        pbar.update(1)
+
+
+async def run_pipeline(args: argparse.Namespace) -> None:
+    api_key = args.api_key
+    if args.provider == "openai":
+        api_key = api_key or os.environ.get("OPENAI_API_KEY") or "EMPTY"
+    elif args.provider == "google":
+        api_key = api_key or os.environ.get("GOOGLE_API_KEY")
+        if not api_key:
+            print("[Error] Google API Key is missing.")
+            return
+
+    dataset = _load_dataset(args.input)
+    if not dataset:
+        return
+    pref_map = eval_metrics.load_pref_list(args.pref_list_path)
+
+    try:
+        aggregator = PreferenceAggregator(
+            model=args.model,
+            provider=args.provider,
+            api_key=api_key,
+            api_base=args.api_base,
+            max_retries=args.max_retries,
+            memory_mode=args.memory_mode,
+            pref_map=pref_map,
+            v3_min_support=args.v3_min_support,
+        )
+    except Exception as e:
+        print(f"[Error] {e}")
+        return
+
+    semaphore = asyncio.Semaphore(args.concurrency)
+    file_lock = asyncio.Lock()
+
+    for fpath in [args.output, args.verifier_output, args.refinement_output]:
+        os.makedirs(os.path.dirname(fpath) or ".", exist_ok=True)
+        open(fpath, "w").close()
+
+    pbar = tqdm(total=len(dataset), desc="Extracting preferences")
+    tasks = [
+        asyncio.create_task(
+            process_single_user(
+                example, aggregator, file_lock,
+                args.output, args.verifier_output, args.refinement_output,
+                semaphore, pbar,
+            )
+        )
+        for example in dataset
+    ]
+    await asyncio.gather(*tasks)
+    pbar.close()
+
+    if args.provider == "openai":
+        await aggregator.client.close()
+
+    print(f"\nResults -> {args.output}")
+    print(f"Verifier log -> {args.verifier_output}")
+    print(f"Refinement log -> {args.refinement_output}")
+
+
+if __name__ == "__main__":
+    _ROOT = os.path.join(os.path.dirname(__file__), "..", "..", "..")
+
+    parser = argparse.ArgumentParser(description="Step 1: Latent preference extraction.")
+    parser.add_argument("--input", default=os.path.join(_ROOT, "data", "dev.json"))
+    parser.add_argument("--output", default="outputs/our_memory/preferences.jsonl")
+    parser.add_argument("--verifier_output", default="outputs/our_memory/verifier_logs.jsonl")
+    parser.add_argument("--refinement_output",
+                        default="outputs/our_memory/refinement_logs.jsonl")
+    parser.add_argument("--provider", default="openai", choices=["openai", "google"])
+    parser.add_argument("--model", default="gpt-4o-mini")
+    parser.add_argument("--api_base", default=None)
+    parser.add_argument("--api_key", default=None)
+    parser.add_argument("--concurrency", type=int, default=30)
+    parser.add_argument("--max_retries", type=int, default=3,
+                        help="Max verifier-refine loop iterations per session (0 = no update).")
+    parser.add_argument("--pref_list_path",
+                        default=os.path.join(_ROOT, "config", "pref_list.json"))
+    parser.add_argument("--v3_min_support", type=int, default=1,
+                        help="Minimum repeated evidence count for a v3 typed slot memory.")
+    parser.add_argument("--memory_mode",
+                        choices=[
+                            "verified_refine",
+                            "verified_refine_v2",
+                            "typed_slots_v3",
+                            "generation_only",
+                            "blind_refine_1",
+                            "blind_refine_2",
+                            "blind_refine_3",
+                        ],
+                        default="typed_slots_v3",
+                        help=(
+                            "Memory generation mode. verified_refine preserves the existing "
+                            "generate -> verifier -> feedback-refine loop; verified_refine_v2 "
+                            "uses a stricter score-based verifier with initial-generation fallback; "
+                            "typed_slots_v3 deterministically extracts schema-valid typed "
+                            "slot memories from preference slots in historical API calls; "
+                            "generation_only runs "
+                            "one generation with no verifier/refinement; blind_refine_1, "
+                            "blind_refine_2, and blind_refine_3 run unconditional refinements "
+                            "without verifier feedback."
+                        ))
+    args = parser.parse_args()
+
+    asyncio.run(run_pipeline(args))
