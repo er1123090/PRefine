@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d005d2f06dc67da07c4d6a81",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.289254150353372,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_04f98f65bc16c6241ab8d25c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars()",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No slots given. We infer preferences: user wants car rental. From history, user used Standard car, sometimes Compact? In session10 used Standard. Session19 used Standard. So likely car_type Standard. Also pickup_city? Not specified. We can leave empty. Output format: GetRentalCars() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615175,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b8e7f9b72cf2a569",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 84,
+      "prompt_tokens": 10124,
+      "prompt_tokens_details": null,
+      "total_tokens": 10208
+    }
+  },
+  "request_sha256": "d619bfc5fceeec0470d749525a29aa03273c9f358b3a580eea07f169e74de211",
+  "source_example_id": "mix_dev_0186+durec_src_0139+hb_0400",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

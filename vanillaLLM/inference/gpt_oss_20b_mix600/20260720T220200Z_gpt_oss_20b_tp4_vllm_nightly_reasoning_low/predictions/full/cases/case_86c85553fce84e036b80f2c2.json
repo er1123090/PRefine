@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_86c85553fce84e036b80f2c2",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4322512531653047,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_890f8ae784773156b128201d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", dropoff_date=\"\", car_type=\"\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says pick up noon March 8, keep couple days. So dropoff maybe March 10? but not specified. We can leave dropoff_date empty. Also car_type default? not specified. So output: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", dropoff_date=\"\", car_type=\"\") but schema expects strings. We'll provide empty strings.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615071,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9bdb189ac3a647ff",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 155,
+      "prompt_tokens": 8954,
+      "prompt_tokens_details": null,
+      "total_tokens": 9109
+    }
+  },
+  "request_sha256": "432bc318178abc364af6335d86ce091f63738425a89f27cf316f2cfaff8f5c33",
+  "source_example_id": "dev_0217",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

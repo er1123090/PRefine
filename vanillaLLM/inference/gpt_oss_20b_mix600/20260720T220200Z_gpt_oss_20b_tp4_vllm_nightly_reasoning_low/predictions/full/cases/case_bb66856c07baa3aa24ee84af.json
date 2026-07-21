@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_bb66856c07baa3aa24ee84af",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7047271961346269,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c2db6eb8a553c01233f3d99f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"Philadelphia\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user looked for 3 star in Philly, 4 star in Philly. Likely wants hotel. No location specified. We can default? Maybe use previous location Philadelphia. So output GetHotels(location=\"Philadelphia\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615146,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-811bf3f6f1ccfc34",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 70,
+      "prompt_tokens": 8842,
+      "prompt_tokens_details": null,
+      "total_tokens": 8912
+    }
+  },
+  "request_sha256": "d46640f10887e4ef1d4610ace369ad0c11c74154fbd765af8829b809c99864d3",
+  "source_example_id": "mix_dev_0278+hb_0161",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

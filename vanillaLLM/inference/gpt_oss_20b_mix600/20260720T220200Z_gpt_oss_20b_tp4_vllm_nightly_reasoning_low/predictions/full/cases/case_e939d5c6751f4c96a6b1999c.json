@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e939d5c6751f4c96a6b1999c",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.6886525759473443,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_098c6553e9cb98d9f85e8bb2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"checking\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks with recipient_account_type. Past: session9 used checking, session17 used savings. Which more frequent? one each. But user says \"make a bank transfer\" likely checking? In session9 they checked checking. I'd choose checking.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615207,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b53a1fb6b3accc92",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 70,
+      "prompt_tokens": 10131,
+      "prompt_tokens_details": null,
+      "total_tokens": 10201
+    }
+  },
+  "request_sha256": "3986505e4452a60b15818fa7d76f538f0368ad477645f542f59a2f86358684b9",
+  "source_example_id": "mix_dev_0117+durec_src_0742+hb_0158",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

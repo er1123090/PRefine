@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a79a30805282c3cac6554019",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.977134870365262,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_45a8262027b07a03ba6c7f00",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"Fremont\", price_range=\"moderate\", category=\"Italian\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. Past: user chose Olive Garden Italian Restaurant in Fremont, price moderate? They said reasonably priced, vegetarian dishes, pick-up. So preferences: category maybe Italian? price_range moderate? city Fremont. Also shared ride? Not relevant. So output GetRestaurants with city=\"Fremont\", price_range=\"moderate\", category=\"Italian\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615115,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a53260804b2f5e67",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 104,
+      "prompt_tokens": 8890,
+      "prompt_tokens_details": null,
+      "total_tokens": 8994
+    }
+  },
+  "request_sha256": "e95e65cc695748a36d0682ecc223b6f6af19b252426f9e7d886a5faf81125fa7",
+  "source_example_id": "mix_dev_0251+hb_0118",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_4f66ec0adca4ccd42966546e",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.450047131627798,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "location": "San Francisco",
+        "number_of_rooms": "1"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_27f85b93b34e8bd0924d78d9",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"San Francisco\", \"number_of_rooms\": \"1\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-893b0373be06d8af",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587416,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aebdd28db52e10fc",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 30,
+      "prompt_tokens": 11688,
+      "prompt_tokens_details": null,
+      "total_tokens": 11718
+    }
+  },
+  "request_sha256": "d5967a19c70948b84b76012f7c6b9fe2a05e2a6f84748d5d3496aee2fb5e62e2",
+  "source_example_id": "mix_dev_0230+durec_src_0247+hb_0474",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

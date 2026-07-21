@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_16e8e16bf7057f0b1db37640",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9852209025993943,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_75b7ea3cbf203f8e307a6624",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants restaurant options. No specifics. From history, user often wants Thai, affordable, vegetarian, etc. But no explicit. We can default to no slots. So call GetRestaurants with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614874,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b056dc0f6b939859",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 60,
+      "prompt_tokens": 9739,
+      "prompt_tokens_details": null,
+      "total_tokens": 9799
+    }
+  },
+  "request_sha256": "0fc858bc69d78d9c29a9ea8be9198bb8388ebbfa59aebeaea51cb8a71b2df0c2",
+  "source_example_id": "mix_dev_0158+durec_src_0666+hb_0215",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

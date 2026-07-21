@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_00e48aa5b5cfd0a749f7f1fc",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.8183988174423575,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a1f2dceee47b7dd07a9dd3d4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"San Francisco\")",
+          "function_call": null,
+          "reasoning": "We need GetEvents with category? art exhibition => category maybe Music? but art exhibition is not in schema. Maybe use GetTravel? but art exhibition is event. No category matches. Could use GetEvents with category unspecified. Probably category default none. Provide city San Francisco.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614792,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9ae3ae68d930796d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 72,
+      "prompt_tokens": 9059,
+      "prompt_tokens_details": null,
+      "total_tokens": 9131
+    }
+  },
+  "request_sha256": "f6ceb080306a0977dd8ce6409696ceadd31285cfe14e2a70eaf8ba70f42c1232",
+  "source_example_id": "mix_dev_0280+hb_0456",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4ecf0268b87299f956037c5b",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.343041663058102,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c198eb59843ccbac04ba1c6a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"San Jose\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history, user likes tacos, pho, barbecue, etc. They have visited restaurants in San Jose, Newark, Santa Rosa. They prefer moderate price? They booked Chevys Fresh Mex moderate. They also liked Chuck E. Cheese's (family). They also liked Bowl & Plate At White Shallot (pho). So likely they want a restaurant with food type maybe \"Mexican\" or \"Pho\" or \"Barbecue\". We need to output function call GetRestaurants with inferred slots. We can choose category maybe \"Mexican\" or \"Pho\" not in categories. Pho is Chinese. Category list includes \"Asian\", \"Chinese\". So maybe category \"Asian\". Also location? They didn't specify. We can infer they might want in San Jose? They recently visited San Jose. So location \"San Jose\". Number_of_seats maybe 2? Not sure. We'll output minimal: GetRestaurants(city=\"San Jose\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614987,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-af1bc95326bc1994",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 212,
+      "prompt_tokens": 10920,
+      "prompt_tokens_details": null,
+      "total_tokens": 11132
+    }
+  },
+  "request_sha256": "af8edfcea6400675dbc9aae9db7dfc1a1de44a8fc0c707aed5751637d6b59f82",
+  "source_example_id": "mix_dev_0090+durec_src_0239+hb_0183",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

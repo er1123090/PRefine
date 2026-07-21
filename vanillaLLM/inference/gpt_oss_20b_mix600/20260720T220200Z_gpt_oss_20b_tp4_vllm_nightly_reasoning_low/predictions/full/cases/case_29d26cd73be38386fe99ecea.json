@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_29d26cd73be38386fe99ecea",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.260965196415782,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_546d5a1c1dea0cb69a5096d6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", pickup_time=\"in 30 minutes\", number_of_seats=\"1\", shared_ride=\"false\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, pickup_time, number_of_seats, shared_ride. User wants ride across town to 39145 Farwell Drive. No seats specified, assume 1. shared_ride? not mentioned, default maybe false. pickup_time: about half an hour from now. We don't have current time. Just give placeholder? maybe \"in 30 minutes\". Use string.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614922,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b8fc80af0a27d2d3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 125,
+      "prompt_tokens": 9766,
+      "prompt_tokens_details": null,
+      "total_tokens": 9891
+    }
+  },
+  "request_sha256": "13f32db92fe25fb7a369440d57ed3d829aaa6b0c85f5b4b805dd24a69f79286b",
+  "source_example_id": "mix_dev_0180+durec_src_1013+hb_0197",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

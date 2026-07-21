@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_666f86919e7a2e4788e9ce59",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2085276637226343,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_5f58f07b8efb60e8bd6b9271",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2024-03-08\", pickup_time=\"12:00\", dropoff_date=\"2024-03-10\", car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says couple of days, no end date. We can infer maybe 2 days. So dropoff_date March10. car_type default? maybe Standard. So output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615027,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8923530adb9ffe58",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 109,
+      "prompt_tokens": 9181,
+      "prompt_tokens_details": null,
+      "total_tokens": 9290
+    }
+  },
+  "request_sha256": "92bceba4d2703980661dc2f2ebc17b7b69726e024e79b7ccaed55c56508934da",
+  "source_example_id": "mix_dev_0228+durec_src_1021+hb_0204",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

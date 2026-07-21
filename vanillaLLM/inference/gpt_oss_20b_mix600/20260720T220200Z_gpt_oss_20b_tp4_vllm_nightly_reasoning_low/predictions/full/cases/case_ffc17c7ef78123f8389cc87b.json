@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ffc17c7ef78123f8389cc87b",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1603461187332869,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a7561c59aa5ca5b2be62bb59",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", pickup_time=\"18:15\", shared_ride=\"False\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. Destination from address: 39145 Farwell Drive. number_of_seats? not specified, assume 1. shared_ride? not mentioned, default maybe False. pickup_time \"18:15\". Output format: GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", pickup_time=\"18:15\", shared_ride=\"False\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615233,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-99e9116dd6aa6625",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 138,
+      "prompt_tokens": 9233,
+      "prompt_tokens_details": null,
+      "total_tokens": 9371
+    }
+  },
+  "request_sha256": "16225ce3b3fbc6cc0137d2a71e8735f69ec82f330652381946238fe18b2b87e9",
+  "source_example_id": "dev_0322",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

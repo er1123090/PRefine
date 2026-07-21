@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_336521d910b572c20faffacd",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4315982172265649,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_5d0f739525c627667760d3ef",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"Vallejo\", date=\"2023-03-05\", time=\"18:15\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. Slots: city, date, time, maybe category, price_range, number_of_seats, restaurant_name. User wants nice to-go meal. No category specified. Likely default none. Provide city=\"Vallejo\", date=\"2023-03-05\" (assuming year). time=\"18:15\". No other.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614943,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b5c832cd1210e9e9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 105,
+      "prompt_tokens": 8607,
+      "prompt_tokens_details": null,
+      "total_tokens": 8712
+    }
+  },
+  "request_sha256": "8bce85e430f173b4e29eafd2fd4a85a211d660e62b6518eb6125473f03ed4802",
+  "source_example_id": "mix_dev_0113+hb_0265",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

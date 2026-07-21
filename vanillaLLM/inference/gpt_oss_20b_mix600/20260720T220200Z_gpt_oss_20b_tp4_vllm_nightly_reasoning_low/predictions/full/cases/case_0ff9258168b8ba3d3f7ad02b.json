@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0ff9258168b8ba3d3f7ad02b",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.9888382516801357,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_555a9a9e5cb83b6f273ac072",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(flight_class=\"Premium Economy\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants flights. We need GetFlights. Determine slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history: user often uses Premium Economy? In session1 used Premium Economy. Session2 used Delta. Session3 used American. No clear preference. Maybe default Premium Economy? Also origin/destination unknown. We need to infer from context? None given. We can leave slots empty. But need to output function call with slots we can infer. We can set flight_class=\"Premium Economy\" as frequent. airlines maybe none. We'll output GetFlights with flight_class=\"Premium Economy\". Others empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614849,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b500d3fe4ac8082f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 153,
+      "prompt_tokens": 7378,
+      "prompt_tokens_details": null,
+      "total_tokens": 7531
+    }
+  },
+  "request_sha256": "64c093d4c8b55929610a7d4715516f01acbd4334abb08438e2012cd5758c9bbb",
+  "source_example_id": "dev_0098",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

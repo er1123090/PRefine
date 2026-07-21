@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_78150a84a4c336fbe13ec4c4",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6413538996130228,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f6fe5de77a1efc0d6a0fd735",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"Toronto\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants events nearby. No city specified. Past preferences: often uses Toronto, New York, Philadelphia, etc. But \"nearby\" likely means current location? No location given. We can default to last used city? Last session 15 used Toronto. So assume Toronto. No category specified. So we can call GetEvents with city=\"Toronto\" and maybe no other slots. Output format: GetEvents(city=\"Toronto\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615050,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8eed07260ae03bfc",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 108,
+      "prompt_tokens": 10668,
+      "prompt_tokens_details": null,
+      "total_tokens": 10776
+    }
+  },
+  "request_sha256": "067a3d17e10d23269cf5fc826af250d985d79ef7850d8a8b9bd5ba740ee3be93",
+  "source_example_id": "mix_dev_0300+durec_src_1281",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

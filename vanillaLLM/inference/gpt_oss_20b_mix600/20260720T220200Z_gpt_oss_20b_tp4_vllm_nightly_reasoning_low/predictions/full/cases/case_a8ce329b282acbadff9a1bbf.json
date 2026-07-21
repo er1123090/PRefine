@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a8ce329b282acbadff9a1bbf",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7493388131260872,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e7af11b291383a0854ca9cbf",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(average_star=\"3\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. Past hotel: Vancouver 3 star, 2 rooms, 5 days. Also San Francisco 3 star. Likely prefers 3 star hotels. No wifi mention. So output GetHotels with average_star=\"3\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615117,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8b10dd16081acbe9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 73,
+      "prompt_tokens": 8893,
+      "prompt_tokens_details": null,
+      "total_tokens": 8966
+    }
+  },
+  "request_sha256": "6b7580372a9d7d6c20dc9da1dba1fa8d1e0519007a068d110ee6dae89bcceff6",
+  "source_example_id": "mix_dev_0251+hb_0118",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

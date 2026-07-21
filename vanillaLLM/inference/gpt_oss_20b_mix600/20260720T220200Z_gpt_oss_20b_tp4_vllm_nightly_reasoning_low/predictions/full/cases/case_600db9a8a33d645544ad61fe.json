@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_600db9a8a33d645544ad61fe",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2364093968644738,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e96aabf194301dd2a1653e57",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"Phoenix\")",
+          "function_call": null,
+          "reasoning": "User wants events nearby. No city specified. From history, user often uses Washington D.C., Phoenix, Kuala Lumpur, Nairobi. But \"nearby\" likely current location? No context. Maybe default to last used city: Phoenix? But earlier they used DC. The last event session was Phoenix. So choose city=Phoenix. No category specified. So output GetEvents with city=\"Phoenix\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615016,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-97f66240116691ec",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 95,
+      "prompt_tokens": 8713,
+      "prompt_tokens_details": null,
+      "total_tokens": 8808
+    }
+  },
+  "request_sha256": "f406fb6387a94f268149ee13d356339b33296c74d29a0a0ebc7cb89d3d05a0f7",
+  "source_example_id": "mix_dev_0177+hb_0222",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

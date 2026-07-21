@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_61f7ce9a5c77ce54bdbb3a5c",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.124059430323541,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_abbf8f437f32cd0a4145f477",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"Berkeley\", number_of_rooms=\"1\", number_of_days=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels? They plan short trip to Berkeley. Need hotel. They didn't specify star. From history, they used GetHotels with location Sydney, number_of_rooms, average_star. For Berkeley, likely want a hotel. Use GetHotels with location=\"Berkeley\"? Not in enum. But location enum includes many cities but not Berkeley. Maybe use GetHomes? Homes area includes many. But likely GetHotels. But location not in list. Maybe use GetTravel? No. We can still call GetHotels with location=\"Berkeley\" even if not in enum? Probably okay. Provide number_of_rooms=\"1\", number_of_days=\"1\". No average_star. Output format: GetHotels(location=\"Berkeley\", number_of_rooms=\"1\", number_of_days=\"1\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615020,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a5185664957d3a52",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 186,
+      "prompt_tokens": 8054,
+      "prompt_tokens_details": null,
+      "total_tokens": 8240
+    }
+  },
+  "request_sha256": "723dbe5b166272bf03ff5e565a2e0df9c8732d6f5d57bee293ed4f44df36eb67",
+  "source_example_id": "mix_dev_0317+hb_0241",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b385ad2ced5b0c361cef2066",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.792442912235856,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_760ed8b733f7004a948cb099",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2019-03-11\", destination=\"San Francisco\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights? Actually trip: location Berkeley. That's a city in California. We need flight? Probably GetFlights. Need origin? Not given. Assume user wants flight. Use destination \"San Francisco\" maybe? But Berkeley is near SF. Use destination \"San Francisco\". No airline preference. Passengers? Not given. Use default. So call GetFlights with destination \"San Francisco\", departure_date \"2019-03-11\", number_of_days? Not in flights. Just departure_date. Return_date? Not. So output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615134,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a319ffb688aac955",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 138,
+      "prompt_tokens": 9875,
+      "prompt_tokens_details": null,
+      "total_tokens": 10013
+    }
+  },
+  "request_sha256": "562f3b9c064e4c7fdfc9ee19ec1c92607e0fde15d9b6599d5092f60db5934a3b",
+  "source_example_id": "mix_dev_0112+durec_src_0743+hb_0156",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

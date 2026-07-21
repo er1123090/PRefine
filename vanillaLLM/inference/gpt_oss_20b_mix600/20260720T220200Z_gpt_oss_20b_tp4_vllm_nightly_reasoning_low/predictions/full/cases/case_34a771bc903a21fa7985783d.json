@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_34a771bc903a21fa7985783d",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.384085651487112,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_444f833da858b1a6cbcebca6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"Delta Airlines\", flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetFlights. From history: user often chooses Delta Airlines, economy, from New York to Seattle, etc. Also earlier used American Airlines. But pattern: prefers Delta? In session18 used Delta. Session14 used American. Session19 used Delta. So likely Delta. Also prefers economy. So output GetFlights with airlines=\"Delta Airlines\", flight_class=\"Economy\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614945,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9792b05bfcc64444",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 109,
+      "prompt_tokens": 10320,
+      "prompt_tokens_details": null,
+      "total_tokens": 10429
+    }
+  },
+  "request_sha256": "bc2f4b90675da5a3c08f2a082f0819c97d4763b94dde4c31dd9cab4c3dfe8ad0",
+  "source_example_id": "mix_dev_0176+durec_src_0619+hb_0110",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

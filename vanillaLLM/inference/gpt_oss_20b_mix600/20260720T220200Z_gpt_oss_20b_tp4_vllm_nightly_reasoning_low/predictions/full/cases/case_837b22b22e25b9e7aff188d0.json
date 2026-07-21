@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_837b22b22e25b9e7aff188d0",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9636704018339515,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1d5642fdb2d4c0eadd4606b2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Italian\", price_range=\"moderate\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. Slots: category Italian, price_range? user said no alcohol, but price_range not specified. We can infer maybe moderate? Past: user liked cheap earlier. But no pattern. We'll set price_range=\"moderate\" maybe. Also city? not specified. We can leave empty. So output: GetRestaurants(category=\"Italian\", price_range=\"moderate\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615066,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a00146487a87605e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 99,
+      "prompt_tokens": 9907,
+      "prompt_tokens_details": null,
+      "total_tokens": 10006
+    }
+  },
+  "request_sha256": "bc7f76ea6127dcf0cb8643ef7d1ef4740ebc68cb3b66f2a0beeddeae4ee41f8d",
+  "source_example_id": "mix_dev_0093+durec_src_0348+hb_0270",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

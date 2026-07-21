@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c9762e0f71ca7942d2826c0c",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2414222080260515,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4a5b1f5a2abc747860583691",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetFlights. From history: user often chooses American Airlines or Delta. Also prefers economy class. Also often wants return? but current request just search available flights. Likely want economy. Also origin/destination unspecified. We can infer from past: many trips from New York to Chicago, Atlanta to LA, etc. But no specific. We can default to economy. Provide empty slots? We need to output function call with slots. We can include flight_class=\"Economy\". Others optional. Let's output GetFlights(flight_class=\"Economy\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615167,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bdc225fb9ca811ce",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 134,
+      "prompt_tokens": 11541,
+      "prompt_tokens_details": null,
+      "total_tokens": 11675
+    }
+  },
+  "request_sha256": "5cd63e6520623614a3735018d0cb8b9dea7a7dac7dd370e449a7fbe5f75fe5d0",
+  "source_example_id": "mix_dev_0331+durec_src_1229+hb_0436",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

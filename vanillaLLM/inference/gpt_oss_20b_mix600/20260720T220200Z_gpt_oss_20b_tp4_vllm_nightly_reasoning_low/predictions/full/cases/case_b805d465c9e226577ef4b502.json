@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b805d465c9e226577ef4b502",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0860367380082607,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f41136e6e009ed7689f53a8a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: origin, destination, departure_date. flight_class? passengers? Not given. Use defaults. From history: no preference. Use default? We can leave optional. Provide origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\". No flight_class. So output: GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615142,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8a28992b221dcfc3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 119,
+      "prompt_tokens": 6997,
+      "prompt_tokens_details": null,
+      "total_tokens": 7116
+    }
+  },
+  "request_sha256": "ef0c7a0506aaf7ccec807b109ee32c9fccbdb4d7cdce026210dcf7f3963d2fd2",
+  "source_example_id": "dev_0037",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

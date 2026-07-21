@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_9a5b44205aed69c52b34ddd9",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2226793505251408,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_197d0f10ab0fa8e922c4bca6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", pickup_time=\"in 30 minutes\", shared_ride=\"false\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats default 1, pickup_time? user said half an hour from now. We can set pickup_time maybe \"in 30 minutes\". shared_ride? not specified. default maybe false. So output: GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", pickup_time=\"in 30 minutes\", shared_ride=\"false\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615098,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a5d1aa3b5528de66",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 128,
+      "prompt_tokens": 9792,
+      "prompt_tokens_details": null,
+      "total_tokens": 9920
+    }
+  },
+  "request_sha256": "b0aad34d25ea2717bf4449c86e53af5584a109ba1f760bc4d4261dc25f8be37a",
+  "source_example_id": "mix_dev_0133+durec_src_0680+hb_0036",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

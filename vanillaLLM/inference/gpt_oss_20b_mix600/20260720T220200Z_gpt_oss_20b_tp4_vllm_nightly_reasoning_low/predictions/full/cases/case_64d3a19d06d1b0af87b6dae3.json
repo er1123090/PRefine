@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_64d3a19d06d1b0af87b6dae3",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.6482344456017017,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_8f25f67fd8dc6c16211792d7",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jiong He\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants music. No specific artist. From history, user likes Jiong He songs. So preference artist Jiong He. Also playback_device? Not known. So output GetMusic with artist=\"Jiong He\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615023,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a9c6c16a68661c11",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 68,
+      "prompt_tokens": 9733,
+      "prompt_tokens_details": null,
+      "total_tokens": 9801
+    }
+  },
+  "request_sha256": "480be1d7ac973beff494a2967f2d32edd80ba3fd480494b5d43d3bf5ed3ec982",
+  "source_example_id": "mix_dev_0158+durec_src_0666+hb_0215",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

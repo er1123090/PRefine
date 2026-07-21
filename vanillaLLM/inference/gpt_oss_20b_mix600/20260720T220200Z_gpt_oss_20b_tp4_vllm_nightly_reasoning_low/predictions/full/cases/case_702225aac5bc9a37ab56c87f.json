@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_702225aac5bc9a37ab56c87f",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.9841542663052678,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_2d43d47e1223ff98b04930dd",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", pickup_time=\"\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. User says \"I need a ride and want to check available ride-sharing options.\" No details. Use patterns: previous ride sharing: shared ride True, 2 seats to Silvercrest. Also earlier bus. Likely default shared ride? We can infer shared_ride=True, number_of_seats maybe 1? But pattern: user often wants shared ride. Let's set shared_ride=\"True\", number_of_seats=\"1\". Destination unknown. Maybe default none. Provide empty? We must include slots present. We can leave empty strings. So: GetRideSharing(destination=\"\", number_of_seats=\"1\", pickup_time=\"\", shared_ride=\"True\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615038,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ac53b863ea2b3bf7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 185,
+      "prompt_tokens": 9539,
+      "prompt_tokens_details": null,
+      "total_tokens": 9724
+    }
+  },
+  "request_sha256": "905fd5cfc8b3c28d4608db2010ded96dd835fa2f910f817ca082f3a1b961601f",
+  "source_example_id": "mix_dev_0073+hb_0466",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

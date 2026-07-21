@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_7a947189ae38543c42c9b489",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4239081759005785,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_cb52ef6e9ce4ccf479d2ed3b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"United Airlines\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetFlights. From history: user used flights with United Airlines, also American, Delta. No clear preference. Maybe cost sensitivity: chose United $84, American $80, Delta $85. Likely prefers cheapest. Also earlier used United. So choose airlines=\"United Airlines\". Also departure_date? Not specified. We just output domain with slot values? We need to include slots we can infer: airlines, departure_date? maybe none. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615053,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ba9ae813309310db",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 116,
+      "prompt_tokens": 9513,
+      "prompt_tokens_details": null,
+      "total_tokens": 9629
+    }
+  },
+  "request_sha256": "57c12acd258abc6b11bad61aef69a7ce4e0d6bcea68c68766150777be7271c7b",
+  "source_example_id": "mix_dev_0147+hb_0043",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

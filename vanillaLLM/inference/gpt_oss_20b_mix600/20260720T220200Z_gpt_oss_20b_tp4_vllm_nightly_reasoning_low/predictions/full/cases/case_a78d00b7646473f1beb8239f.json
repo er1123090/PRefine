@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a78d00b7646473f1beb8239f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.035826654173434,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c9df4058f1d016107c0db55f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"San Jose\", category=\"Japanese\", number_of_seats=\"2\", time=\"11:30\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetRestaurants. Slots: category, city, date, number_of_seats, price_range, restaurant_name, time. From history: user likes Ramen, wants 2 seats, 11:30. Also earlier Indian vegetarian. Likely prefers Indian? But current request generic. We infer city? User didn't specify. Maybe default to previous city? Last city was San Jose. So city=San Jose. Category maybe \"Ramen\" not a category. Category options include many. He likes Ramen, so category \"Japanese\" or \"Sushi\"? Ramen is Japanese. So category=Japanese. Number_of_seats=2. Time maybe 11:30? But generic. We'll set time=\"11:30\". price_range unknown. We'll leave empty. So call GetRestaurants with city=\"San Jose\", category=\"Japanese\", number_of_seats=\"2\", time=\"11:30\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615115,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-943fd40fc480bee8",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 223,
+      "prompt_tokens": 9568,
+      "prompt_tokens_details": null,
+      "total_tokens": 9791
+    }
+  },
+  "request_sha256": "5cefe8836a239859395903b798df4abcd077abc58f1da69154024f39b27b59c9",
+  "source_example_id": "mix_dev_0234+durec_src_0677+hb_0357",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

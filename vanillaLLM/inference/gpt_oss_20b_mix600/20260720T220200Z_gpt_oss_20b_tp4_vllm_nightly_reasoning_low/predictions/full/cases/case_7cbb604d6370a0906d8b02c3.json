@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_7cbb604d6370a0906d8b02c3",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4525640029460192,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_9d23a386782da7f7d693578f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants bus options. We need GetBuses. Which slots? departure_date, departure_time, destination, group_size, origin. No info given. Use past patterns: user often chooses origin San Diego or Las Vegas. But no context. Maybe default to previous bus trip: from San Diego to San Francisco on March 1. But user says \"check bus options for my trip.\" Could be generic. We can leave slots empty. Output format: GetBuses() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615056,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bfefba2745eb2785",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 119,
+      "prompt_tokens": 9536,
+      "prompt_tokens_details": null,
+      "total_tokens": 9655
+    }
+  },
+  "request_sha256": "a3dcb29bd1ad5263e6efcc2d659fb4d25f711f3bec888b66371c7ab4759d0742",
+  "source_example_id": "mix_dev_0073+hb_0466",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_dbdd253f898b0948e9ced524",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.413460205309093,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_53da8dcce4fe49a6894f31c2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User says \"I’m planning a trip and want to explore travel options.\" Likely GetTravel. Need slots: category, departure_date, destination, free_entry, good_for_kids, location. From history: user often wants free entry? In session15, they asked for free entry theme park. In session18, they looked for events, flights, hotels. No explicit preference. Maybe default none. We can provide empty. But need at least domain. Provide GetTravel with no slots? But format requires slot_name=\"value\". We can omit? Probably include empty. I'll output GetTravel() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615190,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9b2ee41aa5126dc5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 144,
+      "prompt_tokens": 10814,
+      "prompt_tokens_details": null,
+      "total_tokens": 10958
+    }
+  },
+  "request_sha256": "0861517654e2ee77187a386e85c60082218531561affb6b8f40b93db8d3c5ae1",
+  "source_example_id": "mix_dev_0163+durec_src_0721+hb_0105",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

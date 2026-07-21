@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0884b4f133d03a300da1cd0c",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.8266922971233726,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c15c2815398dd153dcf080f4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need GetFlights. No preferences given. From history, user often prefers Economy, single passenger. So set flight_class=\"Economy\", passengers=\"1\". No origin/destination given. We can't guess. Maybe leave empty. Output format: GetFlights().",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614822,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a99c4ae29c8cf224",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 65,
+      "prompt_tokens": 10333,
+      "prompt_tokens_details": null,
+      "total_tokens": 10398
+    }
+  },
+  "request_sha256": "41f324e60ae913e83d21f4d3d30eb96538fd1ebe10adc8105cda98bad866146a",
+  "source_example_id": "mix_dev_0146+durec_src_0203+hb_0489",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

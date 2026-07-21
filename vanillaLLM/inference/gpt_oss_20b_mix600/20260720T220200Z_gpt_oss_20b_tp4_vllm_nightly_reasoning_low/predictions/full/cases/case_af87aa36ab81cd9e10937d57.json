@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_af87aa36ab81cd9e10937d57",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.7035478679463267,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e245bfc87c01de60a626d50a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Persian\", city=\"San Francisco\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetRestaurants. Slots: category, city, date, number_of_seats, price_range, restaurant_name, time. From history: user likes Persian? earlier. Also likes pizza in Benicia. No consistent city. Maybe default city? In session 1 they searched San Fran. Session 7 Benicia. So maybe user wants restaurant in current location? Not specified. We can guess city \"San Francisco\" and category \"Persian\" or \"Pizza\". But we need to infer preference: earlier they asked for Persian in San Fran. So likely prefer Persian. So output GetRestaurants(category=\"Persian\", city=\"San Francisco\"). No date/time.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615126,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-affc9f490e79ebc0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 160,
+      "prompt_tokens": 10880,
+      "prompt_tokens_details": null,
+      "total_tokens": 11040
+    }
+  },
+  "request_sha256": "91d11ec468ffffb0fe211b7f48b446f23b77aa1e0ecc9b48e161060111b69bb7",
+  "source_example_id": "mix_dev_0327+durec_src_0137+hb_0492",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

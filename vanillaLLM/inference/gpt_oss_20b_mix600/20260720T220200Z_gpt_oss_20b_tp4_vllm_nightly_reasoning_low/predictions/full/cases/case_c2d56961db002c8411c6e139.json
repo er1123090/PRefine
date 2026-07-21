@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c2d56961db002c8411c6e139",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.144157343544066,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6bf4145a0c612116c6396b62",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, shared_ride? user says \"check available ride-sharing options.\" No specifics. Use past pattern: default shared_ride true? In session1 they used shared_ride=\"True\". Likely default True. Destination unknown. Maybe none. We can leave empty? But need slot names. Provide empty strings. So: GetRideSharing(destination=\"\", number_of_seats=\"\", shared_ride=\"True\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615155,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bdd1dc7c7b91a53e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 120,
+      "prompt_tokens": 11470,
+      "prompt_tokens_details": null,
+      "total_tokens": 11590
+    }
+  },
+  "request_sha256": "daa12da1a0004cf7aa360cd3010ffb2d739c989c5b1101b67ba88428d263006f",
+  "source_example_id": "mix_dev_0028+durec_src_0626+hb_0355",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

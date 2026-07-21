@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a7e80d91dfc5171d890a0969",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8144601555541158,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a549911349d58510c20c1a8e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetFlights. Slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history, user hasn't specified. We need deduce preferences: maybe prefers economy? In session5 rental car standard. No airline preference. Maybe default? We can leave empty. But need function call with slots maybe none. Provide empty object.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615116,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9709087fdab011a6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 90,
+      "prompt_tokens": 7808,
+      "prompt_tokens_details": null,
+      "total_tokens": 7898
+    }
+  },
+  "request_sha256": "133d0db414218600b51881d274d1edde4e3681229a2b646e4820902cdd42fa3b",
+  "source_example_id": "mix_dev_0164+hb_0217",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

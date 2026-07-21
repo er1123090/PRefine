@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ae23a6d208d86faa987c2613",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.332793053239584,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a691f8b48bec61957d865eea",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Italian\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants with cuisine Italian, no alcohol. In schema, GetRestaurants has category, city, date, number_of_seats, price_range, restaurant_name, time, city. No alcohol slot. So we can't specify alcohol. Just provide category maybe \"Italian\" not in enum. But category enum includes many cuisines. Italian not listed. So cannot. Maybe use price_range? Not. We can omit. Just call GetRestaurants with no params? But need cuisine. Not possible. Maybe use GetRestaurants with category \"Italian\" but not in enum. Might still accept? We'll provide category=\"Italian\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615125,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-944d7294cb660e97",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 139,
+      "prompt_tokens": 11275,
+      "prompt_tokens_details": null,
+      "total_tokens": 11414
+    }
+  },
+  "request_sha256": "fb4ad5e8386e38632d197fe260dbee2bbab6ee134db37a926fd05ddf548bf35a",
+  "source_example_id": "mix_dev_0126+durec_src_1001+hb_0443",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

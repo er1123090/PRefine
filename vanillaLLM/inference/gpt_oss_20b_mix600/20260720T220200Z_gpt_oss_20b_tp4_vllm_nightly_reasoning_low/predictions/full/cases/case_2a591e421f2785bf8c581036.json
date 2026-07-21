@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2a591e421f2785bf8c581036",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.5045186271891,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6bf38153449f70e406c8eb6a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"London\", number_of_rooms=\"3\", average_star=\"1\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetHotels. From history: user wants 3 rooms at 1 star in London, but also earlier 3 star in New York. Preference: number_of_rooms? They asked 3 rooms. average_star? 1 star. location? London. So output GetHotels(location=\"London\", number_of_rooms=\"3\", average_star=\"1\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614922,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-94aaaea7ed7b9d3a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 103,
+      "prompt_tokens": 10883,
+      "prompt_tokens_details": null,
+      "total_tokens": 10986
+    }
+  },
+  "request_sha256": "0ad429e96583800c775a82c7c3db33246b3330e1c3beed15e3422610d065e8a0",
+  "source_example_id": "mix_dev_0327+durec_src_0137+hb_0492",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

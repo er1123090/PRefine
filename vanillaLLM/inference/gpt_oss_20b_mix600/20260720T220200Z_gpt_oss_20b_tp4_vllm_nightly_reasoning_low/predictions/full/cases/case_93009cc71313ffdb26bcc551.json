@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_93009cc71313ffdb26bcc551",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7693838588893414,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3578e0fff1bd761d041b2064",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"San Diego\")",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need city? user says nearby. No city provided. Use past pattern: user often uses San Diego or Las Vegas. But \"nearby\" ambiguous. Maybe default to last city used? Last city used was San Diego. So city=\"San Diego\". No other slots. Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615086,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b4d71516684f5303",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 79,
+      "prompt_tokens": 9057,
+      "prompt_tokens_details": null,
+      "total_tokens": 9136
+    }
+  },
+  "request_sha256": "6a5bdcb5b5b778d9e9e18a416f1e63ef31f3f8e17b5c1266700254e56b3cf8ff",
+  "source_example_id": "mix_dev_0150+hb_0004",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

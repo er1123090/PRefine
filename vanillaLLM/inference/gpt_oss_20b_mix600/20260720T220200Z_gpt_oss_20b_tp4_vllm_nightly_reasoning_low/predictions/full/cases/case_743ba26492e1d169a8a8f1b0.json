@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_743ba26492e1d169a8a8f1b0",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1288128793239594,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a250ff1ff62cda67fe847693",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(category=\"Tourist Attraction\", good_for_kids=\"True\")",
+          "function_call": null,
+          "reasoning": "User wants travel options. Likely GetTravel. Need slots: category, departure_date, destination, free_entry, good_for_kids, location. From history, user often wants child friendly? In session5 they asked child friendly attractions. So good_for_kids=True. Destination unspecified. Probably they want options. We can set category maybe \"Tourist Attraction\" default. Provide location maybe unspecified. We'll set category=\"Tourist Attraction\", good_for_kids=\"True\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615043,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8431160c3981d76c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 120,
+      "prompt_tokens": 8986,
+      "prompt_tokens_details": null,
+      "total_tokens": 9106
+    }
+  },
+  "request_sha256": "8af8062b01d73fbd0215020002121e19aa9bf740688f3d43a2538ad9e19c65d4",
+  "source_example_id": "mix_dev_0199+hb_0020",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_7ccad6f3f684493c63959d7a",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.642285294830799,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a8633991f73e41eae1379c1c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"Delta Airlines\", departure_date=\"2019-03-13\", destination=\"Chicago\", flight_class=\"Economy\", origin=\"Atlanta\", passengers=\"1\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for travel domain. From history, user often chooses economy class, prefers flights from Atlanta to Chicago. Also bus from Anaheim to Sacramento. For travel, likely wants flight. Preferences: flight_class Economy, origin Atlanta, destination Chicago, departure_date March 13. Also maybe prefers airlines Delta or United? They chose Delta earlier. So set airlines \"Delta Airlines\". Also passengers \"1\". Return_date maybe none. So output GetFlights.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615056,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8494d82ef643bdb6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 139,
+      "prompt_tokens": 11192,
+      "prompt_tokens_details": null,
+      "total_tokens": 11331
+    }
+  },
+  "request_sha256": "3da9e3b6f10f93d2808cd20868505ae52c0e60ba3a335e222e16c1b3e5ce4ccb",
+  "source_example_id": "mix_dev_0249+durec_src_0043+hb_0048",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_dabf4619820e4ab730e2d7e8",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.108172142878175,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Noodles",
+        "location": "Menlo Park"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_f76ad682861d1219e82c0f79",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Noodles\", \"location\": \"Menlo Park\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-bd81676d203a329e",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588279,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9525cf8b849e45df",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 30,
+      "prompt_tokens": 9154,
+      "prompt_tokens_details": null,
+      "total_tokens": 9184
+    }
+  },
+  "request_sha256": "810efcf00b1b4ae4d6782961ed7b5a96fe36a06b871bed37489c0301282ad54c",
+  "source_example_id": "dev_0306",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

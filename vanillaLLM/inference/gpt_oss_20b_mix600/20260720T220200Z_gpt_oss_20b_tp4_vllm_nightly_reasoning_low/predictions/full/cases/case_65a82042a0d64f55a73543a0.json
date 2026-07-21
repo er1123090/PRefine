@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_65a82042a0d64f55a73543a0",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.7922134287655354,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_560502d8bce295582dabad25",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", shared_ride=\"False\", pickup_time=\"in 30 minutes\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats? user didn't specify seats. default? maybe 1. shared_ride? not specified. We'll assume shared_ride false. pickup_time: half an hour from now. We don't have current time. Use placeholder? maybe \"in 30 minutes\". We'll set pickup_time=\"in 30 minutes\". Output format: GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", shared_ride=\"False\", pickup_time=\"in 30 minutes\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615026,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-937331ffe975bcf4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 151,
+      "prompt_tokens": 11060,
+      "prompt_tokens_details": null,
+      "total_tokens": 11211
+    }
+  },
+  "request_sha256": "07e276b6b1953e5da23b3f340a1e50937ac1a7c7e10e0798c849623a107d4e7d",
+  "source_example_id": "mix_dev_0277+durec_src_1244+hb_0126",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

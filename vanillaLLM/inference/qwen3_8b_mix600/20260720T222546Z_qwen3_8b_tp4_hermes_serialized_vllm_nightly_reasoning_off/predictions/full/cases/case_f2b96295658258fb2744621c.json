@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_f2b96295658258fb2744621c",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.194481967017055,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "artist": "Jacky Cheung",
+        "song_name": "If It's Not Love"
+      },
+      "name": "GetMusic"
+    }
+  ],
+  "pair_id": "pair_f72eeefc8a49e35e04e84dac",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"artist\": \"Jacky Cheung\", \"song_name\": \"If It's Not Love\"}",
+                "name": "GetMusic"
+              },
+              "id": "chatcmpl-tool-9d8d96a98c236fbf",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588426,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-97a4fba10d3c37b3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 34,
+      "prompt_tokens": 7634,
+      "prompt_tokens_details": null,
+      "total_tokens": 7668
+    }
+  },
+  "request_sha256": "64746c32e2b3d22e962f87a0700a4931ef5a1a13e6c919ce58377b7344cab83a",
+  "source_example_id": "durec_src_0698",
+  "status": "success",
+  "target_domain": "GetMusic"
+}

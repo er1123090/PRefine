@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_c79384c67989dadbbc0458f0",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 9.06968799047172,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Sports",
+        "city": "Los Angeles",
+        "date": "2019-03-11"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_b881b770bcd65e1605cf862e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Sports\", \"city\": \"Los Angeles\", \"date\": \"2019-03-11\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-97588d63215f469c",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588157,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a9ee361991824269",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 42,
+      "prompt_tokens": 12051,
+      "prompt_tokens_details": null,
+      "total_tokens": 12093
+    }
+  },
+  "request_sha256": "2e6338fb9c253dffe5e49b73fbdca1e5e3731e06cf1dcc42051cfb1b1e2ba8e7",
+  "source_example_id": "mix_dev_0178+durec_src_0589+hb_0210",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

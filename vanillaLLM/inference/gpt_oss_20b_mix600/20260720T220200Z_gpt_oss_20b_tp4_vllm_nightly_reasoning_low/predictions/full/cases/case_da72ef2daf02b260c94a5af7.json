@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_da72ef2daf02b260c94a5af7",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0778540773317218,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_20ea57b84944ec413f0f376e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"Delta Airlines\", flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants flights. We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history, user prefers Delta Airlines often. Also earlier round trip. Likely wants round trip? Not specified. We'll guess Delta, economy, one passenger, no return date. Use origin? Not given. We can leave optional. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615188,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aaf996f03e77856c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 110,
+      "prompt_tokens": 10420,
+      "prompt_tokens_details": null,
+      "total_tokens": 10530
+    }
+  },
+  "request_sha256": "7b72b7bc2bee51db2bd8103f33964d3f050ac4c9834275e0bd312b153f7bd404",
+  "source_example_id": "mix_dev_0315+durec_src_0485+hb_0027",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

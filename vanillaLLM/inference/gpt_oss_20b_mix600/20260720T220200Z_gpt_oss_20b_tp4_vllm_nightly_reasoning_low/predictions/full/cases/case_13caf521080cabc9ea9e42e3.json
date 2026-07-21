@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_13caf521080cabc9ea9e42e3",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.666198767721653,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_50b534cf5a15facd422d14a7",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses()",
+          "function_call": null,
+          "reasoning": "We need GetBuses. No slots given. Use past preference: origin? destination? group_size? They didn't specify. We infer from past: user often uses Long Beach or Las Vegas. But no context. We can leave empty. Output format: GetBuses() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614866,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-970aa3455cff2a3e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 73,
+      "prompt_tokens": 7374,
+      "prompt_tokens_details": null,
+      "total_tokens": 7447
+    }
+  },
+  "request_sha256": "7a21afc92837d95974e61bcb0c5a00ef1628395d57d332585bd65761d8243557",
+  "source_example_id": "dev_0098",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

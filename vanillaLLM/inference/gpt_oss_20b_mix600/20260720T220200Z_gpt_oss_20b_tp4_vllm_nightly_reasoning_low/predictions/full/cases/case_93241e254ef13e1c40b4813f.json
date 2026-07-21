@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_93241e254ef13e1c40b4813f",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.3263934329152107,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1353acb36b4ad52cd0e7b9fa",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"Delta Airlines\", flight_class=\"Economy\", origin=\"Chicago\", destination=\"Las Vegas\", passengers=\"1\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants flights. We need to deduce likely slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history: user often chooses Delta Airlines, economy, from Chicago to Las Vegas, etc. Also earlier used American Airlines, etc. Pattern: prefers economy, Delta or American. Also often single passenger. So output GetFlights with inferred defaults: airlines=\"Delta Airlines\", flight_class=\"Economy\", passengers=\"1\". Need origin and destination? Not specified. Maybe default to Chicago to Las Vegas? But that's from session 7. Use that. departure_date maybe next week? But we can leave empty? We need to provide some values. Use most frequent: origin=\"Chicago\", destination=\"Las Vegas\", departure_date=\"2023-07-28\" (next Thursday). But we don't know date. Maybe leave empty? But function requires object; can omit. We'll include inferred: airlines=\"Delta Airlines\", flight_class=\"Economy\", origin=\"Chicago\", destination=\"Las Vegas\", passengers=\"1\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615087,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b0af30f204cd242a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 255,
+      "prompt_tokens": 8992,
+      "prompt_tokens_details": null,
+      "total_tokens": 9247
+    }
+  },
+  "request_sha256": "248f690b2d2f2161f62877359987bc0793d6b87ffe476d9801fdde20eb11c265",
+  "source_example_id": "dev_0256",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

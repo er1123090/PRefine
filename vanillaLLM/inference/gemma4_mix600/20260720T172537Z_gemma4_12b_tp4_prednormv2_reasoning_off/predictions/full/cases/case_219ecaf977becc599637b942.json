@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_219ecaf977becc599637b942",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 12.736851518973708,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "location": "Chicago",
+        "number_of_rooms": "2"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_e303dcf3e2a55f0dea02744f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"Chicago\", \"number_of_rooms\": \"2\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-b77972bcae5d51c9",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569162,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-98b52ad648bfe30e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 25,
+      "prompt_tokens": 11367,
+      "prompt_tokens_details": null,
+      "total_tokens": 11392
+    }
+  },
+  "request_sha256": "f482545207f85f1fdd29e574fcb9cdd79cbb75c21468a0f1e4ce8b6546bcc3d3",
+  "source_example_id": "mix_dev_0171+durec_src_0643+hb_0152",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

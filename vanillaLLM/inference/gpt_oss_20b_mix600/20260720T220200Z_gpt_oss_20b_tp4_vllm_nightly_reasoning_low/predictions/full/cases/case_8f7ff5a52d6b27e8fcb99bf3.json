@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8f7ff5a52d6b27e8fcb99bf3",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.03718713670969,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b44b659469e290afc7259087",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"Vallejo\", date=\"2023-03-05\", time=\"18:15\", number_of_seats=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. Slots: city=Vallejo, date=2023-03-05? date format? previous used \"2019-03-01\". So \"2023-03-05\". time=18:15. price_range? none. number_of_seats? maybe 1. category? none. So output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615081,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9d455fe9a8e4d87b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 111,
+      "prompt_tokens": 11086,
+      "prompt_tokens_details": null,
+      "total_tokens": 11197
+    }
+  },
+  "request_sha256": "70f30939733e03e3c18de78be87da0f1b8bce500c5b0fb355a98e1d316d227d1",
+  "source_example_id": "mix_dev_0240+durec_src_0039+hb_0045",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

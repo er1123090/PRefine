@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_00e0ab900ddec4d84e96ca16",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 7.341256828978658,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "average_star": "3",
+        "location": "New York",
+        "number_of_rooms": "1"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_c348897c68aa6e157d02f2e2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"New York\", \"number_of_rooms\": \"1\", \"average_star\": \"3\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-809baf6b91a56909",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784586726,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8fae06feec8fc84b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 37,
+      "prompt_tokens": 10715,
+      "prompt_tokens_details": null,
+      "total_tokens": 10752
+    }
+  },
+  "request_sha256": "cd766fbceadf8c5144e5d323ce88ff4e382488872e63348312aa85ac3f5bad3f",
+  "source_example_id": "mix_dev_0112+durec_src_0743+hb_0156",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

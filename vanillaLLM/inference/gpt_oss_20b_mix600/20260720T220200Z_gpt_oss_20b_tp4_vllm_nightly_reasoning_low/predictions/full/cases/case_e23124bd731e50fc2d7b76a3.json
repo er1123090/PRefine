@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e23124bd731e50fc2d7b76a3",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8491346817463636,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1877aff6d2fb5d04d3a973db",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Need slots: category, departure_date, destination, free_entry, good_for_kids, location. User says planning a trip explore travel options. No specifics. Use patterns: previous travel: user booked bus to LA, flights to LA, hotels. No preference. Maybe default none. We can leave empty. So call GetTravel with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615197,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8af3af4406db22bf",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 88,
+      "prompt_tokens": 9566,
+      "prompt_tokens_details": null,
+      "total_tokens": 9654
+    }
+  },
+  "request_sha256": "db63d98e5a36068feff8489a6b7c74262cb6b0a50c55fb92825e7dcb731e5091",
+  "source_example_id": "mix_dev_0234+durec_src_0677+hb_0357",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

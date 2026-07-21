@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a60afcb6d23e52ce21e32023",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8111948147416115,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_845525fb70dba078390b7989",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(average_star=\"3\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user wants 3 star? In session8 they asked 3 star. So likely preference: 3 star. Also location? Not specified. Maybe default? We can set average_star=\"3\". No location. So output GetHotels(average_star=\"3\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615113,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a262677a9c1a6664",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 83,
+      "prompt_tokens": 11194,
+      "prompt_tokens_details": null,
+      "total_tokens": 11277
+    }
+  },
+  "request_sha256": "60fa121cad580e09939ef7f4eb55682a6920095449d2efbba7fb1d7f131c1e1c",
+  "source_example_id": "mix_dev_0179+durec_src_0767+hb_0321",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

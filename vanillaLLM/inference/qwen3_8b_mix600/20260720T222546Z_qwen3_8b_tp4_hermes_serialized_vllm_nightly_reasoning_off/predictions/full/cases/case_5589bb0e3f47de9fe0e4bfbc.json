@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "case_id": "case_5589bb0e3f47de9fe0e4bfbc",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 8.071667563170195,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Music",
+        "date": "2023-10-27",
+        "event_type": "Rock",
+        "location": "San Francisco"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_af073cde93fbadcd5eb9ba9f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Music\", \"event_type\": \"Rock\", \"location\": \"San Francisco\", \"date\": \"2023-10-27\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-8853ba02c8ea2a92",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587451,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8fd77a1c5744e73f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 49,
+      "prompt_tokens": 10766,
+      "prompt_tokens_details": null,
+      "total_tokens": 10815
+    }
+  },
+  "request_sha256": "6d0c6e7e6dc3d234a15283801ade3308dba5f42c97326c40405f745930f469e9",
+  "source_example_id": "mix_dev_0040+durec_src_0578+hb_0101",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

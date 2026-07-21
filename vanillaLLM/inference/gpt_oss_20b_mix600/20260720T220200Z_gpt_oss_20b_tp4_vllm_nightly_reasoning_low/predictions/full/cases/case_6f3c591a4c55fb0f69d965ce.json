@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_6f3c591a4c55fb0f69d965ce",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9757443638518453,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_83db6eac01a78f8ea84cb701",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses()",
+          "function_call": null,
+          "reasoning": "We need GetBuses. Need slots: origin, destination, departure_date, departure_time, group_size. From history, user wants bus options. No specifics. Use past pattern: user often from Washington to New York. But here no context. We can infer default: origin unknown, destination unknown. Maybe use most frequent: origin Washington, destination New York. No date/time. So leave empty. Output format: GetBuses().",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615037,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-93b4c32f8fceea19",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 102,
+      "prompt_tokens": 10574,
+      "prompt_tokens_details": null,
+      "total_tokens": 10676
+    }
+  },
+  "request_sha256": "2342237594590175a8624d0b7ffca8a6e5687fb7a39dcc5544a02ae969f384c9",
+  "source_example_id": "mix_dev_0127+durec_src_0622+hb_0200",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

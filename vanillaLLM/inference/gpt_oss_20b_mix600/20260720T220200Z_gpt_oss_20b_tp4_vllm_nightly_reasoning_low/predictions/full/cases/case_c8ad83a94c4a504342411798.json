@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c8ad83a94c4a504342411798",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1630862401798368,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c660b54af5a165db97eedb9a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. Past: user asked for restaurants in Palo Alto, breakfast pricey, later in Walnut Creek Asian Fusion, etc. No explicit preference. Likely default: no constraints. So output empty? But need function call. Provide GetRestaurants with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615164,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b2844b821dd7ab6e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 71,
+      "prompt_tokens": 10554,
+      "prompt_tokens_details": null,
+      "total_tokens": 10625
+    }
+  },
+  "request_sha256": "b86d04c4a8be400bbbcb9a6d04e3c98cd8b3601af200723b0851e72b7362d65e",
+  "source_example_id": "mix_dev_0022+durec_src_0167",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

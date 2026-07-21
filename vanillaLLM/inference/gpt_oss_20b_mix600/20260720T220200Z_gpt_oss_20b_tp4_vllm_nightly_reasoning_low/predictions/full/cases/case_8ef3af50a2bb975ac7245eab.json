@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8ef3af50a2bb975ac7245eab",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8336514979600906,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_eba3fde02d0e5a05174e323d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history, user asked for restaurant earlier: Session7: \"one star hotel\" then \"show some attractions\". No restaurant. Session6: events. No restaurant. No explicit restaurant preference. But maybe user likes cheap? Not seen. So we can leave empty. Output format: GetRestaurants with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615080,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-93e9ab6316d32ad2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 85,
+      "prompt_tokens": 10513,
+      "prompt_tokens_details": null,
+      "total_tokens": 10598
+    }
+  },
+  "request_sha256": "5a28e812caad206d850efe9698daa46406a939acfc82dccd743b7091e5a33acb",
+  "source_example_id": "mix_dev_0192+durec_src_0151+hb_0009",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

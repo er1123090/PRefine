@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_93415136e4b580e53763859a",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8922932483255863,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_59dc5db8a01dacb878535f52",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"Toronto\", category=\"Sports\")",
+          "function_call": null,
+          "reasoning": "Need GetEvents with location nearby. No city given. Use past preference: user likes sports events in Toronto, baseball. Also music in NY. Likely wants sports. But \"nearby\" maybe current location unspecified. Use default? Maybe city from previous? Last city was Portland. But \"nearby\" ambiguous. I'll choose city \"Toronto\" as earlier. Provide category Sports.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615088,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9aaf79214d9b5f34",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 97,
+      "prompt_tokens": 8973,
+      "prompt_tokens_details": null,
+      "total_tokens": 9070
+    }
+  },
+  "request_sha256": "5ee8512ca81443931151c08715fa09c2b37e16983752fdedc21aee8191114b80",
+  "source_example_id": "mix_dev_0325+durec_src_0145+hb_0092",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

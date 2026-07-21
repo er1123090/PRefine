@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_c681e0b1cfd08408f06e9b68",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.399386532604694,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "area": "San Ramon",
+        "number_of_beds": "3"
+      },
+      "name": "GetHomes"
+    }
+  ],
+  "pair_id": "pair_a28ef868a881b3cd23e822e3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"area\": \"San Ramon\", \"number_of_beds\": \"3\"}",
+                "name": "GetHomes"
+              },
+              "id": "chatcmpl-tool-806672c33ce85fa6",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588143,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a0e98f1de4985b29",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 32,
+      "prompt_tokens": 10664,
+      "prompt_tokens_details": null,
+      "total_tokens": 10696
+    }
+  },
+  "request_sha256": "83ca42afa4d8e4c179a98c9c146514c43c790ea8198369a9f755e886e812328f",
+  "source_example_id": "mix_dev_0291+durec_src_0099+hb_0115",
+  "status": "success",
+  "target_domain": "GetHomes"
+}

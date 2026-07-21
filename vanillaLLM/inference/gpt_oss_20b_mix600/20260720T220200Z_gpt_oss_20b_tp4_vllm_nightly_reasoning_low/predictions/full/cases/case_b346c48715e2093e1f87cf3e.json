@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b346c48715e2093e1f87cf3e",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2097791777923703,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c16bae8134732fd3fc2644f2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(destination=\"Berkeley\", departure_date=\"2023-03-11\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: category, departure_date, destination, free_entry, good_for_kids, location. User says planning short trip to Berkeley, March 11, one night. Destination likely Berkeley. No category. We infer maybe \"Tourist Attraction\" default? No pattern. Use destination=Berkeley, departure_date=2023-03-11? date format? Past used \"2019-03-01\". So \"2023-03-11\". No other slots. Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615133,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-917f6d65775c9aff",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 130,
+      "prompt_tokens": 11515,
+      "prompt_tokens_details": null,
+      "total_tokens": 11645
+    }
+  },
+  "request_sha256": "63b8dc6d6854844e74746a14f62c897a8c6432284992964df80e49bc0c9e6f66",
+  "source_example_id": "mix_dev_0028+durec_src_0626+hb_0355",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

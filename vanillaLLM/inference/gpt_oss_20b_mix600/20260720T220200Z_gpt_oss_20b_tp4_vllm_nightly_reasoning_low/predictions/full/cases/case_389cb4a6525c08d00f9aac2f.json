@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_389cb4a6525c08d00f9aac2f",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9848782094195485,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_bc0d13c46e8d85e24ad61f92",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(playback_device=\"phone\")",
+          "function_call": null,
+          "reasoning": "We need GetMusic. Slots: artist?, playback_device?, song_name?. User says \"I’d like to listen to some music.\" and \"On my phone.\" So playback_device=phone. No artist or song. Use empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614951,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b3489043e16418e9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 65,
+      "prompt_tokens": 7247,
+      "prompt_tokens_details": null,
+      "total_tokens": 7312
+    }
+  },
+  "request_sha256": "bf03ae7299fb62ad03045b9e05a398d657b9fad9c6e272eadb5302f7b6aa982b",
+  "source_example_id": "durec_src_0118",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

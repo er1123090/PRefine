@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_79283ad84aabbb6dabbd137d",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9980157874524593,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_2da1a95d1bee7191fc91078c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jay Chou\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants to listen to some music. We need to output GetMusic with inferred artist or song_name? Preference schema: slot artist, playback_device, song_name. We infer from history: user likes Jay Chou songs. So artist=\"Jay Chou\". No specific song. So leave song_name empty? We can omit. Provide artist. Output format: GetMusic(artist=\"Jay Chou\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615052,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-83c50ca1caf27e28",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 106,
+      "prompt_tokens": 7918,
+      "prompt_tokens_details": null,
+      "total_tokens": 8024
+    }
+  },
+  "request_sha256": "a2cfedc32062b23d32cdc94432f296cc6ffc18f5ffc87c2dfdb90785f700bd04",
+  "source_example_id": "durec_src_0730",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

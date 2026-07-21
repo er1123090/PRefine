@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_b9f7713264544f2da8e5f4b8",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 7.690241255797446,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Art Exhibition",
+        "location": "San Francisco"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_f6fe5de77a1efc0d6a0fd735",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Art Exhibition\", \"location\": \"San Francisco\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-84aebae15e522f01",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588068,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-96ee778416b3e0c0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 28,
+      "prompt_tokens": 11590,
+      "prompt_tokens_details": null,
+      "total_tokens": 11618
+    }
+  },
+  "request_sha256": "cb506b1e252fd66a2c4e7a24c1ed8b30912cc3ffd3ba2c7674e2914d5e607b2b",
+  "source_example_id": "mix_dev_0300+durec_src_1281",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

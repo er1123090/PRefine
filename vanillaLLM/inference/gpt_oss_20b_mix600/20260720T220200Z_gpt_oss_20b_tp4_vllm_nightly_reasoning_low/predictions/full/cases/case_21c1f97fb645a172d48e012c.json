@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_21c1f97fb645a172d48e012c",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2402105564251542,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b657af0e11a2a8d08375fadc",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars()",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need slots: pickup_city, pickup_date, dropoff_date, pickup_time, car_type maybe. User didn't specify. Use past pattern: user often picks Standard. Use pickup_city unknown; maybe default? We can leave empty. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614902,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-964d6171d03025d2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 69,
+      "prompt_tokens": 11591,
+      "prompt_tokens_details": null,
+      "total_tokens": 11660
+    }
+  },
+  "request_sha256": "4d6b5c9ddc5570870647f1405246ed5e751ce833d4e41a5fbc6cacb518ccf0d8",
+  "source_example_id": "mix_dev_0320+durec_src_0220+hb_0168",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

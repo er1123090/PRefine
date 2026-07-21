@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e73a74f618a71facb5420958",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.146929556503892,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4cfce14811c6903c0ed1c32f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants hotels. No constraints given. From history, user often wants wifi. In session 16, user explicitly said need wifi. In session 15, no wifi requirement. In session 13, no wifi. So pattern: sometimes wifi. But default? Maybe user prefers wifi. Also often wants 3-star or 2-star? In session 15, 3-star. In session 16, 1-star. So no consistent. We'll default no constraints. Provide GetHotels with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615205,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a75defe73ebf3904",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 122,
+      "prompt_tokens": 11455,
+      "prompt_tokens_details": null,
+      "total_tokens": 11577
+    }
+  },
+  "request_sha256": "94a8ed343cbae7d7a257f2a2bb35ec31f54b974c14145dd3757bb4b389c2d64c",
+  "source_example_id": "mix_dev_0021+durec_src_0825+hb_0405",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

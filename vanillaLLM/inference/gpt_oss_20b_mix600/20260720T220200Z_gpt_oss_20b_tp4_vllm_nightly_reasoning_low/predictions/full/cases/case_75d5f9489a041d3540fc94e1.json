@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_75d5f9489a041d3540fc94e1",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1993607860058546,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1a353f2eb2a4da84d80beb84",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jacky Cheung\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants to listen to some music. We need to choose GetMusic. Need artist? Past: always Jacky Cheung. So artist=Jacky Cheung. No song_name specified. We can leave empty? But function requires optional. We can provide artist only. Output format: GetMusic(artist=\"Jacky Cheung\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615047,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b17a22796ca067c1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 94,
+      "prompt_tokens": 8501,
+      "prompt_tokens_details": null,
+      "total_tokens": 8595
+    }
+  },
+  "request_sha256": "8db8cc42e1d29089a8bde85b175a7ee597cc062858d47167e113f9ba8864c258",
+  "source_example_id": "mix_durec_src_1327+hb_0019",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_97f0af8352abd8bd54e56241",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1643749121576548,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1838d85847ff2a6477bdf721",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Berkeley\", departure_date=\"2023-03-11\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: category? free_entry? good_for_kids? location? destination? departure_date? We have location=Berkeley. departure_date=2023-03-11? but date format maybe string. We don't know category. Probably user wants travel info. We can set location=\"Berkeley\". departure_date=\"2023-03-11\". No other preferences. Output format: GetTravel(location=\"Berkeley\", departure_date=\"2023-03-11\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615095,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9ebe5af55f6b0ce0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 127,
+      "prompt_tokens": 10534,
+      "prompt_tokens_details": null,
+      "total_tokens": 10661
+    }
+  },
+  "request_sha256": "40ee39e1bedab80435956cee28a37438a0702bb5a8a388777b9e64e74ab5a434",
+  "source_example_id": "mix_dev_0058+durec_src_0989+hb_0228",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_adaa6d7155597a7d3a329083",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5086336405947804,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_838386a2ec07fbd5197fe179",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, shared_ride. User says \"I need a ride and want to check available ride-sharing options.\" No specifics. Use past pattern: user often 1 seat, shared ride true. So output GetRideSharing(destination=\"\", number_of_seats=\"1\", shared_ride=\"True\") but destination unknown. Maybe leave empty? But schema requires string. We can leave empty string.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615124,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-891f2dbd77c8b6ca",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 118,
+      "prompt_tokens": 8009,
+      "prompt_tokens_details": null,
+      "total_tokens": 8127
+    }
+  },
+  "request_sha256": "c88ee420ce64a95765dbb90c541eb2c45a142e5722331461046907c70bf84100",
+  "source_example_id": "mix_dev_0317+hb_0241",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_e7cd3bec8fb5fc9715d74bac",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.299213806167245,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Sports",
+        "city": "New York"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_ce688a04b779e8de5f9cd1d2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Sports\", \"city\": \"New York\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-9f195a6b63c522e9",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784571969,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b7de5131fd10474d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 21,
+      "prompt_tokens": 14261,
+      "prompt_tokens_details": null,
+      "total_tokens": 14282
+    }
+  },
+  "request_sha256": "6d633b82d18091c288b6c7d0cb9eb233699731dc213405e844799ead1d396d6f",
+  "source_example_id": "mix_dev_0087+durec_src_0532+hb_0096",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

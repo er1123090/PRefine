@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_6b8ddf99607375251627f9bf",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9514513295143843,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b210372a0a1e2d599c975382",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Chicago\", category=\"Tourist Attraction\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Need slots: category, free_entry, good_for_kids, location, destination, departure_date. From history, user hasn't specified. But pattern: earlier travel in Chicago, free_entry? Not seen. We can infer maybe wants tourist attraction. Use category \"Tourist Attraction\", location \"Chicago\", departure_date maybe today? But we don't have date. We can leave empty. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615033,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8056fb8e2d44b627",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 106,
+      "prompt_tokens": 9096,
+      "prompt_tokens_details": null,
+      "total_tokens": 9202
+    }
+  },
+  "request_sha256": "39e1437dd26f94050ed9f39692f8dcc930d77c300b1a2c176cad53a51d623fc6",
+  "source_example_id": "mix_dev_0228+durec_src_1021+hb_0204",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

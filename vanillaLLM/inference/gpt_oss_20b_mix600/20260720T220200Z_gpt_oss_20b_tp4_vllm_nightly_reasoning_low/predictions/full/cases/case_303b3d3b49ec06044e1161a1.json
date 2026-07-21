@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_303b3d3b49ec06044e1161a1",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0262436186894774,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d173a47de4667e883c3cea1e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"San Jose\", destination=\"Sacramento\", departure_date=\"2023-03-10\", departure_time=\"morning\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. Slots: origin, destination, departure_date, departure_time? user says morning. likely departure_time unspecified. Use \"morning\". So output: GetBuses(origin=\"San Jose\", destination=\"Sacramento\", departure_date=\"2023-03-10\", departure_time=\"morning\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614937,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-85429c772139111a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 103,
+      "prompt_tokens": 10757,
+      "prompt_tokens_details": null,
+      "total_tokens": 10860
+    }
+  },
+  "request_sha256": "c2b185cb8242c76dc7e73291a5532694ee2e0cd0c414c92d8588f059446506e4",
+  "source_example_id": "mix_dev_0258+durec_src_0028+hb_0423",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

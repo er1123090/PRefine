@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8b408bd83a876c6f53269480",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.874894174747169,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_56900b09f8f41754971d57c6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(category=\"Museum\", location=\"San Francisco\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel with category \"Art Gallery\" maybe? But schema has category enum includes \"Museum\", \"Theme Park\", etc. No Art Gallery. Maybe use \"Museum\" as art exhibition. So slot: category=\"Museum\", location=\"San Francisco\". Output format: GetTravel(category=\"Museum\", location=\"San Francisco\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615075,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-86a456c42513361b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 87,
+      "prompt_tokens": 10629,
+      "prompt_tokens_details": null,
+      "total_tokens": 10716
+    }
+  },
+  "request_sha256": "49b623572e9726ccd44606122c19f1374be3e9898ea631fd3789a19704f2f851",
+  "source_example_id": "mix_dev_0119+durec_src_0621+hb_0082",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e3527fc73aa720afbedc7eaa",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.470620933920145,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_036bcd409e78ffb6795f623f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(average_star=\"2\", has_wifi=\"True\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetHotels. From history: user wants 2 star with wifi, 1 room, 3 days. Also earlier 2 star hotel. Also 3 star. Likely prefers 2-3 star, wifi. So output GetHotels with average_star maybe \"2\" or \"3\". Use wifi true. location unspecified. So just slots: average_star=\"2\", has_wifi=\"True\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615198,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9e906b8eaa9eebfb",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 110,
+      "prompt_tokens": 10529,
+      "prompt_tokens_details": null,
+      "total_tokens": 10639
+    }
+  },
+  "request_sha256": "60d4154821fc1cc2bc70460f016db8079db9471fb51012f757879e09ea55d7c6",
+  "source_example_id": "mix_dev_0246+durec_src_0984",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

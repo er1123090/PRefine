@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_1b30b01f746cc97a2d97dd3f",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.7373040840029716,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c6ddc27905156ddeac7a0ad9",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"\", pickup_time=\"\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. From history: user used shared ride earlier. Likely wants shared. Destination unspecified. Maybe default? We can leave empty? But need values. We can infer destination maybe \"Sony Hall\" from earlier? But not sure. We can set shared_ride=True, number_of_seats maybe 3? Use defaults. Provide empty strings for others.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614886,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-86d70ebadec8dc85",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 121,
+      "prompt_tokens": 7932,
+      "prompt_tokens_details": null,
+      "total_tokens": 8053
+    }
+  },
+  "request_sha256": "0e9c8e6660aca496a62c5a8096ca882f279a0de7980c5cc3d2804370308071ae",
+  "source_example_id": "mix_dev_0321+hb_0482",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

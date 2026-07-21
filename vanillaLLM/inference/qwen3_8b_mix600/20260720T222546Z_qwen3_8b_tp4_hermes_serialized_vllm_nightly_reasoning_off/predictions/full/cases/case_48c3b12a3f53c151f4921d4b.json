@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_48c3b12a3f53c151f4921d4b",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.6769129941239953,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Italian",
+        "price_range": "moderate",
+        "serves_alcohol": "false"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_73b92e568dc233dea157a596",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Italian\", \"price_range\": \"moderate\", \"serves_alcohol\": \"false\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-95942d1d58eaa51b",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587374,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9e60bd0c241639ac",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 38,
+      "prompt_tokens": 12580,
+      "prompt_tokens_details": null,
+      "total_tokens": 12618
+    }
+  },
+  "request_sha256": "b9ea326452f1692e3790b14bb8acd8606dc1f8a093b1383bd0647be719d5fc9f",
+  "source_example_id": "mix_dev_0079+durec_src_0804+hb_0050",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

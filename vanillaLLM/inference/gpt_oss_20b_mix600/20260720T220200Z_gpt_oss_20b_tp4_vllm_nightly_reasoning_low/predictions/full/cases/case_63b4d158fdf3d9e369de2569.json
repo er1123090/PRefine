@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_63b4d158fdf3d9e369de2569",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8801015391945839,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_bea86c1ee3c0660392c4b50e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing()",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need slots: destination, number_of_seats, pickup_time, shared_ride. No info given. Use patterns: user often wants single seat? In past, no ride sharing. Use default? maybe shared_ride false, number_of_seats \"1\", pickup_time \"now\"? Destination unspecified. Maybe ask? But must output. Use empty? Probably leave empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615022,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9e467046c546fac5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 95,
+      "prompt_tokens": 9095,
+      "prompt_tokens_details": null,
+      "total_tokens": 9190
+    }
+  },
+  "request_sha256": "981314310be1e272ed46f45025608298c029280f99ce3636f2ca681bb6030667",
+  "source_example_id": "mix_dev_0038+durec_src_0302+hb_0218",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

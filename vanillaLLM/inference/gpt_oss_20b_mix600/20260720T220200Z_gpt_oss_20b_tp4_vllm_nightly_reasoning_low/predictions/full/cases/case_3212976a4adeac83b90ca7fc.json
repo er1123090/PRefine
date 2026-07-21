@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3212976a4adeac83b90ca7fc",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.4615661539137363,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_26995b35210cce67357373cf",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history, user asked for restaurant in session2: recommended Sansheng Sanwei Tantra Sichuan Food. No explicit preference. In session2, they didn't specify city. In session2, they didn't specify category. In session2, they didn't specify price_range. So no preference. But maybe cross-domain: user likes Chinese food? They liked Sichuan. Also earlier they liked Jacky Cheung songs. Not relevant. So we can default none. So output empty? We need to output function call with no slots. So: GetRestaurants().\n\n",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614940,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9088c3cfc62dd210",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 133,
+      "prompt_tokens": 9886,
+      "prompt_tokens_details": null,
+      "total_tokens": 10019
+    }
+  },
+  "request_sha256": "6af0207feb6849d6b2ce56474d1c5266508dfdce8454200ae5151e451c714542",
+  "source_example_id": "mix_dev_0302+durec_src_0301+hb_0035",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

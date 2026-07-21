@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f5a56d2a6eec1642cac9a372",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8374058781191707,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d2da56d28bf983926dd612e9",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetFlights. From history: user often chooses economy class, prefers specific airlines? In session20: economy. Session13: standard. Session17: full-size then compact. No strong preference. Maybe default economy. Also passenger count? Not specified. We'll output GetFlights with no slots? But need at least domain. Provide empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615222,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bcbd4735053421fa",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 86,
+      "prompt_tokens": 11303,
+      "prompt_tokens_details": null,
+      "total_tokens": 11389
+    }
+  },
+  "request_sha256": "ffefd45075b730d6e1e11efb49d25a019f796f317f9577b2b4fc567c2c5f4b30",
+  "source_example_id": "mix_dev_0109+durec_src_0404+hb_0248",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3f6113aad385edb2b805c524",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.510260288603604,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_0c6fce87f8b69f41fc4aad33",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", pickup_time=\"\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need slots: destination, number_of_seats, pickup_time, shared_ride. From history: user wants ride, check available options. No specifics. Use pattern: previous rides: shared ride to Maggie Daley Park, shared ride to Lers Ros Thai. Likely shared ride default True. number_of_seats maybe 1. destination unspecified. We can leave empty? But need values. Maybe infer from context: \"I need a ride\" generic. We can set destination empty? But schema requires string. We can set destination=\"\". But better guess: maybe they want a ride to some place? No info. We can set destination=\"\". But maybe use default \"Maggie Daley Park\" from earlier? But that's specific. I'd set destination=\"\"? Might be okay. Provide shared_ride=\"True\", number_of_seats=\"1\", pickup_time=\"\"? Provide empty string.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614963,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-81ddca145930f834",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 219,
+      "prompt_tokens": 11371,
+      "prompt_tokens_details": null,
+      "total_tokens": 11590
+    }
+  },
+  "request_sha256": "5efd084b45c1672c20d77dd4f33682e6c8b5645bcd87952a9494f2aa2afe2256",
+  "source_example_id": "mix_dev_0071+durec_src_0279+hb_0391",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

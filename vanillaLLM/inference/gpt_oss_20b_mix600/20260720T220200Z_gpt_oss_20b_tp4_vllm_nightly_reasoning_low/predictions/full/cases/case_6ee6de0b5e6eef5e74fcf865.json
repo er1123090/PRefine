@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_6ee6de0b5e6eef5e74fcf865",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7807997679337859,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_961bb342f423e0834df1e0c8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"New York\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants hotels. No location given. Past preferences: user booked hotels in Paris, NYC, Seattle. No consistent location. Maybe default to user's last city? Last hotel was NYC. So location=New York. No other preferences. Output GetHotels with location=\"New York\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615037,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8fddef9a4ca275e3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 79,
+      "prompt_tokens": 12580,
+      "prompt_tokens_details": null,
+      "total_tokens": 12659
+    }
+  },
+  "request_sha256": "647ac356fd9f8a57ad56919f72c097bad8553e7f54ff333593ea16f3395ecf00",
+  "source_example_id": "mix_dev_0099+durec_src_0572+hb_0102",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

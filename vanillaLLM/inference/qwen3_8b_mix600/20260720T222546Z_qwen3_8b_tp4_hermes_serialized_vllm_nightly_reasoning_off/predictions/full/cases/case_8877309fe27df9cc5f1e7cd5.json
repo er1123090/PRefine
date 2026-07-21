@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_8877309fe27df9cc5f1e7cd5",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.1716338749974966,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Tapas",
+        "city": "San Mateo"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_e1e0fa926f11a5bc1656fa22",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Tapas\", \"city\": \"San Mateo\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-bbbe745420c356dd",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587756,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a6138607f06c1421",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 30,
+      "prompt_tokens": 11403,
+      "prompt_tokens_details": null,
+      "total_tokens": 11433
+    }
+  },
+  "request_sha256": "2af367d92cfc6499484c224a20ae5d3e60557c690f073424a11a76d4266d81e6",
+  "source_example_id": "mix_dev_0165+durec_src_0519+hb_0404",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

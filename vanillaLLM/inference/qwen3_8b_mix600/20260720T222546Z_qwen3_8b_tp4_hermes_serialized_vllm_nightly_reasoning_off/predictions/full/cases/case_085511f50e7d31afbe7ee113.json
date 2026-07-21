@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_085511f50e7d31afbe7ee113",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 11.735846462659538,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "check_in_date": "2019-03-18",
+        "location": "San Diego"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_036bcd409e78ffb6795f623f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"San Diego\", \"check_in_date\": \"2019-03-18\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-870be8899390b985",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784586819,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9cbf8a9bd57809e0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 39,
+      "prompt_tokens": 11431,
+      "prompt_tokens_details": null,
+      "total_tokens": 11470
+    }
+  },
+  "request_sha256": "bf5f12bece9d28a1b7787850251885dea08843e6f6dcb62d123f5f8dee1972b9",
+  "source_example_id": "mix_dev_0246+durec_src_0984",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_21e739e4471800da863355ee",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.737396868877113,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_dda5651dcb810e4a734a2f23",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"2\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, shared_ride, pickup_time maybe. From history, user wants ride. No specifics. Use pattern: often shared_ride True. number_of_seats maybe 2? default? Use past: shared ride True. Destination unspecified. We can leave empty? But need values. Maybe destination unknown. We can set destination=\"\"? Probably need a value. Use \"unknown\". But schema expects string. We'll set destination=\"\". number_of_seats=\"2\", shared_ride=\"True\". pickup_time maybe omitted. We'll output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614902,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a4624ccc08a09973",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 148,
+      "prompt_tokens": 8802,
+      "prompt_tokens_details": null,
+      "total_tokens": 8950
+    }
+  },
+  "request_sha256": "a60e60d78e604e204743b7349944c0ecf6e11323d6a9e7810431145a9303d2db",
+  "source_example_id": "dev_0195",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

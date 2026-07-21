@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_480f2cdbd81c613e39fa1e63",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8585123848170042,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3da8d690ce86b6a99366e84c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"savings\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks with recipient_account_type. User wants transfer money to bank account. Likely savings? In history, they requested savings balance. So preference: savings. Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614976,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bc2647bd31d0359b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 56,
+      "prompt_tokens": 10312,
+      "prompt_tokens_details": null,
+      "total_tokens": 10368
+    }
+  },
+  "request_sha256": "43f2a7df57341fce18677b78ecb7c4256b0bcfbef0abea58eba94ebadae47aa8",
+  "source_example_id": "mix_dev_0075+durec_src_1142+hb_0024",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

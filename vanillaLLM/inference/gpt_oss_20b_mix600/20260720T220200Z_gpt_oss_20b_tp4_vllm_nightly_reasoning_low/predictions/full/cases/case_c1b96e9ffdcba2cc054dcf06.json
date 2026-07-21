@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c1b96e9ffdcba2cc054dcf06",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.3364463299512863,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_27db81a13cbc02429039979f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "<|start|>assistant<|channel|>final",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for travel domain. From history, user used GetTravel with category Park, good_for_kids True, location Chicago. Also used GetEvents, GetRideSharing, GetBuses, GetRentalCars. For travel preferences: likely wants free entry? In session1, user asked free option, got not free. No pattern. Maybe prefers shared ride? In session2, user ok with shared. For travel, maybe wants free entry? Not sure. We can output GetTravel with category maybe \"Park\" or \"Museum\"? But current utterance: \"I’m planning a trip and want to explore travel options.\" We need to infer preferences: likely wants free entry? In session1, user asked free option. So maybe prefers free. Also good_for_kids? Not sure. Maybe default none. We can set free_entry=\"True\"? But schema has free_entry boolean. Also good_for_kids boolean. We can set both True? But not sure. Maybe set free_entry=\"True\" and good_for_kids=\"True\" and location unspecified. But need location? Not required. We can leave empty. So output: GetTravel(free_entry=\"True\", good_for_kids=\"True\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615154,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-adc600c31351cb3a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 256,
+      "prompt_tokens": 7931,
+      "prompt_tokens_details": null,
+      "total_tokens": 8187
+    }
+  },
+  "request_sha256": "8a860290d0f3591e53f6c2a78384adaff01806244529eab29715da351eb11df9",
+  "source_example_id": "mix_dev_0321+hb_0482",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

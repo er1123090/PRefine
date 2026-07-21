@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_ed63749362a19c121db89ca2",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 23.54689064901322,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Sandwich",
+        "city": "Vallejo",
+        "date": "2019-03-05",
+        "price_range": "moderate",
+        "time": "18:15"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_45a8262027b07a03ba6c7f00",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Sandwich\", \"city\": \"Vallejo\", \"date\": \"2019-03-05\", \"price_range\": \"moderate\", \"time\": \"18:15\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-a1648512478433e2",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784572027,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8da690091bc7ef0f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 56,
+      "prompt_tokens": 10605,
+      "prompt_tokens_details": null,
+      "total_tokens": 10661
+    }
+  },
+  "request_sha256": "499589885dcc94277558bf048f369d241e464af0eeaf27cf0912bfbb5912b3a2",
+  "source_example_id": "mix_dev_0251+hb_0118",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2f17f5864e33b86ec24c1540",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.5365989403799176,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f0ad811ce844a4314ef8df63",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(destination=\"Berkeley\", departure_date=\"2026-03-11\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel? Actually trip planning: likely GetTravel. Slots: departure_date, destination, maybe category? They didn't specify. Use GetTravel with destination=\"Berkeley\" but not in enum. Destination not in list. Maybe GetFlights? They plan short trip, one night. Probably GetTravel. But destination not in enum. Maybe GetHotels? They need stay. Use GetHotels with location? Berkeley not in list. So maybe GetTravel with destination? Not in enum. But we can still call with destination. Use GetTravel(destination=\"Berkeley\", departure_date=\"2026-07-??\" but date March 11th). Use departure_date=\"2026-07-??\" Actually current date 2026-07-21, but user says March 11th (likely next year). Use \"2026-03-11\". Provide destination. No other slots. Output format: GetTravel(destination=\"Berkeley\", departure_date=\"2026-03-11\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614934,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-94f000ef30dec067",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 228,
+      "prompt_tokens": 10472,
+      "prompt_tokens_details": null,
+      "total_tokens": 10700
+    }
+  },
+  "request_sha256": "306d00af743b4d5d5602658eb2432f2286064b17b72f414cd06e8faf382ee461",
+  "source_example_id": "mix_dev_0131+durec_src_0415+hb_0429",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

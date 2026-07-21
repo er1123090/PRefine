@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f6d73d34128f13e7b1c487a3",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.234048835001886,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_ab4acbc5b7ab864382065734",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Japanese\", price_range=\"moderate\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant: likely category, city, price_range, etc. Past: user asked for seafood with vegetarian in Hayward, got Sapporo Restaurant. Also earlier asked for cheap restaurant in Pleasanton, got Taco Bell. So preferences: likes seafood with vegetarian? Not sure. Also earlier asked for restaurant in area with seafood and vegetarian. So category maybe \"Seafood\" but not in enum. Category list includes many. Maybe \"Seafood\" not present. Could be \"Japanese\" or \"Sushi\". But user said seafood with vegetarian options. Could be \"Japanese\" or \"Seafood\" not available. Maybe choose \"Japanese\" or \"Sushi\". Also location: user didn't specify city. Could default to previous city? Last location was Vancouver? Actually last session 16: user in Vancouver. So maybe restaurant in Vancouver. But earlier user in Hayward. Hard.\n\nWe need to output function call. Choose GetRestaurants with city unspecified? Must include city? It's optional. Provide category maybe \"Japanese\" and price_range \"moderate\". Let's output.\n\n",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615223,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9510df11ee678fea",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 242,
+      "prompt_tokens": 10599,
+      "prompt_tokens_details": null,
+      "total_tokens": 10841
+    }
+  },
+  "request_sha256": "a15a3eedaf18de58e6eecdf435c4f10e5a226a59b2c6014c992bd21a94d8b03c",
+  "source_example_id": "mix_dev_0107+durec_src_0236+hb_0188",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_7dc4f7f5dc7972d2078b69b8",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.27828327100724,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "average_star": "3",
+        "location": "Portland",
+        "number_of_rooms": "1"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_232862caed7f0630eed939b7",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"Portland\", \"number_of_rooms\": \"1\", \"average_star\": \"3\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-858d7d80aec72a2e",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587691,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b4315ef9695dcc89",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 36,
+      "prompt_tokens": 8762,
+      "prompt_tokens_details": null,
+      "total_tokens": 8798
+    }
+  },
+  "request_sha256": "342559ab9bfc01a68f3f890a408d37bda0075d2099fd5075796c6740945ea2a3",
+  "source_example_id": "dev_0091",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

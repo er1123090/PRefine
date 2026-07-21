@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a84d0b081ebadf8d46561b00",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0760958977043629,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b394aab28043ecd532d43512",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need slots: car_type, dropoff_date, pickup_city, pickup_date, pickup_time. No info given. Use past patterns: user often picks Standard. pickup_city likely unspecified; maybe default? We infer from past: user often picks Vancouver or London. No context. We can leave empty. Output format: GetRentalCars(car_type=\"Standard\")? But need all slots? We can provide only inferred. Use car_type=\"Standard\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615116,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8f4750882ed68de5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 113,
+      "prompt_tokens": 9200,
+      "prompt_tokens_details": null,
+      "total_tokens": 9313
+    }
+  },
+  "request_sha256": "df95eed53cd9d73eccb0621aeb732e1af89ec2dcf7111bb68125e4a1726d8996",
+  "source_example_id": "dev_0322",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d0960d49d1d7a76b40921a19",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.334163224324584,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1e1f87405d86e8ee2c854d31",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"Seattle\", destination=\"Portland\", departure_date=\"2019-03-14\", departure_time=\"06:30\", group_size=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. Need slots: origin, destination, departure_date, departure_time, group_size. User says \"I want to check bus options for my trip.\" No details. Use past patterns: likely from previous session 19: Seattle to Portland. But we infer from history: user often uses Seattle to Portland. So set origin=\"Seattle\", destination=\"Portland\", departure_date=\"2019-03-14\", departure_time=\"06:30\", group_size=\"1\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615176,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a9ae55d3d69bad7d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 143,
+      "prompt_tokens": 11845,
+      "prompt_tokens_details": null,
+      "total_tokens": 11988
+    }
+  },
+  "request_sha256": "514911ea3c5f7f658bfe05473891b9f6f529b9fb538345446e908a8df24400a9",
+  "source_example_id": "mix_dev_0210+durec_src_0510+hb_0287",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

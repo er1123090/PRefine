@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b0768bbcaec7b171176e2bb3",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.050696400925517,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_98484d6a3096a25f31ffd896",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"Vancouver\", destination=\"Seattle\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. Need slots: origin, destination, departure_date, departure_time, group_size. User says \"check bus options for my trip.\" No details. Use past patterns: likely from Vancouver to Seattle? But unclear. We infer from previous bus queries: user often asks after event. But no context. We can default to empty? But need values. Maybe use most frequent: origin Vancouver, destination Seattle, departure_date March 5? But that's event. Could use last bus session: origin Las Vegas, destination Fresno, departure_date 7th. But no. We can choose most common: origin Vancouver, destination Seattle. Provide empty others.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615128,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b7ae8dbe541f98ce",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 156,
+      "prompt_tokens": 9683,
+      "prompt_tokens_details": null,
+      "total_tokens": 9839
+    }
+  },
+  "request_sha256": "ab8ebdaee6a3df500726abd51e2e0dd1738b224e1e9a2020f3c72add439a6e0f",
+  "source_example_id": "mix_dev_0281+hb_0424",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_809aeb16f4d2337093a6073e",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0257291309535503,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_9f2cf4096b25d8adf9fc4168",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing()",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need slots: destination, number_of_seats, pickup_time, shared_ride. No info given. Infer from patterns: user wants ride-sharing. Past: no ride sharing. Maybe default? Use common: destination unspecified. Could guess destination same as previous? None. Maybe use default: destination empty, seats 1, pickup_time now, shared_ride false. Provide empty strings? Probably leave omitted. We'll output with empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615062,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8db7ab7c99e68d69",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 107,
+      "prompt_tokens": 8958,
+      "prompt_tokens_details": null,
+      "total_tokens": 9065
+    }
+  },
+  "request_sha256": "30f40b68aa7e0a690cbdfce77cde1b3f9e872ea51aeffd5aa1196d1ca5063e74",
+  "source_example_id": "mix_dev_0243+hb_0032",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

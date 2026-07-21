@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a528ec6a3746a391cb3f2e4c",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.984705088660121,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_01b09864a272cd75bc64ba74",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"Concord\", price_range=\"cheap\", category=\"Asian\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant: likely city, price_range, category. Past: user asked for restaurant in Concord cheap oriental. Also earlier no other. So default maybe city unspecified. We can guess city maybe \"Concord\" and price_range \"cheap\" and category \"Asian\". Output format: GetRestaurants(city=\"Concord\", price_range=\"cheap\", category=\"Asian\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615113,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8cde0721fea78500",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 103,
+      "prompt_tokens": 9098,
+      "prompt_tokens_details": null,
+      "total_tokens": 9201
+    }
+  },
+  "request_sha256": "7c71d7f4d09709ca7e5cf91708488d76d8d428b5faaba9e2e43ef78031abf086",
+  "source_example_id": "mix_dev_0228+durec_src_1021+hb_0204",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

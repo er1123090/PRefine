@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_dce8a3392d487fac90654ae7",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3822414577007294,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_ea39c4283872b31f6783fed2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Kris Wu\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User says \"I want to listen to some music.\" We need to output a function call. Which domain? GetMusic. Slots: artist, playback_device, song_name. We need to infer preferences from history. User likes Kris Wu songs. Also likes Chinese Soul. So likely artist \"Kris Wu\". Playback device? Not specified. Maybe default? We can leave empty. song_name? Not specified. We can leave empty. So output: GetMusic(artist=\"Kris Wu\")? But schema requires object with optional fields. We can include only artist. So: GetMusic(artist=\"Kris Wu\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615191,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b9807798ffe128c3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 150,
+      "prompt_tokens": 10494,
+      "prompt_tokens_details": null,
+      "total_tokens": 10644
+    }
+  },
+  "request_sha256": "486cb5c1c2206d01af8c0ef201c5c72d6b62ccb1525cbb08abc6f0fe6c382ed0",
+  "source_example_id": "mix_dev_0065+durec_src_0412+hb_0408",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

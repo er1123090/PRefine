@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a350e5e525bdd8f0396d9d78",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3546852469444275,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_2af7743d65604886d98ef2f4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2019-03-09\", origin=\"San Francisco\", destination=\"Seattle\", flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history, user often chooses economy? No pattern. No preference. We can leave optional. Provide departure_date \"2019-03-09\"? Use date format? Past used \"2019-03-14\". So \"2019-03-09\". origin \"San Francisco\", destination \"Seattle\". No airline preference. flight_class maybe Economy. passengers unspecified. return_date none. So call.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615111,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a816ffef04fda070",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 145,
+      "prompt_tokens": 9888,
+      "prompt_tokens_details": null,
+      "total_tokens": 10033
+    }
+  },
+  "request_sha256": "6ec1b42197ae930da655d89f92e32c275514d6f0dfdda440eb4c28e25450881e",
+  "source_example_id": "mix_dev_0112+durec_src_0743+hb_0156",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

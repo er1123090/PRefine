@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_84cc31d5f011978f43658c8b",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5421667210757732,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4f6cce9911fdd8adf5810360",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"Vancouver\", destination=\"Seattle\", departure_date=\"2019-03-02\", group_size=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. Need slots: origin, destination, departure_date, departure_time, group_size. From history: user wants bus options. No specifics. Use past pattern: user asked bus from Vancouver earlier. Likely origin Vancouver, destination Seattle, departure_date 2019-03-02. group_size maybe 1. We'll output GetBuses(origin=\"Vancouver\", destination=\"Seattle\", departure_date=\"2019-03-02\", group_size=\"1\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615068,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8dfb941dd4fafd05",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 134,
+      "prompt_tokens": 8095,
+      "prompt_tokens_details": null,
+      "total_tokens": 8229
+    }
+  },
+  "request_sha256": "9220081a35f3971897e92188a9a1cabe6198ccbf08c8d7ab900b36cf0d811089",
+  "source_example_id": "dev_0239",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_353140f6acf341cc94fc9105",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6043307781219482,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b210372a0a1e2d599c975382",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Berkeley\", departure_date=\"2023-03-11\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: location=Berkeley? but Berkeley not in enum. Maybe use GetHotels? but trip. Use GetTravel with location \"Berkeley\" not in list. Maybe choose GetHotels? but trip. Probably GetTravel with location \"Berkeley\" but not valid. Maybe choose GetHotels with location? not. Maybe GetTravel with location \"Berkeley\" but ignore enum. I'll output GetTravel(location=\"Berkeley\", departure_date=\"2023-03-11\", destination? none. Use departure_date.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614945,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-86abd2cd4089ec25",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 136,
+      "prompt_tokens": 9142,
+      "prompt_tokens_details": null,
+      "total_tokens": 9278
+    }
+  },
+  "request_sha256": "d7e8ef29456c3ea3c565fc72eff75b84b75c4543ac180091b1311e2653483994",
+  "source_example_id": "mix_dev_0228+durec_src_1021+hb_0204",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

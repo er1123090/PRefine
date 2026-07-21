@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_a32090c3a63e095252809ed7",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.2917969254776835,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Historical Landmark",
+        "departure_date": "2019-03-11",
+        "destination": "Berkeley",
+        "good_for_kids": true,
+        "location": "Berkeley"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_f273ce8be750be0be82058b5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Historical Landmark\", \"destination\": \"Berkeley\", \"departure_date\": \"2019-03-11\", \"location\": \"Berkeley\", \"good_for_kids\": true}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-b167f9dd05afe05e",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587922,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-94ffb528c58e681f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 61,
+      "prompt_tokens": 11051,
+      "prompt_tokens_details": null,
+      "total_tokens": 11112
+    }
+  },
+  "request_sha256": "f87f916c15880ca4e50282e2e49be8ddb8b9e17e8449520d6ba96a3b61ae7bb8",
+  "source_example_id": "mix_dev_0092+durec_src_0594+hb_0451",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

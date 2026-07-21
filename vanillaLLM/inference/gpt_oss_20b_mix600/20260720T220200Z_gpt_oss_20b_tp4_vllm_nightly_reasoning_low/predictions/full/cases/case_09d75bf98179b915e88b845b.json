@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_09d75bf98179b915e88b845b",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.437204682268202,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_078125f45ee519d249e792a3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jacky Cheung\", playback_device=\"TV\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants music. We need GetMusic. Preferences: artist? playback_device? song_name? From history, user likes Jacky Cheung songs. Also likes No Diggity earlier. But pattern: prefers Jacky Cheung. So set artist=\"Jacky Cheung\". playback_device maybe TV? earlier used TV. We'll choose playback_device=\"TV\". No song_name specified. So output GetMusic(artist=\"Jacky Cheung\", playback_device=\"TV\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614825,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b32db280e8219c35",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 125,
+      "prompt_tokens": 10473,
+      "prompt_tokens_details": null,
+      "total_tokens": 10598
+    }
+  },
+  "request_sha256": "aefb18dc7cd1e7d48fdc35dd458ca81f52fc86bdfced88b843dcc5378d53f714",
+  "source_example_id": "mix_dev_0068+durec_src_0583+hb_0099",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

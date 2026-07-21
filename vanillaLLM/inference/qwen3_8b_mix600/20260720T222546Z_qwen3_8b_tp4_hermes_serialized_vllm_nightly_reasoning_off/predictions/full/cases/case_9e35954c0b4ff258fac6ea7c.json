@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_9e35954c0b4ff258fac6ea7c",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.281187791377306,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "playback_device": "TV"
+      },
+      "name": "GetMusic"
+    }
+  ],
+  "pair_id": "pair_3f74b2247524aa4ecb880d67",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"playback_device\": \"TV\"}",
+                "name": "GetMusic"
+              },
+              "id": "chatcmpl-tool-ac60bddadf49c4ad",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587891,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9d2277dd6897df08",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 22,
+      "prompt_tokens": 11392,
+      "prompt_tokens_details": null,
+      "total_tokens": 11414
+    }
+  },
+  "request_sha256": "664c3fa8d3daa3cb37caf4fe82e849a8930d478aeaa63711b68a0de537345930",
+  "source_example_id": "mix_dev_0144+durec_src_1273+hb_0238",
+  "status": "success",
+  "target_domain": "GetMusic"
+}

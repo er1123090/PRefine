@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_22cc0c802c507a1926ce883c",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 10.026561621576548,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Thai",
+        "price_range": "cheap"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_5959183384d44a9e7e933431",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Thai\", \"price_range\": \"cheap\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-8d5d356d83bc7fa1",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569186,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b4ab736f9d7f4fc8",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 22,
+      "prompt_tokens": 11143,
+      "prompt_tokens_details": null,
+      "total_tokens": 11165
+    }
+  },
+  "request_sha256": "9a94c4679c9ee422c46ca0bbf5bff97cdc18fc6d26001b6e1fbfb12de9b93b8d",
+  "source_example_id": "mix_dev_0084+hb_0276",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_950f88d6ac1c63bc21c3867b",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.342484166845679,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Music",
+        "event_type": "Blues"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_0ced6df5210ff820d9f029d4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Music\", \"event_type\": \"Blues\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-883e4524a8bf9097",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587835,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-920726610168e4e4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 28,
+      "prompt_tokens": 11266,
+      "prompt_tokens_details": null,
+      "total_tokens": 11294
+    }
+  },
+  "request_sha256": "763100a707ae9798983c4bb24d44918ff1f69c5bc4ba14baebdf64378cee2e03",
+  "source_example_id": "mix_dev_0196+durec_src_0523+hb_0029",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

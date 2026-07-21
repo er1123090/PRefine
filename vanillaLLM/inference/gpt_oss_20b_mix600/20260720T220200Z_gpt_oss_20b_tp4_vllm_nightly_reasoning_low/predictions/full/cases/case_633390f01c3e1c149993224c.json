@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_633390f01c3e1c149993224c",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.2813346488401294,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3f4056944c05fa0702547708",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2023-03-08\", pickup_time=\"12:00\", dropoff_date=\"2023-03-10\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says pick up downtown Berlin, around noon March 8th, keep for couple days. So pickup_city=\"Berlin\"? but enum includes many cities, Berlin not listed. So maybe default? But we must use available enum. No Berlin. So maybe pick up city not in list, but we must still call. Maybe use \"London\" etc. But user says Berlin. We can still set pickup_city=\"Berlin\" even if not in enum? Probably okay. pickup_date=\"2023-03-08\" (assuming year). pickup_time=\"12:00\". dropoff_date maybe \"2023-03-10\" (couple days). number_of_days not a slot. So output: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2023-03-08\", pickup_time=\"12:00\", dropoff_date=\"2023-03-10\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615022,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8ebfeac4d9c184f8",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 249,
+      "prompt_tokens": 9965,
+      "prompt_tokens_details": null,
+      "total_tokens": 10214
+    }
+  },
+  "request_sha256": "6e324ca1df6c3ae7e680919e32e5879d70b61b972328970ce968680426a06d8a",
+  "source_example_id": "mix_dev_0045+durec_src_0431+hb_0103",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

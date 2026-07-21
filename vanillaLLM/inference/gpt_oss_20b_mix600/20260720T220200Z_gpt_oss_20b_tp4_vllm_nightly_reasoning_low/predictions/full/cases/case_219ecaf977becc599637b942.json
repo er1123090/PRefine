@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_219ecaf977becc599637b942",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.839356167241931,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e303dcf3e2a55f0dea02744f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(average_star=\"3\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user likes 3-star hotels. Also in session1 and 2. So default: 3-star. Also maybe location unspecified. We can leave empty. Provide slot: average_star? Actually property is average_star. Use \"3\". Also number_of_rooms maybe unspecified. We'll just set average_star=\"3\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614902,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bc3231f6a2877071",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 93,
+      "prompt_tokens": 9616,
+      "prompt_tokens_details": null,
+      "total_tokens": 9709
+    }
+  },
+  "request_sha256": "4f306b157062c3b7ac568272431f10a8a5905dba5deaf08b538f0b7a66b8e1eb",
+  "source_example_id": "mix_dev_0171+durec_src_0643+hb_0152",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

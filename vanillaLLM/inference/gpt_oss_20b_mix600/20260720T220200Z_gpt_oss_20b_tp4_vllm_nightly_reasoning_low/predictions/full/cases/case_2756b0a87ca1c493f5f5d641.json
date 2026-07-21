@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2756b0a87ca1c493f5f5d641",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.098257933743298,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3914232a2898dc17b5d7b044",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"Portland\", destination=\"Seattle\", group_size=\"3\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. No slots given. Use past preference: origin Portland, destination Seattle, group_size 3. So output GetBuses(origin=\"Portland\", destination=\"Seattle\", group_size=\"3\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614918,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-90348e25906a55ec",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 71,
+      "prompt_tokens": 9193,
+      "prompt_tokens_details": null,
+      "total_tokens": 9264
+    }
+  },
+  "request_sha256": "789e6523d662fa0984b477486e51f25f625e01ac6ca831f48dc0fd4904b503b5",
+  "source_example_id": "mix_dev_0082+hb_0302",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

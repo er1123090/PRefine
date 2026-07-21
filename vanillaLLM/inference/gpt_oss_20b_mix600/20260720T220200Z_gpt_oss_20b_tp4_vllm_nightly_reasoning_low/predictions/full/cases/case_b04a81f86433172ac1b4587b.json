@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b04a81f86433172ac1b4587b",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.2059164214879274,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4732a948a9e9e6d6a3a8df52",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": "We need GetTravel? They want travel. Provide destination Berkeley? but domain Travel location enum includes many but not Berkeley. So maybe GetHotels? They want trip. Probably GetTravel with location \"Berkeley\" not in enum. So maybe GetHotels? They want stay one night. Use GetHotels with location? not Berkeley. Maybe GetTravel not match. Could use GetHotels with location \"San Jose\" etc. But user says Berkeley. Not in list. Maybe GetTravel with location \"Berkeley\" but not in enum. We must follow schema. Maybe choose GetHotels with location \"San Jose\" as closest? But better to use GetTravel with location \"Berkeley\" ignoring enum? but schema requires enum. We can still output with location \"Berkeley\" though not in enum. I'll output GetTravel(location=\"Berkeley\", departure_date=\"2026-07-21\", destination=\"Berkeley\")? Actually departure_date is travel date. Use departure_date=\"2026-07-21\"? but user says March 11th. So departure_date=\"2026-07-21\"? no. Use \"2026-07-21\" is current date. But user says March 11th. So departure_date=\"2026-07",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615127,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9bf2b1eb35202ef8",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 256,
+      "prompt_tokens": 12364,
+      "prompt_tokens_details": null,
+      "total_tokens": 12620
+    }
+  },
+  "request_sha256": "2b3d3f59bce93b5d8492cfe96686b115dce2e655c4ae2d5bdb6228ee9d4b53a2",
+  "source_example_id": "mix_dev_0266+durec_src_0131+hb_0167",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

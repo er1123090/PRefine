@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_368a375f677d5c78b5d2de6b",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4220860674977303,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_5fd969792ceece0438193e68",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. User says planning a trip, search available flights. No specifics. Use patterns: previous flights: user often uses United Airlines, zero bags, one-way. But here just search. We can default to none. Provide empty? We can leave slots unspecified. So call GetFlights with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614946,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a9e7a4c44a415d56",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 97,
+      "prompt_tokens": 10868,
+      "prompt_tokens_details": null,
+      "total_tokens": 10965
+    }
+  },
+  "request_sha256": "08294eca84da64183c514cd1151c239f9d39271fc2f6ca8c4134b32ba837a959",
+  "source_example_id": "mix_dev_0166+durec_src_0656+hb_0034",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

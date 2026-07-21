@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_92e9fb19d924b2f0638da737",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.433250106871128,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Historical Landmark",
+        "destination": "360 CHICAGO",
+        "free_entry": false,
+        "good_for_kids": true,
+        "location": "Chicago"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_4732a948a9e9e6d6a3a8df52",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Historical Landmark\", \"location\": \"Chicago\", \"destination\": \"360 CHICAGO\", \"free_entry\": false, \"good_for_kids\": true}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-a835342f634e5748",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587817,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b2d37535b704acf8",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 54,
+      "prompt_tokens": 13342,
+      "prompt_tokens_details": null,
+      "total_tokens": 13396
+    }
+  },
+  "request_sha256": "102bad21c2c9d3933e5fc271187335f53a3d88ec858c7f26e1e90f631023dbaf",
+  "source_example_id": "mix_dev_0266+durec_src_0131+hb_0167",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

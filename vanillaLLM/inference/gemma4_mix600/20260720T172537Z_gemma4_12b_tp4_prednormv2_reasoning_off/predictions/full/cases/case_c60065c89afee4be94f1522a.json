@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_c60065c89afee4be94f1522a",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.694750747643411,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "Philadelphia",
+        "origin": "New York"
+      },
+      "name": "GetBuses"
+    }
+  ],
+  "pair_id": "pair_5e4911e6e498e2fa414204ee",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"Philadelphia\", \"origin\": \"New York\"}",
+                "name": "GetBuses"
+              },
+              "id": "chatcmpl-tool-a31a86fa557d13e9",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784571473,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8da0b1ecad4284ef",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 22,
+      "prompt_tokens": 9747,
+      "prompt_tokens_details": null,
+      "total_tokens": 9769
+    }
+  },
+  "request_sha256": "cde2d31a429ef30520d2d30665673779406c97719d292d62c457cee109f4a416",
+  "source_example_id": "dev_0083",
+  "status": "success",
+  "target_domain": "GetBuses"
+}

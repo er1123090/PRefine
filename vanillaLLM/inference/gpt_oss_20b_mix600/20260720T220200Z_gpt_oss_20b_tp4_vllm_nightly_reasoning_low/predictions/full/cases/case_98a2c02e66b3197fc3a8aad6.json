@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_98a2c02e66b3197fc3a8aad6",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6723003815859556,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4786ea831d37f67cce806f4d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", pickup_time=\"in 30 minutes\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. User didn't specify seats, shared ride? default? No info. We can infer from past: user often uses shared ride. But not guaranteed. We can set shared_ride=True. number_of_seats maybe 1? default 1. pickup_time: about half an hour from now. We can set pickup_time=\"in 30 minutes\". Destination \"39145 Farwell Drive\". So output: GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", pickup_time=\"in 30 minutes\", shared_ride=\"True\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615096,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-912f61c7195b7b61",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 177,
+      "prompt_tokens": 10152,
+      "prompt_tokens_details": null,
+      "total_tokens": 10329
+    }
+  },
+  "request_sha256": "644542438cb5ae5e3a524e6baf7dfb0a600640a7533dddcd21ed5c42770ea28c",
+  "source_example_id": "mix_dev_0092+durec_src_0594+hb_0451",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

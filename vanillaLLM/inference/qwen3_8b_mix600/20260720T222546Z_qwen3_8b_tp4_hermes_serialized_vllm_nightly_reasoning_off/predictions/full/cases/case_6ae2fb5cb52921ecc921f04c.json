@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "case_id": "case_6ae2fb5cb52921ecc921f04c",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.6711369790136814,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "check_in_date": "2019-03-11",
+        "location": "Berkeley",
+        "number_of_days": "1",
+        "number_of_rooms": "1"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_e2d173c468d9244fbf8429d1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"Berkeley\", \"check_in_date\": \"2019-03-11\", \"number_of_days\": \"1\", \"number_of_rooms\": \"1\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-af589bd22f27b4e7",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587583,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-85f90ae4bbd5616d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 55,
+      "prompt_tokens": 11238,
+      "prompt_tokens_details": null,
+      "total_tokens": 11293
+    }
+  },
+  "request_sha256": "b9860655ccec08587466f684cb4969f70b94295c3c938ce368bf29b858d6d8a2",
+  "source_example_id": "mix_dev_0176+durec_src_0619+hb_0110",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

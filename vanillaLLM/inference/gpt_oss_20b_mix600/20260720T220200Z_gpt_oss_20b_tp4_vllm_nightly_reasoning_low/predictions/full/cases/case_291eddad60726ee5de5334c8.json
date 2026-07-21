@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_291eddad60726ee5de5334c8",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.072106871753931,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6a0fe797edc0902cba19a66b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": "We need to infer preferences for travel domain. From history, user booked bus from Vancouver to Seattle, rental car in Seattle, flights Southwest from Portland to Paris. Preferences: likely prefers Southwest Airlines? Also bus departure time 8:10 or 8:30. Car type Standard or Compact. For travel, maybe wants flights with Southwest, bus with early morning. Also maybe wants free entry attractions. But we need to output a function call. Which domain? Travel. So GetTravel. Need slots: category, free_entry, good_for_kids, location, destination, departure_date. From history, user wants travel options. We infer preferences: wants free entry? Not sure. Maybe wants free events. But we can guess category \"Museum\" or \"Theme Park\". But we need to output something. Let's choose GetTravel with category=\"Museum\", free_entry=\"True\", good_for_kids=\"True\", location=\"Sydney\" (from session 23). But user says planning a trip, want explore travel options. Maybe they want travel to a destination. We can output GetTravel with destination unspecified? We need slot values. Let's pick destination=\"Paris\" maybe. But we need to infer. Let's output GetTravel with destination=\"Paris\", departure_date=\"",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614921,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-894b759876e9c5c4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 256,
+      "prompt_tokens": 11616,
+      "prompt_tokens_details": null,
+      "total_tokens": 11872
+    }
+  },
+  "request_sha256": "096c7f33b992be722d3c5280ec517662f68ec78c4d081741fd1862b9b824fa26",
+  "source_example_id": "mix_dev_0128+durec_src_0838+hb_0376",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d0e16e2e8c8f594d264339a9",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1663116598501801,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_0eb27ac691f4214361008fb5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants restaurant options. No specifics. We look at history: user likes cheap, Oriental, etc. But no explicit preference now. We can infer from past: user often wants cheap, Oriental, Chinese. Also likes restaurants in Pleasant Hill, Walnut Creek. But generic. We can choose default: maybe \"price_range\" cheap? But not sure. We can output empty? But need function call. We can choose GetRestaurants with no slots? But schema requires object. We can leave empty. So output: GetRestaurants().\n\n",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615176,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-abed4c10249a2cce",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 126,
+      "prompt_tokens": 11545,
+      "prompt_tokens_details": null,
+      "total_tokens": 11671
+    }
+  },
+  "request_sha256": "3b62b00270d84158b3e1892ef9bf99d05ae32abb2d4399b5f910b688b1b58bf9",
+  "source_example_id": "mix_dev_0250+durec_src_0615+hb_0274",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_d5846850cb30d0a7c48421da",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.1349840704351664,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "location": "Berkeley",
+        "number_of_days": "1",
+        "number_of_rooms": "1"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_1877aff6d2fb5d04d3a973db",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"Berkeley\", \"number_of_days\": \"1\", \"number_of_rooms\": \"1\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-bfa9e6630ec6a256",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588244,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9d665ffa1341472f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 38,
+      "prompt_tokens": 10472,
+      "prompt_tokens_details": null,
+      "total_tokens": 10510
+    }
+  },
+  "request_sha256": "806793ef9feeb1dc641eaa03600537f5689c9f80bb4938dba78d38219c382e86",
+  "source_example_id": "mix_dev_0234+durec_src_0677+hb_0357",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

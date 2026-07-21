@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a368f37a97d450b5bd955bf8",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.02524518314749,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_258fd32c9bfa27304375c036",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(number_of_rooms=\"1\", average_star=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. Need slots: location, number_of_rooms, average_star, check_in_date, number_of_days, has_wifi, hotel_name. From history: user often wants 1 room, 1 star. So deduce location unspecified. Probably default? We can leave empty. Provide most frequent: number_of_rooms=\"1\", average_star=\"1\". Output format: GetHotels(number_of_rooms=\"1\", average_star=\"1\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615111,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b66978e3f423dc72",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 113,
+      "prompt_tokens": 8991,
+      "prompt_tokens_details": null,
+      "total_tokens": 9104
+    }
+  },
+  "request_sha256": "618d324dd57051a23ca2cadf00b95cb40f2119a04e076991ce4dfa3ccdc6329f",
+  "source_example_id": "mix_dev_0199+hb_0020",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

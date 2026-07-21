@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_5a2645e115ac05f70354d188",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.547824158333242,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_77071d6006ecf79eb173a6e2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", dropoff_date=\"2019-03-10\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says pick up noon March 8, keep couple days. So dropoff maybe March 10? couple days could be 2 days. So dropoff_date March 10. pickup_time \"12:00\". pickup_city \"Berlin\" but domain expects city from list includes Berlin? list includes Berlin? not in list. But maybe \"Berlin\" not in enum. But we can still provide. Use pickup_city \"Berlin\". dropoff_date \"2019-03-10\"? date format? Use \"2019-03-10\". pickup_date \"2019-03-08\". pickup_time \"12:00\". car_type maybe default none. So output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615007,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8ae4485d03634f03",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 205,
+      "prompt_tokens": 11624,
+      "prompt_tokens_details": null,
+      "total_tokens": 11829
+    }
+  },
+  "request_sha256": "53ffcc87586fb530cecb1db57f8742d3a5dc5d50dda52c428564a25995de4c5e",
+  "source_example_id": "mix_dev_0331+durec_src_1229+hb_0436",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

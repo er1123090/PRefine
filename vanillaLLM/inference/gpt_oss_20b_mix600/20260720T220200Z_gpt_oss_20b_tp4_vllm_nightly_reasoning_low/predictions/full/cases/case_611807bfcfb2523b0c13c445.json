@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_611807bfcfb2523b0c13c445",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.7133730705827475,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_ff48543bdc24c77bdb118af0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(destination=\"Barcelona\", departure_date=\"2024-04-01\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: category, departure_date, destination, free_entry, good_for_kids, location. User says visiting Barcelona early April. No category. We infer likely tourist attraction. No other preferences. So set destination=\"Barcelona\"? Not in enum. But location must be one of list includes Barcelona? Not listed. So maybe use GetTravel with destination? But schema has destination string. So we can set destination=\"Barcelona\". Also departure_date maybe \"2024-04-01\"? early April ambiguous. Use \"2024-04-01\". No other slots. Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615018,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-85a2edfd607f6189",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 146,
+      "prompt_tokens": 10342,
+      "prompt_tokens_details": null,
+      "total_tokens": 10488
+    }
+  },
+  "request_sha256": "a4fd717030b2ac27366b800fbd5d34c6859c74d88109e2016d899a5ff1c2d628",
+  "source_example_id": "mix_dev_0145+durec_src_0713+hb_0457",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_7a353e8c1942689210fda9f1",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.265292321331799,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_5369ec9bb33d332b8dcd5382",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Diner\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history: user likes Diner? In session2: \"preferably something serving Diner\". Also earlier: \"I want to find a restaurant\". So likely category \"Diner\". Also city? Not specified. Maybe default? We can infer city from previous: San Carlos. But not sure. We can output GetRestaurants with category=\"Diner\". No city.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615052,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9fab0045c922246f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 101,
+      "prompt_tokens": 10490,
+      "prompt_tokens_details": null,
+      "total_tokens": 10591
+    }
+  },
+  "request_sha256": "230e72ce16c67a48bd5b9cb76dfeb8a50bef59a0f8dec9e7fa87a495f27d0085",
+  "source_example_id": "mix_dev_0047+durec_src_0547+hb_0108",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

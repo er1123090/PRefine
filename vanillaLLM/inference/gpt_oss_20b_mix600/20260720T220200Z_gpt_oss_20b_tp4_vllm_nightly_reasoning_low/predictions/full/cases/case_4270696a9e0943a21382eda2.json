@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4270696a9e0943a21382eda2",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.8470844272524118,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_01325968115ed7be6958b0c3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for travel domain. Likely GetTravel. Need slots: category, departure_date, destination, free_entry, good_for_kids, location. From history: user likes travel to London, wants rental car. Also bus to Long Beach. No explicit preference. Maybe default? We can infer they like \"Tourist Attraction\" category? Not enough. Maybe no slots. Just empty. So call GetTravel with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614968,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9fb6ef01d47368f8",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 103,
+      "prompt_tokens": 11056,
+      "prompt_tokens_details": null,
+      "total_tokens": 11159
+    }
+  },
+  "request_sha256": "94144b357cc662ee2557180c67c5187f087b176ce39504338efd18825ab81f46",
+  "source_example_id": "mix_dev_0032+durec_src_0562+hb_0178",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

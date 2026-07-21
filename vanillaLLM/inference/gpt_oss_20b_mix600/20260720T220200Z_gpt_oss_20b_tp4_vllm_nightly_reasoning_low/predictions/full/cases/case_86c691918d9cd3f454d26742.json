@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_86c691918d9cd3f454d26742",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.807005458511412,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b303eefe0f6c193245fc2389",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_location=\"Downtown Berlin\", pickup",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, pickup_location? They didn't give location. Use pickup_city=\"Berlin\"? but enum includes Berlin? list: Anaheim, Atlanta, Chicago, Concord, Fremont, Las Vegas, London, Long Beach, Los Angeles, Mexico City, Nairobi, New York, Paris, Philadelphia, Phoenix, Portland, Sacramento, San Diego, San Francisco, San Jose, Seattle, Vancouver, Walnut Creek, Washington. Berlin not in list. So maybe use pickup_city=\"Berlin\" not allowed. Maybe use pickup_location? but not specified. We can omit. Provide pickup_date=\"2019-03-08\", pickup_time=\"12:00\", car_type maybe default? Not known. We can leave car_type unspecified. Output format: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\") but city invalid. Maybe use pickup_location=\"Downtown Berlin\". That field exists. So use pickup_location=\"Downtown Berlin\". Provide pickup_date and time. Also dropoff_date? not given. We can omit. So final.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615071,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a11ba7707da5d68c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 256,
+      "prompt_tokens": 10171,
+      "prompt_tokens_details": null,
+      "total_tokens": 10427
+    }
+  },
+  "request_sha256": "4c68fd4c147187bb170a983e2600f1e1cbd57597704bb882fdb3e32096e3d9fc",
+  "source_example_id": "mix_dev_0111+durec_src_0748",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

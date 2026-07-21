@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_2852067207ea0c0eaad342e3",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.313818615861237,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "shared_ride": true
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_ab321a766318eac65be952fc",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"shared_ride\": true}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-998501b106d12c2a",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587169,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-981431f79c530082",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 23,
+      "prompt_tokens": 9504,
+      "prompt_tokens_details": null,
+      "total_tokens": 9527
+    }
+  },
+  "request_sha256": "4232ff493b083ba2c5847e89757eb210035b544015aa53623f0dfd1210393400",
+  "source_example_id": "mix_dev_0177+hb_0222",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

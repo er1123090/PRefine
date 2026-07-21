@@ -1,0 +1,76 @@
+{
+  "attempts": 1,
+  "case_id": "case_8facc70a851fb61e7b3488f3",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.048463796265423,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "American",
+        "city": "Vallejo",
+        "date": "2023-03-05",
+        "number_of_seats": "1",
+        "price_range": "moderate",
+        "time": "18:15"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_caf1dc916d42e02d5336fc12",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"city\": \"Vallejo\", \"date\": \"2023-03-05\", \"time\": \"18:15\", \"number_of_seats\": \"1\", \"category\": \"American\", \"price_range\": \"moderate\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-955efbab41d59c25",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587797,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8a1765d61df7e917",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 71,
+      "prompt_tokens": 10793,
+      "prompt_tokens_details": null,
+      "total_tokens": 10864
+    }
+  },
+  "request_sha256": "c609b9d35b51ef6c2b15a176ba3830768166b66d671776a5b633d4fe0a3359e3",
+  "source_example_id": "mix_dev_0175+durec_src_0112+hb_0240",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

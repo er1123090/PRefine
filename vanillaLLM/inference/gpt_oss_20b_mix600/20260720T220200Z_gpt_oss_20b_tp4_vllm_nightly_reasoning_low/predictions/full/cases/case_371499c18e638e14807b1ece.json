@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_371499c18e638e14807b1ece",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0661505237221718,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_fab136cbaf89c0fe45615dc7",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"checking\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks. recipient_account_type likely checking or savings. User says transfer to bank account. No preference. Past: transfer to checking. So default checking.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614948,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9f2aa7d2a37874cb",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 52,
+      "prompt_tokens": 10157,
+      "prompt_tokens_details": null,
+      "total_tokens": 10209
+    }
+  },
+  "request_sha256": "956a37c80669365281efaa355d3777cc325384b442360b861829f5ee37c6f124",
+  "source_example_id": "mix_dev_0307+durec_src_1007+hb_0280",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

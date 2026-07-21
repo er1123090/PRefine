@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_b62e9a523012164984088046",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.0616983035579324,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Korean",
+        "city": "Milpitas"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_5a01fb7dca73998ae92085f4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Korean\", \"city\": \"Milpitas\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-be6a278e020d2d87",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588048,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9116b5dba5ddb317",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 30,
+      "prompt_tokens": 9316,
+      "prompt_tokens_details": null,
+      "total_tokens": 9346
+    }
+  },
+  "request_sha256": "4858d70877ac43d2f73cdcc0ffe3ac5d2b5864d3f90fc56150f7fb63d53461b6",
+  "source_example_id": "mix_dev_0231+hb_0495",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

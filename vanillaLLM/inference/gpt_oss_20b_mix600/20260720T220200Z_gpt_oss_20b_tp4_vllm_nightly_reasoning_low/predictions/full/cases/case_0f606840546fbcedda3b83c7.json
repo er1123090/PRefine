@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0f606840546fbcedda3b83c7",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6871376419439912,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_db157cf22e9bb0efb084853e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. User says planning a trip, search flights. No specifics. Use patterns: previous flights: user often chooses economy. Origin maybe Seattle? But no. We infer default: economy, no return. Use past: user used Seattle to Atlanta. But no. We can guess origin unspecified, maybe default to user's location? Not known. We can leave empty. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614848,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b2eb3e0b43689180",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 112,
+      "prompt_tokens": 11986,
+      "prompt_tokens_details": null,
+      "total_tokens": 12098
+    }
+  },
+  "request_sha256": "24094ffef426dcb070f8df7f38755d15208004afa3e8b42f5d91301bd0221c03",
+  "source_example_id": "mix_dev_0221+durec_src_0569+hb_0281",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

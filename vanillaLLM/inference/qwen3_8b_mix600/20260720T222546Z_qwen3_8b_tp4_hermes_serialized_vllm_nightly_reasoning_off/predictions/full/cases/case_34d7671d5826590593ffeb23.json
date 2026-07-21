@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_34d7671d5826590593ffeb23",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.096134103834629,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Mexican",
+        "city": "Los Angeles",
+        "price_range": "moderate"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_784715e9c334c29b626cef18",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Mexican\", \"price_range\": \"moderate\", \"city\": \"Los Angeles\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-833f3f9b8e7bf330",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587258,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-98c8570015797553",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 37,
+      "prompt_tokens": 8707,
+      "prompt_tokens_details": null,
+      "total_tokens": 8744
+    }
+  },
+  "request_sha256": "6345682101d183bd46c21b60c1347d83b9294faf883ef07edafaaa027e6c5fd4",
+  "source_example_id": "mix_dev_0321+hb_0482",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

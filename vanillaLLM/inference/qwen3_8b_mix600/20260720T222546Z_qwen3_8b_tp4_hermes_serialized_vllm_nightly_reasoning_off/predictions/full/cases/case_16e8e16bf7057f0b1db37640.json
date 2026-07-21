@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_16e8e16bf7057f0b1db37640",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 8.51559888292104,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Chinese",
+        "price_range": "affordable"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_75b7ea3cbf203f8e307a6624",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Chinese\", \"price_range\": \"affordable\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-93a4b3fe983a21d8",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587007,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b36de67319cb4c49",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 10578,
+      "prompt_tokens_details": null,
+      "total_tokens": 10607
+    }
+  },
+  "request_sha256": "617be694d601a9c4b3b81da9c36959c6ac65b692a3e3ddf8d3cfe7c4221e3220",
+  "source_example_id": "mix_dev_0158+durec_src_0666+hb_0215",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

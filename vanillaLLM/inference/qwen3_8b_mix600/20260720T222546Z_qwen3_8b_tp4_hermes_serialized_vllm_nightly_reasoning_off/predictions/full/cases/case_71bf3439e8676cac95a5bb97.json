@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_71bf3439e8676cac95a5bb97",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.103244658559561,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Historical Landmark",
+        "good_for_kids": true,
+        "location": "San Francisco"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_5deef58df4ebfffb4320e428",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Historical Landmark\", \"location\": \"San Francisco\", \"good_for_kids\": true}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-8eefe74cc661ee44",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587613,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a6375faad2301d08",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 38,
+      "prompt_tokens": 11819,
+      "prompt_tokens_details": null,
+      "total_tokens": 11857
+    }
+  },
+  "request_sha256": "912f5b04e06e73664d2df0c9b4edbad6eaf7295a9ce7a2ee6904571d58e81ab7",
+  "source_example_id": "mix_dev_0327+durec_src_0137+hb_0492",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b42da195c1ed9d53db4cafea",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.321441449224949,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_0d65fa72c64703c746f76b1c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jiong He\", song_name=\"When Distance Keeps us Apart\", playback_device=\"phone\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User says \"I want to listen to some music.\" We need to output a function call. Which domain? GetMusic. Need slots: artist, playback_device, song_name. We infer from history: user likes Jiong He songs, also likes Hayley Kiyoko. But no explicit preference. Maybe default playback_device? In past, user used Kitchen speaker, TV, phone. No pattern. Maybe choose \"phone\" default? But we can infer from last interactions: user listened to Jiong He songs. So artist likely Jiong He. Song_name maybe unspecified. We can leave empty? But need value. Maybe choose \"When Distance Keeps us Apart\" as recent. Let's output GetMusic(artist=\"Jiong He\", song_name=\"When Distance Keeps us Apart\", playback_device=\"phone\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615134,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b4ce043b3bef9e83",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 201,
+      "prompt_tokens": 11366,
+      "prompt_tokens_details": null,
+      "total_tokens": 11567
+    }
+  },
+  "request_sha256": "77f459cb760e8c6222d24b24f632584c7795fcd74ddfe71afec5e65c4b3b465c",
+  "source_example_id": "mix_dev_0071+durec_src_0279+hb_0391",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_880f8ef2eeaac4d182040ad5",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9124198136851192,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_966eceef8ed1dbc0152ef8cf",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels()",
+          "function_call": null,
+          "reasoning": "We need GetHotels. Need preferences: location? user didn't specify. From history, user often wants 2 star or 4 star? In session2 they preferred 2 star. Session3 wanted 3 star. Session1 didn't specify. We infer preference: likely 2 star? But no explicit. Maybe default none. We can leave empty. Output format: GetHotels() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615072,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ba9536cadab338cc",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 94,
+      "prompt_tokens": 10493,
+      "prompt_tokens_details": null,
+      "total_tokens": 10587
+    }
+  },
+  "request_sha256": "571be7601534aa5ceb0fef6a2073ea5d7187597f6c1a32d8c716d97517e5d168",
+  "source_example_id": "mix_dev_0058+durec_src_0989+hb_0228",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

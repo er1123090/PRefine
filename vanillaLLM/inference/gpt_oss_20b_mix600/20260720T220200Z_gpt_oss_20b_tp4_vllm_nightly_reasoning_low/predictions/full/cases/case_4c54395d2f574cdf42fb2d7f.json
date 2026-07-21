@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4c54395d2f574cdf42fb2d7f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0123515585437417,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_9169b6ebbe0d488790054bbe",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Need slots: category, free_entry, good_for_kids, location, destination, departure_date. From history, user hasn't specified. But pattern: user likes events, travel? No prior travel. Maybe default none. We can leave empty. Output format: GetTravel() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614983,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8930ceab31f3104f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 77,
+      "prompt_tokens": 8942,
+      "prompt_tokens_details": null,
+      "total_tokens": 9019
+    }
+  },
+  "request_sha256": "afa6961bead65a086937f80e6c983435e2922d28edbc0805c3ad5fa5f04266c1",
+  "source_example_id": "mix_dev_0247+hb_0320",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

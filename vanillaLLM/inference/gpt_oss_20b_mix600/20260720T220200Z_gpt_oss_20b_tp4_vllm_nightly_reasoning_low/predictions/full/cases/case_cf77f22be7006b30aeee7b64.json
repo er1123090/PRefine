@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_cf77f22be7006b30aeee7b64",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.0727670500054955,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e471b68f104cee16ec001553",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(category=\"Museum\", free_entry=\"True\", good_for_kids=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Need slots: category, free_entry, good_for_kids, location, destination, departure_date. From history, user hasn't specified. We infer preferences: likes museums, tourist attractions, free entry, kid-friendly. In session14, user preferred tourist attraction, museum free entry. So likely wants free_entry=True, good_for_kids maybe True. Category maybe Museum or Tourist Attraction. Location maybe New York? But user says planning a trip, no city. We can default to location unspecified. We need at least one slot? Not required. Provide empty? Probably provide none. But need function call. We'll choose category=\"Museum\", free_entry=\"True\", good_for_kids=\"True\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615175,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aeddf9f5e861917e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 172,
+      "prompt_tokens": 10311,
+      "prompt_tokens_details": null,
+      "total_tokens": 10483
+    }
+  },
+  "request_sha256": "cc369a0c7b8af88409ee9173588f804ab4753ab836d1ce6539cd4b8b97537bb8",
+  "source_example_id": "mix_dev_0145+durec_src_0713+hb_0457",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_7477edd0a6b1c8d9338e84a7",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6131391823291779,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_0086b3724131adcbddf939d4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jay Chou\")",
+          "function_call": null,
+          "reasoning": "We need to infer preference for music domain. User says \"I want to listen to some music.\" No specifics. We look at history: user likes Jay Chou songs, Korean food, etc. Music preferences: often Jay Chou, also mafia genre, electronica. But default? Maybe prefer Jay Chou. So slot artist=\"Jay Chou\". No song_name. So output GetMusic(artist=\"Jay Chou\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615044,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-adc0969090e498ab",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 106,
+      "prompt_tokens": 10685,
+      "prompt_tokens_details": null,
+      "total_tokens": 10791
+    }
+  },
+  "request_sha256": "9656c2b36b1e885c0f110d6ea78069645e24588f1eddc64bc67f4008a6d3e310",
+  "source_example_id": "mix_dev_0203+durec_src_1261+hb_0229",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

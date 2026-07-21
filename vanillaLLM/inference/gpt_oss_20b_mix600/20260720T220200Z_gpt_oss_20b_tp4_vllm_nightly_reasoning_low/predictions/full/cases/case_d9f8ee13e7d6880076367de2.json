@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d9f8ee13e7d6880076367de2",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.084058701992035,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a5465e6c4f887f03a031ba14",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Kris Wu\", playback_device=\"Bedroom speaker\", song_name=\"All Of Me\")",
+          "function_call": null,
+          "reasoning": "We need GetMusic. No preferences known: artist? playback_device? song_name? From history, user likes Kris Wu songs. So artist=\"Kris Wu\". playback_device? earlier used Bedroom speaker. Likely default. We'll set playback_device=\"Bedroom speaker\". song_name unspecified. Maybe leave empty? But need value. Could choose a popular Kris Wu song: \"All Of Me\". We'll output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615187,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-991c66fa681f46fc",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 113,
+      "prompt_tokens": 10022,
+      "prompt_tokens_details": null,
+      "total_tokens": 10135
+    }
+  },
+  "request_sha256": "4a8d9cbacad033c5f2f0c1dcf94c05f60154f6daeff15f87c61bb639dfa5ccec",
+  "source_example_id": "mix_dev_0161+durec_src_0090+hb_0337",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_74b716490aedf6f08fa3e842",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.9416903434321284,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_63c9bef0103e8929af84cd72",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2023-03-08\", pickup_time=\"12:00\", car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says couple of days, no end date. We can infer dropoff_date maybe March 10? but not specified. We can leave dropoff_date empty. car_type? not specified, default? maybe Standard. So output: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2023-03-08\", pickup_time=\"12:00\", car_type=\"Standard\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615045,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b4e5ae3c1b51af65",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 142,
+      "prompt_tokens": 10870,
+      "prompt_tokens_details": null,
+      "total_tokens": 11012
+    }
+  },
+  "request_sha256": "735e9ff204cabe4b87230933514fcf1a30f5db01d9a5b94cefd212c9c8d87540",
+  "source_example_id": "mix_dev_0029+durec_src_0681+hb_0427",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

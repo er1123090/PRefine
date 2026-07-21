@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_b5da0caf1c63a032c3da321d",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.57015619892627,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "artist": "Kris Wu"
+      },
+      "name": "GetMusic"
+    }
+  ],
+  "pair_id": "pair_a41b71a09f443f7f81d0e0e5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"artist\": \"Kris Wu\"}",
+                "name": "GetMusic"
+              },
+              "id": "chatcmpl-tool-9f2b51a1c5fea716",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784571243,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b361a2b2fba7b448",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 8854,
+      "prompt_tokens_details": null,
+      "total_tokens": 8869
+    }
+  },
+  "request_sha256": "5404210610062d0d89a07c5f0c40c5116bc0b8abc7c31ec368502e68ea391bd6",
+  "source_example_id": "durec_src_0537",
+  "status": "success",
+  "target_domain": "GetMusic"
+}

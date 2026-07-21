@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c69b9f500af47f78dc5d6946",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2783621633425355,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b526b5a1741a8697217862c7",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"Washington\", destination=\"Philadelphia\", departure_date=\"2019-03-01\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. No slots given. Use past preferences: origin often Washington, destination Philadelphia, date 1st March. But user says \"check bus options for my trip.\" No specifics. We infer likely origin Washington? But could be any. Use most frequent: origin Washington, destination Philadelphia, departure_date 2019-03-01. Provide those.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615160,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-97daee284b487774",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 106,
+      "prompt_tokens": 10316,
+      "prompt_tokens_details": null,
+      "total_tokens": 10422
+    }
+  },
+  "request_sha256": "2a3affc607b18e24ea6e83a3eec8090b0a344c8d9db823e3ca3ceb266f718d65",
+  "source_example_id": "mix_dev_0176+durec_src_0619+hb_0110",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

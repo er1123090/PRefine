@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b52687159d9a994f60114f6d",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1258494332432747,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f11a1c60a0efa3613181186d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"Philadelphia\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant: likely price_range? city? category? From history: user asked free child-friendly attraction in Philadelphia, then hotel in Philadelphia, flight from New York to Philadelphia. So user in Philadelphia context. Also earlier restaurant: Wanzhou Roasted Fish and Spicy Hot Pot (no city). But likely user wants restaurant in Philadelphia. No preference on category or price. Maybe default? We can leave empty. Output format: GetRestaurants(...). Provide slots: city=\"Philadelphia\". Others optional.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615137,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-953a1bbb4a5c941e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 121,
+      "prompt_tokens": 10118,
+      "prompt_tokens_details": null,
+      "total_tokens": 10239
+    }
+  },
+  "request_sha256": "c245c962f9be700c7e38972108275386a3b973d2232218098d9ac3abfdb6b1df",
+  "source_example_id": "mix_dev_0226+durec_src_1005+hb_0353",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

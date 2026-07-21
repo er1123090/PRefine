@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_49e9be4e1067d1d4770717ef",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 7.1487219631671906,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "car_type": "Standard"
+      },
+      "name": "GetRentalCars"
+    }
+  ],
+  "pair_id": "pair_6a75cac7d601d922bd244562",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"car_type\": \"Standard\"}",
+                "name": "GetRentalCars"
+              },
+              "id": "chatcmpl-tool-b856655751768b63",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569751,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-955b7088fb43b276",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 17,
+      "prompt_tokens": 10731,
+      "prompt_tokens_details": null,
+      "total_tokens": 10748
+    }
+  },
+  "request_sha256": "eedb0f6106fe7d866f18a2b8c3cdc20577d8555a95ecaca69190e3f75937f329",
+  "source_example_id": "mix_dev_0038+durec_src_0302+hb_0218",
+  "status": "success",
+  "target_domain": "GetRentalCars"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_77875a3947bcd1f639f3879b",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.487614776007831,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_74c002079f59df96731cb662",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"New York\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants events nearby. We need to output GetEvents with inferred slots. From history, user often wants concerts in New York or Vancouver. Preference: city? They didn't specify. But \"nearby\" likely current location? No location given. We can infer default city maybe New York? In many sessions, user in NY. So set city=\"New York\". No date. Maybe today? Not specified. We can leave empty. Output: GetEvents(city=\"New York\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615049,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b538878923e02def",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 119,
+      "prompt_tokens": 11583,
+      "prompt_tokens_details": null,
+      "total_tokens": 11702
+    }
+  },
+  "request_sha256": "3c885652ac022a721fc71e96d976d3873bc6503ced52341303aeef7ade170e40",
+  "source_example_id": "mix_dev_0320+durec_src_0220+hb_0168",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

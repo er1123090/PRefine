@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_892a48636e14c8401deaf730",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6157886534929276,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_2d43d47e1223ff98b04930dd",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", pickup_time=\"in 30 minutes\", number_of_seats=\"1\", shared_ride=\"false\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, pickup_time, number_of_seats, shared_ride. User says need a ride across town to 39145 Farwell Drive. No seats, shared? default? assume 1 seat, not shared. pickup_time: about half an hour from now. We don't have exact time. Could leave blank? but need value. Maybe \"in 30 minutes\". We'll set pickup_time=\"in 30 minutes\". Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615073,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9a29a07aaf7e3816",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 137,
+      "prompt_tokens": 9589,
+      "prompt_tokens_details": null,
+      "total_tokens": 9726
+    }
+  },
+  "request_sha256": "1df2fb5a7795382783f033f451fc8012536e4fef249e02af9141eaf628a37f0e",
+  "source_example_id": "mix_dev_0073+hb_0466",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

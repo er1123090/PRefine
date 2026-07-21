@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "case_id": "case_109eb09953cfb80685028336",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 8.583414603024721,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Music",
+        "city": "San Francisco",
+        "date": "2023-10-15",
+        "event_type": "Rock"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_787c5ff03286491d401b74a1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Music\", \"city\": \"San Francisco\", \"event_type\": \"Rock\", \"date\": \"2023-10-15\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-bbf0240f516167d6",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784586925,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9b14053dea529bf7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 49,
+      "prompt_tokens": 10036,
+      "prompt_tokens_details": null,
+      "total_tokens": 10085
+    }
+  },
+  "request_sha256": "c004fb331141dee71117e1462070d7ed1205e7e44eacfb0e83bc672b8ac82f2d",
+  "source_example_id": "mix_dev_0082+hb_0302",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

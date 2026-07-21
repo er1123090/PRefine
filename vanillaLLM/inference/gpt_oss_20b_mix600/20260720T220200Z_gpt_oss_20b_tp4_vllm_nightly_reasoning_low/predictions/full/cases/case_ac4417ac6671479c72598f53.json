@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ac4417ac6671479c72598f53",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5287327272817492,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_571a9ebf5f5e376880ec07ec",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(number_of_rooms=\"1\", has_wifi=\"True\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetHotels. From history: user booked 1 room at Bahia Resort Hotel in San Diego, 3 star. Also earlier: 1 Hotel Brooklyn Bridge 4 star, 1 Hotel Central Park 5 star. They want wifi. They also want 1 room. So preferences: location maybe San Diego? They didn't specify. But pattern: they often choose 1 room, wifi, maybe 4 star? In session 11 they wanted wifi. In session 10 they didn't specify. So deduce: location unspecified, but likely San Diego? They earlier booked in San Diego. So output: GetHotels(number_of_rooms=\"1\", has_wifi=\"True\") maybe location unspecified.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615122,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-939252d17252b550",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 168,
+      "prompt_tokens": 11751,
+      "prompt_tokens_details": null,
+      "total_tokens": 11919
+    }
+  },
+  "request_sha256": "3c9cb99252b366c0dbeb6a6c215faf17a022ef01cc0fd95ec88a4fb1151ba582",
+  "source_example_id": "mix_dev_0132+durec_src_0811+hb_0072",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

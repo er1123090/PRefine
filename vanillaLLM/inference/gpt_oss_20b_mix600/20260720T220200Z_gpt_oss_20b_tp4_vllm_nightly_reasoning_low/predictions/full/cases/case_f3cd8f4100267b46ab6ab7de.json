@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f3cd8f4100267b46ab6ab7de",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1501514539122581,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e205008c7fa56e30d184a83d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\", flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: origin, destination, departure_date, flight_class maybe default? passenger? We infer preferences: earlier flights? No preference. Use default economy. So output: GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\", flight_class=\"Economy\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615220,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ba01a6c504deb636",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 103,
+      "prompt_tokens": 11251,
+      "prompt_tokens_details": null,
+      "total_tokens": 11354
+    }
+  },
+  "request_sha256": "f1bb3463ef1df22c31cd7cc0358c914807960433c208b0f08f84fb7cfa212c56",
+  "source_example_id": "mix_dev_0249+durec_src_0043+hb_0048",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

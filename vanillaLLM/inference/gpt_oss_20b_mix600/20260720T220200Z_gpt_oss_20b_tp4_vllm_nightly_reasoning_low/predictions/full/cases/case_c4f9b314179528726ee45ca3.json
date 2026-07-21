@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c4f9b314179528726ee45ca3",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8667863290756941,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_21ed63c4368ba3caabc7d841",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. Past: user asked for restaurant in session 17: \"The Big Stuffing Dumpling Restaurant\" Chinese. Also session 19: \"Black Angus Steakhouse\" southern. No explicit preference. Maybe city? They didn't specify city. We can infer default city? None. Maybe they prefer Chinese? Not sure. We can output empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615158,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b69da5e5ca7664d1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 90,
+      "prompt_tokens": 10155,
+      "prompt_tokens_details": null,
+      "total_tokens": 10245
+    }
+  },
+  "request_sha256": "aa97c0454d2ef060365f289442c65a0276757bfdff3bc5875f80312c772d9f75",
+  "source_example_id": "mix_dev_0254+durec_src_1246+hb_0316",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

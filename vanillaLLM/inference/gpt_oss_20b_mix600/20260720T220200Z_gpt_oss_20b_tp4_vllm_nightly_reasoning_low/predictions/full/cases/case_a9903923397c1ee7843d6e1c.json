@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a9903923397c1ee7843d6e1c",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1612854907289147,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_589fc9a63dffa9bc896e24f6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", pickup_time=\"in 30 minutes\", number_of_seats=\"1\", shared_ride=false)",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, pickup_time, number_of_seats, shared_ride. Destination inferred from address 39145 Farwell Drive. Probably city? Not in enum. But destination string allowed. pickup_time: about half an hour from now. We don't have time. Use placeholder? maybe \"in 30 minutes\". number_of_seats default 1. shared_ride false.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615118,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b17cc5ac481bfff2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 124,
+      "prompt_tokens": 11234,
+      "prompt_tokens_details": null,
+      "total_tokens": 11358
+    }
+  },
+  "request_sha256": "8dd83ab60076f72672037c42d787f51ba38d44f445d77eb2ec4878d4f0bff9c4",
+  "source_example_id": "mix_dev_0267+durec_src_1286+hb_0208",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

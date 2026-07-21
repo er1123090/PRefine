@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_98dc92683a1d8bbeed174a19",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7470280444249511,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6ff0b36a05fe71230749dc3c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMovies(genre=\"Comedy\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetMovies? The user: \"I’m looking for something to watch.\" Likely movie. We need slot: genre? From history, user likes Comedy, also watched Dr. Strangelove, etc. Preference: Comedy. So call GetMovies(genre=\"Comedy\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615096,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9c1cd2e8c700d88d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 78,
+      "prompt_tokens": 10690,
+      "prompt_tokens_details": null,
+      "total_tokens": 10768
+    }
+  },
+  "request_sha256": "cd21dcf7d10260ffa5da05ebc54473deb6a03e99169863f6c03e93c2fde891e6",
+  "source_example_id": "mix_dev_0212+durec_src_0515+hb_0273",
+  "status": "model_no_tool",
+  "target_domain": "GetMedia"
+}

@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_ba8ed2efe18d9d391e9e2085",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.748376703821123,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "check_in_date": "2019-03-18",
+        "location": "San Diego"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_d643f6ad5009290286f629d0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"San Diego\", \"check_in_date\": \"2019-03-18\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-bf9f5b286c365d40",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588075,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b1f4e83198563aeb",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 39,
+      "prompt_tokens": 11595,
+      "prompt_tokens_details": null,
+      "total_tokens": 11634
+    }
+  },
+  "request_sha256": "246cc15f4242f1de9a4e0363e270ab380171b23d6bde0261ab86a41df052e0a9",
+  "source_example_id": "mix_dev_0094+durec_src_1301+hb_0007",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

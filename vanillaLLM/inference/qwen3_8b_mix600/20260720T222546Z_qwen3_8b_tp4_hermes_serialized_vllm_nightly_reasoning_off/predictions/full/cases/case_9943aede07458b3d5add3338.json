@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_9943aede07458b3d5add3338",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.422351945191622,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Tourist Attraction",
+        "location": "San Diego"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_53fca8153ef0508ca5deae7d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Tourist Attraction\", \"location\": \"San Diego\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-83877fab1a8dbfe6",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587863,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-90992e9b0facc79c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 30,
+      "prompt_tokens": 10120,
+      "prompt_tokens_details": null,
+      "total_tokens": 10150
+    }
+  },
+  "request_sha256": "adf00950740cc2a42d9576a20839fd463e24e984532657ced5d3d23bf3ca14bb",
+  "source_example_id": "mix_dev_0056+hb_0089",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_dfdbb48c724c7020bc5db822",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.7036289414390922,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3281c94d722dc42056790960",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"Delta Airlines\", origin=\"Philadelphia\", destination=\"New York\", flight_class=\"Premium Economy\", passengers=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From user: planning a trip, search flights. No specifics. Use patterns: previous flight requests: user often uses Delta or American. They prefer Premium Economy sometimes. No preference. Use most frequent: Delta? In history, Delta used once, American once. Maybe default: \"Delta Airlines\". Origin? Not given. Could infer from previous: many trips from Philadelphia to New York. Maybe origin \"Philadelphia\". Destination? Not given. Could default to \"New York\". Passengers? Not given. Maybe 1. Return_date? Not given. Could leave empty. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615194,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-82de7d064d1f9acd",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 180,
+      "prompt_tokens": 10816,
+      "prompt_tokens_details": null,
+      "total_tokens": 10996
+    }
+  },
+  "request_sha256": "879933baef04e196ea279e46f31fda4e5a70c436a47579651f26a186b3f57366",
+  "source_example_id": "mix_dev_0163+durec_src_0721+hb_0105",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

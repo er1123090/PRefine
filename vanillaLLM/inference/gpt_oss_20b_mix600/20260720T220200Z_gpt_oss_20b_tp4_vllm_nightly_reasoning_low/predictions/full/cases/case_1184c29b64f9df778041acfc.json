@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_1184c29b64f9df778041acfc",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.265914333052933,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6c3552c9e0c1eb7e8e227080",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\", flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Determine preferences: past flights: user used economy, preferred American, Southwest, United. No preference for airline. They didn't specify class; earlier used economy. So default economy. No bags. So output: GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\", flight_class=\"Economy\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614856,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-92cfae7d83ae3f7c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 110,
+      "prompt_tokens": 9016,
+      "prompt_tokens_details": null,
+      "total_tokens": 9126
+    }
+  },
+  "request_sha256": "7e2b81b7d8f72541642959ab3f432b8cab36a8201128d1227d616e40c81c12ec",
+  "source_example_id": "mix_dev_0243+hb_0032",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

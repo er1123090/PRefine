@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_6b8ddf99607375251627f9bf",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.643041927367449,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Tourist Attraction",
+        "location": "Chicago"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_b210372a0a1e2d599c975382",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Tourist Attraction\", \"location\": \"Chicago\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-ac177309957e41bc",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587586,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-977fefcabc111cd3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 9950,
+      "prompt_tokens_details": null,
+      "total_tokens": 9979
+    }
+  },
+  "request_sha256": "feb8a67f52a364f88f58c9e33cfa08544f285bcb506fb62db193023573e3588f",
+  "source_example_id": "mix_dev_0228+durec_src_1021+hb_0204",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

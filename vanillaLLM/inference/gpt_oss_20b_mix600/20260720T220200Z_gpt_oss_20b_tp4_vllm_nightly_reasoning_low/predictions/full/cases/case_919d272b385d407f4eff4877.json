@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_919d272b385d407f4eff4877",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.044985894113779,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_efbd3342200c29a6751ab925",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", pickup_time=\"18:15\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. slots: destination, number_of_seats, pickup_time, shared_ride. User didn't specify seats or shared. From history, user often uses shared ride? In session7, shared ride ok. session9 shared ride. So assume shared_ride=True. number_of_seats default 1. pickup_time \"18:15\". destination \"39145 Farwell Drive\". Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615083,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-861967498699e6fd",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 124,
+      "prompt_tokens": 10084,
+      "prompt_tokens_details": null,
+      "total_tokens": 10208
+    }
+  },
+  "request_sha256": "82917043bae52587fafd2926805417996cb0a38c34a00250fcad0af84dc34215",
+  "source_example_id": "mix_dev_0062+durec_src_0585+hb_0123",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

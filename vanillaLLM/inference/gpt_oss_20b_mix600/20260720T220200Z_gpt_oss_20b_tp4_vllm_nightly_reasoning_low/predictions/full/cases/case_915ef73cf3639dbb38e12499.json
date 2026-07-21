@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_915ef73cf3639dbb38e12499",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.84101383946836,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_eacf16d6c4517770a889dab3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"San Francisco\", number_of_days=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels? They want trip to Berkeley. Likely hotel. Need location Berkeley. One night. No other preferences. So call GetHotels with location=\"Berkeley\" but not in enum. Enum includes many but not Berkeley. So maybe GetTravel? But travel domain. They plan trip. Could be GetTravel with destination \"Berkeley\" but not in enum. So maybe GetHotels with location unspecified? But location must be one of enum. None match. Maybe GetTravel with location \"Berkeley\" not allowed. So maybe GetHotels with location \"San Jose\" etc? But user said Berkeley. We can still provide location \"Berkeley\" even if not in enum? But schema requires enum. We must follow schema. Maybe choose nearest: \"San Jose\" or \"San Francisco\". Berkeley is near SF. Use San Francisco. So GetHotels(location=\"San Francisco\", number_of_days=\"1\"). No other preferences.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615083,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9c619214a660feae",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 212,
+      "prompt_tokens": 11347,
+      "prompt_tokens_details": null,
+      "total_tokens": 11559
+    }
+  },
+  "request_sha256": "bbe6b9ea1cc8d08720d2dee8588e4f974aabb99b874ab79b6d044e2136c39912",
+  "source_example_id": "mix_dev_0109+durec_src_0404+hb_0248",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

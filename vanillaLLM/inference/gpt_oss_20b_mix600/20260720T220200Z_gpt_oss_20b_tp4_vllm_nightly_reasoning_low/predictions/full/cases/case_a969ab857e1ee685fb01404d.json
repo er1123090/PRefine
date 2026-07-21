@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a969ab857e1ee685fb01404d",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.366569969803095,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_bf3d5d3e9f7479e97c11fee6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": "We need GetTravel. Need slots: category, departure_date, destination, free_entry, good_for_kids, location. User says planning a trip and want to explore travel options. No specifics. Use patterns: previous travel: nature preserve, good_for_kids True. Also earlier: travel to Sydney, nature preserve. Likely user wants travel options general. We can default to category \"Tourist Attraction\" maybe. But we need to infer. No info. Maybe choose category \"Tourist Attraction\" and location unspecified. But must provide values. We can set category \"Tourist Attraction\", location \"Sydney\" maybe? But no mention. Could set destination? The schema has destination separate. We can set destination \"Sydney\" maybe. But no evidence. Maybe choose \"Nature Preserve\" as earlier. But user just says travel options. We can set category \"Tourist Attraction\", location \"Sydney\" as example. But better to set empty? But must provide values. We can set category \"Tourist Attraction\", location \"Sydney\", destination \"Sydney\". departure_date unknown. Maybe leave blank? But must provide string. Could set \"2024-07-01\". But not based on history. Might choose \"2024-07-01\". I'll",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615118,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-881c31e116247765",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 256,
+      "prompt_tokens": 10866,
+      "prompt_tokens_details": null,
+      "total_tokens": 11122
+    }
+  },
+  "request_sha256": "3feddd01913e5e0811b3971c8f6f009a11516a278027664cf431601beca3b067",
+  "source_example_id": "mix_dev_0166+durec_src_0656+hb_0034",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

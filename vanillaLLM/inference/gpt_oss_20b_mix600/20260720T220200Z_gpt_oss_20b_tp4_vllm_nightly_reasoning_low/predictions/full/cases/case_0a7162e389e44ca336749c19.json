@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0a7162e389e44ca336749c19",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.3711927477270365,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6480617bab7e91ab7e1d924c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(number_of_days=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels with location Berkeley? but Berkeley not in enum. Maybe GetTravel? but trip. They want hotel. Berkeley not in list. Maybe GetTravel? but location not in enum. Probably GetHotels with location \"San Jose\" or \"San Francisco\"? But user says Berkeley. Not in options. Maybe default none. We can omit location. Just call GetHotels with number_of_days=\"1\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614827,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-81f7ef2ea0d779d6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 101,
+      "prompt_tokens": 9584,
+      "prompt_tokens_details": null,
+      "total_tokens": 9685
+    }
+  },
+  "request_sha256": "20eaee6be8b1a328ae64dd2fc253c3be70c44eabb959c6927562a69cd63669dd",
+  "source_example_id": "mix_dev_0073+hb_0466",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

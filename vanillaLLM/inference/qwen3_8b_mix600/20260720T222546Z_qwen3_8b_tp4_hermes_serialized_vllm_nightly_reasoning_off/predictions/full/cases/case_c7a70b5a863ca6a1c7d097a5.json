@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_c7a70b5a863ca6a1c7d097a5",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 8.863963105715811,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "1027 Oliver Road",
+        "number_of_seats": "2",
+        "shared_ride": true
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_1fc3dfa2ef8c416c425b16bd",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"1027 Oliver Road\", \"number_of_seats\": \"2\", \"shared_ride\": true}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-a20bbdf7a329f3a5",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588158,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a4e755bfa6b114b9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 43,
+      "prompt_tokens": 9686,
+      "prompt_tokens_details": null,
+      "total_tokens": 9729
+    }
+  },
+  "request_sha256": "6fe1ccaebd383c7e3e8c51f2cf941428440a3ed506768a2b902ccc834892b8c2",
+  "source_example_id": "mix_dev_0189+durec_src_0624",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

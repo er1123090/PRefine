@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_90a8729bb2384110042acbbb",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.721598032861948,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a5b610aba46ab11ddaf82bcb",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants restaurant. No city given. Past preferences: user often chooses San Francisco, San Jose, Phoenix. Also likes ramen, Greek, Brasserie. But no explicit preference. We can default to no slot. But need to output function call. Probably GetRestaurants with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615082,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-be7ebfed54572f52",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 76,
+      "prompt_tokens": 11185,
+      "prompt_tokens_details": null,
+      "total_tokens": 11261
+    }
+  },
+  "request_sha256": "c598e5333c33913b73ef2f5d6610f7553dbef49aaced1ae258c374f6053aa48a",
+  "source_example_id": "mix_dev_0070+durec_src_0019+hb_0288",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

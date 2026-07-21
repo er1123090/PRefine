@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_768a7c7edb3fd6fca84bd16b",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.7209848575294018,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_524b4343c7d21e3647edd02f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(location=\"Napa\", price_range=\"moderate\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetRestaurants. From history: user likes vegetarian options, light meal, prefers price moderate? In session 17, user asked for light meal with vegetarian options in Napa. Also earlier session 4: user wanted Sautéed Spicy Pork, but that's not vegetarian. In session 17, user asked for \"light meal with vegetarian options\" in Napa. So preference: location: Napa, price_range maybe moderate? Also earlier session 4: user asked for restaurant, but no preference. So we deduce location Napa, price_range moderate? Also maybe category? Not specified. So output: GetRestaurants(location=\"Napa\", price_range=\"moderate\")? Also maybe category \"Vegetarian\" not in list. So just location and price_range.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615048,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8ceba69e06e89cde",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 181,
+      "prompt_tokens": 12207,
+      "prompt_tokens_details": null,
+      "total_tokens": 12388
+    }
+  },
+  "request_sha256": "5a76ada145e9d321cdd18ca6fb05ba5c0da7f855879501e9108038a437db128a",
+  "source_example_id": "mix_dev_0205+durec_src_0960+hb_0143",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

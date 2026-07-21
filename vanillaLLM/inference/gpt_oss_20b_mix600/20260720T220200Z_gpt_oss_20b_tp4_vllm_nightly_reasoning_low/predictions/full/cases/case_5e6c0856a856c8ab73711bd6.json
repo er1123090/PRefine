@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_5e6c0856a856c8ab73711bd6",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8980476325377822,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_22c57a40e4e5a4b91fa4c247",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(category=\"Music\")",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need city? \"nearby\" no city. Use past preference: user liked Music events in Philadelphia. Also earlier asked for events near Napa. But current: \"events happening nearby.\" Likely default to city? maybe use last city: Philadelphia? But no. Could infer preference: music events. So slot category=\"Music\". No city. Output GetEvents(category=\"Music\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615014,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b45b08406e1d3648",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 97,
+      "prompt_tokens": 11050,
+      "prompt_tokens_details": null,
+      "total_tokens": 11147
+    }
+  },
+  "request_sha256": "ceec5608a4406ecf39b35e4cc73730e1acae82d80e250afcc280b830f8d9132d",
+  "source_example_id": "mix_dev_0218+durec_src_0593+hb_0171",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_e168ee758a0eed23ecfd493f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.610662682913244,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "city": "Vallejo",
+        "date": "2019-03-05",
+        "time": "18:15"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_784715e9c334c29b626cef18",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"city\": \"Vallejo\", \"date\": \"2019-03-05\", \"time\": \"18:15\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-a002713267601e32",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588318,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9b3b32097702d822",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 48,
+      "prompt_tokens": 8774,
+      "prompt_tokens_details": null,
+      "total_tokens": 8822
+    }
+  },
+  "request_sha256": "a4c07651617894efc2cc9e065cba3081b45b2f20cc18767b2de3d52963855eb1",
+  "source_example_id": "mix_dev_0321+hb_0482",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

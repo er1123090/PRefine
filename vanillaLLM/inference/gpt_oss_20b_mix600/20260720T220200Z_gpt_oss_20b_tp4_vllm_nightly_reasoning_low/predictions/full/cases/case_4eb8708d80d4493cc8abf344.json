@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4eb8708d80d4493cc8abf344",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.935116933658719,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_5358c1e251436429ea5a3ce2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for travel domain. From history, user likes economy class flights, 3 star hotels, 1 room, 1 ticket. Also bus group size 4. For travel, likely wants flights, hotels, maybe events. But current utterance: \"I’m planning a trip and want to explore travel options.\" We need to output a function call. Which domain? Could be GetTravel. But travel domain slots: category, departure_date, destination, free_entry, good_for_kids, location. Not enough. Maybe GetFlights? But no specifics. We infer preferences: economy class, 3 star hotel, 1 room. So call GetFlights with flight_class=\"Economy\". Also GetHotels with average_star=\"3\". But we need single function. Maybe choose GetFlights. Provide default? We can set flight_class=\"Economy\". No other slots. Output format: GetFlights(flight_class=\"Economy\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614987,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-871a8a6ce3e8b55c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 211,
+      "prompt_tokens": 10878,
+      "prompt_tokens_details": null,
+      "total_tokens": 11089
+    }
+  },
+  "request_sha256": "dc5d55592efd056bc47ad97185e2f387930d6541c4348d8742a26bbea04bbe85",
+  "source_example_id": "mix_dev_0327+durec_src_0137+hb_0492",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

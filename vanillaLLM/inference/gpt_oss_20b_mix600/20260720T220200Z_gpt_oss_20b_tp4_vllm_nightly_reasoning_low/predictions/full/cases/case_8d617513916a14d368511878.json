@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8d617513916a14d368511878",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.731461732648313,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3f47d08dcaeda450489e6cbf",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Leslie Cheung\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants to listen to music. We need GetMusic. Which song? Based on preference: user likes Leslie Cheung songs. So likely artist Leslie Cheung. No song specified. We can leave song_name empty? But need slot. We can choose a popular song: \"The Years Flow Like Water\" or \"Run Toward the Future\". Use artist Leslie Cheung. Provide song_name maybe empty? But schema requires string optional. We can set song_name=\"\"? Probably omit. Provide artist. So output: GetMusic(artist=\"Leslie Cheung\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615078,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a9ba371fb6624ecb",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 140,
+      "prompt_tokens": 7792,
+      "prompt_tokens_details": null,
+      "total_tokens": 7932
+    }
+  },
+  "request_sha256": "414626c81e5ff0329b83de35a074075e3c655880290292db3fdd7722e7a0f019",
+  "source_example_id": "durec_src_0840",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

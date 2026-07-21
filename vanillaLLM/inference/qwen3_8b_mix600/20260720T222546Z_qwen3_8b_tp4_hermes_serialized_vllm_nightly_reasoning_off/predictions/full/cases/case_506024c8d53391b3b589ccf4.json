@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_506024c8d53391b3b589ccf4",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.0836066687479615,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Chinese",
+        "price_range": "moderate"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_a404631721402957d9805433",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Chinese\", \"price_range\": \"moderate\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-8f91783992ab7617",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587423,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-af8581fed1330f75",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 10972,
+      "prompt_tokens_details": null,
+      "total_tokens": 11001
+    }
+  },
+  "request_sha256": "5ac45b2e7f0aeaee367bb73afb0ee67241ec7ae83bb215440bb3bc247affbe21",
+  "source_example_id": "mix_dev_0271+durec_src_1237+hb_0397",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4fb90e7d9bc21919a2ea08d3",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.8727642046287656,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6468cf1b4edf2066054d0f48",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"checking\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks. Need recipient_account_type. User says transfer money to a bank account. No type specified. Past: user used savings and checking. Likely default checking? In session1 they used savings then checking. For transfer, they used checking. So choose checking.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614989,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b41eea97dca7cf92",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 75,
+      "prompt_tokens": 10271,
+      "prompt_tokens_details": null,
+      "total_tokens": 10346
+    }
+  },
+  "request_sha256": "a7fa59ef6e5e9bafa81f05d90924017257f46cf2907e84324db9cdef1dbe263b",
+  "source_example_id": "mix_dev_0046+durec_src_0054+hb_0194",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

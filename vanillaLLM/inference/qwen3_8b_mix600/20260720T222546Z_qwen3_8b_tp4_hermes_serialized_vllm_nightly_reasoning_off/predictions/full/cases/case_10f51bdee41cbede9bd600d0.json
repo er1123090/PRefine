@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_10f51bdee41cbede9bd600d0",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 9.243196906521916,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Fast Food",
+        "price_range": "cheap"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_fdd378ead31423a26d54da21",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Fast Food\", \"price_range\": \"cheap\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-8efa86c0f205a118",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784586933,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ab4254097288b31f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 10483,
+      "prompt_tokens_details": null,
+      "total_tokens": 10512
+    }
+  },
+  "request_sha256": "3664419f1e1dcd0c6f77ee63b3dde52844c2d4176e608a5e3f4a85658f1163fe",
+  "source_example_id": "mix_dev_0027+durec_src_1100+hb_0294",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

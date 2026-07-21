@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0260228ed5cae7f15f6371c3",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.183405329473317,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_9e1691874573e5655d5cf5bd",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jiong He\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User says \"I want to listen to some music.\" We need to output function call GetMusic with inferred slots. Past music preferences: Jiong He songs, vegetarian? They liked Jiong He. They also liked \"Run\" (song by? unknown). They liked \"Dream at That Time\" (song by Jiong He). They liked \"Love Now\" (Jiong He). They liked \"And Me\" (Jiong He). They liked \"Hope for Love\" (Jiong He). So preference: artist Jiong He. Also playback device? Not specified. Maybe default? We can omit optional. So output: GetMusic(artist=\"Jiong He\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614802,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b143c28979634d8a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 161,
+      "prompt_tokens": 9856,
+      "prompt_tokens_details": null,
+      "total_tokens": 10017
+    }
+  },
+  "request_sha256": "f335aa569283e6e78c248407261fbb7ed36c9836fdaa59d7d730b2f7168e77bc",
+  "source_example_id": "mix_dev_0093+durec_src_0348+hb_0270",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

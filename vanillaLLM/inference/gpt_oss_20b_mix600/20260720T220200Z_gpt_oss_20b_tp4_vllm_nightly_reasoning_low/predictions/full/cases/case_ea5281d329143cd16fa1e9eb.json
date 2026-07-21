@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ea5281d329143cd16fa1e9eb",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2392266178503633,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3cb26a9079d167e5ead68c33",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2019-03-09\", origin=\"San Francisco\", destination=\"Seattle\", flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines?, departure_date, destination, flight_class?, origin, passengers?, return_date?. No preferences. From history: user likes flights? No pattern. Probably default: economy. passengers default 1. return_date none. Provide departure_date \"2019-03-09\". origin \"San Francisco\", destination \"Seattle\". airlines none. flight_class \"Economy\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615208,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8f676bf3e911b96a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 120,
+      "prompt_tokens": 9435,
+      "prompt_tokens_details": null,
+      "total_tokens": 9555
+    }
+  },
+  "request_sha256": "f64544da87c1cd0e9700517dd93a4832ce11e53c23eb481cb3a4f287068659ae",
+  "source_example_id": "mix_dev_0173+durec_src_0799+hb_0336",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

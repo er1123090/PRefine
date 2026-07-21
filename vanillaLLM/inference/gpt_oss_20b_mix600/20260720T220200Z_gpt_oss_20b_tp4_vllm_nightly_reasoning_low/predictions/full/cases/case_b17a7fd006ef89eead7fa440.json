@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b17a7fd006ef89eead7fa440",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.7441379884257913,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_0e1118eafdb71e503e0251e1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Leehom Wang\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants to listen to music. We need to output a function call. Which domain? GetMusic. Slots: artist, playback_device, song_name. We need to infer preferences from history. User likes Leehom Wang songs. So artist likely Leehom Wang. Playback device? Not specified. Maybe default? We can leave empty. song_name? Not specified. We can leave empty. But we need to provide at least artist. So output: GetMusic(artist=\"Leehom Wang\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615130,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-909b2b5523764274",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 128,
+      "prompt_tokens": 12571,
+      "prompt_tokens_details": null,
+      "total_tokens": 12699
+    }
+  },
+  "request_sha256": "26e80e55f1a311f56ec7eb18aa997d97f6c095d4d6b2aed08e9fdb52cce78d5f",
+  "source_example_id": "mix_dev_0099+durec_src_0572+hb_0102",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

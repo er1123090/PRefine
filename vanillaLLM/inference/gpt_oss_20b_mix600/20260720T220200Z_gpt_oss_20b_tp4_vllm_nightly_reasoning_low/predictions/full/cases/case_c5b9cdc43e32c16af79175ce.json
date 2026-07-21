@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c5b9cdc43e32c16af79175ce",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0655333986505866,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_92aca460aa1af980ad45a21b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Nicaraguan\", city=\"Concord\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetRestaurants. Past: user asked Nicaraguan restaurants in Concord. So preference: category Nicaraguan, city Concord. Also maybe price_range? not seen. So output: GetRestaurants(category=\"Nicaraguan\", city=\"Concord\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615159,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-834692a1409ac880",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 82,
+      "prompt_tokens": 9046,
+      "prompt_tokens_details": null,
+      "total_tokens": 9128
+    }
+  },
+  "request_sha256": "c063af1810d5b3998227ab0e1ec3035d94bba0d89068c7630a5ab2f4bc1f1887",
+  "source_example_id": "mix_dev_0280+hb_0456",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_fd3e5ff9b31d7c5c3c61e645",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8434905996546149,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b50df14c9c7eb1fbd4c1929a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. Past restaurant interactions: session8: user asked for restaurant, got Homelike Sichuan Restaurant, price 15 yuan, location Donghu Garden. No preference. Session12: user asked for hotel, not restaurant. No restaurant preference. So no explicit preference. We can leave empty. Output format: GetRestaurants with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615231,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-af99b2f5ea8eaf0f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 88,
+      "prompt_tokens": 10320,
+      "prompt_tokens_details": null,
+      "total_tokens": 10408
+    }
+  },
+  "request_sha256": "69cabe563163905895aa1f7b1f0ef1661bf2e8a2e7a0a88d34e4751705a6f0d7",
+  "source_example_id": "mix_dev_0176+durec_src_0619+hb_0110",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

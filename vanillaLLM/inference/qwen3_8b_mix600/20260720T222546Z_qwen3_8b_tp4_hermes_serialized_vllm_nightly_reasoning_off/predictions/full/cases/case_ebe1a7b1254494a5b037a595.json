@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "case_id": "case_ebe1a7b1254494a5b037a595",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.7672209506854415,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "car_type": "Compact",
+        "pickup_date": "2019-03-05",
+        "pickup_location": "Indira Gandhi International Airport",
+        "pickup_time": "11:00"
+      },
+      "name": "GetRentalCars"
+    }
+  ],
+  "pair_id": "pair_c525a919c9eee2152aaeeb88",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"car_type\": \"Compact\", \"pickup_date\": \"2019-03-05\", \"pickup_location\": \"Indira Gandhi International Airport\", \"pickup_time\": \"11:00\"}",
+                "name": "GetRentalCars"
+              },
+              "id": "chatcmpl-tool-bef5b1e3b0e7d81e",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588379,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b38d757c0d88ccd3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 61,
+      "prompt_tokens": 9631,
+      "prompt_tokens_details": null,
+      "total_tokens": 9692
+    }
+  },
+  "request_sha256": "c5f674db14df630de7f4f9d6aa73c98676b175496ab1e805d222ad510b4203a0",
+  "source_example_id": "mix_dev_0278+hb_0161",
+  "status": "success",
+  "target_domain": "GetRentalCars"
+}

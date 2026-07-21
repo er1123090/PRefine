@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8d1155103cca3ec5daeea712",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2055035438388586,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a0ef4dd450b9e8b31d909ee2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"United Airlines\", origin=\"Atlanta\", destination=\"Seattle\", departure_date=\"2024-07-28\", passengers=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history, user wants available flights. No specifics. Use pattern: previous flights used United Airlines, origin Atlanta, destination Seattle. Likely same. So output GetFlights with those defaults.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615077,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9b8d9e7fb8f54a5e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 104,
+      "prompt_tokens": 8099,
+      "prompt_tokens_details": null,
+      "total_tokens": 8203
+    }
+  },
+  "request_sha256": "cdf466aaee0653d0534a45ee429c497c586dd2bf8c0d0f80e80e5a1cd2fdcdf3",
+  "source_example_id": "dev_0239",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

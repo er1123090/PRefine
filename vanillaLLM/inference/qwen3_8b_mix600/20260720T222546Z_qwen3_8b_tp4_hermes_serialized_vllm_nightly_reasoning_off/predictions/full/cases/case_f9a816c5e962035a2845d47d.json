@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_f9a816c5e962035a2845d47d",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 7.663454830646515,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "artist": "Leslie Cheung"
+      },
+      "name": "GetMusic"
+    }
+  ],
+  "pair_id": "pair_d3f0b91bbedeeaa9c7ce79f0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"artist\": \"Leslie Cheung\"}",
+                "name": "GetMusic"
+              },
+              "id": "chatcmpl-tool-8ac5b37e9def21d1",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588469,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8f188f63c0b20e3b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 23,
+      "prompt_tokens": 7729,
+      "prompt_tokens_details": null,
+      "total_tokens": 7752
+    }
+  },
+  "request_sha256": "2385ec7964bffc739215bd7bdf95a009a769607d89fede759c96cf99fc668f67",
+  "source_example_id": "durec_src_0509",
+  "status": "success",
+  "target_domain": "GetMusic"
+}

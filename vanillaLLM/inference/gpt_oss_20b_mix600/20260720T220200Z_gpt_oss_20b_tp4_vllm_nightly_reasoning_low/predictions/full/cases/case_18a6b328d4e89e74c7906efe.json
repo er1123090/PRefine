@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_18a6b328d4e89e74c7906efe",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.907097963616252,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c17ba41670fe76176c53eb51",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Standard\", pickup_city=\"Vancouver\", pickup_date=\"2019-03-07\", pickup_time=\"14:00\", dropoff_date=\"2019-03-09\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No slots given. We infer preferences: earlier user used Standard car. Also pickup_city Vancouver, pickup_date 7th, pickup_time 2pm, dropoff 9th. Likely same. So output: GetRentalCars(car_type=\"Standard\", pickup_city=\"Vancouver\", pickup_date=\"2019-03-07\", pickup_time=\"14:00\", dropoff_date=\"2019-03-09\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614879,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-84d6e9a655be840d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 144,
+      "prompt_tokens": 11130,
+      "prompt_tokens_details": null,
+      "total_tokens": 11274
+    }
+  },
+  "request_sha256": "2aa5ee797c966f2a16c67b6e898f245ed5ea0913211f8549e4f1cf65e42221a6",
+  "source_example_id": "mix_dev_0060+durec_src_0560",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

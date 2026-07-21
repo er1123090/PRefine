@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_7e2c9825c21660a3b842c44d",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.3044625595211983,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_279e3d808dd349100799cbba",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", pickup_time=\"18:15\", shared_ride=\"True\", number_of_seats=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Determine preferences: earlier user used shared ride. In session3, they said shared ride okay. In session19, shared ride. So preference: shared_ride=True. number_of_seats? earlier 4. But not specified. Could default 1? But pattern: when group, they used 4. Here single? Probably 1. So output: GetRideSharing(destination=\"39145 Farwell Drive\", pickup_time=\"18:15\", shared_ride=\"True\", number_of_seats=\"1\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615058,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-873ea2bf69d28afa",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 151,
+      "prompt_tokens": 10133,
+      "prompt_tokens_details": null,
+      "total_tokens": 10284
+    }
+  },
+  "request_sha256": "a47c072e033769a5542ac060d00fdc429a875e67e5cce381d97f3d41371511de",
+  "source_example_id": "mix_dev_0153+durec_src_1292+hb_0267",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

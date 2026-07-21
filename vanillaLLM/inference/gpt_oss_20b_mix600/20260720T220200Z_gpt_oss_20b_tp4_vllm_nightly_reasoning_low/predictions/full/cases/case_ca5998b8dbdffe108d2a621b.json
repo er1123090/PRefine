@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ca5998b8dbdffe108d2a621b",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.292675556614995,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_ac5485a00df69fa90b1efe3f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"New York\", average_star=\"3\", has_wifi=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user booked 1 Hotel Brooklyn Bridge in NY, also Aloft Phoenix. They like 3 star? They asked for wifi. Likely prefer 3 star or above. We'll set location unspecified? We need slot values: location, average_star, has_wifi maybe. Use most frequent: they booked 3 star in NY, 3 star in Phoenix. So average_star=\"3\". has_wifi=\"True\". location unspecified? maybe \"New York\" or \"Phoenix\". We'll guess \"New York\". Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615167,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a798c47e48103828",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 142,
+      "prompt_tokens": 7915,
+      "prompt_tokens_details": null,
+      "total_tokens": 8057
+    }
+  },
+  "request_sha256": "59ddfa2f7f3a3da83a04a7dbd0a9c0128080fabac135bac0b0e06af90af934d8",
+  "source_example_id": "mix_dev_0284+hb_0341",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

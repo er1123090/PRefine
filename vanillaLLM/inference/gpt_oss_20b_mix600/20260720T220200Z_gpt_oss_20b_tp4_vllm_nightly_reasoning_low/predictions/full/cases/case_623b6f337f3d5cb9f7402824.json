@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_623b6f337f3d5cb9f7402824",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5652198903262615,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3b15fa8caa68bd7323c5bd8d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"San Francisco\", category=\"Sports\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants something to do this weekend in SF. Likely events. Past preferences: likes sports events, comedy movies, adventure movies, etc. For SF, maybe events. No specific category. We can default to \"Music\" or \"Sports\"? In session1 they liked sports. Session2 sports. So likely sports. So GetEvents with city=\"San Francisco\", category=\"Sports\". No date given but weekend. We can leave date empty. Output: GetEvents(city=\"San Francisco\", category=\"Sports\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615020,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8cd772f05d532a9d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 130,
+      "prompt_tokens": 8794,
+      "prompt_tokens_details": null,
+      "total_tokens": 8924
+    }
+  },
+  "request_sha256": "f91acf4eaeff223d4bd14bd23c9f7f3de70867adcc34caf0554900e2548d9f9e",
+  "source_example_id": "dev_0041",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

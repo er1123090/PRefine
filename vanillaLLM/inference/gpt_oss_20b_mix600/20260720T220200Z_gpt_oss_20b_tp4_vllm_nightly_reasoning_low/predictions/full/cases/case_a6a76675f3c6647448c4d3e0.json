@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a6a76675f3c6647448c4d3e0",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.5521542709320784,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_26eb5a30321cc21036f3c0cd",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents()",
+          "function_call": null,
+          "reasoning": "We need GetTravel or GetEvents? \"events happening nearby\" likely GetTravel? but events domain is GetEvents. Need location? nearby implies maybe user's location unknown. No slot. We can call GetEvents with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615114,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a18bd1202582f354",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 59,
+      "prompt_tokens": 11394,
+      "prompt_tokens_details": null,
+      "total_tokens": 11453
+    }
+  },
+  "request_sha256": "f79c1c928980fb43ce8e96f953f361fafe1fd66e136ec8f352ee28af4a8a00e6",
+  "source_example_id": "mix_dev_0088+durec_src_0228+hb_0370",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

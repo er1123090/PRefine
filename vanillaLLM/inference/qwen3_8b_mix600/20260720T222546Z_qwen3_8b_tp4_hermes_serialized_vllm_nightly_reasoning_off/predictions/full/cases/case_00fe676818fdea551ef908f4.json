@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_00fe676818fdea551ef908f4",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 12.050121407955885,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Tourist Attraction",
+        "location": "San Diego"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_5f73e504e8810b5499995879",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Tourist Attraction\", \"location\": \"San Diego\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-a95cd9331e56cc38",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784586726,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aa253155391931b0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 30,
+      "prompt_tokens": 11222,
+      "prompt_tokens_details": null,
+      "total_tokens": 11252
+    }
+  },
+  "request_sha256": "7afe13d4e4c8bd86d0b63008a0fbecb762f96f0a0cc0d725ba992c61f33bd460",
+  "source_example_id": "mix_dev_0059+durec_src_0234+hb_0462",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

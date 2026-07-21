@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_18f582d073904051a5f7a146",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 9.468388669192791,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Sports",
+        "location": "Phoenix"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_85bfc42a60973bb9f9b098c8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Sports\", \"location\": \"Phoenix\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-92eb6538d554e5b3",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587029,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-be14623df8314b3a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 26,
+      "prompt_tokens": 9500,
+      "prompt_tokens_details": null,
+      "total_tokens": 9526
+    }
+  },
+  "request_sha256": "c133f616e24563dce3788dcf093ec201fe53c377793950599ff93d5471703568",
+  "source_example_id": "mix_dev_0177+hb_0222",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

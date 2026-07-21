@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f4be23070a78fe3f671fc713",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.8119925213977695,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b30d09dca500ee52befd60c8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"Philadelphia\", category=\"American\", price_range=\"moderate\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history, user likes music, events, hotels, flights. For restaurants, we need category, city, price_range maybe. Past preferences: no restaurant queries. But user likes music events, hotels 4-5 stars. Likely prefers moderate price. City: maybe Philadelphia or Toronto? But current request generic. We can infer city from previous sessions: user often in Philadelphia, Toronto, Vancouver. Maybe default to Philadelphia? But we need to deduce preference: category? They like music events, maybe prefer \"Music\" category? But restaurant categories: American, Asian, etc. No pattern. We can choose \"moderate\" price_range. Category maybe \"American\" as common. Let's output GetRestaurants with city=\"Philadelphia\", category=\"American\", price_range=\"moderate\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615221,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a19ac3fa9229ce2d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 193,
+      "prompt_tokens": 8321,
+      "prompt_tokens_details": null,
+      "total_tokens": 8514
+    }
+  },
+  "request_sha256": "f956e23131f9211953fa0df0afba409090bca3ea8f67251616c80e647600c990",
+  "source_example_id": "dev_0009",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

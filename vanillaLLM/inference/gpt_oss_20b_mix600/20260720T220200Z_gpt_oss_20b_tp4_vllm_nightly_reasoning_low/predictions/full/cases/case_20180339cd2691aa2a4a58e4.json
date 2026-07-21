@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_20180339cd2691aa2a4a58e4",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.1858170703053474,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c6852d8b78864e7355d1ae54",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", pickup_time=\"\", shared_ride=true)",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. No info given. Use patterns: user wants ride, check available options. Likely shared_ride true? In past, user used shared ride. We'll assume shared_ride=true, number_of_seats maybe 1. Destination unknown. We can leave empty? But need values. Maybe destination unspecified. We can set destination=\"\"? Probably omit. But format requires. We'll set destination=\"\". number_of_seats=\"1\", pickup_time=\"\", shared_ride=true.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614897,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bd27d848319c2c3b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 146,
+      "prompt_tokens": 10498,
+      "prompt_tokens_details": null,
+      "total_tokens": 10644
+    }
+  },
+  "request_sha256": "261bfc37e346d621d7baf480dd8cc978f2281e045c8603f19d2aa583ff8c5422",
+  "source_example_id": "mix_dev_0252+durec_src_1277+hb_0257",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

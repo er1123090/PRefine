@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f2904011c58bf55275876835",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.919897897168994,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6dc26db00af4ff516279edae",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"New York\")",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need city? \"nearby\" likely user's location? No location given. Past preference: user often uses New York, Portland, etc. No consistent. Maybe default city? Could infer from previous sessions: user often in NYC, Portland, San Francisco. No clear. Maybe choose city \"New York\" as most frequent. So output GetEvents(city=\"New York\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615218,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b78d9eb614b78a04",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 96,
+      "prompt_tokens": 10514,
+      "prompt_tokens_details": null,
+      "total_tokens": 10610
+    }
+  },
+  "request_sha256": "391f965674cdf8c32c16c2cc7a007d23a3041b9246d0efddbc2663af9c62f1a6",
+  "source_example_id": "mix_dev_0014+durec_src_0366+hb_0350",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_389c740f7e35464f7b9c5ca2",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.42122292984277,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f4020c5e7a2d13e2aff6c743",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants flights. We need to deduce likely slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history: user often chooses Delta, American, etc. In session7 user chose Delta. In session9 chose American. No pattern. Maybe default economy. Probably origin unspecified. We can leave empty. Output format: GetFlights(...). Provide inferred values: flight_class=\"Economy\". Others empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614951,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b31f7467678dddf3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 115,
+      "prompt_tokens": 8992,
+      "prompt_tokens_details": null,
+      "total_tokens": 9107
+    }
+  },
+  "request_sha256": "248f690b2d2f2161f62877359987bc0793d6b87ffe476d9801fdde20eb11c265",
+  "source_example_id": "dev_0256",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

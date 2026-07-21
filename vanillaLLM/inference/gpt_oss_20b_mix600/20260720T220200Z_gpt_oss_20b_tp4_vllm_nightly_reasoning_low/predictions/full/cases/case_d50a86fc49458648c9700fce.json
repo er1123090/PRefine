@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d50a86fc49458648c9700fce",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0172711601480842,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_94f2bbb69f42e60e77329f7a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Southern\", price_range=\"moderate\", city=\"San Mateo\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. Past: user asked for Southern, intermediate priced restaurant in San Mateo. Also vegetarian. So preferences: category? They didn't specify category. They said Southern, intermediate priced. So category likely \"Southern\". price_range \"moderate\". city \"San Mateo\". Also vegetarian preference. So we output GetRestaurants with category=\"Southern\", price_range=\"moderate\", city=\"San Mateo\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615180,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a0d582c003b72465",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 112,
+      "prompt_tokens": 11058,
+      "prompt_tokens_details": null,
+      "total_tokens": 11170
+    }
+  },
+  "request_sha256": "9af077c0cbd8a49aca013b8a86e25df5d5e839ecdb56babe9cded971ae976dd0",
+  "source_example_id": "mix_dev_0032+durec_src_0562+hb_0178",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

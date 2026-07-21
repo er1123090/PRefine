@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c22227a75a8f0a5eae22993a",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0839833626523614,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6e76ae84a782adc8a12507a2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", pickup_time=\"in 30 minutes\", shared_ride=\"False\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, pickup_time, shared_ride? User didn't specify seats or shared. Default? Probably 1 seat, shared_ride False. pickup_time: half an hour from now. We don't have current time. Use placeholder? Maybe \"in 30 minutes\". We'll set pickup_time=\"in 30 minutes\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615154,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-af2b269f83bad727",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 117,
+      "prompt_tokens": 10477,
+      "prompt_tokens_details": null,
+      "total_tokens": 10594
+    }
+  },
+  "request_sha256": "ed964447412f9605b26904eefad3d2184deb41793066e3611ceb59f42e6759a1",
+  "source_example_id": "mix_dev_0131+durec_src_0415+hb_0429",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

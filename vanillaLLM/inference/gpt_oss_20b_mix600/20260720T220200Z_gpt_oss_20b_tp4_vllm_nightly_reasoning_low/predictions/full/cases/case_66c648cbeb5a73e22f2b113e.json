@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_66c648cbeb5a73e22f2b113e",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3034468535333872,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d00f67e8b8b4136da554d14e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, shared_ride, pickup_time maybe. User just says need a ride and check available options. No details. Use past pattern: user often gives destination. But none now. We can infer from previous: maybe wants to go somewhere? No. We can default? Maybe ask? But must output. Use past: shared_ride True? number_of_seats 1? Destination unknown. Maybe leave empty? But schema requires strings. We can set empty string. Let's output with empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615028,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8516c1f6ef0d4119",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 140,
+      "prompt_tokens": 8959,
+      "prompt_tokens_details": null,
+      "total_tokens": 9099
+    }
+  },
+  "request_sha256": "004555fc50fd02691685f1bcbd0961ccebb561c7d1e08a90d6f6074a5e2e2fb8",
+  "source_example_id": "mix_dev_0310+durec_src_0349",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

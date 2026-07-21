@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_752f3f60ed8dee39d1cfd7dc",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7711560986936092,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a72973a1c0f4fc0683397b23",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"San Francisco\", price_range=\"cheap\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. No preferences given. From history, user liked Greek restaurant in San Fran, cheap price. Also earlier asked for restaurant in San Fran. So likely wants restaurant in San Francisco, cheap. We'll output GetRestaurants(city=\"San Francisco\", price_range=\"cheap\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615046,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b63e5e997a78b826",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 78,
+      "prompt_tokens": 8959,
+      "prompt_tokens_details": null,
+      "total_tokens": 9037
+    }
+  },
+  "request_sha256": "06e5286920f34c3d37430a51087748d06ee40d94aaaea9dc1cf6cd86eab7a70d",
+  "source_example_id": "mix_dev_0243+hb_0032",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

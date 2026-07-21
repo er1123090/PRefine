@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_44c6b39e9b8c2c9c9905a0f9",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4117050431668758,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e329df1796a7217f0672dcef",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Orlando\", destination=\"Orlando\", good_for_kids=\"True\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. For GetTravel domain. Slots: category, free_entry, good_for_kids, location, destination, departure_date. User says family trip to Orlando during summer. Likely wants family-friendly attractions, free entry? From past, family trip often wants good_for_kids true. Orlando location. Destination maybe Orlando. No category specified. We can set good_for_kids=\"True\", location=\"Orlando\". Maybe free_entry unknown. We'll include location and destination. Output format: GetTravel(location=\"Orlando\", destination=\"Orlando\", good_for_kids=\"True\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614970,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-af64bbbd66b5275f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 150,
+      "prompt_tokens": 9545,
+      "prompt_tokens_details": null,
+      "total_tokens": 9695
+    }
+  },
+  "request_sha256": "1c2e776b270a9349195f4896ee1c4876146318004bc125f805dffa6ad8f2b02e",
+  "source_example_id": "mix_dev_0147+hb_0043",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

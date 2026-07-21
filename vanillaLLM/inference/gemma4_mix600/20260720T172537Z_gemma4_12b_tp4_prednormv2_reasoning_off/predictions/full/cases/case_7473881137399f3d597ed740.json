@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_7473881137399f3d597ed740",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 19.25556928291917,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "39145 Farwell Drive",
+        "pickup_time": "18:15"
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_b771efa25d1b07f46b8cae54",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"39145 Farwell Drive\", \"pickup_time\": \"18:15\"}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-a9b2ecadc0078260",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784570287,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bc0893b5885b734c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 34,
+      "prompt_tokens": 13632,
+      "prompt_tokens_details": null,
+      "total_tokens": 13666
+    }
+  },
+  "request_sha256": "e8bd7e0212bc25870e52497dbf1f3e2d19cc575fe7a3d1e2111b360080790516",
+  "source_example_id": "mix_dev_0320+durec_src_0220+hb_0168",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_df1714be583d736e2cf1a978",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0381113039329648,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c3c6b5ed896d270166cb40c6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Italian\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. Slots: category Italian, price_range? user didn't specify. alcohol? not serve alcohol. In schema: category, city, date, number_of_seats, price_range, restaurant_name, time. We have category Italian, maybe price_range unknown. We can omit. Also no city. So call GetRestaurants(category=\"Italian\", price_range? maybe moderate? but not given. We can leave out. So output: GetRestaurants(category=\"Italian\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615193,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a91660f94cb99c23",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 111,
+      "prompt_tokens": 10480,
+      "prompt_tokens_details": null,
+      "total_tokens": 10591
+    }
+  },
+  "request_sha256": "8a2479d0d86f23d1e754cd82e42de0aae0d9f07859e15c794f9ed552c2b1ed42",
+  "source_example_id": "mix_dev_0152+durec_src_0211+hb_0028",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_74e8151a00bc3437853a4b4c",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.22811671346426,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1522b6532a6f89cb5e66ae98",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(destination=\"Berkeley\", departure_date=\"2019-03-11\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: category? free_entry? good_for_kids? location? destination? departure_date? We have location=Berkeley? but Berkeley not in enum. Maybe destination? They plan trip to Berkeley. So destination=\"Berkeley\" not in enum. But location maybe. Use location=\"Berkeley\" though not in enum. Probably destination. Use departure_date=\"2019-03-11\". duration one night implies number_of_days? not in schema. We'll set destination=\"Berkeley\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615045,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b76c80aaf2f379eb",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 131,
+      "prompt_tokens": 7852,
+      "prompt_tokens_details": null,
+      "total_tokens": 7983
+    }
+  },
+  "request_sha256": "0f8e9ee960078d081f7fb8022570c3a9126470edfdd01fa47fceabd8e57f5cc5",
+  "source_example_id": "mix_dev_0164+hb_0217",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

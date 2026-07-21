@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c028bef2052d16b1464835da",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8552905702963471,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_01a28e00e08b8f371952ecd9",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"savings\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks with recipient_account_type. Past: user transferred from savings to checking. Likely wants transfer from savings. So recipient_account_type=\"savings\"? Actually transfer money to a bank account: need recipient account type? They want to transfer money to a bank account, likely from savings. So recipient_account_type=\"savings\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615152,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-80790c6fdf77bae8",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 88,
+      "prompt_tokens": 10030,
+      "prompt_tokens_details": null,
+      "total_tokens": 10118
+    }
+  },
+  "request_sha256": "5b3ecff311de19966f5b98ee307e222760c2badeca521e384d9a686147b2d9e3",
+  "source_example_id": "mix_dev_0161+durec_src_0090+hb_0337",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_41c79f1fbba23a45d437fbfe",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5039205607026815,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_0addae1a93002f5c38a999c8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars()",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need slots: pickup_city, pickup_date, pickup_time, dropoff_date, car_type maybe. User didn't specify. Use past pattern: default pickup city maybe user's location? No. Use most frequent: In session7 they used Paris. But no preference. We can leave empty. Output format: GetRentalCars(pickup_city=\"\", pickup_date=\"\", pickup_time=\"\", dropoff_date=\"\", car_type=\"\") but must be valid. Probably leave omitted.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614967,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-979041e509041eba",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 111,
+      "prompt_tokens": 10883,
+      "prompt_tokens_details": null,
+      "total_tokens": 10994
+    }
+  },
+  "request_sha256": "e2ed8651abdf0a94cf11c5dd8689c80eefde9dbe165971228c4e0545e72aee98",
+  "source_example_id": "mix_dev_0327+durec_src_0137+hb_0492",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

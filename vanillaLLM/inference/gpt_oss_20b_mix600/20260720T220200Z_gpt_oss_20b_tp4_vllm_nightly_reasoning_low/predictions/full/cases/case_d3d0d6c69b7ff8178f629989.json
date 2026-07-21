@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d3d0d6c69b7ff8178f629989",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.270992474630475,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e3f1a05df86381f75d049365",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", shared_ride=\"false\", pickup_time=\"in 30 minutes\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats? user didn't specify seats. default? maybe 1. shared_ride? not specified. pickup_time? user said half an hour. We can set pickup_time as \"in 30 minutes\" but format? maybe \"30 minutes\". We'll include destination=\"39145 Farwell Drive\", number_of_seats=\"1\", shared_ride=false, pickup_time=\"in 30 minutes\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615179,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-91d27c4405bf409f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 133,
+      "prompt_tokens": 11501,
+      "prompt_tokens_details": null,
+      "total_tokens": 11634
+    }
+  },
+  "request_sha256": "e03e26be863bd34522a98f610a180ba6eb478409b6eb4362c81e9fd99866fd0b",
+  "source_example_id": "mix_dev_0021+durec_src_0825+hb_0405",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

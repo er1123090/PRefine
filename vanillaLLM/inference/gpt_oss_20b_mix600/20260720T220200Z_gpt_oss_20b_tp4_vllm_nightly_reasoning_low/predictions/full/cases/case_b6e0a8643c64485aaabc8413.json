@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b6e0a8643c64485aaabc8413",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.219341903924942,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_0f71705a5cb4978755c180ea",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2023-03-09\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need origin, destination, departure_date. No airline preference, flight_class, passengers, return_date. So output: GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2023-03-09\") but date format? In history they used \"2029-03-09\"? They used \"2029-03-09\"? Actually session 13 used \"2019-03-06\". So use \"2023-03-09\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615140,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9c513bfed95dc8c4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 129,
+      "prompt_tokens": 11509,
+      "prompt_tokens_details": null,
+      "total_tokens": 11638
+    }
+  },
+  "request_sha256": "9b2445a2a8901b8cd4b38bc2720a7904cfea10443813c0386a69d0201820808e",
+  "source_example_id": "mix_dev_0021+durec_src_0825+hb_0405",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

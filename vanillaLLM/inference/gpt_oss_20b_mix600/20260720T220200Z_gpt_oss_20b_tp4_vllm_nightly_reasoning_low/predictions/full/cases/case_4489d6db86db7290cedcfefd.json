@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4489d6db86db7290cedcfefd",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.6999816000461578,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_abbf8f437f32cd0a4145f477",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Need slots: category, free_entry, good_for_kids, location, destination, departure_date. From history, user hasn't specified. But pattern: user likes shared rides, but travel? No pattern. We can default none. Probably empty. So call GetTravel with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614970,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-87ee7e71a97d3dad",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 75,
+      "prompt_tokens": 8008,
+      "prompt_tokens_details": null,
+      "total_tokens": 8083
+    }
+  },
+  "request_sha256": "d299dcf677e5fd1541ffc787fc835c2f6a78aaddffe0a046184fcac67a301ae9",
+  "source_example_id": "mix_dev_0317+hb_0241",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

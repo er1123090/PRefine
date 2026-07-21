@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_62b73c42e75a9dfda9505a6f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0678708236664534,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e945f860018fbeaccb88b803",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"Chicago\", average_star=\"4\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user wants 4 star hotel in Chicago, 3 rooms. So likely wants 4 star. Also maybe wants wifi? Not seen. We'll output GetHotels(location=\"Chicago\", average_star=\"4\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615021,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-94f3826f23d4f6b9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 74,
+      "prompt_tokens": 9674,
+      "prompt_tokens_details": null,
+      "total_tokens": 9748
+    }
+  },
+  "request_sha256": "71159391f0ae9915fa998273b631b4fedb2f7bd8c03c809c37fc8fb2d4b6f2a7",
+  "source_example_id": "mix_dev_0130+durec_src_1230+hb_0409",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

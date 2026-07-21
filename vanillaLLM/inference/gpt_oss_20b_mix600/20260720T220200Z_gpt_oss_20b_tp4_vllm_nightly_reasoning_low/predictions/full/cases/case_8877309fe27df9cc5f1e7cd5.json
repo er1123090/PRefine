@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8877309fe27df9cc5f1e7cd5",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0253235762938857,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e1e0fa926f11a5bc1656fa22",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"San Mateo\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant: likely city? Past: user asked for Tapas in San Mateo. Also earlier: find restaurant with Tapas, city San Mateo. Also earlier: find restaurant with Tapas. No other city. So preference: city San Mateo. Also maybe price_range? Not known. Category? Not specified. So we can set city=\"San Mateo\". No other slots. Output format: GetRestaurants(city=\"San Mateo\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615072,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a9a16c1cfa901ac7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 108,
+      "prompt_tokens": 10503,
+      "prompt_tokens_details": null,
+      "total_tokens": 10611
+    }
+  },
+  "request_sha256": "f4821e9068084a67e8b7b0aae4b09f5db73f01bd8e6ac4e139e7d196159f06e0",
+  "source_example_id": "mix_dev_0165+durec_src_0519+hb_0404",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

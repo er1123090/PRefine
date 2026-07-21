@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ec5b4e21e3c5d905887f8c7f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3065586565062404,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_753f6115b7705a694de5bab8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2019-03-09\", origin=\"San Francisco\", destination=\"Seattle\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Determine preferences: airlines? none. flight_class? none. passengers? none. return_date? none. We can infer from history: user often uses American Airlines? In session3 used American. But no preference. Maybe default none. Provide only provided slots. So output: GetFlights(departure_date=\"2019-03-09\", origin=\"San Francisco\", destination=\"Seattle\")? date format? earlier used \"2019-03-10\". So use that. No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615210,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8e470f98d4dac335",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 138,
+      "prompt_tokens": 9001,
+      "prompt_tokens_details": null,
+      "total_tokens": 9139
+    }
+  },
+  "request_sha256": "94f7aa65f069a83d10312ed4e40b1bf1a6f0fc736d29f34c78a2f7aec471c491",
+  "source_example_id": "mix_dev_0247+hb_0320",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

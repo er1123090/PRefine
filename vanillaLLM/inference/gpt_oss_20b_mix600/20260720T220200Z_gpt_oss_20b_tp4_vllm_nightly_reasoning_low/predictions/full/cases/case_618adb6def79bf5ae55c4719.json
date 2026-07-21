@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_618adb6def79bf5ae55c4719",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9869983941316605,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_5ee4cae9d1d1ab7d8fadab5c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history, user likes Veggie, moderate price, one person, but now generic. Past preferences: category? They booked Veggie in Oakland, price moderate. Also earlier they asked for Burmese in SF. No strong preference. Likely want moderate price, maybe category unspecified. We can output GetRestaurants with no slots? But need at least domain. Provide empty? Probably no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615019,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9dfe521604b5bfb1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 100,
+      "prompt_tokens": 11452,
+      "prompt_tokens_details": null,
+      "total_tokens": 11552
+    }
+  },
+  "request_sha256": "4cd21a409813cbecaf5ba38c46b6bb7d2d822f38646ad3b14d9020b18c73cc4c",
+  "source_example_id": "mix_dev_0021+durec_src_0825+hb_0405",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_1cdeae7122a8e18909719a2b",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7600568095222116,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4a1b9a641abee4f1881ea368",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses()",
+          "function_call": null,
+          "reasoning": "Need GetBuses. No slots given. Use past pattern: origin, destination, departure_date. User says \"check bus options for my trip.\" No details. We infer from history: user often travels from Seattle to Vancouver. But not sure. We can leave empty. Output format: GetBuses() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614890,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b52195a24c1958b0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 80,
+      "prompt_tokens": 10687,
+      "prompt_tokens_details": null,
+      "total_tokens": 10767
+    }
+  },
+  "request_sha256": "dfee8b7948dcd289cb3bcd02ba014c916c986a15d7536745635c974fa35028cf",
+  "source_example_id": "mix_dev_0203+durec_src_1261+hb_0229",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

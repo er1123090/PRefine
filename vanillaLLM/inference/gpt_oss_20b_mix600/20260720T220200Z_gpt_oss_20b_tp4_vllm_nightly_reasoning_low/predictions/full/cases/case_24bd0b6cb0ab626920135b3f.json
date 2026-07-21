@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_24bd0b6cb0ab626920135b3f",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6199602726846933,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6c85102770871c10d9a603c5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"checking\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks. Need recipient_account_type. From history, user transferred from savings to checking earlier. Also later transfer from checking to checking. Likely wants checking? But default? In session1 they asked for checking account balance. For transfer, likely from checking? But we need recipient_account_type: checking or savings. They didn't specify. Use most frequent: checking used in transfers? Session1 transfer from savings to checking. Session13 transfer from checking to checking. So checking more frequent. Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614911,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8e8009e9ddf0fc46",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 120,
+      "prompt_tokens": 10187,
+      "prompt_tokens_details": null,
+      "total_tokens": 10307
+    }
+  },
+  "request_sha256": "84510aee525af48138a0c3f998035159deadd67eef689824ca695b383b57ed58",
+  "source_example_id": "mix_dev_0313+durec_src_0160+hb_0060",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3a7e54ec2e6b0cd59cb31878",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3984409309923649,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_afa7e3b6e95e5082a73b472e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"Sunnyvale\", category=\"Asian\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants restaurant. No city given. Past preferences: user often in Sunnyvale, Philadelphia, etc. They liked Asian cuisine. In session13, they asked for Asian restaurant in Sunnyvale. So likely preference: city Sunnyvale, category Asian, maybe price moderate? They didn't specify seats. So output GetRestaurants with city=\"Sunnyvale\", category=\"Asian\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614955,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8d7fd1de5801c106",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 100,
+      "prompt_tokens": 10240,
+      "prompt_tokens_details": null,
+      "total_tokens": 10340
+    }
+  },
+  "request_sha256": "a0ac2ce0941c1371b0e8cc4872dd16b2680118e4ac2e3201f2b5aaffadf237e0",
+  "source_example_id": "mix_dev_0172+durec_src_0331+hb_0487",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_49154b223a69f72a58374d5b",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.9868469554930925,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_572aa2c73551fc2ad8546e6c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"Vallejo\", date=\"2019-03-05\", time=\"18:15\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. Slots: city, date, time, maybe category, price_range, number_of_seats. From history, user often picks price_range moderate? Not seen. We'll set city=\"Vallejo\", date=\"2019-03-05\", time=\"18:15\". No other.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614979,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9029d493556f07e7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 96,
+      "prompt_tokens": 9580,
+      "prompt_tokens_details": null,
+      "total_tokens": 9676
+    }
+  },
+  "request_sha256": "0ed56be636f452fad4e140a3414e1b4583de448ce0ad17bfba404ced17970b15",
+  "source_example_id": "mix_dev_0147+hb_0043",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

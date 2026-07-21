@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "case_id": "case_9d23ba491f576d9839533f6e",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.048440957441926,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "city": "Vallejo",
+        "date": "2019-03-05",
+        "number_of_seats": "1",
+        "time": "18:15"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_2fc0d4b443a3e36eef8b021b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"city\": \"Vallejo\", \"date\": \"2019-03-05\", \"time\": \"18:15\", \"number_of_seats\": \"1\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-a8ae9b9b5f0e313c",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587881,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bffccec477eb4f99",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 57,
+      "prompt_tokens": 12020,
+      "prompt_tokens_details": null,
+      "total_tokens": 12077
+    }
+  },
+  "request_sha256": "fa071ec404b7845bd5c0fbbe0b77b7c61ebd6bb902e42eabe041c94974f5f180",
+  "source_example_id": "mix_dev_0218+durec_src_0593+hb_0171",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

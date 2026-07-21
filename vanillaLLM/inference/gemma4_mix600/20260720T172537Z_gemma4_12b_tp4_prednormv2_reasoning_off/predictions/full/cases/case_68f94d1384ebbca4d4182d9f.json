@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_68f94d1384ebbca4d4182d9f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.588770349510014,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Museum",
+        "location": "San Francisco"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_d15872a2dca5efb88a34d57a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Museum\", \"location\": \"San Francisco\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-8da7d0aa234a35ad",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784570155,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-998ee95eb8b457ce",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 21,
+      "prompt_tokens": 10744,
+      "prompt_tokens_details": null,
+      "total_tokens": 10765
+    }
+  },
+  "request_sha256": "084df415445bf83e804373524a6d2506f4505eb8fb63b3142d45a3e0a732a889",
+  "source_example_id": "mix_dev_0038+durec_src_0302+hb_0218",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

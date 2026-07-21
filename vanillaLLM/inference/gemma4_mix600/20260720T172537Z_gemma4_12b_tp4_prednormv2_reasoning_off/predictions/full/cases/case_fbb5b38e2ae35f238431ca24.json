@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_fbb5b38e2ae35f238431ca24",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.713120840489864,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "location": "Kuala Lumpur",
+        "number_of_rooms": "1"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_79cfd40a8d269f7fa2aab4e9",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"Kuala Lumpur\", \"number_of_rooms\": \"1\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-b6ce67f26a61ad18",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784572225,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-867342ec97373b5d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 27,
+      "prompt_tokens": 10134,
+      "prompt_tokens_details": null,
+      "total_tokens": 10161
+    }
+  },
+  "request_sha256": "c3b625fd74d1010ed0e80f03b838bf76013109012c2182b2ad325d7b838d762a",
+  "source_example_id": "mix_dev_0231+hb_0495",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

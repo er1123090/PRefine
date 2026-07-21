@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_3cd7ea81acd986ff5a662cbe",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.194455341435969,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "number_of_seats": "1",
+        "shared_ride": true
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_9e272fad0ae960ec8f413a32",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"shared_ride\": \"True\", \"number_of_seats\": \"1\"}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-84d3f5a850120a04",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587308,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ba5a5bcdfc953c32",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 33,
+      "prompt_tokens": 11130,
+      "prompt_tokens_details": null,
+      "total_tokens": 11163
+    }
+  },
+  "request_sha256": "40879d5dcaa10148f8307fad91f44afa957404d04e46a2a33f243cf81c311ed0",
+  "source_example_id": "mix_dev_0238+durec_src_1341+hb_0269",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

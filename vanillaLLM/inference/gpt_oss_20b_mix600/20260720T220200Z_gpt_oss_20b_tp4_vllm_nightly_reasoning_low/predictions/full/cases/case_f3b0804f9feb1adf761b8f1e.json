@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f3b0804f9feb1adf761b8f1e",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5050433306023479,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_9bb25af785a71e1fdc9fc4d6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"Van Buren\", number_of_seats=\"2\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, pickup_time, shared_ride. From history: user wants ride to Van Buren concert. In session2: shared ride cab for 2 to van buren. So destination \"The Van Buren\" or \"Van Buren\". Use shared_ride true, number_of_seats \"2\". pickup_time unspecified. We can leave empty. Output format: GetRideSharing(destination=\"Van Buren\", number_of_seats=\"2\", shared_ride=\"True\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615220,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9e64bd82f2766abf",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 141,
+      "prompt_tokens": 11546,
+      "prompt_tokens_details": null,
+      "total_tokens": 11687
+    }
+  },
+  "request_sha256": "cce0fa9e52c4c5cd53a6d616cfc2af6a948320f934b95ad9387f9a97a4fc70b6",
+  "source_example_id": "mix_dev_0214+durec_src_0550+hb_0018",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_b850fecba07c48e62ab4585d",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.600684109143913,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Sports",
+        "city": "Chicago",
+        "date": "2019-03-06"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_4c5f36b5d24aa710b6f85a79",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Sports\", \"city\": \"Chicago\", \"date\": \"2019-03-06\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-8f36bc8094254237",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588062,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-90c6a4a77c3d977c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 41,
+      "prompt_tokens": 10247,
+      "prompt_tokens_details": null,
+      "total_tokens": 10288
+    }
+  },
+  "request_sha256": "f6b899e90f12c95711ad7ea19e4d863bb0172c7f3df71dc55508946acffce2a8",
+  "source_example_id": "mix_dev_0078+durec_src_1324+hb_0251",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

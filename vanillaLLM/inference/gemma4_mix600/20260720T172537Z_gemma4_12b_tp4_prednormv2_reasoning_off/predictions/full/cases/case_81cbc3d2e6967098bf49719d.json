@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_81cbc3d2e6967098bf49719d",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.970706616528332,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "location": "San Francisco"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_ba3f094fee5974986ff43249",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"San Francisco\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-b8b1d62036132e7f",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784570480,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-875d446c464f1652",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 11142,
+      "prompt_tokens_details": null,
+      "total_tokens": 11157
+    }
+  },
+  "request_sha256": "8e73cd053ac5ad083c3838ab86db556910082db790c768df505c3145c8b94258",
+  "source_example_id": "mix_dev_0084+hb_0276",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

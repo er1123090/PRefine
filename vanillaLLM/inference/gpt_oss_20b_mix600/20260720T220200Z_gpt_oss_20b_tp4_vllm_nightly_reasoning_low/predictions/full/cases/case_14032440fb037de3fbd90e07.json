@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_14032440fb037de3fbd90e07",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.9709667349234223,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_2a5d79ac7b357e66c1984de0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need origin San Francisco, destination Seattle, departure_date 2019-03-09? Actually current date? Use March 9th. No passengers specified, default? We can omit. No airline preference. So call GetFlights with origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614867,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8b309d2c6d70ed09",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 102,
+      "prompt_tokens": 11112,
+      "prompt_tokens_details": null,
+      "total_tokens": 11214
+    }
+  },
+  "request_sha256": "495e0c2c0a4457c44567f493911fb46196ab3313a7c4c888dcf8a737113965da",
+  "source_example_id": "mix_dev_0218+durec_src_0593+hb_0171",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

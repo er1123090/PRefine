@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e6a70f1fefdb4e9b3a185745",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8030813252553344,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4a5b1f5a2abc747860583691",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2019-03-09\", origin=\"San Francisco\", destination=\"Seattle\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need origin San Francisco, destination Seattle, departure_date 2019-03-09? date format likely \"2019-03-09\". No airline preference, flight_class maybe default. passengers? not specified. So empty others.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615204,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-be723cd2de14e918",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 85,
+      "prompt_tokens": 11598,
+      "prompt_tokens_details": null,
+      "total_tokens": 11683
+    }
+  },
+  "request_sha256": "045fd0d0b5cbdc5c59e414ad9468a4f02b6dd0d3a25cf0f6bcdc23e34760d0e4",
+  "source_example_id": "mix_dev_0331+durec_src_1229+hb_0436",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

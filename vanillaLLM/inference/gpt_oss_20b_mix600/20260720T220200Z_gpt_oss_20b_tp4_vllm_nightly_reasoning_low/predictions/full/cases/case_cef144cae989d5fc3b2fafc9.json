@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_cef144cae989d5fc3b2fafc9",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.6699306070804596,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c96e87650cbbad3d8df4890d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"San Leandro\", price_range=\"cheap\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants restaurant options. No city specified. From history, user often wants cheap, vegetarian, outdoor, etc. But no explicit. We need to output a function call. Which domain? GetRestaurants. Need slots: city, category, price_range, etc. We can infer preferences: In session 5, user wanted cheap and vegetarian. In session 2, user wanted moderate price, outdoor seating. In session 1, coffee & light bites cheap. So likely user prefers cheap, maybe vegetarian. Also maybe wants outdoor. But we need to choose slots. We can provide city? Not specified. Maybe default to San Leandro? But user didn't specify. We can infer from past: user often in San Leandro. But could be any. We can set city=\"San Leandro\". Category? Not specified. Maybe \"American\" or \"Latin American\". But we can set category=\"American\" as common. Price_range=\"cheap\". Let's output GetRestaurants(city=\"San Leandro\", price_range=\"cheap\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615174,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b43bbfb7cba13ae3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 235,
+      "prompt_tokens": 12964,
+      "prompt_tokens_details": null,
+      "total_tokens": 13199
+    }
+  },
+  "request_sha256": "ed9418a11fc24e08c2003ad9fdcc8f246cc7a14f2e0012aa802f9ca25af89696",
+  "source_example_id": "mix_dev_0015+durec_src_0969+hb_0384",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

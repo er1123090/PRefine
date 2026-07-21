@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8561126329c1f74267a53f6d",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0739701725542545,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_8c58af52e61d7aee1ae4ad03",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"savings\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks. Need recipient_account_type. Past: user transferred to savings and checking. Which preference? They used savings first then checking. Frequency: savings once, checking once. Maybe default savings? In session3 they requested savings. In session6 they used savings then checking. So maybe savings. We'll output recipient_account_type=\"savings\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615069,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8620a8dbaae02b89",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 90,
+      "prompt_tokens": 9745,
+      "prompt_tokens_details": null,
+      "total_tokens": 9835
+    }
+  },
+  "request_sha256": "df4ac0a61bbc283433a64af7ac88a8c8cfe1c3885dea459d80f32705bc4400e2",
+  "source_example_id": "mix_dev_0133+durec_src_0680+hb_0036",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

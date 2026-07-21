@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_08e077a64e4f51aaf20f5c39",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.755817102268338,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_60e3313579a4c2b9fab010fa",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2019-03-09\", origin=\"San Francisco\", destination=\"Seattle\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Determine slots: airlines? none. departure_date=2019-03-09. origin=San Francisco. destination=Seattle. flight_class? none. passengers? none. return_date? none. Use defaults. Output: GetFlights(departure_date=\"2019-03-09\", origin=\"San Francisco\", destination=\"Seattle\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614822,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a77184b0e6e1c0e3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 106,
+      "prompt_tokens": 10160,
+      "prompt_tokens_details": null,
+      "total_tokens": 10266
+    }
+  },
+  "request_sha256": "61cad2745b831263442c3911f44ab64222e688a5899dc6c03e1a98cc4d8cd2f0",
+  "source_example_id": "mix_dev_0092+durec_src_0594+hb_0451",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

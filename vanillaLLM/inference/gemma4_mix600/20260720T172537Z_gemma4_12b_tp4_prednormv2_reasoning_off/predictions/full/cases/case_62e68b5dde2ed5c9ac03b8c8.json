@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_62e68b5dde2ed5c9ac03b8c8",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.5969186360016465,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Museum",
+        "location": "San Francisco"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_4c5f36b5d24aa710b6f85a79",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Museum\", \"location\": \"San Francisco\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-9c68904bdf46ed73",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784570084,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b1a0af905d404459",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 21,
+      "prompt_tokens": 11191,
+      "prompt_tokens_details": null,
+      "total_tokens": 11212
+    }
+  },
+  "request_sha256": "273cbe2be15b62283a9579e87527705659a87ad624544bf9c2b89dbffd91c237",
+  "source_example_id": "mix_dev_0078+durec_src_1324+hb_0251",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

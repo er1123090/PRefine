@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_922ef4405792d47b5b546bcc",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9449226101860404,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e639dab1abd6ac52d14b152c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "No suitable function call could be determined from the provided information.",
+          "function_call": null,
+          "reasoning": "We need GetHotels with location Berkeley? but Berkeley not in list. Maybe GetTravel? but trip. They want hotel. Berkeley not in list. Maybe GetTravel category? but location not in list. So no match. Maybe GetHotels with location? not in enum. So cannot. Maybe GetTravel with location? not in enum. So no. Probably no function.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615085,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ab73387ce3ce2ad3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 97,
+      "prompt_tokens": 10152,
+      "prompt_tokens_details": null,
+      "total_tokens": 10249
+    }
+  },
+  "request_sha256": "7fefeb98b34c2fd88f498a712afd416a08947495abc1ea526ef9fd751baf9e06",
+  "source_example_id": "mix_dev_0035+durec_src_0259+hb_0439",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

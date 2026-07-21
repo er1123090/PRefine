@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_199f816bf21976c6176527c7",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.076273612678051,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4bf5818531d29941c37766a4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"checking\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks with recipient_account_type. User wants transfer money to bank account. No preference given. In history, they checked checking and savings. Which is more frequent? Checking used once, savings used once. No preference. Maybe default to checking? We'll choose checking.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614882,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a293c49b29b02712",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 74,
+      "prompt_tokens": 10693,
+      "prompt_tokens_details": null,
+      "total_tokens": 10767
+    }
+  },
+  "request_sha256": "b4564fbf3fbaeae436f213d7fae0291912eeb888a9c5ce8e06c8e3876c1eee0c",
+  "source_example_id": "mix_dev_0203+durec_src_1261+hb_0229",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

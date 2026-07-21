@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c2df96df3b300fc26299013f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.5791431069374084,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_eca0331e37a4d5e3707e8c5e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No slots given. We infer preferences: from history, user often picks Standard car, pickup location unspecified. They like Standard. So set car_type=\"Standard\". No other.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615155,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b4a2754ab9a26172",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 59,
+      "prompt_tokens": 11455,
+      "prompt_tokens_details": null,
+      "total_tokens": 11514
+    }
+  },
+  "request_sha256": "0c85d2c6d66c147eb99d03ac60ac295329152edf820561a8010b0d9210ba9b42",
+  "source_example_id": "mix_dev_0021+durec_src_0825+hb_0405",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_c6f043fb8a6bbab53674df87",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 11.814354088157415,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "city": "Duncans Mills"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_1d0937a1b954e47ff206885c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"city\": \"Duncans Mills\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-a28979d7e3b1229a",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784571487,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8eb273490907b710",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 17,
+      "prompt_tokens": 13415,
+      "prompt_tokens_details": null,
+      "total_tokens": 13432
+    }
+  },
+  "request_sha256": "0d410ad696427ea68d905b6d7b7086113188c6e91ddfb1d44ec3b24c3862b4ac",
+  "source_example_id": "mix_dev_0103+durec_src_0806+hb_0319",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

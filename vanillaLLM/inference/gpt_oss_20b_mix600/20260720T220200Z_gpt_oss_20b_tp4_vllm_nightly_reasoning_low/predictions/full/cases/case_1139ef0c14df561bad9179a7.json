@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_1139ef0c14df561bad9179a7",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.450457575730979,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_fd75df1c1bddd298cf0db8ff",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"American\", city=\"Novato\", price_range=\"moderate\", number_of_seats=\"2\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history: user wants American restaurant, moderate price, al fresco. So preferences: category=American, price_range=moderate, city=Novato. Also maybe number_of_seats? They booked 2. So likely number_of_seats=2. So output GetRestaurants with those slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614854,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9449886c5af524a0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 104,
+      "prompt_tokens": 8235,
+      "prompt_tokens_details": null,
+      "total_tokens": 8339
+    }
+  },
+  "request_sha256": "cfa695a56e864cb6d8b4f0dad3b822fbdc3a7c3f860f26fa967480bfd8608c10",
+  "source_example_id": "dev_0083",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

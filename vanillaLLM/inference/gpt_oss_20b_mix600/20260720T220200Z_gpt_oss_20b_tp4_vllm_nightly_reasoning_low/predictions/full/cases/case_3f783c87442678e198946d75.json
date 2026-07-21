@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3f783c87442678e198946d75",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9269575951620936,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_0c118407978b334674feeea6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"Toronto\")",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need city? \"nearby\" ambiguous. Past pattern: user often says \"nearby\" after city. But no city given. Maybe default to previous city? Last session city Toronto. So city=Toronto. No date. So output GetEvents(city=\"Toronto\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614963,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8c4ff75390dd3c2b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 75,
+      "prompt_tokens": 8316,
+      "prompt_tokens_details": null,
+      "total_tokens": 8391
+    }
+  },
+  "request_sha256": "3fe5bcb223176211ec461e46f54e34107dafb5e67a3838c2950c6019d2200d88",
+  "source_example_id": "dev_0009",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

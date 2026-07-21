@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_55d23161f941a5330f177bae",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0216484917327762,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1eb4fe0b3708feb48ac3b3e0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User says \"I’m planning a trip and want to explore travel options.\" Likely want GetTravel. Need slots: category, departure_date, destination, free_entry, good_for_kids, location. From history, user often wants travel to specific cities, often Chicago, Los Angeles, etc. No explicit preference. But pattern: prefers economy? Not travel. Maybe default none. We can leave empty. So call GetTravel with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614999,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bdd12d6c482be688",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 109,
+      "prompt_tokens": 11539,
+      "prompt_tokens_details": null,
+      "total_tokens": 11648
+    }
+  },
+  "request_sha256": "a3e6a58305cd082b6a1dc1938f35d25d450f78aa5de64fa7baaffb25677bcacf",
+  "source_example_id": "mix_dev_0331+durec_src_1229+hb_0436",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

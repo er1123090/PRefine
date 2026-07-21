@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_1ac0d8edf990850154c25485",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6031657243147492,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d1821804c8b5a6c79c5ed238",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history: user wants search flights. No preferences given. But pattern: earlier flights used American, Southwest. No strong preference. Maybe default Economy. Origin? Not specified. We infer from past: user often travels from Phoenix, Las Vegas, New York. But no context. We can leave empty. So call with empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614885,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a63cba79956ba0ed",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 104,
+      "prompt_tokens": 10104,
+      "prompt_tokens_details": null,
+      "total_tokens": 10208
+    }
+  },
+  "request_sha256": "69d15bd92c5315b3626ce6d83c08130a5e03cdc7bbef76fc2e34a0bfffd7a455",
+  "source_example_id": "mix_dev_0271+durec_src_1237+hb_0397",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

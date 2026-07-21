@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_cf13b024a3ea8fa530989c24",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.35518841817975,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Museum",
+        "location": "San Francisco"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_30a99e44334d1673e69b0d75",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Museum\", \"location\": \"San Francisco\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-ab6fdea147feb407",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588214,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b280eaba6fc1f03d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 28,
+      "prompt_tokens": 12380,
+      "prompt_tokens_details": null,
+      "total_tokens": 12408
+    }
+  },
+  "request_sha256": "fb8021040ee727605f6ca4eb057cf6fcc2e2ad63a3bdeb3e2cffaf6c71838502",
+  "source_example_id": "mix_dev_0183+durec_src_0915+hb_0433",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

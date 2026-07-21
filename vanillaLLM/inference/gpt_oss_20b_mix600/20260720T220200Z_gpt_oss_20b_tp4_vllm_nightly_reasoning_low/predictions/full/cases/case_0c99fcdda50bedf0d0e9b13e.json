@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0c99fcdda50bedf0d0e9b13e",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.6409630002453923,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e205008c7fa56e30d184a83d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need preferences: airlines? flight_class? passengers? departure_date? origin/destination? From history: user earlier booked flight from Atlanta to Chicago, economy. They prefer economy. Also earlier they said \"I’m planning a trip and would like to search for available flights.\" No specifics. Use most frequent: economy, airlines? They used Delta, United, American. No preference. Maybe default economy. Provide empty others.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614838,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a3172f9faf48dffa",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 102,
+      "prompt_tokens": 11194,
+      "prompt_tokens_details": null,
+      "total_tokens": 11296
+    }
+  },
+  "request_sha256": "1ba8bf8ad1cc7efb7f51d56857e620fcf591145588eaa6ea2879e6030258b628",
+  "source_example_id": "mix_dev_0249+durec_src_0043+hb_0048",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_3a5205bd1400197dca35d79b",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.236826657317579,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Latin American",
+        "price_range": "moderate"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_69777ce3c4f211ebc449c397",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Latin American\", \"price_range\": \"moderate\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-90c2cb56ed06c9c5",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587297,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-987a87bef66bb347",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 30,
+      "prompt_tokens": 10327,
+      "prompt_tokens_details": null,
+      "total_tokens": 10357
+    }
+  },
+  "request_sha256": "6f59b3b7a6a8529f47d07ae51fc28fb941b180af77cb576f359b80d520d4bbd3",
+  "source_example_id": "mix_dev_0329+durec_src_0205",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

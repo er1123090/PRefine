@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "case_id": "case_8d1155103cca3ec5daeea712",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.511256658472121,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "departure_date": "2019-03-07",
+        "destination": "Seattle",
+        "origin": "Atlanta",
+        "passengers": "1"
+      },
+      "name": "GetFlights"
+    }
+  ],
+  "pair_id": "pair_a0ef4dd450b9e8b31d909ee2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"departure_date\": \"2019-03-07\", \"destination\": \"Seattle\", \"origin\": \"Atlanta\", \"passengers\": \"1\"}",
+                "name": "GetFlights"
+              },
+              "id": "chatcmpl-tool-b4b049a39a52a742",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587776,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b8cf52f1a5ae0b27",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 50,
+      "prompt_tokens": 8837,
+      "prompt_tokens_details": null,
+      "total_tokens": 8887
+    }
+  },
+  "request_sha256": "3c348588299c4df7107522268a5731f86ea654b49e5c2e367e75ff35bf95b7ef",
+  "source_example_id": "dev_0239",
+  "status": "success",
+  "target_domain": "GetFlights"
+}

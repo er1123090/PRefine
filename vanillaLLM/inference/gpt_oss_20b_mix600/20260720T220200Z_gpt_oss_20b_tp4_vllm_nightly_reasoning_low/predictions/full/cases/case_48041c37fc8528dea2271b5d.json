@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_48041c37fc8528dea2271b5d",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3721930664032698,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6638bed8341fee19c329c66f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2019-03-09\", origin=\"San Francisco\", destination=\"Seattle\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Determine missing slots: departure_date, origin, destination, passengers? not given. flight_class? not given. airlines? not given. return_date? not given. So only fill known: departure_date=\"2019-03-09\", origin=\"San Francisco\", destination=\"Seattle\". Others omitted.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614975,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aa4e035b36ae47c7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 98,
+      "prompt_tokens": 9045,
+      "prompt_tokens_details": null,
+      "total_tokens": 9143
+    }
+  },
+  "request_sha256": "b183637e492b6fcb0bbdddcb5b773ecc0f556bd21664b4ad65ffc1d24acb53d4",
+  "source_example_id": "mix_dev_0199+hb_0020",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

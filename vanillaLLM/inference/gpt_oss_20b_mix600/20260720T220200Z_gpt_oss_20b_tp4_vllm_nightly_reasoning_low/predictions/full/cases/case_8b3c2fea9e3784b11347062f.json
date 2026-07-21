@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8b3c2fea9e3784b11347062f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3190070306882262,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4ef083ae2c8d81c4a6af6e60",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", dropoff_date=\"2019-03-10\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says pick up noon March 8, keep couple days. So dropoff date maybe March 10. car_type default? not specified. So output: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", dropoff_date=\"2019-03-10\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615075,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-95b4eb9e53a9a0e2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 139,
+      "prompt_tokens": 9145,
+      "prompt_tokens_details": null,
+      "total_tokens": 9284
+    }
+  },
+  "request_sha256": "3bbbc6b20d7d17574a9d81b82b6f333f2cc1346442286ce7f5dbe5eded794cd7",
+  "source_example_id": "mix_dev_0150+hb_0004",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

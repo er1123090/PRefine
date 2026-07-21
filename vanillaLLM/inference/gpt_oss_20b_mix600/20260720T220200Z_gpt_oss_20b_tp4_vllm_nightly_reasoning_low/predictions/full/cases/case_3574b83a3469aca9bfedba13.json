@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3574b83a3469aca9bfedba13",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.371048402041197,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_488f5522508de022bf22ff90",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(destination=\"Berkeley\", departure_date=\"2019-03-11\", location=\"Berkeley\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels? They want trip to Berkeley, one night. So GetHotels with location=\"Berkeley\"? Not in enum. But maybe GetTravel? For travel. They plan trip. Use GetTravel with destination=\"Berkeley\"? Not in enum. Maybe GetHotels with location? Not available. Maybe GetTravel category? They didn't specify. Probably GetHotels with location? But location enum doesn't include Berkeley. So maybe GetTravel with destination? Destination not enum. Hmm. Maybe GetHotels with location \"San Francisco\" close? But user said Berkeley. Could use GetTravel with destination \"Berkeley\" but not in enum. Might default none. Maybe GetHotels with location \"San Francisco\" as closest. But better to use GetTravel with destination \"Berkeley\" ignoring enum. I'll output GetTravel(destination=\"Berkeley\", departure_date=\"2019-03-11\", location=\"Berkeley\")? Probably.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614945,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ae4d90b7f303d64a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 217,
+      "prompt_tokens": 9977,
+      "prompt_tokens_details": null,
+      "total_tokens": 10194
+    }
+  },
+  "request_sha256": "6cfb733dc47e16f640d97b6fbb9c2743d0974305c971b1ad856e87974d58b4e0",
+  "source_example_id": "mix_dev_0219+hb_0318",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_a0307eb17fe36f237d6adfee",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 8.9895985359326,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "check_in_date": "2019-03-18",
+        "location": "San Diego"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_e977e075d42d3e5c7a989784",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"San Diego\", \"check_in_date\": \"2019-03-18\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-aa14506522f4fa02",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587906,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9ae72a28c52c1ca3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 39,
+      "prompt_tokens": 13674,
+      "prompt_tokens_details": null,
+      "total_tokens": 13713
+    }
+  },
+  "request_sha256": "a31a268a49fcd5064421cf84bd925247fea10dfdfa882941d3ebd9b0630e21f1",
+  "source_example_id": "mix_dev_0099+durec_src_0572+hb_0102",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

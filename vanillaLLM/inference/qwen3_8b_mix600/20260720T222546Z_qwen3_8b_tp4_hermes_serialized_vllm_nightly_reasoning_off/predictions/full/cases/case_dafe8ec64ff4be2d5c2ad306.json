@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_dafe8ec64ff4be2d5c2ad306",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.7682095132768154,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Tourist Attraction",
+        "departure_date": "2023-04-01",
+        "location": "Barcelona"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_09ab03385b5d4a0ce280fe7e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Tourist Attraction\", \"location\": \"Barcelona\", \"departure_date\": \"2023-04-01\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-959ee840db40dfc8",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588281,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bf1a81a1c44452c2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 46,
+      "prompt_tokens": 11543,
+      "prompt_tokens_details": null,
+      "total_tokens": 11589
+    }
+  },
+  "request_sha256": "6188712b26ab13532b1db4d710b999bbe9b7e80d5460d3779c7e4137ab8fba6d",
+  "source_example_id": "mix_dev_0119+durec_src_0621+hb_0082",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

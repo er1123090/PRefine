@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_fb277df3642876cf6574fdc5",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.391594680957496,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Art Exhibition",
+        "location": "San Francisco"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_787c5ff03286491d401b74a1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Art Exhibition\", \"location\": \"San Francisco\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-801c84a58d0b89d9",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588482,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-87b528bdee86f25b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 28,
+      "prompt_tokens": 10054,
+      "prompt_tokens_details": null,
+      "total_tokens": 10082
+    }
+  },
+  "request_sha256": "dbdf12589835bd7a3df4bf530fcb8ea4319fdf59c6ba5567dbde36ea0c046d5c",
+  "source_example_id": "mix_dev_0082+hb_0302",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

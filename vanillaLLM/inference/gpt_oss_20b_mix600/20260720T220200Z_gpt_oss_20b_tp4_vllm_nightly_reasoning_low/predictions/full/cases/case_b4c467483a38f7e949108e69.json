@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b4c467483a38f7e949108e69",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8610015390440822,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_841184285c8e07736353c806",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From user: planning a trip, search available flights. No specifics. Use past pattern: default economy? We infer from previous: user often picks economy. So flight_class=\"Economy\". No origin/destination. We can leave empty. Output format: GetFlights().",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615136,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-87d23cd01ff73eac",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 92,
+      "prompt_tokens": 10340,
+      "prompt_tokens_details": null,
+      "total_tokens": 10432
+    }
+  },
+  "request_sha256": "5cdbac6119f8a7a337cfec44c02398d49f1d21e9f8cf2068de27929cade5666d",
+  "source_example_id": "mix_dev_0233+durec_src_0255+hb_0247",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

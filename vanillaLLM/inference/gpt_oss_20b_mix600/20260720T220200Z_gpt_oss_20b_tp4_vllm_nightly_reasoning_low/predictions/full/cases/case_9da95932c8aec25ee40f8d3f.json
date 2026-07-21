@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_9da95932c8aec25ee40f8d3f",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3143440810963511,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_93049e1fa399f42d787346f5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"unknown\", number_of_seats=\"1\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, shared_ride. From history: user wants ride, check available ride-sharing options. No specifics. Use pattern: previous ride sharing had shared_ride True. Likely default shared_ride True. Destination unknown; maybe ask? But we must output. Maybe use last known destination? None. Could default to empty? But schema requires string. Maybe use \"unknown\". number_of_seats maybe 1. Let's pick 1. shared_ride True.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615103,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9bfaacef6ad2f309",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 136,
+      "prompt_tokens": 8098,
+      "prompt_tokens_details": null,
+      "total_tokens": 8234
+    }
+  },
+  "request_sha256": "f3ec3b2cf815b0af974a959ef739abd2d7c6ec05dcfecb6830b76ce4c956db28",
+  "source_example_id": "dev_0239",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

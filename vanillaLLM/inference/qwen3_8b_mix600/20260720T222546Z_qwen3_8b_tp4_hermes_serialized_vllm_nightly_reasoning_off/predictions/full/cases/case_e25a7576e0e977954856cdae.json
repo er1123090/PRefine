@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_e25a7576e0e977954856cdae",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.5215420573949814,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "car_type": "Compact",
+        "pickup_city": "San Francisco",
+        "pickup_date": "2019-03-09"
+      },
+      "name": "GetRentalCars"
+    }
+  ],
+  "pair_id": "pair_1337534be6c3acb6b31d83e9",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"pickup_city\": \"San Francisco\", \"pickup_date\": \"2019-03-09\", \"car_type\": \"Compact\"}",
+                "name": "GetRentalCars"
+              },
+              "id": "chatcmpl-tool-aa77fe50f0ce7dbb",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588325,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bf6b63dddef184d2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 47,
+      "prompt_tokens": 12507,
+      "prompt_tokens_details": null,
+      "total_tokens": 12554
+    }
+  },
+  "request_sha256": "949325760044e622162ba2d3de99a0fedfc5a7a8a75726778fa7213bf3ec98da",
+  "source_example_id": "mix_dev_0214+durec_src_0550+hb_0018",
+  "status": "success",
+  "target_domain": "GetRentalCars"
+}

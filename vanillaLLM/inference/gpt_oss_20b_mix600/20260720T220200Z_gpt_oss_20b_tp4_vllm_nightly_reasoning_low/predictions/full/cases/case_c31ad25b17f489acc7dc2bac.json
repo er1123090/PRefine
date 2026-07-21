@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c31ad25b17f489acc7dc2bac",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1869943113997579,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_871be49ea08ad5d4901e9460",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"San Jose\", number_of_days=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels? They want short trip to Berkeley. Need hotel. Slots: location=Berkeley? Not in enum. But maybe GetHotels location must be one of list includes \"San Jose\" etc. Berkeley not listed. Maybe GetTravel? But they want stay. Use GetHotels with location \"San Jose\" maybe nearest. But we deduce preference: they want 3 star? Not known. Use default. Provide location \"San Jose\" and number_of_days=\"1\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615155,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9379999863713f90",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 126,
+      "prompt_tokens": 8062,
+      "prompt_tokens_details": null,
+      "total_tokens": 8188
+    }
+  },
+  "request_sha256": "94d77536f2ac887006f164e3febfc4d677130977501f3bcb0506a2de302aa142",
+  "source_example_id": "dev_0091",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

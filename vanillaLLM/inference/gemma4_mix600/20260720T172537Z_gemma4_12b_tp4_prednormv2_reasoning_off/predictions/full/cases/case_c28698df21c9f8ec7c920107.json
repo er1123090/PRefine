@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_c28698df21c9f8ec7c920107",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 7.679329830221832,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "city": "Vallejo",
+        "date": "2019-03-05",
+        "time": "18:15"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_b1d33314efa4990bf834fec1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"city\": \"Vallejo\", \"date\": \"2019-03-05\", \"time\": \"18:15\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-88c972bff050fb93",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784571422,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-95153ec0ecf5c4e9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 41,
+      "prompt_tokens": 10652,
+      "prompt_tokens_details": null,
+      "total_tokens": 10693
+    }
+  },
+  "request_sha256": "9ca4e3f047da2e942265154fa3e64c08d123c1ce7c9ad5f54913554fc3b0a340",
+  "source_example_id": "mix_dev_0247+hb_0320",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

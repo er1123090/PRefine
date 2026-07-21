@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f7cd957221dc90a95b3fe5aa",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.122634768486023,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d966f619b6837caa0e72288e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars()",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need slots: car_type, pickup_city, pickup_date, pickup_time, dropoff_date, pickup_location? user didn't specify. We infer preferences: from history, user often picks compact or standard. In session6, user chose compact. In session3, standard. No clear preference. Maybe default compact? Also pickup_city: user didn't specify, maybe default Seattle? But user says \"for my trip\" no location. We can leave empty. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615224,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b8e034cde802c5a5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 113,
+      "prompt_tokens": 12580,
+      "prompt_tokens_details": null,
+      "total_tokens": 12693
+    }
+  },
+  "request_sha256": "6532eed8f72a94f35040455fec547f7b4e91d196b16d809e86ca17d54c5ccbec",
+  "source_example_id": "mix_dev_0099+durec_src_0572+hb_0102",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

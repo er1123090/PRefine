@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_014adfdf8d88e787c18bddc9",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 14.622833765111864,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Tourist Attraction",
+        "location": "San Diego"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_b6cff219f4d8baa15c85eafa",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Tourist Attraction\", \"location\": \"San Diego\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-a0f677bbec66209f",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784586729,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-84d3cf30c3e93372",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 30,
+      "prompt_tokens": 10309,
+      "prompt_tokens_details": null,
+      "total_tokens": 10339
+    }
+  },
+  "request_sha256": "8b163f8133634d596b0e2eda01973bfad2c381e2ba77e49632fda4a395e617ed",
+  "source_example_id": "mix_dev_0147+hb_0043",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

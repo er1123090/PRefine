@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_00c3d5788ff951e4fd8644fe",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.450107793323696,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_eb82a98f6e34bfb43d0898f6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Berkeley\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel? They plan trip to Berkeley. That's location. They want travel. Use GetTravel with location=Berkeley? Not in enum. Maybe GetHotels? They want stay one night. So GetHotels with location=Berkeley? Not in list. Maybe GetTravel category? They didn't specify. Probably GetHotels with location=Berkeley not allowed. Maybe GetTravel with destination? Use GetTravel destination=\"Berkeley\". No enum. But location enum includes many cities but not Berkeley. So maybe GetTravel with location=\"Berkeley\" but not in enum. Might ignore. Probably GetTravel with location=\"Berkeley\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614792,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a86e2d82c45cf452",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 145,
+      "prompt_tokens": 10622,
+      "prompt_tokens_details": null,
+      "total_tokens": 10767
+    }
+  },
+  "request_sha256": "1bee995c4f1dc53e52bde033aeeff65cd9ea2be31d2288cca28116073ee8ec14",
+  "source_example_id": "mix_dev_0127+durec_src_0622+hb_0200",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

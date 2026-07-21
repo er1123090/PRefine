@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_cd04843d1075b5f832ce551a",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.746651579625905,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "number_of_seats": "4",
+        "shared_ride": true
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_a433148615821ee47c11a901",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"number_of_seats\": \"4\", \"shared_ride\": true}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-bd07d85c3bd1cb07",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588197,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-811a05efb7b0ed15",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 32,
+      "prompt_tokens": 11938,
+      "prompt_tokens_details": null,
+      "total_tokens": 11970
+    }
+  },
+  "request_sha256": "c1106b02ba23f87d688d78d56c4a96415169c2102e02e516da5a728a3774b769",
+  "source_example_id": "mix_dev_0240+durec_src_0039+hb_0045",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

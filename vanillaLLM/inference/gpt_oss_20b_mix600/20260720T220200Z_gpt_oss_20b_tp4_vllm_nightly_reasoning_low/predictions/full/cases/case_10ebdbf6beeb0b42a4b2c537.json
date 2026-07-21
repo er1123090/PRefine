@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_10ebdbf6beeb0b42a4b2c537",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.3187258234247565,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_ffff74020db98c6d6bead56f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2023-03-12\", origin=\"Los Angeles\", destination=\"Denver\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need origin, destination, departure_date. Also maybe passengers? Not given. Use defaults. Also check preferences: earlier flights: user used Alaska, American, United. No preference. We'll just provide those slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614853,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b8065066f7f9dfda",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 80,
+      "prompt_tokens": 8231,
+      "prompt_tokens_details": null,
+      "total_tokens": 8311
+    }
+  },
+  "request_sha256": "0c99beabe2380795971a64bf1b0a38e9ad0e2f610b519dbe42499edb46f7e30e",
+  "source_example_id": "dev_0050",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d06d3a304a0c3f9924fadb5e",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8599909748882055,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a250ff1ff62cda67fe847693",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Berkeley\", departure_date=\"2019-03-11\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: category? free_entry? good_for_kids? location? destination? departure_date? Probably destination=Berkeley. departure_date=2019-03-11. duration one night implies return_date? maybe not. Use location=Berkeley. No other preferences. Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615176,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a3586d519bdfc1d8",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 89,
+      "prompt_tokens": 9032,
+      "prompt_tokens_details": null,
+      "total_tokens": 9121
+    }
+  },
+  "request_sha256": "caf35bc6002ab31c541f5711b803d7b9c1b4fb18806605a7fa4e7fd6a4b39b70",
+  "source_example_id": "mix_dev_0199+hb_0020",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

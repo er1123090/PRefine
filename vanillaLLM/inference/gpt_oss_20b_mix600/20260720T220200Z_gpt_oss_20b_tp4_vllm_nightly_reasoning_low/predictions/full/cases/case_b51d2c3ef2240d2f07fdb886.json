@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b51d2c3ef2240d2f07fdb886",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.366182059980929,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6ab5e43c64e056bef63f3c14",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(average_star=\"4\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants hotels. Past preferences: 4-star, 5-star. They often want 1 room. They like 4 or 5 star. No location specified. We can guess they want 4-star? In session1 4-star, session2 4-star, session3 4-star, session4 4-star, session5 5-star, session6 5-star. Maybe they prefer 4-star unless 5-star requested. Current request generic. We can default to 4-star. No location. We can leave location empty. Provide GetHotels with average_star=\"4\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615137,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-acee030d5f237c82",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 147,
+      "prompt_tokens": 8324,
+      "prompt_tokens_details": null,
+      "total_tokens": 8471
+    }
+  },
+  "request_sha256": "a068f8ec4516c5b97902c2fdbd20ef535d5821b2838a1d909f11e8c5aa0a69c2",
+  "source_example_id": "dev_0009",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

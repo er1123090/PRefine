@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_5f22cfbdf9d561b2f8fd9e62",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 13.572727837599814,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "airlines": "Delta Airlines",
+        "flight_class": "Economy"
+      },
+      "name": "GetFlights"
+    }
+  ],
+  "pair_id": "pair_44d6ba3f3cd3f5a3cf78f828",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"airlines\": \"Delta Airlines\", \"flight_class\": \"Economy\"}",
+                "name": "GetFlights"
+              },
+              "id": "chatcmpl-tool-9b6faa0f723ff598",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784570032,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b10153c081a33cf7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 23,
+      "prompt_tokens": 11660,
+      "prompt_tokens_details": null,
+      "total_tokens": 11683
+    }
+  },
+  "request_sha256": "cf47e0ad79eeb0cc023ee53a99417e60dd54ecceb2c72a9b7f49a9184e8770db",
+  "source_example_id": "mix_dev_0302+durec_src_0301+hb_0035",
+  "status": "success",
+  "target_domain": "GetFlights"
+}

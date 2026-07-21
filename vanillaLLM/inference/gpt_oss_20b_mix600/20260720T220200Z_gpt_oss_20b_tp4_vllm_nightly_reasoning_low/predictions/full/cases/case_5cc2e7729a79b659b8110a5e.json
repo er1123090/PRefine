@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_5cc2e7729a79b659b8110a5e",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.6433666525408626,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_85223d5a6ef359dbe514304b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "User wants restaurant options. No preferences given. We infer from history: user often wants restaurant in specific city, price range, etc. But no city specified. We can default? Maybe no slot. So call GetRestaurants with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615012,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-88099ddb8248f998",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 61,
+      "prompt_tokens": 9207,
+      "prompt_tokens_details": null,
+      "total_tokens": 9268
+    }
+  },
+  "request_sha256": "024c849b5029e3e6235da14a7bb0d3596357442492778944fb0ffb1b5426f151",
+  "source_example_id": "mix_dev_0213+durec_src_0518",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

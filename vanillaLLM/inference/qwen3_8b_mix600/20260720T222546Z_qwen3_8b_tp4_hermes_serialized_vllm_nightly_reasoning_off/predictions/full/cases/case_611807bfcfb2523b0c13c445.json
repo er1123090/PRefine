@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_611807bfcfb2523b0c13c445",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.1289956271648407,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "departure_date": "Early April",
+        "destination": "Barcelona"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_ff48543bdc24c77bdb118af0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"Barcelona\", \"departure_date\": \"Early April\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-abcc4e456bb6aef8",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587532,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b87b46efc240773e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 11290,
+      "prompt_tokens_details": null,
+      "total_tokens": 11319
+    }
+  },
+  "request_sha256": "3a746681c9efab692e0951f264ddb3bf91ca598ae30b068ec698d36c6e14f1a6",
+  "source_example_id": "mix_dev_0145+durec_src_0713+hb_0457",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

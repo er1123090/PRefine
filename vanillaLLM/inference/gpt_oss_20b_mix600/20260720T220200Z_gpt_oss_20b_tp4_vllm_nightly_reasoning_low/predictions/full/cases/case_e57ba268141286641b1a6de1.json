@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e57ba268141286641b1a6de1",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.191674379631877,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c29789b28f867141a794d6a2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", pickup_time=\"\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, pickup_time, shared_ride. From history: user often wants shared ride. In session1 they used shared ride. So assume shared_ride=True. Destination unspecified. Maybe default? We can leave empty? But need values. We can infer destination maybe from context? None. We can set destination empty string. number_of_seats maybe 1? But user wants ride. Could default 1. We'll output with empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615202,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-99d7dfc23909726f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 131,
+      "prompt_tokens": 9881,
+      "prompt_tokens_details": null,
+      "total_tokens": 10012
+    }
+  },
+  "request_sha256": "890ce9abe6947790be66b9032a585f3176275cf5c275c1d3813e80f1188a7616",
+  "source_example_id": "mix_dev_0045+durec_src_0431+hb_0103",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

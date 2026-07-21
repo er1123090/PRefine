@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_5f928d9b9f1bbcd5c013467c",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5097299730405211,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e2d173c468d9244fbf8429d1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User says \"I’m planning a trip and want to explore travel options.\" Likely GetTravel. Need slots: category, free_entry, good_for_kids, location, destination, departure_date. From history: user likes free entry? In session12 they asked free entry attractions. They didn't specify preference. Maybe they like free entry. Also good_for_kids? Not sure. They like events sports. But travel domain: maybe they want free entry and good for kids? Hard. Use defaults none. Provide empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615016,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a3b594b34f8df030",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 124,
+      "prompt_tokens": 10318,
+      "prompt_tokens_details": null,
+      "total_tokens": 10442
+    }
+  },
+  "request_sha256": "f4ec3883e7d31ce14e5a841b4d5c75a0be91e36159843a6081364a1eb53d234d",
+  "source_example_id": "mix_dev_0176+durec_src_0619+hb_0110",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

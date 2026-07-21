@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2c39e1212fd17b54b3fb51bb",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.8125954093411565,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_69777ce3c4f211ebc449c397",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Italian\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. Slots: category, city? user didn't specify city. We infer from past: user often uses Pinole, Oakland, etc. No city given. Maybe default? We can leave city empty. category Italian. price_range? not specified. number_of_seats? not. So output: GetRestaurants(category=\"Italian\", city=\"\", ...). But city empty not allowed? It's optional. So just category. Also alcohol preference: not serve alcohol. No slot for that. So output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614926,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-896f203195f59c9d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 118,
+      "prompt_tokens": 9546,
+      "prompt_tokens_details": null,
+      "total_tokens": 9664
+    }
+  },
+  "request_sha256": "aafbd40a7119c29c7503fd71694335b3bc850e6dceb4296a13a0e710475a8a7f",
+  "source_example_id": "mix_dev_0329+durec_src_0205",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

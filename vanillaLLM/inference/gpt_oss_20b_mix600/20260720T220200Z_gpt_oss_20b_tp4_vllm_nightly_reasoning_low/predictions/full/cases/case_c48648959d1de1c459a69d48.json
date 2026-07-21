@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c48648959d1de1c459a69d48",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9088445929810405,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b570cf491ee5369f94e03a70",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents()",
+          "function_call": null,
+          "reasoning": "Need GetEvents with city? \"nearby\" implies user's location? No location given. Past pattern: when user says \"look for events happening nearby\" likely city unspecified, maybe default to user's city? No city known. Could infer from previous sessions: user often in New York or Vancouver. But no context. We can leave city empty. Provide GetEvents with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615157,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-981b692d82b323d5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 89,
+      "prompt_tokens": 11583,
+      "prompt_tokens_details": null,
+      "total_tokens": 11672
+    }
+  },
+  "request_sha256": "3c885652ac022a721fc71e96d976d3873bc6503ced52341303aeef7ade170e40",
+  "source_example_id": "mix_dev_0320+durec_src_0220+hb_0168",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

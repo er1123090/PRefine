@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8d3299c1bbbe4eff53314734",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3857835326343775,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_5f07940aba022ac26ea107eb",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMedia(genre=\"Comedy\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants media title search. Likely GetMedia or GetMovies/GetMusic. Past preferences: user likes comedy movies, Jacky Cheung songs. They often request music. So slot: genre? They didn't specify. We infer preference: comedy for movies, Jacky Cheung for music. But need to output function call. Probably GetMedia with genre \"Comedy\". Output format: GetMedia(genre=\"Comedy\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615077,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8b685be6cdef8d9a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 107,
+      "prompt_tokens": 10482,
+      "prompt_tokens_details": null,
+      "total_tokens": 10589
+    }
+  },
+  "request_sha256": "47d6d1364a99460f6ee25bd036ecca91eb8ca4374659272e056b061143d793a3",
+  "source_example_id": "mix_dev_0068+durec_src_0583+hb_0099",
+  "status": "model_no_tool",
+  "target_domain": "GetMedia"
+}

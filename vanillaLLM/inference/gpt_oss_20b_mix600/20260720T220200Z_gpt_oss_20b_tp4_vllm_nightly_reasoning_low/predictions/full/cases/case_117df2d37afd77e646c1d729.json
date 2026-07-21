@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_117df2d37afd77e646c1d729",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.774932324886322,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_7a7c6fb3059f7ed6cb58895e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"2\", pickup_time=\"\", shared_ride=True)",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. From history, user used shared ride in session17: destination \"14583 Big Basin Way # 2A\", number_of_seats \"2\", shared_ride True. Likely preference: wants shared ride, 2 seats. Destination unspecified now. We infer they want ride to some place; but we can default? We need to output function call with inferred values. Use shared_ride=True, number_of_seats=\"2\". Destination unknown; maybe leave empty? But must provide slot? We can leave empty string. pickup_time maybe unspecified. We'll output minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614856,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ba7c0672528404dc",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 167,
+      "prompt_tokens": 11617,
+      "prompt_tokens_details": null,
+      "total_tokens": 11784
+    }
+  },
+  "request_sha256": "ffdfea81d9e38bd349297691c5e1d5c9745b6b8a279cd5491ab5017819f32547",
+  "source_example_id": "mix_dev_0128+durec_src_0838+hb_0376",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

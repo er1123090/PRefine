@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_91800f7ba142a8bb75874372",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.30623294506222,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a549911349d58510c20c1a8e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history, user hasn't specified airline, class, passengers, return. We infer preferences: In past, user booked 4 tickets for event, but flights? No. Maybe default: economy. Passengers default 1. No return. So output: GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\") but date format? In history they used \"2019-03-07\". So use that. Provide others empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615083,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-840ddcfdcafaea8c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 152,
+      "prompt_tokens": 7865,
+      "prompt_tokens_details": null,
+      "total_tokens": 8017
+    }
+  },
+  "request_sha256": "dd48dc0026a87716efd91511b9dcd7760f4777a194b74f9c0a5ea82b90bd3f07",
+  "source_example_id": "mix_dev_0164+hb_0217",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

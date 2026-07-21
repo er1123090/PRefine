@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c6f043fb8a6bbab53674df87",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.6242133686318994,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1d0937a1b954e47ff206885c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"Toronto\", category=\"Sports\")",
+          "function_call": null,
+          "reasoning": "Need GetEvents. No city given, so infer preference: user often asks Toronto events. So city=Toronto. Category? user says events nearby, maybe sports? Past: football. Use category Sports. Return.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615161,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ac902285d53c5c41",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 63,
+      "prompt_tokens": 11382,
+      "prompt_tokens_details": null,
+      "total_tokens": 11445
+    }
+  },
+  "request_sha256": "dfccf392735d9b06667862e51ba0022dc057e4d7550aa169fda621230a2d3ae5",
+  "source_example_id": "mix_dev_0103+durec_src_0806+hb_0319",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

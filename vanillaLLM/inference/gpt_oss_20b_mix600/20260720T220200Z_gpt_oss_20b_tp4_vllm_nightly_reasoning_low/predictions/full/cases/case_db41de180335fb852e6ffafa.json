@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_db41de180335fb852e6ffafa",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8016974655911326,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f9abc7ae8a87188e6b1639bc",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Barcelona\", departure_date=\"Early April\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: category, free_entry, good_for_kids, location, destination, departure_date. User says visiting Barcelona early April. No other preferences. No category. We can leave empty. Provide location=\"Barcelona\", departure_date=\"Early April\". Probably no other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615190,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-84e2d896c7861d33",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 81,
+      "prompt_tokens": 9226,
+      "prompt_tokens_details": null,
+      "total_tokens": 9307
+    }
+  },
+  "request_sha256": "3a2b26f9308a205c4b1f4db4ba9255e3d4268a22a693dc184ba8c786ed91c7dc",
+  "source_example_id": "mix_dev_0082+hb_0302",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

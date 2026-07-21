@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_31acb406215fe5b51c9ec55a",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5955393556505442,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_753f6115b7705a694de5bab8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need GetFlights. No preferences given. From history, user often chooses American Airlines? In session3, they looked for flights and got American Airlines. Also they didn't specify airline. We can leave airline unspecified. Provide departure_date? Not given. We can leave empty. So output: GetFlights() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614939,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b113bb75cf34534a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 78,
+      "prompt_tokens": 8944,
+      "prompt_tokens_details": null,
+      "total_tokens": 9022
+    }
+  },
+  "request_sha256": "9376d1e22b5099668a6331864c577b59c25825eb3c144e077a248ffd7c5e73e5",
+  "source_example_id": "mix_dev_0247+hb_0320",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

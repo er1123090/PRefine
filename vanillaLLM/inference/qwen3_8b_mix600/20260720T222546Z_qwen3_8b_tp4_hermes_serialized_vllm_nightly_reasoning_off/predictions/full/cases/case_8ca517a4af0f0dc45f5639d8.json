@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_8ca517a4af0f0dc45f5639d8",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.544648648239672,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Art Exhibition",
+        "location": "San Francisco"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_c5455fe5ffe8d5cea4757a31",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Art Exhibition\", \"location\": \"San Francisco\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-90b4679761bc8727",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587774,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a6fdcec6618a3082",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 28,
+      "prompt_tokens": 12434,
+      "prompt_tokens_details": null,
+      "total_tokens": 12462
+    }
+  },
+  "request_sha256": "2f64f741a7e505c86d09a0b9343a8a342033d377d8ed9db1f9dde11c21baa539",
+  "source_example_id": "mix_dev_0021+durec_src_0825+hb_0405",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

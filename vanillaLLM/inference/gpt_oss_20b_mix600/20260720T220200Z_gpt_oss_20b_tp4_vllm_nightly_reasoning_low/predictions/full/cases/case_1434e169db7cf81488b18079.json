@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_1434e169db7cf81488b18079",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.3280483232811093,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_35cac5a10ecdc58230cb28b3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"San Francisco\", pickup_date=\"2024-07-25\", pickup_time=\"12:00\", dropoff_date=\"2024-07-30\", car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No preferences given. From history, user often prefers Standard car. Also pickup city unspecified. We can default? We need slots: pickup_city, pickup_date, pickup_time, dropoff_date, car_type. We can infer from past: user often picks 12:00. We'll output minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614868,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a3a455397987d39a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 120,
+      "prompt_tokens": 10493,
+      "prompt_tokens_details": null,
+      "total_tokens": 10613
+    }
+  },
+  "request_sha256": "5769f4eb271ded2df60f2017e49c901f3b78c1e1dc86fbb96a152981eb893b02",
+  "source_example_id": "mix_dev_0058+durec_src_0989+hb_0228",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

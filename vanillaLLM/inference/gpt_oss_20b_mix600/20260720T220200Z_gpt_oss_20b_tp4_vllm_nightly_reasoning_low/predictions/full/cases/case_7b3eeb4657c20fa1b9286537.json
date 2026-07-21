@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_7b3eeb4657c20fa1b9286537",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.3811267158016562,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_ae083cea8f64d1b5729949f8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", shared_ride=\"false\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. No info given. Use patterns: previous ride sharing used destination \"401 Alberto Way #1\", seats 1, shared true. Likely default 1 seat, shared true? But user wants check options, maybe no shared. We can set shared_ride=false? But pattern: user asked \"I need a ride and want to check available ride-sharing options.\" Probably want options, so shared_ride=false? We'll set shared_ride=false, number_of_seats=\"1\", destination unspecified? maybe ask? But we must output. Use empty? We can leave empty? But schema requires string. We can set destination=\"\"? Probably set destination=\"\". Let's output with defaults: destination=\"\", number_of_seats=\"1\", shared_ride=\"false\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615054,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9f5b7b2fb8c8d0a8",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 202,
+      "prompt_tokens": 8539,
+      "prompt_tokens_details": null,
+      "total_tokens": 8741
+    }
+  },
+  "request_sha256": "ea71b82e59d65bb83a756cce38b4444efdaf03d5e10a50b4d1893e0bb3751803",
+  "source_example_id": "mix_dev_0113+hb_0265",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_01b74fe3fbaeac8432b79a27",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 22.56897566933185,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Tourist Attraction",
+        "location": "San Francisco"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_1c316ac7cd11024673b0205e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Tourist Attraction\", \"location\": \"San Francisco\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-a2fb01c89f86f956",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784568691,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ad7d7e19679fe2c5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 22,
+      "prompt_tokens": 12631,
+      "prompt_tokens_details": null,
+      "total_tokens": 12653
+    }
+  },
+  "request_sha256": "6148e48e73ad16ac7ff6fd72863d22d1e24b3174b3cc1de4e3f6bab002f032ee",
+  "source_example_id": "mix_dev_0258+durec_src_0028+hb_0423",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

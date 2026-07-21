@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_b34dcaf0bfd4a122a5085a73",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.352520586922765,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "location": "Novato"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_da845de0298e2d34c6b6d6e0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"Novato\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-804fefde5170a7e4",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784571182,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ae44c5b65ab31121",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 9746,
+      "prompt_tokens_details": null,
+      "total_tokens": 9761
+    }
+  },
+  "request_sha256": "edb95c899100adfeab4672a9f331857f7a36ab1c392a26ab73dc57e276698bbe",
+  "source_example_id": "dev_0083",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

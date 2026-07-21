@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0e2915e5543ef09b702dd4ff",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.4847297463566065,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6f4d75c2b97d69c510423751",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(average_star=\"3\", has_wifi=true, number_of_rooms=\"1\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants hotels. We need to output GetHotels with inferred slots. From history, user often wants 3-star or 4-star, wifi, number of rooms, location. In session 22, user wanted 2-star with wifi. In session 24, 4-star. In session 26, 3-star. No explicit preference now. But pattern: user often wants 3-star or 4-star. Also wants wifi? In session 26, wifi True. In session 22, wifi not mentioned. Let's choose average_star=\"3\" and has_wifi=True. Also location unspecified; maybe default to user's location? Not known. We can leave location empty. Also number_of_rooms maybe 1. So output: GetHotels(average_star=\"3\", has_wifi=\"True\", number_of_rooms=\"1\") but has_wifi expects boolean. So has_wifi=true. Output format: GetHotels(average_star=\"3\", has_wifi=true, number_of_rooms=\"1\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614842,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9c992a4cad66e067",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 234,
+      "prompt_tokens": 12077,
+      "prompt_tokens_details": null,
+      "total_tokens": 12311
+    }
+  },
+  "request_sha256": "6b7633d4e665b31abbb82e6595eef2855e4b7f104561147f2b1b45c228f4cbae",
+  "source_example_id": "mix_dev_0241+durec_src_0046+hb_0058",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

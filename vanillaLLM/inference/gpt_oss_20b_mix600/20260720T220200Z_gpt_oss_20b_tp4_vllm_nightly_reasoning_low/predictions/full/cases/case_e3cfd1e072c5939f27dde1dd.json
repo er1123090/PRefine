@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e3cfd1e072c5939f27dde1dd",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6351563036441803,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_18813768473063fc5ca3acd1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"San Diego\", destination=\"Anaheim\", group_size=\"4\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. Need slots: origin, destination, departure_date, departure_time, group_size. User says \"I want to check bus options for my trip.\" No details. Use past patterns: likely default? We infer from history: user often asks bus with origin and destination. No info, maybe use most frequent: origin San Diego, destination Anaheim? But uncertain. Maybe use default none. Provide empty? But need values. We can infer from past: session21 origin San Diego to Anaheim. So use that. No date/time/group. Use most common: group_size 4? In session21 4. So output: GetBuses(origin=\"San Diego\", destination=\"Anaheim\", group_size=\"4\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615199,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b63c4935340935a9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 176,
+      "prompt_tokens": 11460,
+      "prompt_tokens_details": null,
+      "total_tokens": 11636
+    }
+  },
+  "request_sha256": "eece516216e543fe52472edb486def772d858edd7acbebab6b96b262e5351f55",
+  "source_example_id": "mix_dev_0162+durec_src_0038+hb_0386",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

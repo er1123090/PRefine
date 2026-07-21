@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2cb767a3f8acee9c7556abce",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.5705403704196215,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_43f427fb256bc7dc780f258d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"checking\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks. Need recipient_account_type. From history, transfers: from savings to checking, from checking to Diego. Likely checking. So output GetBanks(recipient_account_type=\"checking\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614928,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9a8be50ebad1af61",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 59,
+      "prompt_tokens": 10510,
+      "prompt_tokens_details": null,
+      "total_tokens": 10569
+    }
+  },
+  "request_sha256": "fe6d03001cfe901948125c9551f60ab4ec7c201bdf5344351e7682cfa4729497",
+  "source_example_id": "mix_dev_0286+durec_src_0723+hb_0283",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

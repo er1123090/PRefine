@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_cf13a99625cb1dd92fb20555",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8105641705915332,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d173a47de4667e883c3cea1e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"Long Beach\", departure_date=\"2024-07-25\", departure_time=\"10:30\", destination=\"San Diego\", group_size=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. No slots given. Use past preferences: user often uses Long Beach origin, San Diego destination, 10:30, 1 ticket. So fill those.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615174,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8d0a5f8c728a355f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 83,
+      "prompt_tokens": 10690,
+      "prompt_tokens_details": null,
+      "total_tokens": 10773
+    }
+  },
+  "request_sha256": "14f56bd7f5b8dcb8c2bfb872f7049702e285fc0acba4126017b77d148f3bcba3",
+  "source_example_id": "mix_dev_0258+durec_src_0028+hb_0423",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

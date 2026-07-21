@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8c14d72dbde0c82c2f97900c",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.1263033002614975,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_0bcba9505a68ad651bb64e25",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Asian\", city=\"Dublin\", number_of_seats=\"3\", price_range=\"moderate\", time=\"12:00\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. Need slots: category, city, date, number_of_seats, price_range, restaurant_name, time. From history, user often asks for restaurant in Dublin Cantonese. But current request generic. We infer preferences: earlier they chose Cantonese in Dublin. So likely category \"Asian\" or \"Chinese\". City: Dublin. Number_of_seats: 3. Price_range: moderate? earlier used moderate? They didn't specify. We'll pick \"moderate\". time: 12:00. So output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615076,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b6b3d9ed5468dc44",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 148,
+      "prompt_tokens": 8988,
+      "prompt_tokens_details": null,
+      "total_tokens": 9136
+    }
+  },
+  "request_sha256": "51ee2eac4c5981e3cea711d566ef971964dadfcdf888257c40d057c4d3d3d7ed",
+  "source_example_id": "mix_dev_0199+hb_0020",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

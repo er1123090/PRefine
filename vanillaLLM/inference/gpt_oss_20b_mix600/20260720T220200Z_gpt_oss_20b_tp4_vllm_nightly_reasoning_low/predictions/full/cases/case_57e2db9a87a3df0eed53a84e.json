@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_57e2db9a87a3df0eed53a84e",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4395189601927996,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_cba652d8ae8329bef7eb8be6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(category=\"Museum\", free_entry=\"True\", good_for_kids=\"True\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User says \"I’m planning a trip and want to explore travel options.\" Likely GetTravel. Need slots: category, departure_date, destination, free_entry, good_for_kids, location. From history: user likes museums, child-friendly, free entry? In session5: asked for child-friendly museum. So preference: category=\"Museum\", free_entry=\"True\", good_for_kids=\"True\". Destination? Not specified. Maybe default? We can leave empty. Provide domain GetTravel with those slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615003,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8936ded495e33eca",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 137,
+      "prompt_tokens": 11183,
+      "prompt_tokens_details": null,
+      "total_tokens": 11320
+    }
+  },
+  "request_sha256": "31d9a77ebc69f3c8fd2b1cac091d6ec8f6a1329dec77e2c9dcc5c82cd585e0c6",
+  "source_example_id": "mix_dev_0267+durec_src_1286+hb_0208",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_262a2e0f5b8393b450df0f7e",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6154525745660067,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_cbcac71c10c9e9557b1b0523",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need restaurant preferences. From history, user likes Cecilia Cheung, but restaurant preferences? In session4, user reserved Xu's Hunan Cuisine, rating 3.9, price 40 yuan. Also earlier no preference. So likely wants restaurant, maybe Chinese? But no explicit. We can default no slots. So call GetRestaurants with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614912,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ab9baa7f87daec53",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 85,
+      "prompt_tokens": 10073,
+      "prompt_tokens_details": null,
+      "total_tokens": 10158
+    }
+  },
+  "request_sha256": "c9ada8955ef09319e533da0992d25b328aa5aa7f4553eebc7b854ef32ca98cc4",
+  "source_example_id": "mix_dev_0008+durec_src_0294+hb_0140",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

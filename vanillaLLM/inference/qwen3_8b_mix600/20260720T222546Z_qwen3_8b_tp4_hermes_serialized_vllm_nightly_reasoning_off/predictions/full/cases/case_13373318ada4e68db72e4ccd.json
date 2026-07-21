@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_13373318ada4e68db72e4ccd",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 11.1496038204059,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Greek",
+        "city": "Los Gatos"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_3f92ac489ce580c638467b03",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Greek\", \"city\": \"Los Gatos\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-9d04e049492f163f",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784586964,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a873b0addaa585c2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 11113,
+      "prompt_tokens_details": null,
+      "total_tokens": 11142
+    }
+  },
+  "request_sha256": "0d33743466b6d3b2c116087cf0d9614dac9c50585cd50886e819482dfefd15e0",
+  "source_example_id": "mix_dev_0279+durec_src_0522+hb_0243",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

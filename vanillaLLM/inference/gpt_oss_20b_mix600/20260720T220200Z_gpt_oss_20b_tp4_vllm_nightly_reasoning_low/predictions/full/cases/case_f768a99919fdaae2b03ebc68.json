@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f768a99919fdaae2b03ebc68",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0609379606321454,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e571a8318261cf27ce7a1b81",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User says planning a trip and want to explore travel options. Likely GetTravel. Need slots: category, departure_date, destination, free_entry, good_for_kids, location. From history: user often wants flights, hotels, attractions. Preferences: likes free entry? Not seen. Good for kids? Not. Category? Not. Maybe default none. We can leave empty. Provide function call with no slots? But need at least domain. Provide empty object.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615224,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a726be8314f1348f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 113,
+      "prompt_tokens": 10406,
+      "prompt_tokens_details": null,
+      "total_tokens": 10519
+    }
+  },
+  "request_sha256": "d71d22e18161cc76a2fbdb74e7b986d5163eda880ced21e514c3aa4547d0adc8",
+  "source_example_id": "mix_dev_0097+durec_src_0250+hb_0271",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

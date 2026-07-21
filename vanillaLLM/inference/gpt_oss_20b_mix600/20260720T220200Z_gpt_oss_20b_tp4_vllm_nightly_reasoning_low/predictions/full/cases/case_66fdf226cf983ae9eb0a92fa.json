@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_66fdf226cf983ae9eb0a92fa",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9816677458584309,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_fdb83e4a896902ff4406a442",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Standard\", pickup_city=\"Concord\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No slots given. We infer preferences: earlier user used Standard car, pickup in Concord/Clayton Valley, dates March 9-13. Likely wants similar. So set pickup_city=\"Concord\" or \"Clayton Valley\". Use car_type=\"Standard\". Provide pickup_date and dropoff_date? Not specified. We'll just provide car_type and pickup_city.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615028,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9474e83e784e5b62",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 104,
+      "prompt_tokens": 10207,
+      "prompt_tokens_details": null,
+      "total_tokens": 10311
+    }
+  },
+  "request_sha256": "75e383d904412815a10a1bbe639a73f905375b034557c07134b92363f7409332",
+  "source_example_id": "mix_dev_0279+durec_src_0522+hb_0243",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

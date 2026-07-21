@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_149cbc74b6346f2daed134c1",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.0041650384664536,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_802c336814f27475891770a8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(average_star=\"4\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants hotels. Past preferences: 4-star in Philly, 4-star in Nairobi, 4-star in Vancouver, 4-star in New York, 5-star in Philadelphia, 5-star in Toronto. So likely wants 4-star or 5-star? They didn't specify. Maybe default 4-star? But pattern: when asked for hotels, they often choose 4-star unless specified 5-star. So choose average_star=\"4\". Also location? They didn't specify city. Maybe default to current city? Not known. We can leave location unspecified? But function requires location optional. We can set average_star=\"4\". No other slots. So call GetHotels(average_star=\"4\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614868,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-87b0a8351e186e8c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 167,
+      "prompt_tokens": 8324,
+      "prompt_tokens_details": null,
+      "total_tokens": 8491
+    }
+  },
+  "request_sha256": "a068f8ec4516c5b97902c2fdbd20ef535d5821b2838a1d909f11e8c5aa0a69c2",
+  "source_example_id": "dev_0009",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

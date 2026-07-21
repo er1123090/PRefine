@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_91800f7ba142a8bb75874372",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 9.377397175878286,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "departure_date": "2019-03-09",
+        "destination": "Seattle",
+        "origin": "San Francisco"
+      },
+      "name": "GetFlights"
+    }
+  ],
+  "pair_id": "pair_a549911349d58510c20c1a8e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"departure_date\": \"2019-03-09\", \"destination\": \"Seattle\", \"origin\": \"San Francisco\"}",
+                "name": "GetFlights"
+              },
+              "id": "chatcmpl-tool-baac0a3f56f974e5",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784570671,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bd61c1017e3498c9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 38,
+      "prompt_tokens": 9357,
+      "prompt_tokens_details": null,
+      "total_tokens": 9395
+    }
+  },
+  "request_sha256": "c466f1a6a431b4db426f863a76de38015e008cadc797cedf6e14ce6ed8d3b970",
+  "source_example_id": "mix_dev_0164+hb_0217",
+  "status": "success",
+  "target_domain": "GetFlights"
+}

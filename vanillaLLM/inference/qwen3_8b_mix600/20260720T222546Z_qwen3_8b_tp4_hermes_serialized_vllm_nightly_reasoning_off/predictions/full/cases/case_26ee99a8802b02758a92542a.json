@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_26ee99a8802b02758a92542a",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 8.627959505654871,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Persian",
+        "city": "Morgan Hill"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_24b079c244311b50505ab978",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Persian\", \"city\": \"Morgan Hill\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-9c13556aac783a7c",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587152,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b50ac44cd5b2d84d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 30,
+      "prompt_tokens": 11720,
+      "prompt_tokens_details": null,
+      "total_tokens": 11750
+    }
+  },
+  "request_sha256": "dc9638191842ff12305c57979a571cb5b36554bbbed5ceeccbc884df26cdc06c",
+  "source_example_id": "mix_dev_0163+durec_src_0721+hb_0105",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

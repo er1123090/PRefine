@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_dab2e00eac6245080332e37d",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.288586491718888,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Tourist Attraction",
+        "location": "Paris"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_3e5d35ad9014f37d46d934d4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Tourist Attraction\", \"location\": \"Paris\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-ae8fada911d3bfda",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588278,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ae8f4358fa3290f9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 10602,
+      "prompt_tokens_details": null,
+      "total_tokens": 10631
+    }
+  },
+  "request_sha256": "52a71141b6cdefab1c5c1df7346c7702fa478ff5d609c612f66b8b180b1b115b",
+  "source_example_id": "mix_dev_0180+durec_src_1013+hb_0197",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3d1fef3aacb5c7fe90f5ce28",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.531838488765061,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_23205b113de703512790d9c6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMovies(genre=\"Drama\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetMovies? The user wants movies playing and tickets. Likely GetMovies with genre? Past preferences: drama. Also maybe location? No. So call GetMovies(genre=\"Drama\")? Also maybe GetEvents? But movies. So output: GetMovies(genre=\"Drama\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614959,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9b7a1b835bd17f67",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 80,
+      "prompt_tokens": 8770,
+      "prompt_tokens_details": null,
+      "total_tokens": 8850
+    }
+  },
+  "request_sha256": "dd506abf55953c05121bfef38550624c77876b20b8a0794abc48af2deb90dfdf",
+  "source_example_id": "mix_dev_0096+durec_src_0242",
+  "status": "model_no_tool",
+  "target_domain": "GetMovies"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_bb0a8b33fddd38cf6ec70326",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0663819024339318,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_34ced872e05a6cb582ea6d2c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants hotels. No city specified. Past preferences: user booked hotels in Anaheim, London, Phoenix. No consistent city. Maybe default to user's location? No. We can infer preference for 3-star? In Phoenix they wanted 3-star. In Anaheim they didn't specify star. In London they booked 5-star. So no pattern. Maybe default to \"any\". We can leave slots empty. So call GetHotels with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615146,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b35a730e4b0281cc",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 108,
+      "prompt_tokens": 10505,
+      "prompt_tokens_details": null,
+      "total_tokens": 10613
+    }
+  },
+  "request_sha256": "7d38328ae693d2d8c895257e3847c45ffa43c795bcdf462d5752bff1c4b9c45c",
+  "source_example_id": "mix_dev_0122+durec_src_0570+hb_0471",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

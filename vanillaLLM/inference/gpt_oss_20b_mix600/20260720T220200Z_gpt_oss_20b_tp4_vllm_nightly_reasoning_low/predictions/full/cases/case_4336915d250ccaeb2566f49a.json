@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4336915d250ccaeb2566f49a",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.8308989070355892,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d1181e57d727cfc45d0173a2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetFlights. From history: user often wants Economy class, one-way, from Washington to SF, from LA to Portland. Also in session22 wants 2 Economy tickets from NY to Nairobi. So preference: flight_class=\"Economy\", passengers maybe \"1\" default. Also maybe origin unspecified. We'll output GetFlights with flight_class=\"Economy\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614968,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-973eff4126ffaa18",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 100,
+      "prompt_tokens": 10815,
+      "prompt_tokens_details": null,
+      "total_tokens": 10915
+    }
+  },
+  "request_sha256": "f897f209d7705b145d6999d2571ef7752692d06500afd679e462735025e4d3ab",
+  "source_example_id": "mix_dev_0108+durec_src_1278+hb_0340",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

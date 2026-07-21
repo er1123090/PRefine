@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b75fd4b65530c5c6d3db9af0",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.2345208544284105,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_8ff4e5c829d852f539865ef0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jacky Cheung\", playback_device=\"TV\", song_name=\"Can't Fight The Feeling\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants to listen to some music. We need to output a function call. Which domain? GetMusic. Need slot artist or playback_device or song_name. From history, user likes Jacky Cheung songs. Also prefers pop? They listened to pop. So likely artist=\"Jacky Cheung\". playback_device maybe TV? In previous, they played on TV. So choose playback_device=\"TV\". song_name maybe unspecified. We can leave empty? But need value. Maybe \"Can't Fight The Feeling\" or \"The Story of Us\"? They liked pop. Let's pick \"The Story of Us\" by Taylor Swift? But user wants music, not specific. We can set artist=\"Jacky Cheung\". playback_device=\"TV\". song_name=\"\"? But schema requires string. We can set song_name=\"\". But better to set a known song: \"Can't Fight The Feeling\". So output: GetMusic(artist=\"Jacky Cheung\", playback_device=\"TV\", song_name=\"Can't Fight The Feeling\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615141,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a15742620e1de6ef",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 243,
+      "prompt_tokens": 10809,
+      "prompt_tokens_details": null,
+      "total_tokens": 11052
+    }
+  },
+  "request_sha256": "78bfec11f716ca9c527dffb57db34429c61b117cd0dbeb2c3ed68974848cba0d",
+  "source_example_id": "mix_dev_0108+durec_src_1278+hb_0340",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_1bd8f58d88c8413c92c58b28",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.1127234268933535,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e977e075d42d3e5c7a989784",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants hotels. No location given. Past preferences: user booked hotels in Paris, NYC, Seattle. No consistent location. Maybe default to user's location? No. We can infer they like 1-star? In session15 they wanted 1-star. But not always. We need to output function call GetHotels with inferred slots. We can guess location maybe \"New York\" as recent. But no. We can leave slots empty. But need to output something. Probably choose location \"New York\" and check_in_date maybe none. We'll output GetHotels() with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614887,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8a0ca97cf1b4265d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 136,
+      "prompt_tokens": 12580,
+      "prompt_tokens_details": null,
+      "total_tokens": 12716
+    }
+  },
+  "request_sha256": "647ac356fd9f8a57ad56919f72c097bad8553e7f54ff333593ea16f3395ecf00",
+  "source_example_id": "mix_dev_0099+durec_src_0572+hb_0102",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

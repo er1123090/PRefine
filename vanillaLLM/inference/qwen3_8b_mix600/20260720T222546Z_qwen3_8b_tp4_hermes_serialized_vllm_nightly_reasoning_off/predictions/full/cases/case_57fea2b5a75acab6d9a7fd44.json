@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_57fea2b5a75acab6d9a7fd44",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.986063641496003,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Tourist Attraction",
+        "destination": "Bloedel Conservatory",
+        "free_entry": false,
+        "good_for_kids": true,
+        "location": "Vancouver"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_fca57538031487462add4771",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Tourist Attraction\", \"location\": \"Vancouver\", \"destination\": \"Bloedel Conservatory\", \"free_entry\": false, \"good_for_kids\": true}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-95081590bef06509",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587470,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bebd36886f17c8c6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 54,
+      "prompt_tokens": 12145,
+      "prompt_tokens_details": null,
+      "total_tokens": 12199
+    }
+  },
+  "request_sha256": "be4fe1dfe3ffa459296441fd7567682f2cbdc216f88717cf653986a48da931bf",
+  "source_example_id": "mix_dev_0179+durec_src_0767+hb_0321",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

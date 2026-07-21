@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_53a475790b53cc7bcf02952b",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8145397556945682,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b140fba4932224d656dcf118",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(category=\"Music\", city=\"Philadelphia\")",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need city? \"nearby\" likely user's location? No context. Maybe default city from history: Philadelphia used. But \"nearby\" ambiguous. Could infer preference: user likes Music events. So category Music. City maybe Philadelphia. So call GetEvents(category=\"Music\", city=\"Philadelphia\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614995,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a3e396dfae217e41",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 84,
+      "prompt_tokens": 10594,
+      "prompt_tokens_details": null,
+      "total_tokens": 10678
+    }
+  },
+  "request_sha256": "ab3e50467e24992d1049e7f0aa47154ae661cf1c0f3c90e511bd6da5a237ea12",
+  "source_example_id": "mix_dev_0107+durec_src_0236+hb_0188",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8dd0af34e0193893047b8d1f",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.81020437926054,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6b2bd4ec5dd4b62cafcb72a3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"Oakland\")",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need city? user says nearby. No city given. We infer from past: user often in Philadelphia, Phoenix, etc. But no pattern. Maybe default to city from last known? Last session 19 had Oakland. But events nearby likely same city. Use city=\"Oakland\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615079,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a446a24a8a70eaaa",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 83,
+      "prompt_tokens": 9310,
+      "prompt_tokens_details": null,
+      "total_tokens": 9393
+    }
+  },
+  "request_sha256": "812953c29afd87160990fbe566393d8074d0841e850b50dcf8a55a880923a049",
+  "source_example_id": "mix_dev_0025+durec_src_1190+hb_0163",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

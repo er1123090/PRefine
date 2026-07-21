@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d67e7c702d41067a764c3626",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2783457599580288,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_72ba0dcefa0d2e03877768e1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"Southwest Airlines\", flight_class=\"Economy\", origin=\"Phoenix\", destination=\"New York\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants flights. We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history, user often chooses Southwest Airlines, economy, from Phoenix to New York, round trip. Also earlier: from Atlanta to Washington. But current likely similar. We infer preferences: airlines: Southwest Airlines, flight_class: Economy, origin: Phoenix, destination: New York, passengers: 1? Not specified. We'll output with those.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615182,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b1efa5834f7b2c59",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 139,
+      "prompt_tokens": 10500,
+      "prompt_tokens_details": null,
+      "total_tokens": 10639
+    }
+  },
+  "request_sha256": "096c0203ef1abddc2348fa9a7358dbd96e990b9383a1735f55ee7a6b950bf8d4",
+  "source_example_id": "mix_dev_0065+durec_src_0412+hb_0408",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

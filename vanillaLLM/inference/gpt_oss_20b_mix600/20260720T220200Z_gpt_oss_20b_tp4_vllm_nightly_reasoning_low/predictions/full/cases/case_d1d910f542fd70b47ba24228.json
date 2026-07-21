@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d1d910f542fd70b47ba24228",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.5414510602131486,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_2d2e814802d041b77f2199f7",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"Palo Alto\", category=\"",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetRestaurants. Past preferences: user often wants economical price? In session4: \"search for something like Asian Fusion\" and \"economical price\". In session5: \"economical restaurant\" but moderate. In session6: no price. In session7: no price. So maybe default price_range \"moderate\" or \"cheap\"? But we need to infer from history: user asked for economical price in session4. So preference price_range=\"cheap\" or \"moderate\"? He said \"economical\" and later \"moderate\" was not economical. So maybe user wants cheap. Also city: often Vacaville, Napa, Palo Alto. So default city maybe Vacaville? But we can infer from most recent: session6 was Palo Alto. So maybe default city \"Palo Alto\". Also category: user asked for \"Take-out\" in session6. So maybe category \"Take-out\". But we need to output function call with slots we can infer. We can include city=\"Palo Alto\", category=\"Take-out\", price_range=\"cheap\". Also number_of_seats maybe 2? Not sure. We'll output minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615177,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aa0175f76bc44d8d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 256,
+      "prompt_tokens": 8803,
+      "prompt_tokens_details": null,
+      "total_tokens": 9059
+    }
+  },
+  "request_sha256": "d3ae8208cf10cc9e93527590b89d7249bc4b5cf8c2e2b61048be3c495aa9c1b2",
+  "source_example_id": "dev_0195",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

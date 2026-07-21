@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_709821ef8431f435e36540d2",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.6160094076767564,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_01325968115ed7be6958b0c3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(destination=\"Berkeley\", departure_date=\"2023-03-11\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel? They want trip to Berkeley. Domain likely GetTravel. Slots: destination, departure_date, maybe location? They didn't specify category. Use destination=\"Berkeley\"? Not in enum. But location enum includes many cities but not Berkeley. Maybe use GetTravel with location? But Berkeley not in list. Could use GetTravel with destination? Destination string. So call GetTravel(destination=\"Berkeley\", departure_date=\"2023-03-11\", number_of_days=\"1\")? number_of_days not in schema. Only category, free_entry, good_for_kids, location, destination, departure_date. So include destination and departure_date. Output format: GetTravel(destination=\"Berkeley\", departure_date=\"2023-03-11\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615038,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a3afc1ebcd9a310e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 179,
+      "prompt_tokens": 11102,
+      "prompt_tokens_details": null,
+      "total_tokens": 11281
+    }
+  },
+  "request_sha256": "eda83310ecd8143d1e08facd982a480125801666032f6a9f3340790578416d3d",
+  "source_example_id": "mix_dev_0032+durec_src_0562+hb_0178",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

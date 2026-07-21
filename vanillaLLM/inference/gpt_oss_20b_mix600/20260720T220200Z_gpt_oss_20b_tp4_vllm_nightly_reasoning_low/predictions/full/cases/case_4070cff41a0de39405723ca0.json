@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4070cff41a0de39405723ca0",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1433133212849498,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4267f51c124d6459e88b5659",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"Chicago\")",
+          "function_call": null,
+          "reasoning": "User wants events nearby. Need GetEvents. No city specified. Use user's location? Past: user used Chicago, Washington D.C., New York. No pattern. Maybe default to user's last known location? No. Could infer from previous sessions: user often in Chicago, Washington D.C., New York. Maybe choose Chicago? But better to ask? But must output. Use city \"Chicago\" as common. No category. So output GetEvents(city=\"Chicago\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614965,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b34a1f847eec3443",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 109,
+      "prompt_tokens": 10068,
+      "prompt_tokens_details": null,
+      "total_tokens": 10177
+    }
+  },
+  "request_sha256": "4b5e4c5dee2725ae1a6f4576f13d159ef3eb37884a1192c12caaef2832087984",
+  "source_example_id": "mix_dev_0008+durec_src_0294+hb_0140",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_206dc84f581814bbed803eeb",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.409674177877605,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6f3568eadb3e42a5769bb6df",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"Vallejo\", check_in_date=\"2023-03-05\", number_of_days=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. Slots: location=Vallejo, check_in_date=2023-03-05? date format? previous used \"2019-03-05\". So \"2023-03-05\". number_of_days=\"1\". Probably number_of_rooms default? not needed. Output format: GetHotels(location=\"Vallejo\", check_in_date=\"2023-03-05\", number_of_days=\"1\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614899,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8ba00c6ae5f79fa8",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 124,
+      "prompt_tokens": 10557,
+      "prompt_tokens_details": null,
+      "total_tokens": 10681
+    }
+  },
+  "request_sha256": "9648caacd3c6c4b04e75730cb597a925ca116e0fe5e181e32d678054ff8ce42a",
+  "source_example_id": "mix_dev_0065+durec_src_0412+hb_0408",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

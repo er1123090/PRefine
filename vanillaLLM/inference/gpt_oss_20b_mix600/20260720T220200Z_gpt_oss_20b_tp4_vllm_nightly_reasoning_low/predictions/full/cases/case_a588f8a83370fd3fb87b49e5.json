@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a588f8a83370fd3fb87b49e5",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.8782255034893751,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_ea5252cc4928ca7b21dd2bec",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(departure_date=\"\", departure_time=\"\", destination=\"\", group_size=\"3\", origin=\"\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants bus options. We need GetBuses. Need slots: departure_date, departure_time, destination, group_size, origin. From history, user often wants 3 people? In session 21, 3 people. In session 15, 4. No explicit. We can default group_size maybe 1? But pattern: often 3. Let's choose group_size=\"3\". Destination unknown. We can leave empty? But need values. We can infer from past: user often wants to go to Seattle or San Francisco. But no context. Maybe default to \"San Francisco\". Let's pick origin \"Anaheim\" as common. departure_date maybe \"2023-07-25\"? Not known. We can leave empty? But function requires object. We can provide empty strings. Let's output with empty values.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615113,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-985f270cfff42fc4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 203,
+      "prompt_tokens": 10845,
+      "prompt_tokens_details": null,
+      "total_tokens": 11048
+    }
+  },
+  "request_sha256": "1a73df70c8c8015132195f9a2146a0124698147c58cda29c16a5b0ae8c6f141f",
+  "source_example_id": "mix_dev_0285+durec_src_0965+hb_0174",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_3846ba612d3a5a471c8e68d9",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 20.473423892632127,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "departure_date": "2019-03-09",
+        "destination": "Seattle",
+        "flight_class": "Economy",
+        "origin": "San Francisco",
+        "passengers": "1"
+      },
+      "name": "GetFlights"
+    }
+  ],
+  "pair_id": "pair_0f627bd3aaddcfdecb60c265",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"departure_date\": \"2019-03-09\", \"destination\": \"Seattle\", \"flight_class\": \"Economy\", \"origin\": \"San Francisco\", \"passengers\": \"1\"}",
+                "name": "GetFlights"
+              },
+              "id": "chatcmpl-tool-b5aa8da551fa21ee",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569522,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-88abea4fc51435d3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 53,
+      "prompt_tokens": 12823,
+      "prompt_tokens_details": null,
+      "total_tokens": 12876
+    }
+  },
+  "request_sha256": "279907b346cc4c4acc69cd3289f42f3957702a205a8e8bf1fea2843f56b235cd",
+  "source_example_id": "mix_dev_0108+durec_src_1278+hb_0340",
+  "status": "success",
+  "target_domain": "GetFlights"
+}

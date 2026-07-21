@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_45b31b382ee3362801d6667f",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.7289170054718852,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_467fce5ca586dbb20c08cc47",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. User says \"search for available flights\" no specifics. Use past pattern: likely one-way flight. Use past session 5: flight from SF to Paris. But current user unspecified. We infer from past: user often uses San Francisco origin. Destination unknown. We can default to most frequent: San Francisco to Paris? But maybe use default: origin San Francisco, destination Atlanta? Past session 7. But we need to deduce. Since no info, we can leave slots empty. But function requires object. We can provide empty. So call GetFlights with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614971,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-82cf2d0ee5e25df0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 154,
+      "prompt_tokens": 8235,
+      "prompt_tokens_details": null,
+      "total_tokens": 8389
+    }
+  },
+  "request_sha256": "7c7ac50ec965be48dfd61a8b5c64e66af402c3091e7abadbb61e9c979411d33c",
+  "source_example_id": "dev_0083",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

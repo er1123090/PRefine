@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e6b67c13be12a4f2d1404ad4",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3280450096353889,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_dbcb60110cea3af7b54820c5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"Oakland\", price_range=\"cheap\", category=\"Mexican\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. Past: user asked for affordable priced tacos. They got restaurants in Oakland. They didn't specify city? They said \"Find me an restaurant that is tagged as affordable priced.Tacos would be perfect if they serve.\" So preference: city Oakland, price_range cheap? They said affordable priced. Also category maybe Mexican? tacos. So slot: city=\"Oakland\", price_range=\"cheap\", category maybe \"Mexican\". Also number_of_seats? not. So output GetRestaurants with city=\"Oakland\", price_range=\"cheap\", category=\"Mexican\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615205,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ad478654a1f3f1b3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 147,
+      "prompt_tokens": 10499,
+      "prompt_tokens_details": null,
+      "total_tokens": 10646
+    }
+  },
+  "request_sha256": "a788f5513de4b23ccf30741d1b8e23271b6cf2dbbab147769a15fef914b6ee7f",
+  "source_example_id": "mix_dev_0252+durec_src_1277+hb_0257",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c00aefb19d5f83e93609c341",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.992078734561801,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b7fed54ad3cfac393053dcff",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says pick up noon March 8, keep couple days. So dropoff_date maybe March 10? but not specified. We can omit dropoff_date. car_type? not specified. So only pickup_city=\"Berlin\"? but enum includes many US cities, not Berlin. So cannot match. Maybe we ignore? But must produce function call. We can set pickup_city=\"Berlin\" though not in enum. But schema requires enum. We might set pickup_city=\"Berlin\" but invalid. Maybe choose closest? None. Maybe we skip function call? But must produce. Could set pickup_city=\"Berlin\" and ignore enum. I'll produce with pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\". No dropoff_date.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615151,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9bc289d745e34cc4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 214,
+      "prompt_tokens": 8101,
+      "prompt_tokens_details": null,
+      "total_tokens": 8315
+    }
+  },
+  "request_sha256": "54741717327ac7ab21ea7a8666053661554f46b8fb74ff003d96672f35bb2086",
+  "source_example_id": "dev_0091",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

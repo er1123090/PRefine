@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_06efa06dad27da37c0b31788",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5156198274344206,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e27e57ec09377049c050eb73",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history, user often picks \"Compact\" car etc. For flights, no preference seen. But maybe pattern: user often uses \"Compact\" car, but flights? No pattern. Default none. So empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614815,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ae5c42b86feb1542",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 81,
+      "prompt_tokens": 10513,
+      "prompt_tokens_details": null,
+      "total_tokens": 10594
+    }
+  },
+  "request_sha256": "a878d923d69d81b998e26f1f4b01d890900166dfef49a5e95ac3ef73581c3039",
+  "source_example_id": "mix_dev_0192+durec_src_0151+hb_0009",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

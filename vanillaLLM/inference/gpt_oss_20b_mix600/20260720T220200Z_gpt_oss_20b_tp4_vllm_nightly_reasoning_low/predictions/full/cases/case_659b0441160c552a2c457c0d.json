@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_659b0441160c552a2c457c0d",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.085231519304216,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_adb520a3c3438b55a8a358c1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"San Francisco\")",
+          "function_call": null,
+          "reasoning": "We need GetEvents likely. User wants something to do weekend in SF. No category given. We infer preference: earlier they liked Music events in Atlanta, also Christian. But no pattern. Maybe default category none. Provide GetEvents with city=\"San Francisco\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615025,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bc305959f4048157",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 73,
+      "prompt_tokens": 9681,
+      "prompt_tokens_details": null,
+      "total_tokens": 9754
+    }
+  },
+  "request_sha256": "6fa3ab0fc4d34bedad06a7d7859b601a71557e9aed5e501ac1270d3f2037a391",
+  "source_example_id": "mix_dev_0115+durec_src_0351+hb_0312",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

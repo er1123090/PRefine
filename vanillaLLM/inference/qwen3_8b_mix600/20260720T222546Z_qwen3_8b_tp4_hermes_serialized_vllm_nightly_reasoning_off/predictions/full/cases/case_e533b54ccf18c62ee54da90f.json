@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_e533b54ccf18c62ee54da90f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.1600381126627326,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "departure_date": "March 9th",
+        "destination": "Seattle",
+        "origin": "San Francisco"
+      },
+      "name": "GetFlights"
+    }
+  ],
+  "pair_id": "pair_de1d8c2bcc925126c9cc8126",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"origin\": \"San Francisco\", \"destination\": \"Seattle\", \"departure_date\": \"March 9th\"}",
+                "name": "GetFlights"
+              },
+              "id": "chatcmpl-tool-9cf37268a727970e",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588343,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-be85737abab151f7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 38,
+      "prompt_tokens": 10746,
+      "prompt_tokens_details": null,
+      "total_tokens": 10784
+    }
+  },
+  "request_sha256": "81eaf2ca51664a927aa2b3ccdd2c51554192094afa12cf860d2f6ea2bc5e3e90",
+  "source_example_id": "mix_dev_0045+durec_src_0431+hb_0103",
+  "status": "success",
+  "target_domain": "GetFlights"
+}

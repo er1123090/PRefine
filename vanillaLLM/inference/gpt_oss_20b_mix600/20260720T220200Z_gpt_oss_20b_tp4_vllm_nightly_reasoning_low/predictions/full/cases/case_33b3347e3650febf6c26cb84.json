@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_33b3347e3650febf6c26cb84",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.227482721209526,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_682cce5675cd0040ec4c36b6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"100 Van Ness Avenue\", number_of_seats=\"2\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. From history: session17: user wanted cab to 100 Van Ness Avenue, 2 people, shared ride yes. So preferences: destination \"100 Van Ness Avenue\", number_of_seats \"2\", shared_ride true, pickup_time maybe unspecified. We'll output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614943,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a4bcd81d06c6d232",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 109,
+      "prompt_tokens": 10814,
+      "prompt_tokens_details": null,
+      "total_tokens": 10923
+    }
+  },
+  "request_sha256": "dc2eb6192376605c4721eb0c539e42f1086d89cd4b5ece099ec973cc2609aab0",
+  "source_example_id": "mix_dev_0108+durec_src_1278+hb_0340",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ca9805644ade8cabfec2e561",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1080296207219362,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1ebc25866d1b4304fee32b2a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\", airlines=\"Delta Airlines\", flight_class=\"Economy\", passengers=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need origin, destination, departure_date. flight_class? not specified. passengers? not. airlines? not. So only those. Use inferred preferences: previous flight had Delta Airlines, economy. Likely same. So set airlines=\"Delta Airlines\", flight_class=\"Economy\". passengers maybe 1. Return_date none. Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615168,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9d2a97045bbf5294",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 117,
+      "prompt_tokens": 9706,
+      "prompt_tokens_details": null,
+      "total_tokens": 9823
+    }
+  },
+  "request_sha256": "378ab86c429f4f838003c1343f13aeae5c0087b09fc337931f61267bc939957a",
+  "source_example_id": "mix_dev_0262+durec_src_0207+hb_0087",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

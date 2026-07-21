@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a96f211b734b5872c568ec42",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7835152437910438,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b206cdc004bb22aaa7e3cd1f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"Philadelphia\")",
+          "function_call": null,
+          "reasoning": "Need GetEvents. No city given, but user says nearby. Past preference: user often uses Philadelphia, Atlanta. But \"nearby\" relative to user location? No location known. Maybe default to Philadelphia? But pattern: user previously asked for events in Philadelphia. So choose city=Philadelphia. No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615118,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-86677333330b6ad9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 79,
+      "prompt_tokens": 11553,
+      "prompt_tokens_details": null,
+      "total_tokens": 11632
+    }
+  },
+  "request_sha256": "06def6d656de7f2ea32a94f07cbb05bef7dfa660837c0c247cb30f58303fc6da",
+  "source_example_id": "mix_dev_0079+durec_src_0804+hb_0050",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

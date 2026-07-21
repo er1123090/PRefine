@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_441741930f0f640839eedb84",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.958695575594902,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "artist": "Jay Chou"
+      },
+      "name": "GetMusic"
+    }
+  ],
+  "pair_id": "pair_0396bf19e4e726bec32eae78",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"artist\": \"Jay Chou\"}",
+                "name": "GetMusic"
+              },
+              "id": "chatcmpl-tool-ad75db2aa7b1646c",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587346,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b16d3f2c280ca4aa",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 22,
+      "prompt_tokens": 9194,
+      "prompt_tokens_details": null,
+      "total_tokens": 9216
+    }
+  },
+  "request_sha256": "8caa00c5b60ec4a8b69bb9dd6a220276c0e054d2f24d255243c6d6df9b6b3ae0",
+  "source_example_id": "mix_durec_src_0738+hb_0327",
+  "status": "success",
+  "target_domain": "GetMusic"
+}

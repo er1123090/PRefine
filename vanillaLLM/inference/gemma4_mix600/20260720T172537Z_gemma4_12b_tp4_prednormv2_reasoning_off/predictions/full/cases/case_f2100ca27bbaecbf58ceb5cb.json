@@ -1,0 +1,69 @@
+{
+  "attempts": 1,
+  "case_id": "case_f2100ca27bbaecbf58ceb5cb",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.460749891586602,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {},
+      "name": "GetMusic"
+    }
+  ],
+  "pair_id": "pair_7e1d6b50ff5120a70b83b5c4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{}",
+                "name": "GetMusic"
+              },
+              "id": "chatcmpl-tool-adf691b6ca5339a9",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784572092,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b2df7706cd55fafa",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 8,
+      "prompt_tokens": 11668,
+      "prompt_tokens_details": null,
+      "total_tokens": 11676
+    }
+  },
+  "request_sha256": "a19225b0b60398b7aa5ed48802d98e8b9a66b536c85ef18fe2bd2e8ca1cfc027",
+  "source_example_id": "mix_dev_0120+durec_src_0016+hb_0157",
+  "status": "success",
+  "target_domain": "GetMusic"
+}

@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_94547b2f795f2f81b8d774b6",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.269801525399089,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "location": "Vancouver",
+        "number_of_rooms": "1"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_59bdd194aa205566d0002776",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"Vancouver\", \"number_of_rooms\": \"1\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-a9b5ac1b2b657ae2",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587829,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-876bb44cf4fdce93",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 30,
+      "prompt_tokens": 11335,
+      "prompt_tokens_details": null,
+      "total_tokens": 11365
+    }
+  },
+  "request_sha256": "a933f1a03e182729cce2bf26b648cef894d3068bcc7dcf0a83433d450a543dc7",
+  "source_example_id": "mix_dev_0154+durec_src_0557",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

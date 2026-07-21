@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a6c78d36767fa5f2b3764780",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9485178785398602,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_7e87767e605bf7c1e5dd25e0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"\", shared_ride=\"True\", pickup_time=\"\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination? user says \"I need a ride and want to check available ride-sharing options.\" No destination given. Maybe default? We can leave empty. number_of_seats? unspecified. shared_ride? maybe true? But we infer from past: user often wants shared ride. We'll set shared_ride=\"True\". Others empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615114,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b9b86b9bdc3469a3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 104,
+      "prompt_tokens": 11229,
+      "prompt_tokens_details": null,
+      "total_tokens": 11333
+    }
+  },
+  "request_sha256": "17585be5fa06f4fefc6cd98a1281d2920062f846e65b4b26ad5c312689f25409",
+  "source_example_id": "mix_dev_0126+durec_src_1001+hb_0443",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

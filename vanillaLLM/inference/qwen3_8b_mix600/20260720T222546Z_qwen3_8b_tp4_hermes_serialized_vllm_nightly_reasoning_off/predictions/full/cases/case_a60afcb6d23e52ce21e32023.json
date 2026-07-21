@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_a60afcb6d23e52ce21e32023",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.266404163092375,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "average_star": "3",
+        "check_in_date": "2019-03-10",
+        "location": "Kuala Lumpur",
+        "number_of_days": "1",
+        "number_of_rooms": "2"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_845525fb70dba078390b7989",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"Kuala Lumpur\", \"number_of_rooms\": \"2\", \"average_star\": \"3\", \"check_in_date\": \"2019-03-10\", \"number_of_days\": \"1\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-abfb654a121eccdf",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587939,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ba046ce3027afcaf",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 63,
+      "prompt_tokens": 12150,
+      "prompt_tokens_details": null,
+      "total_tokens": 12213
+    }
+  },
+  "request_sha256": "13a7fb39ea9ef2a13f1aeb366ba13dcab2c17cd1e6a8ed9e659d81f44d96808f",
+  "source_example_id": "mix_dev_0179+durec_src_0767+hb_0321",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

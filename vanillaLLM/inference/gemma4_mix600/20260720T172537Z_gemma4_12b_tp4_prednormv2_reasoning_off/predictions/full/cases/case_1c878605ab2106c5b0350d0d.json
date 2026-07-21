@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "case_id": "case_1c878605ab2106c5b0350d0d",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 10.789872627705336,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Nature Preserve",
+        "free_entry": true,
+        "good_for_kids": true,
+        "location": "New York"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_1522b6532a6f89cb5e66ae98",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Nature Preserve\", \"free_entry\": true, \"good_for_kids\": true, \"location\": \"New York\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-a71d0946f31d443a",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569087,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8ebeac54e0f1d264",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 36,
+      "prompt_tokens": 9293,
+      "prompt_tokens_details": null,
+      "total_tokens": 9329
+    }
+  },
+  "request_sha256": "f49686d3d3be96a658055a90437b2aebababb73d5d5e56424cb37a39770c4f49",
+  "source_example_id": "mix_dev_0164+hb_0217",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

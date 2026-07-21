@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b06c44e38588d9aba95bf56c",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6706814663484693,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_68573ad12652cec907aeb267",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"San Diego\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. Need preferences: location? user didn't specify. From history, user often chooses San Diego or San Francisco. But no explicit. Maybe default? We infer from past: user booked hotels in San Diego and San Francisco. No preference. We can leave empty. But need at least some slot? We can provide location=\"San Diego\" as frequent. Also average_star? user wants 1 star earlier. But now generic. We'll choose location=\"San Diego\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615128,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b8e87dfd3883e9c9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 113,
+      "prompt_tokens": 9936,
+      "prompt_tokens_details": null,
+      "total_tokens": 10049
+    }
+  },
+  "request_sha256": "99f05eee59910667a83ac9c6499a47535bb59c892e97f2d1b70ac82136e3f3ca",
+  "source_example_id": "mix_dev_0219+hb_0318",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

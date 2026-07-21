@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_1f0005002b85217de0573e3e",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 8.09753745701164,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "departure_date": "2023-03-10",
+        "destination": "Sacramento",
+        "origin": "San Jose"
+      },
+      "name": "GetBuses"
+    }
+  ],
+  "pair_id": "pair_83db6eac01a78f8ea84cb701",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"origin\": \"San Jose\", \"destination\": \"Sacramento\", \"departure_date\": \"2023-03-10\"}",
+                "name": "GetBuses"
+              },
+              "id": "chatcmpl-tool-9e7d00e250f4fb82",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587082,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-84798f10b8cd4372",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 45,
+      "prompt_tokens": 11522,
+      "prompt_tokens_details": null,
+      "total_tokens": 11567
+    }
+  },
+  "request_sha256": "aab566141476e886a06190198911fa31f5eaedaa26754ffd6c8df2383b3e15a3",
+  "source_example_id": "mix_dev_0127+durec_src_0622+hb_0200",
+  "status": "success",
+  "target_domain": "GetBuses"
+}

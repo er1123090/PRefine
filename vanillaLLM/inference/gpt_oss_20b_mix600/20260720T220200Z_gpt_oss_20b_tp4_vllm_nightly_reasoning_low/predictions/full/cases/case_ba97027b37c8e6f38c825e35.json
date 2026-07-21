@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ba97027b37c8e6f38c825e35",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0077085252851248,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_90fb697ff55c5718e9b8d962",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. No info given. Use patterns: user wants ride-sharing options. No preferences. Maybe default shared_ride true? In past, when asked, they confirmed shared_ride=True. So set shared_ride=\"True\". Others unknown. Provide empty? Probably omit. So: GetRideSharing(shared_ride=\"True\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615146,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-93239eaeff36ddfd",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 105,
+      "prompt_tokens": 10848,
+      "prompt_tokens_details": null,
+      "total_tokens": 10953
+    }
+  },
+  "request_sha256": "786e6105c21547dc5cb9b914a2d0aac044ff236523c7120cc3d3a3bc147d2bcd",
+  "source_example_id": "mix_dev_0285+durec_src_0965+hb_0174",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

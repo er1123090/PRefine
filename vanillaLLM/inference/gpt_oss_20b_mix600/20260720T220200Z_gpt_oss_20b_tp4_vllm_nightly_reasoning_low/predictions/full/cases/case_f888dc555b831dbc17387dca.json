@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f888dc555b831dbc17387dca",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2151353685185313,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d8eaf27611b7e83e534f3944",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history: user likes Kris Wu songs, but restaurant preferences? In session 8, user wanted restaurant: Zhou Shuangqiang Sichuan Restaurant, price 50, rating 3.8. No preference on category or price. In session 8, user said \"I want to go there with a friend at 9 p.m.\" So maybe prefers Sichuan? But not sure. No explicit preference. We can leave empty. Output format: GetRestaurants with slots maybe city? No city given. We can leave empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615226,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bdac3bdb78eaa906",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 130,
+      "prompt_tokens": 11387,
+      "prompt_tokens_details": null,
+      "total_tokens": 11517
+    }
+  },
+  "request_sha256": "865d5c74130b78bc91d229d788f716ec5ed435266fcd87dedc244dbf6cc03b41",
+  "source_example_id": "mix_dev_0103+durec_src_0806+hb_0319",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

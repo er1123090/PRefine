@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c681e0b1cfd08408f06e9b68",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6489113988354802,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a28ef868a881b3cd23e822e3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHomes(area=\"San Ramon\", number_of_beds=\"3\", pets_allowed=true)",
+          "function_call": null,
+          "reasoning": "User wants homes. Need preferences: area, beds, baths, pets, furnished? From history: prefers 3 beds, 3 baths, pets allowed, not furnished? In session4: 3 beds 3 baths San Ramon pets allowed. Session3: 3 beds Rohnert Park pets not allowed. Session11: 3 beds 2 baths pets allowed. So likely 3 beds, pets allowed. Area? Not specified. Could default to San Ramon? Use most frequent area: San Ramon. So call GetHomes with area=\"San Ramon\", number_of_beds=\"3\", pets_allowed=true.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615160,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a076194c3535435e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 153,
+      "prompt_tokens": 9775,
+      "prompt_tokens_details": null,
+      "total_tokens": 9928
+    }
+  },
+  "request_sha256": "e32656855fe076c958da8dec3a2a2e0aec65cd3c1ca1c70a9373428d37fb9522",
+  "source_example_id": "mix_dev_0291+durec_src_0099+hb_0115",
+  "status": "model_no_tool",
+  "target_domain": "GetHomes"
+}

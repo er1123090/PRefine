@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ef2e8aca1c6e70b90ffbd4de",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3577606156468391,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_737c2228a89acfd9a1e426c7",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says pick up noon March 8, keep couple days. So dropoff maybe March 10? but not specified. We can leave dropoff_date empty. car_type default? maybe Standard. So output: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", car_type=\"Standard\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615214,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ab9024cd20731d7c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 138,
+      "prompt_tokens": 10238,
+      "prompt_tokens_details": null,
+      "total_tokens": 10376
+    }
+  },
+  "request_sha256": "20ccd65589daf537815f7e2244414d840d246b65365154194d1154c473cb733a",
+  "source_example_id": "mix_dev_0254+durec_src_1246+hb_0316",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

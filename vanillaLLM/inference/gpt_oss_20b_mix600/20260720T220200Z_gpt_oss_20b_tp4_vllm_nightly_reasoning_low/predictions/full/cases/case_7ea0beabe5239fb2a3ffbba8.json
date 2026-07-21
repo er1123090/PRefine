@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_7ea0beabe5239fb2a3ffbba8",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1235505063086748,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c504a2810b8980a25a9ab4b3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(playback_device=\"phone\")",
+          "function_call": null,
+          "reasoning": "We need GetMusic. slot artist? user didn't specify. We can infer from past: user likes Leehom Wang, Kevin Macleod. But no artist given. We can default? maybe leave empty. But need slot_name=\"artist\" maybe omitted. We can provide playback_device=\"phone\". So output: GetMusic(playback_device=\"phone\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615059,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aa14f47dd62ca2e1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 90,
+      "prompt_tokens": 10775,
+      "prompt_tokens_details": null,
+      "total_tokens": 10865
+    }
+  },
+  "request_sha256": "811514101f0863e036151436092bed8576e300e2f7da2ee41cc0f254d92ec019",
+  "source_example_id": "mix_dev_0155+durec_src_0673+hb_0311",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

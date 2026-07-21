@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_d753dbe157f5495e7bcf44ed",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.090933555737138,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "American",
+        "price_range": "moderate"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_55ded7833b8f52bd9e0761ab",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"American\", \"price_range\": \"moderate\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-853a2934950ab83c",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588254,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9a5797482c23f206",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 8795,
+      "prompt_tokens_details": null,
+      "total_tokens": 8824
+    }
+  },
+  "request_sha256": "dcd611135a9bb0aef3ac3ed11fbf879f614ede6482c2f15e037bc6d16a30a0da",
+  "source_example_id": "mix_dev_0317+hb_0241",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

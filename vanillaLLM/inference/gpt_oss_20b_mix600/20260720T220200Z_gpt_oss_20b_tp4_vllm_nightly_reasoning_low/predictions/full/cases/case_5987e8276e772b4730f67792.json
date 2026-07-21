@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_5987e8276e772b4730f67792",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.441141290590167,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f62adfe4f17389824d0e7f37",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"checking\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks with recipient_account_type. From history, user used checking and savings. Which preference? In session5 they chose checking. Session8 they chose savings then transfer from savings. So preference maybe checking? But transfer now unspecified. Likely checking. Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615006,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a575551e24fb7aab",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 73,
+      "prompt_tokens": 10454,
+      "prompt_tokens_details": null,
+      "total_tokens": 10527
+    }
+  },
+  "request_sha256": "38c3a0f0dd82cbc40d7288939c02c0c299642b007d5674f135d1f47faea65d8c",
+  "source_example_id": "mix_dev_0048+durec_src_1280+hb_0155",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

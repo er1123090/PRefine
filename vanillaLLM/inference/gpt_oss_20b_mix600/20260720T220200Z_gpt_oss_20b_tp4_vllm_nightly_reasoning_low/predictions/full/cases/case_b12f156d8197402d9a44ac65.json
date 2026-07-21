@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b12f156d8197402d9a44ac65",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.4665537867695093,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_02204444c7c40cbea8c708e8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, pickup_location? user says pick up in Downtown Berlin. So pickup_city=\"Berlin\"? but enum includes Berlin? list: Anaheim, Atlanta, Chicago, Concord, Fremont, Las Vegas, London, Long Beach, Los Angeles, Mexico City, Nairobi, New York, Paris, Philadelphia, Phoenix, Portland, Sacramento, San Diego, San Francisco, San Jose, Seattle, Vancouver, Walnut Creek, Washington. Berlin not in list. So cannot. Maybe use GetTravel? but car. Maybe fallback: no match. But we must produce call. Use closest: \"Berlin\" not available. Maybe use \"London\" or \"Paris\". But user says Berlin. We deduce preference: pick up city Berlin. But not in enum. We could still pass string? schema expects enum. Might error. But we must output. I'll use \"Berlin\" anyway. Also pickup_date \"2019-03-08\" (assuming year). pickup_time \"12:00\". car_type? not specified. default none. So output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615129,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a140ba907e5be8e9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 256,
+      "prompt_tokens": 8973,
+      "prompt_tokens_details": null,
+      "total_tokens": 9229
+    }
+  },
+  "request_sha256": "530515b62acfa832d30fdd4f7bfe444e8870de455728eef0e6f9ebb33517f7d7",
+  "source_example_id": "mix_dev_0251+hb_0118",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

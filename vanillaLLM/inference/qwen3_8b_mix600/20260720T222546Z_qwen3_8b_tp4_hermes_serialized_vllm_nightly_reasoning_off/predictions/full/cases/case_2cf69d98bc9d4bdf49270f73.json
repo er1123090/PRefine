@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_2cf69d98bc9d4bdf49270f73",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.91463493462652,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "check_in_date": "2019-03-22",
+        "location": "Palo Alto"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_eb9e36c1b074734d92f5486c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"Palo Alto\", \"check_in_date\": \"2019-03-22\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-92b929f73c835b31",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587196,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ae1d52203c544f64",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 40,
+      "prompt_tokens": 13385,
+      "prompt_tokens_details": null,
+      "total_tokens": 13425
+    }
+  },
+  "request_sha256": "102cc05034560b9da5ed4f043a539bd87938fb6e3861cc6bc61d126ab13a5c8a",
+  "source_example_id": "mix_dev_0266+durec_src_0131+hb_0167",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

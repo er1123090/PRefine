@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3ef2b26c442e922f89b14320",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8529985370114446,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_05d6d294f357a6c2d1889ff5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(number_of_rooms=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user often wants 1 room, maybe moderate price? In session7 they looked for 1 room. So default: number_of_rooms=\"1\". No location given. Maybe default to city? Not specified. We'll leave empty. Output format: GetHotels(number_of_rooms=\"1\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614963,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-816f5c347d22125c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 87,
+      "prompt_tokens": 8806,
+      "prompt_tokens_details": null,
+      "total_tokens": 8893
+    }
+  },
+  "request_sha256": "48ce6c4628ebb680575175eac56e1aee868dd7674b9c66d18e34e5074dbeaf94",
+  "source_example_id": "dev_0195",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

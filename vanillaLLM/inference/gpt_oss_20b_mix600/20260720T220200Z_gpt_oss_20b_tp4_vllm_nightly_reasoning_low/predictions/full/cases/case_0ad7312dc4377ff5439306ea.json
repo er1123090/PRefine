@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0ad7312dc4377ff5439306ea",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.378576057963073,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e63adf569de91b0c5cdc99fb",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Berkeley\", departure_date=\"2023-03-11\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel? They plan trip to Berkeley. Domain likely GetTravel. Slots: location, departure_date, maybe category? They didn't specify. We can infer preferences: previous travel: New York, Phoenix. No preference. Use location=Berkeley, departure_date=2023-03-11? date format? Past used \"2019-03-11\". So use \"2023-03-11\". No other slots. Output format: GetTravel(location=\"Berkeley\", departure_date=\"2023-03-11\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614831,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9c5d5dac7014a7ff",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 136,
+      "prompt_tokens": 7956,
+      "prompt_tokens_details": null,
+      "total_tokens": 8092
+    }
+  },
+  "request_sha256": "fab9212ed2316b5aee038c28cd871f02ddcc40264c21c44de8bcf740e91437a8",
+  "source_example_id": "mix_dev_0284+hb_0341",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

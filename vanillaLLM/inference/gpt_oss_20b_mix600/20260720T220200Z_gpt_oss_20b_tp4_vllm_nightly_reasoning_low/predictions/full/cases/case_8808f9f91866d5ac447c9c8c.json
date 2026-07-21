@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8808f9f91866d5ac447c9c8c",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.086212475784123,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f240eb582f056898fd9af46f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination? user didn't specify. Maybe default? But we infer from history: user often wants ride to therapist or appointment. No destination given. We can leave empty? But need slot. Maybe destination unspecified. We can set destination=\"\"? Probably omit. But must include slot. Maybe destination=\"\". We'll set shared_ride=\"True\" as user wants shared. number_of_seats=\"1\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615072,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ade10c4b6d7df933",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 114,
+      "prompt_tokens": 11747,
+      "prompt_tokens_details": null,
+      "total_tokens": 11861
+    }
+  },
+  "request_sha256": "973c7d075542cbbd6c9f1b805b7239c3a513de12e1d1c36a4b8b90f36ba008a8",
+  "source_example_id": "mix_dev_0132+durec_src_0811+hb_0072",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

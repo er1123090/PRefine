@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e33e63dd61d4a39082039a71",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.2564278999343514,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_61b044114dde3e89235ba820",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", dropoff_date=\"2019-03-10\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, car_type? user didn't specify type. Past preference: user used Compact in session3, Standard in session4. No pattern. Maybe default Compact? But cross-domain: user wants short stay, city. No preference. We can leave car_type unspecified. Also dropoff_date: couple of days, so maybe March 10th. pickup_date March 8th. pickup_time 12:00. pickup_city \"Berlin\". So output: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", dropoff_date=\"2019-03-10\"). No car_type.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615198,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-87ded2c8b0207185",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 196,
+      "prompt_tokens": 7023,
+      "prompt_tokens_details": null,
+      "total_tokens": 7219
+    }
+  },
+  "request_sha256": "32e7f071755d8153495639ceaa63ad16c3b237177742bc5d2259ec81778cab4b",
+  "source_example_id": "dev_0037",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

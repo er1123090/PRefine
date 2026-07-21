@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_5e7aeba2d0ce2fc63535936f",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8673025220632553,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_23bf340623918c546eeeecd2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHomes(number_of_beds=\"4\", number_of_baths=\"3\")",
+          "function_call": null,
+          "reasoning": "We need GetHomes. From history, user often wants 4 bed 3 bath. But current request generic. Use most frequent: 4 bed 3 bath. Area? Not specified. Maybe default? We can leave empty. Provide slots: number_of_beds=\"4\", number_of_baths=\"3\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615014,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-96530ee700823ea1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 90,
+      "prompt_tokens": 9861,
+      "prompt_tokens_details": null,
+      "total_tokens": 9951
+    }
+  },
+  "request_sha256": "9ef3c695c1ca4dd1eb679e7b4b41481799acea534e0bd467dd1adcbf82c369d7",
+  "source_example_id": "mix_dev_0040+durec_src_0578+hb_0101",
+  "status": "model_no_tool",
+  "target_domain": "GetHomes"
+}

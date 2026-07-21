@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_82df6ffa082917fbe81a7c79",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2492744289338589,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b4db43249b91d347fc0bd96c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"3\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. From history: session19 had ride sharing to 140 Mayhew Way #702, 3 seats, shared True. So preference: shared_ride=True, number_of_seats=3. Destination unspecified now. We can leave empty? Provide empty string. pickup_time maybe unspecified. So output: GetRideSharing(destination=\"\", number_of_seats=\"3\", shared_ride=\"True\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615066,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9ac1e2851a341d77",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 128,
+      "prompt_tokens": 10117,
+      "prompt_tokens_details": null,
+      "total_tokens": 10245
+    }
+  },
+  "request_sha256": "3b8192e84aabac0e78476708e98970faf7e39585778ed4787206b1dcfcac99ee",
+  "source_example_id": "mix_dev_0226+durec_src_1005+hb_0353",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_cc18dbda2a732799d4f52a50",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5760205276310444,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_682cce5675cd0040ec4c36b6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", pickup_time=\"in 30 minutes\", shared_ride=\"false\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. User didn't specify seats, shared ride. Assume default 1 seat, not shared. pickup_time: about half an hour from now. We don't have current time. Use placeholder \"in 30 minutes\". So output: GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", pickup_time=\"in 30 minutes\", shared_ride=\"false\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615170,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a2370f8b6cece688",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 140,
+      "prompt_tokens": 10864,
+      "prompt_tokens_details": null,
+      "total_tokens": 11004
+    }
+  },
+  "request_sha256": "4917d7727fe210be7e139b5180e9d52b336e1af889e0f894e4ddf9c988fec360",
+  "source_example_id": "mix_dev_0108+durec_src_1278+hb_0340",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

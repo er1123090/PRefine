@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_82a97b505acddfd14a1d38bc",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8874294767156243,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_916ab0dfbaef7f4a9e5a16ab",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "No suitable function call can be made with the provided schema.",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need pickup_city: \"Downtown Berlin\" but city not in enum. No match. Maybe use pickup_location? But schema only pickup_city enum includes many US cities. Berlin not present. So cannot match. Maybe fallback to pickup_location? But not in schema. So cannot produce. Probably no function call.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615065,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8357c3e2bb210a9e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 90,
+      "prompt_tokens": 11231,
+      "prompt_tokens_details": null,
+      "total_tokens": 11321
+    }
+  },
+  "request_sha256": "0f7a8aa869663883d7261fb4d95d2d9d85ac747ce54449943e653b0c7883c5e8",
+  "source_example_id": "mix_dev_0063+durec_src_1014+hb_0442",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d116ca78c7f52404cd1d6339",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7329305410385132,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_7aa24c205a21d635f070dfcf",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(has_wifi=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user booked 3 star hotel in LA, wifi yes. Likely wants wifi. Also maybe 3 star. Use average_star? Not sure. We'll set has_wifi=true. location unspecified. We'll just call GetHotels with has_wifi=true.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615177,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bea093d1617c642b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 78,
+      "prompt_tokens": 11022,
+      "prompt_tokens_details": null,
+      "total_tokens": 11100
+    }
+  },
+  "request_sha256": "6d6d94a197af69847043847b73fbfad65e303561d5340f95f0ff1736c9a340ec",
+  "source_example_id": "mix_dev_0268+durec_src_0315+hb_0162",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

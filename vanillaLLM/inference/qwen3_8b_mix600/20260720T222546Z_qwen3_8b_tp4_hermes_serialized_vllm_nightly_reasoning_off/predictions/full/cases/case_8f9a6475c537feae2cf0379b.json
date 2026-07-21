@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_8f9a6475c537feae2cf0379b",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.907816327176988,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "The Grotto San Francisco",
+        "number_of_seats": "1",
+        "shared_ride": true
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_cf21b566d2e40f6c5232f314",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"The Grotto San Francisco\", \"number_of_seats\": \"1\", \"shared_ride\": true}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-99589a9091f1ad90",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587796,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bcb3bcea2bd45ae4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 43,
+      "prompt_tokens": 10532,
+      "prompt_tokens_details": null,
+      "total_tokens": 10575
+    }
+  },
+  "request_sha256": "71ea98badb152067df6f8ec0ef923905045fb0f0b7275e90a4a800556386f039",
+  "source_example_id": "mix_dev_0281+hb_0424",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

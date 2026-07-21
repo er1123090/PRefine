@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4436ef1fb542b1f0d79e0fc8",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.908253594301641,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_2d7ecb175e4caec6e119a9a0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need slots: car_type, pickup_city, pickup_date, pickup_time, dropoff_date? User didn't specify. Use past pattern: user often picks Standard. Use pickup_city from context? No. Use default? Maybe Seattle? But no. We can leave empty. Output format: GetRentalCars(car_type=\"Standard\")? But need required? none. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614970,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9639fd7cf6a8ab28",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 99,
+      "prompt_tokens": 10051,
+      "prompt_tokens_details": null,
+      "total_tokens": 10150
+    }
+  },
+  "request_sha256": "d0050a017f28cccf7096b4f15fc6382a5c59a371dbd64a1d44a55c230070248d",
+  "source_example_id": "mix_dev_0062+durec_src_0585+hb_0123",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

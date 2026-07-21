@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_7d9d1cc50d1bdfa623a97747",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 7.917824199423194,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "car_type": "Standard",
+        "pickup_city": "Fremont"
+      },
+      "name": "GetRentalCars"
+    }
+  ],
+  "pair_id": "pair_a1845e2c5a70210111048eee",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"car_type\": \"Standard\", \"pickup_city\": \"Fremont\"}",
+                "name": "GetRentalCars"
+              },
+              "id": "chatcmpl-tool-b61a88c882fc2c7b",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784570422,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a39b033fb6d349b6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 27,
+      "prompt_tokens": 11146,
+      "prompt_tokens_details": null,
+      "total_tokens": 11173
+    }
+  },
+  "request_sha256": "22b8a777cd89c6867293c2e68e860911e279209835915609b3b386a333bd8a2d",
+  "source_example_id": "mix_dev_0084+hb_0276",
+  "status": "success",
+  "target_domain": "GetRentalCars"
+}

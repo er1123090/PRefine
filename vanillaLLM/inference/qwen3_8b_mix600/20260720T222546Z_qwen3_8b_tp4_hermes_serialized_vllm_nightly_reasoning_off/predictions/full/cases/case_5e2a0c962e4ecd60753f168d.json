@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_5e2a0c962e4ecd60753f168d",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.493720954284072,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Music",
+        "city": "New York",
+        "date": "2023-10-05"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_5bd2dffde29e2d51df083280",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Music\", \"city\": \"New York\", \"date\": \"2023-10-05\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-9671869492de1db8",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587512,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-95614e9d7c345ec7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 42,
+      "prompt_tokens": 10037,
+      "prompt_tokens_details": null,
+      "total_tokens": 10079
+    }
+  },
+  "request_sha256": "925c385ee1b44208c691bfa098857d9536200a0a3c6bdabc95184d15d5c5deed",
+  "source_example_id": "mix_dev_0274+durec_src_0012+hb_0153",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

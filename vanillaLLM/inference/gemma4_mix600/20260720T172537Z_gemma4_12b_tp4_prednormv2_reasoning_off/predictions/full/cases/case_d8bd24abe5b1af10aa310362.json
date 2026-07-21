@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_d8bd24abe5b1af10aa310362",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 7.416773393750191,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "city": "Atlanta"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_c5455fe5ffe8d5cea4757a31",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"city\": \"Atlanta\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-9eec5e1d12244b53",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784571731,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-89fc7895d01d9cbf",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 14,
+      "prompt_tokens": 13494,
+      "prompt_tokens_details": null,
+      "total_tokens": 13508
+    }
+  },
+  "request_sha256": "65b9c4b341ee5647842f0fd6a13f8bc9f59f60c3e9ffc98bb110528a39e53520",
+  "source_example_id": "mix_dev_0021+durec_src_0825+hb_0405",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

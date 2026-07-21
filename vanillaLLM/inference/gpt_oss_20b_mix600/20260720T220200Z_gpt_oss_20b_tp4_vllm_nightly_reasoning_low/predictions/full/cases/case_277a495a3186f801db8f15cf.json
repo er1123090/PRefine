@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_277a495a3186f801db8f15cf",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.557229371741414,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f52a4fe47ba1964bc7de017f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. No preferences given. From history, user likes cheap? In session17, user said \"I'm easy on price.\" So price_range likely \"cheap\". Also city: Redwood City or Los Gatos. But user now says \"I want to find a restaurant. Can you show me some options?\" No city. We infer from past: user visited Redwood City and Los Gatos. Maybe default city? Could use \"Redwood City\". Category? Not specified. Maybe \"American\" or \"Mexican\"? Hard. We can leave slots empty. But need at least domain. Provide empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614918,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9293486f0b7879c5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 136,
+      "prompt_tokens": 10868,
+      "prompt_tokens_details": null,
+      "total_tokens": 11004
+    }
+  },
+  "request_sha256": "caafaddc08e341dc0fced89afb70474957cacfe975ca12390d657688f2dad57c",
+  "source_example_id": "mix_dev_0166+durec_src_0656+hb_0034",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

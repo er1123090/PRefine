@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2df5d7d4978a82fd7d9ff676",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.10821071267128,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_93049e1fa399f42d787346f5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", pickup_time=\"18:15\", shared_ride=\"False\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Determine shared_ride? Not mentioned. default? In past, user said shared ride ok. Here no mention. Probably not shared. number_of_seats? default 1. destination= \"39145 Farwell Drive\". pickup_time= \"18:15\". So output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614931,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8cbb84399886fe0b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 103,
+      "prompt_tokens": 8135,
+      "prompt_tokens_details": null,
+      "total_tokens": 8238
+    }
+  },
+  "request_sha256": "15bdf298c9a5f582d51bb74ad616c2a44ce558d393ac5df5f9142581b437e62d",
+  "source_example_id": "dev_0239",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

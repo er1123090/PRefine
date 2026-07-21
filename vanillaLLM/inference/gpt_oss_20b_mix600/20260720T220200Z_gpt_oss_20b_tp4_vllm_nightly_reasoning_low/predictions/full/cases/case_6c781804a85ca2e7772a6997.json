@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_6c781804a85ca2e7772a6997",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0010507320985198,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_5fc1c69ded9511b97cd2013c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Napa\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Need slot location? user says nearby. Past preferences: no explicit location. In session3 they used Napa for restaurants. But no travel. We can infer location maybe same as last known location? They were in Napa. So location=\"Napa\". No other slots. So call GetTravel(location=\"Napa\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615033,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b199c6a6b06f4f95",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 85,
+      "prompt_tokens": 8094,
+      "prompt_tokens_details": null,
+      "total_tokens": 8179
+    }
+  },
+  "request_sha256": "5e9d752239855cedea62ba0815705c27206f43c7070421925f48bd00a15b5f79",
+  "source_example_id": "dev_0239",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

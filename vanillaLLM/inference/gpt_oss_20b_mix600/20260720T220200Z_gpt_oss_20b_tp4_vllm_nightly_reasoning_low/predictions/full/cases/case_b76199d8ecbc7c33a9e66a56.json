@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b76199d8ecbc7c33a9e66a56",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9859625231474638,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3afef6a08f46b0f6d7d507f3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"Rogers Centre\", number_of_seats=\"3\", pickup_time=\"\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need slots: destination, number_of_seats, pickup_time, shared_ride. From history: session13 user asked cab to Rogers Centre, shared ride yes. So preference: shared_ride true. Also number_of_seats 3. Destination Rogers Centre. pickup_time unspecified. We'll set pickup_time empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615141,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-af574b7586c58609",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 105,
+      "prompt_tokens": 11193,
+      "prompt_tokens_details": null,
+      "total_tokens": 11298
+    }
+  },
+  "request_sha256": "fa3984fa0787049cfc8f40d9ad6fc2de054a4253ca3ec8ec043b80bb2f819f25",
+  "source_example_id": "mix_dev_0249+durec_src_0043+hb_0048",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

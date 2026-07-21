@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3148ec26c8c56aa8889b923f",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.778869090601802,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_88c0d5883b3eb8a5289d216d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2019-03-09\", origin=\"San Francisco\", destination=\"Seattle\", flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Determine preferences: previous flights: user used Delta, Alaska, American. Preferred economy. No bags. Likely prefers economy. Also earlier used Delta for roundtrip. So set airlines maybe Delta? But no preference. Use flight_class=\"Economy\". passengers? default? Not specified. We'll include departure_date \"2019-03-09\" (assuming year). origin \"San Francisco\", destination \"Seattle\". No return. So output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614938,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bcf6c11fc785b1f2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 132,
+      "prompt_tokens": 8077,
+      "prompt_tokens_details": null,
+      "total_tokens": 8209
+    }
+  },
+  "request_sha256": "752637b6f30914c2844f39cfdc81956b4aa83d5c6bd2d63dee9f7767f043cac2",
+  "source_example_id": "dev_0227",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_d8cc84720a10b39baee2a613",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.835612077265978,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Sushi",
+        "location": "San Jose"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_538bbffcef9be46986c1e4c1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Sushi\", \"location\": \"San Jose\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-ad345acd2c1ae7ad",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588265,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ac4ab7be6a950f2d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 11301,
+      "prompt_tokens_details": null,
+      "total_tokens": 11330
+    }
+  },
+  "request_sha256": "06ac7fd6388d9c8b3ca6c216dabb522d9d39b51ac13f1eb1b9688e327a941026",
+  "source_example_id": "mix_dev_0072+durec_src_0437+hb_0367",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_6e02a56ba80b7db06feb77c4",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.325755304656923,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "car_type": "Compact",
+        "pickup_city": "Fresno",
+        "pickup_date": "2019-03-09"
+      },
+      "name": "GetRentalCars"
+    }
+  ],
+  "pair_id": "pair_9621bb8382b2e5dd6961a55d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"pickup_city\": \"Fresno\", \"pickup_date\": \"2019-03-09\", \"car_type\": \"Compact\"}",
+                "name": "GetRentalCars"
+              },
+              "id": "chatcmpl-tool-b2da5adf6c321a71",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587595,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b605b1a6d17cd6d1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 48,
+      "prompt_tokens": 10199,
+      "prompt_tokens_details": null,
+      "total_tokens": 10247
+    }
+  },
+  "request_sha256": "d3bd33645abe41f6349a4cb12b8f5f8ad3d536a14c15bcf549652f69a165aa4c",
+  "source_example_id": "mix_dev_0173+durec_src_0799+hb_0336",
+  "status": "success",
+  "target_domain": "GetRentalCars"
+}

@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_cff0bbab9223deff3fbed575",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 23.73515268135816,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "average_star": "4",
+        "check_in_date": "2019-03-05",
+        "location": "Vallejo",
+        "number_of_days": "1",
+        "number_of_rooms": "1"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_802c336814f27475891770a8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"average_star\": \"4\", \"check_in_date\": \"2019-03-05\", \"location\": \"Vallejo\", \"number_of_days\": \"1\", \"number_of_rooms\": \"1\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-9e9205b4dbe5aad8",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784571619,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a1e70490f68ce44b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 64,
+      "prompt_tokens": 9938,
+      "prompt_tokens_details": null,
+      "total_tokens": 10002
+    }
+  },
+  "request_sha256": "2fc2b05be5aa210eafbfa8d0e714d85826139c208a73e1909f7272725052db03",
+  "source_example_id": "dev_0009",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

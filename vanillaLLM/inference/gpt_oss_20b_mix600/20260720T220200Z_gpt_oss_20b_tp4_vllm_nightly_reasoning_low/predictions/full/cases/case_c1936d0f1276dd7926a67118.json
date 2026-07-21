@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c1936d0f1276dd7926a67118",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1136245401576161,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_be4ec056e87a226f605a8308",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Standard\", pickup_city=\"Fremont\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need slots: car_type, pickup_city, pickup_date, pickup_time, dropoff_date, pickup_location. User didn't specify. Use preferences: earlier they used Standard car, pickup in Fremont. Likely same. So output GetRentalCars(car_type=\"Standard\", pickup_city=\"Fremont\", pickup_date=\"2023-??\", but we don't know date. Maybe default? We can leave empty. Just provide known slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615153,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9f1efef29418b31d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 118,
+      "prompt_tokens": 10265,
+      "prompt_tokens_details": null,
+      "total_tokens": 10383
+    }
+  },
+  "request_sha256": "425bb64563368cb31b1b60b7a60fd74941ff4fbdfd90e6d2bfb0a0998e38e078",
+  "source_example_id": "mix_dev_0143+durec_src_0414+hb_0214",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

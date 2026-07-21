@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c36262c6aabdc90076fda37a",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9793703434988856,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a345aacd600a0837867f0c08",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"checking\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks with recipient_account_type. User wants transfer to bank account. In history, they used GetBanks with recipient_account_type=\"savings\" and \"checking\". Which preference? They transferred from savings to checking. Likely they prefer savings as source? But transfer to bank account unspecified. We infer recipient_account_type likely \"checking\" or \"savings\". They previously transferred to checking. So choose checking.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615156,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-afe3f8140859f334",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 103,
+      "prompt_tokens": 9200,
+      "prompt_tokens_details": null,
+      "total_tokens": 9303
+    }
+  },
+  "request_sha256": "09694c3eaba87762dba9057cef0c31040f746ce0a93bf9c2808b08dcd3fafda0",
+  "source_example_id": "mix_dev_0274+durec_src_0012+hb_0153",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

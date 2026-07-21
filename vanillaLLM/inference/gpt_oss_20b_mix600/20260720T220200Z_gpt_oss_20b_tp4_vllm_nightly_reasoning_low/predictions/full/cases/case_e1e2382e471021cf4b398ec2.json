@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e1e2382e471021cf4b398ec2",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4467778047546744,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_524138be785a1ef804ff56ac",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(destination=\"Berkeley\", departure_date=\"2019-03-11\", location=\"Berkeley\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel? They want trip to Berkeley. Domain likely GetTravel. Slots: destination? location? departure_date? free_entry? good_for_kids? category? They didn't specify. We have destination Berkeley. departure_date March 11. stay one night implies return_date March 12? But GetTravel has departure_date, destination, location, category, free_entry, good_for_kids. We can set destination=\"Berkeley\" (not in enum but location maybe). Use location=\"Berkeley\". departure_date=\"2019-03-11\". No other.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615196,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9a5a4791862035e4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 148,
+      "prompt_tokens": 12203,
+      "prompt_tokens_details": null,
+      "total_tokens": 12351
+    }
+  },
+  "request_sha256": "0f2f37f93065a9ff536d481988c18539dceca05700f7a0e5648620870ee44548",
+  "source_example_id": "mix_dev_0087+durec_src_0532+hb_0096",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

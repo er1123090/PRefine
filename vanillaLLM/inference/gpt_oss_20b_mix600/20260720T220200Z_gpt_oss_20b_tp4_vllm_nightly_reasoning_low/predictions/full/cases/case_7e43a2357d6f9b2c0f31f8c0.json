@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_7e43a2357d6f9b2c0f31f8c0",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.294733445160091,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_88861c409e91715ae20e16f2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"checking\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetBanks recipient_account_type. Past: user asked checking and savings. They used both. Which is preference? In session6 they asked checking then savings. In session18 they used checking. So likely preference is checking. Output: GetBanks(recipient_account_type=\"checking\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615058,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-915c2860fdc96034",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 80,
+      "prompt_tokens": 10103,
+      "prompt_tokens_details": null,
+      "total_tokens": 10183
+    }
+  },
+  "request_sha256": "351a6e160d8ebebe19c4205eae1424ed85323615e01b08de6b30db06d2b39884",
+  "source_example_id": "mix_dev_0153+durec_src_1292+hb_0267",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_558bfe96c1723d57015bc8e0",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4775790320709348,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4a5f8eb7f2e54fc1f0088755",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"New York\", number_of_rooms=\"2\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for hotels. From history: Session 15 user wants hotels in NY, two rooms, smoking allowed. Also earlier session 3: user asked for hotel in San Francisco, no preference. Session 15 shows preference: two rooms, smoking allowed. Also maybe wants price? They asked for price. So preferences: location: New York, number_of_rooms: 2, pets_allowed? not. smoking allowed not in schema. But we can set number_of_rooms. Also maybe average_star? Not. So output GetHotels with location=\"New York\", number_of_rooms=\"2\". Also maybe check_in_date? Not. So final.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614999,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ba55a341d467e898",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 156,
+      "prompt_tokens": 11550,
+      "prompt_tokens_details": null,
+      "total_tokens": 11706
+    }
+  },
+  "request_sha256": "da4143cb4674950fdc558599dbff212e465bab8c6bd74a2b4f96ef0fe6b1ac63",
+  "source_example_id": "mix_dev_0214+durec_src_0550+hb_0018",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_f751e3f6930cffe9baf38089",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 7.334414799697697,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Japanese"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_685cddcba61cce8e890cb030",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Japanese\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-923a121b71adc896",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588454,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-85273ff43d94bffa",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 21,
+      "prompt_tokens": 12959,
+      "prompt_tokens_details": null,
+      "total_tokens": 12980
+    }
+  },
+  "request_sha256": "0fb93eb616fe71fbd7149ac1b5604fd9fcd6edf76c589ffafe3ba3defad5a42f",
+  "source_example_id": "mix_dev_0221+durec_src_0569+hb_0281",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

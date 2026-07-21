@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d0ea3a320f44024d6020c050",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4545289548113942,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d0c778fdf0255dd121ed3e65",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMedia(genre=\"Drama\")",
+          "function_call": null,
+          "reasoning": "We need to infer preference for GetMedia? The user wants info about a media title. We need to output function call with slot values. Which domain? Likely GetMedia with genre? But they didn't specify genre. We need to infer from history: user likes drama movies, music. But no specific title. Maybe they want to search for a media title; we need to guess genre? Could be movie. But domain is GetMedia? Actually GetMedia is for genre. But maybe GetMovies? But they didn't specify. We need to output a function call with inferred slot. We can choose GetMedia with genre \"Drama\" as frequent. So output: GetMedia(genre=\"Drama\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615177,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b980aaf8eea40f42",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 157,
+      "prompt_tokens": 10107,
+      "prompt_tokens_details": null,
+      "total_tokens": 10264
+    }
+  },
+  "request_sha256": "e8ed8bf7329cb3faf3e8b80e8685990d6088ddce8ed96e3ae383094abcc2137f",
+  "source_example_id": "mix_dev_0271+durec_src_1237+hb_0397",
+  "status": "model_no_tool",
+  "target_domain": "GetMedia"
+}

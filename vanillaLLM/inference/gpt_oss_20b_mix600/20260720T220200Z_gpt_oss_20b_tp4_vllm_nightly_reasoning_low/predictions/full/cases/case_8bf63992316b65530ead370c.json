@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8bf63992316b65530ead370c",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.7056619506329298,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_16b8e2001a462b8be7e6e685",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"\", pickup_time=\"\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, pickup_time, shared_ride. User says \"I need a ride and want to check available ride-sharing options.\" No specifics. Use past pattern: default shared_ride true? In session5 they used shared_ride True. Likely default shared_ride True. Destination unknown. Maybe ask? But we must output. Use empty? Probably leave empty. Provide shared_ride=\"True\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615076,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9d10c05966860877",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 122,
+      "prompt_tokens": 11147,
+      "prompt_tokens_details": null,
+      "total_tokens": 11269
+    }
+  },
+  "request_sha256": "29b0b9e43814ebfe88b166c75ace8438c3aa0466bc055bfbe7fb8cbef3470f18",
+  "source_example_id": "mix_dev_0063+durec_src_1014+hb_0442",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

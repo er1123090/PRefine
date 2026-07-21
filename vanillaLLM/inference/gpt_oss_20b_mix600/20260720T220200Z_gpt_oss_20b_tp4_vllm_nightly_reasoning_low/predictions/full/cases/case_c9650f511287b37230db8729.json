@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c9650f511287b37230db8729",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.6817441200837493,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_76f4e5ffb17e9d64e420be6c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"\", pickup_date=\"2023-03-08\", pickup_time=\"12:00\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says couple days, no end date. We can infer dropoff_date maybe March 10? but not specified. We can leave empty. Also car_type? not specified. We can leave empty. So output: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2023-03-08\", pickup_time=\"12:00\") but city enum doesn't include Berlin. So cannot. Maybe we ignore? But must match enum. No Berlin. So cannot. Maybe choose nearest? But must match. So we cannot produce. Maybe choose default? But no. So we should not call? But must produce. Maybe use GetRentalCars with pickup_city empty? but enum required? not required. So we can leave empty. So output: GetRentalCars(pickup_city=\"\", pickup_date=\"2023-03-08\", pickup_time=\"12:00\") but city empty not in enum but optional. We'll output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615166,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-806be6d5becade3b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 245,
+      "prompt_tokens": 11502,
+      "prompt_tokens_details": null,
+      "total_tokens": 11747
+    }
+  },
+  "request_sha256": "d39b76646b5daf005bc001b33fd47aa4135376635ed6d9266d47d4a2ac57f969",
+  "source_example_id": "mix_dev_0051+durec_src_0760+hb_0148",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

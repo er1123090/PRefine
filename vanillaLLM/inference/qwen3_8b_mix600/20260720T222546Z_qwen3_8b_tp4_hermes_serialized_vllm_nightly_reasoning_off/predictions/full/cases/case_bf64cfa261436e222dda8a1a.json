@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_bf64cfa261436e222dda8a1a",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.750848135910928,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Sushi",
+        "location": "San Jose"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_60e48a1ff9306b360367ab0d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Sushi\", \"location\": \"San Jose\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-8e9f1df54d0a8ecc",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588101,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a1001432f4cfe58a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 10698,
+      "prompt_tokens_details": null,
+      "total_tokens": 10727
+    }
+  },
+  "request_sha256": "73dc2a6387275ddc6b081f67d67986f7646cd18a2842741a23d0c627807d172e",
+  "source_example_id": "mix_dev_0326+hb_0461",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

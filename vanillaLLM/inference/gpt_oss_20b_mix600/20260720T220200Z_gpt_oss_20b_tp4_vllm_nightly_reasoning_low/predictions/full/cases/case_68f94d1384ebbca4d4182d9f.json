@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_68f94d1384ebbca4d4182d9f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9194122925400734,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d15872a2dca5efb88a34d57a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(category=\"Museum\", location=\"San Francisco\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel with category maybe \"Performing Arts Venue\" or \"Museum\" or \"Art exhibition\" likely category \"Museum\" or \"Performing Arts Venue\". They didn't specify category. We can infer from past: user asked for attractions, got Historical Landmark. For art exhibition, likely category \"Museum\". So output GetTravel(category=\"Museum\", location=\"San Francisco\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615030,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b04e1193f67aafb4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 97,
+      "prompt_tokens": 9109,
+      "prompt_tokens_details": null,
+      "total_tokens": 9206
+    }
+  },
+  "request_sha256": "f41569431324c737314edd034ec3c91d01fb86755e1e58fe0d10088a62dd1b2b",
+  "source_example_id": "mix_dev_0038+durec_src_0302+hb_0218",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

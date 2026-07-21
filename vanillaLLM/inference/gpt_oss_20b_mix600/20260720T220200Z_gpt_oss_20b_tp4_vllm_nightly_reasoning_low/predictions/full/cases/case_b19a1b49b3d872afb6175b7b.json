@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b19a1b49b3d872afb6175b7b",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4188540866598487,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_65ed2a75d7dbd82b411b8c80",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"San Diego\", check_in_date=\"2019-03-18\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. Slots: location=San Diego, check_in_date=2019-03-18? date format? previous used \"2019-03-01\". So use that. No other preferences. Output format: GetHotels(location=\"San Diego\", check_in_date=\"2019-03-18\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615130,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8c56d882e861fe11",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 93,
+      "prompt_tokens": 9871,
+      "prompt_tokens_details": null,
+      "total_tokens": 9964
+    }
+  },
+  "request_sha256": "040dfb37d9800d508d756f68d70befdc0a7badee3e8360f0aee372d1b0880fb2",
+  "source_example_id": "mix_dev_0112+durec_src_0743+hb_0156",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

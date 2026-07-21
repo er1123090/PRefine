@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d71d2707e020362f287f7c90",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.939954848960042,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_659b75a5724d2040f40b2aa7",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents()",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need city? \"nearby\" implies maybe default city? No preference. Use past pattern: user often asks for events with city. No city given. Maybe default to previous city? Last event was New York. But \"nearby\" ambiguous. Could default to no city? But schema requires city string optional. We can leave empty. Provide no slots. So output: GetEvents()",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615183,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a01a0bfe2e2ecfe0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 96,
+      "prompt_tokens": 8694,
+      "prompt_tokens_details": null,
+      "total_tokens": 8790
+    }
+  },
+  "request_sha256": "92b2c05535cb1bc328023583a2c0d3c6b59369b957a4089baca352742f95e6cd",
+  "source_example_id": "mix_dev_0003+hb_0074",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

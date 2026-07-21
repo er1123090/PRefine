@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a92fb348d9a5ed33805d4dae",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5871368935331702,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d31ccd71e9a71d8d00bcb2dd",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", pickup_time=\"\", shared_ride=\"true\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need slots: destination, number_of_seats, pickup_time, shared_ride. From user: \"I need a ride and want to check available ride-sharing options.\" No specifics. Use patterns: previous ride sharing: destination \"Gallagher Way\", seats 3, shared_ride True. Likely default: shared ride true, seats 1? But pattern: user often wants shared ride. We'll set shared_ride=true, number_of_seats=\"1\", destination unspecified? maybe \"unknown\". We can leave empty? But need values. Use default: destination empty string? Probably set destination=\"\". We'll output with empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615117,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-945dcc7ba6659ede",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 164,
+      "prompt_tokens": 8870,
+      "prompt_tokens_details": null,
+      "total_tokens": 9034
+    }
+  },
+  "request_sha256": "78431e9bda0d1af8f2aa491ea90a0e129bad3f2c73837c0a5e2cc9db26e2549d",
+  "source_example_id": "dev_0217",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

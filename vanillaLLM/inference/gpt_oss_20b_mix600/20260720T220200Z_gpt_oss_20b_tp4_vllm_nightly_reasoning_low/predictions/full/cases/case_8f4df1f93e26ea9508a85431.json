@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8f4df1f93e26ea9508a85431",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7861207341775298,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_9bc5f4f6e568f724c719cbfc",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars()",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No slots given. We infer preferences: from history, user often wants shared ride? but rental car: previous session 9: user wanted standard Camry. Also session 8: no car. So likely wants standard car. Also pickup city? maybe default? We can leave empty. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615081,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-83cef86c8d960a27",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 81,
+      "prompt_tokens": 8785,
+      "prompt_tokens_details": null,
+      "total_tokens": 8866
+    }
+  },
+  "request_sha256": "adef557cc9622e9741f55f7ef7cda90d6601cd277ab5e325cc579335e570f26b",
+  "source_example_id": "dev_0041",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

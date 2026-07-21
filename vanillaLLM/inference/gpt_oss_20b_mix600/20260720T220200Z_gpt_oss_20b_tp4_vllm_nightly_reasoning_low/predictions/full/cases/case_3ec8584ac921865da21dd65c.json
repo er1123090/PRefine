@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3ec8584ac921865da21dd65c",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2973048826679587,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d35f997821a91c9656c9ffcd",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(average_star=\"2\", has_wifi=\"true\", location=\"New York\", number_of_days=\"4\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user booked 1 Hotel Central Park in NY, 1 star? Actually 2 star. They prefer wifi. They booked 4 days. So likely want similar: location maybe New York? But no location specified. We infer preference: wants wifi, maybe 1-2 star? They booked 2 star. So set average_star maybe \"2\". has_wifi true. number_of_days maybe \"4\". location maybe \"New York\". We'll output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614962,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9a1eecde0ec2b64f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 138,
+      "prompt_tokens": 11621,
+      "prompt_tokens_details": null,
+      "total_tokens": 11759
+    }
+  },
+  "request_sha256": "42c4af07b71d8d1ed9d1661d9367aa005d3b4488db46bfade5c8ce0c5421bff3",
+  "source_example_id": "mix_dev_0128+durec_src_0838+hb_0376",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

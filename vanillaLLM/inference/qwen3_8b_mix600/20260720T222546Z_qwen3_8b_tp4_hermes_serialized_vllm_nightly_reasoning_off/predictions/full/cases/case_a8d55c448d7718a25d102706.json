@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_a8d55c448d7718a25d102706",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.792011573910713,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Theme Park",
+        "location": "Portland"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_871be49ea08ad5d4901e9460",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Theme Park\", \"location\": \"Portland\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-b2206719a77c0309",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587958,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aa27d276fe9376db",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 27,
+      "prompt_tokens": 8757,
+      "prompt_tokens_details": null,
+      "total_tokens": 8784
+    }
+  },
+  "request_sha256": "d41949e19a982150221aafe0fa2337721a8abc9191af5b3bb4e081b6cf93f6cb",
+  "source_example_id": "dev_0091",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

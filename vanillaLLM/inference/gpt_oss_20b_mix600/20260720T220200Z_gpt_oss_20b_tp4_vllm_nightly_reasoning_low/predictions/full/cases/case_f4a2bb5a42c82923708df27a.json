@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f4a2bb5a42c82923708df27a",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8185732141137123,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6b2bd4ec5dd4b62cafcb72a3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"San Francisco\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel or GetEvents? Weekend activities. Likely GetTravel with category? They want something to do. Could be GetTravel with location San Francisco, maybe category unspecified. We can infer preference: earlier they asked for events music. But here just general. Use GetTravel with location=\"San Francisco\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615221,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bcc2347e529bb729",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 84,
+      "prompt_tokens": 9327,
+      "prompt_tokens_details": null,
+      "total_tokens": 9411
+    }
+  },
+  "request_sha256": "0ab24e1ce72a39b4da8bd153073fd9b5c4dcf3971c9319bdf73575fa3780d34c",
+  "source_example_id": "mix_dev_0025+durec_src_1190+hb_0163",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

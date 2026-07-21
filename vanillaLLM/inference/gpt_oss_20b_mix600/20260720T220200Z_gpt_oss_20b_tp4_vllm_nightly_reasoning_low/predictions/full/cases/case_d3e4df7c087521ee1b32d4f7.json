@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d3e4df7c087521ee1b32d4f7",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6502269404008985,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_295cb4e21a0d8357fa0a5c14",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses()",
+          "function_call": null,
+          "reasoning": "We need to infer domain. User says \"check bus options for my trip.\" Likely GetBuses. Need slots: origin, destination, departure_date, departure_time, group_size. From history, user often uses shared ride. But bus options: likely need origin and destination. We don't have specifics. Use pattern: user often asks for bus after event. But no context. We infer default? Maybe they want bus options for their trip: we need to guess origin and destination? Could use last known? Last session 16 had bus from Portland to Vancouver. But not sure. We can infer they want bus options: maybe origin and destination unspecified, so we leave empty? But need to provide function call with slots. We can set empty strings. Probably best to call GetBuses with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615179,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a2f0af03ee4a5354",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 177,
+      "prompt_tokens": 12960,
+      "prompt_tokens_details": null,
+      "total_tokens": 13137
+    }
+  },
+  "request_sha256": "35bb3b93d189a184a59c489938cc5d520d739620c82ac63585eb37cb6301b43b",
+  "source_example_id": "mix_dev_0015+durec_src_0969+hb_0384",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

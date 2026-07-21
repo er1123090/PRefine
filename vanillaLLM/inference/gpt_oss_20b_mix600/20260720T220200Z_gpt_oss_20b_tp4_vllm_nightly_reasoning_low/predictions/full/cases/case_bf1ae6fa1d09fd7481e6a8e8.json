@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_bf1ae6fa1d09fd7481e6a8e8",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5357398632913828,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_ab6a11e7ba8b420808edf73c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", pickup_time=\"in 30 minutes\", shared_ride=\"false\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, pickup_time, shared_ride? User didn't specify seats, shared ride. Default? From history, shared ride often true. But not specified. We can assume 1 seat, shared_ride false? But pattern: user often wants shared ride. In session2 they said shared ride. Here no mention. We can set shared_ride=false. pickup_time: half hour from now. We don't have current time. Use placeholder? Probably \"in 30 minutes\". We'll set pickup_time=\"in 30 minutes\". Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615150,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-81e0a06792370313",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 162,
+      "prompt_tokens": 12035,
+      "prompt_tokens_details": null,
+      "total_tokens": 12197
+    }
+  },
+  "request_sha256": "ca5b42058dd3d56e3c3a7b34013ceb412cdf7121121c18ae642e80a2eb08adfe",
+  "source_example_id": "mix_dev_0221+durec_src_0569+hb_0281",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

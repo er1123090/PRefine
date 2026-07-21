@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d2e58770fad54c0a26356cb9",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3831510655581951,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_01f678cc3aec31f72f85aaed",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(number_of_seats=\"3\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, shared_ride, pickup_time maybe. From history, user often wants shared ride, 3 persons. So infer destination unspecified. Probably generic. We can set destination empty? But must provide slot names. We can set destination=\"\". But better to leave omitted. Provide shared_ride=\"True\", number_of_seats=\"3\". No pickup_time. So output: GetRideSharing(number_of_seats=\"3\", shared_ride=\"True\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615178,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-915a47cbe1f587d8",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 130,
+      "prompt_tokens": 8838,
+      "prompt_tokens_details": null,
+      "total_tokens": 8968
+    }
+  },
+  "request_sha256": "8f723e4c2a8eb1e16be5c1269f74e8b7e2f33282b1bd4c6f3ca1f8863f99d1fa",
+  "source_example_id": "mix_dev_0278+hb_0161",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

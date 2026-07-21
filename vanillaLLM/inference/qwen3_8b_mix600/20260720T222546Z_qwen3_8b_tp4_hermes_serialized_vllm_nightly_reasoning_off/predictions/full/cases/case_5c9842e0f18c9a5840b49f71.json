@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "case_id": "case_5c9842e0f18c9a5840b49f71",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.050638313405216,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Music",
+        "city": "San Francisco",
+        "date": "2019-03-13",
+        "event_type": "Rock"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_cab89a2cd9f2d6722296a92a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Music\", \"event_type\": \"Rock\", \"city\": \"San Francisco\", \"date\": \"2019-03-13\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-a88b732b86bda3ca",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587504,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8aad4527f74ca8ca",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 49,
+      "prompt_tokens": 11228,
+      "prompt_tokens_details": null,
+      "total_tokens": 11277
+    }
+  },
+  "request_sha256": "26c213d38418f4e4d8f321ef228832dc7f51d1043e930b847b3bd156a928c632",
+  "source_example_id": "mix_dev_0075+durec_src_1142+hb_0024",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

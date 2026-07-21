@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8f9a6475c537feae2cf0379b",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.08818643912673,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_cf21b566d2e40f6c5232f314",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", pickup_time=\"\", shared_ride=\"true\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. User says \"I need a ride and want to check available ride-sharing options.\" No specifics. Use past pattern: default shared_ride true? In previous, user said fine with shared. We can default shared_ride=true, number_of_seats=1, destination unspecified. Maybe leave empty. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615081,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-98eabf24c52c04c8",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 116,
+      "prompt_tokens": 9686,
+      "prompt_tokens_details": null,
+      "total_tokens": 9802
+    }
+  },
+  "request_sha256": "0c631cdbbd2764eb8b99eb9203aeb7230f2b212deaa1e15b0005b054b4b29b4f",
+  "source_example_id": "mix_dev_0281+hb_0424",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f4ec0ad606207ea2e6430a30",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.006558183580637,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_582ce627db5036dcc8cba219",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"Philadelphia\", average_star=\"3\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user often wants 3-star or 4-star? In session 19 they booked 3-star. In session 9 they booked 3-star. So likely prefers 3-star. Also location unspecified. Maybe default to user's location? Not known. We'll guess location \"Philadelphia\" as recent. So output GetHotels(location=\"Philadelphia\", average_star=\"3\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615221,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a108476b2c68a86f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 106,
+      "prompt_tokens": 10015,
+      "prompt_tokens_details": null,
+      "total_tokens": 10121
+    }
+  },
+  "request_sha256": "d72109ad7a5cd1777703c064a67e57436a0cf5fafc608715dd4688dbc5ba48cd",
+  "source_example_id": "mix_dev_0295+durec_src_0976+hb_0480",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

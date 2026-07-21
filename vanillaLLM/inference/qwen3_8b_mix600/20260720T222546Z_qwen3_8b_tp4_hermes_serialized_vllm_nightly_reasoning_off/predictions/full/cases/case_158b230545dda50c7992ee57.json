@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_158b230545dda50c7992ee57",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 11.429498918354511,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "departure_date": "2019-03-12",
+        "departure_time": "08:00",
+        "destination": "San Francisco",
+        "group_size": "1",
+        "origin": "Los Angeles"
+      },
+      "name": "GetBuses"
+    }
+  ],
+  "pair_id": "pair_881e3c6b192d4718689ed9f9",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"origin\": \"Los Angeles\", \"destination\": \"San Francisco\", \"departure_date\": \"2019-03-12\", \"departure_time\": \"08:00\", \"group_size\": \"1\"}",
+                "name": "GetBuses"
+              },
+              "id": "chatcmpl-tool-8eefefc1888e528e",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784586993,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b0e6e96b42de1ff2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 63,
+      "prompt_tokens": 12075,
+      "prompt_tokens_details": null,
+      "total_tokens": 12138
+    }
+  },
+  "request_sha256": "39846594ef262853627f7fc1922733b16b65c45fa3dc1c71236a143e7ad88adf",
+  "source_example_id": "mix_dev_0063+durec_src_1014+hb_0442",
+  "status": "success",
+  "target_domain": "GetBuses"
+}

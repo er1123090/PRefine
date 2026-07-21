@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b453450e6f66027d2da95542",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6092961207032204,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_98b4a0aa30ae5801cb28a90c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"San Francisco\", destination=\"New York\", departure_date=\"2019-03-07\", flight_class=\"Economy\", airlines=\"Alaska Airlines\", passengers=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history, user often uses Alaska Airlines, economy, from San Francisco to New York on 7th. Likely same. So output: GetFlights(origin=\"San Francisco\", destination=\"New York\", departure_date=\"2023-??\" but we don't know date. Use most frequent: departure_date \"2019-03-07\". We'll output that. passengers maybe \"1\". airline \"Alaska Airlines\". flight_class \"Economy\". return_date maybe none.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615135,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a76c1f723113ea55",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 168,
+      "prompt_tokens": 8803,
+      "prompt_tokens_details": null,
+      "total_tokens": 8971
+    }
+  },
+  "request_sha256": "c56784c84bbc61371acd45eb737aa78c908d0201563a024a91662fb0726e6f02",
+  "source_example_id": "dev_0195",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_27a7906e316da8dc7b23493a",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4017518730834126,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_eefee2a8423d14e9614927b1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Leslie Cheung\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants music. We need GetMusic. Preferences: artist? playback_device? song_name? From history, user likes Leslie Cheung songs. So artist likely Leslie Cheung. No device specified. So output GetMusic(artist=\"Leslie Cheung\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614919,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a571256895738b52",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 78,
+      "prompt_tokens": 7697,
+      "prompt_tokens_details": null,
+      "total_tokens": 7775
+    }
+  },
+  "request_sha256": "841ef8134d997bde262ed382baa61fb2a88543fb2b3207a6311ecaea071aa711",
+  "source_example_id": "mix_durec_src_1251+hb_0090",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

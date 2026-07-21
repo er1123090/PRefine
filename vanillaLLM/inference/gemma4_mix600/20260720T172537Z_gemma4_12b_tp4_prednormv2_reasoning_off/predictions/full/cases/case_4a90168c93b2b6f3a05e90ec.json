@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_4a90168c93b2b6f3a05e90ec",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 13.815461987629533,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "location": "London",
+        "number_of_rooms": "2"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_6f16aa53b60ab1d296261523",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"London\", \"number_of_rooms\": \"2\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-85168867b8085a6a",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569758,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a3e8bef6ce65e94b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 25,
+      "prompt_tokens": 11945,
+      "prompt_tokens_details": null,
+      "total_tokens": 11970
+    }
+  },
+  "request_sha256": "aa9d9109d8c036776d73c0daab56f284a89047ac593f7ad74bec47ce145e70b3",
+  "source_example_id": "mix_dev_0092+durec_src_0594+hb_0451",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_328c173d6800aa83185ecba5",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.035532241687179,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "recipient_account_type": "savings"
+      },
+      "name": "GetBanks"
+    }
+  ],
+  "pair_id": "pair_3105d56f28524ba8c4fc4efe",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"recipient_account_type\": \"savings\"}",
+                "name": "GetBanks"
+              },
+              "id": "chatcmpl-tool-8ae6057492b3f3c4",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587246,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8b99594a2b8cfff2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 24,
+      "prompt_tokens": 11368,
+      "prompt_tokens_details": null,
+      "total_tokens": 11392
+    }
+  },
+  "request_sha256": "30c2074c3ee9ccbdd7cee92b13b99e8b6c20ad1622ace994760ad1183abe4a2a",
+  "source_example_id": "mix_dev_0089+durec_src_0249+hb_0415",
+  "status": "success",
+  "target_domain": "GetBanks"
+}

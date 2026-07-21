@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_9c7233b6e98c77d982f8a4bf",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.9610314397141337,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6c7a52ce0d3f03c44e47791c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"San Jose\", check_in_date=\"2019-03-11\", number_of_days=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels with location Berkeley? but Berkeley not in enum. Maybe GetTravel? but travel domain. They plan trip. Use GetHotels? location not in list. Maybe GetTravel with location Berkeley? not in enum. So maybe GetHotels with location \"San Jose\" close? but not. Maybe GetTravel with location \"San Jose\"? but they said Berkeley. Could use GetHotels with location \"San Jose\" as closest. But better to use GetTravel with location \"San Jose\". I'll output GetTravel(location=\"San Jose\", departure_date=\"2019-03-11\", number_of_days=\"1\") but number_of_days not in schema. So maybe GetHotels with location \"San Jose\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615100,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a826d57d404fd547",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 177,
+      "prompt_tokens": 10544,
+      "prompt_tokens_details": null,
+      "total_tokens": 10721
+    }
+  },
+  "request_sha256": "c4c586cc8f7c69cb73aa8099050f44edf088a43a287a2062f1d8c50229574747",
+  "source_example_id": "mix_dev_0065+durec_src_0412+hb_0408",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

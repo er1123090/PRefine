@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c28698df21c9f8ec7c920107",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7290659844875336,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b1d33314efa4990bf834fec1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"Vallejo\", date=\"2019-03-05\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. Slots: city, date, time? time not in schema. date, city, maybe price_range? not given. So output: GetRestaurants(city=\"Vallejo\", date=\"2019-03-05\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615154,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a759618498a1d548",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 76,
+      "prompt_tokens": 9011,
+      "prompt_tokens_details": null,
+      "total_tokens": 9087
+    }
+  },
+  "request_sha256": "3c24fd807c316f2b74186ba96bd8e228afc255ddfce7667e3f89b0253833b4a7",
+  "source_example_id": "mix_dev_0247+hb_0320",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

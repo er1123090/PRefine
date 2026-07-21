@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_0b53c501bc01f0dd9c0e3262",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 10.88580353371799,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "artist": "Jiong He"
+      },
+      "name": "GetMusic"
+    }
+  ],
+  "pair_id": "pair_cd12c7d7ab84e18aa3cfe74e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"artist\": \"Jiong He\"}",
+                "name": "GetMusic"
+              },
+              "id": "chatcmpl-tool-9ec068a13107336a",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784586863,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-92e88ae15f797b1a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 23,
+      "prompt_tokens": 9261,
+      "prompt_tokens_details": null,
+      "total_tokens": 9284
+    }
+  },
+  "request_sha256": "1d6a7b439d3ef4eca7f5a246a09b20dc484285b676d870a4e038ebcda4fc1f1e",
+  "source_example_id": "mix_durec_src_1187+hb_0418",
+  "status": "success",
+  "target_domain": "GetMusic"
+}

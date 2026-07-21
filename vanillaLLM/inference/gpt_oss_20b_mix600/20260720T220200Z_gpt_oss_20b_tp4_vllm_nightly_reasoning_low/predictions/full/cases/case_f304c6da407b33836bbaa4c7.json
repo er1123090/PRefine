@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f304c6da407b33836bbaa4c7",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.138629105873406,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_7ac419418ba6dbc66418fc42",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2023-03-09\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: origin, destination, departure_date. Also maybe passengers, flight_class, airlines, return_date. Not specified. Use defaults. From history: no preference. Use origin=San Francisco, destination=Seattle, departure_date=2023-03-09? date format? In past calls date strings like \"2019-03-07\". So use \"2023-03-09\". No other slots. Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615219,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-958c04ef264d46aa",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 123,
+      "prompt_tokens": 11115,
+      "prompt_tokens_details": null,
+      "total_tokens": 11238
+    }
+  },
+  "request_sha256": "b3f8f0cb5d4f48554b8fef6c6dc62036812e82946ab5c2e699a7e4b1d7f724f5",
+  "source_example_id": "mix_dev_0032+durec_src_0562+hb_0178",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

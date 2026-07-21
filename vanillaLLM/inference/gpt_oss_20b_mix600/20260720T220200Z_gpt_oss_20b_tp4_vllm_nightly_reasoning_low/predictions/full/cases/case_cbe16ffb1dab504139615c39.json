@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_cbe16ffb1dab504139615c39",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2147169159725308,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6468cf1b4edf2066054d0f48",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"checking\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks. Need recipient_account_type. From history, user used savings and checking. Which preference? In session1 they used savings for balance, then transfer from savings to checking. So likely transfer from savings to checking. So recipient_account_type? The function expects recipient_account_type: checking or savings. For transfer, likely recipient account type is checking. So output GetBanks(recipient_account_type=\"checking\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615170,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ab12b0cd02b0966b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 102,
+      "prompt_tokens": 10275,
+      "prompt_tokens_details": null,
+      "total_tokens": 10377
+    }
+  },
+  "request_sha256": "446783f9030a92590148b8c562d4c4b91ab4ea567862f235a844684ec9dee864",
+  "source_example_id": "mix_dev_0046+durec_src_0054+hb_0194",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

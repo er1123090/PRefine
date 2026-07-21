@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_e96c4edde1e7a2f5ffb608de",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.78628696128726,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Chinese",
+        "city": "New York",
+        "price_range": "moderate"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_3f53594656bf52173a3782ee",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Chinese\", \"city\": \"New York\", \"price_range\": \"moderate\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-8f8422aa86dcd1ee",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588369,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8e1b99be4b327037",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 36,
+      "prompt_tokens": 12522,
+      "prompt_tokens_details": null,
+      "total_tokens": 12558
+    }
+  },
+  "request_sha256": "35c6126f3a948f7da993b3a9799c3c6205c1f4957e6e12cecdb9b320b8c838b3",
+  "source_example_id": "mix_dev_0320+durec_src_0220+hb_0168",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

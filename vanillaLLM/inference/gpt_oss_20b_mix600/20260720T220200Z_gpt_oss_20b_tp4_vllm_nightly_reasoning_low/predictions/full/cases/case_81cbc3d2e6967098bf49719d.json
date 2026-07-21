@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_81cbc3d2e6967098bf49719d",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.11661755759269,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_ba3f094fee5974986ff43249",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for travel domain. Past travel: user booked flights with economy, preferred Southwest, Alaska, Delta. Also bus from Seattle to Portland, group size 3. For travel, likely wants free_entry? Not seen. Maybe wants good_for_kids? Not. So we need to call GetTravel with inferred preferences. No explicit preferences. Maybe default none. So output empty? Probably no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615063,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b8cd007b46797f88",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 97,
+      "prompt_tokens": 9420,
+      "prompt_tokens_details": null,
+      "total_tokens": 9517
+    }
+  },
+  "request_sha256": "1c686c3f6480ea8991f61e5e34767f9a68037858546830be016273ce4e9376e9",
+  "source_example_id": "mix_dev_0084+hb_0276",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

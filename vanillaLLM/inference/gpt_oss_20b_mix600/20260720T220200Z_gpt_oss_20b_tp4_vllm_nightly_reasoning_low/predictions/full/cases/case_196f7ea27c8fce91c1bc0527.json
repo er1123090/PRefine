@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_196f7ea27c8fce91c1bc0527",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.7446386106312275,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e2f39f7a8ebdaf5509e3f0a5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars()",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need slots: car_type, pickup_city, pickup_date, pickup_time, dropoff_date, pickup_location? User wants rent car, no details. Use past pattern: default Standard? In history, user often picks Standard. We'll infer car_type=Standard, pickup_city=?? maybe user's location? Not given. Use default \"San Francisco\"? But no. We can leave empty. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614882,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aa44b0c79f1da72d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 100,
+      "prompt_tokens": 9813,
+      "prompt_tokens_details": null,
+      "total_tokens": 9913
+    }
+  },
+  "request_sha256": "c02b02bed2fd4a64565e4e7babb772b46c534e3d039007ee82fbfa19d06f9938",
+  "source_example_id": "mix_dev_0140+durec_src_0956+hb_0199",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

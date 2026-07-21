@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d45760ab1b4a09817c9c1a65",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8520673727616668,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_caf1dc916d42e02d5336fc12",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history, user often wants cheap? In session7, price moderate? They didn't specify. In session16, they looked for restaurant in Saratoga, but didn't mention price. In session15, they looked for pizza restaurant, no price. So no strong preference. Maybe default none. So output GetRestaurants with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615180,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bde5681b098cfd09",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 88,
+      "prompt_tokens": 9862,
+      "prompt_tokens_details": null,
+      "total_tokens": 9950
+    }
+  },
+  "request_sha256": "3ad127cf8c6e1a80c9caa4502932377900f53c5d648340842eef389b26d0a689",
+  "source_example_id": "mix_dev_0175+durec_src_0112+hb_0240",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

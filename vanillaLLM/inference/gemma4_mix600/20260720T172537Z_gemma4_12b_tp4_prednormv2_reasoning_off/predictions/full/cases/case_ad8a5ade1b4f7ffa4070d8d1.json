@@ -1,0 +1,69 @@
+{
+  "attempts": 1,
+  "case_id": "case_ad8a5ade1b4f7ffa4070d8d1",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.4351062402129173,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {},
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_fac8c9d3008440a81613fe96",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-b8a52cb447d095f5",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784571100,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-95e4cff99f8c92a6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 8,
+      "prompt_tokens": 10445,
+      "prompt_tokens_details": null,
+      "total_tokens": 10453
+    }
+  },
+  "request_sha256": "3a0df060f71d5e3a19d4e0b026b1c43f8b5d830fcbbaf9a7c8090747de5f702f",
+  "source_example_id": "mix_dev_0278+hb_0161",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

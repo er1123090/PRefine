@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c2f0fa6f90ca8d3c5c2284bc",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0893838573247194,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_634cc55387c82ed054b67c73",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need slots: car_type, dropoff_date, pickup_city, pickup_date, pickup_location, pickup_time. User didn't specify. Use preferences: earlier session 13: user rented Standard car from Heathrow. Also earlier session 16: shared ride. For car, likely Standard. No date. We can leave empty. Output format: GetRentalCars(car_type=\"Standard\")? but need all slots? Only include those inferred. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615155,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a6fca8e0d4dd3b08",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 113,
+      "prompt_tokens": 10819,
+      "prompt_tokens_details": null,
+      "total_tokens": 10932
+    }
+  },
+  "request_sha256": "3ce9696d47572e836cda565fa7a834c37eaafbc13bf3853e9c5aecfc341f3eea",
+  "source_example_id": "mix_dev_0163+durec_src_0721+hb_0105",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

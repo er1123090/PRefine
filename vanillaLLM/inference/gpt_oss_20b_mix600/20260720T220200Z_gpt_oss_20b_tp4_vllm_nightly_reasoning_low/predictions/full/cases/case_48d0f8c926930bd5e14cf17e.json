@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_48d0f8c926930bd5e14cf17e",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.1604382963851094,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_267c7b42795b9c92e8274f05",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants hotels. No specifics. Use past preferences: user often wants 3 star? In session15: 3 star. Session13: 5 star. Session2: 4 star. No clear. Maybe default: 3 star? But we can ask? We must output function call. We can choose GetHotels with no params? But schema requires object. We can leave empty. So output GetHotels().\n\n",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614978,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-888c768f2586a3f1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 105,
+      "prompt_tokens": 10819,
+      "prompt_tokens_details": null,
+      "total_tokens": 10924
+    }
+  },
+  "request_sha256": "e9eb4ce81a1aa6d05f804d3aaf6c16f889a522af6bfd4e007821dc235a0ba42c",
+  "source_example_id": "mix_dev_0163+durec_src_0721+hb_0105",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

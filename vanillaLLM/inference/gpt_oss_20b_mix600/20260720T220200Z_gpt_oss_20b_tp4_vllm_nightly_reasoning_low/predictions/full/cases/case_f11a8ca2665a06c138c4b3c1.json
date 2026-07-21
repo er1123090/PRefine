@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f11a8ca2665a06c138c4b3c1",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.01271344255656,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_9f9e01dc2bac041383b4a92e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"Paris\", number_of_rooms=\"2\", average_star=\"3\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user often wants 3 star hotels, 2 rooms, Paris. But current request generic. We infer likely preferences: 3 star, 2 rooms, maybe Paris? But no city. Use most frequent: Paris. Also 3 star. So output GetHotels(location=\"Paris\", number_of_rooms=\"2\", average_star=\"3\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615216,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a55af93ffd001dcf",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 108,
+      "prompt_tokens": 9562,
+      "prompt_tokens_details": null,
+      "total_tokens": 9670
+    }
+  },
+  "request_sha256": "18d1194706445b69cc464e18598aece4ac14bf06cbb32baa66f48b61cd34a150",
+  "source_example_id": "mix_dev_0139+durec_src_0597+hb_0259",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

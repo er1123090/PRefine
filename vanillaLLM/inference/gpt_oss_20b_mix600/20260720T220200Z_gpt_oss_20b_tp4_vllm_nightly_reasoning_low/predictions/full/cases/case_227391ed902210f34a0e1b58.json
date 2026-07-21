@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_227391ed902210f34a0e1b58",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.81767909694463,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_fdb83e4a896902ff4406a442",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2026-03-08\", pickup_time=\"12:00\", car_type=\"Compact\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says couple of days, no end date. We can infer dropoff_date maybe March 10? but not given. We can leave dropoff_date empty. car_type? not specified, default maybe Compact? but pattern: user often picks Compact or Standard. We'll choose Compact. So output: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2026-07-??\" but date March 8th. Use \"2026-07-??\" but we use \"2026-07-??\" Actually current date 2026-07-21. March 8th of next year? Probably 2026-03-08. We'll output that. pickup_time=\"12:00\". car_type=\"Compact\". dropoff_date omitted.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614905,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a0396c251327dd22",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 219,
+      "prompt_tokens": 10287,
+      "prompt_tokens_details": null,
+      "total_tokens": 10506
+    }
+  },
+  "request_sha256": "f170d15426e88fad32237b3d25f020a96819737f469c73e58d73bd725612a033",
+  "source_example_id": "mix_dev_0279+durec_src_0522+hb_0243",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

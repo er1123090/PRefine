@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a62d9c62f0a79f046ba9fcc6",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6551717761904001,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1329cf4061112b59fd2efac3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history, user often wants cheap or moderate? In session5, restaurant not. Session4 music. Session11: user wants wifi. Session5: no. Session11: price_range not specified. Session5: no. Session11: they asked for wifi. So preference: price_range maybe moderate? Not sure. In session5, they didn't specify. In session11, they wanted wifi. So we can set price_range=\"moderate\" and number_of_seats maybe? Not specified. We'll output GetRestaurants with no slots? But need at least one slot? We can include city? Not known. We'll output empty? Probably need at least one slot. We'll guess city=\"New York\" from earlier. But not sure. We'll output GetRestaurants() with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615113,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a58ad9b338cfcdde",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 180,
+      "prompt_tokens": 11748,
+      "prompt_tokens_details": null,
+      "total_tokens": 11928
+    }
+  },
+  "request_sha256": "a445556399c05dbb2b1416c922bbffa3c1312cd792ddd2a8d57ebb2ef6bb9433",
+  "source_example_id": "mix_dev_0132+durec_src_0811+hb_0072",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

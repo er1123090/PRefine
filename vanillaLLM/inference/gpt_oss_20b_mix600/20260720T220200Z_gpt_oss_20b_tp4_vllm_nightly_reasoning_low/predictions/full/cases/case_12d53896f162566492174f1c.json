@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_12d53896f162566492174f1c",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.341560136526823,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_2daafc1b1b4d6235dbb5ecb7",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"San Francisco\", category=\"Indian\", price_range=\"cheap\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. Past: user asked for restaurant in SF, spicy Indian vegetarian, cheap. Also earlier asked for restaurant in SF. So preference: city SF, category Indian? They said spicy Indian vegetarian. Also earlier asked for restaurant in SF. So likely want restaurant in SF. Also maybe price_range cheap. So output GetRestaurants with city=\"San Francisco\", category=\"Indian\", price_range=\"cheap\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614860,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a02d9aeb74abd419",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 113,
+      "prompt_tokens": 10313,
+      "prompt_tokens_details": null,
+      "total_tokens": 10426
+    }
+  },
+  "request_sha256": "beefe2a0d91f70f64c3b6d28582ec5e2892f306801c3885f45e451e8ee5526d8",
+  "source_example_id": "mix_dev_0145+durec_src_0713+hb_0457",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

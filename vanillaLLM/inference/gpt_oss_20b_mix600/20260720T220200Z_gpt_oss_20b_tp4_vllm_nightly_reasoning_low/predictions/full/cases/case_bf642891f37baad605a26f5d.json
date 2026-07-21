@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_bf642891f37baad605a26f5d",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8670396395027637,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6bb342650ba26af46dcc4796",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history, user often chooses economy. No preference for airline. Probably default economy. We don't have origin/destination. We need infer? No. We must output with empty? But schema requires object. We can leave empty. So: GetFlights().",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615151,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-99a43a64d9de1ac6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 89,
+      "prompt_tokens": 10880,
+      "prompt_tokens_details": null,
+      "total_tokens": 10969
+    }
+  },
+  "request_sha256": "edfc844326b39d01aadf940eef5c1149d623ddf7e6cdf8a576492390ff87917e",
+  "source_example_id": "mix_dev_0327+durec_src_0137+hb_0492",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

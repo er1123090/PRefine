@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d2d583b1c77f4a9747473668",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.0379850761964917,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1337534be6c3acb6b31d83e9",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", dropoff_date=\"2019-03-10\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says pick up at noon March 8, keep couple days. So dropoff_date maybe March 10? pickup_time \"12:00\". pickup_city \"Berlin\" but enum includes many US cities, not Berlin. No match. So cannot. Maybe default none. We'll call with pickup_city=\"Berlin\" though not in enum. But must match schema. Maybe choose nearest? None. We can omit pickup_city? but required? not required. We'll set pickup_date=\"2019-03-08\", pickup_time=\"12:00\". dropoff_date maybe \"2019-03-10\". car_type default? none. We'll output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615178,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-83d3715f9335b494",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 200,
+      "prompt_tokens": 11630,
+      "prompt_tokens_details": null,
+      "total_tokens": 11830
+    }
+  },
+  "request_sha256": "cea67d1a4bb3f535ff289e05ee0cfe03661bf8d4c177ed4a28627ae791e454ea",
+  "source_example_id": "mix_dev_0214+durec_src_0550+hb_0018",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

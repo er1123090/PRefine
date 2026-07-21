@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_bba2d7226b4df6dc7c800cb7",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7678806725889444,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d0c778fdf0255dd121ed3e65",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMovies(genre=\"Drama\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants something to watch. Likely movie or media. From history, user likes movies, especially drama, Leslie Cheung, etc. Preference: genre Drama. Also likes movies directed by Garth Davis? But general. So call GetMovies with genre=\"Drama\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615147,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a829cce780653f0c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 77,
+      "prompt_tokens": 10110,
+      "prompt_tokens_details": null,
+      "total_tokens": 10187
+    }
+  },
+  "request_sha256": "5b3f9aa34a15a17002f04afdd3f448b26deae4372ba0be327dfb70a1e9d801f1",
+  "source_example_id": "mix_dev_0271+durec_src_1237+hb_0397",
+  "status": "model_no_tool",
+  "target_domain": "GetMedia"
+}

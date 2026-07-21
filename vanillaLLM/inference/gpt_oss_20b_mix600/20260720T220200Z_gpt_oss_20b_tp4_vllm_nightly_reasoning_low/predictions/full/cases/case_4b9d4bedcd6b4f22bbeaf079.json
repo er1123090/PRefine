@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4b9d4bedcd6b4f22bbeaf079",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1979522136971354,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_8c58af52e61d7aee1ae4ad03",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"checking\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks. Need recipient_account_type. Past: user checked savings and checking. For transfer, likely from savings to checking? In session6 they did transfer from savings to checking. So preference: recipient_account_type=\"savings\" or \"checking\"? They transferred from savings to checking. So recipient account type is checking? Actually they said transfer from savings to checking. So recipient account type is checking. So output GetBanks(recipient_account_type=\"checking\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614982,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a819e591bd585790",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 112,
+      "prompt_tokens": 9749,
+      "prompt_tokens_details": null,
+      "total_tokens": 9861
+    }
+  },
+  "request_sha256": "2acd5000f3de4c35fa791febe8a35ca79058233f5b5e5b8a0c87777d70b3bfef",
+  "source_example_id": "mix_dev_0133+durec_src_0680+hb_0036",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2af00cc03a38527f38c29b9e",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.552719655446708,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_cd07f232bb0f22e6f27d2c46",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(category=\"Nature Preserve\", free_entry=\"True\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User says planning a trip and want to explore travel options. We need to output a function call. Which domain? Travel options: likely GetTravel. Need slots: category, departure_date, destination, free_entry, good_for_kids, location. From history: user likes nature preserve, free entry, good for kids? In session7: nature preserve, free entry. Also likes museums. But travel options generic. We can infer preference: free_entry true, good_for_kids maybe true? Not sure. Destination unspecified. Maybe default none. Provide GetTravel with free_entry=\"True\". Also maybe category \"Nature Preserve\" or \"Museum\". But user wants explore travel options, no specific. We can set category=\"Nature Preserve\" as preference. Also location unspecified. We'll output GetTravel(category=\"Nature Preserve\", free_entry=\"True\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614924,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a524bf7d92d3eb14",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 197,
+      "prompt_tokens": 9788,
+      "prompt_tokens_details": null,
+      "total_tokens": 9985
+    }
+  },
+  "request_sha256": "5153a09765dc1a7f312e4fe14f1b1fa15f2b8f014169c50f2e429f3edb388da0",
+  "source_example_id": "mix_dev_0305+durec_src_0754+hb_0088",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

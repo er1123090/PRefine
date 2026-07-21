@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_10a2a60c4c23d6733e1e8b9f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.1336057605221868,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1124308f8ac4bc7755e8cf46",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "Travel(destination=\"Berkeley\", departure_date=\"2019-03-11\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: category? free_entry? good_for_kids? location? destination? departure_date? We have destination Berkeley (city). In schema location enum includes \"San Jose\" but not Berkeley. But maybe destination. Use destination=\"Berkeley\". departure_date=\"2019-03-11\". duration one night implies number_of_days? not in schema. So just provide destination and departure_date. Output format: Travel(destination=\"Berkeley\", departure_date=\"2019-03-11\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614851,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bc42428fdd0c10e6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 129,
+      "prompt_tokens": 10393,
+      "prompt_tokens_details": null,
+      "total_tokens": 10522
+    }
+  },
+  "request_sha256": "e04335628ef9482c7fa0a7bfecc7821eae340dfcc92112b10d2d683ec4944f37",
+  "source_example_id": "mix_dev_0196+durec_src_0523+hb_0029",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

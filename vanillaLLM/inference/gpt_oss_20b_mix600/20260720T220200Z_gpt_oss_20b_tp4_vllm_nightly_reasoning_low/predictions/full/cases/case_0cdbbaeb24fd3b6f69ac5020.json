@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0cdbbaeb24fd3b6f69ac5020",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.960807240568101,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c19ae860db5d7d9a61a0cad8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2024-03-08\", pickup_time=\"12:00\", car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, car_type? user didn't specify car_type. default? maybe Standard? Past pattern: user often picks Standard. We'll set car_type=\"Standard\". pickup_city \"Berlin\" but enum includes only US cities. No Berlin. So cannot match. Maybe use pickup_city as \"Berlin\" but not in enum. We must still output. Probably use \"Berlin\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614838,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9b67c98accd05d4d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 130,
+      "prompt_tokens": 8155,
+      "prompt_tokens_details": null,
+      "total_tokens": 8285
+    }
+  },
+  "request_sha256": "ed80de1aa0ad3dc92079abe2c120e9b4620cf6bfd4f91d32cf04d0fa431f24a9",
+  "source_example_id": "mix_dev_0160+durec_src_0274",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

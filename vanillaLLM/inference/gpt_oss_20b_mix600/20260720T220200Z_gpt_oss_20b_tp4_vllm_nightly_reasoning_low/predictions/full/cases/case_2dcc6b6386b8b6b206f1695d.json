@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2dcc6b6386b8b6b206f1695d",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.2545023700222373,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_55f71128ccd98ad1fb6685e8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"Los Angeles\", destination=\"Denver\", departure_date=\"2026-03-12\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need origin, destination, departure_date. Also maybe passengers? Not given. Use defaults. So output: GetFlights(origin=\"Los Angeles\", destination=\"Denver\", departure_date=\"2026-07-??\" but user said March 12th. Year? Assume current year 2026. So \"2026-03-12\". No passengers. So: GetFlights(origin=\"Los Angeles\", destination=\"Denver\", departure_date=\"2026-03-12\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614930,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9f38587264c9178b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 130,
+      "prompt_tokens": 10615,
+      "prompt_tokens_details": null,
+      "total_tokens": 10745
+    }
+  },
+  "request_sha256": "ee7dc36c95ba372ba4e0faeab38731a6a48b8eefd87b96130127fb7ff9819bc0",
+  "source_example_id": "mix_dev_0127+durec_src_0622+hb_0200",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

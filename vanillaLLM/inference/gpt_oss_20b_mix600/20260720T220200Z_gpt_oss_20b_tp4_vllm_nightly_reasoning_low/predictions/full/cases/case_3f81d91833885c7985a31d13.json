@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3f81d91833885c7985a31d13",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3810296645388007,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e4fb7b8fe17d2e55d386b85c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetHotels. From history: user booked 2 rooms in Paris, 1 room in Sydney 1 star, 1 room in London 5 star. Preferences: maybe likes 1-5 stars? No pattern. Maybe prefers no wifi? In Sydney hotel had no wifi. In London had no smoking. Not consistent. Probably no preference. So output empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614964,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-86ad7a6d47f80a17",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 93,
+      "prompt_tokens": 11306,
+      "prompt_tokens_details": null,
+      "total_tokens": 11399
+    }
+  },
+  "request_sha256": "9e94a25dc5cf224e054c8641b60ebadf3983d5a20200c29e619deda846dbfd29",
+  "source_example_id": "mix_dev_0109+durec_src_0404+hb_0248",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

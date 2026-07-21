@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_08651c340a517bc669bede02",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.54367178119719,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b2a10778d040fa35051b483d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Berkeley\", departure_date=\"2019-03-11\", destination=\"Berkeley\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel? They want trip to Berkeley. Likely GetTravel with location Berkeley? But schema location enum includes many cities but not Berkeley. So maybe GetHotels? They want short trip one night. Could be GetHotels with location \"Berkeley\"? Not in enum. Maybe GetTravel with location \"Berkeley\" not allowed. Maybe GetHotels with location? Not in enum. Maybe GetHomes? No. Maybe GetTravel with location not in enum? We must choose domain that matches. None match Berkeley. Maybe GetTravel with location \"Berkeley\" but not in enum. We could omit location? But need slot. Maybe choose GetTravel with location omitted. But we need to output something. Probably GetTravel with location \"Berkeley\" ignoring enum.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614821,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b450c331bb9962ad",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 186,
+      "prompt_tokens": 9106,
+      "prompt_tokens_details": null,
+      "total_tokens": 9292
+    }
+  },
+  "request_sha256": "49fba8e88b77f2eca1fcb7660965a2e4b2ca3b5ea003cd52cb234a900605ae97",
+  "source_example_id": "mix_dev_0150+hb_0004",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

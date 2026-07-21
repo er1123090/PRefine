@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "case_id": "case_e88b3d0339f9df4e6b3af2f3",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.6392733165994287,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "39145 Farwell Drive",
+        "number_of_seats": "1",
+        "pickup_time": "30 minutes from now",
+        "shared_ride": false
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_9384693b5ac8f0cbea28ab48",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"39145 Farwell Drive\", \"pickup_time\": \"30 minutes from now\", \"number_of_seats\": \"1\", \"shared_ride\": false}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-b6a6a1ac0ab3a6b9",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588366,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8aa05ed71ed253f2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 56,
+      "prompt_tokens": 13396,
+      "prompt_tokens_details": null,
+      "total_tokens": 13452
+    }
+  },
+  "request_sha256": "e25d25b90350bf79f14cc5778505187f6b71efd25f15218f9caeb861bb363e50",
+  "source_example_id": "mix_dev_0266+durec_src_0131+hb_0167",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

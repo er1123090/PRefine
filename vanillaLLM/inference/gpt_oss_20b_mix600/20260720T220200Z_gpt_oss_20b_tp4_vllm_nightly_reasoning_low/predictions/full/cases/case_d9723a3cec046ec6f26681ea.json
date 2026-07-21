@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d9723a3cec046ec6f26681ea",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5586517294868827,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b704ec58321fbaeb9e39f604",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2023-03-08\", pickup_time=\"12:00\", dropoff_date=\"2023-03-10\", car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says couple days, no end date. We infer maybe 2 days: March 8 to March 10. pickup_time noon. car_type default? not specified. We'll set car_type=\"Standard\" as common. Output format: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2023-03-08\", pickup_time=\"12:00\", dropoff_date=\"2023-03-10\", car_type=\"Standard\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615186,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a3b525796b9d7ba6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 165,
+      "prompt_tokens": 10682,
+      "prompt_tokens_details": null,
+      "total_tokens": 10847
+    }
+  },
+  "request_sha256": "500f13f58daf587ce1e8d1d1f615a3eaf4cadb63e77ccf3ff80bcadf3edd9e27",
+  "source_example_id": "mix_dev_0107+durec_src_0236+hb_0188",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

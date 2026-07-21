@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_78c5f36607c26f65d1b201dc",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.4351659500971437,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3bfb871e9cea560916b4ca8c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Seattle\", pickup_date=\"2019-03-11\", pickup_time=\"13:30\", dropoff_date=\"2019-03-13\", car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetRentalCars. From history: user booked Standard car from Seattle-Tacoma International Airport March 11-13. Also earlier asked for rental car from Seattle. No preference on car_type? He chose Standard. Also earlier asked for compact Bolt from Santa Fe Depot. So preferences: car_type maybe Standard or Compact? He booked Standard. So likely Standard. Also pickup_city: Seattle. pickup_date: March 11. dropoff_date: March 13. pickup_time: 1:30 pm. So output: GetRentalCars(pickup_city=\"Seattle\", pickup_date=\"2019-03-11\", pickup_time=\"13:30\", dropoff_date=\"2019-03-13\", car_type=\"Standard\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615051,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-87279d63e870aa44",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 207,
+      "prompt_tokens": 11621,
+      "prompt_tokens_details": null,
+      "total_tokens": 11828
+    }
+  },
+  "request_sha256": "4997c26b4ae65d8c964103c6bc8ac54d1aeec909c4c04968ecaad57dcfac9a7a",
+  "source_example_id": "mix_dev_0128+durec_src_0838+hb_0376",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

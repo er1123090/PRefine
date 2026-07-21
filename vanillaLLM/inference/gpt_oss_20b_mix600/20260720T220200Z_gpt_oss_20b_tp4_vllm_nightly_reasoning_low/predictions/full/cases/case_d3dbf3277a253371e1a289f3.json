@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d3dbf3277a253371e1a289f3",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9800866236910224,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_7d96146d260e25478a21c7cd",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need slots: car_type, pickup_city, pickup_date, pickup_time, dropoff_date, pickup_location? From history, user wants options, no specifics. We infer preferences: user previously booked standard car. So car_type=Standard. pickup_city likely user's location? Not given. Maybe default to user's city? No. We can leave empty. But need at least some slots. Provide empty strings.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615179,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-80dfe8b1cc487866",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 105,
+      "prompt_tokens": 10573,
+      "prompt_tokens_details": null,
+      "total_tokens": 10678
+    }
+  },
+  "request_sha256": "2f893fe1aa54642e9c0320ce5845c378189c4180bd4b2607c22605ee133e790f",
+  "source_example_id": "mix_dev_0204+durec_src_0227+hb_0066",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

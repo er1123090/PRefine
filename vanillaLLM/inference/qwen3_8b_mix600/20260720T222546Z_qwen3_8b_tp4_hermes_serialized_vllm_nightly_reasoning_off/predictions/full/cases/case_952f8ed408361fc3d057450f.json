@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_952f8ed408361fc3d057450f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.409633121453226,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "39145 Farwell Drive",
+        "pickup_time": "in about half an hour"
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_48b2e9ef2d22ffecfe56f04f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"39145 Farwell Drive\", \"pickup_time\": \"in about half an hour\"}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-98547eacb07aec50",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587836,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b197422726e9dc69",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 40,
+      "prompt_tokens": 11485,
+      "prompt_tokens_details": null,
+      "total_tokens": 11525
+    }
+  },
+  "request_sha256": "b40532528613f788c3a3d2690fbe748fc5aa38e08627fad93743d9c35ca55441",
+  "source_example_id": "mix_dev_0065+durec_src_0412+hb_0408",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

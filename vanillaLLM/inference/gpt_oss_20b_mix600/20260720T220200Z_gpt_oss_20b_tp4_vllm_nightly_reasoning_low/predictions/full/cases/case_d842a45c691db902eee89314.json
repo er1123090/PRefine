@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d842a45c691db902eee89314",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7141827754676342,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_860a8a954568a2d4a88eb30b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"San Jose\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. No preferences given. From history, user likes tacos in San Jose. Also earlier they searched restaurants in San Jose. So likely prefer San Jose. Also maybe price_range moderate? Not sure. We'll set city=\"San Jose\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615185,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b6dd24fbb0425188",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 71,
+      "prompt_tokens": 9062,
+      "prompt_tokens_details": null,
+      "total_tokens": 9133
+    }
+  },
+  "request_sha256": "1a2178316536bac2391b8ba9bb28462ea8e87fe3301df4d98727932c129a499a",
+  "source_example_id": "mix_dev_0150+hb_0004",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

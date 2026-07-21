@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2e4a7d5676662d6cf9e09026",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6576312649995089,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4f6866539da1cf84d87c5857",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants restaurant. No specifics. From history, user often chooses French moderate, Korean BBQ, etc. But no pattern. Maybe default: no preference. But we can infer from past: user searched French in SFO, moderate price. Also Korean BBQ in Concord. No strong preference. We can leave slots empty. So call GetRestaurants with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614932,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b31f32c9c8d001f1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 91,
+      "prompt_tokens": 10684,
+      "prompt_tokens_details": null,
+      "total_tokens": 10775
+    }
+  },
+  "request_sha256": "201948f6f13e6983235df029b64edb3e1cba232a977a102d4a4160f77d0c812b",
+  "source_example_id": "mix_dev_0212+durec_src_0515+hb_0273",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "case_id": "case_dbdd253f898b0948e9ced524",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.131646249443293,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Music",
+        "free_entry": false,
+        "good_for_kids": true,
+        "location": "New York"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_53da8dcce4fe49a6894f31c2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Music\", \"location\": \"New York\", \"free_entry\": false, \"good_for_kids\": true}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-9a618a685980edaa",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588285,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-83b87e7cf2a7d4bf",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 41,
+      "prompt_tokens": 11718,
+      "prompt_tokens_details": null,
+      "total_tokens": 11759
+    }
+  },
+  "request_sha256": "d00c08cf50f086057152498bdd2f777bc9d357fb157db7e164b1694962b5c8b1",
+  "source_example_id": "mix_dev_0163+durec_src_0721+hb_0105",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

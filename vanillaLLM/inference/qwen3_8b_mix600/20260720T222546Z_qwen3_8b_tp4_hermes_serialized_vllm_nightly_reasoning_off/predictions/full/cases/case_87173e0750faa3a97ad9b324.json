@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_87173e0750faa3a97ad9b324",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.490374772809446,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "Galeto Brazilian Steakhouse",
+        "number_of_seats": "1",
+        "shared_ride": true
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_197d0f10ab0fa8e922c4bca6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"Galeto Brazilian Steakhouse\", \"number_of_seats\": \"1\", \"shared_ride\": true}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-aeb001cc7e5db57a",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587750,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b3b8ee370bf935a5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 43,
+      "prompt_tokens": 10637,
+      "prompt_tokens_details": null,
+      "total_tokens": 10680
+    }
+  },
+  "request_sha256": "7759d4470d9e69c41a17222f891c1bdbd652016730663f03244ac86d9f0eb7f6",
+  "source_example_id": "mix_dev_0133+durec_src_0680+hb_0036",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

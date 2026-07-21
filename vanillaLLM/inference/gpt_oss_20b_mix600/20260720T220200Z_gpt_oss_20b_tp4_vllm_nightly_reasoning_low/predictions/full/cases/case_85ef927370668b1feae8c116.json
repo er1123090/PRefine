@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_85ef927370668b1feae8c116",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.5201760251075029,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b39ca1c92a74f68c89a11118",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(playback_device=\"phone\")",
+          "function_call": null,
+          "reasoning": "We need GetMusic with playback_device phone. Also song_name unspecified. So leave empty? schema requires artist, playback_device, song_name optional. Provide playback_device=\"phone\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615070,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8e6c7813596b32b1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 53,
+      "prompt_tokens": 10762,
+      "prompt_tokens_details": null,
+      "total_tokens": 10815
+    }
+  },
+  "request_sha256": "c493046b340799e6f2ab7719a8d82b5cb4afcf3a79cbe476a076d84a72448195",
+  "source_example_id": "mix_dev_0272+durec_src_0538+hb_0344",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

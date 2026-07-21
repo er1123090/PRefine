@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3c8059224b0ed467b822b84b",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6772319879382849,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_5675e83476fda7a938efebfd",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Downtown Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says \"just for a couple of days\" no exact dropoff. We can infer maybe 2 days: dropoff March 10. Use pickup_date 2019-03-08, pickup_time \"12:00\". car_type default? not specified. We'll leave empty. Output format: GetRentalCars(pickup_city=\"Downtown Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614958,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b4bc0d57b0460d97",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 150,
+      "prompt_tokens": 7891,
+      "prompt_tokens_details": null,
+      "total_tokens": 8041
+    }
+  },
+  "request_sha256": "f76d3bf4d2c1a024391ac9ddb54e6367f61d5d90d70aa053fd11edd3335c00c3",
+  "source_example_id": "mix_dev_0164+hb_0217",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

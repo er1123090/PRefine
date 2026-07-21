@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_42677fcfa45654db91083e3e",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.6155267572030425,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "car_type": "Standard",
+        "dropoff_date": "2019-03-14",
+        "pickup_date": "2019-03-11",
+        "pickup_location": "Gatwick International Airport",
+        "pickup_time": "19:30"
+      },
+      "name": "GetRentalCars"
+    }
+  ],
+  "pair_id": "pair_df6463a21b1c2767c2c6850d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"car_type\": \"Standard\", \"pickup_date\": \"2019-03-11\", \"pickup_location\": \"Gatwick International Airport\", \"pickup_time\": \"19:30\", \"dropoff_date\": \"2019-03-14\"}",
+                "name": "GetRentalCars"
+              },
+              "id": "chatcmpl-tool-8ab9c1ab955d481c",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587340,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-99be19a6c5cb3b77",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 78,
+      "prompt_tokens": 11058,
+      "prompt_tokens_details": null,
+      "total_tokens": 11136
+    }
+  },
+  "request_sha256": "66c14de6cf5e72b72fe5385b9adc7013da75369e478e32fedf008814b620eccc",
+  "source_example_id": "mix_dev_0148+durec_src_0763+hb_0478",
+  "status": "success",
+  "target_domain": "GetRentalCars"
+}

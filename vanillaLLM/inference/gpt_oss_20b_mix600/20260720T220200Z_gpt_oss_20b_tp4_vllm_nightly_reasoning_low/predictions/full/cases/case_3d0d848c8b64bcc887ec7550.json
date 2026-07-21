@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3d0d848c8b64bcc887ec7550",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.9693713868036866,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_ba88255a542567ee2d26a59b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(average_star=\"3\", number_of_rooms=\"2\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetHotels. From history: user booked 2 rooms at 4-star hotel in Paris. Also earlier booked 2 rooms at 3-star in Toronto. No explicit preference for star rating. But pattern: when asked for hotels, user wants 2 rooms. Also earlier: \"I would like to find a three star hotel in the area, I would need two rooms.\" So preference: average_star=\"3\" and number_of_rooms=\"2\". Also location unspecified now. So output GetHotels with those slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614959,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9e65f631bbcd897d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 134,
+      "prompt_tokens": 9889,
+      "prompt_tokens_details": null,
+      "total_tokens": 10023
+    }
+  },
+  "request_sha256": "b1c462ea1dc91b7efe3c4d88c2d22b8b1eb0bc5fe72c6583b31e9f316dd63cf8",
+  "source_example_id": "mix_dev_0302+durec_src_0301+hb_0035",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

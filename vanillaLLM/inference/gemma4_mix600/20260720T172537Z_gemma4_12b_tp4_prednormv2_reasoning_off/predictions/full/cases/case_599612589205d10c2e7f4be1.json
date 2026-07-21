@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_599612589205d10c2e7f4be1",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 15.967354552820325,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "check_in_date": "2019-03-11",
+        "location": "Berkeley",
+        "number_of_days": "1"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_d0f0d8d12c868cdad6e5437b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"check_in_date\": \"2019-03-11\", \"location\": \"Berkeley\", \"number_of_days\": \"1\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-812a25f9f1132161",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569947,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-82074e0097c90b7b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 44,
+      "prompt_tokens": 12812,
+      "prompt_tokens_details": null,
+      "total_tokens": 12856
+    }
+  },
+  "request_sha256": "2c0d1b953c76ea478d3a0368c583b4769368aff371d45443377c0a7c16953aab",
+  "source_example_id": "mix_dev_0108+durec_src_1278+hb_0340",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

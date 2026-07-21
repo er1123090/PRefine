@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ba7e790a2d6cfa4c6c3a766f",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.236368104815483,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3f4425ce0671ec03affab271",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(genre=\"Pop\", playback_device=\"Kitchen speaker\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User says \"I want to listen to some music.\" No specifics. We need to output a function call for GetMusic with inferred slots. From history, user likes music, often pop, comedy movies. They listened to \"Boy In The Bubble\" pop, \"Run Toward the Future\" etc. Likely prefers pop. Playback device? They used kitchen speaker. So guess genre pop, playback_device kitchen speaker. No song_name. So output GetMusic(genre=\"Pop\", playback_device=\"Kitchen speaker\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615145,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b8f67590d26c4516",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 132,
+      "prompt_tokens": 11185,
+      "prompt_tokens_details": null,
+      "total_tokens": 11317
+    }
+  },
+  "request_sha256": "e65a206875ac48095965808c766e88a549f39f843374a6d8aa5f5b71460da2dc",
+  "source_example_id": "mix_dev_0179+durec_src_0767+hb_0321",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_5e1283b29ee4d638afe4b40b",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4642543150112033,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_23867c3052b2a9b04e073e7c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(price_range=\"cheap\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetRestaurants. From history: user often wants economical, cheap. Also likes vegetarian? In session10, they chose Chevalier, but vegetarian not available. In session14, they chose World Gourmet, rating 3.3, unlimited. They didn't specify price. In session2, they chose economical. So likely preference: price_range=\"cheap\" or \"moderate\". Also city: often Concord, Lafayette, Fremont. No city specified now. We can default? Maybe no slot. But we need to output function call with inferred slots. We can include price_range=\"cheap\". Also maybe category? Not specified. So output: GetRestaurants(price_range=\"cheap\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615014,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a6b4f8f6811ddc17",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 158,
+      "prompt_tokens": 9933,
+      "prompt_tokens_details": null,
+      "total_tokens": 10091
+    }
+  },
+  "request_sha256": "77bae826aa7691bedd61ccae3d320f8e8384fd5b91aa23d8e41c9beac88e2957",
+  "source_example_id": "mix_dev_0219+hb_0318",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

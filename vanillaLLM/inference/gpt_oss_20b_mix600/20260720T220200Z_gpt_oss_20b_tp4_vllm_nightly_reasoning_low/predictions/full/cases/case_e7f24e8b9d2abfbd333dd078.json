@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e7f24e8b9d2abfbd333dd078",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.516716473735869,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_095f5c6f131d9200c99fe064",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"\", pickup_time=\"\", shared_ride=True)",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. User says \"I need a ride and want to check available ride-sharing options.\" No specifics. Use past patterns: earlier user used shared ride True. Likely default shared_ride True? But we need infer. Maybe default shared_ride False? In session10 they set shared_ride True. But no preference. We can leave empty? But need values. We can set shared_ride=True as common. Destination unknown. Maybe leave empty? But must provide? We can set destination=\"\"? Probably best to set shared_ride=True, others empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615206,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b012bb92dfb27cea",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 162,
+      "prompt_tokens": 10312,
+      "prompt_tokens_details": null,
+      "total_tokens": 10474
+    }
+  },
+  "request_sha256": "478d9aef7d3ed4c1cc127d84a6527c133f43847b313c29224d0368fbf7fbc156",
+  "source_example_id": "mix_dev_0145+durec_src_0713+hb_0457",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

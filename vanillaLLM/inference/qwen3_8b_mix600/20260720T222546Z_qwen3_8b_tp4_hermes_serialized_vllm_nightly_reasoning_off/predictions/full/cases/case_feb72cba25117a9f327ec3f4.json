@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_feb72cba25117a9f327ec3f4",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.192809614352882,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "city": "Vallejo",
+        "date": "2019-03-05",
+        "time": "18:15"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_52447184dec8c2d2a1d7cdce",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"city\": \"Vallejo\", \"date\": \"2019-03-05\", \"time\": \"18:15\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-ab19b5f79b21726c",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588499,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-acb917fdd779f0dc",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 48,
+      "prompt_tokens": 9853,
+      "prompt_tokens_details": null,
+      "total_tokens": 9901
+    }
+  },
+  "request_sha256": "e91a0cbb44d13ad947fb85767e38fb0b4f5e159708366f845a2184094d41f2ed",
+  "source_example_id": "dev_0256",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

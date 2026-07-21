@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_94d450f78b00ca54ee28ba06",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0330276219174266,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_63c9bef0103e8929af84cd72",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Standard\", pickup_city=\"Concord\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need slots: car_type, pickup_city, pickup_date, pickup_time, dropoff_date? user wants options. We infer preferences: earlier they used Standard car, pickup from Concord. So likely car_type=Standard, pickup_city=Concord. No date/time given. We can leave empty. Output format: GetRentalCars(car_type=\"Standard\", pickup_city=\"Concord\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615090,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a3df6ed218b2160b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 107,
+      "prompt_tokens": 10790,
+      "prompt_tokens_details": null,
+      "total_tokens": 10897
+    }
+  },
+  "request_sha256": "a28ffc2c372ac85fbfa3c9d0402da12b8cd8bed2bccb8e878b05c9f6350cb6c5",
+  "source_example_id": "mix_dev_0029+durec_src_0681+hb_0427",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

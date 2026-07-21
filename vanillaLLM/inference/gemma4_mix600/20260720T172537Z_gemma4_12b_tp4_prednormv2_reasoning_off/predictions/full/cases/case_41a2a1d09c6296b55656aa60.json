@@ -1,0 +1,69 @@
+{
+  "attempts": 1,
+  "case_id": "case_41a2a1d09c6296b55656aa60",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 8.424623957835138,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {},
+      "name": "GetFlights"
+    }
+  ],
+  "pair_id": "pair_a141c80f68c669ab679615e2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{}",
+                "name": "GetFlights"
+              },
+              "id": "chatcmpl-tool-8bbf848863a8f209",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569652,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a34885c531a3c7a0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 8,
+      "prompt_tokens": 13421,
+      "prompt_tokens_details": null,
+      "total_tokens": 13429
+    }
+  },
+  "request_sha256": "cbbe2cea45201ce68fa90276279af1e2429262548a620fb9a976690462da92a6",
+  "source_example_id": "mix_dev_0103+durec_src_0806+hb_0319",
+  "status": "success",
+  "target_domain": "GetFlights"
+}

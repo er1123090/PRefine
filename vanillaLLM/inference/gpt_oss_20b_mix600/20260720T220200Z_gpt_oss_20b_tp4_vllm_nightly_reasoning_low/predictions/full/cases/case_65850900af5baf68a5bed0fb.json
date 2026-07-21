@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_65850900af5baf68a5bed0fb",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.9287685742601752,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_621d2d529d22a89b2133138e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says couple of days, no end date. We infer maybe 2 days. pickup_date 2019-03-08, pickup_time 12:00. pickup_city \"Berlin\" but domain only has cities list includes Berlin? list: Anaheim, Atlanta, Chicago, Concord, Fremont, Las Vegas, London, Long Beach, Los Angeles, Mexico City, Nairobi, New York, Paris, Philadelphia, Phoenix, Portland, Sacramento, San Diego, San Francisco, Seattle, Vancouver, Walnut Creek, Washington. Berlin not in list. So cannot. Maybe default? We must still call with available values. We can set pickup_city to \"Berlin\" though not in enum; but schema requires enum. We must choose closest? maybe \"London\" or \"Paris\". But user says Berlin. We might set pickup_city to \"Berlin\" ignoring enum? but must follow schema. Maybe we set pickup_city to \"Berlin\" but it's invalid. Could set to \"London\" as closest. But user explicitly Berlin. We could set pickup_city to \"Berlin\" and hope system accepts. I'll set pickup_city=\"Berlin\". dropoff_date maybe 2019",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615025,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-928577428b25006c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 256,
+      "prompt_tokens": 10923,
+      "prompt_tokens_details": null,
+      "total_tokens": 11179
+    }
+  },
+  "request_sha256": "feda5e5fded64c8f7ccb592f91a365d9a3307e28d1e99c4ec93bb0d4bdb20587",
+  "source_example_id": "mix_dev_0202+durec_src_0329+hb_0315",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

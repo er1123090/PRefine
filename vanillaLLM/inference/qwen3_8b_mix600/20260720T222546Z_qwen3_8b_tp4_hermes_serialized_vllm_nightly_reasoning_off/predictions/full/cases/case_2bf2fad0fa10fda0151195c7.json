@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_2bf2fad0fa10fda0151195c7",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 7.055879374034703,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Sports",
+        "city": "Los Angeles",
+        "event_type": "American Football"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_3f51150e251b54c5e286e247",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Sports\", \"city\": \"Los Angeles\", \"event_type\": \"American Football\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-a29a2fbcb72eac32",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587187,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-820e9f194d984f28",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 35,
+      "prompt_tokens": 12074,
+      "prompt_tokens_details": null,
+      "total_tokens": 12109
+    }
+  },
+  "request_sha256": "4c852115d1e58a0515929095edc180d009858b8ecb20505d79d081c4898133fd",
+  "source_example_id": "mix_dev_0063+durec_src_1014+hb_0442",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

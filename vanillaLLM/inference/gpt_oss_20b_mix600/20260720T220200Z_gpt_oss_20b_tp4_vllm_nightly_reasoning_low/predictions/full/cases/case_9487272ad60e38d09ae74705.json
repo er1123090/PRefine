@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_9487272ad60e38d09ae74705",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2036137375980616,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_fbf621e22af7834f1a56fd95",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"United Airlines\", flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetFlights. From history: user booked flights with United Airlines, economy, from London to New York, etc. Also earlier flight from London to Atlanta with American Airlines. They prefer United? In session 11 they wanted United. Also earlier they didn't specify airline. So likely preference: airlines=United Airlines, flight_class=Economy. Also passengers? Not specified. So output: GetFlights(airlines=\"United Airlines\", flight_class=\"Economy\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615090,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-975ecbaeb3b08c17",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 123,
+      "prompt_tokens": 11748,
+      "prompt_tokens_details": null,
+      "total_tokens": 11871
+    }
+  },
+  "request_sha256": "54fb1ed644e2299fa6135ac5f3ab7a3dfd1871db76eeeabee32922d1e25312b2",
+  "source_example_id": "mix_dev_0132+durec_src_0811+hb_0072",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

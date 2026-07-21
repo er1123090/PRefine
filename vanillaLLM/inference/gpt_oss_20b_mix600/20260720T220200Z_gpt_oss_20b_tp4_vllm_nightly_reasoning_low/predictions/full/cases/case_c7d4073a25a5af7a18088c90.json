@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c7d4073a25a5af7a18088c90",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.907086979597807,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_97b27d23342799085d131269",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination? user didn't specify. Maybe default? No. We can infer from context? No. So leave empty? But must provide slot_name=\"value\". We can set destination empty? Probably omit. But format requires slot_name=\"value\". We can set destination=\"\"? Probably not. Maybe choose default? No info. I'll set destination=\"\" and shared_ride=\"True\" maybe. But no seats. I'll set number_of_seats=\"1\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615163,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-be6f5b67593694c1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 125,
+      "prompt_tokens": 9196,
+      "prompt_tokens_details": null,
+      "total_tokens": 9321
+    }
+  },
+  "request_sha256": "63d17c7ad4f4779fd3a96e3b4b2b4cabce55ed00c9585d45bc754687c1403183",
+  "source_example_id": "mix_dev_0082+hb_0302",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

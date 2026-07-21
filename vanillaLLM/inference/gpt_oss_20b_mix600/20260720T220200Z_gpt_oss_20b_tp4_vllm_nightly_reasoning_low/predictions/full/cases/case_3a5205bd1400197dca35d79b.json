@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3a5205bd1400197dca35d79b",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9235379127785563,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_69777ce3c4f211ebc449c397",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"Oakland\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. No slots given. Use past preferences: user likes Taiwanese? earlier. Also likes moderate price. Also likes vegetarian Latin American. But current request generic. We can infer likely city? Past used Pinole, Oakland. Maybe default city? We can choose city \"Oakland\" as common. Also category? earlier Latin American. We'll output GetRestaurants(city=\"Oakland\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614955,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-843f98ca34153d0f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 96,
+      "prompt_tokens": 9501,
+      "prompt_tokens_details": null,
+      "total_tokens": 9597
+    }
+  },
+  "request_sha256": "de2d10dbec4a4b9b09b83ae9dd922fe90305b21bbc57452473c868667e662409",
+  "source_example_id": "mix_dev_0329+durec_src_0205",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

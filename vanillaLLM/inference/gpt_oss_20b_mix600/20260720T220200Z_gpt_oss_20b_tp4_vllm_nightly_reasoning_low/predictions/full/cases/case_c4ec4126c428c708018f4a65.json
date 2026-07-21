@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c4ec4126c428c708018f4a65",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2609924245625734,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a2862cc20b9bc671d8707f0b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2023-03-09\", origin=\"San Francisco\", destination=\"Seattle\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Slots: airlines? not specified. departure_date=2023-03-09? date format? previous used \"2019-03-09\". So \"2023-03-09\". origin=\"San Francisco\", destination=\"Seattle\". flight_class? not given. passengers? not given. return_date? not given. So only those. Output format: GetFlights(departure_date=\"2023-03-09\", origin=\"San Francisco\", destination=\"Seattle\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615158,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9d28bd73a7fa875a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 133,
+      "prompt_tokens": 9919,
+      "prompt_tokens_details": null,
+      "total_tokens": 10052
+    }
+  },
+  "request_sha256": "ba18b7ea46120d43885011417601e5f2e2ec1b6881e37231e782453c082e24ef",
+  "source_example_id": "mix_dev_0175+durec_src_0112+hb_0240",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

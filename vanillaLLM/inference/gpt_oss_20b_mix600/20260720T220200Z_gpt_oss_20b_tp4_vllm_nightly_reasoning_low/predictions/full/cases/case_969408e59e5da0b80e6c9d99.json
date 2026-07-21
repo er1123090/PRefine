@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_969408e59e5da0b80e6c9d99",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7804712587967515,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_0ad56389c15a1af7316b6dc2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Italian\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. Slots: category, city, date, number_of_seats, price_range, restaurant_name, time. We have category Italian, no alcohol. No city, date, seats, price_range, name, time. No preference. Use defaults? Just provide category. So output: GetRestaurants(category=\"Italian\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615093,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a54a41341c242744",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 83,
+      "prompt_tokens": 8239,
+      "prompt_tokens_details": null,
+      "total_tokens": 8322
+    }
+  },
+  "request_sha256": "c76494380f473f77acce8eb289bccebdde638fbb5ab12d0a3a8ccadf44be9e70",
+  "source_example_id": "dev_0050",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

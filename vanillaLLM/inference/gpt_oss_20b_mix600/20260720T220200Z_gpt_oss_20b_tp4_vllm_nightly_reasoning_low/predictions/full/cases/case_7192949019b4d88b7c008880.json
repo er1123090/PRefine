@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_7192949019b4d88b7c008880",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.84633550606668,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a880ec0691c7b9e665e1f368",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. No preferences given. From history, user likes cheap, coffee light bites. But generic. We can infer city? Not specified. Maybe default to previous city Newark? But better to ask. But we must output a call. We can set city empty. Maybe choose \"cheap\" price_range? But no. We'll output empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615039,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8e6be9ae07f14c97",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 84,
+      "prompt_tokens": 7378,
+      "prompt_tokens_details": null,
+      "total_tokens": 7462
+    }
+  },
+  "request_sha256": "97638213c4b7e91c1c7df13b571c6096dcc64a03b8bf83503ff17286723dc42c",
+  "source_example_id": "dev_0098",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

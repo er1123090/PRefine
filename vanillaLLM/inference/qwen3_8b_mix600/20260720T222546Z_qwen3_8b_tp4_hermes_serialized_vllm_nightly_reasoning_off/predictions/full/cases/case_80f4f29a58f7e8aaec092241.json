@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_80f4f29a58f7e8aaec092241",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.378089134581387,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Historical Landmark",
+        "good_for_kids": true,
+        "location": "New York"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_eb82a98f6e34bfb43d0898f6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Historical Landmark\", \"location\": \"New York\", \"good_for_kids\": true}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-a8709244af4b54d1",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587711,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bb6e128c8bfd6560",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 38,
+      "prompt_tokens": 11456,
+      "prompt_tokens_details": null,
+      "total_tokens": 11494
+    }
+  },
+  "request_sha256": "e26c3af6d7aa296b50e353a47f5c837c73f6731ba3f9d1356e0cbf20135e12c2",
+  "source_example_id": "mix_dev_0127+durec_src_0622+hb_0200",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

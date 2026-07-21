@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_636aa194c50a9142908d9c74",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6839080601930618,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b45913c86e54243be507b652",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"London\", good_for_kids=\"True\", free_entry=\"True\", category=\"Historical Landmark\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User says \"I’m planning a trip and want to explore travel options.\" Likely GetTravel. Need slots: category, free_entry, good_for_kids, location, destination, departure_date. From history: user likes free_entry? Not sure. They liked free_entry true in session1. Also good_for_kids true. They also liked location London. So infer location=\"London\", good_for_kids=\"True\", free_entry=\"True\". Category maybe \"Museum\" or \"Historical Landmark\"? They liked historical landmark. So category=\"Historical Landmark\". departure_date maybe unspecified. We'll leave empty. Output: GetTravel(location=\"London\", good_for_kids=\"True\", free_entry=\"True\", category=\"Historical Landmark\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615022,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-94f5ce41e3d589a9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 185,
+      "prompt_tokens": 9195,
+      "prompt_tokens_details": null,
+      "total_tokens": 9380
+    }
+  },
+  "request_sha256": "00fc1f9631affba6c15e0f61a7875aa3d92971fe429b7fd31a45fd2da3e3ca67",
+  "source_example_id": "dev_0322",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

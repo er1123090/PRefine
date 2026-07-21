@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3c9fdace6b16b9fb4181693d",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4332497026771307,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d7212b2bb6b362407e5f1136",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"American Airlines\", departure_date=\"2024-07-25\", destination=\"Los Angeles\", flight_class=\"Economy\", origin=\"Delhi\", passengers=\"1\", return_date=\"2024-07-30\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetFlights. From history: user used American Airlines, Economy, from Delhi to Los Angeles, round trip. Likely preference: airlines American, flight_class Economy, origin Delhi, destination Los Angeles. Also maybe passengers? Not specified. We'll output GetFlights with those slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614958,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-99401eca3c1f6cf1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 119,
+      "prompt_tokens": 9717,
+      "prompt_tokens_details": null,
+      "total_tokens": 9836
+    }
+  },
+  "request_sha256": "fa7ecb63661dbf8e24db5aaf043a251fb0d901f34a42918634f04550421fbee6",
+  "source_example_id": "mix_dev_0180+durec_src_1013+hb_0197",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

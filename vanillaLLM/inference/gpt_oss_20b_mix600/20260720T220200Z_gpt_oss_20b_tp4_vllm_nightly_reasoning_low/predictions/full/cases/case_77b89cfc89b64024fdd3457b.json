@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_77b89cfc89b64024fdd3457b",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.7179226791486144,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1c2173a59e4ec787769fe9ed",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Italian\", price_range=\"pricey\", city=\"Oakland\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetRestaurants. Past preferences: user asked for Italian, price \"pricey\". Also earlier asked for restaurant in Oakland, Italian. So likely prefers Italian, price moderate? He said \"pricey\" earlier. So set category=Italian, price_range=pricey. Also maybe city=Oakland. So output GetRestaurants(category=\"Italian\", price_range=\"pricey\", city=\"Oakland\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615050,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-95aa8fddbbedbebc",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 113,
+      "prompt_tokens": 11011,
+      "prompt_tokens_details": null,
+      "total_tokens": 11124
+    }
+  },
+  "request_sha256": "b857a127501c3191a839a3b484cb3304194fadd7aee9d2a4a317306b6d68d2e5",
+  "source_example_id": "mix_dev_0277+durec_src_1244+hb_0126",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

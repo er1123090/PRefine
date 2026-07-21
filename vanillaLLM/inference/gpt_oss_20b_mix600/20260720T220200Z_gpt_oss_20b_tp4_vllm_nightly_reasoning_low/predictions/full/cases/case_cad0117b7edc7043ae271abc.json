@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_cad0117b7edc7043ae271abc",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2672420600429177,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c5a80454505f5df0f33d8af0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"Los Angeles\", group_size=\"3\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. No slots given. Infer preferences: previous bus trips: origin Los Angeles to San Diego, origin San Diego to Los Angeles. No preference on time. Maybe group_size? earlier 3 people. Likely 3. Destination unspecified. We just output function call with inferred slots: origin maybe Los Angeles? but user didn't specify. We can leave empty. But need at least some slots. We can infer origin as Los Angeles because earlier. Destination maybe San Diego? but ambiguous. We'll set origin=\"Los Angeles\", group_size=\"3\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615169,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-894f251a3526c475",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 137,
+      "prompt_tokens": 9946,
+      "prompt_tokens_details": null,
+      "total_tokens": 10083
+    }
+  },
+  "request_sha256": "db6c7a0472c730c0a9ce9f40609db7925805bc2f7efa905eefc2e806a42a23d4",
+  "source_example_id": "mix_dev_0104+durec_src_0877+hb_0333",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

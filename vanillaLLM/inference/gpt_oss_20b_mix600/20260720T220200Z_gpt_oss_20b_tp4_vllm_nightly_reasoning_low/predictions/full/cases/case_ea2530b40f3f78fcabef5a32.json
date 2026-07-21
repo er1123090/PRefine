@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ea2530b40f3f78fcabef5a32",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.540172902867198,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_ff8d1473b0affa5e387e8cf8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"London\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. Need location? user didn't specify. Use past preference: session14 user searched London. Likely wants London. So output GetHotels(location=\"London\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615208,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b10dbb2c1b531927",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 51,
+      "prompt_tokens": 10431,
+      "prompt_tokens_details": null,
+      "total_tokens": 10482
+    }
+  },
+  "request_sha256": "adc4ef3505269255fd69d1cf8317a7fe27167af7ffcbc08f9e684a5c30ab072e",
+  "source_example_id": "mix_dev_0131+durec_src_0415+hb_0429",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

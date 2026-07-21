@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_961fb007d32713a1f5ac5518",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0860528126358986,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_aa9c8b34cf10fffce695387f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"Southwest Airlines\", flight_class=\"Economy\", origin=\"Atlanta\", destination=\"Seattle\", passengers=\"4\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetFlights. From history: user often chooses Southwest Airlines, economy, from Atlanta to Seattle, 4 seats. Also earlier used American, Delta. Pattern: prefers Southwest for round trip. So output: GetFlights(airlines=\"Southwest Airlines\", flight_class=\"Economy\", origin=\"Atlanta\", destination=\"Seattle\", passengers=\"4\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615092,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8d08f46100f21ccc",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 113,
+      "prompt_tokens": 11019,
+      "prompt_tokens_details": null,
+      "total_tokens": 11132
+    }
+  },
+  "request_sha256": "19e7753034432bd4d10ca52dfcdc7371c881eb22d19da0283e192c495c2c9a3c",
+  "source_example_id": "mix_dev_0240+durec_src_0039+hb_0045",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

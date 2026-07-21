@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c79384c67989dadbbc0458f0",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.764702063985169,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b881b770bcd65e1605cf862e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents()",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need slot city? \"nearby\" implies user's location? No context. Maybe default city from previous? Last session 21 had weather for Qingdao. But user wants events nearby. Likely city unspecified, maybe use default \"London\" from earlier? But better to leave city empty. We can provide category? None. So empty params. Output format: GetEvents() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615162,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-83d756b5300df8e1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 97,
+      "prompt_tokens": 11150,
+      "prompt_tokens_details": null,
+      "total_tokens": 11247
+    }
+  },
+  "request_sha256": "4e6773e03b139a31c02d2487fddd915ad5c9b98f823e8f36fe92bffdebe04eb5",
+  "source_example_id": "mix_dev_0178+durec_src_0589+hb_0210",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_9ec356ea7cd6d7410b6af3ca",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9287385866045952,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a479d965e7347954c4bd7caa",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history, user likes Chinese, Indian? They booked Sichuan cuisine. Also earlier asked for restaurants. No explicit preference. But pattern: user likes Chinese, Indian, etc. But we need to output function call GetRestaurants with inferred slots. We can leave empty. Probably no preference. So output GetRestaurants() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615105,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bf716391eb3f3d49",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 89,
+      "prompt_tokens": 11303,
+      "prompt_tokens_details": null,
+      "total_tokens": 11392
+    }
+  },
+  "request_sha256": "252432c5a3f9ee1abb730afc6723ce4beacb768a5935fca16f754e519511087a",
+  "source_example_id": "mix_dev_0109+durec_src_0404+hb_0248",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

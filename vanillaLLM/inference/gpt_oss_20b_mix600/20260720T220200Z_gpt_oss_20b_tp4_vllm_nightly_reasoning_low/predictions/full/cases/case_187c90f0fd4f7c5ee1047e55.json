@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_187c90f0fd4f7c5ee1047e55",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.6756493924185634,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_53c6ae35615e784ff5dc2aa1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User says planning a trip and want to explore travel options. Likely GetTravel. Need slots: category, free_entry, good_for_kids, location, destination, departure_date. From history, user likes events music, flights economy, bus from Anaheim to Las Vegas, etc. Preference: economy flight, bus, maybe free entry? Not clear. We can guess category maybe \"Museum\" or \"Theme Park\"? Hard. Maybe default none. Provide empty? We can provide no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614878,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9c3d2e21e419e0f0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 118,
+      "prompt_tokens": 10331,
+      "prompt_tokens_details": null,
+      "total_tokens": 10449
+    }
+  },
+  "request_sha256": "66bfc6483945db098ef082b4f489fc06bc53a993502ab12de0554b689aec3056",
+  "source_example_id": "mix_dev_0146+durec_src_0203+hb_0489",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

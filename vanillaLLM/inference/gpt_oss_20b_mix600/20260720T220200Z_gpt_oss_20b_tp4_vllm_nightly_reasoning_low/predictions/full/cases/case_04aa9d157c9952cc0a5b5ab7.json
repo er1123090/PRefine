@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_04aa9d157c9952cc0a5b5ab7",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.4061521012336016,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_04c47ffca03e3e53e98b51c9",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"San Francisco\", category=\"Museum\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel with category \"Art exhibition\" but not in enum. Actually category enum includes \"Historical Landmark\",\"Museum\",\"Nature Preserve\",\"Park\",\"Performing Arts Venue\",\"Place of Worship\",\"Shopping Area\",\"Sports Venue\",\"Theme Park\",\"Tourist Attraction\". Art exhibition not listed. Maybe use \"Museum\" or \"Performing Arts Venue\". Likely \"Museum\". So call GetTravel(location=\"San Francisco\", category=\"Museum\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614810,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bf101af4906a26ab",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 108,
+      "prompt_tokens": 11385,
+      "prompt_tokens_details": null,
+      "total_tokens": 11493
+    }
+  },
+  "request_sha256": "f9ff3863864ce23af7548e8af5349906daed1f7c2ee79f07901e215ca0d065bb",
+  "source_example_id": "mix_dev_0071+durec_src_0279+hb_0391",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

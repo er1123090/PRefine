@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_da614f017e1e75911a64f2b9",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.511006168089807,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "departure_date": "2019-03-11",
+        "destination": "Berkeley",
+        "number_of_days": "1"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_5778cf9f4e8cac973f6d0f97",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"Berkeley\", \"departure_date\": \"2019-03-11\", \"number_of_days\": \"1\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-b70cdccdcf558080",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588276,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8956e60a3dcc8f54",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 45,
+      "prompt_tokens": 11434,
+      "prompt_tokens_details": null,
+      "total_tokens": 11479
+    }
+  },
+  "request_sha256": "029a41c3765093bd73e9cf03ca6da2716aabe0b6523f1b0ede0f6645031f43ad",
+  "source_example_id": "mix_dev_0252+durec_src_1277+hb_0257",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

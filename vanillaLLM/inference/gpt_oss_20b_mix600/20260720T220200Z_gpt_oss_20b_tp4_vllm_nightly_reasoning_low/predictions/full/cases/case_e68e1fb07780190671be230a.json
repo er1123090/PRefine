@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e68e1fb07780190671be230a",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7641448508948088,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b5291aa3d3fb54234b7f0a04",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jacky Cheung\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants music. We need GetMusic. Preferences: artist? playback_device? song_name? From history: user likes Jacky Cheung songs. So artist likely Jacky Cheung. No device specified. So output GetMusic(artist=\"Jacky Cheung\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615204,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-881020e1a73f7e3f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 80,
+      "prompt_tokens": 8105,
+      "prompt_tokens_details": null,
+      "total_tokens": 8185
+    }
+  },
+  "request_sha256": "259fc6474196a6791ba2aa0d3c5420374db7ad90c7f6b53774c9d0fc3c0d6178",
+  "source_example_id": "mix_durec_src_0812+hb_0031",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_748d926acdacd15238af458c",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5689209261909127,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1d5642fdb2d4c0eadd4606b2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. No preferences given. From history, user likes vegetarian? They had earlier: Sichuan restaurant cheap. Also Parisian moderate. They like vegetarian? In session4 they asked vegetarian. In session10 they asked vegetarian options. They said no. So no strong preference. Probably price_range moderate? They had moderate. So output: GetRestaurants(price_range=\"moderate\")? But not sure. Maybe no slot. Just empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615044,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-91640a79ac9237ee",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 103,
+      "prompt_tokens": 9862,
+      "prompt_tokens_details": null,
+      "total_tokens": 9965
+    }
+  },
+  "request_sha256": "34c3ee2642221934bca1d21833a612ac09e4f74f2315ab4c5af017441c31d359",
+  "source_example_id": "mix_dev_0093+durec_src_0348+hb_0270",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_57fea2b5a75acab6d9a7fd44",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6775196287781,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_fca57538031487462add4771",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for travel domain. From history, user often wants flights, hotels, buses, rental cars. Preferences: prefers economy class? In session 3, economy. Session 21 premium economy. Not consistent. For hotels: 3 star. For rental cars: Standard. For buses: group size 2. For travel: maybe free entry? Not seen. We need to output a function call. Which domain? Travel. Provide slots: category, location, departure_date, destination, free_entry, good_for_kids. We don't have preferences. Use most frequent: category? None. Maybe default none. Provide empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615004,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8004be0ec33b0bcb",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 143,
+      "prompt_tokens": 11189,
+      "prompt_tokens_details": null,
+      "total_tokens": 11332
+    }
+  },
+  "request_sha256": "7f902cfe7a3c5e81f2593212d20c59525d7a8f76010a1be261662c0e5b9312ac",
+  "source_example_id": "mix_dev_0179+durec_src_0767+hb_0321",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

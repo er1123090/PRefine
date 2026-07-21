@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_03631ee5ed4242ffaccc0861",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 7.10581908095628,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Historical Landmark",
+        "destination": "San Francisco",
+        "free_entry": true,
+        "good_for_kids": true,
+        "location": "San Diego"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_c16bae8134732fd3fc2644f2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Historical Landmark\", \"location\": \"San Diego\", \"destination\": \"San Francisco\", \"free_entry\": \"True\", \"good_for_kids\": \"True\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-a4b262970231b150",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784586765,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a5c4163f8abc9f00",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 53,
+      "prompt_tokens": 12414,
+      "prompt_tokens_details": null,
+      "total_tokens": 12467
+    }
+  },
+  "request_sha256": "73d606786c9a8e47fb7af0418b86ba185104539033b5079d5d0f009e2a422fbd",
+  "source_example_id": "mix_dev_0028+durec_src_0626+hb_0355",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

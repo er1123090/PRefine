@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a864673c591de97f24cd366e",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0096949394792318,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e0f30d3154c379eaec3f3c0b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No preferences given. From history, user used Standard car, pickup at Union Station, pickup time 18:00. Likely prefers Standard. Also maybe pickup_city? They didn't specify. Use default? We can infer pickup_city maybe \"Union Station\" location city? But not in enum. Use pickup_city maybe \"San Francisco\"? But not sure. We'll just provide car_type=\"Standard\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615117,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bc3b2cadc56cea6e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 103,
+      "prompt_tokens": 10121,
+      "prompt_tokens_details": null,
+      "total_tokens": 10224
+    }
+  },
+  "request_sha256": "69d49b20b4ebdbdbb3cabdbf2ed0650fe0b4fc80be0bbfffc0afbfda2ac4e126",
+  "source_example_id": "mix_dev_0226+durec_src_1005+hb_0353",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

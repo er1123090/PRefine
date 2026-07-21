@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_16730e90f256abf09b736bf8",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.0219375351443887,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_eacf16d6c4517770a889dab3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User says planning a trip and want to explore travel options. Likely GetTravel. Need slots: category, free_entry, good_for_kids, location, destination, departure_date. From history, user often wants flights, hotels, attractions. Preferences: likes free entry? Not seen. Good for kids? Not. Destination? Not specified. Maybe default? We can leave empty. Provide function call with no slots? But need at least domain. We'll output GetTravel with empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614874,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-81efb3d2d7fb533f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 116,
+      "prompt_tokens": 11301,
+      "prompt_tokens_details": null,
+      "total_tokens": 11417
+    }
+  },
+  "request_sha256": "6f37407cb23a44be61a0ef1fb695ffcea5b6189776b3fd7d04ee42516fa28fed",
+  "source_example_id": "mix_dev_0109+durec_src_0404+hb_0248",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

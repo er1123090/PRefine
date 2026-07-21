@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_fd01589bce7667855e398180",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1832793205976486,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_ab86eb6c053ec1bb0e129c1a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(location=\"Mill Valley\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. No preferences given. From history, user likes pizza earlier, but now generic. We can infer preference: earlier they asked for pizza. So maybe restaurant category \"Italian\" or \"Pizza\". But schema has category. We can set category=\"Italian\" or \"Pizza\" not in list. Pizza not category. Maybe \"Italian\". Also location? They didn't specify. Could infer from previous location: they were in Mill Valley. So location=\"Mill Valley\". So call GetRestaurants(location=\"Mill Valley\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615231,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9611316785b73ea6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 122,
+      "prompt_tokens": 7912,
+      "prompt_tokens_details": null,
+      "total_tokens": 8034
+    }
+  },
+  "request_sha256": "e7955b7b860ce71b05553bfa31051b41ad99746ba52647ceec49662dccc0ccce",
+  "source_example_id": "mix_dev_0284+hb_0341",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

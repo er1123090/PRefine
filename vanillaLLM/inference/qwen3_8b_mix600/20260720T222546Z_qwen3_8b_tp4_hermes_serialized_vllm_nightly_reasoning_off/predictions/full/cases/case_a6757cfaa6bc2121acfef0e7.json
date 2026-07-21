@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_a6757cfaa6bc2121acfef0e7",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.8940266016870737,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Sports",
+        "city": "Los Angeles",
+        "date": "2019-03-02"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_a4e646276b3af7db44cd4826",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Sports\", \"city\": \"Los Angeles\", \"date\": \"2019-03-02\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-a3080936177b629c",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587943,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a4f885687b486df5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 42,
+      "prompt_tokens": 9978,
+      "prompt_tokens_details": null,
+      "total_tokens": 10020
+    }
+  },
+  "request_sha256": "69d0912da816c0c8cf8460b41b6b4674656f1dde0a31f475936e2bc196050f03",
+  "source_example_id": "dev_0322",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

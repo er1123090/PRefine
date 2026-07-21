@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_45d749b22577ddb6c4ad4977",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.484521715901792,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a9241ad5580a13b768976d32",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Los Angeles\", pickup_date=\"2023-07-25\", pickup_time=\"12:00\", dropoff_date=\"2023-",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants rental car options. We need to deduce likely preferences: car_type, pickup_city, pickup_date, pickup_time, dropoff_date. From history: user often wants full-size, large car. pickup location often airport or city. Time around 12 or 3pm. So we can guess full-size, pickup_city maybe \"Los Angeles\" or \"Anaheim\" or \"Concord\". But we need to output a function call with slots. We can provide partial. Let's choose full-size, pickup_city=\"Los Angeles\", pickup_date=\"2023-07-25\", pickup_time=\"10:00\", dropoff_date=\"2023-07-30\". But we should infer from pattern: user often picks full-size, pickup at airport, time 12pm or 3pm. Let's choose pickup_city=\"Los Angeles\", pickup_date=\"2023-07-25\", pickup_time=\"12:00\", dropoff_date=\"2023-07-30\". Provide car_type=\"Full-size\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614972,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9c4f7ceb7ac802d5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 256,
+      "prompt_tokens": 8702,
+      "prompt_tokens_details": null,
+      "total_tokens": 8958
+    }
+  },
+  "request_sha256": "160519bf0edd08e683cf1568be3659880e7ca4e8553af0d613e65fdf6b5517e6",
+  "source_example_id": "mix_dev_0003+hb_0074",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

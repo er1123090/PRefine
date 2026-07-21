@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_1573dd63d54d261699c46950",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.280531942844391,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4d3c0c21b71d4886662d1366",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing()",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. User says need a ride and want to check available ride-sharing options. No specifics. Use patterns: previous ride sharing: shared_ride True, number_of_seats 3, destination 298 Gough Street. But here no details. We can default? Maybe no slots. But need at least domain. Provide empty? Probably no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614871,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aa1ee52f3cf8cb79",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 105,
+      "prompt_tokens": 11418,
+      "prompt_tokens_details": null,
+      "total_tokens": 11523
+    }
+  },
+  "request_sha256": "1f1c31df3ff3f63d0310abfd3d70014a580e33b7a3c092a333f3b5effb90291f",
+  "source_example_id": "mix_dev_0051+durec_src_0760+hb_0148",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

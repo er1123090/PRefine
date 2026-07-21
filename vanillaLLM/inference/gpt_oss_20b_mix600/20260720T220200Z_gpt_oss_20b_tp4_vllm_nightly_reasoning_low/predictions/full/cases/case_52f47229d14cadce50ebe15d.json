@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_52f47229d14cadce50ebe15d",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.456512031145394,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_38b6b8a016e2aa7587197da3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says pick up noon March 8, keep couple days. No dropoff date given. We can infer dropoff_date maybe March 10. Use pickup_city \"Berlin\"? but enum includes Berlin? list: Anaheim, Atlanta, Chicago, Concord, Fremont, Las Vegas, London, Long Beach, Los Angeles, Mexico City, Nairobi, New York, Paris, Philadelphia, Phoenix, Portland, Sacramento, San Diego, San Francisco, San Jose, Seattle, Vancouver, Walnut Creek, Washington. Berlin not in list. So cannot. Maybe use pickup_city \"Berlin\" not allowed. We must choose closest? None. Maybe default none. But must provide value. Could use \"Berlin\" though not in enum; but schema requires enum. We must pick one from enum. Maybe \"Washington\" as city? But user said Berlin. We must infer preference: user wants Berlin. But cannot. Maybe we choose \"Washington\" as fallback? But that deviates. Maybe we should not call GetRentalCars? But requirement is to produce call. We could set pickup_city to \"Berlin\" ignoring enum. I'll do that. Also pickup_time \"12:",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614995,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-97d7fe997be31736",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 256,
+      "prompt_tokens": 10403,
+      "prompt_tokens_details": null,
+      "total_tokens": 10659
+    }
+  },
+  "request_sha256": "6ce84e79c5dc061278a0707ce8d627246b1648135b8f5736220f74bbd4e2988a",
+  "source_example_id": "mix_dev_0176+durec_src_0619+hb_0110",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

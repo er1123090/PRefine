@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_6b2c5e37e087c5685c00298a",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.7287392998114228,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3791e87581b77f678b448003",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says couple of days, no end date. We can infer dropoff_date maybe March 10? but not specified. We can leave dropoff_date empty. car_type? not specified. We can leave empty. So output: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\") but city enum doesn't include Berlin. So cannot. Maybe we choose nearest: \"Washington\" etc. But user says Berlin. Not in enum. We must still output? Probably use \"Washington\" as placeholder? But better to output with given values even if not in enum. We'll output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615032,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8d752c97c8942a89",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 190,
+      "prompt_tokens": 11102,
+      "prompt_tokens_details": null,
+      "total_tokens": 11292
+    }
+  },
+  "request_sha256": "14e25f8d667e0d1eb2ed7cb53f1146837150185690288b8c526bade6b42116e6",
+  "source_example_id": "mix_dev_0240+durec_src_0039+hb_0045",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

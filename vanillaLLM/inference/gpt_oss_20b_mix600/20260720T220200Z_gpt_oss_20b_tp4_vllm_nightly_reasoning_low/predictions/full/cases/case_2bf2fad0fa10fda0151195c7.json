@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2bf2fad0fa10fda0151195c7",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.4221951430663466,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3f51150e251b54c5e286e247",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"Los Angeles\")",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need city? \"nearby\" no city given. Past preferences: user often uses Atlanta, Sacramento, Los Angeles. No clear preference. Maybe default to city from last location? Last session had Los Angeles. So city=\"Los Angeles\". No other slots. Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614926,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-917faa843ef64812",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 76,
+      "prompt_tokens": 11143,
+      "prompt_tokens_details": null,
+      "total_tokens": 11219
+    }
+  },
+  "request_sha256": "501e6bf7bceae03c82dda090ba1b7222c31e568a2a2479823f7c8c7ceb63f7d2",
+  "source_example_id": "mix_dev_0063+durec_src_1014+hb_0442",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_a96f211b734b5872c568ec42",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.851873319596052,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Music",
+        "city": "Philadelphia",
+        "date": "2019-03-03",
+        "event_name": "Don Broco",
+        "number_of_tickets": "4"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_b206cdc004bb22aaa7e3cd1f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Music\", \"city\": \"Philadelphia\", \"date\": \"2019-03-03\", \"event_name\": \"Don Broco\", \"number_of_tickets\": \"4\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-8a23a1e9a86dd6d6",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587962,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-90c193780b999724",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 58,
+      "prompt_tokens": 12530,
+      "prompt_tokens_details": null,
+      "total_tokens": 12588
+    }
+  },
+  "request_sha256": "91ef25bde896a2afaa721e28c17aa7bc91b8bc29ac36cfd87f61700360616f6e",
+  "source_example_id": "mix_dev_0079+durec_src_0804+hb_0050",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

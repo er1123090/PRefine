@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2692ebfa8dcfc860f650be2b",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.8564936900511384,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1eb4fe0b3708feb48ac3b3e0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(destination=\"Berkeley\", departure_date=\"2023-03-11\", number_of_days=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel? Actually trip. They ask for travel. Use GetTravel with destination Berkeley? Not in enum. Maybe GetHotels? They want stay. Use GetHotels with location? Berkeley not in list. Maybe GetHomes? area list includes \"Berkeley\"? not. So maybe GetTravel with destination \"Berkeley\" but not in enum. But we can still call with destination. Use GetTravel with destination=\"Berkeley\", departure_date=\"2023-03-11\", number_of_days=\"1\". Also maybe free_entry? not. So output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614915,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bd5680ba661f9af2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 147,
+      "prompt_tokens": 11585,
+      "prompt_tokens_details": null,
+      "total_tokens": 11732
+    }
+  },
+  "request_sha256": "95639c0131f24e8489cc8118ef19332c1c38a21dc1dd6be57f36f1f6ca1919e5",
+  "source_example_id": "mix_dev_0331+durec_src_1229+hb_0436",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

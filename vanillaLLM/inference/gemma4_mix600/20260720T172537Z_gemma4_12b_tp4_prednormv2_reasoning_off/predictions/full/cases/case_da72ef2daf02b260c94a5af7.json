@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_da72ef2daf02b260c94a5af7",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.827386975288391,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "airlines": "Delta Airlines"
+      },
+      "name": "GetFlights"
+    }
+  ],
+  "pair_id": "pair_20ea57b84944ec413f0f376e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"airlines\": \"Delta Airlines\"}",
+                "name": "GetFlights"
+              },
+              "id": "chatcmpl-tool-a4b63cb47e1bf8a4",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784571769,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-85464c0f1ee96f83",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 15,
+      "prompt_tokens": 12353,
+      "prompt_tokens_details": null,
+      "total_tokens": 12368
+    }
+  },
+  "request_sha256": "334842577e83557efa2a8b7872a229d9219a2f69234ddb7f0b86f36e107c6227",
+  "source_example_id": "mix_dev_0315+durec_src_0485+hb_0027",
+  "status": "success",
+  "target_domain": "GetFlights"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_eb355f4219e1cf8563c03dab",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8696508398279548,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_cea048118d03b8ecda9eacb8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars()",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No slots given. We infer preferences: earlier they chose Standard car in session20, but also Compact earlier. They prefer Standard? In session20 they chose Standard. In session1 Compact. Pattern: they pick Standard when available. So default car_type=Standard. No other slots. Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615209,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ae08c95e7983a666",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 79,
+      "prompt_tokens": 12210,
+      "prompt_tokens_details": null,
+      "total_tokens": 12289
+    }
+  },
+  "request_sha256": "a80fd97cb608c31dc8ce7c637efd18facd09104e09e45777fbd805628233ccfa",
+  "source_example_id": "mix_dev_0205+durec_src_0960+hb_0143",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

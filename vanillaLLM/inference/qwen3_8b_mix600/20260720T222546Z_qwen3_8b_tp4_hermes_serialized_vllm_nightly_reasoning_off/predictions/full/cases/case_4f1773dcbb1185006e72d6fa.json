@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_4f1773dcbb1185006e72d6fa",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.2628627801314,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Theme Park",
+        "destination": "Universal Studios Hollywood",
+        "free_entry": false,
+        "good_for_kids": true,
+        "location": "Los Angeles"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_7d6601c512f2756e5cdd85f5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Theme Park\", \"location\": \"Los Angeles\", \"destination\": \"Universal Studios Hollywood\", \"free_entry\": false, \"good_for_kids\": true}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-90679afe2606cc63",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587414,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8e619ae49f8ad873",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 50,
+      "prompt_tokens": 9784,
+      "prompt_tokens_details": null,
+      "total_tokens": 9834
+    }
+  },
+  "request_sha256": "5d886c08f3227c7892c7cf1c9da0856c5ecc13b42356f0c8ad4ddc5162193809",
+  "source_example_id": "dev_0256",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

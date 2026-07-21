@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_53c33ea4c5040c212b12bf6e",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.0240666810423136,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_0ee9037c4b676dec121d962c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(shared_ride=\"True\", number_of_seats=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. From history, user used shared ride in session4. Preference: shared_ride=True. number_of_seats? In session4, 1 person. So likely 1. destination? They didn't specify. We need to infer? Maybe default? But we can leave empty. But need slot values. We can set shared_ride=\"True\". number_of_seats=\"1\". destination maybe empty. We'll output GetRideSharing(shared_ride=\"True\", number_of_seats=\"1\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614996,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-85d28883a4932349",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 131,
+      "prompt_tokens": 8991,
+      "prompt_tokens_details": null,
+      "total_tokens": 9122
+    }
+  },
+  "request_sha256": "5e9683af35a451313129d88736936269b65a824095a8d03ed0e6b65925f33a42",
+  "source_example_id": "dev_0256",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

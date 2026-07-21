@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c469542e2c0398bc439cb267",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2460841918364167,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4dcb19ca0e828954ac3dd632",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Concord\", car_type=\"Standard\", pickup_date=\"2019-03-03\", dropoff_date=\"2019-03-08\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No slots given. We infer preferences: from past, user used Standard car, pickup in Concord, pickup date March 3, return March 8. Likely same. So output GetRentalCars(pickup_city=\"Concord\", car_type=\"Standard\", pickup_date=\"2019-03-03\", dropoff_date=\"2019-03-08\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615157,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-be4490a743f42c00",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 127,
+      "prompt_tokens": 11014,
+      "prompt_tokens_details": null,
+      "total_tokens": 11141
+    }
+  },
+  "request_sha256": "45708101b22234361ec39b8d54b5f5272c675f1b7fc77a621b98bee67c0dc7f5",
+  "source_example_id": "mix_dev_0277+durec_src_1244+hb_0126",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

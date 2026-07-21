@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_276ad00dc716b4349083d015",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.4121777629479766,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6ad3815d066ae7d5934e7046",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetHotels. From history: user booked 2 rooms at 4-star hotel in Paris. Also earlier booked 2 rooms in Toronto 3-star. No consistent star preference. Maybe default? But we can infer they like 3-star? In session 11 they asked 3-star. In session 15 they booked 4-star. So ambiguous. Maybe choose average_star unspecified. We can leave empty. Also location unspecified. So we can call GetHotels with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614918,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a48a6f88ea739d18",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 116,
+      "prompt_tokens": 9889,
+      "prompt_tokens_details": null,
+      "total_tokens": 10005
+    }
+  },
+  "request_sha256": "b1c462ea1dc91b7efe3c4d88c2d22b8b1eb0bc5fe72c6583b31e9f316dd63cf8",
+  "source_example_id": "mix_dev_0302+durec_src_0301+hb_0035",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2960bf19a10e3f966b59402c",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.106439863331616,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_5e6c554a3d0265690c345f38",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(playback_device=\"TV\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User says \"I want to listen to some music.\" No specifics. From history, user likes Ghost metal, Leslie Cheung, Small Town Boy country. Preference: playback_device? They used TV, Kitchen speaker, TV. Likely TV. Also artist? Not sure. Maybe default to TV. So call GetMusic with playback_device=\"TV\". No artist or song_name.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614921,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-83713d4176733f21",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 100,
+      "prompt_tokens": 10610,
+      "prompt_tokens_details": null,
+      "total_tokens": 10710
+    }
+  },
+  "request_sha256": "b3336d0633b34a72936d7c1fa5efefbf304cc56dea841c6b73071d9e75b5fa1b",
+  "source_example_id": "mix_dev_0119+durec_src_0621+hb_0082",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

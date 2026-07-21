@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3b9c87b2d91f8a73f24c8e31",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2646849695593119,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_67467ea709ed28e8c20c5cf7",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history, user asked for restaurants? In session 1, they asked about Mapo Tofu restaurant. No preference. In session 2, no. Session 3, no. Session 4, no. Session 5, no. Session 6-17, no. Session 14, no. So no explicit preference. We need to deduce from patterns: user likes music, movies, etc. No restaurant preference. So we can leave empty. Output format: GetRestaurants with no slots? But need function call. Provide empty object.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614957,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b92361bfdcf5aa00",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 135,
+      "prompt_tokens": 11547,
+      "prompt_tokens_details": null,
+      "total_tokens": 11682
+    }
+  },
+  "request_sha256": "e6d8a0d444d5da0f6b88e6511e10e4255338e78e91b087862af9d6cac5171d5e",
+  "source_example_id": "mix_dev_0214+durec_src_0550+hb_0018",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

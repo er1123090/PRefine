@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_ca5998b8dbdffe108d2a621b",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.608804906718433,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "has_wifi": true
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_ac5485a00df69fa90b1efe3f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"has_wifi\": \"True\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-bc68a2e835b12c23",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588181,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8a39c12d44672a5d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 22,
+      "prompt_tokens": 8660,
+      "prompt_tokens_details": null,
+      "total_tokens": 8682
+    }
+  },
+  "request_sha256": "510744960a3ed89795e8baa2ea826b5131c7070c3a8ce9903fa67de37a1e639b",
+  "source_example_id": "mix_dev_0284+hb_0341",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

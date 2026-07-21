@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_80b9c181c8264a7b003c899a",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3032041592523456,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_2bd1a3e3cff21d6afe222b65",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", shared_ride=\"False\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, shared_ride? Not specified. From history, user often accepts shared ride. But not stated. We can default shared_ride False? But pattern: in session4, user said okay with shared ride. Here no mention. We can assume not shared. number_of_seats? default 1. So output: GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", shared_ride=\"False\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615062,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b403358dd24a491c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 136,
+      "prompt_tokens": 9323,
+      "prompt_tokens_details": null,
+      "total_tokens": 9459
+    }
+  },
+  "request_sha256": "1bc6f983d5d4c5a0e5b279918d65eb00e44abaf6798d666896dcab06a4b9ea7b",
+  "source_example_id": "mix_dev_0222+durec_src_0902+hb_0164",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

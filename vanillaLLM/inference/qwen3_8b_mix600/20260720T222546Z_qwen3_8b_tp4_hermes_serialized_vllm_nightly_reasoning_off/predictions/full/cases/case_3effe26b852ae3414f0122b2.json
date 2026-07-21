@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_3effe26b852ae3414f0122b2",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.400611026212573,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "average_star": "3",
+        "location": "San Francisco"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_20adfdb18a0dd6284c356707",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"San Francisco\", \"average_star\": \"3\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-840dc75fea73c9b9",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587323,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b0ff85bd7a4bd236",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 10297,
+      "prompt_tokens_details": null,
+      "total_tokens": 10326
+    }
+  },
+  "request_sha256": "78a08d41ec31249fd22cb250ec66ab7ee476025126aee3983dfc8db16959d798",
+  "source_example_id": "mix_dev_0100+durec_src_0831+hb_0371",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

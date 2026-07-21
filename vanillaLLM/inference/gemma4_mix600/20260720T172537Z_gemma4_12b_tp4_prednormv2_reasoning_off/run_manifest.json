@@ -1,0 +1,84 @@
+{
+  "artifact_sha256": {
+    "cases.jsonl": "7b21723c243c61a64a8f90244c9e440d5d5fff521e3e7afab67edf455636bc0c",
+    "rejections.jsonl": "8116f8dd1f9a9c8c3ab8b0e2dd0a1173420098fc1a259cf9785b5706add308e2",
+    "schema_overlay.json": "493794769bbd151b6af62a9a1d7e09a589c94beb67377b1df75e53d3910c1c6d",
+    "targets.jsonl": "320f392905f369fe2f39c6bb34d6e2301caab6becc70af8588ac4dd133899f10",
+    "tools_schema_derived.json": "190a7303a93aa048dfb1981867122d265a5fb174a156e8c563b70db7b7b49e1d",
+    "validation.json": "ef34262cef59b5c279ca5a315c8e1755dbe479596c7de6473a5582e555f4e4ff"
+  },
+  "code_sha256": {
+    "vanillaLLM/gemma4_mix600/__init__.py": "00b601185caef388bd8e55683e458b030edd744423f9fd80d3fed92587932f68",
+    "vanillaLLM/gemma4_mix600/core.py": "da9c1151b3bca38bcb4761248d69c9dcd8825b131a91e9bdea2e6f6661a17e82",
+    "vanillaLLM/gemma4_mix600/critic_audit.py": "3621609b711691b742a5e77bf21272f6e73190bab806e9e3c03b8536b8c3eea7",
+    "vanillaLLM/gemma4_mix600/materialize.py": "a4b04685524ef6109aa0f15f3498abf86e3f1aa0bc8f53f4f04c1714f25d4cf7",
+    "vanillaLLM/gemma4_mix600/run_inference.py": "3af9798cc51bdc9334e159d04776b76e2c27dea0ba66e8de7f8c34c73a1f92ab",
+    "vanillaLLM/gemma4_mix600/runtime_preflight.py": "c0e4bda862ba093aa4a20cb381561f0bfe537d4369f171e58c3c2eb6edcf9ac8",
+    "vanillaLLM/gemma4_mix600/score.py": "d4985f468a5f6b5899e9d273b71c881950fa50797ef7b7b4da0bc2016bc88300",
+    "vanillaLLM/gemma4_mix600/token_census.py": "866d3322b59cd8715360d2b05a66b0e4acb9c1b5a43ea74d5cf480153887ab4a"
+  },
+  "construction": "mode-neutral-targets-then-paired-renderings",
+  "counts": {
+    "case_counts": {
+      "multi:easy": 554,
+      "multi:hard": 472,
+      "multi:medium": 293,
+      "single:easy": 554,
+      "single:hard": 472,
+      "single:medium": 293
+    },
+    "cases": 2638,
+    "eligible_sources": {
+      "easy": 335,
+      "hard": 123,
+      "medium": 123
+    },
+    "max_per_source": {
+      "easy": 5,
+      "hard": 7,
+      "medium": 5
+    },
+    "paired_identity": "pass",
+    "target_counts": {
+      "easy": 554,
+      "hard": 472,
+      "medium": 293
+    },
+    "targets": 1319
+  },
+  "experiment": "gemma4_mix600_vanilla_llm",
+  "input_paths": {
+    "dataset": "/data/minseo/experiments4/data/mix600.json",
+    "multi_queries": "/data/minseo/experiments4/query_multiturn.json",
+    "pref_groups": "/data/minseo/experiments4/pref_group.json",
+    "pref_list": "/data/minseo/experiments4/pref_list.json",
+    "prompt": "/data/minseo/experiments4/vanillaLLM/prompt.py",
+    "reference_multi": "/data/minseo/experiments4/vanillaLLM/vanillaLLM_inference-vllm-multi.py",
+    "reference_single": "/data/minseo/experiments4/vanillaLLM/vanillaLLM_inference-vllm-single.py",
+    "single_queries": "/data/minseo/experiments4/query_singleturn.json",
+    "tools": "/data/minseo/experiments4/schema_all.json"
+  },
+  "input_sha256": {
+    "dataset": "e0748a987fdba01ba2a68fc6ab781277028a93b2ba5de1987752298ce6609ea3",
+    "multi_queries": "68ee30d98a071aa6cc44195b366ff17c2e46d93530821ce2af7c6f6e9350defd",
+    "pref_groups": "aac0cc9210a59b15e1422d0946bab0e37c9c38b538f29a2d7c24b84ccd8348fb",
+    "pref_list": "f5994dab209909ed31d15cbabe6a88a84ef5d95f85c156795549c96fd5126091",
+    "prompt": "b883f37ab8d3b1d4f9b0c087c491b6b1026fae01b4e3a38419296efda086e32a",
+    "reference_multi": "13aac4726443c071def5dd2a7073d8d0ff49c5375af5516775d0536fa08cba67",
+    "reference_single": "d73264bf46bc576125adb2716dfc6f520fd80a071cc5336838b2e684c8bddd11",
+    "single_queries": "e8a25828cf319e63c573fbcb8a485e7ece1ed3a7d49120d41ac5d716adc897c7",
+    "tools": "c3639e58e42c8cbe2f202ea9798dd158da305da8229614e3db09f829b945628f"
+  },
+  "model_id": "google/gemma-4-12B-it",
+  "model_revision": "12ace6d648d72bd41519e140f1185f34d38c7e3d",
+  "request_contract": {
+    "context": "diag-apilist",
+    "max_tokens": 256,
+    "messages": "one user message",
+    "prompt": "imp-zs",
+    "temperature": 0.0,
+    "thinking": false,
+    "tool_choice": "auto"
+  },
+  "schema_policy": "hashed source schema plus deterministic explicit multi-base overlay, shared by both modes"
+}

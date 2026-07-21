@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2754de433db3e5262bb14d97",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2044037049636245,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_0a91434ec15adc80f6778eed",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Italian\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. Slots: category Italian, price_range? user said quiet, no alcohol. No price. So output: GetRestaurants(category=\"Italian\", price_range=\"cheap\"? but not specified. We can omit. Just include category and maybe price_range? Not required. So: GetRestaurants(category=\"Italian\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614917,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8bcbb818ed4d2ff7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 80,
+      "prompt_tokens": 11514,
+      "prompt_tokens_details": null,
+      "total_tokens": 11594
+    }
+  },
+  "request_sha256": "798d0785d5ab470a72eadff499c4e21a8b57e267a8347e903e5d94a387e05247",
+  "source_example_id": "mix_dev_0054+durec_src_0658+hb_0146",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

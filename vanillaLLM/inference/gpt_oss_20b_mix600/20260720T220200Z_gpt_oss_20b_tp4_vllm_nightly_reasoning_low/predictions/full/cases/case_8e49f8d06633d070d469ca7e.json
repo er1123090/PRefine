@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8e49f8d06633d070d469ca7e",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.304532996378839,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a433148615821ee47c11a901",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", pickup_time=\"in 30 minutes\", number_of_seats=\"1\", shared_ride=\"False\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, pickup_time, number_of_seats, shared_ride. User didn't specify seats or shared. Default? Probably 1 seat, not shared. pickup_time: half an hour from now. We don't have current time. Use placeholder \"in 30 minutes\". So output: GetRideSharing(destination=\"39145 Farwell Drive\", pickup_time=\"in 30 minutes\", number_of_seats=\"1\", shared_ride=\"False\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615079,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aa5115c2742cfb49",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 139,
+      "prompt_tokens": 11068,
+      "prompt_tokens_details": null,
+      "total_tokens": 11207
+    }
+  },
+  "request_sha256": "a293b7a7c63268d539ca4ccb3f80dca5c63cf284377fa9b24178a98ba8b66142",
+  "source_example_id": "mix_dev_0240+durec_src_0039+hb_0045",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

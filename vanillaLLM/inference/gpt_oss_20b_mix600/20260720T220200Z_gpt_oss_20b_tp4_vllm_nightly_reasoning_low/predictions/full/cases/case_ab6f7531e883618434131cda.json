@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ab6f7531e883618434131cda",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.628122885711491,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_8923f446b5f614f2a3ac3b98",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", pickup_time=\"18:15\", number_of_seats=\"1\", shared_ride=\"false\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. slots: destination, pickup_time, number_of_seats, shared_ride. User: need ride to appointment. Destination 39145 Farwell Drive. pickup_time 18:15. number_of_seats? not specified, assume 1. shared_ride? not specified, assume false. Output format: GetRideSharing(destination=\"39145 Farwell Drive\", pickup_time=\"18:15\", number_of_seats=\"1\", shared_ride=\"false\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615120,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9c63a579a302a69d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 141,
+      "prompt_tokens": 10332,
+      "prompt_tokens_details": null,
+      "total_tokens": 10473
+    }
+  },
+  "request_sha256": "aeeef03205b5bc9725512cb4cc7999a2a6f1ca1c5cc7c7f9eea1cce64be481dd",
+  "source_example_id": "mix_dev_0052+durec_src_0546+hb_0298",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

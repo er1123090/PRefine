@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f900610843dfa5351cf0bd03",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.785245013423264,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_cd261d7f2e837f73d81f9dc5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Italian\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. Slots: category Italian, price_range? user said quiet, no alcohol. No price_range given. We can set price_range=\"cheap\" maybe? But not sure. We can leave unspecified. Provide category=\"Italian\". Also maybe city? none. So output: GetRestaurants(category=\"Italian\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615226,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-839f179e42507ea1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 80,
+      "prompt_tokens": 10925,
+      "prompt_tokens_details": null,
+      "total_tokens": 11005
+    }
+  },
+  "request_sha256": "cf2b2beba158b05f047eee3ca30ff10a73718e9047adfd9454cab2d8317ebd24",
+  "source_example_id": "mix_dev_0327+durec_src_0137+hb_0492",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

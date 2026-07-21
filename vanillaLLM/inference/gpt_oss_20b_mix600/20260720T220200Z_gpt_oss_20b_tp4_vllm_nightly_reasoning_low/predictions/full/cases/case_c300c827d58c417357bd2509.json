@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c300c827d58c417357bd2509",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7033917587250471,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_ab0d4f877dffb994aedd909f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"Southwest Airlines\", flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. No preferences given. From history, user used Southwest Airlines from NY to Philadelphia. Likely prefers Southwest. Also used economy. So set airlines=\"Southwest Airlines\", flight_class=\"Economy\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615155,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-80adb16f5fb4a4df",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 74,
+      "prompt_tokens": 10118,
+      "prompt_tokens_details": null,
+      "total_tokens": 10192
+    }
+  },
+  "request_sha256": "cccd70efb21e98cafe7f0ef8da81e0b8f33b9042034165e11f49a75d4c7f733a",
+  "source_example_id": "mix_dev_0226+durec_src_1005+hb_0353",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

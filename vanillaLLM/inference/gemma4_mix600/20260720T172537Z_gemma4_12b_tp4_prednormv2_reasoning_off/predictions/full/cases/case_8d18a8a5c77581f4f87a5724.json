@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_8d18a8a5c77581f4f87a5724",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 21.91066492162645,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "car_type": "Full-size",
+        "pickup_city": "Phoenix"
+      },
+      "name": "GetRentalCars"
+    }
+  ],
+  "pair_id": "pair_8219e1807718676a53863583",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"car_type\": \"Full-size\", \"pickup_city\": \"Phoenix\"}",
+                "name": "GetRentalCars"
+              },
+              "id": "chatcmpl-tool-9fa25af438022bd7",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784570618,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-893a81837066dedc",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 27,
+      "prompt_tokens": 9399,
+      "prompt_tokens_details": null,
+      "total_tokens": 9426
+    }
+  },
+  "request_sha256": "96ba8aed6d0a50ab35ebc19092592c38d11ca6cc109f5232f9733a7cb50e34d1",
+  "source_example_id": "mix_dev_0284+hb_0341",
+  "status": "success",
+  "target_domain": "GetRentalCars"
+}

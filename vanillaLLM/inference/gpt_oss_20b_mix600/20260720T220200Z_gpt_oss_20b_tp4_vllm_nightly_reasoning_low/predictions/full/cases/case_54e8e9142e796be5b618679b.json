@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_54e8e9142e796be5b618679b",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.0178519394248724,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c15c2815398dd153dcf080f4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need origin San Francisco, destination Seattle, departure_date 2019-03-09? date format? previous used \"2019-03-06\". So \"2019-03-09\". No flight_class preference, passengers default? Not provided. We'll include origin, destination, departure_date. Also maybe passengers? not known. We'll omit. Output format: GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614998,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-886020b1b9b6a26e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 130,
+      "prompt_tokens": 10390,
+      "prompt_tokens_details": null,
+      "total_tokens": 10520
+    }
+  },
+  "request_sha256": "cbcebb23a4c89ff04dcbe88548bdd0a311e632d198888b8655056058b9a66a87",
+  "source_example_id": "mix_dev_0146+durec_src_0203+hb_0489",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

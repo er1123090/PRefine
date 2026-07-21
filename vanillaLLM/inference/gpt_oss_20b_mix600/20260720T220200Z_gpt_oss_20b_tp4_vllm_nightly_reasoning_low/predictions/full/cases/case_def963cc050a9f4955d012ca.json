@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_def963cc050a9f4955d012ca",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0673017604276538,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_290c449be860037741e729c5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"1200 Callowhill Street\", number_of_seats=\"1\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. From history: session14: user wanted cab to 1200 Callowhill Street, shared ride yes, 1 passenger. So preference: shared_ride=True, number_of_seats=\"1\". Destination likely address. pickup_time unspecified. We'll set pickup_time empty. Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615193,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a64eedf3dcca329d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 114,
+      "prompt_tokens": 10154,
+      "prompt_tokens_details": null,
+      "total_tokens": 10268
+    }
+  },
+  "request_sha256": "0f90ee477109ad9d3cbdbf6be31062d25a100eeb1a7902978ac55c5c12dce507",
+  "source_example_id": "mix_dev_0254+durec_src_1246+hb_0316",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

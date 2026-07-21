@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e0a2f2f416713a0812111173",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.107375955209136,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_346aaaa3dc4f1c919c5a6d92",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", pickup_time=\"\", shared_ride=true)",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. No info given. Use patterns: user wants ride, check options. Likely shared ride true, number_of_seats maybe 1? Destination unspecified. We can leave empty? But need values. Maybe default: shared_ride=true, number_of_seats=\"1\". Destination unknown. Maybe leave empty string. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615195,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b17b26184e103cc0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 118,
+      "prompt_tokens": 11427,
+      "prompt_tokens_details": null,
+      "total_tokens": 11545
+    }
+  },
+  "request_sha256": "fc5465c9a3a78e4d988054f87ea5713e069b1c83e6f705c0d145eef51e8719dc",
+  "source_example_id": "mix_dev_0102+durec_src_0082+hb_0473",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

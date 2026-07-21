@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_2af00cc03a38527f38c29b9e",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.091597217135131,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Historical Landmark",
+        "location": "Paris"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_cd07f232bb0f22e6f27d2c46",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Historical Landmark\", \"location\": \"Paris\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-adc4d5b2432b7515",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587182,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-be33451221011ad1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 10642,
+      "prompt_tokens_details": null,
+      "total_tokens": 10671
+    }
+  },
+  "request_sha256": "6390e9722274fa755c1f263f20a4e0f8cbaea1238aa8c96376c700d2a51c4544",
+  "source_example_id": "mix_dev_0305+durec_src_0754+hb_0088",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

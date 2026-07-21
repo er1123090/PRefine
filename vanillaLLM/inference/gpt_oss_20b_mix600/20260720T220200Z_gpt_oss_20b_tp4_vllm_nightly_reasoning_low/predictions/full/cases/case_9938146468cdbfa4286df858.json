@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_9938146468cdbfa4286df858",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8262889506295323,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_16f210f630a6671b1f65469a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetBuses. Slots: departure_date, departure_time, destination, group_size, origin. User says \"I want to check bus options for my trip.\" No specifics. Use past patterns: user often uses bus with origin and destination. No preference. We can leave empty. Output format: GetBuses() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615096,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ae202c2deff0105c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 87,
+      "prompt_tokens": 11537,
+      "prompt_tokens_details": null,
+      "total_tokens": 11624
+    }
+  },
+  "request_sha256": "f9cd55d87f0ac53ea5b20e669ef0e7aec9d720e27aa21bac5525648d7324a7ff",
+  "source_example_id": "mix_dev_0331+durec_src_1229+hb_0436",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

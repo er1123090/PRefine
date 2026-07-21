@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_5e0992d1facbbb04abe616e4",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1544035850092769,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_fe47900a380fe09b99185630",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Need slots: category, free_entry, good_for_kids, location, destination, departure_date. User says planning a trip and want to explore travel options. No specifics. Use past patterns: user liked Place of Worship, good_for_kids True. Also earlier they searched attractions in Phoenix, then Kuala Lumpur. Likely wants travel options generic. We can default to category \"Tourist Attraction\" maybe. But pattern: they often choose Place of Worship. But no preference. We can leave slots empty. Output format: GetTravel().",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615013,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b55af23d78b15f02",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 126,
+      "prompt_tokens": 8493,
+      "prompt_tokens_details": null,
+      "total_tokens": 8619
+    }
+  },
+  "request_sha256": "2a99e528a3872d2a8f5427bf9f2f28288aed3969deeec1a4b49b13ec953e9baa",
+  "source_example_id": "mix_dev_0231+hb_0495",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

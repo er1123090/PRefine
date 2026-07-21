@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_40629da6c35435d08e4544c2",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4166297288611531,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_fa1204072bf55d3a5b3d9b54",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", pickup_time=\"in 30 minutes\", number_of_seats=\"1\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, pickup_time, number_of_seats, shared_ride. User didn't specify seats, shared. Assume default 1 seat, shared_ride false? Past pattern: when single, they set shared_ride True? In session5 they set shared_ride True for 1 seat. So use shared_ride=True. pickup_time: about half an hour from now. We can set to \"in 30 minutes\". Probably string.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614965,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a7a938adbaad6e16",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 139,
+      "prompt_tokens": 11197,
+      "prompt_tokens_details": null,
+      "total_tokens": 11336
+    }
+  },
+  "request_sha256": "3b2b20f7db74804b5f3b58eb2ba7e567e4caebb1758a6bec1b20e85c8cc94e51",
+  "source_example_id": "mix_dev_0063+durec_src_1014+hb_0442",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

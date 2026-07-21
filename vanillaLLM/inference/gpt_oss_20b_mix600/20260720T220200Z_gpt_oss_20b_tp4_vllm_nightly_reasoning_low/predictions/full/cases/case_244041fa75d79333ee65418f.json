@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_244041fa75d79333ee65418f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.926052102819085,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a2a4f96cb662f5672a816d26",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(shared_ride=\"true\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. From history: no explicit preference. But user wants ride-sharing options. Likely shared_ride true. Destination unspecified. Maybe default? We can leave empty. number_of_seats maybe 1? pickup_time maybe now? We can set shared_ride=true. Provide empty others.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614909,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-98a4a273a21d4e75",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 98,
+      "prompt_tokens": 10510,
+      "prompt_tokens_details": null,
+      "total_tokens": 10608
+    }
+  },
+  "request_sha256": "9c91062ca04ad3c2c7c727292fb1d8af350ae8ae18903099a98698a577299200",
+  "source_example_id": "mix_dev_0193+durec_src_0662+hb_0112",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

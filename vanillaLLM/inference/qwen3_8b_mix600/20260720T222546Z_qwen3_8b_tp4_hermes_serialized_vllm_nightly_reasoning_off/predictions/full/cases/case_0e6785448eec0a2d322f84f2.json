@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_0e6785448eec0a2d322f84f2",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 12.550621160306036,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "39145 Farwell Drive",
+        "pickup_time": "18:15"
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_0af0a9824f2c4e6c9c8ce1c1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"39145 Farwell Drive\", \"pickup_time\": \"18:15\"}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-95d4025352589a35",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784586897,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-96dd1491b3f8a4ee",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 40,
+      "prompt_tokens": 9129,
+      "prompt_tokens_details": null,
+      "total_tokens": 9169
+    }
+  },
+  "request_sha256": "1f8b884cb3a9ed1cba3f36b6b68836d51f7e42b32bab3ed19a036cc96e473cfc",
+  "source_example_id": "dev_0009",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

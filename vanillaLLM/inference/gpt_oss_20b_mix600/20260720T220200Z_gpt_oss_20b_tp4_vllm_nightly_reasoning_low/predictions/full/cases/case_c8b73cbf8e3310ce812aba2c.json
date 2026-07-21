@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c8b73cbf8e3310ce812aba2c",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.9739823825657368,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6e76ae84a782adc8a12507a2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", pickup_time=\"\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. From history: user wants ride, check available options. No specifics. Use pattern: shared ride True? In past, shared ride used. Likely default shared ride True. number_of_seats maybe 1. destination unknown. We can leave empty? But need values. Maybe ask? But we must output. Use empty string? Probably set destination=\"\"? But schema expects string. We can set destination=\"\". But better to set default: destination=\"\". number_of_seats=\"1\", shared_ride=\"True\". pickup_time empty. Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615165,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ac8ad2a0d579dd88",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 164,
+      "prompt_tokens": 10427,
+      "prompt_tokens_details": null,
+      "total_tokens": 10591
+    }
+  },
+  "request_sha256": "248206228b331d8f683c4d5a956e88de024e41da3d77335bcca468c7c8645704",
+  "source_example_id": "mix_dev_0131+durec_src_0415+hb_0429",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

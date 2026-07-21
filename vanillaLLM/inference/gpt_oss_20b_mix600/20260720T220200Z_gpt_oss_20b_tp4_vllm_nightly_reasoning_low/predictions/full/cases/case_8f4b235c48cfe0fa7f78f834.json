@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8f4b235c48cfe0fa7f78f834",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8012356637045741,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_42075a185ff9affe6e977011",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"Delta Airlines\", flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "User wants flights. Need deduce preferences: past flights: used Delta, American, Alaska. They prefer Delta? In session4 used Delta. In session8 used Delta. Also preferred economy class. So set airlines=\"Delta Airlines\", flight_class=\"Economy\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615080,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-86562aa40cf47982",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 82,
+      "prompt_tokens": 9067,
+      "prompt_tokens_details": null,
+      "total_tokens": 9149
+    }
+  },
+  "request_sha256": "72afc220c8a2b31e527bb56124e226b6747cf7583f194eb4963da5790766b2aa",
+  "source_example_id": "dev_0042",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

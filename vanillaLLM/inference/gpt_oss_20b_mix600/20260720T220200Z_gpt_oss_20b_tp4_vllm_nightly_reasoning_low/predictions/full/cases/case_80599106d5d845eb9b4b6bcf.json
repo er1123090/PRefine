@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_80599106d5d845eb9b4b6bcf",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5474654734134674,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_833f3b9f74f7a52737cf4646",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"unknown\", number_of_seats=\"1\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, shared_ride. From history, user often wants shared ride. Likely destination unspecified. We can infer from context? No city. Maybe default? We can set shared_ride=True, number_of_seats maybe 1? But pattern: often shared ride for group. Without info, maybe default 1 seat. Destination unknown. We can leave empty? But must provide values. Maybe set destination=\"\"? Not allowed. We can guess \"unknown\". But better to ask? But we must output. Use shared_ride=\"True\", number_of_seats=\"1\". Destination maybe \"unknown\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615061,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8d05201ac2cc32e3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 164,
+      "prompt_tokens": 8781,
+      "prompt_tokens_details": null,
+      "total_tokens": 8945
+    }
+  },
+  "request_sha256": "54e621ef48e07644a1f603ea02b8f69adde16bbe8c127b8f706e61c0278d670f",
+  "source_example_id": "dev_0041",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

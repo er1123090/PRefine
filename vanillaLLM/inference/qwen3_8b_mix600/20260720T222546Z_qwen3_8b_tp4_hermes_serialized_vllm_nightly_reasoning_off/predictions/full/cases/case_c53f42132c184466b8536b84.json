@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_c53f42132c184466b8536b84",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.705972204916179,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "departure_date": "2019-03-09",
+        "destination": "Anaheim",
+        "origin": "Los Angeles"
+      },
+      "name": "GetBuses"
+    }
+  ],
+  "pair_id": "pair_b50fc20ba41ea2317bc8bb78",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"origin\": \"Los Angeles\", \"destination\": \"Anaheim\", \"departure_date\": \"2019-03-09\"}",
+                "name": "GetBuses"
+              },
+              "id": "chatcmpl-tool-8e1c2b8572448597",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588136,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8805ea61bd9e4197",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 45,
+      "prompt_tokens": 10694,
+      "prompt_tokens_details": null,
+      "total_tokens": 10739
+    }
+  },
+  "request_sha256": "36135e3fac1ad280c4269fa389b26a38270341c7b719ef0a59ede1975c00e5cb",
+  "source_example_id": "mix_dev_0326+hb_0461",
+  "status": "success",
+  "target_domain": "GetBuses"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4744e666b0c18733cf572011",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1964781852439046,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_75c1886853a14657c620c922",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(price_range=\"pricey\", city=\"San Francisco\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. No preferences given. From history, user likes pricey, steakhouse, but now generic. We can infer price_range maybe \"pricey\". Also city maybe San Francisco? Past restaurant was SF. So output: GetRestaurants(price_range=\"pricey\", city=\"San Francisco\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614974,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bc7280a471662dc7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 83,
+      "prompt_tokens": 10155,
+      "prompt_tokens_details": null,
+      "total_tokens": 10238
+    }
+  },
+  "request_sha256": "c56ac88d526bbd67cc8075e0ec13fed54b76c63a199268c9834353d9ad2be8a7",
+  "source_example_id": "mix_dev_0307+durec_src_1007+hb_0280",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

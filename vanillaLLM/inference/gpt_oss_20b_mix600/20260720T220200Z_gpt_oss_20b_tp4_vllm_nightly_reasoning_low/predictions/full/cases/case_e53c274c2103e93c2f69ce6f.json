@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e53c274c2103e93c2f69ce6f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0401437478139997,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b4a882533e683ff3018ba8db",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars()",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need slots: pickup_city, pickup_date, dropoff_date, pickup_time, car_type maybe. User didn't specify. Use past pattern: likely pickup_city from context? No context. Use default? Maybe pick default city? We can infer from previous sessions: user often uses San Fran or SD. But no mention. We can ask? But must output call. Use empty? Provide none. Probably pickup_city empty. We'll output GetRentalCars() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615201,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9200708e31d2096c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 114,
+      "prompt_tokens": 12323,
+      "prompt_tokens_details": null,
+      "total_tokens": 12437
+    }
+  },
+  "request_sha256": "186cd51fa1ae734dd1634098310132c3ec93a67a84de8b2d84d218e3d3b5a45d",
+  "source_example_id": "mix_dev_0266+durec_src_0131+hb_0167",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

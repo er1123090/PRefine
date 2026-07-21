@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0b53c501bc01f0dd9c0e3262",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.046557204797864,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_cd12c7d7ab84e18aa3cfe74e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jiong He\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants to listen to some music. We need to output GetMusic with inferred artist or song. Past: user likes Jiong He. So artist=\"Jiong He\". No song specified. So leave song_name empty? We can omit. Provide artist. Output format: GetMusic(artist=\"Jiong He\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614833,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b6ef2c55f8ca07fa",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 89,
+      "prompt_tokens": 8475,
+      "prompt_tokens_details": null,
+      "total_tokens": 8564
+    }
+  },
+  "request_sha256": "56ea54e70d2a8c2a72828b6a7202e7a12c5ed067ff5c6b422e340a589c6305fe",
+  "source_example_id": "mix_durec_src_1187+hb_0418",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

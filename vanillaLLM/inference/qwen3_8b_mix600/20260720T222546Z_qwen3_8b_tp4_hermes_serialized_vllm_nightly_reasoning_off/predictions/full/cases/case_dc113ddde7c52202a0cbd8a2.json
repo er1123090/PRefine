@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_dc113ddde7c52202a0cbd8a2",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.5966488560661674,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "location": "San Francisco",
+        "number_of_rooms": "1"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_618b2cf0602bef0a9dfe1028",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"San Francisco\", \"number_of_rooms\": \"1\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-ac3eb9a0d14abe96",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588286,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-83414735480da3f2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 30,
+      "prompt_tokens": 11243,
+      "prompt_tokens_details": null,
+      "total_tokens": 11273
+    }
+  },
+  "request_sha256": "3f89544f1e7346060fb9201ac47f04595247c43b5c787f712a6d39d660e3a41e",
+  "source_example_id": "mix_dev_0233+durec_src_0255+hb_0247",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

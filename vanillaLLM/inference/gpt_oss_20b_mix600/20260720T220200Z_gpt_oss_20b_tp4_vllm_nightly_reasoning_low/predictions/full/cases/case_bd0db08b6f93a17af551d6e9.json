@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_bd0db08b6f93a17af551d6e9",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9555046297609806,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_29b5d0635dff4c4006df0a3a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"American Airlines\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetFlights. From history: user used flights from Phoenix to San Diego, from Portland to KL, from Phoenix to San Diego. Preferences: airlines: American Airlines used. flight_class: not specified. passengers: not specified. They often choose American Airlines. So set airlines=\"American Airlines\". Also maybe departure_date? Not needed. We'll output GetFlights(airlines=\"American Airlines\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615148,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b44a45453b98c650",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 102,
+      "prompt_tokens": 10503,
+      "prompt_tokens_details": null,
+      "total_tokens": 10605
+    }
+  },
+  "request_sha256": "7c87d0a6c440d190f1dc35efa85d67b0713accb9ac5a8ddc55d6eee64d3aaa77",
+  "source_example_id": "mix_dev_0165+durec_src_0519+hb_0404",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_94547b2f795f2f81b8d774b6",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.389431028626859,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_59bdd194aa205566d0002776",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"Vancouver\", number_of_rooms=\"1\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants hotels. No specifics. From history, user often wants 1 room, 2-4 days, prefers smoking? In session14, user wanted 5 star, smoking not allowed. In session6, user wanted hotels in Vancouver, 1 room, 2 days. In session7, user wanted 1 room, 3 days, smoking room. So preferences: 1 room, maybe smoking allowed? But inconsistent. Also location: Vancouver or Las Vegas. No location given now. We need to guess. Maybe default to Vancouver? But user didn't specify. We can infer from past: user often wants hotels in Vancouver. So choose location Vancouver, check_in_date maybe today? But no date. We can leave slots empty. But need to output function call with inferred preferences: location=\"Vancouver\", number_of_rooms=\"1\", has_wifi? Not known. average_star? maybe 4? But we can guess 4 star. Let's output GetHotels with location=\"Vancouver\", number_of_rooms=\"1\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615089,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a6efefb292258ed0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 238,
+      "prompt_tokens": 10491,
+      "prompt_tokens_details": null,
+      "total_tokens": 10729
+    }
+  },
+  "request_sha256": "17451ffa1fb2070c480c64c4ce255a0306b680dc1983a34f857e2d19c75e7e19",
+  "source_example_id": "mix_dev_0154+durec_src_0557",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_fa5486be3c51e2a1f1f6e62c",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1709566079080105,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_94d5ab853df449bde00acc82",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"Berkeley\", number_of_rooms=\"1\", has_wifi=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels? They want trip to Berkeley. Likely hotel. They didn't specify preferences. From history, user often wants wifi, number_of_rooms=1. Also prefers 4 star? In session4 they wanted wifi and 1 room. So deduce: location=\"Berkeley\" (not in enum but maybe allowed). average_star maybe 4? But not sure. We'll set location=\"Berkeley\", number_of_rooms=\"1\", has_wifi=\"True\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615228,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-95f8bf85913ffc3f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 124,
+      "prompt_tokens": 10547,
+      "prompt_tokens_details": null,
+      "total_tokens": 10671
+    }
+  },
+  "request_sha256": "59c36291219d8aa5e48cd27247f7ad2b7e5f97213fbcca289357ce315ee101c9",
+  "source_example_id": "mix_dev_0165+durec_src_0519+hb_0404",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

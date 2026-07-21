@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_777fb70e12799ae5d7aa4428",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9473250517621636,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_40ffdbd0e2a7a32a8e2def2e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Kris Wu\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants to listen to some music. We need to output GetMusic with inferred artist or song_name? Preference schema: GetMusic has artist, playback_device, song_name. We need to infer likely artist or device. From history, user likes Kris Wu songs. So artist=\"Kris Wu\". No device specified. So output GetMusic(artist=\"Kris Wu\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615049,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9903c187f1ff2ff5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 100,
+      "prompt_tokens": 11142,
+      "prompt_tokens_details": null,
+      "total_tokens": 11242
+    }
+  },
+  "request_sha256": "852dbcadd3299fe2f175771621928f98a46b8f812f48c3af036db957b5fa129d",
+  "source_example_id": "mix_dev_0063+durec_src_1014+hb_0442",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

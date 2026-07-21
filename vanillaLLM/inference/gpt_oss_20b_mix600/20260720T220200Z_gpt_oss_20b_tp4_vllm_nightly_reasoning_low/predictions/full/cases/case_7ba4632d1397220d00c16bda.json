@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_7ba4632d1397220d00c16bda",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.07054880913347,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_fe47900a380fe09b99185630",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2019-03-11\", destination=\"San Francisco\", return_date=\"2019-03-12\", passengers=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights? They plan trip to Berkeley. Likely flight? But Berkeley is city. Maybe GetTravel? They want travel. Use GetTravel with location \"Berkeley\"? Not in enum. Maybe GetFlights with destination \"San Francisco\" nearest. But pattern: previous travel used GetTravel for attractions. For trip, maybe GetFlights. Destination not in list: \"Berkeley\" not. Use San Francisco. So output GetFlights(destination=\"San Francisco\", departure_date=\"2019-03-11\", return_date=\"2019-03-12\", passengers=\"1\"). Also maybe flight_class default. So produce.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615054,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9aaba77eab5974ae",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 170,
+      "prompt_tokens": 8539,
+      "prompt_tokens_details": null,
+      "total_tokens": 8709
+    }
+  },
+  "request_sha256": "d0a353f92aa0227ae87b5072b7b79ca3a13696c4314cfd71bbada81e90931a1f",
+  "source_example_id": "mix_dev_0231+hb_0495",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_7d9d1cc50d1bdfa623a97747",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.7986088059842587,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a1845e2c5a70210111048eee",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Compact\", pickup_city=\"Portland\", pickup_date=\"2024-07-25\", pickup_time=\"10:00\", dropoff_date=\"2024-07-30\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need slots: car_type, pickup_city, pickup_date, pickup_time, dropoff_date, dropoff_city? In schema: car_type, dropoff_date, pickup_city, pickup_date, pickup_location, pickup_time. We don't have dates. Use past pattern: user often picks Compact. Use pickup_city from context? None. Use default? maybe \"Portland\" from past. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615057,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b5b9b6875b353033",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 139,
+      "prompt_tokens": 9425,
+      "prompt_tokens_details": null,
+      "total_tokens": 9564
+    }
+  },
+  "request_sha256": "e7fe9609bd28692ff5f8065ff9ad2c904c06e9a2275139739a45f7644cb30169",
+  "source_example_id": "mix_dev_0084+hb_0276",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

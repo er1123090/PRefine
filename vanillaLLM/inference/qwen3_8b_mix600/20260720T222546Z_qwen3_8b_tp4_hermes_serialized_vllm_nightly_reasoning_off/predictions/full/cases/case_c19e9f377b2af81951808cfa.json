@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_c19e9f377b2af81951808cfa",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.429680623114109,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Asian",
+        "price_range": "cheap"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_0282c0815eb64da68d885aec",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Asian\", \"price_range\": \"cheap\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-a39b3f9112b17db2",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588113,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a3b04f31b4457304",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 28,
+      "prompt_tokens": 11378,
+      "prompt_tokens_details": null,
+      "total_tokens": 11406
+    }
+  },
+  "request_sha256": "8fde477a5c397c41732171ddbe63a4e4156565be306552492ef256c4fb743849",
+  "source_example_id": "mix_dev_0086+durec_src_1270+hb_0001",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

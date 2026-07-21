@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_a57e15bdcb7e04a95c0e1517",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.687279266305268,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "alcohol_served": "False",
+        "category": "Italian"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_e6cd188747b07d8b6bfd5f61",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Italian\", \"alcohol_served\": \"False\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-9e6b262ffee08ea0",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587936,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a9a68a9ad18172cb",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 30,
+      "prompt_tokens": 9732,
+      "prompt_tokens_details": null,
+      "total_tokens": 9762
+    }
+  },
+  "request_sha256": "314b4f13d65dd9c7e14ddb7640adc3192675a3904de34f76d7a7de19f5df6bae",
+  "source_example_id": "mix_dev_0189+durec_src_0624",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

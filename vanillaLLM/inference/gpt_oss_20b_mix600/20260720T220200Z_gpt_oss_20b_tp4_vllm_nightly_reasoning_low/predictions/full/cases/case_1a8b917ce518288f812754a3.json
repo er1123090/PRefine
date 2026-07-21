@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_1a8b917ce518288f812754a3",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.9931010780856013,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_666e17442f2a57c1ae708c67",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"San Francisco\", departure_date=\"2023-03-11\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: category? free_entry? good_for_kids? location=Berkeley? But Berkeley not in enum. Maybe GetTravel location must be one of list. Berkeley not present. Maybe use GetHotels? But trip. Probably GetTravel with location \"Berkeley\" not allowed. Maybe GetHotels? But user planning trip. Could be GetTravel with location \"Berkeley\" but not in enum. Maybe choose closest: \"San Francisco\" or \"San Jose\". But user said Berkeley. We can still call GetTravel with location \"Berkeley\" ignoring enum? But schema requires enum. Might need to pick \"San Francisco\". Use location=\"San Francisco\". No other preferences. So output: GetTravel(location=\"San Francisco\", departure_date=\"2023-03-11\", destination=\"Berkeley\"? but destination not in schema. We'll just set location.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614884,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-804be48c37865758",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 205,
+      "prompt_tokens": 10199,
+      "prompt_tokens_details": null,
+      "total_tokens": 10404
+    }
+  },
+  "request_sha256": "07b3b8d5ef9e1713233fac4700e8c9c9cdbda7cd3cf9f15df454beb44ffaab89",
+  "source_example_id": "mix_dev_0307+durec_src_1007+hb_0280",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

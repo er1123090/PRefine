@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_c1b96e9ffdcba2cc054dcf06",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.313218628056347,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Park",
+        "good_for_kids": true,
+        "location": "Chicago"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_27db81a13cbc02429039979f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Park\", \"location\": \"Chicago\", \"good_for_kids\": \"True\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-831837e1332322f6",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588114,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aff2d63aa02bf52f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 35,
+      "prompt_tokens": 8705,
+      "prompt_tokens_details": null,
+      "total_tokens": 8740
+    }
+  },
+  "request_sha256": "8be4e1ff7df1822b84e03a16431b84addcec0964e089943266ddb408e1ba430f",
+  "source_example_id": "mix_dev_0321+hb_0482",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_1f0005002b85217de0573e3e",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.651076671667397,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_83db6eac01a78f8ea84cb701",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"San Jose\", destination=\"Sacramento\", departure_date=\"2023-03-10\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. Slots: origin, destination, departure_date, departure_time? user says morning but no time. We can omit time. So output: GetBuses(origin=\"San Jose\", destination=\"Sacramento\", departure_date=\"2023-03-10\") but date format? In history they used \"2019-03-01\". So use YYYY-MM-DD. March 10th. So \"2023-03-10\" maybe year unknown. Use \"2023-03-10\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614896,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8e94e8963e3c61d3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 138,
+      "prompt_tokens": 10641,
+      "prompt_tokens_details": null,
+      "total_tokens": 10779
+    }
+  },
+  "request_sha256": "e9fdb7d98597896abb4f40eafa448868e7697d96bf95cdb7463220a8e5137cdb",
+  "source_example_id": "mix_dev_0127+durec_src_0622+hb_0200",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

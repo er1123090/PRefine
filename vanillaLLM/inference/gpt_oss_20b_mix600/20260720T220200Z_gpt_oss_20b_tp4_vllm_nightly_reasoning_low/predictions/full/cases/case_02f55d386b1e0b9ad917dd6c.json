@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_02f55d386b1e0b9ad917dd6c",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.477931764908135,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_62d8148e82e4f3134663b0d9",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Leehom Wang\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants to listen to some music. We need to output a function call. Which domain? GetMusic. Slots: artist, playback_device, song_name. We need to infer preferences. From history, user likes Leehom Wang. So artist likely \"Leehom Wang\". No song_name specified. So leave empty? We can omit. playback_device? Not seen. Probably default. So output GetMusic(artist=\"Leehom Wang\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614804,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b3714057a48996dc",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 117,
+      "prompt_tokens": 7993,
+      "prompt_tokens_details": null,
+      "total_tokens": 8110
+    }
+  },
+  "request_sha256": "6ba81d0ec0d5197d1da5e565d8841d4a3f17ad1fc240908830fc213bf87c0e91",
+  "source_example_id": "mix_durec_src_0665+hb_0206",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

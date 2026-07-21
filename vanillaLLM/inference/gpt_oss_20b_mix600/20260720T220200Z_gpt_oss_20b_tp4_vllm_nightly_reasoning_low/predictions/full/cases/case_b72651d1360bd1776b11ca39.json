@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b72651d1360bd1776b11ca39",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0568154118955135,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_15aa4db9657c9da1fd3632a4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"Philadelphia\", average_star=\"3\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants hotels. Past: user booked 3-star hotels in Chicago, Philadelphia. No preference for star. Maybe prefers 3-star. Also earlier asked for 3-star in Philadelphia. So likely wants 3-star. Also location unspecified. Could default to Chicago? But no location. Maybe use previous city? Last session was Philadelphia. So location Philadelphia. So call GetHotels with location=\"Philadelphia\", average_star=\"3\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615141,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-baed55ef828f2201",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 113,
+      "prompt_tokens": 9070,
+      "prompt_tokens_details": null,
+      "total_tokens": 9183
+    }
+  },
+  "request_sha256": "9c80e0a3214eb6f7428f941980a233a07dcdc3ce1a5176e277fe645eb2608e45",
+  "source_example_id": "dev_0042",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_95a82430a757e73ddc8800f7",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7329423623159528,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4f6866539da1cf84d87c5857",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Italian\", price_range=\"moderate\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. Slots: category Italian, price_range? user said quiet, no alcohol. No price. So category=\"Italian\", price_range maybe \"cheap\" or \"moderate\"? quiet implies moderate? choose moderate. Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615092,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-935b2e9c5b0671a4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 70,
+      "prompt_tokens": 10729,
+      "prompt_tokens_details": null,
+      "total_tokens": 10799
+    }
+  },
+  "request_sha256": "75237cb52229aa37f7c6095ac474a07d7319e12afda78e71d3c78bb9e58c5806",
+  "source_example_id": "mix_dev_0212+durec_src_0515+hb_0273",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

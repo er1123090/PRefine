@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a371f842e53645d7c7800475",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7683025589212775,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e1904e1037ee88622c9a1c30",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"San Francisco\", category=\"Museum\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel with location San Francisco, likely category? user wants art exhibition. In past, art museum. So category maybe \"Museum\" or \"Art Museum Steps tourist attraction\" but category field is \"category\" enum. Probably \"Museum\". So output GetTravel(location=\"San Francisco\", category=\"Museum\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615111,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ac6a88cedc016234",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 84,
+      "prompt_tokens": 10760,
+      "prompt_tokens_details": null,
+      "total_tokens": 10844
+    }
+  },
+  "request_sha256": "74bfb90bb60b9525e9aa7dc04b7461218d09a833b2a2abd5942ba6d989dbcc1f",
+  "source_example_id": "mix_dev_0272+durec_src_0538+hb_0344",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

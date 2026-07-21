@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e3c1b8673da34b82ae9844fe",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4532169234007597,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b90f2eab31b8b13df7ba7f7a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(average_star=\"3\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants hotels. From history, user prefers 2-star in NY, 4-star in Sydney, 3-star in Philadelphia. Likely wants 3-star? But no explicit. Maybe default 3-star? Use GetHotels. No location given. Maybe default to user's location? No. We can infer preference for 3-star? In session4 they asked 3-star. So set average_star=\"3\". Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615198,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8757f4167267ac15",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 111,
+      "prompt_tokens": 8238,
+      "prompt_tokens_details": null,
+      "total_tokens": 8349
+    }
+  },
+  "request_sha256": "dad69cbc4b3c0aeb6a8a3b2038da83154e8578f3ed14f3e25727e65d7717285c",
+  "source_example_id": "dev_0083",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

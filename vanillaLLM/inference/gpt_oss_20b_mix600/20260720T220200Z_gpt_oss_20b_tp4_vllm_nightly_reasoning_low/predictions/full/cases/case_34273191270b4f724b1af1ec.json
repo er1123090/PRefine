@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_34273191270b4f724b1af1ec",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9398001497611403,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e5eb1764d5adb8e6acd97ae6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"Washington D.C.\")",
+          "function_call": null,
+          "reasoning": "Need GetEvents. No city given, so infer from past: user often uses Washington D.C., Los Angeles, Sacramento. \"nearby\" likely current location? No context. Maybe default to Washington D.C. from earlier. Use city=\"Washington D.C.\" no other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614944,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bd022eef4c63e509",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 75,
+      "prompt_tokens": 10686,
+      "prompt_tokens_details": null,
+      "total_tokens": 10761
+    }
+  },
+  "request_sha256": "ea858f69c7e386c46bf178dbdf5df5b80b430e92764fcd37af319f9b3377a083",
+  "source_example_id": "mix_dev_0203+durec_src_1261+hb_0229",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

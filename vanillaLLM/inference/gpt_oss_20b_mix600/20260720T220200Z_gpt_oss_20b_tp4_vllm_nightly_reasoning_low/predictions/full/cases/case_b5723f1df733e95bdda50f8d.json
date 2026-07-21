@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b5723f1df733e95bdda50f8d",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0450228536501527,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_666e17442f2a57c1ae708c67",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(free_entry=\"True\", good_for_kids=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. User wants travel options. No specifics. We infer preferences: earlier they liked free entry, good for kids. Also liked museums, parks. Likely want free entry? But no explicit. Use past: they asked for free attractions. So set free_entry=True. Also good_for_kids=True. No location. So output GetTravel(free_entry=\"True\", good_for_kids=\"True\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615138,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-99f835f5f4400508",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 110,
+      "prompt_tokens": 10153,
+      "prompt_tokens_details": null,
+      "total_tokens": 10263
+    }
+  },
+  "request_sha256": "23f0bd620abb33a2ba69b3dd2c40cf4e1d4c8854b5f44e4557b655d41d7c5544",
+  "source_example_id": "mix_dev_0307+durec_src_1007+hb_0280",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

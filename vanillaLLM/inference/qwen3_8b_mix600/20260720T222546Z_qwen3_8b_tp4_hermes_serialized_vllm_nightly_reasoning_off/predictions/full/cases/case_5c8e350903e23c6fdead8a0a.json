@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_5c8e350903e23c6fdead8a0a",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.803798002190888,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "genre": "Comedy"
+      },
+      "name": "GetMedia"
+    }
+  ],
+  "pair_id": "pair_175e929e9d242ab69f33c1ca",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"genre\": \"Comedy\"}",
+                "name": "GetMedia"
+              },
+              "id": "chatcmpl-tool-aecd93dd03670d34",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587504,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b970f6c546eb87b7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 21,
+      "prompt_tokens": 9157,
+      "prompt_tokens_details": null,
+      "total_tokens": 9178
+    }
+  },
+  "request_sha256": "f5d3be078d3a4494689cc36c1ab06397e40446caffcbc58357335684785e94d6",
+  "source_example_id": "dev_0306",
+  "status": "success",
+  "target_domain": "GetMedia"
+}

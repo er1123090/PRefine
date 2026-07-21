@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_06adf52c5e7ec22697efd988",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.422379412688315,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_641f9049360abcd716a4f499",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(flight_class=\"Economy\", passengers=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Determine preferences: airline? none. flight_class? none. passengers? none. return_date? none. But maybe pattern: previous flights often economy. So set flight_class=\"Economy\". passengers=\"1\". No airline preference. So output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614814,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b84a57519f3858b1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 77,
+      "prompt_tokens": 10635,
+      "prompt_tokens_details": null,
+      "total_tokens": 10712
+    }
+  },
+  "request_sha256": "2ed7271cecc1e76675f462a2f658be58eb5ef5eba738bfb33afc0d493c17876e",
+  "source_example_id": "mix_dev_0127+durec_src_0622+hb_0200",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

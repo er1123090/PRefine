@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_cef144cae989d5fc3b2fafc9",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.025409521535039,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "American",
+        "city": "San Leandro",
+        "price_range": "cheap"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_c96e87650cbbad3d8df4890d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"American\", \"city\": \"San Leandro\", \"price_range\": \"cheap\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-ac518e48631900f8",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588210,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bcbc828b2eeef717",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 36,
+      "prompt_tokens": 13998,
+      "prompt_tokens_details": null,
+      "total_tokens": 14034
+    }
+  },
+  "request_sha256": "d9896bafbd55f5cd155d757a2f40d3423a7b6114d5eee2467019bbcdb65d0505",
+  "source_example_id": "mix_dev_0015+durec_src_0969+hb_0384",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_3d1fef3aacb5c7fe90f5ce28",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.484477836638689,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "genre": "Drama"
+      },
+      "name": "GetMovies"
+    }
+  ],
+  "pair_id": "pair_23205b113de703512790d9c6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"genre\": \"Drama\"}",
+                "name": "GetMovies"
+              },
+              "id": "chatcmpl-tool-ad4b3ad90aedf9f8",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587310,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b156268af7c897e9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 21,
+      "prompt_tokens": 9526,
+      "prompt_tokens_details": null,
+      "total_tokens": 9547
+    }
+  },
+  "request_sha256": "2527dbd5721c0af1c3afa995fe8c11fde097334cf4ea735cd25c0545140cb80a",
+  "source_example_id": "mix_dev_0096+durec_src_0242",
+  "status": "success",
+  "target_domain": "GetMovies"
+}

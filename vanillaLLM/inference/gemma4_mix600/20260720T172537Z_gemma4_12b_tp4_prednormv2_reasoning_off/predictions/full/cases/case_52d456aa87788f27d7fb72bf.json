@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_52d456aa87788f27d7fb72bf",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.0825898898765445,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "New York",
+        "origin": "Washington"
+      },
+      "name": "GetBuses"
+    }
+  ],
+  "pair_id": "pair_af97f7686621b113d6731588",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"New York\", \"origin\": \"Washington\"}",
+                "name": "GetBuses"
+              },
+              "id": "chatcmpl-tool-862633208a0bfd48",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569861,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9110cfb4431b31e7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 22,
+      "prompt_tokens": 12129,
+      "prompt_tokens_details": null,
+      "total_tokens": 12151
+    }
+  },
+  "request_sha256": "d149e6946b5fc4d4635f82bf927bfe17c814ea6a2a9ec0e8c2c961917f995f1b",
+  "source_example_id": "mix_dev_0052+durec_src_0546+hb_0298",
+  "status": "success",
+  "target_domain": "GetBuses"
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_415ec23bdfa654b91056f1ba",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.5103200441226363,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Tourist Attraction",
+        "destination": "Anaheim",
+        "location": "Anaheim"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_6c7a52ce0d3f03c44e47791c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Tourist Attraction\", \"location\": \"Anaheim\", \"destination\": \"Anaheim\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-8877adfbf1270325",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587336,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-929080c50425c709",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 37,
+      "prompt_tokens": 11431,
+      "prompt_tokens_details": null,
+      "total_tokens": 11468
+    }
+  },
+  "request_sha256": "784a28f82b1ea2d8e00a4abcf177529b656657ace77d41b313fd9722309bc715",
+  "source_example_id": "mix_dev_0065+durec_src_0412+hb_0408",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ed2c65d23e070750a7737d19",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7990644862875342,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_27421c8d1cd3927b0c4543b4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses()",
+          "function_call": null,
+          "reasoning": "We need GetBuses. No slots given. Use past preference: origin? destination? group_size? They didn't specify. We infer from pattern: user often wants bus from Los Angeles to San Diego or Las Vegas to Long Beach. But current utterance generic. We can leave empty. Output format: GetBuses() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615212,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8ba40e889c5de064",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 83,
+      "prompt_tokens": 10008,
+      "prompt_tokens_details": null,
+      "total_tokens": 10091
+    }
+  },
+  "request_sha256": "abf7dbf5f0aebe0c6eaecefe9b08ac1360139578f948c3ad430c750a970b8873",
+  "source_example_id": "mix_dev_0295+durec_src_0976+hb_0480",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

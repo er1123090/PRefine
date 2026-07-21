@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_9fbcd1f087203c6bf2f7b807",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.803066940978169,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Korean",
+        "city": "Santa Clara"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_b04f4f5ecebf8d7c5881586b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Korean\", \"city\": \"Santa Clara\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-ba222c01f81958e8",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587905,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-85035e2682edc455",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 11323,
+      "prompt_tokens_details": null,
+      "total_tokens": 11352
+    }
+  },
+  "request_sha256": "1e4e90c5fb699b0eb5f29d1f1ace317f06277e71684a080b0805e81d58a526c6",
+  "source_example_id": "mix_dev_0190+durec_src_1319+hb_0392",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_5e7aeba2d0ce2fc63535936f",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.6139856185764074,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "area": "San Jose",
+        "number_of_beds": "3"
+      },
+      "name": "GetHomes"
+    }
+  ],
+  "pair_id": "pair_23bf340623918c546eeeecd2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"area\": \"San Jose\", \"number_of_beds\": \"3\"}",
+                "name": "GetHomes"
+              },
+              "id": "chatcmpl-tool-ab8e417e59f9b963",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587516,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a31e57565dedd13d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 31,
+      "prompt_tokens": 10774,
+      "prompt_tokens_details": null,
+      "total_tokens": 10805
+    }
+  },
+  "request_sha256": "eba06317ec1791e1484dddda1093b872e79377e4ee7cfb5a09bfa660d7da8774",
+  "source_example_id": "mix_dev_0040+durec_src_0578+hb_0101",
+  "status": "success",
+  "target_domain": "GetHomes"
+}

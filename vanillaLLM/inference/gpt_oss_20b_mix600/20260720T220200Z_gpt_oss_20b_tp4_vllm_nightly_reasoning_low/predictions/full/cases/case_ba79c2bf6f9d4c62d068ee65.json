@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ba79c2bf6f9d4c62d068ee65",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9830434722825885,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1fd17d8e94653278b5c09510",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing()",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. From history: no explicit preferences. But pattern: user often wants shared? In session 2, no. In session 1, none. No pattern. Default? Maybe shared_ride false. number_of_seats? default 1. pickup_time? maybe current? We can leave empty. So output: GetRideSharing().",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615145,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bad0c7a6321d1589",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 103,
+      "prompt_tokens": 10489,
+      "prompt_tokens_details": null,
+      "total_tokens": 10592
+    }
+  },
+  "request_sha256": "030c432b4d0491bb65e799cc8711bd02c2ac2cfe75e9eca7399edeb3233c5354",
+  "source_example_id": "mix_dev_0058+durec_src_0989+hb_0228",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

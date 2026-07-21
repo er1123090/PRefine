@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_486a3408d52fe6476a627870",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3187076095491648,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_5705442b9e8821f99414f266",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. Past: user asked for vegatarian place in Lafayette, but that was category unspecified. They didn't specify category. They asked for \"vegatarian place\" but assistant responded with Duck Club Restaurant. No preference. No repeated category. So default? No preference. So we can leave empty. Output format: GetRestaurants with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614977,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9b9d075ff04465c5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 90,
+      "prompt_tokens": 9197,
+      "prompt_tokens_details": null,
+      "total_tokens": 9287
+    }
+  },
+  "request_sha256": "52712a96fdb4b0720cc7b2295f1057f99ed69bcafb2e59aefdbcbd3c1bc36463",
+  "source_example_id": "dev_0322",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

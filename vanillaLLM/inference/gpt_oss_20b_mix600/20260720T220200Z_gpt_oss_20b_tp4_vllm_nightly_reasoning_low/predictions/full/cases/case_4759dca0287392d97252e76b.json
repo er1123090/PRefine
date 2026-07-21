@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4759dca0287392d97252e76b",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.735575300641358,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_bd208d6ce952bda3fee79f24",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"San Diego\", destination=\"Los Angeles\", departure_date=\"\", flight_class=\"Economy\", passengers=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history, user often uses one-way flights. No preference for airline; earlier used Alaska. Likely default economy. Origin? Not specified. We infer from past: user often travels from San Diego to Los Angeles. But here just says planning a trip. We can default to origin unspecified? But need value. Maybe use San Diego? But better to ask? We must produce call. Use most frequent: origin San Diego, destination Los Angeles, departure_date next Friday? But no date. We can leave empty. But must provide values? We can set empty strings. Provide most likely: origin San Diego, destination Los Angeles, departure_date=\"2023-07-??\". We'll set empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614974,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9a52fc0501e41c24",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 201,
+      "prompt_tokens": 9844,
+      "prompt_tokens_details": null,
+      "total_tokens": 10045
+    }
+  },
+  "request_sha256": "6c2a6d7f4a4c9fc47e62354b7b3c9a985088822e2e2fad53c556491fb8476517",
+  "source_example_id": "mix_dev_0326+hb_0461",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_07b087d6278b1c23898969e9",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.205781487748027,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c02906dfed645d4c99ef5706",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Los Angeles\", pickup_date=\"2019-03-02\", pickup_time=\"13:30\", car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No slots given. We infer preferences: earlier session 19: user wanted standard camry, pickup at LAX, pickup date March 2, time 13:30. Also earlier no preference. So we output with those inferred.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614819,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ae12ccd7adaa69c1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 97,
+      "prompt_tokens": 10502,
+      "prompt_tokens_details": null,
+      "total_tokens": 10599
+    }
+  },
+  "request_sha256": "d3deba499152896b0e6690105d20a2151e7280d446846a9b1e16231a68be14b8",
+  "source_example_id": "mix_dev_0252+durec_src_1277+hb_0257",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

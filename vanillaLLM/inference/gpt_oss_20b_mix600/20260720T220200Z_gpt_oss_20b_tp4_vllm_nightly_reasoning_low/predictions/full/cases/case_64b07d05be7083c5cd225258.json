@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_64b07d05be7083c5cd225258",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.8017309196293354,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_669995ef14e4b4f0d4c5e149",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jacky Cheung\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants to listen to music. We need to output GetMusic with inferred slots. Past music: Jacky Cheung, Love Net, I'm Really Hurt. Also user likes music. No specific artist. Maybe default? We can leave empty. But need slot names. We can provide artist=\"\"? Probably omit. But format requires slot_name=\"value\". We can choose artist=\"Jacky Cheung\" as frequent. Also playback_device? Not known. So maybe just artist. Output: GetMusic(artist=\"Jacky Cheung\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615023,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-88ae5305b6b67779",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 134,
+      "prompt_tokens": 11179,
+      "prompt_tokens_details": null,
+      "total_tokens": 11313
+    }
+  },
+  "request_sha256": "bd1807197896e0730e0182948fb660d9d0fa30c6a49ef6c9aac8ab32fe89bafe",
+  "source_example_id": "mix_dev_0070+durec_src_0019+hb_0288",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

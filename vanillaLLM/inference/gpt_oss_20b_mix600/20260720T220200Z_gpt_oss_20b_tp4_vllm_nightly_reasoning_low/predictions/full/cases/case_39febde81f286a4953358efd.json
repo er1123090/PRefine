@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_39febde81f286a4953358efd",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1996408943086863,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_61afe63f27323741fa3e1d4e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines?, departure_date, destination, flight_class?, origin, passengers?, return_date?. No return. So leave optional. Use departure_date \"2019-03-09\" (assuming year). origin \"San Francisco\", destination \"Seattle\". No airline preference. flight_class maybe Economy default. passengers maybe 1. Output format: GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614954,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-864dc2e210f0b0f1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 126,
+      "prompt_tokens": 10771,
+      "prompt_tokens_details": null,
+      "total_tokens": 10897
+    }
+  },
+  "request_sha256": "d50a859d43411ea888b6f0fa9f08af9d8f08ff75a13f5437a4bae48489b1c1d9",
+  "source_example_id": "mix_dev_0236+durec_src_0018+hb_0256",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

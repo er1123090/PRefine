@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_5d93cebe9a3661cf06583430",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.6455342108383775,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "departure_date": "2019-03-12",
+        "destination": "Denver",
+        "origin": "Los Angeles"
+      },
+      "name": "GetFlights"
+    }
+  ],
+  "pair_id": "pair_5a095d74c316dbf76aa5b29b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"origin\": \"Los Angeles\", \"destination\": \"Denver\", \"departure_date\": \"2019-03-12\"}",
+                "name": "GetFlights"
+              },
+              "id": "chatcmpl-tool-9f1885e216cc5566",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587510,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a8c01510181c8fc7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 44,
+      "prompt_tokens": 9111,
+      "prompt_tokens_details": null,
+      "total_tokens": 9155
+    }
+  },
+  "request_sha256": "3360fc690cae90e380e0cbb65dbcf401e9a8b3cc5599f0fbaaf29b7c8d616dd8",
+  "source_example_id": "mix_dev_0283+hb_0071",
+  "status": "success",
+  "target_domain": "GetFlights"
+}

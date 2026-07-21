@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_405fa312c6fe4e8e552da405",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9641264025121927,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_32bdf062060794676a0d86e7",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars()",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need slots: car_type, dropoff_date, pickup_city, pickup_date, pickup_location, pickup_time. User didn't specify. Use patterns: previous rental car was Standard, pickup in Vancouver, dates March6-8. Likely default Standard. No city given. We can leave empty. Output format: GetRentalCars() with empty? Probably need at least pickup_city? We can leave empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614965,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a95499725527ab42",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 101,
+      "prompt_tokens": 11467,
+      "prompt_tokens_details": null,
+      "total_tokens": 11568
+    }
+  },
+  "request_sha256": "edd75388bffd51404e6e3f3bb12283d2279e8399d5e4ba494cf30f746fdd6d15",
+  "source_example_id": "mix_dev_0162+durec_src_0038+hb_0386",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

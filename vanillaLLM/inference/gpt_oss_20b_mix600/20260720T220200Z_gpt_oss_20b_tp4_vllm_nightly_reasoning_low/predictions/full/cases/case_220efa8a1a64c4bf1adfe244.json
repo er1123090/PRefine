@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_220efa8a1a64c4bf1adfe244",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.379117328673601,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_0e6d3d08402abfa343844d38",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", dropoff_date=\"2019-03-10\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says pick up downtown Berlin, around noon March 8th, keep couple days. So pickup_city=\"Berlin\"? but enum includes Berlin? list: Anaheim, Atlanta, etc. Berlin not in list. So maybe default? But we must use domain. Maybe use GetRentalCars with pickup_city=\"Berlin\" even if not in enum. Provide pickup_date=\"2019-03-08\", pickup_time=\"12:00\". dropoff_date maybe \"2019-03-10\". car_type unspecified. So output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614903,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b38101833022cfec",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 175,
+      "prompt_tokens": 10238,
+      "prompt_tokens_details": null,
+      "total_tokens": 10413
+    }
+  },
+  "request_sha256": "1d2cf1017001ef84ccf2d98f6ccb85750caff49ee894bae547a17b1c094ff3e1",
+  "source_example_id": "mix_dev_0307+durec_src_1007+hb_0280",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

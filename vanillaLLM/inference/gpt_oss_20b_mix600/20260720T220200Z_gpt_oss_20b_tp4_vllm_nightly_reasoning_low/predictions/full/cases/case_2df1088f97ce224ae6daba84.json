@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2df1088f97ce224ae6daba84",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.9530407655984163,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_01a28e00e08b8f371952ecd9",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"savings\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks. From history, user used savings and checking. For transfer, likely from savings to someone. But we need recipient_account_type. In past, they used both. Which is more frequent? In session14 they used savings then checking. In session17 they used savings twice. So preference likely savings. So output GetBanks(recipient_account_type=\"savings\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614930,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-92cd56d8c013c006",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 96,
+      "prompt_tokens": 10034,
+      "prompt_tokens_details": null,
+      "total_tokens": 10130
+    }
+  },
+  "request_sha256": "dca6be7459cdd76be333bd86ee61b0b32581fe999670e04c5d70937f6f1683dc",
+  "source_example_id": "mix_dev_0161+durec_src_0090+hb_0337",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

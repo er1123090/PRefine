@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_73e949f74384f3a911d5d725",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.086611737497151,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_79f4a34ee75bcc4a6aab8d2e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Kris Wu\")",
+          "function_call": null,
+          "reasoning": "We need to infer preference for music domain. Past: user likes Kris Wu songs, also wants sushi restaurants, etc. For music, likely artist preference: Kris Wu. Also playback_device? Not specified. So output GetMusic with artist=\"Kris Wu\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615043,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9d8b793987e52639",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 71,
+      "prompt_tokens": 10358,
+      "prompt_tokens_details": null,
+      "total_tokens": 10429
+    }
+  },
+  "request_sha256": "a5451e2a34fa9a1e8432220a7289046a833b0f059acfd965a4a451869c901424",
+  "source_example_id": "mix_dev_0072+durec_src_0437+hb_0367",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

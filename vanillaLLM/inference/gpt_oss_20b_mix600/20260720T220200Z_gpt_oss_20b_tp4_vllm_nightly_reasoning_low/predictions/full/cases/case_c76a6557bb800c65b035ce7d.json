@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c76a6557bb800c65b035ce7d",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6703208517283201,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c19ae860db5d7d9a61a0cad8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars()",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need slots: car_type, pickup_city, pickup_date, pickup_time, dropoff_date. No info given. Use past pattern: user often picks Standard. pickup_city maybe unspecified; default? Use previous: user wants options, no specifics. We can leave empty. But need at least function name with empty object? Provide empty slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615162,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8dedeb749100b229",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 88,
+      "prompt_tokens": 8075,
+      "prompt_tokens_details": null,
+      "total_tokens": 8163
+    }
+  },
+  "request_sha256": "af9642bb6e6f2090158d7345aec29e86cfb13c4802d6dc2522edf4686830f81e",
+  "source_example_id": "mix_dev_0160+durec_src_0274",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

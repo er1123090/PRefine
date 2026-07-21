@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c098a282936406e42d753bc1",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.6502727093175054,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e056df2ab1e507c48d589311",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"New York\")",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need city? user says nearby. No city provided. Use past preference: user asked events in New York City earlier. So default city New York. No category. So output GetEvents(city=\"New York\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615152,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8d8f1fb7c1a71cf3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 64,
+      "prompt_tokens": 10403,
+      "prompt_tokens_details": null,
+      "total_tokens": 10467
+    }
+  },
+  "request_sha256": "dddc2fa65021db9f45afe5aba91183fc2f16042cf614a8d5b6bf41fc47f9866b",
+  "source_example_id": "mix_dev_0097+durec_src_0250+hb_0271",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

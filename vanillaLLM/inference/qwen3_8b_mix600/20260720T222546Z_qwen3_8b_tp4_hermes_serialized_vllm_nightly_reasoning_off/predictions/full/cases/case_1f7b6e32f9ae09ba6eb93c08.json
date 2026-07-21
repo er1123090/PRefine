@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_1f7b6e32f9ae09ba6eb93c08",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.551754909567535,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "39145 Farwell Drive",
+        "pickup_time": "30 minutes",
+        "shared_ride": true
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_e6d5b1e61039f64c9a2c76a5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"39145 Farwell Drive\", \"pickup_time\": \"30 minutes\", \"shared_ride\": true}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-96494f4193cc05e2",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587089,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-acefb34ad180fbf5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 45,
+      "prompt_tokens": 9636,
+      "prompt_tokens_details": null,
+      "total_tokens": 9681
+    }
+  },
+  "request_sha256": "d0dec8eca3d500b6a2b57d28246a3096edcf1e4ccd1552ee55016e6ecb515dfb",
+  "source_example_id": "dev_0195",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

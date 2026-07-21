@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_81223431979b0ebf5c7c9dc1",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.5959583697840571,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_23205b113de703512790d9c6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMovies(genre=\"Drama\")",
+          "function_call": null,
+          "reasoning": "We need GetMovies. User wants a movie. No genre specified. Past preferences: user liked drama. Also liked movies with specific actors. Likely drama. So call GetMovies(genre=\"Drama\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615063,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-abbae4bd7117a348",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 58,
+      "prompt_tokens": 8772,
+      "prompt_tokens_details": null,
+      "total_tokens": 8830
+    }
+  },
+  "request_sha256": "784b9b5d39c14d8cbec8d9372fb008389f9eb8f984c8e459ef51162a317dd8d7",
+  "source_example_id": "mix_dev_0096+durec_src_0242",
+  "status": "model_no_tool",
+  "target_domain": "GetMovies"
+}

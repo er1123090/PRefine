@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c03d711e41dcb87048accd14",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6742301173508167,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_55d864664bd0d203dacdb277",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"Sacramento\", destination=\"Las Vegas\", departure_time=\"10:15\", group_size=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. No slots given. Infer from history: user often wants bus from Sacramento to Las Vegas at 10:15. But current utterance generic. We can default to most frequent: origin Sacramento, destination Las Vegas, departure_time 10:15, group_size maybe 1? But pattern: earlier bus request had 4 tickets. But no info. We can leave slots empty? But need function call with slots. We can provide empty values? Probably omit. But format requires slots. We can set origin=\"Sacramento\", destination=\"Las Vegas\", departure_time=\"10:15\". group_size maybe \"1\". departure_date unknown. Use empty string? Probably omit. I'll include those.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615152,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a50e00e793634504",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 180,
+      "prompt_tokens": 8370,
+      "prompt_tokens_details": null,
+      "total_tokens": 8550
+    }
+  },
+  "request_sha256": "a97561f18ae4ef70d4e69f42b0d5f1c501c9bd4ea487a4bdf5a19a9d6a2c26a0",
+  "source_example_id": "dev_0306",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

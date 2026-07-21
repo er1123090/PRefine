@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a31f4168653169b124db338d",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1710307849571109,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e3f2a72b6f92be0628993787",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Need slots: category, departure_date, destination, free_entry, good_for_kids, location. User says planning a trip and want to explore travel options. No specifics. Use past patterns: user often wants free_entry True? In session15 they asked free_entry True. But no preference. We can leave empty. But need function call with maybe no slots. Just call GetTravel with empty object.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615110,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a57ad5db6b76f6e6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 99,
+      "prompt_tokens": 10671,
+      "prompt_tokens_details": null,
+      "total_tokens": 10770
+    }
+  },
+  "request_sha256": "3adeab44ac7b6819328a315e8916755a8050e5c12abc9b2c53a0117ee50611f6",
+  "source_example_id": "mix_dev_0300+durec_src_1281",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

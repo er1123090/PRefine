@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_200b589c73f428137baa2500",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.003072488121688,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6291118166eed3f4286fd172",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"American Airlines\", origin=\"New York\", destination=\"Los",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants flights. We need to deduce likely preferences: airlines, flight_class, origin, destination, passengers, departure_date, return_date. From history: user often uses American Airlines, prefers Premium Economy sometimes. In session 11: American Airlines, 3 seats, departure from New York to LA. Session 14: Standard car. Session 15: American Airlines. Session 16: Standard. So likely prefers American Airlines. Flight class: sometimes Premium Economy, sometimes Economy. No strong preference. Origin: often New York, Washington, Chicago. Destination: often Los Angeles, London, Vancouver. Since user says \"planning a trip\" no specifics. We need to guess. Maybe default: American Airlines, Economy, origin: New York, destination: Los Angeles, passengers: 1, departure_date: next available? We can set placeholders? But need values. Use most frequent: American Airlines, origin New York, destination Los Angeles, passengers 1, flight_class Economy, departure_date maybe next day? We can set \"2024-07-22\". Return_date maybe none. Provide call.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614897,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a9a94f2be8fb57aa",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 256,
+      "prompt_tokens": 10599,
+      "prompt_tokens_details": null,
+      "total_tokens": 10855
+    }
+  },
+  "request_sha256": "594cfebfb2ae7b81b4ddea47d198151a771e135e3e1db40534ed50c10fa26d71",
+  "source_example_id": "mix_dev_0107+durec_src_0236+hb_0188",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

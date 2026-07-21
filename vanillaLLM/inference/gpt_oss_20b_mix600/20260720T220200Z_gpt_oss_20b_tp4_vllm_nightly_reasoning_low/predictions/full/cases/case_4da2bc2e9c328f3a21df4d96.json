@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4da2bc2e9c328f3a21df4d96",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.7711467444896698,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_9384693b5ac8f0cbea28ab48",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", shared_ride=false)",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. User says \"I need a ride and want to check available ride-sharing options.\" No specifics. Use patterns: previous ride sharing used destination \"360 CHICAGO\", number_of_seats \"2\", shared_ride True. But here no info. Maybe default? We can leave empty? But need values. We can infer from context? No. Maybe choose generic: destination empty? But schema requires string. We can set empty string? Probably set to \"\"? But better to not include? But function requires object. We can set destination=\"\", number_of_seats=\"\", shared_ride=false? Let's pick defaults: destination=\"\", number_of_seats=\"1\", shared_ride=false.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614986,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bcfd41d1f117cbdf",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 186,
+      "prompt_tokens": 12319,
+      "prompt_tokens_details": null,
+      "total_tokens": 12505
+    }
+  },
+  "request_sha256": "da1b570b5f67c292d5873651b20c569cb1c86f57a3f256851338ead5322faab4",
+  "source_example_id": "mix_dev_0266+durec_src_0131+hb_0167",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

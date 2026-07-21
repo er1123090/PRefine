@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f1d6997234af86d6a2a27f86",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.9048192063346505,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_0f627bd3aaddcfdecb60c265",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants flights. We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history, user often chooses Economy class, one-way, from various origins. No explicit preference for airline. But in session 4 they chose American Airlines. In session 22 they chose Delta and Southwest. No consistent airline. So leave airlines unspecified. Destination? Not given. We need to infer likely destination? Maybe user wants to search for flights but no destination specified. We can leave empty. But we must output function call with slots we can infer. We can set flight_class=\"Economy\" as common. Also maybe passengers? Not specified. We can leave empty. So output: GetFlights(flight_class=\"Economy\")? But need to include domain name. Output format: {Domain}(...). So: GetFlights(flight_class=\"Economy\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615217,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9c0b863390702be7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 209,
+      "prompt_tokens": 10815,
+      "prompt_tokens_details": null,
+      "total_tokens": 11024
+    }
+  },
+  "request_sha256": "f897f209d7705b145d6999d2571ef7752692d06500afd679e462735025e4d3ab",
+  "source_example_id": "mix_dev_0108+durec_src_1278+hb_0340",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_1118c061732d586627e9f235",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.433829864487052,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_297eb917c0972b146ed50cb5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Fremont\", car_type=\"Compact\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No slots given. We infer preferences: earlier user used Compact car in Fremont. Also earlier used Standard. Likely prefers Compact. Also pickup city Fremont. So output GetRentalCars(pickup_city=\"Fremont\", car_type=\"Compact\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614854,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8aec03183f486718",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 83,
+      "prompt_tokens": 9889,
+      "prompt_tokens_details": null,
+      "total_tokens": 9972
+    }
+  },
+  "request_sha256": "f7807f5b8ea606b37e187ef13839ccb6b1c2799a501dbfb25135010645be4ced",
+  "source_example_id": "mix_dev_0302+durec_src_0301+hb_0035",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

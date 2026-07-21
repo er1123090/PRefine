@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f22a5bf7186ed4af71e52389",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.6641019117087126,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_8831fbe082614df5792661c5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. Past: user liked sushi, lobster, fresh lobster, also Liuguosanchun Sichuan. No consistent cuisine. Maybe prefer seafood? But not sure. We can default no slots. So call GetRestaurants with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615218,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b5a2fae18fcd3cce",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 68,
+      "prompt_tokens": 10333,
+      "prompt_tokens_details": null,
+      "total_tokens": 10401
+    }
+  },
+  "request_sha256": "86f7937024810a62b6e1938bbf9a3bfad86c2c4b28dc750f6182c60bfb106ae6",
+  "source_example_id": "mix_dev_0146+durec_src_0203+hb_0489",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_099232676ff3938baf2c74b8",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 7.425439332611859,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_72831fb31b84a89771a41217",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jacky Cheung\", playback_device=\"TV\", song_name=\"Love is Simple\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetMusic. Slots: artist, playback_device, song_name. User says \"I want to listen to some music.\" No specifics. We infer from history: user likes Jacky Cheung songs, country? They listened to many Jacky songs. Also earlier they listened to All On Me (country). They like Jacky. So artist likely Jacky Cheung. Playback device: earlier used TV, phone, speaker. They used TV for All On Me. Likely TV. Song_name: maybe a Jacky song. Could pick \"Jacky Cheung\" default? But we need a value. Maybe \"Jacky Cheung\" not a song. Choose a popular Jacky song: \"Love is Simple\" or \"Slowly\". They asked about Love is Simple earlier. So choose song_name=\"Love is Simple\". Output: GetMusic(artist=\"Jacky Cheung\", playback_device=\"TV\", song_name=\"Love is Simple\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614825,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a98756ca6ceba991",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 229,
+      "prompt_tokens": 10564,
+      "prompt_tokens_details": null,
+      "total_tokens": 10793
+    }
+  },
+  "request_sha256": "7db8eabd010f8708a75c01b9309e3d8bcbb27715e26f3b2667273a8e402a300d",
+  "source_example_id": "mix_dev_0204+durec_src_0227+hb_0066",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

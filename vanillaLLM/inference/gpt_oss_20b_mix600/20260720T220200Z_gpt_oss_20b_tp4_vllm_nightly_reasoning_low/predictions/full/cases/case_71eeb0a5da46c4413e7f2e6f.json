@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_71eeb0a5da46c4413e7f2e6f",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.723639952018857,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f13341a1dbd6bf591fc71699",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels()",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user often wants 1 room, 4-6 days, location. But no city specified. We can default? Probably need to infer location from previous? Last location was Paris. But new request generic. We can leave empty. Output format: GetHotels() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615040,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-be333e08a97b5183",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 82,
+      "prompt_tokens": 9793,
+      "prompt_tokens_details": null,
+      "total_tokens": 9875
+    }
+  },
+  "request_sha256": "2541041a47c5553e7c399c35fd2d271b41574c0307a5c3943f07c0d31199f19e",
+  "source_example_id": "mix_dev_0305+durec_src_0754+hb_0088",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

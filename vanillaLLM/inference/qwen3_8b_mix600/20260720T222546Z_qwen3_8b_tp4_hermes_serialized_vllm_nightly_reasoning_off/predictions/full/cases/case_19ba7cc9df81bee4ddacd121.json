@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_19ba7cc9df81bee4ddacd121",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 7.176010797731578,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Music",
+        "city": "San Francisco",
+        "date": "2019-03-02"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_6f19288028ae099452bfc24d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Music\", \"city\": \"San Francisco\", \"date\": \"2019-03-02\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-9b0f8bf28b6b06c6",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587038,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a2742ab19757ad49",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 42,
+      "prompt_tokens": 13052,
+      "prompt_tokens_details": null,
+      "total_tokens": 13094
+    }
+  },
+  "request_sha256": "a8e6515b0c2f141f3edcebf5be60308fa6043e525cec85e581db6f556ec079f8",
+  "source_example_id": "mix_dev_0241+durec_src_0046+hb_0058",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

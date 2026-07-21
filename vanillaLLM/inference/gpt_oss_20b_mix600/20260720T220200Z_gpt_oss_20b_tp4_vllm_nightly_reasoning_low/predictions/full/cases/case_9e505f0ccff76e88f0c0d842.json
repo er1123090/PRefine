@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_9e505f0ccff76e88f0c0d842",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.7526053749024868,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d118b333cd55b3314ebc9b27",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"?\", number_of_seats=\"1\", pickup_time=\"?\", shared_ride=\"true\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need slots: destination, number_of_seats, pickup_time, shared_ride. From history: user wants ride and check available ride-sharing options. No specifics. Use pattern: previous ride sharing had destination \"Aquarium of the Pacific\" or \"The Cartoon Museum\". No preference. Maybe default shared_ride true? number_of_seats default 1. pickup_time unknown. We can leave empty? But need values. We can infer from pattern: user often wants shared ride. So shared_ride=true. destination unknown; maybe \"?\" but need value. Could use \"?\" placeholder. But better to use empty string? Probably need a value. Use \"?\" as placeholder. pickup_time maybe \"?\" . Let's output with empty strings.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615104,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-98ea9ae28732cf99",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 188,
+      "prompt_tokens": 11386,
+      "prompt_tokens_details": null,
+      "total_tokens": 11574
+    }
+  },
+  "request_sha256": "badaa5397d02d1509e4902b52cf387025589ad4ac88510098e3f3dbe6e4278a5",
+  "source_example_id": "mix_dev_0103+durec_src_0806+hb_0319",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

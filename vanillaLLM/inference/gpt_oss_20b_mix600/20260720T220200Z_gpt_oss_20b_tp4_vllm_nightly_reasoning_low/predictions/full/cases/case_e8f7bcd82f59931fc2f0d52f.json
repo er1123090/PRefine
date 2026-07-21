@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e8f7bcd82f59931fc2f0d52f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.7326728142797947,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_42d6f96fdd88ef42835a0380",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2019-03-11\", destination=\"Berkeley\", origin=\"San Francisco\", passengers=\"1\", flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights? They plan trip to Berkeley. Need flight? Probably GetFlights. Need origin? Not given. Use pattern: previous flights from Atlanta to Washington. No pattern. Maybe default origin? Not enough. Maybe GetHotels? They stay one night. Need hotel. Use GetHotels with location=Berkeley? Not in enum. So maybe GetFlights with destination=Berkeley. No origin. Could infer origin maybe San Francisco? Past flight from SF to Paris. So origin SF. Provide passengers? Not given. Use default? We'll set passengers=\"1\". flight_class? Not known. Use Economy. departure_date=2019-03-11. return_date? none. So call GetFlights.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615207,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aed9b573e5658a95",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 188,
+      "prompt_tokens": 9930,
+      "prompt_tokens_details": null,
+      "total_tokens": 10118
+    }
+  },
+  "request_sha256": "dae51dc63cde4311e8bee921d92496e17c42f720fe6cb079f7705b6db92658d1",
+  "source_example_id": "mix_dev_0302+durec_src_0301+hb_0035",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

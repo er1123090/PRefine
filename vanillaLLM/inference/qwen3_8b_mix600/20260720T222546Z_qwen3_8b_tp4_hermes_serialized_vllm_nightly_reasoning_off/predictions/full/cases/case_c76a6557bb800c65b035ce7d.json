@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_c76a6557bb800c65b035ce7d",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 7.146981872618198,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "car_type": "Standard",
+        "pickup_time": "12:00"
+      },
+      "name": "GetRentalCars"
+    }
+  ],
+  "pair_id": "pair_c19ae860db5d7d9a61a0cad8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"car_type\": \"Standard\", \"pickup_time\": \"12:00\"}",
+                "name": "GetRentalCars"
+              },
+              "id": "chatcmpl-tool-a86b5a433ac58aa4",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588157,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a70e58b3774b49c2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 34,
+      "prompt_tokens": 8836,
+      "prompt_tokens_details": null,
+      "total_tokens": 8870
+    }
+  },
+  "request_sha256": "6d8f2e1a13967a236b99b8ad435b08b570224d96e4be00c4f7975e6b01fae332",
+  "source_example_id": "mix_dev_0160+durec_src_0274",
+  "status": "success",
+  "target_domain": "GetRentalCars"
+}

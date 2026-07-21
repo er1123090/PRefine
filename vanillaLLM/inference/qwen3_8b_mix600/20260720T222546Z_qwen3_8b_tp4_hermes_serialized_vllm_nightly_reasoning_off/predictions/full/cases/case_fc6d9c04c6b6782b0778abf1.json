@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_fc6d9c04c6b6782b0778abf1",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.818133662454784,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Historical Landmark",
+        "location": "New York"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_f9abc7ae8a87188e6b1639bc",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Historical Landmark\", \"location\": \"New York\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-83a8dfb4c25a7e90",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588487,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-abcc4f50b158b082",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 30,
+      "prompt_tokens": 10039,
+      "prompt_tokens_details": null,
+      "total_tokens": 10069
+    }
+  },
+  "request_sha256": "36b40e9f9ed7161c4fcc0b1142bf5d73177fe29c1cccabb676f39a633dcae0f7",
+  "source_example_id": "mix_dev_0082+hb_0302",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_36e25f5e4100d40f8e6df5bb",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.6576507817953825,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_41bb2f7c36f170ff2c35510c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2026-07-08\", pickup_time=\"12:00\", car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need pickup_city, pickup_date, pickup_time, car_type? From history, user often picks Standard. Also pickup_location? In schema: pickup_city, pickup_date, pickup_time, car_type. So: pickup_city=\"Berlin\"? but domain cities list includes Berlin? Not in enum. But we can still provide. Use Standard. Output format: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2026-07-08\", pickup_time=\"12:00\", car_type=\"Standard\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614947,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8e294d7b275f0039",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 150,
+      "prompt_tokens": 10609,
+      "prompt_tokens_details": null,
+      "total_tokens": 10759
+    }
+  },
+  "request_sha256": "42b94879d88b065b5102ce3479d159c88a61be16efb89fb71c4859ab0cd3fbcf",
+  "source_example_id": "mix_dev_0246+durec_src_0984",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

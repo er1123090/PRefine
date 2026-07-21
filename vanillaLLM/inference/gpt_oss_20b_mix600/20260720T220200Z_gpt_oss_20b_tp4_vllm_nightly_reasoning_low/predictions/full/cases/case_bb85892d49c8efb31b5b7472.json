@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_bb85892d49c8efb31b5b7472",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.008338182233274,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_fca57538031487462add4771",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(destination=\"Berkeley\", departure_date=\"2019-03-11\", location=\"Berkeley\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: destination, departure_date, location? They ask travel to Berkeley. That's location. departure_date March 11. stay one night implies maybe duration not needed. So output GetTravel(destination=\"Berkeley\", departure_date=\"2019-03-11\", location=\"Berkeley\")? location same. Probably include destination.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615146,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8ed3d89f7e45a060",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 102,
+      "prompt_tokens": 11235,
+      "prompt_tokens_details": null,
+      "total_tokens": 11337
+    }
+  },
+  "request_sha256": "fe0aac0aa64730b3ac9e42b5fb39f1ecfd239632de029f0b7bd5746366af86f2",
+  "source_example_id": "mix_dev_0179+durec_src_0767+hb_0321",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

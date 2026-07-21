@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_8c80e57e94d5ab5149b1abea",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.4977653734385967,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Museum",
+        "location": "San Francisco"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_8ba868bc25ff3cdacf943eba",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Museum\", \"location\": \"San Francisco\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-99b6b58b6794f4d6",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587774,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-af9baaf87f572189",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 28,
+      "prompt_tokens": 8950,
+      "prompt_tokens_details": null,
+      "total_tokens": 8978
+    }
+  },
+  "request_sha256": "536f25839641acbdeaa0b04b7437c63e100f335c2ecb1124dd827767b0138c81",
+  "source_example_id": "dev_0050",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

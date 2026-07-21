@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_20d9b5655ba693bb73789e6e",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.156473747454584,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Italian",
+        "location": "Redwood City"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_e7c6cae4d27a8500b8074b4d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Italian\", \"location\": \"Redwood City\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-99630e02d1189ee4",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587099,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-83b5476fb28db7f3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 10065,
+      "prompt_tokens_details": null,
+      "total_tokens": 10094
+    }
+  },
+  "request_sha256": "2c69a0d0781cd3e5e46ab0dcaa85f9b158f29b41c7c70bfe9372c515390436ac",
+  "source_example_id": "mix_dev_0095+durec_src_0531",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

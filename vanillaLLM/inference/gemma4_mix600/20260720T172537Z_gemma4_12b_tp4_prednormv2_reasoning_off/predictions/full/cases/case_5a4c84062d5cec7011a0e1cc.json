@@ -1,0 +1,69 @@
+{
+  "attempts": 1,
+  "case_id": "case_5a4c84062d5cec7011a0e1cc",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4650846682488918,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {},
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_5592352564710146dd38c6f2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-8c71c121e9d2619a",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569953,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-af6396ed7fedc689",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 9,
+      "prompt_tokens": 12330,
+      "prompt_tokens_details": null,
+      "total_tokens": 12339
+    }
+  },
+  "request_sha256": "6de73e2fe939fef8a5d536a7692a760775f4532ed52e47b25abdb331c997671f",
+  "source_example_id": "mix_dev_0097+durec_src_0250+hb_0271",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

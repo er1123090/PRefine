@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_768e1b563d53df5f340c1bb8",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7485866900533438,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_2127ba4aea31a86e15f73778",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetRestaurants. Slots: category, city, date, number_of_seats, price_range, restaurant_name, time. No info given. Look history: user likes music, events, flights, etc. No restaurant preference. Maybe default none. So empty. Output: GetRestaurants() with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615048,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a7dcbcd218c35b7e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 80,
+      "prompt_tokens": 11541,
+      "prompt_tokens_details": null,
+      "total_tokens": 11621
+    }
+  },
+  "request_sha256": "e7ca68123f478c39fcf8e5aafe2574216a7eab46ce5b358d308e02aea6f33dfe",
+  "source_example_id": "mix_dev_0331+durec_src_1229+hb_0436",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

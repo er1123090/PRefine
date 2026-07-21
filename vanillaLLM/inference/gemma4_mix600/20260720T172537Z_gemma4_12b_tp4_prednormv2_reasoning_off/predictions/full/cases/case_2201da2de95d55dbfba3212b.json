@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_2201da2de95d55dbfba3212b",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.599805284291506,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "playback_device": "phone"
+      },
+      "name": "GetMusic"
+    }
+  ],
+  "pair_id": "pair_3101ea8e3a216a5ba0515d42",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"playback_device\": \"phone\"}",
+                "name": "GetMusic"
+              },
+              "id": "chatcmpl-tool-9c68a6d196d87762",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569173,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9ee01838fe02e6aa",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 16,
+      "prompt_tokens": 8859,
+      "prompt_tokens_details": null,
+      "total_tokens": 8875
+    }
+  },
+  "request_sha256": "f898b7e747c3a5910e76c59b806cd5d04c613c9ab31cfe2cd1ab6723b36e468f",
+  "source_example_id": "durec_src_0020",
+  "status": "success",
+  "target_domain": "GetMusic"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f8de15ac30786d9709c9b6c6",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5171423610299826,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c7dfc643b6cf07168ebfa172",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"savings\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks. Need recipient_account_type. Past: session7 transfer from checking to Li: they used recipient_account_type=\"savings\" then \"checking\". So user wants transfer, likely specify account type. No explicit. Use most frequent? In history, they used both. But maybe default savings? In session7 they first checked savings balance, then transfer from checking to Li. So recipient_account_type likely \"checking\" or \"savings\". The user says \"I need to make a bank transfer.\" No details. We infer they want to transfer from savings to checking? Hard. Use \"savings\" as common? They checked savings balance earlier. I'll choose \"savings\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615226,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a1aede6c2235f4a2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 159,
+      "prompt_tokens": 10717,
+      "prompt_tokens_details": null,
+      "total_tokens": 10876
+    }
+  },
+  "request_sha256": "0e9af2589fee3e4227d1ae44a8d64f212728e006f737911c6780e4f291cf59a0",
+  "source_example_id": "mix_dev_0142+durec_src_0501+hb_0330",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

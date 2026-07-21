@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_27532da247ee5f07cbc9593f",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.2575956704095006,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f273ce8be750be0be82058b5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for travel domain. From history, user likes free entry? In session2 they chose place of worship free entry? They didn't specify free_entry. In session15 they chose sports event. For travel, likely they prefer free entry? Not sure. They also like shared ride. For flights, they used American Airlines, Delta. They didn't show preference for airline. For travel, maybe they prefer \"free_entry\" true? In session2 they had free_entry True. In session15 they didn't. For travel domain, we need to output GetTravel with slots: category, free_entry, good_for_kids, location, destination, departure_date. We have no explicit preference. Use most frequent: free_entry True? They had one instance. Maybe default none. We'll output empty? But need at least domain. Provide empty object.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614917,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a1c43df746d991ef",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 184,
+      "prompt_tokens": 10101,
+      "prompt_tokens_details": null,
+      "total_tokens": 10285
+    }
+  },
+  "request_sha256": "0e8078705eec77b93c42784c817f0880061f8424241edda75ab27e771fdde8b6",
+  "source_example_id": "mix_dev_0092+durec_src_0594+hb_0451",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

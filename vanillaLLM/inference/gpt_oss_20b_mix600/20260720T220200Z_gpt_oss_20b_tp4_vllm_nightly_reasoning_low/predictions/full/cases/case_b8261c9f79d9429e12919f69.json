@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b8261c9f79d9429e12919f69",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.071427769958973,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_07d8b519e497c889b23ae7dc",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Mexican\", number_of_seats=\"4\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history: user likes Guatemalan food, vegetarian options. Also earlier: in session5, user asked for restaurant in San Rafael, Guatemalan. Also earlier: user likes vegetarian. Also user wants 4 seats. So preferences: category maybe \"Mexican\"? but Guatemalan. Also price_range? not mentioned. So we can set category=\"Mexican\" or \"Guatemalan\" not in enum. Enum includes many categories but not Guatemalan. So maybe category=\"Mexican\" as close. Also number_of_seats maybe \"4\". Also city maybe \"San Rafael\" or \"San Jose\"? But user didn't specify. We can infer they want options near their location? Not sure. We'll output with category=\"Mexican\", number_of_seats=\"4\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615143,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a8a962e16db148a4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 193,
+      "prompt_tokens": 10616,
+      "prompt_tokens_details": null,
+      "total_tokens": 10809
+    }
+  },
+  "request_sha256": "aec354becfbcec1f981be80d8b2d52feac85e7b17f7062da8a3d428c1edc2331",
+  "source_example_id": "mix_dev_0119+durec_src_0621+hb_0082",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

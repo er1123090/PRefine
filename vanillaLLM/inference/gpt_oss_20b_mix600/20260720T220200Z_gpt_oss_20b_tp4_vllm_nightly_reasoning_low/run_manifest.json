@@ -1,0 +1,85 @@
+{
+  "artifact_sha256": {
+    "cases.jsonl": "062f888f8ae4e7cad920486334cc1a955eba81b94a3d7404856b19cc2460ab45",
+    "rejections.jsonl": "8116f8dd1f9a9c8c3ab8b0e2dd0a1173420098fc1a259cf9785b5706add308e2",
+    "schema_overlay.json": "493794769bbd151b6af62a9a1d7e09a589c94beb67377b1df75e53d3910c1c6d",
+    "targets.jsonl": "320f392905f369fe2f39c6bb34d6e2301caab6becc70af8588ac4dd133899f10",
+    "tools_schema_derived.json": "190a7303a93aa048dfb1981867122d265a5fb174a156e8c563b70db7b7b49e1d",
+    "validation.json": "ef34262cef59b5c279ca5a315c8e1755dbe479596c7de6473a5582e555f4e4ff"
+  },
+  "code_sha256": {
+    "vanillaLLM/tool_model_mix600/__init__.py": "00b601185caef388bd8e55683e458b030edd744423f9fd80d3fed92587932f68",
+    "vanillaLLM/tool_model_mix600/core.py": "0aa0761276c13bff2c35f8815ed3649f202b278d66c2b5a485bdda137333977b",
+    "vanillaLLM/tool_model_mix600/critic_audit.py": "b8593974879b418a0dfb35a2a6de011ec273807cb52e43e3e878ccb68178bcac",
+    "vanillaLLM/tool_model_mix600/materialize.py": "2f561d8acdd4c8c42ff0352b13997a6b42ea2804daf6abe82c264366d25bb3ff",
+    "vanillaLLM/tool_model_mix600/run_inference.py": "3af9798cc51bdc9334e159d04776b76e2c27dea0ba66e8de7f8c34c73a1f92ab",
+    "vanillaLLM/tool_model_mix600/runtime_preflight.py": "37d751c3d55467377cef7370a42d5f60979bd4b2841a325eea47c8a9b6ea6bb8",
+    "vanillaLLM/tool_model_mix600/score.py": "d4985f468a5f6b5899e9d273b71c881950fa50797ef7b7b4da0bc2016bc88300",
+    "vanillaLLM/tool_model_mix600/token_census.py": "027cfb9fe444001b8c84112e8ace7ee5ff9be685f2a5b69963b5fd2621d9af5c"
+  },
+  "construction": "mode-neutral-targets-then-paired-renderings",
+  "counts": {
+    "case_counts": {
+      "multi:easy": 554,
+      "multi:hard": 472,
+      "multi:medium": 293,
+      "single:easy": 554,
+      "single:hard": 472,
+      "single:medium": 293
+    },
+    "cases": 2638,
+    "eligible_sources": {
+      "easy": 335,
+      "hard": 123,
+      "medium": 123
+    },
+    "max_per_source": {
+      "easy": 5,
+      "hard": 7,
+      "medium": 5
+    },
+    "paired_identity": "pass",
+    "target_counts": {
+      "easy": 554,
+      "hard": 472,
+      "medium": 293
+    },
+    "targets": 1319
+  },
+  "experiment": "gpt_oss_20b_mix600_vanilla_llm",
+  "input_paths": {
+    "dataset": "/data/minseo/experiments4/data/mix600.json",
+    "multi_queries": "/data/minseo/experiments4/query_multiturn.json",
+    "pref_groups": "/data/minseo/experiments4/pref_group.json",
+    "pref_list": "/data/minseo/experiments4/pref_list.json",
+    "prompt": "/data/minseo/experiments4/vanillaLLM/prompt.py",
+    "reference_multi": "/data/minseo/experiments4/vanillaLLM/vanillaLLM_inference-vllm-multi.py",
+    "reference_single": "/data/minseo/experiments4/vanillaLLM/vanillaLLM_inference-vllm-single.py",
+    "single_queries": "/data/minseo/experiments4/query_singleturn.json",
+    "tools": "/data/minseo/experiments4/schema_all.json"
+  },
+  "input_sha256": {
+    "dataset": "e0748a987fdba01ba2a68fc6ab781277028a93b2ba5de1987752298ce6609ea3",
+    "multi_queries": "68ee30d98a071aa6cc44195b366ff17c2e46d93530821ce2af7c6f6e9350defd",
+    "pref_groups": "aac0cc9210a59b15e1422d0946bab0e37c9c38b538f29a2d7c24b84ccd8348fb",
+    "pref_list": "f5994dab209909ed31d15cbabe6a88a84ef5d95f85c156795549c96fd5126091",
+    "prompt": "b883f37ab8d3b1d4f9b0c087c491b6b1026fae01b4e3a38419296efda086e32a",
+    "reference_multi": "13aac4726443c071def5dd2a7073d8d0ff49c5375af5516775d0536fa08cba67",
+    "reference_single": "d73264bf46bc576125adb2716dfc6f520fd80a071cc5336838b2e684c8bddd11",
+    "single_queries": "e8a25828cf319e63c573fbcb8a485e7ece1ed3a7d49120d41ac5d716adc897c7",
+    "tools": "c3639e58e42c8cbe2f202ea9798dd158da305da8229614e3db09f829b945628f"
+  },
+  "model_id": "openai/gpt-oss-20b",
+  "model_revision": "6cee5e81ee83917806bbde320786a8fb61efebee",
+  "request_contract": {
+    "context": "diag-apilist",
+    "max_tokens": 256,
+    "messages": "one user message",
+    "prompt": "imp-zs",
+    "reasoning_effort": "low",
+    "temperature": 0.0,
+    "thinking": false,
+    "tool_choice": "auto"
+  },
+  "schema_policy": "hashed source schema plus deterministic explicit multi-base overlay, shared by both modes"
+}

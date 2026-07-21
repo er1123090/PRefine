@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a751b01e3bfabc8e74bfcb6c",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7628065906465054,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3b033e29363cfd0aca1ce509",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. No preferences given. From history, user likes southern food, economical, vegetarian. But generic. We can infer price_range moderate? In session5 they chose southern food economical. So maybe price_range=\"cheap\" or \"moderate\". Also city? They didn't specify. We can default none. Provide empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615115,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bc81ab0a952d8dbc",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 80,
+      "prompt_tokens": 9831,
+      "prompt_tokens_details": null,
+      "total_tokens": 9911
+    }
+  },
+  "request_sha256": "5c1a98f002b79d5e3e3885110d6d117f241e5903d8f7cbadee00b566465545e6",
+  "source_example_id": "mix_dev_0112+durec_src_0743+hb_0156",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_9e35954c0b4ff258fac6ea7c",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.0919359466060996,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3f74b2247524aa4ecb880d67",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Leslie Cheung\", playback_device=\"TV\", song_name=\"You Hate Me So Much\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants to listen to music. We need to output a function call. Which domain? GetMusic. Need slot artist, playback_device, song_name. From history, user likes Leslie Cheung songs. Also likes pop. But preference: playback_device? They often play on TV or phone. In session5, they played on TV. In session8, no device mentioned. We can infer playback_device = \"TV\" as common. Artist: Leslie Cheung. Song_name: maybe unspecified, but we can choose a popular song. But we need to provide values. We can choose artist=\"Leslie Cheung\", playback_device=\"TV\", song_name=\"You Hate Me So Much\" or \"The Years Flow Like Water\". Let's pick \"You Hate Me So Much\". Output: GetMusic(artist=\"Leslie Cheung\", playback_device=\"TV\", song_name=\"You Hate Me So Much\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615104,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8080f2ecdc7eee3d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 222,
+      "prompt_tokens": 10510,
+      "prompt_tokens_details": null,
+      "total_tokens": 10732
+    }
+  },
+  "request_sha256": "05ec64cb47852e95f229625521ebcc37dd17c10be834d1715d564fc84a7eb0e5",
+  "source_example_id": "mix_dev_0144+durec_src_1273+hb_0238",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

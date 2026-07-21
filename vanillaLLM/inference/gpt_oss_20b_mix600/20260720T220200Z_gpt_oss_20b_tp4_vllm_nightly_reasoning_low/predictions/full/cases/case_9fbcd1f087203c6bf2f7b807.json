@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_9fbcd1f087203c6bf2f7b807",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.163291273638606,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b04f4f5ecebf8d7c5881586b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetRestaurants. From history: user likes Korean in Santa Clara, Mediterranean in Livermore, Sushi in Mill Valley, etc. No consistent preference. Maybe default? We can leave empty. Output format: GetRestaurants() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615107,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9ba653909bb4f958",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 67,
+      "prompt_tokens": 10417,
+      "prompt_tokens_details": null,
+      "total_tokens": 10484
+    }
+  },
+  "request_sha256": "65fed38fd38d22143e77a0d92320558dccbfc3e61542624da8fd6f4b709a8a62",
+  "source_example_id": "mix_dev_0190+durec_src_1319+hb_0392",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_63f7694c0cb2149452115739",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.03710453864187,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_ab88340ac9360dd109b1403c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"Stanford\", category=\"Music\")",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need slots: category, city, date, event_name, event_type, number_of_tickets. User wants events nearby. No specifics. Use past pattern: user often wants events in Stanford, Los Angeles. Likely city: \"Stanford\" or \"Los Angeles\". Category: maybe \"Music\" or \"Sports\". Past: user asked for American Football. Could default to \"Music\" as common. No date. We'll output minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615022,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9a16ef4402f556ea",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 115,
+      "prompt_tokens": 9608,
+      "prompt_tokens_details": null,
+      "total_tokens": 9723
+    }
+  },
+  "request_sha256": "c3b289eb0834bc082d9876a9347fe3b90d8c429085c3dbc9bf15ba5d670e3b3d",
+  "source_example_id": "mix_dev_0027+durec_src_1100+hb_0294",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_1ca465affa9d711e6ef71b5f",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6627044584602118,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_9fb2aa702346f06a01a6a512",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"Long Beach\", destination=\"San Francisco\", group_size=\"2\", departure_date=\"2023-03-01\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. No slots given. Infer preferences: previous bus: origin Long Beach, destination San Francisco, group_size 2, departure_date 1st. Likely same. So output GetBuses(origin=\"Long Beach\", destination=\"San Francisco\", group_size=\"2\", departure_date=\"2023-??\" but date unspecified. Use last known: March 1. So output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614890,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-906cb97badb4519d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 120,
+      "prompt_tokens": 11982,
+      "prompt_tokens_details": null,
+      "total_tokens": 12102
+    }
+  },
+  "request_sha256": "c9003b92f4173319b462af293380bd193318c6fe71f108a77bf718b2f330c41c",
+  "source_example_id": "mix_dev_0221+durec_src_0569+hb_0281",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

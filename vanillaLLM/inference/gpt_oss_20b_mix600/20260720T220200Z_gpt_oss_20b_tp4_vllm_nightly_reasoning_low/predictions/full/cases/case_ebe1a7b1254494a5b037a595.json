@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ebe1a7b1254494a5b037a595",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7467719539999962,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c525a919c9eee2152aaeeb88",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Compact\", pickup_city=\"Delhi\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No slots given. Use past preference: user used compact car in Delhi. So likely car_type compact. pickup_city Delhi. pickup_date next Tuesday? but generic. We'll set car_type=\"Compact\", pickup_city=\"Delhi\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615210,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9b9e29def8c67b91",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 74,
+      "prompt_tokens": 8842,
+      "prompt_tokens_details": null,
+      "total_tokens": 8916
+    }
+  },
+  "request_sha256": "c1c9a2cf675ad9f105d7d082ea256fec09a6a800e5de8c4af1cc2d6859891d1b",
+  "source_example_id": "mix_dev_0278+hb_0161",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

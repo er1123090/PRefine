@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_5bc7495bc4762dfbb61a6d8e",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3874585879966617,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b39ca1c92a74f68c89a11118",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jay Chou\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for music domain. Past: user likes Jay Chou, Starset, etc. Preference: playback_device? They used kitchen speaker, bedroom speaker. Likely default \"Bedroom speaker\" or \"Kitchen speaker\". But we need to output function call. We choose GetMusic with artist? They didn't specify. Maybe default artist \"Jay Chou\". So output GetMusic(artist=\"Jay Chou\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615010,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b4441e7bb90bf785",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 104,
+      "prompt_tokens": 10741,
+      "prompt_tokens_details": null,
+      "total_tokens": 10845
+    }
+  },
+  "request_sha256": "d6cfb1f40ed3a0964a7d94da890104ac28bac1b40a43542d450ec5a17ec49a5e",
+  "source_example_id": "mix_dev_0272+durec_src_0538+hb_0344",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

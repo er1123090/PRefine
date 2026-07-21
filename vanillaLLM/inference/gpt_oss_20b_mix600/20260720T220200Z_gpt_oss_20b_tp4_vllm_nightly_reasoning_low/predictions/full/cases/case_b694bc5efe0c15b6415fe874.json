@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b694bc5efe0c15b6415fe874",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0215951688587666,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_306458153099f095d480cca5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination? user didn't specify. maybe default? but we infer from history: user often wants ride to therapist or appointment. No destination given. We can leave empty? but need slot. maybe destination unspecified. We can set destination=\"\"? but schema expects string. maybe omit? but function call must include slot. We can set destination=\"\". Let's output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615139,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-af9012499134e358",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 106,
+      "prompt_tokens": 11747,
+      "prompt_tokens_details": null,
+      "total_tokens": 11853
+    }
+  },
+  "request_sha256": "973c7d075542cbbd6c9f1b805b7239c3a513de12e1d1c36a4b8b90f36ba008a8",
+  "source_example_id": "mix_dev_0132+durec_src_0811+hb_0072",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

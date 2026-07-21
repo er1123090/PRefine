@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_14cf7248ec4a73242056c744",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.8239753721281886,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e1d4b04ea9db529ad5fa2749",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"Long Beach\", departure_date=\"2019-03-06\", departure_time=\"13:50\", destination=\"Los Angeles\", group_size=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. No slots given. Use past preference: origin Long Beach, destination Los Angeles, departure date March 6, time 13:50, group_size 1. So output GetBuses(origin=\"Long Beach\", departure_date=\"2019-03-06\", departure_time=\"13:50\", destination=\"Los Angeles\", group_size=\"1\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614870,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-81e8816e59c20b2b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 121,
+      "prompt_tokens": 10236,
+      "prompt_tokens_details": null,
+      "total_tokens": 10357
+    }
+  },
+  "request_sha256": "29375421376acf977302d45d680080fcc127a8e6e554a8e80d45f7594612d7c2",
+  "source_example_id": "mix_dev_0172+durec_src_0331+hb_0487",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

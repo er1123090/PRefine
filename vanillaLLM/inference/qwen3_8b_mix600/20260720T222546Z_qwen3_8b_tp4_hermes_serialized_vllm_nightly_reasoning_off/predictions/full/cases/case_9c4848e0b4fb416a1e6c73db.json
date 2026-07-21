@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_9c4848e0b4fb416a1e6c73db",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.279276714660227,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Museum",
+        "free_entry": true,
+        "location": "San Francisco"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_dcb970ed72b67b63b2feba79",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Museum\", \"location\": \"San Francisco\", \"free_entry\": true}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-8319c3aa58fb7552",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587877,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ba3306feb86a41a0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 34,
+      "prompt_tokens": 12866,
+      "prompt_tokens_details": null,
+      "total_tokens": 12900
+    }
+  },
+  "request_sha256": "7bd3c64722bb1a13ade3fc3a12c23821b595f97d59355e24d39345c2fbf95c91",
+  "source_example_id": "mix_dev_0210+durec_src_0510+hb_0287",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

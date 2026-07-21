@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_5fa7c2877180c7f65e9bd077",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 7.026116834953427,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Tourist Attraction",
+        "location": "San Francisco"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_49f2bd25d3aa421fac86ae56",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Tourist Attraction\", \"location\": \"San Francisco\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-9f00715f5788dac5",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784570043,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9e89c977e02b1842",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 22,
+      "prompt_tokens": 9890,
+      "prompt_tokens_details": null,
+      "total_tokens": 9912
+    }
+  },
+  "request_sha256": "a36c921419932fd6c70492a4065827143701a8415c4fb1e50df23e45ab56f706",
+  "source_example_id": "dev_0009",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

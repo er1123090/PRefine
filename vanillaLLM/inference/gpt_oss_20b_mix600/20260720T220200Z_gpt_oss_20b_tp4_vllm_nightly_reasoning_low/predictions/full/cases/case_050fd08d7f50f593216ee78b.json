@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_050fd08d7f50f593216ee78b",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.3192997565492988,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_0d95460bf6ba8ffe881f1b94",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants restaurant options. Past preferences: In session2, user chose American food, economical price, Concord. Session10: Parisian, vegetarian? They said okay. So preferences: American, economical, maybe vegetarian? But not consistent. Likely they want options, no constraints. We can default to no slots. But we need to output function call with slots maybe empty. Use GetRestaurants with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614810,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b4bddeb2b56d4591",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 102,
+      "prompt_tokens": 9933,
+      "prompt_tokens_details": null,
+      "total_tokens": 10035
+    }
+  },
+  "request_sha256": "77bae826aa7691bedd61ccae3d320f8e8384fd5b91aa23d8e41c9beac88e2957",
+  "source_example_id": "mix_dev_0219+hb_0318",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

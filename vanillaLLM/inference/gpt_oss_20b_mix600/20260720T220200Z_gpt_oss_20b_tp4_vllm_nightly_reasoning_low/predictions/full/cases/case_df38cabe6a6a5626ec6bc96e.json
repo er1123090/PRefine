@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_df38cabe6a6a5626ec6bc96e",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7400122983381152,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d184eaef52f5592a041d1098",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents()",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need city? \"nearby\" implies user's location? No location known. Maybe default city? No. We can infer from past: user often in Los Gatos, Anaheim, etc. But no explicit. We can leave city empty. Also category? None. So call with empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615194,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-94a82392769d4986",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 76,
+      "prompt_tokens": 10506,
+      "prompt_tokens_details": null,
+      "total_tokens": 10582
+    }
+  },
+  "request_sha256": "e88919696a3821c91caa56b24fe328b1023c007b15794c8636a76540ce1b0335",
+  "source_example_id": "mix_dev_0193+durec_src_0662+hb_0112",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

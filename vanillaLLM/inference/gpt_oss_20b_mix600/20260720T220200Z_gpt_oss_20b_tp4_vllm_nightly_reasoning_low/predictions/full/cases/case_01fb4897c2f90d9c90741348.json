@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_01fb4897c2f90d9c90741348",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.647793193347752,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_52d3d65906a97aa390469be2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Fremont\", pickup_date=\"2023-03-05\", dropoff_date=\"2023-03-06\", car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No preferences given. From history, user picked Standard car, pickup in Fremont, pickup time 18:00, pickup date March5, dropoff March6. Likely preference: car_type Standard, pickup_city Fremont, pickup_date, dropoff_date. We'll output those.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614800,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b2e0b09db3448551",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 110,
+      "prompt_tokens": 8498,
+      "prompt_tokens_details": null,
+      "total_tokens": 8608
+    }
+  },
+  "request_sha256": "a2142f0951a247c0f6c953ad57a2c1c1894d0f106662987308120061aab33706",
+  "source_example_id": "mix_dev_0231+hb_0495",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

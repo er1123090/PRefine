@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c5c12a23849db9dc8e4ad0cd",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.832743183709681,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_7ea79f4f8e3825ffa13ddb14",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2023-03-09\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: origin, destination, departure_date. Also maybe passengers, flight_class, airlines, return_date. Not specified. Use defaults? We infer preferences: earlier flights? No. Use most frequent? No pattern. Just fill known. So: GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2023-03-09\"). Probably year? Not given. Use date string. Output format: GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2023-03-09\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615159,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ace627d8f6f62173",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 141,
+      "prompt_tokens": 9728,
+      "prompt_tokens_details": null,
+      "total_tokens": 9869
+    }
+  },
+  "request_sha256": "deb3e3e2804ea0262229a8e6ed3bbc2cbc8394207a98a34c8d43afd4d4cc5f83",
+  "source_example_id": "mix_dev_0130+durec_src_1230+hb_0409",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

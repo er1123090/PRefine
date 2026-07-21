@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_bc1ad8807d716e5677888406",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.0370540441945195,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "Aquarium of the Pacific",
+        "number_of_seats": "1",
+        "shared_ride": true
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_2459b12589def07717436410",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"Aquarium of the Pacific\", \"number_of_seats\": \"1\", \"shared_ride\": true}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-9d92bfc8f7f04709",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588083,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8bcfde733008f163",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 42,
+      "prompt_tokens": 12021,
+      "prompt_tokens_details": null,
+      "total_tokens": 12063
+    }
+  },
+  "request_sha256": "852e2b41c4475fda66feb329a08f91c1a0df19c8337af42a4c0c54d4f821ddba",
+  "source_example_id": "mix_dev_0309+durec_src_0630",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

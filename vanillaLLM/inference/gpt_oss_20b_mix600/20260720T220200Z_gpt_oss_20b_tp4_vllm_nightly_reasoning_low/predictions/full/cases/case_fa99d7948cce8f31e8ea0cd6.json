@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_fa99d7948cce8f31e8ea0cd6",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5507635567337275,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f1c8fca293f5700eb14cb8b0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"2\", shared_ride=\"True\", pickup_time=\"now\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, shared_ride, pickup_time. From history: user earlier requested shared ride to 39145 Farwell Drive. So preference: shared_ride=True. Destination likely a location. We can infer destination unspecified; maybe default? But we can use previous destination? Probably user wants ride to some place. We can set destination empty? But need value. Maybe use last known destination: 39145 Farwell Drive. number_of_seats: 2. pickup_time: maybe default? We can set empty? But must provide string. Use \"now\". Let's output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615228,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-886a2d69a790c36d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 167,
+      "prompt_tokens": 8889,
+      "prompt_tokens_details": null,
+      "total_tokens": 9056
+    }
+  },
+  "request_sha256": "7265740bd00d4fea20667ffef7e65256976e52af7bfd5bc28b276d8b18a12a15",
+  "source_example_id": "mix_dev_0251+hb_0118",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

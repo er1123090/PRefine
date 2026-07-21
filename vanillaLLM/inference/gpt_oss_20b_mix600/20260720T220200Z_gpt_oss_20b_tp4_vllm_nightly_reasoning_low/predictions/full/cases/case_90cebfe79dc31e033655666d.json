@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_90cebfe79dc31e033655666d",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.4540330255404115,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_2159d6023ad7da945bd99b06",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants hotels. Past preferences: In session 16, user wanted 1 star hotel in London. In session 17, 4 star hotel in London. In session 20, 3 star hotel in Anaheim. So preferences vary. No consistent star rating. Maybe default? We can infer they like 3-4 star. But we need to output function call GetHotels with inferred slots. We can choose location? Not specified. Maybe default location? Could use last known location: London? But user didn't specify. We can infer they want hotels for stay, maybe in London? But unclear. We can output minimal: GetHotels() with no slots. But schema requires object. We can leave empty. So output: GetHotels().\n\n",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615083,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b62c35e2892e121e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 170,
+      "prompt_tokens": 10299,
+      "prompt_tokens_details": null,
+      "total_tokens": 10469
+    }
+  },
+  "request_sha256": "b4b636c273f6727d74ebeb90ac3608fcb25a9c85dbdbca96d7b594f9360d961b",
+  "source_example_id": "mix_dev_0052+durec_src_0546+hb_0298",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_950c07c85893d64eaf1e967a",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1870930707082152,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d94acc5c52bec92d0abe21af",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, car_type? user didn't specify type. Past preference: user often picks Standard. So default Standard. Also dropoff_date? not specified. We can leave empty. Output format: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", car_type=\"Standard\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615090,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9737e0d86c813652",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 127,
+      "prompt_tokens": 9695,
+      "prompt_tokens_details": null,
+      "total_tokens": 9822
+    }
+  },
+  "request_sha256": "6984eada9785d83dbcfaf6835a68664c59befb62aaf92cfbc4e9257a650f2077",
+  "source_example_id": "mix_dev_0270+durec_src_1002",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

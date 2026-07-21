@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_45e25033e898603bf5953f44",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.6971186371520162,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_9d23a386782da7f7d693578f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"San Jose\", destination=\"Sacramento\", departure_date=\"2019-03-10\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses with origin San Jose, destination Sacramento, departure_date March 10, departure_time morning. No time specified, so maybe default? We can set departure_time empty. Provide slot values.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614972,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-acbc338c80f07e4c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 75,
+      "prompt_tokens": 9603,
+      "prompt_tokens_details": null,
+      "total_tokens": 9678
+    }
+  },
+  "request_sha256": "345ff7ee1c104602d46d94c095d6bdb814d7bb840181e3e485c899aa390ded44",
+  "source_example_id": "mix_dev_0073+hb_0466",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ac22e94c186a271622674534",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3710412224754691,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b3a63fc32c280b5de0de8a0c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(destination=\"Orlando\", good_for_kids=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: category? free_entry? good_for_kids? location? departure_date? destination? Probably destination=Orlando. They didn't specify category. But they want family trip, so good_for_kids=True. free_entry maybe? Not sure. Use destination=\"Orlando\". Also location maybe same. Provide departure_date? They said during summer, no date. So omit. Output: GetTravel(destination=\"Orlando\", good_for_kids=\"True\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615121,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-96916a76d327fb20",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 121,
+      "prompt_tokens": 10187,
+      "prompt_tokens_details": null,
+      "total_tokens": 10308
+    }
+  },
+  "request_sha256": "f6d284ae9e30fd11cc97ae70aedec84de534ffa7573cf5ec9221ea93659e37e2",
+  "source_example_id": "mix_dev_0307+durec_src_1007+hb_0280",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

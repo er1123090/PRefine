@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2702f3bfc6de5da9a39522fe",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5556729678064585,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_7063554f67bd778b79aed7c3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2023-03-08\", pickup_time=\"12:00\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says pick up March 8 noon, keep couple days. So dropoff maybe March 10? but not specified. We can leave dropoff_date empty. Also pickup_time \"12:00\". car_type default? not specified. We'll leave empty. Output format: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2023-03-08\", pickup_time=\"12:00\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614917,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-804cdfe6bf8a33fc",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 140,
+      "prompt_tokens": 11554,
+      "prompt_tokens_details": null,
+      "total_tokens": 11694
+    }
+  },
+  "request_sha256": "11e0cc5b142f522f857567e5b0cceceb24df05a823f97a91a2c22c89bdf2898e",
+  "source_example_id": "mix_dev_0028+durec_src_0626+hb_0355",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_6e651dc32bc9cd601ed848d1",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4248456805944443,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b014d4f361590e36a63934f4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"American Airlines\", departure_date=\"2019-03-07\", destination=\"Las Vegas\", flight_class=\"Economy\", origin=\"Seattle\", passengers=\"1\", return_date=\"2019-03-09\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From user: planning a trip, search flights. No specifics. Use patterns: previous flight: user used Seattle to Las Vegas, 1 person, American Airlines. Likely preference: American Airlines, origin Seattle, destination Las Vegas, departure date March 7, return March 9, passengers 1, flight_class Economy. We'll output those.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615036,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a0ea1165a797838d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 153,
+      "prompt_tokens": 8782,
+      "prompt_tokens_details": null,
+      "total_tokens": 8935
+    }
+  },
+  "request_sha256": "42077c439881aa7e1b1b38a87fe94ffc8419a8b6183f07ae5070200e76e0aa9e",
+  "source_example_id": "dev_0041",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

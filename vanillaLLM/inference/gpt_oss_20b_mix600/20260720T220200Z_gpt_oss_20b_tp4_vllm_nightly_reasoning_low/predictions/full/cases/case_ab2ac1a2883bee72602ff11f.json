@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ab2ac1a2883bee72602ff11f",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.166988892480731,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d35d21c305a538b9ca307f2e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", pickup_time=\"\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. No info given. Use patterns: earlier ride sharing was shared ride to Chengdu Style Restaurant, 1 passenger. So likely shared_ride true, number_of_seats 1. Destination unspecified. We can leave empty? But need values. Maybe default? We can set destination empty string. pickup_time maybe none. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615120,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b2b3070f3c5c244e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 120,
+      "prompt_tokens": 8328,
+      "prompt_tokens_details": null,
+      "total_tokens": 8448
+    }
+  },
+  "request_sha256": "65a9ad8cc39e07fd85b5578bed3d0d1a800ae9979831c014daa8f39c6dd3fb2d",
+  "source_example_id": "mix_dev_0283+hb_0071",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b6b2082ab44e38ed2831305b",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8639862714335322,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_fa62a25618bb99c2d47e9b71",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"Fresno\", destination=\"Anaheim\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. No specific origin/destination given. Use past preference: user often from Fresno to Anaheim. So origin Fresno, destination Anaheim. No date/time. Provide empty? We can leave slots unspecified. Probably need at least origin and destination. So: GetBuses(origin=\"Fresno\", destination=\"Anaheim\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615139,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a4547ec293a13a69",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 92,
+      "prompt_tokens": 8714,
+      "prompt_tokens_details": null,
+      "total_tokens": 8806
+    }
+  },
+  "request_sha256": "cb0a84bd6e043f76360db04b930c771e3a4cfa82d3034a7374726adfd0c473b8",
+  "source_example_id": "mix_dev_0177+hb_0222",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

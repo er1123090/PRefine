@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_1a8ed946049659933485e06e",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.53495576325804,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1728a5dd487e85360cf77455",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Berkeley\", departure_date=\"2023-03-11\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel? They plan trip to Berkeley. That's location. They want travel. Domain likely GetTravel. Slots: location, departure_date, maybe destination? They said go to Berkeley. So destination=Berkeley? But enum includes many cities but not Berkeley. Maybe use GetTravel with location=Berkeley. departure_date=2023-03-11. They stay one night. No other preferences. So output: GetTravel(location=\"Berkeley\", departure_date=\"2023-03-11\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614885,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b84f9f57584551d0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 130,
+      "prompt_tokens": 9715,
+      "prompt_tokens_details": null,
+      "total_tokens": 9845
+    }
+  },
+  "request_sha256": "242e5053fb165a31dc474f95c8fded6e3e671cf15379ad1dc36315bf0b2bd20e",
+  "source_example_id": "mix_dev_0130+durec_src_1230+hb_0409",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

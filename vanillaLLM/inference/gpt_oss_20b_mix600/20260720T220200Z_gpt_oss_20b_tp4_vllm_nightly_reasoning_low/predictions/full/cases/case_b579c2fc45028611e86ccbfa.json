@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b579c2fc45028611e86ccbfa",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.6236301362514496,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4ac06ff41d65361a7f998aca",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"Sacramento\", destination=\"Las Vegas\")",
+          "function_call": null,
+          "reasoning": "Need GetBuses. No specifics, infer defaults: likely origin and destination? From history, user often from Sacramento to Las Vegas. So set origin=\"Sacramento\", destination=\"Las Vegas\". No date/time.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615138,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-afd27f66eac85c92",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 66,
+      "prompt_tokens": 9723,
+      "prompt_tokens_details": null,
+      "total_tokens": 9789
+    }
+  },
+  "request_sha256": "57cd1e4a64f9aaef6cbf5044d1cd8b8a5611d1b14942ce2b0996fee6b35cff49",
+  "source_example_id": "mix_dev_0273+durec_src_0354+hb_0151",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

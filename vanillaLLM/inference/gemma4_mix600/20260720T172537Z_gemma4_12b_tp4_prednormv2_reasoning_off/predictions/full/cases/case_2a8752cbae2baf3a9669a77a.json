@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_2a8752cbae2baf3a9669a77a",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 18.468699985183775,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "check_in_date": "2019-03-18",
+        "location": "San Diego"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_571a9ebf5f5e376880ec07ec",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"check_in_date\": \"2019-03-18\", \"location\": \"San Diego\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-b0e65c279e1e5fbc",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569310,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9411d24400b903f0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 35,
+      "prompt_tokens": 13860,
+      "prompt_tokens_details": null,
+      "total_tokens": 13895
+    }
+  },
+  "request_sha256": "d6c337960cd46279fbb8add8143088d71cf1ae2a1f6c8a5e7034b45d2d2ea2af",
+  "source_example_id": "mix_dev_0132+durec_src_0811+hb_0072",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

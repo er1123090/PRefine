@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8a801fcf8a544268b1ff3a85",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.301475671119988,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b4fbeddce39ead0b04688b25",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"American Airlines\", departure_date=\"2019-03-14\", origin=\"San Francisco\", destination=\"Chicago\", passengers=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need airline preference: user says \"I usually stick with the airline where I have my mileage account.\" No specific airline given. We infer from history: user used American Airlines often. So set airlines=\"American Airlines\". Other slots: departure_date=\"2019-03-14\", origin=\"San Francisco\", destination=\"Chicago\". passengers? not specified, assume 1. flight_class? not specified. Return? one-way. So output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615074,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a4d02f49bf9699dc",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 135,
+      "prompt_tokens": 9902,
+      "prompt_tokens_details": null,
+      "total_tokens": 10037
+    }
+  },
+  "request_sha256": "1820aa58f7a0be7f0161fe807b32b6279f9caf1eb4dcce3e5629f5f8b0cd0dc9",
+  "source_example_id": "mix_dev_0156+durec_src_0737+hb_0114",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

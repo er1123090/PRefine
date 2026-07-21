@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_33a3b20e27d4f7d2d2042f06",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0824447805061936,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b413c4fbb8870e5593e6d2eb",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"San Diego\", number_of_rooms=\"1\", average_star=\"3\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. From history, user booked 3 star hotel in San Diego earlier. Likely prefers 3 star. Also maybe wants smoking? earlier said smoking. So recipient: location San Diego, number_of_rooms maybe 1? They didn't specify. We'll set number_of_rooms=\"1\", average_star=\"3\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614943,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ae89f95cfe53c548",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 94,
+      "prompt_tokens": 9314,
+      "prompt_tokens_details": null,
+      "total_tokens": 9408
+    }
+  },
+  "request_sha256": "d6115fd97d5cc623cff728eb416d9acaeb39b43b8ec982d8ee8392d204b2bad5",
+  "source_example_id": "mix_dev_0222+durec_src_0902+hb_0164",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

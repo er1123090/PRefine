@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ec379c1c6d69b3afd6ee7bce",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4340550685301423,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1838d85847ff2a6477bdf721",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Need slots: category, departure_date, destination, free_entry, good_for_kids, location. User says \"I’m planning a trip and want to explore travel options.\" No specifics. Use patterns: previous travel: museum free entry good for kids in Paris. Also earlier travel: none. Likely user wants general travel options. We can default to no constraints? But need values. Maybe choose category \"Tourist Attraction\" default. location unknown. We can leave empty? But function requires object with any slots. We can provide empty. But format requires slot_name=\"value\". We can omit? Probably provide empty string. Let's output GetTravel with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615210,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8a3d22e3805c2494",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 152,
+      "prompt_tokens": 10488,
+      "prompt_tokens_details": null,
+      "total_tokens": 10640
+    }
+  },
+  "request_sha256": "a0b89cfeace40b10afdfc5b557a9217e588775480e146b1a4166875306850149",
+  "source_example_id": "mix_dev_0058+durec_src_0989+hb_0228",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_10871ca4bbc9e619c7f8efb7",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.156373958103359,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_072fe4cd7af794625808cc9f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Philadelphia\", category=\"Tourist Attraction\", free_entry=\"True\", good_for_kids=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Need slots: category, departure_date, destination, free_entry, good_for_kids, location. User says planning a trip explore travel options. No specifics. Use patterns: previous travel: user wanted free child-friendly attraction in Philadelphia. Also flight. Likely wants travel options: maybe destination unspecified. We can infer default? Maybe choose category \"Tourist Attraction\" and location unspecified. But need values. We can set destination empty? Probably leave empty. But must provide some. Use most frequent: user previously wanted free child-friendly attraction in Philadelphia. So maybe destination Philadelphia, category \"Tourist Attraction\", free_entry True, good_for_kids True. departure_date maybe none. We'll output with those.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614851,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b960e1a37bbea0fe",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 180,
+      "prompt_tokens": 10116,
+      "prompt_tokens_details": null,
+      "total_tokens": 10296
+    }
+  },
+  "request_sha256": "1e28e2acc09f1d029fbab43e12100919350a1eefc60ebe418954f30c945265bb",
+  "source_example_id": "mix_dev_0226+durec_src_1005+hb_0353",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

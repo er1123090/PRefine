@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_66f79d5c357252bfc4c3bded",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3838368263095617,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1124308f8ac4bc7755e8cf46",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Washington D.C.\", category=\"Museum\", free_entry=\"true\", good_for_kids=\"true\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Need slots: category, free_entry, good_for_kids, location, destination, departure_date. From history, user likes free entry? In session 19, free entry true. Also good_for_kids true. They like Washington D.C. Also earlier travel to Nairobi free entry? Not sure. Likely they want travel options, no specifics. We can set location=\"Washington D.C.\", free_entry=true, good_for_kids=true. Category maybe \"Museum\" or \"Historical Landmark\". Use \"Museum\". No departure_date.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615028,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9fa79689fa49df05",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 147,
+      "prompt_tokens": 10347,
+      "prompt_tokens_details": null,
+      "total_tokens": 10494
+    }
+  },
+  "request_sha256": "87ffce2bd417e761713102cbdfa4e2c14c4897fa384a8ff4132cd8cb9d35705b",
+  "source_example_id": "mix_dev_0196+durec_src_0523+hb_0029",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

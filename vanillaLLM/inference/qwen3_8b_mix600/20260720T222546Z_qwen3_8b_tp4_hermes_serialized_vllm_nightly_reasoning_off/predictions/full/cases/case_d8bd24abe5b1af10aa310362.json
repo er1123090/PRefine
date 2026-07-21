@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "case_id": "case_d8bd24abe5b1af10aa310362",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.2025786926969886,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Sports",
+        "date": "2023-10-18",
+        "event_type": "Baseball",
+        "location": "San Francisco"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_c5455fe5ffe8d5cea4757a31",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Sports\", \"location\": \"San Francisco\", \"event_type\": \"Baseball\", \"date\": \"2023-10-18\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-b50a4166806925e0",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588264,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ad5d3aaf4c094625",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 50,
+      "prompt_tokens": 12416,
+      "prompt_tokens_details": null,
+      "total_tokens": 12466
+    }
+  },
+  "request_sha256": "327420442631280e45a925d4f36916c389621680f49ffd01bc007c062f6004e4",
+  "source_example_id": "mix_dev_0021+durec_src_0825+hb_0405",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

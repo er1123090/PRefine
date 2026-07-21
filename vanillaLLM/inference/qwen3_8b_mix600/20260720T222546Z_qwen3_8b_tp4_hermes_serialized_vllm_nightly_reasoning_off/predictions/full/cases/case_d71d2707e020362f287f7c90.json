@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_d71d2707e020362f287f7c90",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.7118253437802196,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Music",
+        "city": "Los Angeles",
+        "date": "2019-03-08",
+        "event_type": "Rock",
+        "number_of_tickets": "3"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_659b75a5724d2040f40b2aa7",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Music\", \"city\": \"Los Angeles\", \"date\": \"2019-03-08\", \"event_type\": \"Rock\", \"number_of_tickets\": \"3\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-ba31d58e3c8062f6",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588251,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bca4bd52beb5f158",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 57,
+      "prompt_tokens": 9501,
+      "prompt_tokens_details": null,
+      "total_tokens": 9558
+    }
+  },
+  "request_sha256": "3a839cdbe600357cf9b534d2954f37658477cc28442d8c9cc8b6b16ec997a130",
+  "source_example_id": "mix_dev_0003+hb_0074",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

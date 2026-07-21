@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f91e49eef736629cc3d4590d",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1268173987045884,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c504a2810b8980a25a9ab4b3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User says \"I want to listen to some music.\" We need to output a function call. Which domain? GetMusic. Need slots: artist, playback_device, song_name. We infer from history: user likes Leehom Wang, Kevin Macleod, etc. But no specific preference. Maybe default: no slots. But we can guess playback_device? In past, user used Bedroom speaker. But not sure. We can leave empty. So output: GetMusic() with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615226,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a2d9aba63015e056",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 119,
+      "prompt_tokens": 10754,
+      "prompt_tokens_details": null,
+      "total_tokens": 10873
+    }
+  },
+  "request_sha256": "90ac889145647b0e55d88a78846d8f4ef101c475932adbdf9e08329bb1a8bb3b",
+  "source_example_id": "mix_dev_0155+durec_src_0673+hb_0311",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

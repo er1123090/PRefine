@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_140fe28af2fbe1c99605f6f8",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.8801212441176176,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_2a5d79ac7b357e66c1984de0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. User only says planning trip, search flights. No specifics. Use past patterns: user often picks airlines: American, Alaska, United. No preference. Maybe default none. We can leave empty. Output format: GetFlights() with no slots? But need at least function name. Provide empty object.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614867,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a9b839035ef745c7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 98,
+      "prompt_tokens": 11055,
+      "prompt_tokens_details": null,
+      "total_tokens": 11153
+    }
+  },
+  "request_sha256": "cc1af9c10ec65fbccf8347fc3e13dc43424c356b1a900291441e376f30cea987",
+  "source_example_id": "mix_dev_0218+durec_src_0593+hb_0171",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

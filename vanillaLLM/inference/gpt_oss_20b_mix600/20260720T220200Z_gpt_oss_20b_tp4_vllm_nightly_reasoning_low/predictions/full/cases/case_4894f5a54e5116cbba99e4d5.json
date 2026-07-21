@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4894f5a54e5116cbba99e4d5",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.5879641622304916,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_59d9fd8587598346d5698f36",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"American Airlines\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. No preferences given. From history, user used American Airlines once. Likely prefers American Airlines. Also used economy? Not specified. We'll set airlines=\"American Airlines\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614977,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9d4457c02760ca8c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 61,
+      "prompt_tokens": 9083,
+      "prompt_tokens_details": null,
+      "total_tokens": 9144
+    }
+  },
+  "request_sha256": "293c6e37fcfa3b7415391480d8ae5051ff051f1e45bd80994639f30d7ccbba0c",
+  "source_example_id": "mix_dev_0036+durec_src_0800+hb_0452",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_7192949019b4d88b7c008880",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 10.819135135039687,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "city": "Newark",
+        "price_range": "cheap"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_a880ec0691c7b9e665e1f368",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"city\": \"Newark\", \"price_range\": \"cheap\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-81ef929deaaaf57f",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784570239,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b8834bd9b12ca796",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 23,
+      "prompt_tokens": 8765,
+      "prompt_tokens_details": null,
+      "total_tokens": 8788
+    }
+  },
+  "request_sha256": "3b99add3a3c30cdd458e03cf0233c6608ed3713bb9c7c6ff98aa778cf3999f13",
+  "source_example_id": "dev_0098",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

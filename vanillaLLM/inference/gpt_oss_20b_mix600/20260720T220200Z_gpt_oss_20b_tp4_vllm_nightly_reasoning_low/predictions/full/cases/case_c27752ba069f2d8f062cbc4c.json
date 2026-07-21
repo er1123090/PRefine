@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c27752ba069f2d8f062cbc4c",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9502080315724015,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_52447184dec8c2d2a1d7cdce",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"Santa Rosa\", category=\"American\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history, user liked Diner food, category American? In session1, user said \"I'm in the mood to eat Diner food.\" So preference category likely \"American\" or \"Diner\" not in enum. But we can guess \"American\". Also location Santa Rosa. So output GetRestaurants with city=\"Santa Rosa\", category=\"American\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615154,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bf704fa291284432",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 101,
+      "prompt_tokens": 8992,
+      "prompt_tokens_details": null,
+      "total_tokens": 9093
+    }
+  },
+  "request_sha256": "e46991db27898bde3e9b6ddc1224d91391b321bb7dca373d057aee8347fda5d0",
+  "source_example_id": "dev_0256",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

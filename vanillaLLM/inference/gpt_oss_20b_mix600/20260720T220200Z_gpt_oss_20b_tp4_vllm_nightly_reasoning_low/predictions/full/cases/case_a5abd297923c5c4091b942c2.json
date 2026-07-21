@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a5abd297923c5c4091b942c2",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.698648071847856,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_306d5477057dc73bf0206dcf",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"checking\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks with recipient_account_type. User wants transfer money to bank account. No preference given. In history, they used checking and savings. Which is more frequent? Session12 used checking. Session24 used both. Likely checking. Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615113,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9121a1601744c311",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 70,
+      "prompt_tokens": 11374,
+      "prompt_tokens_details": null,
+      "total_tokens": 11444
+    }
+  },
+  "request_sha256": "062196f0225848a55082a1db3cc4229f6ad33c237af6042d38af1a8ee0868072",
+  "source_example_id": "mix_dev_0071+durec_src_0279+hb_0391",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

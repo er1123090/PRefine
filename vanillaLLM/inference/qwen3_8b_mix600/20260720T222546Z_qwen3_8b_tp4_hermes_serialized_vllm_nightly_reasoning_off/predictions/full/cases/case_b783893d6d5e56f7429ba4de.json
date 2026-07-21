@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_b783893d6d5e56f7429ba4de",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.4572923611849546,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Sports",
+        "event_type": "Baseball"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_9b5ed446d5e153c895cba0b2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Sports\", \"event_type\": \"Baseball\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-be8567336800e781",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588058,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-abbc5b8fd83642e7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 28,
+      "prompt_tokens": 11128,
+      "prompt_tokens_details": null,
+      "total_tokens": 11156
+    }
+  },
+  "request_sha256": "8bb6c9dbd0028f5861df419c5e38a68f5ca305f658bb6908fb4abf95c1bbbc8f",
+  "source_example_id": "mix_dev_0172+durec_src_0331+hb_0487",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

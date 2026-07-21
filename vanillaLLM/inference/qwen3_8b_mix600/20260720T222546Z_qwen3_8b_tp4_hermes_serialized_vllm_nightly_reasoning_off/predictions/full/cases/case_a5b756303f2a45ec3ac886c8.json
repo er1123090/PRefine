@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_a5b756303f2a45ec3ac886c8",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.279027060605586,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "car_type": "Standard",
+        "dropoff_date": "2019-03-07",
+        "pickup_date": "2019-03-02",
+        "pickup_location": "Charles de Gaulle International Airport",
+        "pickup_time": "12:30"
+      },
+      "name": "GetRentalCars"
+    }
+  ],
+  "pair_id": "pair_5f58f07b8efb60e8bd6b9271",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"pickup_date\": \"2019-03-02\", \"dropoff_date\": \"2019-03-07\", \"pickup_time\": \"12:30\", \"pickup_location\": \"Charles de Gaulle International Airport\", \"car_type\": \"Standard\"}",
+                "name": "GetRentalCars"
+              },
+              "id": "chatcmpl-tool-a120a4838bbc4f25",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587939,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-848a79f8a36d257c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 79,
+      "prompt_tokens": 9955,
+      "prompt_tokens_details": null,
+      "total_tokens": 10034
+    }
+  },
+  "request_sha256": "5119801ae71dbb3f71180fcd935ce95ded1b5a53caa7fd27c8e574ce32ec3675",
+  "source_example_id": "mix_dev_0228+durec_src_1021+hb_0204",
+  "status": "success",
+  "target_domain": "GetRentalCars"
+}

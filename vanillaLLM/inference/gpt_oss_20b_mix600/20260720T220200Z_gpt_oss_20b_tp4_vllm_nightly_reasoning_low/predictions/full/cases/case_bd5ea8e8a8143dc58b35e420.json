@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_bd5ea8e8a8143dc58b35e420",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7728931149467826,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3b15fa8caa68bd7323c5bd8d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"Los Angeles\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetEvents. User wants events nearby. No city given. From history, user often uses Los Angeles, San Diego, etc. Likely prefers Los Angeles. Also prefers sports events. So output GetEvents(city=\"Los Angeles\") maybe category sports? But slot category optional. We'll include city.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615148,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a2a06e747537acce",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 82,
+      "prompt_tokens": 8777,
+      "prompt_tokens_details": null,
+      "total_tokens": 8859
+    }
+  },
+  "request_sha256": "d79ef5c36cce685121ae1aaedaa43fa0c27008f8d82eb47925af3a6a756a63f3",
+  "source_example_id": "dev_0041",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

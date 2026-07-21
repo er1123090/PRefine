@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8e6704a2bc868b6ab942e3ff",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2425670996308327,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_98d98ce5f07d29e7bed622e3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(departure_date=\"2019-03-01\", departure_time=\"6:10\", origin=\"Seattle\", destination=\"Portland\", group_size=\"3\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. Need slots: departure_date, departure_time, destination, group_size, origin. User says \"I want to check bus options for my trip.\" No details. Use past patterns: likely from Seattle to Portland? But no. We infer default? Maybe use last used: Session12 had bus from Seattle to Portland on 2019-03-01 group 3. So use those. Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615079,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a8b73cdaa8523a93",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 132,
+      "prompt_tokens": 9418,
+      "prompt_tokens_details": null,
+      "total_tokens": 9550
+    }
+  },
+  "request_sha256": "141d8004768cc8d7889b3867fbe99ae3fb149912f442c3173d93b1db3f6650b9",
+  "source_example_id": "mix_dev_0084+hb_0276",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

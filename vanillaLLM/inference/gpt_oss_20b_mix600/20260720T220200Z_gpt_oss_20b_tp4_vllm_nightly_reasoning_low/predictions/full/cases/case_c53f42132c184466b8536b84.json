@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c53f42132c184466b8536b84",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.134506529197097,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b50fc20ba41ea2317bc8bb78",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"Los Angeles\", destination=\"Anaheim\", departure_date=\"2019-03-09\", departure_time=\"07:00\", group_size=\"4\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. Need slots: origin, destination, departure_date, departure_time, group_size. From history, user often asks bus. No specifics. We infer preferences: earlier bus from Anaheim to Sacramento March 9, 2 people. Also from Los Angeles to Anaheim March 9, 4 people. So maybe default group_size 2? But user didn't specify. We can leave empty. Provide domain GetBuses with no slots? But need at least some. We can set origin and destination unknown. Maybe use last used? Last bus was from Los Angeles to Anaheim. So set origin=\"Los Angeles\", destination=\"Anaheim\", departure_date=\"2019-03-09\", departure_time=\"07:00\", group_size=\"4\". Use that.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615158,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8c55e60903fcb5d1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 202,
+      "prompt_tokens": 9840,
+      "prompt_tokens_details": null,
+      "total_tokens": 10042
+    }
+  },
+  "request_sha256": "21b1841f67282aa1dcc2717c09d2c5896e5dcecae3c158a0f5ce863b86c89756",
+  "source_example_id": "mix_dev_0326+hb_0461",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

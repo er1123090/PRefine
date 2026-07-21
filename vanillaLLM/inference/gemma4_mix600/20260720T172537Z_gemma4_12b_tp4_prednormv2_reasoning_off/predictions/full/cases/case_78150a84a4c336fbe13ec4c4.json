@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_78150a84a4c336fbe13ec4c4",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.5961589543148875,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Music",
+        "city": "Toronto"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_f6fe5de77a1efc0d6a0fd735",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Music\", \"city\": \"Toronto\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-8b59a64ad99d5ca5",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784570348,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a8838a2d3f6d9054",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 20,
+      "prompt_tokens": 12550,
+      "prompt_tokens_details": null,
+      "total_tokens": 12570
+    }
+  },
+  "request_sha256": "e6fdfdc841d5391719d368753a435abc58a4635757b2ab032aa820b600b85386",
+  "source_example_id": "mix_dev_0300+durec_src_1281",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

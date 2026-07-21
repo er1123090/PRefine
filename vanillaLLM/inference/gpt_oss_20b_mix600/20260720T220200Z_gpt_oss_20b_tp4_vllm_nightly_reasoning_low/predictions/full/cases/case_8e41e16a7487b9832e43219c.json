@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8e41e16a7487b9832e43219c",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.6720990007743239,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_cea2971449e508f72cde960e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(average_star=\"4\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user booked 4-star in Sydney. Likely wants similar. So average_star=\"4\". location unspecified. Maybe default? We can leave empty. Provide GetHotels with average_star=\"4\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615079,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8a8c266b97e9e53c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 69,
+      "prompt_tokens": 8013,
+      "prompt_tokens_details": null,
+      "total_tokens": 8082
+    }
+  },
+  "request_sha256": "4544b3fd74fc198a1119bd8b2b24a0a0fb23a89a0583ee78c4723818eb543624",
+  "source_example_id": "mix_dev_0317+hb_0241",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

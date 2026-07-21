@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_e151318ab591642711cb5157",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.147926961071789,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Sports",
+        "city": "Anaheim",
+        "event_type": "Basketball"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_10b3cfaad85494674d817740",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Sports\", \"city\": \"Anaheim\", \"event_type\": \"Basketball\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-81a1e8c8924771b8",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588316,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-999f5c7096b693cd",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 35,
+      "prompt_tokens": 12603,
+      "prompt_tokens_details": null,
+      "total_tokens": 12638
+    }
+  },
+  "request_sha256": "ea7f0ea52cf39bebfaf6c7018ed89f8649e12311ebb8fb74ee1f5807345e6702",
+  "source_example_id": "mix_dev_0118+durec_src_0728+hb_0002",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

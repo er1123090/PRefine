@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e0c7793cf1cce50fbbacb0d8",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3457230040803552,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_21c23b16eeba37a20430021f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants rental car. We need GetRentalCars. Need slots: car_type, dropoff_date, pickup_city, pickup_date, pickup_location, pickup_time. From history, user often picks Standard or Compact. In session4 Standard, session7 Compact, session8 Standard, session14 Compact. No strong preference. Maybe default Standard? Also pickup_city: user didn't specify. We can leave empty. Output format: GetRentalCars(...). Provide empty strings? Probably omit. We'll include only slots we can infer: car_type maybe Standard. We'll output GetRentalCars(car_type=\"Standard\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615195,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b6fa6effa986c6ef",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 143,
+      "prompt_tokens": 10506,
+      "prompt_tokens_details": null,
+      "total_tokens": 10649
+    }
+  },
+  "request_sha256": "1d8375d1e383d4eaffc2eaf6c772e08e1dcd6cd1162f2f894cacff8ac85b532d",
+  "source_example_id": "mix_dev_0165+durec_src_0519+hb_0404",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

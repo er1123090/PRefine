@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_7a947189ae38543c42c9b489",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.29226459376514,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "departure_date": "2019-03-12",
+        "destination": "Las Vegas",
+        "origin": "Phoenix"
+      },
+      "name": "GetFlights"
+    }
+  ],
+  "pair_id": "pair_cb52ef6e9ce4ccf479d2ed3b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"origin\": \"Phoenix\", \"destination\": \"Las Vegas\", \"departure_date\": \"2019-03-12\"}",
+                "name": "GetFlights"
+              },
+              "id": "chatcmpl-tool-87e7c8ea1535cbd9",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587669,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b58221588870395f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 44,
+      "prompt_tokens": 10311,
+      "prompt_tokens_details": null,
+      "total_tokens": 10355
+    }
+  },
+  "request_sha256": "e2ba54b17a5f8a313c600eb936d2c6274ddd1ebd8336ee69ba76ca66fdeb3a18",
+  "source_example_id": "mix_dev_0147+hb_0043",
+  "status": "success",
+  "target_domain": "GetFlights"
+}

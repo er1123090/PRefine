@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8d52f1c805d7ee42a87fc611",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.8437950853258371,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_41ab79301448a4917ac68e7e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(price_range=\"moderate\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history, user often wants moderate price, French, Latin American, outdoor tables. But current request generic. We need to deduce preferences: likely wants moderate price? In session2, user asked moderate restaurant in Walnut Creek. In session1, Latin American in Burlingame. So maybe user prefers moderate price and specific cuisine? But no cuisine specified. We can infer default: moderate price, maybe outdoor? Not sure. We can choose no slots? But need to output function call with slots. We can choose category? Not known. Maybe choose \"moderate\" price_range. Let's output GetRestaurants(price_range=\"moderate\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615078,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a460a4a765ea6c05",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 155,
+      "prompt_tokens": 10490,
+      "prompt_tokens_details": null,
+      "total_tokens": 10645
+    }
+  },
+  "request_sha256": "cb6ac63f8f5eff949cd2e047ce1b3dd5d001c369353045d310ad79c40d41eacf",
+  "source_example_id": "mix_dev_0058+durec_src_0989+hb_0228",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

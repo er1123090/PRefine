@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_5aa41f649139689619264006",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3597748195752501,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_9f5c628c63b44d6986f3aa39",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"United Airlines\", flight_class=\"Economy\", passengers=\"1\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetFlights. From history: user used United Airlines often. Also prefers economy class. Also often single passenger. So set airlines=\"United Airlines\", flight_class=\"Economy\", passengers=\"1\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615008,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9a8865492a72de2a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 78,
+      "prompt_tokens": 10920,
+      "prompt_tokens_details": null,
+      "total_tokens": 10998
+    }
+  },
+  "request_sha256": "b3c9e52f1d726aede349923d77d9d8d659f9e0648378546f6a8ba067baffccb3",
+  "source_example_id": "mix_dev_0090+durec_src_0239+hb_0183",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

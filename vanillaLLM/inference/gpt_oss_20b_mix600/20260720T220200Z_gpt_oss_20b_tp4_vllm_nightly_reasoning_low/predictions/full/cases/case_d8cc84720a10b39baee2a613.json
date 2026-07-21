@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d8cc84720a10b39baee2a613",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6855257796123624,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_538bbffcef9be46986c1e4c1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Japanese\", price_range=\"cheap\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant: likely vegetarian economical? Past: user asked vegetarian economical sushi. Also earlier: \"I want to find a restaurant, though. I'm looking for something vegetarian, and it has to be economical.\" That was in session7. So preference: vegetarian, economical. Also location? Not specified now. So we can output GetRestaurants with category maybe? But schema requires category, city, date, number_of_seats, price_range, restaurant_name, time. We can set price_range=\"cheap\" or \"moderate\". Category maybe \"Japanese\" or \"Sushi\". Use \"Sushi\" category? Not in enum. Category enum includes many. Sushi not. Maybe \"Japanese\". So output: GetRestaurants(category=\"Japanese\", price_range=\"cheap\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615186,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b487132488f2cf68",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 179,
+      "prompt_tokens": 10364,
+      "prompt_tokens_details": null,
+      "total_tokens": 10543
+    }
+  },
+  "request_sha256": "325f98dfec88789c67ed84e1f33b9518b40078d58807ca5603b59eac45e64b5e",
+  "source_example_id": "mix_dev_0072+durec_src_0437+hb_0367",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

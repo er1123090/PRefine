@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c4b2389c9cff1c1d48de1460",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4279067926108837,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b45913c86e54243be507b652",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(number_of_days=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels? user planning short trip to Berkeley, one night. Need location Berkeley. In schema, location enum includes \"San Jose\" etc but not Berkeley. But maybe area? area includes \"San Jose\" etc but not Berkeley. Maybe use GetHotels with location \"San Jose\"? but Berkeley not listed. Maybe use GetHomes? area includes \"San Jose\" etc. No Berkeley. Maybe use GetTravel? but it's trip. Probably GetHotels with location \"San Jose\" as closest. But maybe use GetHotels with location unspecified? We can omit location. Provide number_of_days=\"1\". So call GetHotels(number_of_days=\"1\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615157,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-885efb7c00bc4d9c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 150,
+      "prompt_tokens": 9241,
+      "prompt_tokens_details": null,
+      "total_tokens": 9391
+    }
+  },
+  "request_sha256": "ba5a62a951350f1c2caec952f2525e5cd2408b8219e4c649c5c4a08fbc9ecba7",
+  "source_example_id": "dev_0322",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3a20a3d35302e2ad5717d19f",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0181224755942822,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_ee1b5171361e5aea690941c4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(free_entry=\"True\", good_for_kids=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Likely preferences: free_entry? good_for_kids? location? From history: user liked child-friendly places, free entry. Also earlier travel: performing arts venue free? In session7: free_entry True, good_for_kids True. So set free_entry=\"True\", good_for_kids=\"True\". Maybe category? unspecified. We'll output GetTravel with those.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614955,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a532e5e5a07e541e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 105,
+      "prompt_tokens": 11017,
+      "prompt_tokens_details": null,
+      "total_tokens": 11122
+    }
+  },
+  "request_sha256": "19b5b28205d8443f2339348ccf4028f722e818dcf25b642bdf8b5ced7284a42c",
+  "source_example_id": "mix_dev_0268+durec_src_0315+hb_0162",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

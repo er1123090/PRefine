@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_9cd5dbfa1b283745c9e78f35",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 10.279536676593125,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "good_for_kids": true,
+        "location": "San Francisco"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_d83f60b4a26a86ad478f291d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"good_for_kids\": true, \"location\": \"San Francisco\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-b36b248d442be11a",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784570848,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a67a8d2a008ae4e6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 23,
+      "prompt_tokens": 12967,
+      "prompt_tokens_details": null,
+      "total_tokens": 12990
+    }
+  },
+  "request_sha256": "2da1488fdad278961c79e36807e3d880ea1dfcb71d2a80bb5569d526f1cddabc",
+  "source_example_id": "mix_dev_0240+durec_src_0039+hb_0045",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

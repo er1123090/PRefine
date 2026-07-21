@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0faaa23c53c131de885f4d14",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.917140590958297,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c2f9ac69ec9230f00f947b44",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2019-03-11\", destination=\"",
+          "function_call": null,
+          "reasoning": "We need GetFlights? They plan trip to Berkeley. Likely flight? But Berkeley is city. Maybe GetHotels? They plan short trip one night. Need hotel. So GetHotels with location=\"Berkeley\"? Not in enum. But location enum includes many cities but not Berkeley. So maybe GetFlights? They need travel. Destination Berkeley. Origin unknown. Probably flight. Use GetFlights with destination=\"Berkeley\" not in enum. So maybe GetHotels with location not valid. Maybe GetTravel? Destination? But travel domain. Use GetTravel with location=\"Berkeley\" not in enum. Hmm. Maybe GetHotels with location \"San Jose\" close? But user says Berkeley. We must pick best. Use GetHotels with location=\"San Jose\" as closest? But not accurate. Maybe GetFlights with destination \"San Jose\" as nearest airport. Use destination=\"San Jose\". Provide departure_date \"2019-03-11\". No origin. Use default? We'll set origin=\"Los Angeles\" maybe? But no pattern. Use GetFlights with departure_date=\"2019-03-11\", destination=\"San Jose\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614848,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a6983afababd44d1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 256,
+      "prompt_tokens": 8584,
+      "prompt_tokens_details": null,
+      "total_tokens": 8840
+    }
+  },
+  "request_sha256": "7475039c2ed2014972e0ecb34313f7fc9e316ac77b9ef17baf3da7663f211a70",
+  "source_example_id": "mix_dev_0113+hb_0265",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

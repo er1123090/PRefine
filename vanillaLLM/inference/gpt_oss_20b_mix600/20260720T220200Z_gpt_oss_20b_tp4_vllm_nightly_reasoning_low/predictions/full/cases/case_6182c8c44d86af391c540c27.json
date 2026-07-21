@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_6182c8c44d86af391c540c27",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8974315710365772,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c8946d37b8544cdc47b06e17",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"Alaska Airlines\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. User says planning a trip, search available flights. No specifics. Use past pattern: user often picks Alaska Airlines. So airline=Alaska Airlines. No dates. Maybe leave empty. Output format: GetFlights(airlines=\"Alaska Airlines\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615019,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-90068773d368fc19",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 95,
+      "prompt_tokens": 10155,
+      "prompt_tokens_details": null,
+      "total_tokens": 10250
+    }
+  },
+  "request_sha256": "cf04f8aca913d73e41d219ff4ddeb7c3e14e9b83ac9ab7e89ee896b5993017e9",
+  "source_example_id": "mix_dev_0254+durec_src_1246+hb_0316",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

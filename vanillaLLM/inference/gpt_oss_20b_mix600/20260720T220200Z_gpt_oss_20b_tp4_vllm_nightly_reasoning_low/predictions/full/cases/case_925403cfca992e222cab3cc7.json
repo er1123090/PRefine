@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_925403cfca992e222cab3cc7",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.425103378482163,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_38de7863509f45b2fb3971eb",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says pick up noon March 8, keep couple days. So dropoff maybe March 10? but not specified. We can leave dropoff_date empty. car_type? not specified. So only pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\". Output format: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615085,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-80824b60408e4947",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 151,
+      "prompt_tokens": 10583,
+      "prompt_tokens_details": null,
+      "total_tokens": 10734
+    }
+  },
+  "request_sha256": "5c05ab76a979171685e97448b976a09ec723cc915778a261452ba1c8774de17a",
+  "source_example_id": "mix_dev_0065+durec_src_0412+hb_0408",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

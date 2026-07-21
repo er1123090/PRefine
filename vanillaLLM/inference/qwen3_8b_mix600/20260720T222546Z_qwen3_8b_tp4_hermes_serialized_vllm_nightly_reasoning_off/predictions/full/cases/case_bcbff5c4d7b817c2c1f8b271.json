@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_bcbff5c4d7b817c2c1f8b271",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.701711497269571,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Music",
+        "event_type": "Rock"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_e1904e1037ee88622c9a1c30",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Music\", \"event_type\": \"Rock\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-b0a7cf33bc77782e",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588086,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-948b7a7aa90cf08b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 27,
+      "prompt_tokens": 11667,
+      "prompt_tokens_details": null,
+      "total_tokens": 11694
+    }
+  },
+  "request_sha256": "d5a46ecf46064e1ab0f32f5801e0a5059ee138a89397fd60494d6e9ea90165b0",
+  "source_example_id": "mix_dev_0272+durec_src_0538+hb_0344",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

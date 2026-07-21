@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_36fc26d1f8498b1638e7fa5f",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 13.865894202142954,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "number_of_seats": "1",
+        "shared_ride": true
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_06fe52975306d1d3f2e9919e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"number_of_seats\": \"1\", \"shared_ride\": true}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-aaa39be879d48d95",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569494,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8f0cade48eb5d309",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 25,
+      "prompt_tokens": 15131,
+      "prompt_tokens_details": null,
+      "total_tokens": 15156
+    }
+  },
+  "request_sha256": "bb0d5eed62f29df11ed3dbe157b3fc22166eb30f76e59f79b8de7124ee0e2d5d",
+  "source_example_id": "mix_dev_0015+durec_src_0969+hb_0384",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

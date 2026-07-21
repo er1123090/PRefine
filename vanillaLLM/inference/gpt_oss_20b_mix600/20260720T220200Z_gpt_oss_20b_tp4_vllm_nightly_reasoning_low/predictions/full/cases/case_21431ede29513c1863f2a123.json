@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_21431ede29513c1863f2a123",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.8465909902006388,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_8a810c1fc33fcb0800e77791",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", shared_ride=\"True\", pickup_time=\"\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, shared_ride, pickup_time. From history: user wants ride, check available options. No specifics. Use pattern: shared ride True, maybe 1 person? Past sessions: shared ride for 1 or 2. Default maybe 1. Destination unknown. Could be unspecified; maybe we leave empty? But need values. We can infer from context: \"I need a ride and want to check available ride-sharing options.\" No destination. Maybe default to current location? We can set destination empty string. But schema expects string. We can set destination=\"\". number_of_seats=\"1\". shared_ride=\"True\". pickup_time empty. Let's output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614900,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-83dcdfa504b21bb4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 179,
+      "prompt_tokens": 8373,
+      "prompt_tokens_details": null,
+      "total_tokens": 8552
+    }
+  },
+  "request_sha256": "f1e667c38511331f74a25da5af411fdc72f2f6f52c11efbbc274c9f5cc43a654",
+  "source_example_id": "dev_0306",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

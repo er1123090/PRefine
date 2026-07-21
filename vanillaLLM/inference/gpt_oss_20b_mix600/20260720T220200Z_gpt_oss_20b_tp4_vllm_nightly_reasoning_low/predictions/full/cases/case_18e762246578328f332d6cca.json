@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_18e762246578328f332d6cca",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.014058402739465,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1e13871bdde5f276740f7de8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"2\", pickup_time=\"\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. No info. Use patterns: user often wants shared ride. In session4,6,14. So shared_ride=True. Destination unknown. Maybe default? We can leave empty? But need values. We can infer maybe they want to go somewhere unspecified. We can set destination empty? Probably need to provide something. Maybe use last known destination? None. We can set destination=\"\"? But schema expects string. We can set destination=\"\". number_of_seats maybe 1? But pattern: often 2 or 3. Let's set 2. pickup_time maybe current? leave empty. We'll output minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614880,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9ed0d8449cb2d672",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 177,
+      "prompt_tokens": 9864,
+      "prompt_tokens_details": null,
+      "total_tokens": 10041
+    }
+  },
+  "request_sha256": "cb259f8bc655b1aef7281a5c23215b73bf81085e22f493f70181e003857f8c2b",
+  "source_example_id": "mix_dev_0120+durec_src_0016+hb_0157",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

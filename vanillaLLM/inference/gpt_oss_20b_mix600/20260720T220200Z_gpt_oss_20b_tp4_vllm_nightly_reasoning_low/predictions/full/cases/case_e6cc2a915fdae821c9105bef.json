@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e6cc2a915fdae821c9105bef",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.8440163843333721,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_565e4768766270f814bb3cbb",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", car_type=\"Compact\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says couple of days, no end date. We can infer dropoff_date maybe March 10? but not in history. Use pickup_date=2019-03-08? but date format? Past used \"2019-03-04\". So use \"2019-03-08\". pickup_time \"12:00\". car_type? not specified, default? maybe Compact? from history user often Compact. We'll set car_type=\"Compact\". dropoff_date not provided; maybe omit. Output format: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", car_type=\"Compact\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615205,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-abbd77342f063bdb",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 199,
+      "prompt_tokens": 9945,
+      "prompt_tokens_details": null,
+      "total_tokens": 10144
+    }
+  },
+  "request_sha256": "97b307a6587d855d0713e77587a43bebe3e847c18f152a2e8fa37bfcb3d2ad37",
+  "source_example_id": "mix_dev_0175+durec_src_0112+hb_0240",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

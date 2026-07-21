@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0b13874b0f4d9c155d7a8952",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.5104609364643693,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_dd22d179546c3b4aa6ab5250",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Japanese\", city=\"San Francisco\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. Past: user asked for restaurant in San Fran, Japanese. Also earlier asked for restaurant in San Fran. So preference: category Japanese. Also city maybe San Francisco. So output GetRestaurants(category=\"Japanese\", city=\"San Francisco\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614833,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-90ec6b75f59dae33",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 76,
+      "prompt_tokens": 11986,
+      "prompt_tokens_details": null,
+      "total_tokens": 12062
+    }
+  },
+  "request_sha256": "26dd5f6db3005f3e13db91617c1ce351afc87ef1c20322bb52c1a9a44d505b4c",
+  "source_example_id": "mix_dev_0221+durec_src_0569+hb_0281",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

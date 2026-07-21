@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_7cfcee357435fd97e13f300b",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8524986729025841,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_22ef23e26e8b3f88a90aaac6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"checking\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks with recipient_account_type. From history, user asked checking and savings. Which preference? In session3 they asked checking. Session4 transfer from savings to checking. Likely checking. So output GetBanks(recipient_account_type=\"checking\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615056,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-90961aea09da356e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 70,
+      "prompt_tokens": 11191,
+      "prompt_tokens_details": null,
+      "total_tokens": 11261
+    }
+  },
+  "request_sha256": "b85afca6c131a60fa0c9ff163383fcbce44c64d8229c5328cc3e75ad5437ea07",
+  "source_example_id": "mix_dev_0070+durec_src_0019+hb_0288",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

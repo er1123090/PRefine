@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_9cd5dbfa1b283745c9e78f35",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.065681421197951,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d83f60b4a26a86ad478f291d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(good_for_kids=\"True\", location=\"San Francisco\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User says planning a trip and want to explore travel options. Likely GetTravel. Need slots: category, departure_date, destination, free_entry, good_for_kids, location. From history: user likes kid friendly attractions (Session3). Also earlier travel: Session3 good_for_kids True. Also location San Francisco. So preferences: good_for_kids=True, location=\"San Francisco\". Maybe category unspecified. So output GetTravel(good_for_kids=\"True\", location=\"San Francisco\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615101,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b2d8597927e6e78e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 132,
+      "prompt_tokens": 11017,
+      "prompt_tokens_details": null,
+      "total_tokens": 11149
+    }
+  },
+  "request_sha256": "10c24a81bc4d7b353e6758f9213e8cce636d0e87d0f84db52c626ee4baa31885",
+  "source_example_id": "mix_dev_0240+durec_src_0039+hb_0045",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "case_id": "case_13caf521080cabc9ea9e42e3",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 11.518416930921376,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "departure_date": "2019-03-09",
+        "destination": "Los Angeles",
+        "group_size": "1",
+        "origin": "Long Beach"
+      },
+      "name": "GetBuses"
+    }
+  ],
+  "pair_id": "pair_50b534cf5a15facd422d14a7",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"origin\": \"Long Beach\", \"departure_date\": \"2019-03-09\", \"destination\": \"Los Angeles\", \"group_size\": \"1\"}",
+                "name": "GetBuses"
+              },
+              "id": "chatcmpl-tool-a5b7e0a1a8d7f858",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784586974,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-beec29263f4b925a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 52,
+      "prompt_tokens": 8094,
+      "prompt_tokens_details": null,
+      "total_tokens": 8146
+    }
+  },
+  "request_sha256": "965e6c286db79b8e967ebc2095500ee9b64b80cb69e450b112983fbd2621863d",
+  "source_example_id": "dev_0098",
+  "status": "success",
+  "target_domain": "GetBuses"
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_b783893d6d5e56f7429ba4de",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.03551572561264,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Sports",
+        "city": "Chicago",
+        "event_type": "Baseball"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_9b5ed446d5e153c895cba0b2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Sports\", \"city\": \"Chicago\", \"event_type\": \"Baseball\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-87edc862e8f8b59f",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784571289,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a3c6bd55aedf16dd",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 28,
+      "prompt_tokens": 12048,
+      "prompt_tokens_details": null,
+      "total_tokens": 12076
+    }
+  },
+  "request_sha256": "9bda7488335b1c56ae83c1bac79f26c2389ca1f40725076767b7081611ca88c7",
+  "source_example_id": "mix_dev_0172+durec_src_0331+hb_0487",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

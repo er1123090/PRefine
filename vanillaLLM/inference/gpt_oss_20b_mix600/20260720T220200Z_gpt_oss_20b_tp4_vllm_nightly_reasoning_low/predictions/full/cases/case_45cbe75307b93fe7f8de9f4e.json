@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_45cbe75307b93fe7f8de9f4e",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.0406365590170026,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4f9bc8bd34e6cdaa0d96382f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\", passengers=\"1\", flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: origin, destination, departure_date. Also maybe passengers, flight_class, airlines, return_date. Not specified. Use defaults. From history: user often uses 1 passenger? Not seen. We'll set passengers=\"1\". flight_class maybe Economy default. airlines none. return_date none. So call: GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\", passengers=\"1\", flight_class=\"Economy\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614972,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bd6a7df3f407a647",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 140,
+      "prompt_tokens": 7969,
+      "prompt_tokens_details": null,
+      "total_tokens": 8109
+    }
+  },
+  "request_sha256": "09d30b026d40b69c850d48dfa521960269adc541fc66d3c0e050b3728dc7aa6a",
+  "source_example_id": "mix_dev_0284+hb_0341",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

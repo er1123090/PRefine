@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_d28e2980cb6b63417aa82f14",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.7822715044021606,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "462 Santa Clara Avenue",
+        "number_of_seats": "2",
+        "shared_ride": true
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_8ac94214efc5bf44f70d6611",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"462 Santa Clara Avenue\", \"number_of_seats\": \"2\", \"shared_ride\": true}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-a83b1fa04455ba49",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588228,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bee8bd4bc5b959d5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 43,
+      "prompt_tokens": 12420,
+      "prompt_tokens_details": null,
+      "total_tokens": 12463
+    }
+  },
+  "request_sha256": "929d5bc7f7ae2056bdd5fab7a24ee81dcf53a6ac99c12a5209f23faac650fddf",
+  "source_example_id": "mix_dev_0021+durec_src_0825+hb_0405",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a7d9227d2339f70013096078",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2856767605990171,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_8a810c1fc33fcb0800e77791",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", pickup_time=\"18:15\", number_of_seats=\"1\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, pickup_time, number_of_seats, shared_ride. No info on seats or shared. From history, user often wants shared ride. In session1 and 2, shared. Likely default shared True. Number_of_seats? Not specified. Maybe 1. So output: GetRideSharing(destination=\"39145 Farwell Drive\", pickup_time=\"18:15\", number_of_seats=\"1\", shared_ride=\"True\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615116,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9db52993f2d48a27",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 140,
+      "prompt_tokens": 8410,
+      "prompt_tokens_details": null,
+      "total_tokens": 8550
+    }
+  },
+  "request_sha256": "e9c1675f0f468ee50d37ca57e9af22995325d062b14d4f411cfcaa04abdf8d81",
+  "source_example_id": "dev_0306",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

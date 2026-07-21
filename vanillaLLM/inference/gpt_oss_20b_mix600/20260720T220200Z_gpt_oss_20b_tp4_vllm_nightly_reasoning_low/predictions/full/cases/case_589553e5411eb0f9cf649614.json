@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_589553e5411eb0f9cf649614",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.1435970347374678,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b498a87170f4b0100ab57964",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jiong He\", playback_device=\"phone\", song_name=\"Another Self\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants to listen to music. We need to output a function call. Which domain? GetMusic. Need slot values: artist, playback_device, song_name. From history, user likes Jiong He, Alec Benjamin, etc. Preference: likely Jiong He. Playback device: earlier used TV, phone, etc. No explicit. We can choose default? Maybe \"phone\". Song_name unspecified. We can leave empty? But need value. Maybe choose \"Another Self\" or \"Gardenia\". But user just wants music. We can infer they like Jiong He. So artist=\"Jiong He\". playback_device maybe \"phone\". song_name maybe empty? But schema requires string. We can set song_name=\"\". But better choose a popular Jiong He song: \"Another Self\". Let's output GetMusic(artist=\"Jiong He\", playback_device=\"phone\", song_name=\"Another Self\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615004,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-baa963759deefd58",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 218,
+      "prompt_tokens": 10414,
+      "prompt_tokens_details": null,
+      "total_tokens": 10632
+    }
+  },
+  "request_sha256": "1f37f8c87542fee6bdd24abebf6c7f3098ba6aaba482857965c2594cc619d22c",
+  "source_example_id": "mix_dev_0315+durec_src_0485+hb_0027",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

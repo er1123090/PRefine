@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_4f0a0753ecb1d242b6e62773",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.373051921837032,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "check_in_date": "2019-03-05",
+        "location": "Vallejo",
+        "number_of_days": "1"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_bb3a947f85a37164ba8370e2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"Vallejo\", \"check_in_date\": \"2019-03-05\", \"number_of_days\": \"1\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-ba7ef21971808ce8",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587414,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a5ececd9c642a548",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 48,
+      "prompt_tokens": 12071,
+      "prompt_tokens_details": null,
+      "total_tokens": 12119
+    }
+  },
+  "request_sha256": "54790c06d3b9bc8e9f094b4990b15dc187cdbe4a994c81accafccc1682d07ea3",
+  "source_example_id": "mix_dev_0032+durec_src_0562+hb_0178",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

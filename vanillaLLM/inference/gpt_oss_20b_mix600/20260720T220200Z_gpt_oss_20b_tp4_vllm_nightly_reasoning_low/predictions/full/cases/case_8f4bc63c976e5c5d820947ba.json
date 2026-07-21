@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8f4bc63c976e5c5d820947ba",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1936030080541968,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_2ec0048edd3268f064a17ddf",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, shared_ride maybe. From history, user often uses shared ride. Likely default shared_ride True. Destination unspecified. Maybe they want options, so we can leave destination empty? But need slot. We can set destination=\"\"? Probably omit. But must include slot names. We can set destination=\"\"? I'll set destination=\"\" and shared_ride=True. number_of_seats maybe default 1? Use 1.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615080,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9935299400293898",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 127,
+      "prompt_tokens": 7911,
+      "prompt_tokens_details": null,
+      "total_tokens": 8038
+    }
+  },
+  "request_sha256": "8ef803773072f8caa2bf77ce10bb9ce3e125d2ddd82b2483f87463572ac2e04a",
+  "source_example_id": "mix_dev_0284+hb_0341",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

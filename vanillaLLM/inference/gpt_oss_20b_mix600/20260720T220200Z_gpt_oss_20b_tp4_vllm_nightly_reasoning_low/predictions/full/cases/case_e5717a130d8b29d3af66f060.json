@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e5717a130d8b29d3af66f060",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9819017285481095,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e5cde4148e425ed6eeb200fd",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Full-size\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No preferences known: car_type? pickup_city? pickup_date? We infer from past: user often wants Full-size. So car_type=Full-size. pickup_city? previous used SAN International Airport, Santa Fe Depot. Likely airport. Maybe default to \"SAN International Airport\". pickup_date? not specified. We can leave empty. Output format: GetRentalCars(car_type=\"Full-size\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615202,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-95d99da44c228e9c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 104,
+      "prompt_tokens": 8730,
+      "prompt_tokens_details": null,
+      "total_tokens": 8834
+    }
+  },
+  "request_sha256": "0902ef3f2ac8a8ce09834cf0c68495ecaad01ffaaf8df8662c97b1c2245ea492",
+  "source_example_id": "mix_dev_0004+durec_src_1334+hb_0428",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

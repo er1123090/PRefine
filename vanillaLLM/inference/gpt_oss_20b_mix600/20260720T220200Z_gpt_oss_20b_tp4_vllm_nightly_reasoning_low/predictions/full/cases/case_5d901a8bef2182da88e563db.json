@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_5d901a8bef2182da88e563db",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2391966814175248,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f8083a96704a0f6010eae6ea",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Downtown Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", car_type=\"Standard\", dropoff_date=\"2019-03-10\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need car_type? Not specified. Past pattern: user often picks Standard or Compact. No preference. Use most frequent: Standard. Also pickup_city: Downtown Berlin. pickup_date: 2019-03-08? Actually March 8th. dropoff_date: couple days, maybe March 10th. pickup_time: around noon. So output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615013,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a0206428b1c5a1f4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 133,
+      "prompt_tokens": 11141,
+      "prompt_tokens_details": null,
+      "total_tokens": 11274
+    }
+  },
+  "request_sha256": "e5a89bd14c13534a292df7718a5a8bec1ffa65e4c8de01fe17274a354256c1cc",
+  "source_example_id": "mix_dev_0032+durec_src_0562+hb_0178",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

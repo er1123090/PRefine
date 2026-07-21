@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_16eac6d31d80906cdd4d35cc",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.2365577211603522,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c8399a538cec02806fafb63d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history, user asked for restaurant in session 17: \"Find me a place to eat\" then \"Look for serving Diner around Saratoga\" and got Sent Sovi Restaurant. They didn't specify category or price. Also earlier no restaurant preferences. So we can output GetRestaurants with no slots? But need at least domain. We can leave empty. So output: GetRestaurants() .",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614874,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a79612de784eb10f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 101,
+      "prompt_tokens": 11618,
+      "prompt_tokens_details": null,
+      "total_tokens": 11719
+    }
+  },
+  "request_sha256": "433be14cc95538c8d37b989e771568ebc0d23e2dedd56cfa0adce3629e385b5c",
+  "source_example_id": "mix_dev_0128+durec_src_0838+hb_0376",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

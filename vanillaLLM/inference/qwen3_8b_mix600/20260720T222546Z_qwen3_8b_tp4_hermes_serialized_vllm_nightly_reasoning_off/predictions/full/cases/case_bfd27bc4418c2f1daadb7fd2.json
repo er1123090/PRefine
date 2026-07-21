@@ -1,0 +1,77 @@
+{
+  "attempts": 1,
+  "case_id": "case_bfd27bc4418c2f1daadb7fd2",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.010093593969941,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Italian",
+        "city": "Napa",
+        "has_wifi": true,
+        "location": "Napa",
+        "number_of_seats": "3",
+        "price_range": "moderate",
+        "time": "19:00"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_f01fca33edc63c33499321cc",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Italian\", \"price_range\": \"moderate\", \"has_wifi\": true, \"location\": \"Napa\", \"number_of_seats\": \"3\", \"time\": \"19:00\", \"city\": \"Napa\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-a084592426455171",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588103,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aea306c0fa32c052",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 68,
+      "prompt_tokens": 8882,
+      "prompt_tokens_details": null,
+      "total_tokens": 8950
+    }
+  },
+  "request_sha256": "91acec04bd8f1e7745a0bfe78d29ba070840365e09bdd5bd3c24f4ed84fbece4",
+  "source_example_id": "dev_0239",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_7c9a23d511889431bd370d92",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.1496677473187447,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Asian",
+        "city": "San Leandro",
+        "number_of_seats": "2"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_35a03e3e27432eeb8fd2347b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Asian\", \"city\": \"San Leandro\", \"number_of_seats\": \"2\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-8720749c90e3e433",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587679,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b24790880c05947b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 38,
+      "prompt_tokens": 13633,
+      "prompt_tokens_details": null,
+      "total_tokens": 13671
+    }
+  },
+  "request_sha256": "9d8dc8f12a34ec65bdf4d2e2b6f81d69953220b29a833f26fbb05312c309065e",
+  "source_example_id": "mix_dev_0099+durec_src_0572+hb_0102",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

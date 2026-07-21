@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_6953e73bd6491e604002436c",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4775631120428443,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e7ea0f13dbdf9e1ce0916cd3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(destination=\"Berkeley\", departure_date=\"2019-03-11\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: category? free_entry? good_for_kids? location? destination? departure_date? From user: planning short trip to Berkeley, March 11, one night. Likely destination=Berkeley. location maybe same. No category. We'll set destination=\"Berkeley\" but not in enum. Enum includes many cities but not Berkeley. Maybe use location? location enum includes many but not Berkeley. So maybe choose destination=\"Berkeley\" even if not in enum. We'll output GetTravel(destination=\"Berkeley\", departure_date=\"2019-03-11\")? date format? Use \"2019-03-11\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615030,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b0fb5b01362f9b07",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 159,
+      "prompt_tokens": 6984,
+      "prompt_tokens_details": null,
+      "total_tokens": 7143
+    }
+  },
+  "request_sha256": "6cf0dc15bf61e16b344b09d054bf8a018de9ef7997bda5d9f80fb9bf1a32493d",
+  "source_example_id": "dev_0037",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

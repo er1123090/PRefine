@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_7ff59412467b22efc929c762",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.677333714440465,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_0760a25186799f18e567d01f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic()",
+          "function_call": null,
+          "reasoning": "User wants music. No preferences given. We need infer from history: user likes pop, rock, etc. But no specific. We can leave empty. Probably no slot. So output GetMusic with no params? But schema requires object. We can output empty object.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615061,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bda42940b3d28d2d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 67,
+      "prompt_tokens": 11434,
+      "prompt_tokens_details": null,
+      "total_tokens": 11501
+    }
+  },
+  "request_sha256": "a9c031b5b5100a2971230c78ba608d18758aef75121afd33cb5ccfc57810547e",
+  "source_example_id": "mix_dev_0149+durec_src_0913+hb_0348",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

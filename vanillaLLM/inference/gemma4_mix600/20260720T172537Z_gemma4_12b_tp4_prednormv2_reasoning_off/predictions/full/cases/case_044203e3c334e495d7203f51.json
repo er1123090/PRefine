@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_044203e3c334e495d7203f51",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 15.973502740263939,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "departure_date": "2019-03-11",
+        "destination": "Berkeley"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_f0d53990e798dd9a188d003d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"Berkeley\", \"departure_date\": \"2019-03-11\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-a01adc7ffc89e397",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784568729,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bb23cd82d759b6c1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 31,
+      "prompt_tokens": 12399,
+      "prompt_tokens_details": null,
+      "total_tokens": 12430
+    }
+  },
+  "request_sha256": "8c65d7f96f4b27cb71fedf95b84d63fba6175fca09650d12acefc0afa99a5c13",
+  "source_example_id": "mix_dev_0192+durec_src_0151+hb_0009",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_cbcad0ca5607dd30aba4f1f2",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7971859248355031,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e303dcf3e2a55f0dea02744f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(check_in_date=\"2019-03-18\", location=\"San Diego\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. Need check_in_date, location, number_of_rooms? Not specified. From history, user often wants 2 rooms. But not sure. We can omit optional. Provide check_in_date=\"2019-03-18\", location=\"San Diego\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615169,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-84f952b98fc056f3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 83,
+      "prompt_tokens": 9653,
+      "prompt_tokens_details": null,
+      "total_tokens": 9736
+    }
+  },
+  "request_sha256": "f107761d10733411900df2cc8687b56298f47c2d3f83128e93cce42260cebf01",
+  "source_example_id": "mix_dev_0171+durec_src_0643+hb_0152",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

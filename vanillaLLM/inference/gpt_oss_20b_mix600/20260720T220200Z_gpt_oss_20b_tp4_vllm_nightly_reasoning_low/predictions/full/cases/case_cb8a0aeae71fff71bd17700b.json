@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_cb8a0aeae71fff71bd17700b",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3786218613386154,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_bc9c7d4068fbf81b9cc6d096",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants restaurant options. We need to output a function call. Which domain? GetRestaurants. Need slots: category, city, date, number_of_seats, price_range, restaurant_name, time. We infer preferences from history: user likes moderate price, vegetarian? In session4 moderate. Session8 moderate. Session16 cheap. So maybe price_range moderate? Also location? No location given. Maybe default city? Past city: San Rafael, San Diego, Pleasant Hill, Richmond. Hard. Maybe no city, so leave empty. Provide function call with no slots? But need at least domain. We can provide empty object.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615169,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8c5905fcc79759fa",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 146,
+      "prompt_tokens": 10865,
+      "prompt_tokens_details": null,
+      "total_tokens": 11011
+    }
+  },
+  "request_sha256": "81c309d9602fc26dca264887f75ecbeaaf662aacbbd7bbedf38f63fd92fcc110",
+  "source_example_id": "mix_dev_0211+durec_src_0576+hb_0328",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

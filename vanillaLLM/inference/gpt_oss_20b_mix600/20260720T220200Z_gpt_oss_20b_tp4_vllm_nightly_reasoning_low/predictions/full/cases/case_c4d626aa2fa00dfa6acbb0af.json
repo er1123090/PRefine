@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c4d626aa2fa00dfa6acbb0af",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2454916145652533,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d1df5aa5d76b8bd925d9da4e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User says \"I’m planning a trip and want to explore travel options.\" Likely GetTravel. Need slots: category, free_entry, good_for_kids, location, destination, departure_date. From history: user booked flights, hotels, etc. No explicit preference. But pattern: prefers economy? They used Premium Economy once. For travel, maybe wants free_entry? Not sure. Maybe default none. We can leave empty. Output format: GetTravel(...). Provide empty slots? Probably omit. But need function call. We'll include no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615157,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a8fddcd9f6d3e2a6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 130,
+      "prompt_tokens": 8837,
+      "prompt_tokens_details": null,
+      "total_tokens": 8967
+    }
+  },
+  "request_sha256": "aa19e5c3a415afbb984b89195512724d8f3ae62b875239fb78e580f285a4bdde",
+  "source_example_id": "mix_dev_0278+hb_0161",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

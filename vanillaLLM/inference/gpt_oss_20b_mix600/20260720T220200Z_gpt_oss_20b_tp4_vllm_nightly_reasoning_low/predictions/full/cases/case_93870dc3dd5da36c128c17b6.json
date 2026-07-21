@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_93870dc3dd5da36c128c17b6",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0285709742456675,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f697241920f76e5b5904581e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Leslie Cheung\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants music. We need GetMusic. Need artist or playback_device or song_name. From history, user likes Leslie Cheung songs, also earlier requested \"The Only Thing That Matters\". Likely preference: artist Leslie Cheung. Playback device? Not specified. We'll choose artist=\"Leslie Cheung\". No playback_device. Output format: GetMusic(artist=\"Leslie Cheung\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615088,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bb3ab79e2b7ecad4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 105,
+      "prompt_tokens": 10290,
+      "prompt_tokens_details": null,
+      "total_tokens": 10395
+    }
+  },
+  "request_sha256": "306df2b02e5a2af44164b968d11495c9bfb3812d72fc0f748d7a3330b63b9bd7",
+  "source_example_id": "mix_dev_0052+durec_src_0546+hb_0298",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

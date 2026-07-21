@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2055f17d81f8e1b8610df41e",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2219335632398725,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4f1327aa62b72a03666cd566",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"San Diego\")",
+          "function_call": null,
+          "reasoning": "Need GetEvents. No city given; likely user wants nearby. Past preference: user asked events in NYC, San Diego. No consistent city. Maybe default to \"New York\"? But \"nearby\" ambiguous. Could infer from location context? No location. Maybe use last city used: San Diego. So city=\"San Diego\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614898,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8339a82bebcc7905",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 88,
+      "prompt_tokens": 9177,
+      "prompt_tokens_details": null,
+      "total_tokens": 9265
+    }
+  },
+  "request_sha256": "16af4f9b830965fe2bc9b61356b9455d1c94a0bab6cc79503913fc40b0b54c15",
+  "source_example_id": "mix_dev_0319+durec_src_1254+hb_0177",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

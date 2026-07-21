@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_dae2d7e8d6eca5f3ccfff14f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 9.483647115528584,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "location": "Atlanta"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_53ee443c3b988415efc70577",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"Atlanta\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-add1d29276ac0293",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784571775,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-96e3d0049b15cd3d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 14,
+      "prompt_tokens": 13498,
+      "prompt_tokens_details": null,
+      "total_tokens": 13512
+    }
+  },
+  "request_sha256": "2b61e262d5b9dfde0e67fa3d32ec031f18b796620707768cfb8fa049e3a4e406",
+  "source_example_id": "mix_dev_0021+durec_src_0825+hb_0405",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

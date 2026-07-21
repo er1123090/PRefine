@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_77c95b0ae258dce544073d1c",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.084755145944655,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_ff7fa194a556bd9b1dc876e5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", shared_ride=\"False\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, shared_ride, pickup_time maybe. User says need a ride and want to check available ride-sharing options. No specifics. Use past pattern: default one person, shared ride? They didn't specify. We can infer from previous: user often asks for shared ride. But here just check options. We can set shared_ride=false? Maybe default false. Provide empty? We need values. We can set destination empty? But must provide something. Maybe ask? But we must output. Use default: destination=\"\", number_of_seats=\"1\", shared_ride=\"False\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615050,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aa7c57fe5f561a8e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 158,
+      "prompt_tokens": 9061,
+      "prompt_tokens_details": null,
+      "total_tokens": 9219
+    }
+  },
+  "request_sha256": "3da9a49071a77f4bcac828e1e28e6a1a54936ebcf201dd41f73616efe29275bb",
+  "source_example_id": "mix_dev_0150+hb_0004",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

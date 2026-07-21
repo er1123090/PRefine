@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_821ba41f35f0f96fe24d3e61",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7008554236963391,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_edd02db453f38629992c9f9f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No preferences known. From history, user used Standard car. Likely prefers Standard. Also pickup_city maybe San Francisco? In session6 they booked at Portland Bus Station. But current request generic. We'll default to Standard. No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615064,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-94b89e0b1f24dec2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 72,
+      "prompt_tokens": 8023,
+      "prompt_tokens_details": null,
+      "total_tokens": 8095
+    }
+  },
+  "request_sha256": "31d7888d6efd0afd57ca99fa8c2f57cdffbc98f027aad8eecfd944da45f9adaf",
+  "source_example_id": "dev_0227",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

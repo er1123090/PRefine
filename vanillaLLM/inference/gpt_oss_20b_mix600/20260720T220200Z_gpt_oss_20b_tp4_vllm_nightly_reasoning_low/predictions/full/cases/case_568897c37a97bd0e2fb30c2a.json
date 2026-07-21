@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_568897c37a97bd0e2fb30c2a",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3293902380391955,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a7561c59aa5ca5b2be62bb59",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(shared_ride=\"True\", number_of_seats=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. From history, user used ride sharing once: shared ride True, number_of_seats 1, destination Angels Flight Railway. Likely preference: shared_ride True, number_of_seats maybe 1. Destination unspecified now. We'll output with shared_ride=\"True\", number_of_seats=\"1\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615000,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b4205cb09091d127",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 94,
+      "prompt_tokens": 9196,
+      "prompt_tokens_details": null,
+      "total_tokens": 9290
+    }
+  },
+  "request_sha256": "7c10ef9feb2a14904ac59b75dcb39a5ec6f9959014f57b39a917fa0e1f75672b",
+  "source_example_id": "dev_0322",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

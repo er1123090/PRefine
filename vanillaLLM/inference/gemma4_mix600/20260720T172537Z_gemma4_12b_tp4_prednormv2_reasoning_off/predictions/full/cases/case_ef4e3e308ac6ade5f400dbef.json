@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_ef4e3e308ac6ade5f400dbef",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.136674329638481,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "artist": "Jacky Cheung"
+      },
+      "name": "GetMusic"
+    }
+  ],
+  "pair_id": "pair_356f2af8fc095f6d40a6fc8f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"artist\": \"Jacky Cheung\"}",
+                "name": "GetMusic"
+              },
+              "id": "chatcmpl-tool-a34eaf13ce5e5beb",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784572057,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b30f4f9cbfbb9df6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 16,
+      "prompt_tokens": 10106,
+      "prompt_tokens_details": null,
+      "total_tokens": 10122
+    }
+  },
+  "request_sha256": "dd51f495cb9b49e5fd7a3e09013e8ae560b50dd8e35f6864d3c4e2eb38b95e6f",
+  "source_example_id": "mix_durec_src_1267+hb_0230",
+  "status": "success",
+  "target_domain": "GetMusic"
+}

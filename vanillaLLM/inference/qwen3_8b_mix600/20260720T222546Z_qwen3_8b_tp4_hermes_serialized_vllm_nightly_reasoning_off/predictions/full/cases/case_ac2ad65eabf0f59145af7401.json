@@ -1,0 +1,77 @@
+{
+  "attempts": 1,
+  "case_id": "case_ac2ad65eabf0f59145af7401",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.847540686838329,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "car_type": "Compact",
+        "dropoff_city": "Phoenix",
+        "dropoff_date": "2019-03-10",
+        "number_of_days": "2",
+        "number_of_seats": "4",
+        "pickup_city": "Phoenix",
+        "pickup_date": "2019-03-08"
+      },
+      "name": "GetRentalCars"
+    }
+  ],
+  "pair_id": "pair_38de7863509f45b2fb3971eb",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"car_type\": \"Compact\", \"pickup_city\": \"Phoenix\", \"dropoff_city\": \"Phoenix\", \"pickup_date\": \"2019-03-08\", \"dropoff_date\": \"2019-03-10\", \"number_of_days\": \"2\", \"number_of_seats\": \"4\"}",
+                "name": "GetRentalCars"
+              },
+              "id": "chatcmpl-tool-8a78d62d4fbdde4f",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587974,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b287e6f342499f8e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 88,
+      "prompt_tokens": 11436,
+      "prompt_tokens_details": null,
+      "total_tokens": 11524
+    }
+  },
+  "request_sha256": "268116aa07206ff78cbbbe371ad4f02cdbdf1af61191f2973b8aa969fc1ad75a",
+  "source_example_id": "mix_dev_0065+durec_src_0412+hb_0408",
+  "status": "success",
+  "target_domain": "GetRentalCars"
+}

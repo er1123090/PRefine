@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0f24dd3ebfe0eb3636375b54",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.029149358160794,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3d8a40296d5086212ee8f4a1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history: user asked for restaurants? Session 13: asked for restaurant \"Ruiyu Roasted Fish\" but not preferences. Session 20: asked for 3 star hotel. No restaurant preferences. So no preference. Just return empty? But need function call with no slots. So output: GetRestaurants() with empty object.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614845,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9456bb1b430084e7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 90,
+      "prompt_tokens": 10296,
+      "prompt_tokens_details": null,
+      "total_tokens": 10386
+    }
+  },
+  "request_sha256": "ba1be0ef8cebae9af0fe5b9392d7416ff1d2095ce5fc37f92cf85b0f7f51394c",
+  "source_example_id": "mix_dev_0052+durec_src_0546+hb_0298",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

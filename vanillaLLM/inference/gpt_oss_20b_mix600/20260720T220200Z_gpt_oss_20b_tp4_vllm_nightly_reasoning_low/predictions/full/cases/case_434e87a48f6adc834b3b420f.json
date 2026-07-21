@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_434e87a48f6adc834b3b420f",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.160419385880232,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_518cdbb670c2ce1f9570611d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"Sydney\", number_of_rooms=\"1\", average_star=\"4\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants hotels. We need to deduce preferences: location? From history, user has searched hotels in Portland, New York, Sydney, Cupertino area. No consistent location. Maybe default to user's last city? Last hotel search was Sydney. So location Sydney. Also number_of_rooms? earlier 1 room. So likely 1 room. average_star? earlier 4 star. So preferences: location=\"Sydney\", number_of_rooms=\"1\", average_star=\"4\". Also maybe has_wifi? not sure. We'll output GetHotels with those.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614968,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9dd77787b7fcfd63",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 142,
+      "prompt_tokens": 9865,
+      "prompt_tokens_details": null,
+      "total_tokens": 10007
+    }
+  },
+  "request_sha256": "14ab386607e0b1b18c02667d56386f3b5a25e459334fe352f1eddcc1a77e94b4",
+  "source_example_id": "mix_dev_0175+durec_src_0112+hb_0240",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

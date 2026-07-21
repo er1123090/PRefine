@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_463e73f9f178e4bf52b8a82b",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6733226710930467,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_2b8e26df39cb9af1c76f1dc4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Asian\", price_range=\"cheap\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetRestaurants. Past: user asked for fast food cheap. Also earlier Sichuan vegetarian. So preferences: category maybe \"Fast Food\" or \"Sichuan\" but category list includes \"American\", \"Asian\", etc. Sichuan is Asian. Also user wants options. No specific city. We can infer preference for \"Asian\" and maybe \"cheap\" price_range? Past cheap. So set category=\"Asian\", price_range=\"cheap\". Also maybe city unspecified. We'll output GetRestaurants(category=\"Asian\", price_range=\"cheap\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614973,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8404acdc70381505",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 134,
+      "prompt_tokens": 8020,
+      "prompt_tokens_details": null,
+      "total_tokens": 8154
+    }
+  },
+  "request_sha256": "6c8e0213cf9be0212b3d30c872e2ef052dfa167a82cbdde6408f9954d934a31b",
+  "source_example_id": "dev_0227",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

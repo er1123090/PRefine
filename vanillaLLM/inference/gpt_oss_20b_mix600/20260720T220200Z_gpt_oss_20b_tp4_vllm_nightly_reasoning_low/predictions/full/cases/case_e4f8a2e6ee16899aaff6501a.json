@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e4f8a2e6ee16899aaff6501a",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0303929839283228,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a141c80f68c669ab679615e2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2019-03-12\", origin=\"Los Angeles\", destination=\"Denver\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines?, departure_date, destination, flight_class?, origin, passengers?, return_date?. User didn't specify airline, class, passengers, return. Use patterns: previous flights? none. Default? maybe none. Provide only given. So output: GetFlights(departure_date=\"2019-03-12\", origin=\"Los Angeles\", destination=\"Denver\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615201,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-adda47435566de12",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 112,
+      "prompt_tokens": 11424,
+      "prompt_tokens_details": null,
+      "total_tokens": 11536
+    }
+  },
+  "request_sha256": "83d2ad89d50d944cff54a148729d84af29116ff007216ab04f1e45868c90f56b",
+  "source_example_id": "mix_dev_0103+durec_src_0806+hb_0319",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

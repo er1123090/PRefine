@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_c8ad83a94c4a504342411798",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.397498088888824,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Asian",
+        "price_range": "moderate"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_c660b54af5a165db97eedb9a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Asian\", \"price_range\": \"moderate\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-923d9d5eb27745f1",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588169,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a84e4630becbf375",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 11425,
+      "prompt_tokens_details": null,
+      "total_tokens": 11454
+    }
+  },
+  "request_sha256": "08a5029ff787690ebfb076e6fbeb6866669f2dfe6980f25983e86d1f0cd2880f",
+  "source_example_id": "mix_dev_0022+durec_src_0167",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

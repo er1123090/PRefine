@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_cf1d60ffab6fb97ce63922bf",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.412664226256311,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1608c5fc4a5a642e777a4a34",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHomes(area=\"Vallejo\", visit_date=\"2019-03-05\")",
+          "function_call": null,
+          "reasoning": "We need GetHomes. Slots: area=Vallejo, number_of_beds? not given. pets_allowed? not given. number_of_baths? not given. property_name? visit_date? We have check_in_date March 5th. So visit_date=2019-03-05? assume. Provide area and visit_date.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615174,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8118747b26afdb8f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 98,
+      "prompt_tokens": 9140,
+      "prompt_tokens_details": null,
+      "total_tokens": 9238
+    }
+  },
+  "request_sha256": "b01c89c92a6e2e4c257cd0ad5eaf19308eb005858c9972b19f63d7f6b77f5d1f",
+  "source_example_id": "mix_dev_0036+durec_src_0800+hb_0452",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

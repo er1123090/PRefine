@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_487c64893d641bf4326149c0",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6685901014134288,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_672fbb0ca1965eabe81acc91",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"\", departure_date=\"\", departure_time=\"\", destination=\"\", group_size=\"\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. Need origin, destination, date, time, group_size. User didn't specify. Use past pattern: user often wants bus to destination. No info. We can default? maybe ask? But must produce call. Use most frequent: origin San Francisco? But past sessions: user used Fresno. We guess origin Fresno, destination LAX? But no. We can set empty. Provide empty strings.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614977,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-beb15577c0323615",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 112,
+      "prompt_tokens": 10069,
+      "prompt_tokens_details": null,
+      "total_tokens": 10181
+    }
+  },
+  "request_sha256": "60f543ef1c560ba0f8a82a1246af64b5e89b9864e1d727015270dba2e37bb55b",
+  "source_example_id": "mix_dev_0008+durec_src_0294+hb_0140",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

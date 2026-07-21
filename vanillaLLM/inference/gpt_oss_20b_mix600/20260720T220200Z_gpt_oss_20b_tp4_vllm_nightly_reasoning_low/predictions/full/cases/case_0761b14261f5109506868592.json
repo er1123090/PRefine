@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0761b14261f5109506868592",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.661973936483264,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_7ea148092643c2b78ac20aa6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", shared_ride=\"False\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats? user didn't specify seats. default? maybe 1. shared_ride? not specified. We can infer from past: shared_ride often True when user said shared. Here no. So shared_ride false. pickup_time half hour from now but not needed. So output: GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", shared_ride=\"False\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614817,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bfbf8e12a130d860",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 128,
+      "prompt_tokens": 10743,
+      "prompt_tokens_details": null,
+      "total_tokens": 10871
+    }
+  },
+  "request_sha256": "088aec65f88a04628c7b4fc766467519274c2adcafefb3f90a2d8426e02bbc64",
+  "source_example_id": "mix_dev_0258+durec_src_0028+hb_0423",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

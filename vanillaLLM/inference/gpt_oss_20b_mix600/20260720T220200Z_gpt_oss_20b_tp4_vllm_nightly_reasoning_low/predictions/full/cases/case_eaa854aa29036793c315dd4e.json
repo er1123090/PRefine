@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_eaa854aa29036793c315dd4e",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5004584239795804,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_776d195a4e1f5cc29983ea75",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", dropoff_date=\"2019-03-10\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says pick up noon March 8, keep couple days. So dropoff date maybe March 10. car_type? not specified, default? maybe none. pickup_location? not given. So output: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", dropoff_date=\"2019-03-10\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615209,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-945c132af24c2a12",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 149,
+      "prompt_tokens": 11102,
+      "prompt_tokens_details": null,
+      "total_tokens": 11251
+    }
+  },
+  "request_sha256": "90867e85708e3548903085976197c18fe3067e0b33f3f8fc5dc0388bc065e212",
+  "source_example_id": "mix_dev_0268+durec_src_0315+hb_0162",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

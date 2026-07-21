@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_17d990c43206e6f4abc6a782",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.41245620790869,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_dd73319050d1ea619353c235",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need preferences: airlines? flight_class? origin? destination? passengers? departure_date? return_date? From history: user booked flights? No. But earlier they used GetFlights? none. But they used GetRentalCars, GetHotels, etc. No flight preference. But maybe pattern: they prefer economy? In rental car they didn't specify. For flights, maybe default to Economy. Destination? Not specified. We need to infer from context: planning a trip, no details. We can leave slots empty. But need to output with slots present? We can provide empty? Probably provide no slots. But format requires slot_name=\"value\". We can omit? Maybe provide empty string. I'll output GetFlights() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614877,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8c84ba425f90fa3b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 164,
+      "prompt_tokens": 9933,
+      "prompt_tokens_details": null,
+      "total_tokens": 10097
+    }
+  },
+  "request_sha256": "b2ef561586ed1a88de8593ffda181cf231b98c973c7ed75538973adfb5b0dba0",
+  "source_example_id": "mix_dev_0219+hb_0318",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_bfa61a4e00bca4b615fa2b53",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2273934446275234,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b1ce8661b7941cabcd2da6bc",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"Vallejo\", date=\"2023-03-05\", time=\"18:15\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. Slots: city, date, time, maybe category, price_range, number_of_seats, restaurant_name. User didn't specify category, price_range, seats. So leave empty. Output format: GetRestaurants(city=\"Vallejo\", date=\"2023-03-05\", time=\"18:15\")? date format? previous used \"2018-12-11\". So use YYYY-MM-DD. Time \"18:15\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615151,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a2d38b963e4a5b0c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 126,
+      "prompt_tokens": 9445,
+      "prompt_tokens_details": null,
+      "total_tokens": 9571
+    }
+  },
+  "request_sha256": "fc29eab1252660df1bdb644798acbe9040b67c1a3e2cec98d7ec8bcef516842e",
+  "source_example_id": "mix_dev_0173+durec_src_0799+hb_0336",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

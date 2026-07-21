@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_0915f4acf196e4c495474aa2",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.328042572364211,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "artist": "Kris Wu",
+        "playback_device": "Bedroom speaker"
+      },
+      "name": "GetMusic"
+    }
+  ],
+  "pair_id": "pair_618670df2ad2a5fd01c2dca5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"artist\": \"Kris Wu\", \"playback_device\": \"Bedroom speaker\"}",
+                "name": "GetMusic"
+              },
+              "id": "chatcmpl-tool-bbe950cd8edcd31c",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784568786,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bceaf10b70ceb771",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 24,
+      "prompt_tokens": 12314,
+      "prompt_tokens_details": null,
+      "total_tokens": 12338
+    }
+  },
+  "request_sha256": "2d8b5d4c1a539da6da3a002183042dd0313df18c1d9873171f559adaeac2cac1",
+  "source_example_id": "mix_dev_0066+durec_src_0248+hb_0116",
+  "status": "success",
+  "target_domain": "GetMusic"
+}

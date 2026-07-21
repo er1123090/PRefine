@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4f1773dcbb1185006e72d6fa",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.4851151574403048,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_7d6601c512f2756e5cdd85f5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"New York\", category=\"Tourist Attraction\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. Current utterance: \"I’m planning a trip and want to explore travel options.\" Likely domain GetTravel. Need slots: category, free_entry, good_for_kids, location, destination, departure_date. From history, user often wants events, hotels, flights. For travel, maybe they want tourist attractions. Past GetTravel used location=\"Fresno\". No preference. We can guess category maybe \"Tourist Attraction\" or \"Museum\". Use default? We can infer they like events: rock music, concerts. Travel likely to New York? But no. Use most frequent location: New York? They had events in New York. So location=\"New York\". Category maybe \"Tourist Attraction\". free_entry maybe false. good_for_kids maybe false. destination maybe \"Statue of Liberty\". But too specific. We can leave some slots empty. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614987,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b959dfafbc06e553",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 206,
+      "prompt_tokens": 8990,
+      "prompt_tokens_details": null,
+      "total_tokens": 9196
+    }
+  },
+  "request_sha256": "ea74906b9af56272f8bea4f9a5c0deffecb297a9c3690d173c5f4ae30da53729",
+  "source_example_id": "dev_0256",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

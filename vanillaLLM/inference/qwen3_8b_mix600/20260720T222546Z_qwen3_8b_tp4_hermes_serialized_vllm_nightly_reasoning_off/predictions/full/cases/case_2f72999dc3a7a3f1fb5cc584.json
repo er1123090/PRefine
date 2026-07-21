@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_2f72999dc3a7a3f1fb5cc584",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.906783290207386,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "car_type": "Compact",
+        "dropoff_date": "2023-10-16",
+        "pickup_date": "2023-10-15",
+        "pickup_location": "Los Angeles",
+        "pickup_time": "10:00"
+      },
+      "name": "GetRentalCars"
+    }
+  ],
+  "pair_id": "pair_289dcb160137f4404ba87b10",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"car_type\": \"Compact\", \"pickup_date\": \"2023-10-15\", \"dropoff_date\": \"2023-10-16\", \"pickup_location\": \"Los Angeles\", \"pickup_time\": \"10:00\"}",
+                "name": "GetRentalCars"
+              },
+              "id": "chatcmpl-tool-afdd5ee20ba966aa",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587222,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-87c23e8d28f6d169",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 75,
+      "prompt_tokens": 10507,
+      "prompt_tokens_details": null,
+      "total_tokens": 10582
+    }
+  },
+  "request_sha256": "384408cfa60ac036790e4c38f1c76f4b13613e7e68d28e8da2a8c609975047d0",
+  "source_example_id": "mix_dev_0130+durec_src_1230+hb_0409",
+  "status": "success",
+  "target_domain": "GetRentalCars"
+}

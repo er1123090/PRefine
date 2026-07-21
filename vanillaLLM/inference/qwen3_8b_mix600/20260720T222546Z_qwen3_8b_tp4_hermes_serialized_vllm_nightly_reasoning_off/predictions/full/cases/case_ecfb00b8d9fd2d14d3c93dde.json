@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_ecfb00b8d9fd2d14d3c93dde",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.432905022054911,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Music",
+        "city": "San Francisco",
+        "event_type": "Rock"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_cc839a02d9757e9fbe6dfbb1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"city\": \"San Francisco\", \"category\": \"Music\", \"event_type\": \"Rock\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-90a4b583fc49a00a",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588385,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a08e3c03bcea5986",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 34,
+      "prompt_tokens": 8932,
+      "prompt_tokens_details": null,
+      "total_tokens": 8966
+    }
+  },
+  "request_sha256": "354498e79acaf7f8d08edbe9f879f7ba8195361af7840425cf88e3e03114d5e4",
+  "source_example_id": "dev_0050",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

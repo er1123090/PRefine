@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_60ae682489a52688fcb7dff4",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2323131887242198,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c5114d01ee719312491f73ed",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(shared_ride=\"true\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. User says \"I need a ride and want to check available ride-sharing options.\" No specifics. Use patterns: earlier user used shared ride 4 seats to pier 17. Likely default shared_ride true? But no destination. We can infer maybe default destination? Not enough. We can set shared_ride=true, others empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615017,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-926a046b41ec8aae",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 109,
+      "prompt_tokens": 12576,
+      "prompt_tokens_details": null,
+      "total_tokens": 12685
+    }
+  },
+  "request_sha256": "f3369885191330f6fb8af746483196e5d04adc2d3bd946d9b63a3d88fb8b0ad8",
+  "source_example_id": "mix_dev_0099+durec_src_0572+hb_0102",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

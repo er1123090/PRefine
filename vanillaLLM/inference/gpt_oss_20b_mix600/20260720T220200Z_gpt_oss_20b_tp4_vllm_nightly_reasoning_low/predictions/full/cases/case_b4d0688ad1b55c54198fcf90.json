@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b4d0688ad1b55c54198fcf90",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2396424198523164,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_bd208d6ce952bda3fee79f24",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"Los Angeles\", destination=\"Denver\", departure_date=\"2019-03-12\", flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Determine preferences: airline? flight_class? passengers? From history: earlier flight from San Diego to LA, user asked if ticket business, got economy. No preference. For this new flight, likely economy. No passengers specified, default 1. So output GetFlights with origin=\"Los Angeles\", destination=\"Denver\", departure_date=\"2019-03-12\" (assuming year 2019). flight_class=\"Economy\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615137,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-be7d10e6cf4619b5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 128,
+      "prompt_tokens": 9881,
+      "prompt_tokens_details": null,
+      "total_tokens": 10009
+    }
+  },
+  "request_sha256": "a314dfd00ea27baea8aaf11d526fc703b11ae08b03840bbb8cf66974e2298a3d",
+  "source_example_id": "mix_dev_0326+hb_0461",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_9d632085d70efb73ade591bb",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4850133713334799,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e3f2a72b6f92be0628993787",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(check_in_date=\"2019-03-11\", location=\"Berkeley\", number_of_days=\"1\", number_of_rooms=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. Need location Berkeley. Check_in_date 2019-03-11? date format? In past, they used \"2019-03-11\". So slot check_in_date. number_of_days \"1\". number_of_rooms maybe default 1. So output: GetHotels(check_in_date=\"2019-03-11\", location=\"Berkeley\", number_of_days=\"1\", number_of_rooms=\"1\") But location enum doesn't include Berkeley. But we must still output. Probably use location=\"Berkeley\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615102,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b09ae0fa77bafec2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 149,
+      "prompt_tokens": 10717,
+      "prompt_tokens_details": null,
+      "total_tokens": 10866
+    }
+  },
+  "request_sha256": "91e1eb707ce7e29ca0a203fad3754fc1024f36d3ca58a4deca841117b72b8663",
+  "source_example_id": "mix_dev_0300+durec_src_1281",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

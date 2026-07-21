@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_291eddad60726ee5de5334c8",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 16.294532417319715,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Tourist Attraction",
+        "location": "San Diego"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_6a0fe797edc0902cba19a66b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Tourist Attraction\", \"location\": \"San Diego\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-81513380ec87754a",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569292,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b1d1d541b3d35b63",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 22,
+      "prompt_tokens": 13655,
+      "prompt_tokens_details": null,
+      "total_tokens": 13677
+    }
+  },
+  "request_sha256": "c4347df088f910fab6f9be6a5d2b782e89d02851cbf667940782ec753e18b9ee",
+  "source_example_id": "mix_dev_0128+durec_src_0838+hb_0376",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

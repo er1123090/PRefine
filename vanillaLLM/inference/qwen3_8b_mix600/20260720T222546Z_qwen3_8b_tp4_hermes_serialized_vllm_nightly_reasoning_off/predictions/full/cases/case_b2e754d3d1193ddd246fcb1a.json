@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_b2e754d3d1193ddd246fcb1a",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.401353458873928,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "area": "Berkeley",
+        "visit_date": "2019-03-11"
+      },
+      "name": "GetHomes"
+    }
+  ],
+  "pair_id": "pair_7d6601c512f2756e5cdd85f5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"area\": \"Berkeley\", \"visit_date\": \"2019-03-11\"}",
+                "name": "GetHomes"
+              },
+              "id": "chatcmpl-tool-90c931e09d311698",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588020,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a288b0788687f5fa",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 38,
+      "prompt_tokens": 9831,
+      "prompt_tokens_details": null,
+      "total_tokens": 9869
+    }
+  },
+  "request_sha256": "11f2d346a04deb22d46c9fe7d3b23b84d0f3688fa70c27374225e09c89f42aec",
+  "source_example_id": "dev_0256",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

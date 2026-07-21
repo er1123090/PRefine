@@ -1,0 +1,69 @@
+{
+  "attempts": 1,
+  "case_id": "case_3d1fef3aacb5c7fe90f5ce28",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.004914776422083,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {},
+      "name": "GetMovies(genre=\"Drama\")<tool_call|>"
+    }
+  ],
+  "pair_id": "pair_23205b113de703512790d9c6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{}",
+                "name": "GetMovies(genre=\"Drama\")<tool_call|>"
+              },
+              "id": "chatcmpl-tool-8621d699dfb18f06",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569581,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a949f1eed0072432",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 12,
+      "prompt_tokens": 10325,
+      "prompt_tokens_details": null,
+      "total_tokens": 10337
+    }
+  },
+  "request_sha256": "2c276b7927e9186e2acf9f760dad88ffd59a93e79c52a668e50dab92933b2706",
+  "source_example_id": "mix_dev_0096+durec_src_0242",
+  "status": "success",
+  "target_domain": "GetMovies"
+}

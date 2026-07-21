@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_401153b5691bea49d6410b5b",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.89314987603575,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Art",
+        "city": "San Francisco",
+        "event_type": "Museum"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_91a7af0b0ff4ca2ed16725fd",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Art\", \"city\": \"San Francisco\", \"event_type\": \"Museum\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-a8b24736f42321b3",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587329,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b2b107cad4c2bc46",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 35,
+      "prompt_tokens": 9086,
+      "prompt_tokens_details": null,
+      "total_tokens": 9121
+    }
+  },
+  "request_sha256": "e74738f2f8ebb10953a499002b467ca8722fd3f6f39e63b80240f2475d8162f6",
+  "source_example_id": "mix_dev_0283+hb_0071",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

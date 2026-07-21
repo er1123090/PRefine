@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_6d27ce39eb28c709a1463ab0",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.7946781488135457,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "city": "Vallejo",
+        "date": "2019-03-05",
+        "time": "18:15"
+      },
+      "name": "GetFood"
+    }
+  ],
+  "pair_id": "pair_3fdc74cf67d1b89d6ac30c3d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"city\": \"Vallejo\", \"date\": \"2019-03-05\", \"time\": \"18:15\"}",
+                "name": "GetFood"
+              },
+              "id": "chatcmpl-tool-910152361246017d",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587589,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-932d0734ca013ed9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 47,
+      "prompt_tokens": 10571,
+      "prompt_tokens_details": null,
+      "total_tokens": 10618
+    }
+  },
+  "request_sha256": "d1dc9bfb53b9ba6d0b306d0c318fec88ccc7fcd3f43c5be93decb3b955bd8734",
+  "source_example_id": "mix_dev_0130+durec_src_1230+hb_0409",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

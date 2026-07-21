@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_498080d1e1e39cf05bea0152",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9836121937260032,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_5eb6d6168b4bd75af7b2c887",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Berkeley\", departure_date=\"2019-03-11\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: location, departure_date, maybe category? They didn't specify category. Use location=Berkeley? Not in enum. But location enum includes many cities but not Berkeley. Maybe use destination? But GetTravel has destination string. Use destination=\"Berkeley\". departure_date=\"2019-03-11\". Good.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614980,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bedb4c60d7eb910b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 96,
+      "prompt_tokens": 9498,
+      "prompt_tokens_details": null,
+      "total_tokens": 9594
+    }
+  },
+  "request_sha256": "db92570babf2fcf4a72fd5cb5486aa8f2235b4d0410be4fc6ecd46824427c0d0",
+  "source_example_id": "mix_dev_0100+durec_src_0831+hb_0371",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

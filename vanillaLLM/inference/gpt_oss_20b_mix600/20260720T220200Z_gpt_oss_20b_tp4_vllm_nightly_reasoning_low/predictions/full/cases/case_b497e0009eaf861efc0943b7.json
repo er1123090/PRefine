@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b497e0009eaf861efc0943b7",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3296121079474688,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a313babb4159266dc3a0d6d9",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"New York\", destination=\"Philadelphia\", departure_date=\"2023-03-03\", departure_time=\"07:40\", group_size=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. Need slots: origin, destination, departure_date, departure_time, group_size. From history: user wants bus options for trip. No specifics. Use most frequent preferences: origin New York, destination Philadelphia, departure_date Sunday (but date unspecified). group_size 1. So output GetBuses(origin=\"New York\", destination=\"Philadelphia\", departure_date=\"2023-??\", departure_time=\"07:40\", group_size=\"1\"). Probably just those.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615136,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-840cc705da31c1d6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 142,
+      "prompt_tokens": 8190,
+      "prompt_tokens_details": null,
+      "total_tokens": 8332
+    }
+  },
+  "request_sha256": "27c1af3dba4f0d6a1a7400559442b66f222a3d5c3253d3d9277ede75173ea613",
+  "source_example_id": "dev_0050",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

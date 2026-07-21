@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_6e59eec6164826ea8758d21d",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9923904044553638,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_565e4768766270f814bb3cbb",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Compact\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants rent car. Past preferences: In session 17, user wanted small car (compact) and reserved. So preference: car_type Compact. Also pickup_date March 4, dropoff March 6. But current request no date. We infer likely want compact. Also maybe pickup_city? Not specified. Could default? We can provide GetRentalCars with car_type=\"Compact\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615036,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-83eb50cbefc83229",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 106,
+      "prompt_tokens": 9865,
+      "prompt_tokens_details": null,
+      "total_tokens": 9971
+    }
+  },
+  "request_sha256": "525d5a642789a173305eaeeb7c4a54568140671b9bca9b4ce560ba9d5c2f2a22",
+  "source_example_id": "mix_dev_0175+durec_src_0112+hb_0240",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_bba96d6f485b3745523495af",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.8285080334171653,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "car_type": "Compact",
+        "pickup_city": "San Diego"
+      },
+      "name": "GetRentalCars"
+    }
+  ],
+  "pair_id": "pair_61b044114dde3e89235ba820",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"car_type\": \"Compact\", \"pickup_city\": \"San Diego\"}",
+                "name": "GetRentalCars"
+              },
+              "id": "chatcmpl-tool-ac4fe60f46f0de82",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784571334,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8d821b0941e7c61c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 26,
+      "prompt_tokens": 8279,
+      "prompt_tokens_details": null,
+      "total_tokens": 8305
+    }
+  },
+  "request_sha256": "45d030bc0aa1463b8708f4b9a4eb7bb19873715e5e2ea244951aaae74a8fe5b9",
+  "source_example_id": "dev_0037",
+  "status": "success",
+  "target_domain": "GetRentalCars"
+}

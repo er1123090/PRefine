@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_8eaacc2baa04bf154e5ad596",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.856560749001801,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Japanese",
+        "city": "San Francisco"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_dc9d2d846a26818bb579e285",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Japanese\", \"city\": \"San Francisco\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-9d0f6805cd1283db",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587788,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a127a4c56fbeef5c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 28,
+      "prompt_tokens": 12164,
+      "prompt_tokens_details": null,
+      "total_tokens": 12192
+    }
+  },
+  "request_sha256": "cb8541a3e018c4eb09859d4fbbf85bc629a43b6d3ed44a5c51623a6ccaa845d6",
+  "source_example_id": "mix_dev_0070+durec_src_0019+hb_0288",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

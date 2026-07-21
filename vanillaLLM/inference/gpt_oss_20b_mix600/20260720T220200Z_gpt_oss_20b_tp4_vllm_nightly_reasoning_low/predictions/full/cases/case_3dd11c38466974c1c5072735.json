@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3dd11c38466974c1c5072735",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.584385427646339,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_7e87767e605bf7c1e5dd25e0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", shared_ride=\"False\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination \"39145 Farwell Drive\". number_of_seats? user didn't specify, default maybe 1. shared_ride? not specified. We'll assume shared_ride false. pickup_time? not needed. So output: GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", shared_ride=\"False\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614961,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-91550ac13d7f7443",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 110,
+      "prompt_tokens": 11279,
+      "prompt_tokens_details": null,
+      "total_tokens": 11389
+    }
+  },
+  "request_sha256": "9d096e7a10421c60e716a353872512bba504073392d4973537bc3f17584a1efa",
+  "source_example_id": "mix_dev_0126+durec_src_1001+hb_0443",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

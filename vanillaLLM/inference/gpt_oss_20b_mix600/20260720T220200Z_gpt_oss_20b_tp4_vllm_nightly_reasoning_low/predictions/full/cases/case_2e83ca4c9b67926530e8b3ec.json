@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2e83ca4c9b67926530e8b3ec",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3278221562504768,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6ff0b36a05fe71230749dc3c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMovies(genre=\"Comedy\")",
+          "function_call": null,
+          "reasoning": "User wants to find info about a specific media title. Likely GetMedia? But media title search maybe GetMovies? They didn't specify type. We need to infer preference: earlier they asked for movies, comedy. They like comedy. So slot: genre=\"Comedy\". Output GetMovies? But schema for GetMovies has genre. So call GetMovies(genre=\"Comedy\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614933,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b94c9c65c56fa191",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 92,
+      "prompt_tokens": 10687,
+      "prompt_tokens_details": null,
+      "total_tokens": 10779
+    }
+  },
+  "request_sha256": "ba2c804d6db63a2947f72a319673489a1717a2978d1eeb15dfebb49d944b2320",
+  "source_example_id": "mix_dev_0212+durec_src_0515+hb_0273",
+  "status": "model_no_tool",
+  "target_domain": "GetMedia"
+}

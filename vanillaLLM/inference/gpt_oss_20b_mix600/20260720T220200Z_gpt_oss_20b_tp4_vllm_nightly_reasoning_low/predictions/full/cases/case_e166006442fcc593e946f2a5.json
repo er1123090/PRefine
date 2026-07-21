@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e166006442fcc593e946f2a5",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2353708632290363,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_242fc65afc823b7728ccf64a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"Mexico City\", category=\"Museum\", event_type=\"Museum\")",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need slots: category, city, date, event_name, event_type, number_of_tickets. From history: user looked for events in Mexico City: museum, nature preserve. Also earlier: no events. So likely city: Mexico City. Category: Museum or Nature Preserve. They asked earlier: \"Is there a museum there I could visit?\" So event_type maybe Museum. So output: GetEvents(city=\"Mexico City\", category=\"Museum\", event_type=\"Museum\"). Probably no date.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615196,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b57cc20cd3d1ebf9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 130,
+      "prompt_tokens": 9839,
+      "prompt_tokens_details": null,
+      "total_tokens": 9969
+    }
+  },
+  "request_sha256": "ca8c0982b6e0b1dc0d798b0fcf84b00e3532e4e0fcc991b7c65be5cebfffc6b1",
+  "source_example_id": "mix_dev_0326+hb_0461",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

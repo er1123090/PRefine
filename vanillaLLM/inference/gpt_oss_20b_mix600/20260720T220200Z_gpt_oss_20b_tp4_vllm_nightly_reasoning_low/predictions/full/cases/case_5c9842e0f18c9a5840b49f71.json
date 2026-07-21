@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_5c9842e0f18c9a5840b49f71",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8618126213550568,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_cab89a2cd9f2d6722296a92a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents()",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need slots: category, city, date, event_name, event_type, number_of_tickets. From history, user often asks for events? None. But pattern: user likes music/sports? No. We can infer city: maybe user's location? They are in Mountain View earlier. But no explicit. We can default none. Provide empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615012,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9a5c53d4e884bb30",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 88,
+      "prompt_tokens": 10305,
+      "prompt_tokens_details": null,
+      "total_tokens": 10393
+    }
+  },
+  "request_sha256": "be4abcb1f47cc24b3abdf9c77e32726041c7d1fe46d2a36415dc6b17fdbea937",
+  "source_example_id": "mix_dev_0075+durec_src_1142+hb_0024",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

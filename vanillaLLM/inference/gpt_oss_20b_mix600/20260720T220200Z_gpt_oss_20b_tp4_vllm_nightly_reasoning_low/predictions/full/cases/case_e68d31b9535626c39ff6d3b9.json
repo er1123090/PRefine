@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e68d31b9535626c39ff6d3b9",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6810627076774836,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_46a228e993e078a146fdf93f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"Washington\", destination=\"Philadelphia\", group_size=\"4\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants bus options. We need GetBuses. Which slots? departure_date, departure_time, destination, group_size, origin. From history, user often uses origin Washington, destination Philadelphia or New York. But no explicit. We infer likely origin Washington, destination Philadelphia? In previous session 11, user asked bus from NYC to 4 people. But now generic. We can default to most frequent: origin Washington, destination Philadelphia, group_size 4? But maybe user wants bus options for trip unspecified. We can leave slots empty? But need to provide some. Use most common: origin Washington, destination Philadelphia, group_size \"4\". No date/time. So output: GetBuses(origin=\"Washington\", destination=\"Philadelphia\", group_size=\"4\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615204,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ab68fc0eeea12249",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 185,
+      "prompt_tokens": 10669,
+      "prompt_tokens_details": null,
+      "total_tokens": 10854
+    }
+  },
+  "request_sha256": "a0f829e67dfe7a09b5259809d2b5ef28af120fb8c64e8b884a8b9b92066a018e",
+  "source_example_id": "mix_dev_0300+durec_src_1281",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

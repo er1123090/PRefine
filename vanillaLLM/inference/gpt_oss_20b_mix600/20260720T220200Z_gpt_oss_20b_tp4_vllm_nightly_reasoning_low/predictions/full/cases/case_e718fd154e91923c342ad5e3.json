@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e718fd154e91923c342ad5e3",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3712103432044387,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_53c6ae35615e784ff5dc2aa1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(destination=\"Berkeley\", departure_date=\"2019-03-11\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: category, departure_date, destination, free_entry, good_for_kids, location. User says go to Berkeley, date March 11, one night. No category. We infer destination \"Berkeley\" but not in enum. But location maybe \"Berkeley\" not in list. But we can still call with destination. Use departure_date \"2019-03-11\"? date format? Use \"2019-03-11\". No other preferences. Output format: GetTravel(destination=\"Berkeley\", departure_date=\"2019-03-11\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615205,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b64c76fe4c5f2333",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 146,
+      "prompt_tokens": 10377,
+      "prompt_tokens_details": null,
+      "total_tokens": 10523
+    }
+  },
+  "request_sha256": "a80dcac4fc7c40294d19baba89f8742d4fc893067835b3464035409f76142b37",
+  "source_example_id": "mix_dev_0146+durec_src_0203+hb_0489",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2471643918daacdb66bbd017",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.091842203401029,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_035f0ca7a738295a83521e53",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jacky Cheung\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetMusic. Slots: artist, playback_device, song_name. User says \"I want to listen to some music.\" No specifics. We look at history: user likes Jacky Cheung songs. Often plays Jacky Cheung. So preference artist=Jacky Cheung. Playback device? Not specified. Maybe default? We can omit. song_name? Not specified. So output: GetMusic(artist=\"Jacky Cheung\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614909,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bd9b5411a64bb9ba",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 114,
+      "prompt_tokens": 10810,
+      "prompt_tokens_details": null,
+      "total_tokens": 10924
+    }
+  },
+  "request_sha256": "cfd3a254bf3e0a6efccbc2fdfdd203f2c48b4927590ee2927773b01fb9aaf5f2",
+  "source_example_id": "mix_dev_0181+durec_src_0614+hb_0237",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

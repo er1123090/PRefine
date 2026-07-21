@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_d116ca78c7f52404cd1d6339",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.2342631183564663,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "has_wifi": true,
+        "location": "Los Angeles"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_7aa24c205a21d635f070dfcf",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"Los Angeles\", \"has_wifi\": \"True\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-9897bde83f7f8b2b",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588225,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ae013fc0c0e2f142",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 11948,
+      "prompt_tokens_details": null,
+      "total_tokens": 11977
+    }
+  },
+  "request_sha256": "1cf840c54aafc92103d934bd9031dfe3977d3b7111d6aab0b997e2becabba1e9",
+  "source_example_id": "mix_dev_0268+durec_src_0315+hb_0162",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

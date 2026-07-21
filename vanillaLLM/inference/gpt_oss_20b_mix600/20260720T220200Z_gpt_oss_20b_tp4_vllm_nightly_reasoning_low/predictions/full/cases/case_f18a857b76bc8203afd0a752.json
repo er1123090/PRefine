@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f18a857b76bc8203afd0a752",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.071457911282778,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_38ae887c3043353bbb91e1f9",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", dropoff_date=\"2019-03-10\", car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says around noon March 8th, couple of days. So pickup_date 2019-03-08? Actually year unspecified but past sessions use 2019. Use 2019-03-08. pickup_time \"12:00\". dropoff_date maybe 2019-03-10. car_type? user didn't specify; pattern: often chooses Standard. So car_type \"Standard\". Output format: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", dropoff_date=\"2019-09-10\"? Wait March 10. So \"2019-03-10\". Also pickup_location? not needed. Provide only relevant slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615217,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8c8531e4c6bd8ae4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 223,
+      "prompt_tokens": 8093,
+      "prompt_tokens_details": null,
+      "total_tokens": 8316
+    }
+  },
+  "request_sha256": "8b30624007a56601ddda19d9568e1fa88896f8f9d5673d9a7f76728dcae61675",
+  "source_example_id": "mix_dev_0317+hb_0241",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

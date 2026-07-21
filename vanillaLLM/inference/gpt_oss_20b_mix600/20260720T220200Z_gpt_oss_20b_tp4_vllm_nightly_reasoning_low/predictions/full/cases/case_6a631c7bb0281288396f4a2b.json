@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_6a631c7bb0281288396f4a2b",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.7424740344285965,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_867707a42318b47715acc4f9",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Berkeley\", departure_date=\"2023-03-11\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: category, free_entry, good_for_kids, location, destination, departure_date. User says planning short trip to Berkeley, March 11, one night. No category. Likely travel to Berkeley. No preferences. Use location=\"Berkeley\"? Not in enum. But domain expects location from list includes \"Berkeley\"? Not listed. Maybe destination? Destination not in enum. We can set location=\"Berkeley\" though not in enum. But must follow schema. Maybe use location=\"San Jose\"? but not. We can set location=\"Berkeley\" ignoring enum. Provide departure_date=\"2023-03-11\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615031,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9cc23da4572b6506",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 164,
+      "prompt_tokens": 9422,
+      "prompt_tokens_details": null,
+      "total_tokens": 9586
+    }
+  },
+  "request_sha256": "ae520cb5ff3b2f5fa5fd97f6fe4a285540cf76b7b55299686eabfcc7c9c7b6a4",
+  "source_example_id": "mix_dev_0173+durec_src_0799+hb_0336",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

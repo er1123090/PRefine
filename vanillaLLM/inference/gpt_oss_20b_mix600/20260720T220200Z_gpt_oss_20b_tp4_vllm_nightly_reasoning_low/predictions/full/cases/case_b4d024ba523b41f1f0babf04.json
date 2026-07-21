@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b4d024ba523b41f1f0babf04",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.6042872061952949,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_debdab4e90e44ea3e896456a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need GetFlights. No preferences given. From history, user often chooses economy? In session4 flights: American Airlines economy. So default economy. Also origin? Not specified. We can leave empty. So output: GetFlights() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615136,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a954499cd6135617",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 64,
+      "prompt_tokens": 9540,
+      "prompt_tokens_details": null,
+      "total_tokens": 9604
+    }
+  },
+  "request_sha256": "b9b662b61f1c498643bb3aa17069a74057733c8ce99e4d369ba875a741baece0",
+  "source_example_id": "mix_dev_0073+hb_0466",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

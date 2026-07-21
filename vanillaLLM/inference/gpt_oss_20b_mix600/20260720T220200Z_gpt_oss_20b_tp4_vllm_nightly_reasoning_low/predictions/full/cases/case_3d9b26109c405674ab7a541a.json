@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3d9b26109c405674ab7a541a",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.199173681437969,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e64aee6bca6c1d3ad24b7b24",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"4\", pickup_time=\"\", shared_ride=True)",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need slots: destination, number_of_seats, pickup_time, shared_ride. From history: user wants ride, no details. We infer preferences: earlier ride was shared ride for 4 people to The Van Buren. So likely wants shared ride, maybe 4 seats. Destination unspecified. We can default? Maybe none. Provide empty? We can set shared_ride=True, number_of_seats=\"4\". Destination unknown. pickup_time maybe none. We'll output with those.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614960,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-96e0c6887143fa55",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 134,
+      "prompt_tokens": 7807,
+      "prompt_tokens_details": null,
+      "total_tokens": 7941
+    }
+  },
+  "request_sha256": "da40319ebcff130f4d3530d23b1c6ff031e3af8aea417f59b1581457ff94b613",
+  "source_example_id": "mix_dev_0164+hb_0217",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

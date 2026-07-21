@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_2da80ec56fc2aaadee695ef4",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 7.590016415342689,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "car_type": "Compact",
+        "pickup_city": "Washington"
+      },
+      "name": "GetRentalCars"
+    }
+  ],
+  "pair_id": "pair_c9d570752663285e65ae1ee1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"car_type\": \"Compact\", \"pickup_city\": \"Washington\"}",
+                "name": "GetRentalCars"
+              },
+              "id": "chatcmpl-tool-b53876ebd659158e",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569351,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b22f77f9901392d5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 25,
+      "prompt_tokens": 10947,
+      "prompt_tokens_details": null,
+      "total_tokens": 10972
+    }
+  },
+  "request_sha256": "acca958dded6cc1c76d66479a45026acf8627044d9d88500cd7284c10bf5a3d6",
+  "source_example_id": "mix_dev_0056+hb_0089",
+  "status": "success",
+  "target_domain": "GetRentalCars"
+}

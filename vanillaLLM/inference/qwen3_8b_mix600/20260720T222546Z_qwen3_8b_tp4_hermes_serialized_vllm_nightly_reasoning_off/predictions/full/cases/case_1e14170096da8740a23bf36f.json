@@ -1,0 +1,76 @@
+{
+  "attempts": 1,
+  "case_id": "case_1e14170096da8740a23bf36f",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 7.312972068786621,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Italian",
+        "city": "Menlo Park",
+        "has_wifi": "True",
+        "number_of_seats": "1",
+        "price_range": "moderate",
+        "time": "12:45"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_f76ad682861d1219e82c0f79",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Italian\", \"has_wifi\": \"True\", \"price_range\": \"moderate\", \"city\": \"Menlo Park\", \"number_of_seats\": \"1\", \"time\": \"12:45\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-9361f5a6117d30ad",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587074,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ba12a3fc42b27ccc",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 63,
+      "prompt_tokens": 9199,
+      "prompt_tokens_details": null,
+      "total_tokens": 9262
+    }
+  },
+  "request_sha256": "fe7967e6132861a16503a45430ed354cc63209f6cc0d43f11e4898c8852b499b",
+  "source_example_id": "dev_0306",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

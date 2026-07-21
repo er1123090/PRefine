@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_9e9db3bd815a14644581e866",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.119099648669362,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_aec640857b23d4127c96c0ea",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Mexico City\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Need slots: category, departure_date, destination, free_entry, good_for_kids, location. User says planning a trip and want to explore travel options. No specifics. Use patterns: previous travel queries: session8 GetTravel(location=\"Mexico City\") only location. session23 no travel. So likely just location. We can set location=\"Mexico City\" as most frequent? In history, only one travel call. So output GetTravel(location=\"Mexico City\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615105,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9f2f90a4f4be43f5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 115,
+      "prompt_tokens": 12205,
+      "prompt_tokens_details": null,
+      "total_tokens": 12320
+    }
+  },
+  "request_sha256": "aefa2c853e3260b83616eb0ce7ab83867bad45b56c6a72d73cc6d058ecac9289",
+  "source_example_id": "mix_dev_0205+durec_src_0960+hb_0143",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

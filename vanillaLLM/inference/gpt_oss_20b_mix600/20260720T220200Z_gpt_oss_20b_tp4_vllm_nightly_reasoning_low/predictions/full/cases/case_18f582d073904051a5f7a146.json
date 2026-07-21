@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_18f582d073904051a5f7a146",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.204189382493496,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_85bfc42a60973bb9f9b098c8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"Washington D.C.\", category=\"Sports\")",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need city? \"nearby\" implies current location? No info. Past preference: user asked sports event around DC. Also earlier sports event. So likely wants sports. But slot category optional. We can set city maybe \"Washington D.C.\"? But \"nearby\" ambiguous. Maybe default to last known city? Last city used was San Fran for restaurant. But events earlier DC. I'd choose city \"Washington D.C.\" and category \"Sports\". Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614881,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b61edba125b52782",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 120,
+      "prompt_tokens": 8713,
+      "prompt_tokens_details": null,
+      "total_tokens": 8833
+    }
+  },
+  "request_sha256": "f406fb6387a94f268149ee13d356339b33296c74d29a0a0ebc7cb89d3d05a0f7",
+  "source_example_id": "mix_dev_0177+hb_0222",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

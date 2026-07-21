@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b685f81df7e5c61aa05d908f",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0701688835397363,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_06290c6bed0052251d983d2f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"Anaheim\", has_wifi=\"True\", average_star=\"2\", number_of_rooms=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user often wants 2-star? In session2 they booked 2-star. Also often wants wifi. So deduce: location unspecified. Maybe default to user's last location? They were in Anaheim. So location=Anaheim, has_wifi=True. number_of_rooms maybe 1. average_star maybe \"2\". We'll output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615139,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bbb922aaf980f3d2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 111,
+      "prompt_tokens": 12210,
+      "prompt_tokens_details": null,
+      "total_tokens": 12321
+    }
+  },
+  "request_sha256": "ac75f9b83404bc26346d2951314918c8365a930fd37c18bcbf3064230a88fe2b",
+  "source_example_id": "mix_dev_0205+durec_src_0960+hb_0143",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

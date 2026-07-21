@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f85f99219d9f50cfb051a036",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8844842491671443,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_fdd6d7d5c1e00f6140f305f6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"New York\", category=\"Music\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants events nearby. We need to choose domain GetEvents. Need slot city? They didn't specify. Use preference: user likes music events, earlier. Also likes events in New York. So likely city = \"New York\". Also category maybe \"Music\". So output GetEvents(city=\"New York\", category=\"Music\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615225,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-abef7012df4f907e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 92,
+      "prompt_tokens": 10291,
+      "prompt_tokens_details": null,
+      "total_tokens": 10383
+    }
+  },
+  "request_sha256": "233e44e926924c421cf6dd34d671c376fcec7105161bb1fbbff7414a52781a14",
+  "source_example_id": "mix_dev_0052+durec_src_0546+hb_0298",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

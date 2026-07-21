@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_11f4db1fcaa8ebdce077f8f4",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.600173422135413,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_fe0d595bbcc5501a473e22de",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", pickup_time=\"in 30 minutes\", number_of_seats=\"1\", shared_ride=\"false\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, pickup_time, number_of_seats, shared_ride? User didn't specify seats or shared. Default? From history, they often ask shared ride. But not here. We can assume 1 seat, shared_ride false? But pattern: earlier they asked shared. Here no. So set number_of_seats=\"1\", shared_ride=false. pickup_time: half hour from now. We don't have current time. Use placeholder \"in 30 minutes\". Destination: \"39145 Farwell Drive\". Output format: GetRideSharing(destination=\"39145 Farwell Drive\", pickup_time=\"in 30 minutes\", number_of_seats=\"1\", shared_ride=\"false\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614858,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-97d731bbeabd7936",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 188,
+      "prompt_tokens": 9364,
+      "prompt_tokens_details": null,
+      "total_tokens": 9552
+    }
+  },
+  "request_sha256": "589026ec946d68a44e5842193f8ddda17cc5f1f7cc32d1274a43108be005ae07",
+  "source_example_id": "mix_dev_0025+durec_src_1190+hb_0163",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

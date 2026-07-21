@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_13373318ada4e68db72e4ccd",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.986395426094532,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3f92ac489ce580c638467b03",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant search. Past: user asked for restaurant in Livermore sushi, gastropub, etc. Also in Lafayette pricey diner. In Los Gatos Greek. So preferences: location unspecified now. Maybe default city? No. We need to output function call GetRestaurants with inferred slots. We can guess city maybe current location? Not known. Maybe default to \"San Jose\" from earlier? But no. We can leave slots empty. But need at least function name. Provide empty object.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614863,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9e4fd51b41effb79",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 118,
+      "prompt_tokens": 10204,
+      "prompt_tokens_details": null,
+      "total_tokens": 10322
+    }
+  },
+  "request_sha256": "9cb68f1f2206f848e68660ab36e7e7f291af99fd2e9b9eafacf7b434d420d6b3",
+  "source_example_id": "mix_dev_0279+durec_src_0522+hb_0243",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_92503f0952f4e16af8d1cb23",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3330168081447482,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a16ab716ce989c94613bf076",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Los Angeles\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need slots: pickup_city, pickup_date, dropoff_date, pickup_time, pickup_location, car_type. User didn't specify. Use past pattern: user often picks Standard car, pickup at Union Station or Downtown Station. Likely default: pickup_city=Los Angeles? but user says trip. No info. Use most frequent: pickup_city=\"Los Angeles\"? In session2 they used Union Station. We'll guess pickup_city=\"Los Angeles\", pickup_date=\"2023-??\" but we can't. Maybe leave empty. Provide minimal: pickup_city=\"Los Angeles\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615085,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-86f4a683dc7723bf",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 140,
+      "prompt_tokens": 9564,
+      "prompt_tokens_details": null,
+      "total_tokens": 9704
+    }
+  },
+  "request_sha256": "844b310d5818065ff313fb2676ad75291639f2dff0b73bd00860de47d77cca09",
+  "source_example_id": "mix_dev_0135+durec_src_0564+hb_0219",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

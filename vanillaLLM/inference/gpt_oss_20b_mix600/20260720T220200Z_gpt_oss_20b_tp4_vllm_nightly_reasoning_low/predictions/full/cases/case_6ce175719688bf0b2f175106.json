@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_6ce175719688bf0b2f175106",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.9808478374034166,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_63acd5ff1312d0d3ed3ba261",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"Delta Airlines\", flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants flights. We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history, user often chooses Delta Airlines, economy, 4 seats, round trip. But current request generic. We infer preferences: likely Delta Airlines, economy, round trip? Past: session18: Delta, economy, round trip. Also session19: Delta, economy. So set airlines=\"Delta Airlines\", flight_class=\"Economy\". Others unspecified. Output format: GetFlights(airlines=\"Delta Airlines\", flight_class=\"Economy\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615034,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8db57bf63375d9d4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 150,
+      "prompt_tokens": 10320,
+      "prompt_tokens_details": null,
+      "total_tokens": 10470
+    }
+  },
+  "request_sha256": "bc2f4b90675da5a3c08f2a082f0819c97d4763b94dde4c31dd9cab4c3dfe8ad0",
+  "source_example_id": "mix_dev_0176+durec_src_0619+hb_0110",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

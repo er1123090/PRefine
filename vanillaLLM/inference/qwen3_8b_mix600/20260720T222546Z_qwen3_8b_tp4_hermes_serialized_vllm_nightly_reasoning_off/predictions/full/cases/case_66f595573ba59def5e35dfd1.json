@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_66f595573ba59def5e35dfd1",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.506088329479098,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Greek",
+        "city": "Los Gatos"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_d095a7f2f382ca704c5d485a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Greek\", \"city\": \"Los Gatos\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-823139b1e64a4044",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587565,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-abce63431a30858d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 11113,
+      "prompt_tokens_details": null,
+      "total_tokens": 11142
+    }
+  },
+  "request_sha256": "0d33743466b6d3b2c116087cf0d9614dac9c50585cd50886e819482dfefd15e0",
+  "source_example_id": "mix_dev_0279+durec_src_0522+hb_0243",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

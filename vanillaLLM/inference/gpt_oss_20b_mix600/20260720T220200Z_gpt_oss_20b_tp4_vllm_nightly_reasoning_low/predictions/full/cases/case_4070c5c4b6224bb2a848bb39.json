@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4070c5c4b6224bb2a848bb39",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9409781955182552,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_670d18b2bc16056f383ac5b4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(has_wifi=\"True\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetHotels. From history: user wants wifi, number_of_rooms=1 earlier. Also prefers 4 star? earlier 4 star. Also location? unspecified. Likely wants wifi and maybe 4 star. We'll output GetHotels with has_wifi=\"True\". Maybe location unspecified. We'll include has_wifi=\"True\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614965,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b2889e7742f86269",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 87,
+      "prompt_tokens": 10506,
+      "prompt_tokens_details": null,
+      "total_tokens": 10593
+    }
+  },
+  "request_sha256": "1f7f1b4a4935d0b398686c978f925774e2c9b619a98695aa62cdfdf3ed03699f",
+  "source_example_id": "mix_dev_0165+durec_src_0519+hb_0404",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_5a1898d296b4f11dda103478",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.836156818084419,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "artist": "Leehom Wang"
+      },
+      "name": "GetMusic"
+    }
+  ],
+  "pair_id": "pair_149a8f258d4c503d963c5125",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"artist\": \"Leehom Wang\"}",
+                "name": "GetMusic"
+              },
+              "id": "chatcmpl-tool-b1b76b09f50ffd0a",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569952,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9bdad94f74d65184",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 16,
+      "prompt_tokens": 9514,
+      "prompt_tokens_details": null,
+      "total_tokens": 9530
+    }
+  },
+  "request_sha256": "06cc591b4598ef4e5be8b92aba21653d6459373182c40c4cf67a159527d16c5f",
+  "source_example_id": "mix_durec_src_0340+hb_0086",
+  "status": "success",
+  "target_domain": "GetMusic"
+}

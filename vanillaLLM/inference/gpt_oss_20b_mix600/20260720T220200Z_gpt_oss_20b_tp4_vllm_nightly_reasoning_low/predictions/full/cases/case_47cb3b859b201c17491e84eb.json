@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_47cb3b859b201c17491e84eb",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.467927903868258,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_de22a397eddeae9fb8cd1334",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(price_range=\"moderate\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants restaurant options. No constraints given. Past preferences: user used moderate price, sushi, intermediate price. Also earlier used \"moderate\" price. So likely wants moderate price. Also location unspecified. Maybe default to previous location? No. We can guess moderate price. So call GetRestaurants with price_range=\"moderate\". No city. So output: GetRestaurants(price_range=\"moderate\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614975,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8345d38a5e76d447",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 104,
+      "prompt_tokens": 8835,
+      "prompt_tokens_details": null,
+      "total_tokens": 8939
+    }
+  },
+  "request_sha256": "ea80e4c2aede5e4d5ba7c291741dd566878b88d4d1108757fe7931049da0d707",
+  "source_example_id": "mix_dev_0110+durec_src_1287",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

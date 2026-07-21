@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_1edd0c9f8c685baa77121e56",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1074757613241673,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f4d4c7398bfe184ae74d3f0e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"4058 18th Street A\", number_of_seats=\"1\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, pickup_time, shared_ride. From history: user used ride sharing once: destination 4058 18th Street A, seats 1, shared true. Likely same preference. So output GetRideSharing(destination=\"4058 18th Street A\", number_of_seats=\"1\", shared_ride=\"True\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614895,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-85187bbbe0b4647c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 116,
+      "prompt_tokens": 10693,
+      "prompt_tokens_details": null,
+      "total_tokens": 10809
+    }
+  },
+  "request_sha256": "3ca0f2ae43b7d661dc22040a85d45ceb45c512f0512e8328722aae6b3c68b9ad",
+  "source_example_id": "mix_dev_0258+durec_src_0028+hb_0423",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

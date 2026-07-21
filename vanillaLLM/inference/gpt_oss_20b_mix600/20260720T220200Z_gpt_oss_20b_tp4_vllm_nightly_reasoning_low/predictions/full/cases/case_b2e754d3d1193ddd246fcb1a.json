@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b2e754d3d1193ddd246fcb1a",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2435613675042987,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_7d6601c512f2756e5cdd85f5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(number_of_days=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels likely. Slots: location=Berkeley? Not in enum. But maybe GetTravel? But trip. Probably GetHotels with location \"Berkeley\" not in list. Maybe GetTravel? But location not in list. Maybe GetHotels with location \"Berkeley\" not allowed. Could use GetTravel with location \"Berkeley\"? not in list. Maybe GetHotels with location \"Berkeley\" but not in enum. Might default none. We can omit location. Just number_of_days=1. So GetHotels(number_of_days=\"1\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615133,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-83f60b5268b9541a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 131,
+      "prompt_tokens": 9036,
+      "prompt_tokens_details": null,
+      "total_tokens": 9167
+    }
+  },
+  "request_sha256": "08deffd5992d134886d4b8fa8adcec9c055308aac5c1f40eda4330b1ec100301",
+  "source_example_id": "dev_0256",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

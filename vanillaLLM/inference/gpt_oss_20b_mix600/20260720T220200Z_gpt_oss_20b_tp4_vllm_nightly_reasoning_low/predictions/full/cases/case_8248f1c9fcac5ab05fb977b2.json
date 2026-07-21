@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8248f1c9fcac5ab05fb977b2",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1788916066288948,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_2dcafb1daafdf99cef8247b4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "User wants flights. Need to infer preferences: from history, user often chooses flights with specific airlines? In session 24, user asked for flight from Phoenix to San Diego, got American and Delta. No preference. In session 21, bus. No flight preference. So default none. Provide GetFlights with no slots? But need at least function name. Provide empty object.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615064,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9062f2f7c766cd7f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 89,
+      "prompt_tokens": 11464,
+      "prompt_tokens_details": null,
+      "total_tokens": 11553
+    }
+  },
+  "request_sha256": "0404dc72477cb89ee8c26d26953d65683fe89dbc5a8c27570e0773b8fa6f938e",
+  "source_example_id": "mix_dev_0162+durec_src_0038+hb_0386",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

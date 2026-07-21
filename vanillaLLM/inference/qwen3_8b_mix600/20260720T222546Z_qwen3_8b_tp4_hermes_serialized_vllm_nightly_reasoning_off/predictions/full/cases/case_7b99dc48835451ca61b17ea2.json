@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_7b99dc48835451ca61b17ea2",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.9768846379593015,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Museum",
+        "location": "San Francisco"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_af073cde93fbadcd5eb9ba9f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Museum\", \"location\": \"San Francisco\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-88536bf614eeb7e0",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587675,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-87df96026b280c6a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 28,
+      "prompt_tokens": 10784,
+      "prompt_tokens_details": null,
+      "total_tokens": 10812
+    }
+  },
+  "request_sha256": "84871eeaaaef29c10b58bda0171cd34a344e724cd60b80eb352c276ed6c1a7bd",
+  "source_example_id": "mix_dev_0040+durec_src_0578+hb_0101",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

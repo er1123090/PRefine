@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_fdc785d0cd7a10851016e01b",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7713706670328975,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_cbe2f6f2889aa39786b87618",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMedia()",
+          "function_call": null,
+          "reasoning": "User wants media title search. Likely GetMedia with genre? But they didn't specify genre. Maybe GetMovies? But schema: GetMedia(genre). We infer from past: user often asks for media. No preference. We can leave empty. Output format: GetMedia() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615231,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9e6e5db0393925db",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 73,
+      "prompt_tokens": 9978,
+      "prompt_tokens_details": null,
+      "total_tokens": 10051
+    }
+  },
+  "request_sha256": "51ce653451c270e5dd4840d987e87a33f3a2c84dedfcc84d8eaf1045d1e46f11",
+  "source_example_id": "mix_dev_0124+durec_src_0552+hb_0494",
+  "status": "model_no_tool",
+  "target_domain": "GetMedia"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_6f07c72f13f464b1672f5384",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3025777582079172,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_dcb340a6d5e7a656c4692986",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"Alaska Airlines\", origin=\"San Francisco\", destination=\"Los Angeles\", flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. No preferences given. From history, user used Alaska Airlines, economy, from San Francisco to Los Angeles. Likely same. So output GetFlights(airlines=\"Alaska Airlines\", departure_date=\"2023-??\", destination=\"Los Angeles\", flight_class=\"Economy\", origin=\"San Francisco\", passengers=\"1\"). No date given. We'll guess next week? But we can leave empty. Probably need values. Use past pattern: Alaska, economy, SF to LA.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615037,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-96946d116a104ea9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 137,
+      "prompt_tokens": 8540,
+      "prompt_tokens_details": null,
+      "total_tokens": 8677
+    }
+  },
+  "request_sha256": "89e17d8599f4a70d07a661bf3e74a046d27a331e4a990c855a58181363c3bbd8",
+  "source_example_id": "mix_dev_0113+hb_0265",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

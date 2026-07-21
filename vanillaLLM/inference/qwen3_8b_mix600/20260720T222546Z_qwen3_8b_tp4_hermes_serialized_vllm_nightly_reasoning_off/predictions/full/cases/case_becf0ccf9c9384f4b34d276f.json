@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_becf0ccf9c9384f4b34d276f",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.211786936968565,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Mexican",
+        "city": "San Francisco",
+        "date": "2019-03-13",
+        "number_of_seats": "2",
+        "time": "12:30"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_a691f8b48bec61957d865eea",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Mexican\", \"city\": \"San Francisco\", \"date\": \"2019-03-13\", \"number_of_seats\": \"2\", \"time\": \"12:30\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-96b070f6d90d4ea3",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588099,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a1faabd53507c7f3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 63,
+      "prompt_tokens": 12159,
+      "prompt_tokens_details": null,
+      "total_tokens": 12222
+    }
+  },
+  "request_sha256": "48b3c78e17c0bd744aa51b3c1c20059b9c80b203c6f40213ad0aef5f8d873ca5",
+  "source_example_id": "mix_dev_0126+durec_src_1001+hb_0443",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

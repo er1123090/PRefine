@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a2f4d2b0bc975233d57bec13",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.165752423927188,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_8c5c4ff26e0baa78f3e82bdb",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", pickup_time=\"in 30 minutes\", number_of_seats=\"1\", shared_ride=\"false\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, pickup_time, number_of_seats, shared_ride. Destination from address: 39145 Farwell Drive. Likely city? 39145 is ZIP in California? 39145 is in California? Actually 39145 is in California? Quick: 39145 is in California? Might be in California? Let's assume destination city \"San Jose\" maybe? But we can set destination as \"39145 Farwell Drive\". pickup_time: about half an hour from now. We don't have exact time. Use \"in 30 minutes\". number_of_seats: default 1. shared_ride: false. Output format: GetRideSharing(destination=\"39145 Farwell Drive\", pickup_time=\"in 30 minutes\", number_of_seats=\"1\", shared_ride=\"false\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615109,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-871f1c1c037d3263",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 212,
+      "prompt_tokens": 10552,
+      "prompt_tokens_details": null,
+      "total_tokens": 10764
+    }
+  },
+  "request_sha256": "fec6038eadc02d1f34973f4cef8ded92599b7ee5106e335e58dccaa181d2b93f",
+  "source_example_id": "mix_dev_0165+durec_src_0519+hb_0404",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

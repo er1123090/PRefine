@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_9943aede07458b3d5add3338",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6311772717162967,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_53fca8153ef0508ca5deae7d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"New York\", free_entry=\"True\", good_for_kids=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Need slots: category, free_entry, good_for_kids, location, destination, departure_date. From history, user wants travel options. No specifics. Use patterns: earlier they asked for free_entry True, good_for_kids True, location New York. Also earlier San Diego. Likely they want travel options general. We can set location unspecified? but must provide something. Maybe default to \"San Diego\" as recent. But we can infer they want travel options, maybe free entry and good for kids? Not sure. Use most frequent: location New York. Provide free_entry=True, good_for_kids=True. No destination. departure_date maybe none. We'll output minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615096,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-94f5c36a6c82a7d9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 171,
+      "prompt_tokens": 9301,
+      "prompt_tokens_details": null,
+      "total_tokens": 9472
+    }
+  },
+  "request_sha256": "cf76b0ad6ca2b7612524d33fa3e0e685efb0fe4bf086158cb2cf4c9b6ae306e2",
+  "source_example_id": "mix_dev_0056+hb_0089",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

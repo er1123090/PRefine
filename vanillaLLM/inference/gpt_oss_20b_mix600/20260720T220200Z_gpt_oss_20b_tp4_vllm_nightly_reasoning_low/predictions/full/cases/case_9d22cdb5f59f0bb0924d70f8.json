@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_9d22cdb5f59f0bb0924d70f8",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0407141465693712,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_16010870b67a80c8e18fc1f7",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(average_star=\"2\", number_of_rooms=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user often wants 1 room, 2 star. But not always. We deduce likely average_star=\"2\", number_of_rooms=\"1\". location unspecified. So output GetHotels with those.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615102,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-842a7b0616e7ce48",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 76,
+      "prompt_tokens": 9571,
+      "prompt_tokens_details": null,
+      "total_tokens": 9647
+    }
+  },
+  "request_sha256": "8c8b010385af5c54393236b34007b7b30b099f1dedad7c29ebc2c26a51a0ad56",
+  "source_example_id": "mix_dev_0234+durec_src_0677+hb_0357",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

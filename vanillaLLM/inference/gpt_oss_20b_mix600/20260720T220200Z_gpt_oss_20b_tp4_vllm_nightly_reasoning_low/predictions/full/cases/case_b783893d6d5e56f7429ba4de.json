@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b783893d6d5e56f7429ba4de",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.958165779709816,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_9b5ed446d5e153c895cba0b2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(category=\"Sports\", city=\"Chicago\", event_type=\"Baseball\")",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need slots: category, city, date, event_name, event_type, number_of_tickets. User: \"look for events happening nearby.\" No specifics. Use past preference: user likes Sports events, baseball. Also earlier used Chicago. So likely city=Chicago, category=Sports, event_type=Baseball. No date. We'll output with those.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615142,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8bdbc7efb69f35aa",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 103,
+      "prompt_tokens": 10235,
+      "prompt_tokens_details": null,
+      "total_tokens": 10338
+    }
+  },
+  "request_sha256": "27dbe3f2194ad02abc820cbaaaf728186fe5243f61b64f2e84fc7ede32397deb",
+  "source_example_id": "mix_dev_0172+durec_src_0331+hb_0487",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

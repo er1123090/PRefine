@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c2c848130a236881def8425d",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9515642123296857,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a8633991f73e41eae1379c1c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Berkeley\", departure_date=\"2019-03-11\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: category? free_entry? good_for_kids? location? departure_date? destination? We have destination Berkeley, departure_date March 11, stay one night. Likely category unspecified. Use location=Berkeley. No other preferences. Output: GetTravel(location=\"Berkeley\", departure_date=\"2019-03-11\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615155,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bfc45a0b9b19317e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 100,
+      "prompt_tokens": 11238,
+      "prompt_tokens_details": null,
+      "total_tokens": 11338
+    }
+  },
+  "request_sha256": "e0129048914ef32cbc504e4c2816aef01dae9841366fd9da299252917231e68f",
+  "source_example_id": "mix_dev_0249+durec_src_0043+hb_0048",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

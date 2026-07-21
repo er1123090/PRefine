@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4b449bd99d008f3b4bbe2249",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.6771196620538831,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1ebc25866d1b4304fee32b2a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"Delta Airlines\", flight_class=\"Economy\", passengers=\"3\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. No preferences given. From history, user used Delta Airlines, economy, 3 seats. Likely preference: Delta, Economy, 3 seats. So output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614982,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a82fc9d6efe7f612",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 67,
+      "prompt_tokens": 9649,
+      "prompt_tokens_details": null,
+      "total_tokens": 9716
+    }
+  },
+  "request_sha256": "df37740d9858056ae232c4ec87f2cdeb5aa1a90af4376c3e896f35ae731de78b",
+  "source_example_id": "mix_dev_0262+durec_src_0207+hb_0087",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

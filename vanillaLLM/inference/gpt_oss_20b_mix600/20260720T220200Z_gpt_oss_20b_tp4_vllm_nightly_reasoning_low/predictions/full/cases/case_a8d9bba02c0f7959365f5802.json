@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a8d9bba02c0f7959365f5802",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7240779595449567,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_45ecc99676725b5d53a193fe",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2019-03-09\", origin=\"San Francisco\", destination=\"Seattle\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Determine preferences: airline? In history, user often chooses American or Southwest. No preference. flight_class? none. passengers? default 1. So output minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615117,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-842261d19b378103",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 71,
+      "prompt_tokens": 10556,
+      "prompt_tokens_details": null,
+      "total_tokens": 10627
+    }
+  },
+  "request_sha256": "49419ae48d04da169c184ac7f83ebd6d89f43ae59b84950af6f23a340b364d4e",
+  "source_example_id": "mix_dev_0252+durec_src_1277+hb_0257",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

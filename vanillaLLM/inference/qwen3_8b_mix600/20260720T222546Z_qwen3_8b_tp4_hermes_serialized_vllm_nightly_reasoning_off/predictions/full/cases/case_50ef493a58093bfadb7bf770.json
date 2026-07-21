@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "case_id": "case_50ef493a58093bfadb7bf770",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.820162885822356,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Park",
+        "departure_date": "2023-10-07",
+        "good_for_kids": true,
+        "location": "San Francisco"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_62709d0006db8c983e3c8fb9",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Park\", \"location\": \"San Francisco\", \"departure_date\": \"2023-10-07\", \"good_for_kids\": true}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-ac0a38c0c8909e1f",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587428,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-872c773616e4d933",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 51,
+      "prompt_tokens": 9694,
+      "prompt_tokens_details": null,
+      "total_tokens": 9745
+    }
+  },
+  "request_sha256": "1eb8965c84b54c68746a849a152f2a4a2a0a0648138068724e01fbb5f180731e",
+  "source_example_id": "mix_dev_0110+durec_src_1287",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

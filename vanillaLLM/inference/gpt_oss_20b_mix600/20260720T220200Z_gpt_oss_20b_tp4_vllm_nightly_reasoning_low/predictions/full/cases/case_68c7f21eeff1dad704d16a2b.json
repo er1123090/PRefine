@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_68c7f21eeff1dad704d16a2b",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0226813899353147,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_70ba702594498934be4868c5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jacky Cheung\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for music domain. Past music interactions: user likes Jacky Cheung songs, also likes \"In Deep Autumn\" (song). Also likes \"Still Think You're the Best\" (Jacky Cheung). Also \"Dark Necessities\" pop. They seem to prefer Jacky Cheung. So set artist=\"Jacky Cheung\". No playback_device specified. Output: GetMusic(artist=\"Jacky Cheung\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615029,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8cbb2744ca96e49f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 109,
+      "prompt_tokens": 11179,
+      "prompt_tokens_details": null,
+      "total_tokens": 11288
+    }
+  },
+  "request_sha256": "a98c21d4a4b1de1b957cbb542eaa4d382c94661602458e33bcbeeb869d8fcffb",
+  "source_example_id": "mix_dev_0267+durec_src_1286+hb_0208",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_ecfb00b8d9fd2d14d3c93dde",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.712276268750429,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Music",
+        "city": "Fairfield"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_cc839a02d9757e9fbe6dfbb1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Music\", \"city\": \"Fairfield\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-831c6a25aeb8cc19",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784572011,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8b9c6f4503742df4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 21,
+      "prompt_tokens": 9683,
+      "prompt_tokens_details": null,
+      "total_tokens": 9704
+    }
+  },
+  "request_sha256": "669d7dba674eec69c1dbf59cb8e0626681478903b0f0564acaeadc21ef78d775",
+  "source_example_id": "dev_0050",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

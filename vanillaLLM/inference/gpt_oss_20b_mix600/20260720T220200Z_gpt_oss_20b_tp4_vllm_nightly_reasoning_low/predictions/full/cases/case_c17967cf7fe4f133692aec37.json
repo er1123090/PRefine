@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c17967cf7fe4f133692aec37",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.9153704913333058,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_09ab03385b5d4a0ce280fe7e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for travel domain. From history, user likes flights with American Airlines, economy class, one-way or round trip. Also likes events, hotels. For travel, likely wants category? They didn't specify. We need to output GetTravel with inferred slots. Past: user used GetTravel for museum, historical landmark. For travel, maybe category \"Tourist Attraction\" or \"Museum\". They want explore travel options. Could infer they want travel to a destination. Maybe they want flight? But domain is GetTravel. We need slots: category, departure_date, destination, free_entry, good_for_kids, location. We don't have explicit. Use pattern: user likes free entry? Not sure. Maybe default none. Provide empty? But must include slots? We can leave empty. Provide GetTravel with no slots? But format requires slot_name=\"value\". We can omit? Probably include none. I'll output GetTravel() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615153,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a6e773e6b01bb21d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 206,
+      "prompt_tokens": 10614,
+      "prompt_tokens_details": null,
+      "total_tokens": 10820
+    }
+  },
+  "request_sha256": "e2bbd6197f6cfdbeeec8a5050efe71f6a04beee90385a6f768c25b663209b284",
+  "source_example_id": "mix_dev_0119+durec_src_0621+hb_0082",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

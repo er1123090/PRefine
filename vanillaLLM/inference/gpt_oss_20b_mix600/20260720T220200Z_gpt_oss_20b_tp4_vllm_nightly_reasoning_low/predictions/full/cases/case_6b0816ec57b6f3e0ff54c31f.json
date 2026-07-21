@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_6b0816ec57b6f3e0ff54c31f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.723419288173318,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c585fcf81c9006ff89723863",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"New York\")",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need city? \"nearby\" ambiguous. Past pattern: user often says \"nearby\" and assistant asks city. But we must infer. Maybe default city from previous? Last session user asked events in London, then NYC. Current user: \"I want to look for events happening nearby.\" No city. We infer from context: last user was in session 19 about London and NYC. But current user maybe same? Hard. Maybe default to user's location? Not known. Could choose city \"New York\" as common. But better to ask? We must produce API call. We can set city empty? But schema requires string. We can leave empty? Probably need value. Maybe choose \"New York\" as default. Also category? Not specified. We can leave empty. So call GetEvents with city=\"New York\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615032,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-859b0059c7a00069",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 189,
+      "prompt_tokens": 11225,
+      "prompt_tokens_details": null,
+      "total_tokens": 11414
+    }
+  },
+  "request_sha256": "8620207c32e532dcdaada0b4504e56b7976eac73982d35fc3b9867d304692614",
+  "source_example_id": "mix_dev_0126+durec_src_1001+hb_0443",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

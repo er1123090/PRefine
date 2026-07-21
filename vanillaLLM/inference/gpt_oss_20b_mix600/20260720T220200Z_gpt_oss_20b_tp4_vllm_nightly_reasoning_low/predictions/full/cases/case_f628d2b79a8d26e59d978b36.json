@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f628d2b79a8d26e59d978b36",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3902493827044964,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b44b659469e290afc7259087",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"San Jose\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history: user likes fish, wants restaurant in San Jose earlier. Also earlier asked for fish in San Jose. So preference: cuisine category maybe \"Fish\" but not in schema. Schema has category options. He didn't specify category earlier. He said \"Look for something that sells Fish.\" So maybe category \"Seafood\" not in list. But we can guess \"Seafood\" not available. Maybe \"Fish\" implies \"Seafood\" but not in list. Could default none. Also location: San Jose. So we output GetRestaurants with city=\"San Jose\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615222,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-91a1de10b3e776c8",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 145,
+      "prompt_tokens": 11019,
+      "prompt_tokens_details": null,
+      "total_tokens": 11164
+    }
+  },
+  "request_sha256": "ed18bcda67f84623918454fb899db970a28e12877816ce6175854feb68cb6f9a",
+  "source_example_id": "mix_dev_0240+durec_src_0039+hb_0045",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

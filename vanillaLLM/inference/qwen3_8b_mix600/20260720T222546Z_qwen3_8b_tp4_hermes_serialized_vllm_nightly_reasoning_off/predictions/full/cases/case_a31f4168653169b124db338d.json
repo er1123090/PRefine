@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_a31f4168653169b124db338d",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.9118863362818956,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Performing Arts Venue",
+        "free_entry": true,
+        "location": "Toronto"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_e3f2a72b6f92be0628993787",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Performing Arts Venue\", \"free_entry\": \"True\", \"location\": \"Toronto\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-9e13eccc234e3ab8",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587922,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bd6fbc1f178e6c13",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 36,
+      "prompt_tokens": 11575,
+      "prompt_tokens_details": null,
+      "total_tokens": 11611
+    }
+  },
+  "request_sha256": "6d1e075ff811f14a0734412bcf1c67a61dbff7ecb243a9cab50d6e84fa9b8699",
+  "source_example_id": "mix_dev_0300+durec_src_1281",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

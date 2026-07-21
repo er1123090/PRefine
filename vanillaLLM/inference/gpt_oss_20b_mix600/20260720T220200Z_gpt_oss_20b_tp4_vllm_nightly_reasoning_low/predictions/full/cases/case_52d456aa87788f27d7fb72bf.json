@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_52d456aa87788f27d7fb72bf",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8449780140072107,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_af97f7686621b113d6731588",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses()",
+          "function_call": null,
+          "reasoning": "We need GetBuses. Need slots: departure_date, departure_time, destination, group_size, origin. No info given. Use past patterns: user often asks bus from Washington to New York. But here generic. We infer likely origin? maybe default? We can't guess. Maybe leave empty. Output format: GetBuses() with empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614994,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a1d3b43620df9db0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 84,
+      "prompt_tokens": 10292,
+      "prompt_tokens_details": null,
+      "total_tokens": 10376
+    }
+  },
+  "request_sha256": "fe6ee5e248879f9cfb0106d99d54c7feea8de7d0208b789eea50d0257d01e5c0",
+  "source_example_id": "mix_dev_0052+durec_src_0546+hb_0298",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

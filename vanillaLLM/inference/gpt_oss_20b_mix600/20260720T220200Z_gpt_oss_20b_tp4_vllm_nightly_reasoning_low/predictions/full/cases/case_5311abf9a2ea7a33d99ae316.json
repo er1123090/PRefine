@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_5311abf9a2ea7a33d99ae316",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1144774574786425,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b8b49643e3cd4da59bfc5670",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2023-03-09\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: origin, destination, departure_date. Also maybe passengers, flight_class, airlines, return_date. Not specified. Use defaults? We infer preferences: earlier flights? No. Use most frequent? No. Just fill known. So output: GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2023-03-09\") (assuming year). No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614995,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a409b172ddda8e3e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 115,
+      "prompt_tokens": 11242,
+      "prompt_tokens_details": null,
+      "total_tokens": 11357
+    }
+  },
+  "request_sha256": "a61903edcfc1448ef46abad022d8f44987b79195fab2897da12c14983f44c8fa",
+  "source_example_id": "mix_dev_0070+durec_src_0019+hb_0288",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

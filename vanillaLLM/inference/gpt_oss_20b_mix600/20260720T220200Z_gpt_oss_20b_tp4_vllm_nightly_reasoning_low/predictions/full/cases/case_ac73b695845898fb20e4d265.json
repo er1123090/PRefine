@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ac73b695845898fb20e4d265",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.488822404295206,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a154557310737647feb862a0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(number_of_rooms=\"1\", number_of_days=\"1\", average_star=\"3\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user often wants 1 room, 1 day? But pattern: session11: 1 room 4 days. session14: 4 days. session15: hotels 3 stars. So likely wants 1 room, 1 day? But default? We can infer 1 room, 1 day, maybe 3 stars. Use location unspecified. So output: GetHotels(number_of_rooms=\"1\", number_of_days=\"1\", average_star=\"3\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615122,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a2b920916eb2974f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 136,
+      "prompt_tokens": 9516,
+      "prompt_tokens_details": null,
+      "total_tokens": 9652
+    }
+  },
+  "request_sha256": "435f0ae08015ec857069db5f32d28cdfbd6649e39890b3812f7f1653ffac47b7",
+  "source_example_id": "mix_dev_0147+hb_0043",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

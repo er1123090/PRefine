@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_9f93c873200db7f12cdeb921",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.056004819460213,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_42075a185ff9affe6e977011",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"Delta Airlines\", departure_date=\"2019-03-14\", destination=\"Chicago\", origin=\"San Francisco\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need airline preference: user says usually stick with airline where have mileage account. From past, user used Delta? In session4 used Delta. Also session8 used Delta. So choose Delta Airlines. Passengers? default 1. departure_date 2019-03-14? Actually current date? Use 2019-03-14. origin San Francisco, destination Chicago. flight_class? not specified. We'll leave empty. Return? not mentioned. So output: GetFlights(airlines=\"Delta Airlines\", departure_date=\"2019-03-14\", destination=\"Chicago\", origin=\"San Francisco\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615106,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b6a664a189b32369",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 165,
+      "prompt_tokens": 9133,
+      "prompt_tokens_details": null,
+      "total_tokens": 9298
+    }
+  },
+  "request_sha256": "b47c610dce414253636ac72ac9160e2604011ad7b60413b85ad74feec8933329",
+  "source_example_id": "dev_0042",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

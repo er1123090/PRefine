@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8254e5ba9a0cebae0cff50a6",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6759042581543326,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_18aed61a6150c42114cb4197",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, shared_ride, pickup_time? user says need a ride and check available options. No destination given. We infer from past: user often wants shared ride. So set shared_ride=True. number_of_seats maybe 1. destination unknown -> maybe leave empty? But must provide slot names. We can omit? but format requires. Maybe set destination=\"\"? Probably not. We can set shared_ride=\"True\". number_of_seats=\"1\". destination unspecified. I'll set destination=\"\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615064,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9b4042388837beac",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 143,
+      "prompt_tokens": 9061,
+      "prompt_tokens_details": null,
+      "total_tokens": 9204
+    }
+  },
+  "request_sha256": "3da9a49071a77f4bcac828e1e28e6a1a54936ebcf201dd41f73616efe29275bb",
+  "source_example_id": "mix_dev_0150+hb_0004",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

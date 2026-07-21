@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ce0b4c307fff077ae4faf30f",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.3378788037225604,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d127f121cbb2d94bddd80cf4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"13670 Arnold Drive\", number_of_seats=\"2\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. From history: user wants ride to 13670 Arnold Drive, shared ride yes. So destination that address. number_of_seats 2. pickup_time unspecified. We can leave empty. shared_ride true. Output format: GetRideSharing(destination=\"13670 Arnold Drive\", number_of_seats=\"2\", shared_ride=\"True\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615172,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9a023b32345a1c06",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 124,
+      "prompt_tokens": 9830,
+      "prompt_tokens_details": null,
+      "total_tokens": 9954
+    }
+  },
+  "request_sha256": "370a09d7d5e4a03c21dbb2cc2076fddfa3a51dbc7f684193389ef410af964b28",
+  "source_example_id": "mix_dev_0112+durec_src_0743+hb_0156",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

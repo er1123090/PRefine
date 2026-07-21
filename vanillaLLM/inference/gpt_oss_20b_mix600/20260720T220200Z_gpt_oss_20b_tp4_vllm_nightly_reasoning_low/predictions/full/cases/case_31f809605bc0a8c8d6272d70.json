@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_31f809605bc0a8c8d6272d70",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.3103428967297077,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_26dafc44d053b951a567755b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jay Chou\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetMusic. Slots: artist, playback_device, song_name. User says \"I want to listen to some music.\" No specifics. From history, user likes Jay Chou songs. So artist likely Jay Chou. Playback_device? Not specified; default maybe phone? But we can infer from past: they listened via assistant, no device. Could choose phone. We'll output GetMusic with artist=\"Jay Chou\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614939,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b27ae507a7796330",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 113,
+      "prompt_tokens": 7868,
+      "prompt_tokens_details": null,
+      "total_tokens": 7981
+    }
+  },
+  "request_sha256": "475720a19e47cf371b5e3946c07117c2ac0603af905cfd570789868ea4dcac45",
+  "source_example_id": "mix_durec_src_0113+hb_0133",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

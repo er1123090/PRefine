@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_8a95abcefe57250870a7d742",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 11.421822206117213,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "city": "San Jose",
+        "price_range": "moderate"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_9fb83f632af92e6f8d6e2e69",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"city\": \"San Jose\", \"price_range\": \"moderate\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-aac667f2eaa3f5df",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784570584,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b4eaf002ca1d0755",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 23,
+      "prompt_tokens": 12579,
+      "prompt_tokens_details": null,
+      "total_tokens": 12602
+    }
+  },
+  "request_sha256": "497ae88547bc285f86690f27b995ee1442424fb0106753f9f493795b45a69320",
+  "source_example_id": "mix_dev_0055+durec_src_0218",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

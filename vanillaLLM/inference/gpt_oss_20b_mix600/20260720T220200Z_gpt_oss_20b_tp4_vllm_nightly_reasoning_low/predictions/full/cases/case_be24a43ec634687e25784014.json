@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_be24a43ec634687e25784014",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.159947737120092,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_8487c905d7a8b7e274e632dd",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(average_star=\"3\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user often wants 3 star or 4 star? In session10, 4 star. session16 2 star. session19 3 star. No clear preference. Use most frequent: 3 star? Count: session10 4 star, session16 2 star, session19 3 star, session20 3 star. 3 star appears twice. So average_star=\"3\". Also location? Not specified. Maybe default none. Provide empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615149,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b64bbedfee9bbdb2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 124,
+      "prompt_tokens": 11011,
+      "prompt_tokens_details": null,
+      "total_tokens": 11135
+    }
+  },
+  "request_sha256": "5a404796011df359108a3fca5f1e8247e968183e0747b2a69eff1978feff1de5",
+  "source_example_id": "mix_dev_0201+durec_src_0208+hb_0373",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_36fc26d1f8498b1638e7fa5f",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.747343068011105,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_06fe52975306d1d3f2e9919e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"\", shared_ride=\"\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination? user says \"I need a ride and want to check available ride-sharing options.\" No destination given. Maybe default? But we infer from history: user often asks ride to restaurant or event. No context. We can leave empty? But function requires destination string. We can set empty? Probably need to provide empty string. So output: GetRideSharing(destination=\"\", number_of_seats=\"\", shared_ride=\"\")? But slots optional. Provide empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614947,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a88f1d16bfa30b51",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 124,
+      "prompt_tokens": 12963,
+      "prompt_tokens_details": null,
+      "total_tokens": 13087
+    }
+  },
+  "request_sha256": "f3e23cdbc8b005f11bb000d183b38742ba9c735182664b1bcfb67dca4d86b774",
+  "source_example_id": "mix_dev_0015+durec_src_0969+hb_0384",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

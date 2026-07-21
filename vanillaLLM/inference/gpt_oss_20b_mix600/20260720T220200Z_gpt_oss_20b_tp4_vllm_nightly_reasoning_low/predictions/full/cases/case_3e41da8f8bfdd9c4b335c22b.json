@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_3e41da8f8bfdd9c4b335c22b",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8305440424010158,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_87fbe713bc1d08982b0c8fc7",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Italian\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants with category Italian? but category enum includes Italian. Also need price_range? user didn't specify. Also alcohol preference: maybe price_range? not. We can set price_range=\"cheap\" or moderate? Not known. We can omit. So output: GetRestaurants(category=\"Italian\", price_range=\"cheap\"? maybe not. Just category.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614962,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b3201938e1f26ae6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 87,
+      "prompt_tokens": 10355,
+      "prompt_tokens_details": null,
+      "total_tokens": 10442
+    }
+  },
+  "request_sha256": "1efb3aee669f5133a4e5dc8a347f77d889cf571925376dedee1a87b2e70df8fa",
+  "source_example_id": "mix_dev_0075+durec_src_1142+hb_0024",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

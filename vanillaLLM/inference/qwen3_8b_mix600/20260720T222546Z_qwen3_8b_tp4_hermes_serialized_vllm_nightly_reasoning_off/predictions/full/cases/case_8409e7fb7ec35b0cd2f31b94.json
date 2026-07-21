@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_8409e7fb7ec35b0cd2f31b94",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.719938789494336,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "average_star": "4",
+        "location": "San Diego",
+        "number_of_rooms": "2"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_8543a847eb631061ee368541",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"San Diego\", \"number_of_rooms\": \"2\", \"average_star\": \"4\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-ac0a806ea99b9657",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587734,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bb3b07e6844dffe2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 37,
+      "prompt_tokens": 9559,
+      "prompt_tokens_details": null,
+      "total_tokens": 9596
+    }
+  },
+  "request_sha256": "f5a920443bd39505c266b6d7ad736d7844a2bf2eaa0c0b117484d70de315026a",
+  "source_example_id": "dev_0041",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

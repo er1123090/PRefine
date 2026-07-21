@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e1df24e6f69e27b4883c4882",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6650203568860888,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f64ab03a146195a31e9b6c33",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"San Francisco\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. Past: user liked Jamaican, SFO, 3 seats, 19:00. Also earlier: \"I want a Park in SD, if possible without entry fee\" etc. For restaurant: preferences: city SFO, maybe Jamaican cuisine? Also earlier: \"I need a place to eat\" Jamaican in SFO. So likely wants Jamaican in San Francisco. Also maybe price range? Not seen. So output GetRestaurants with city=\"San Francisco\", category=\"Jamaican\"? but category enum doesn't include Jamaican. Jamaican not in list. Maybe \"Caribbean\"? not. So maybe no category. Provide city. Also maybe number_of_seats? Not specified. So minimal. Output: GetRestaurants(city=\"San Francisco\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615196,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-94eb99e66aa42f99",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 173,
+      "prompt_tokens": 8782,
+      "prompt_tokens_details": null,
+      "total_tokens": 8955
+    }
+  },
+  "request_sha256": "fe99d08b5962cb20ed73cd5c2eaabfe8c70df421ab2922a8234a2d8d031e66c1",
+  "source_example_id": "dev_0041",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

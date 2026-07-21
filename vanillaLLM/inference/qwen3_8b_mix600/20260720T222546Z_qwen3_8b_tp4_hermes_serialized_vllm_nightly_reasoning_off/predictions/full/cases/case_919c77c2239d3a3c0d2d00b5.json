@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_919c77c2239d3a3c0d2d00b5",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.749863035976887,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "car_type": "Standard",
+        "pickup_time": "10:00"
+      },
+      "name": "GetRentalCars"
+    }
+  ],
+  "pair_id": "pair_d94acc5c52bec92d0abe21af",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"car_type\": \"Standard\", \"pickup_time\": \"10:00\"}",
+                "name": "GetRentalCars"
+              },
+              "id": "chatcmpl-tool-aa778115906af687",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587804,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-83eb7ae45c79691c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 34,
+      "prompt_tokens": 10467,
+      "prompt_tokens_details": null,
+      "total_tokens": 10501
+    }
+  },
+  "request_sha256": "f175718f9e1e867a3f45462e5e2411a16477d4ffd982d7bdf8862c59b29e264a",
+  "source_example_id": "mix_dev_0270+durec_src_1002",
+  "status": "success",
+  "target_domain": "GetRentalCars"
+}

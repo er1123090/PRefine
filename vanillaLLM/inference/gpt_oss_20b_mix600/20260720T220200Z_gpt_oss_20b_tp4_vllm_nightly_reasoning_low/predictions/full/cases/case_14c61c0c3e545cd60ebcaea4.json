@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_14c61c0c3e545cd60ebcaea4",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.290434556081891,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_442784136334881e66f55515",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jay Chou\")",
+          "function_call": null,
+          "reasoning": "We need to infer preference for music domain. Past: user likes Jay Chou songs, rock, etc. They asked for music. Likely want music. We need GetMusic with artist or genre. They didn't specify. Use default? Maybe artist Jay Chou. So output GetMusic(artist=\"Jay Chou\")? No song_name? We can leave song_name empty. Provide artist.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614869,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a62b37696d355623",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 99,
+      "prompt_tokens": 10810,
+      "prompt_tokens_details": null,
+      "total_tokens": 10909
+    }
+  },
+  "request_sha256": "3412c67f21bda639b4f229c86ce6baacceb61cccc6cf6b6e92cebaad0d24d85d",
+  "source_example_id": "mix_dev_0163+durec_src_0721+hb_0105",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

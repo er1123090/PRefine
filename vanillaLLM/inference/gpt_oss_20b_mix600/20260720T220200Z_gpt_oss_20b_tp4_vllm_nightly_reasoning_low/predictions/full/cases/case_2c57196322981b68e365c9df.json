@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2c57196322981b68e365c9df",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.826477232389152,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4459a873044fba1533c16a76",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"1400 North Dutton Avenue #6\", number_of_seats=\"1\", pickup_time=\"\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, pickup_time, shared_ride. From history: session3 and 7 had shared ride to 1400 North Dutton. So preference: shared_ride=True, number_of_seats=1, destination likely 1400 North Dutton Avenue #6. pickup_time unspecified. We'll set pickup_time empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614927,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-93e14cd0543e951a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 117,
+      "prompt_tokens": 11848,
+      "prompt_tokens_details": null,
+      "total_tokens": 11965
+    }
+  },
+  "request_sha256": "81424b88685fb05ba29a176582df504f9cc4c175d63cf631c17089f5cc3bbaab",
+  "source_example_id": "mix_dev_0210+durec_src_0510+hb_0287",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

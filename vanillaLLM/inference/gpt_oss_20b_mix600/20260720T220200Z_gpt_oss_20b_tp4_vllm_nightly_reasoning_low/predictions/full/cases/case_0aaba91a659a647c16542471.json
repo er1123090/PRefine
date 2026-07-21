@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0aaba91a659a647c16542471",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.048266164958477,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_0720c22af0c623ba2a269a22",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Leehom Wang\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants to listen to music. We need to output function call GetMusic with inferred slots. From history, user likes Leehom Wang songs. So artist likely Leehom Wang. Playback device? Not specified. Maybe default phone? But we can infer from past: when playing, assistant used phone? Not specified. We can leave empty. But need to provide slot values? We can provide artist=\"Leehom Wang\". Maybe song_name unspecified. So output: GetMusic(artist=\"Leehom Wang\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614830,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8e3a666364707f39",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 131,
+      "prompt_tokens": 11463,
+      "prompt_tokens_details": null,
+      "total_tokens": 11594
+    }
+  },
+  "request_sha256": "edb24ba576a3acc922fe2664bac5fd59b884d32b481c1d1b4486248a0b366d30",
+  "source_example_id": "mix_dev_0054+durec_src_0658+hb_0146",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

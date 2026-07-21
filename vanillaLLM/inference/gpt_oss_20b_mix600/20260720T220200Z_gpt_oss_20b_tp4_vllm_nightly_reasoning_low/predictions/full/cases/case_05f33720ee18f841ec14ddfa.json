@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_05f33720ee18f841ec14ddfa",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.6504474449902773,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_301523ee0331b8fd6f19a776",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"United Airlines\", departure_date=\"2019-03-09\", origin=\"San Francisco\", destination=\"Seattle\", passengers=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Determine airlines preference: past flights: United, Alaska, Delta. No clear preference. Maybe choose United? But pattern: user used United in session3. Also earlier no preference. We'll pick United Airlines. flight_class? none. passengers? default 1. Return_date? none. So output: GetFlights(airlines=\"United Airlines\", departure_date=\"2019-03-09\", origin=\"San Francisco\", destination=\"Seattle\", passengers=\"1\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614812,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8a20be7c6c59cbdd",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 139,
+      "prompt_tokens": 9254,
+      "prompt_tokens_details": null,
+      "total_tokens": 9393
+    }
+  },
+  "request_sha256": "9b3ec76a0072016bb2a848be881b0c7fe3207639d31fd68e75b873fdeed96d49",
+  "source_example_id": "dev_0322",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

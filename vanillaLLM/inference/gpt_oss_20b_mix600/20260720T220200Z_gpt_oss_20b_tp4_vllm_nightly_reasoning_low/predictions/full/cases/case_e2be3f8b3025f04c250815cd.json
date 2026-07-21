@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e2be3f8b3025f04c250815cd",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.827895438298583,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_987fe6dc1d4682c3b8f3ee7a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"checking\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks. From history, user used checking and savings. For transfer likely from savings? They said \"make a bank transfer\" no account specified. Prior they used checking for transfer. In session13 they did transfer from checking to savings. So likely checking. Output: GetBanks(recipient_account_type=\"checking\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615198,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8ffbbde5a1fd1160",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 84,
+      "prompt_tokens": 10346,
+      "prompt_tokens_details": null,
+      "total_tokens": 10430
+    }
+  },
+  "request_sha256": "0781331948625476077abaefed4b12a0638aa87c83774c21469bb2154fe4dd02",
+  "source_example_id": "mix_dev_0233+durec_src_0255+hb_0247",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

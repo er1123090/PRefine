@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d0c40a45eec283de902a09e8",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.146725783124566,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f82921614ac0887418701ce7",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(departure_date=\"2019-03-11\", destination=\"San Francisco\", location=\"San Francisco\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: departure_date, destination, location? For travel. Destination likely Berkeley? But Berkeley not in enum. Maybe location? Use location=\"Berkeley\" not in list. But maybe destination=\"San Francisco\" as Berkeley near SF. Use destination=\"San Francisco\". departure_date=\"2019-03-11\". number_of_days=1? Not in schema. Use location? Probably location=\"San Francisco\". Output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615176,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bf1836511478ad39",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 123,
+      "prompt_tokens": 10738,
+      "prompt_tokens_details": null,
+      "total_tokens": 10861
+    }
+  },
+  "request_sha256": "fd768b5b520fe963885d1690b203454270106abbaa103e045e6f2e674286f075",
+  "source_example_id": "mix_dev_0258+durec_src_0028+hb_0423",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

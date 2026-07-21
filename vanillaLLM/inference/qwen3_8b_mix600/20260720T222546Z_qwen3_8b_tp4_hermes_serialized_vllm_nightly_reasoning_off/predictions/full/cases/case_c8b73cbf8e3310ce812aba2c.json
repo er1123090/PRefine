@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_c8b73cbf8e3310ce812aba2c",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.629699978977442,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "2455 Bennett Valley Road",
+        "number_of_seats": "1",
+        "shared_ride": true
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_6e76ae84a782adc8a12507a2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"2455 Bennett Valley Road\", \"number_of_seats\": \"1\", \"shared_ride\": \"True\"}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-a0aa0e3bc3f83c70",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588169,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bb06211c8da04a9c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 45,
+      "prompt_tokens": 11352,
+      "prompt_tokens_details": null,
+      "total_tokens": 11397
+    }
+  },
+  "request_sha256": "582acdf1fee7a87d9f99fa7fa46cff0b76fed8f40e3e857c8135ec03c0233939",
+  "source_example_id": "mix_dev_0131+durec_src_0415+hb_0429",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

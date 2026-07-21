@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0485d17dd01542200c1686da",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.575949747115374,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_9e4e7e5b2c2f7b44cdacf233",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Standard\", pickup_city=\"Vancouver\", pickup_date=\"2019-03-05\", pickup_time=\"15:00\", dropoff_date=\"2019-03-10\", pickup_location=\"YVR International Airport\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need slots: car_type, dropoff_date, pickup_city, pickup_date, pickup_location, pickup_time. User didn't specify. Use preferences: earlier rental: Standard car, pickup Vancouver, pickup date 2019-03-05, pickup time 15:00, dropoff 2019-03-10. Likely preference. So output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614809,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a8c2097d6ed54179",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 138,
+      "prompt_tokens": 9936,
+      "prompt_tokens_details": null,
+      "total_tokens": 10074
+    }
+  },
+  "request_sha256": "fcc6ad056e8bef717eab8dc59e5aab5e6ffe38c9bde332e9c5b2f4042ae7ec6f",
+  "source_example_id": "mix_dev_0219+hb_0318",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

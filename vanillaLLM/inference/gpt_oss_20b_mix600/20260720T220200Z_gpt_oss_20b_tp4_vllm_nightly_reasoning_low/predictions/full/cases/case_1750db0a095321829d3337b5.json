@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_1750db0a095321829d3337b5",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1674446491524577,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_5358c1e251436429ea5a3ce2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"Berkeley\", number_of_days=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. Preferences: location Berkeley. In history, user used GetHotels with location \"New York\", \"San Diego\", \"London\". No preference for star. So just location and number_of_days=1. Output format: GetHotels(location=\"Berkeley\", number_of_days=\"1\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614876,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a1d29fb72f8eb55a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 84,
+      "prompt_tokens": 10924,
+      "prompt_tokens_details": null,
+      "total_tokens": 11008
+    }
+  },
+  "request_sha256": "f954dc6726aa60561f9652771fd5502341106abd5efb86a15b7ea27c6dc918f5",
+  "source_example_id": "mix_dev_0327+durec_src_0137+hb_0492",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

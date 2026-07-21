@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_9dd329299e16f47d42295110",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.6440390693023801,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_fd3f3f4ef3ab477a43752bb1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"Los Angeles\")",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need city? \"nearby\" implies maybe user's location? No location given. Past preference: user asked events in Los Angeles. Likely default to Los Angeles. So city=\"Los Angeles\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615103,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9c2099072f08415c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 65,
+      "prompt_tokens": 7373,
+      "prompt_tokens_details": null,
+      "total_tokens": 7438
+    }
+  },
+  "request_sha256": "3c8f8629ef087ccde84447937ba7ec7eb1ba613ea6ae0924a30a81b971d7021b",
+  "source_example_id": "dev_0098",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

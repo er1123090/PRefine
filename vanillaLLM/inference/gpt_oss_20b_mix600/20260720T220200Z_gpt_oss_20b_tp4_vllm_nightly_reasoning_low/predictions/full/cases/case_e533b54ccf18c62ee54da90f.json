@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e533b54ccf18c62ee54da90f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2445803498849273,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_de1d8c2bcc925126c9cc8126",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2023-03-09\", origin=\"San Francisco\", destination=\"Seattle\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Determine preferences: airlines? none. flight_class? none. passengers? none. return_date? none. So only departure_date, origin, destination. Use inferred: departure_date \"2023-03-09\"? but date format? In history they used \"2019-03-14\". So use \"2023-03-09\". Output format: GetFlights(departure_date=\"2023-03-09\", origin=\"San Francisco\", destination=\"Seattle\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615201,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b23a8bd40b148a36",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 133,
+      "prompt_tokens": 9939,
+      "prompt_tokens_details": null,
+      "total_tokens": 10072
+    }
+  },
+  "request_sha256": "7d8607628000dec4a4e7cc62fa65daad1c9f4207311af161be2540f92fda1aa7",
+  "source_example_id": "mix_dev_0045+durec_src_0431+hb_0103",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

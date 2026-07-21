@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a9d02aea6d9e547c17300f4e",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9251323128119111,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_5444fca5bea1c3ebce7301d0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "Restaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history: user likes music, Leehom Wang, but restaurant preferences? In session6, user asked about restaurant, but no preference. In session6, user asked to book table for 4 at 12:30. No preference. No mention of price range or category. So no preference. We can return empty slots. So output: Restaurants() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615119,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a09021462b51e0a1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 98,
+      "prompt_tokens": 12159,
+      "prompt_tokens_details": null,
+      "total_tokens": 12257
+    }
+  },
+  "request_sha256": "7be4e87e5b0d9c21150b9edebe5ce1e453fc8e1aa705e8f4216aaa1779d6f153",
+  "source_example_id": "mix_dev_0087+durec_src_0532+hb_0096",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_06fc9c6fa549c96aac579fa5",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.8361147362738848,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_760ed8b733f7004a948cb099",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(category=\"Historical Landmark\", good_for_kids=\"True\", location=\"London\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Need slots: category, departure_date, destination, free_entry, good_for_kids, location. User says planning a trip and want to explore travel options. No specifics. Use patterns: previous travel: London historical kid. Also earlier: none. Likely generic: category maybe \"Tourist Attraction\" or \"Museum\". No preference. Use most common? In history, only travel used once: category Historical Landmark, good_for_kids True, location London. So deduce that preference: category Historical Landmark, good_for_kids True, location London. No destination? location same. departure_date unknown. So leave empty. Output: GetTravel(category=\"Historical Landmark\", good_for_kids=\"True\", location=\"London\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614815,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a8c846f332f4d547",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 179,
+      "prompt_tokens": 9829,
+      "prompt_tokens_details": null,
+      "total_tokens": 10008
+    }
+  },
+  "request_sha256": "9716743d321d45b51b84ca88b01ee37d94ba2f1e18503344138fe19bba55d2ef",
+  "source_example_id": "mix_dev_0112+durec_src_0743+hb_0156",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

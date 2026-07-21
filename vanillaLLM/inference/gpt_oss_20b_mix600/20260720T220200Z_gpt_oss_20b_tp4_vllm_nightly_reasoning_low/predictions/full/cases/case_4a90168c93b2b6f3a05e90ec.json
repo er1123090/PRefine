@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4a90168c93b2b6f3a05e90ec",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.028017389588058,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6f16aa53b60ab1d296261523",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels()",
+          "function_call": null,
+          "reasoning": "We need GetHotels. Need slots: location, number_of_rooms, number_of_days, average_star, has_wifi, hotel_name, etc. User didn't specify. Use past pattern: user often wants 2 rooms, 4 days, 4 star. So deduce location? Not given. Maybe default London? But no. We can leave empty. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614981,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8502c6ba2870789d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 88,
+      "prompt_tokens": 10106,
+      "prompt_tokens_details": null,
+      "total_tokens": 10194
+    }
+  },
+  "request_sha256": "5036faa6acdeaf4a311be9122784c59f8e282d61b02e0475160845da8cc50861",
+  "source_example_id": "mix_dev_0092+durec_src_0594+hb_0451",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

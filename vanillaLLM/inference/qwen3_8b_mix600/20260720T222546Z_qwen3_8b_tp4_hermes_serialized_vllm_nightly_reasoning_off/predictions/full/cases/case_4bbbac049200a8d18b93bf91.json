@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_4bbbac049200a8d18b93bf91",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.515151030384004,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "Rohnert Park",
+        "number_of_seats": "1",
+        "shared_ride": true
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_3c39e6c86182ff274f9b4f38",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"Rohnert Park\", \"number_of_seats\": \"1\", \"shared_ride\": true}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-baea761809ff18b5",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587394,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a1ca8e111ac4065e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 41,
+      "prompt_tokens": 9737,
+      "prompt_tokens_details": null,
+      "total_tokens": 9778
+    }
+  },
+  "request_sha256": "c11cc0c389daa6724fef083f5540700af7da9e6c8257e10af25d3ec9f05f4561",
+  "source_example_id": "mix_dev_0170+durec_src_0676+hb_0412",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

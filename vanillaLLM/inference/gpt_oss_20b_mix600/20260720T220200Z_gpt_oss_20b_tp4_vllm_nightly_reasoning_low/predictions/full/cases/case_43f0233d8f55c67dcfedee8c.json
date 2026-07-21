@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_43f0233d8f55c67dcfedee8c",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6816353127360344,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b9c02e4cdc7ca675156d64fc",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Berkeley\", departure_date=\"2023-03-11\", destination=\"Berkeley\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: category? free_entry? good_for_kids? location=Berkeley? but Berkeley not in enum. Maybe use GetHotels? but trip. Probably GetTravel with location \"Berkeley\" not in list. Maybe GetHotels? but trip. Use GetTravel with location \"Berkeley\" though not in enum. But we must follow schema. Maybe choose GetHotels? but trip. Use GetTravel with location \"Berkeley\" but invalid. Maybe choose GetHotels? but not trip. Probably GetTravel with location \"Berkeley\" but ignore enum.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614969,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ab3af45d68c26829",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 150,
+      "prompt_tokens": 11591,
+      "prompt_tokens_details": null,
+      "total_tokens": 11741
+    }
+  },
+  "request_sha256": "6f9fdcd0b7644126393aa2d06495192ffce8e94d7c6692c2102bdc77c3404fa3",
+  "source_example_id": "mix_dev_0214+durec_src_0550+hb_0018",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

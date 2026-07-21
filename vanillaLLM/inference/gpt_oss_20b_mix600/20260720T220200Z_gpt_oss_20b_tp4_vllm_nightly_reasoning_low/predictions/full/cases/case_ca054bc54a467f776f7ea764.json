@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ca054bc54a467f776f7ea764",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.563970534130931,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_db9f0ea1ced1c8a91eafdbb3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"San Francisco\", number_of_days=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels? user planning short trip to Berkeley, one night. Domain likely GetHotels. Need location Berkeley? Not in enum. But maybe GetTravel? but travel domain expects location. Berkeley not in list. Maybe GetHotels with location? not in enum. But maybe GetTravel with location? not in enum. Could use GetHotels with location \"Berkeley\" not allowed. Maybe GetTravel with location? not allowed. Maybe GetHotels with location \"San Francisco\" as nearest? But user said Berkeley. Could use GetHotels with location \"San Francisco\" as proxy. But better to use GetTravel? location not in list. So maybe GetHotels with location \"San Francisco\" and number_of_days=\"1\". Provide slot.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615167,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b6b50d4c62215f44",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 172,
+      "prompt_tokens": 10893,
+      "prompt_tokens_details": null,
+      "total_tokens": 11065
+    }
+  },
+  "request_sha256": "0b0a250048faeb3b7bddd0025aa25cc8a6201a552c12ce7ca8ef71c9b3e1a112",
+  "source_example_id": "mix_dev_0285+durec_src_0965+hb_0174",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

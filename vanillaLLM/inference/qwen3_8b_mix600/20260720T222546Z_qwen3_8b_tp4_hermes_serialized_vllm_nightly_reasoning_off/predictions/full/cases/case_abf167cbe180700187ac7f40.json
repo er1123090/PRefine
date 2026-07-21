@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_abf167cbe180700187ac7f40",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.149490353651345,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "airlines": "Alaska Airlines",
+        "departure_date": "2019-03-13",
+        "destination": "Phoenix",
+        "flight_class": "Premium Economy",
+        "origin": "San Francisco"
+      },
+      "name": "GetFlights"
+    }
+  ],
+  "pair_id": "pair_58bda779322354a6ba4e1c3d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"origin\": \"San Francisco\", \"destination\": \"Phoenix\", \"departure_date\": \"2019-03-13\", \"airlines\": \"Alaska Airlines\", \"flight_class\": \"Premium Economy\"}",
+                "name": "GetFlights"
+              },
+              "id": "chatcmpl-tool-8e246d95eec2c63a",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587971,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9a270874f4c16c28",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 61,
+      "prompt_tokens": 9628,
+      "prompt_tokens_details": null,
+      "total_tokens": 9689
+    }
+  },
+  "request_sha256": "3ce65045385b43ad396d0b815ae0ed2eb4000b89d5db0992443cf0e7f17e7cb2",
+  "source_example_id": "mix_dev_0278+hb_0161",
+  "status": "success",
+  "target_domain": "GetFlights"
+}

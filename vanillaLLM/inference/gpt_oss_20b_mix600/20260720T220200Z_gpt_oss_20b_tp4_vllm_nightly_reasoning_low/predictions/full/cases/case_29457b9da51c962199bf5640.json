@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_29457b9da51c962199bf5640",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1055885553359985,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_151d373b61d8cde294b76dbe",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Halal\", price_range=\"moderate\", city=\"Santa Clara\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. Past: user asked for Halal moderate price in Santa Clara. Also earlier asked for economical restaurant Halal. So preference: category=Halal, price_range=moderate? Also maybe location Santa Clara. So output GetRestaurants with category=\"Halal\", price_range=\"moderate\", city=\"Santa Clara\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614921,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-99166c733670697f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 100,
+      "prompt_tokens": 10849,
+      "prompt_tokens_details": null,
+      "total_tokens": 10949
+    }
+  },
+  "request_sha256": "78d58dd9fe0ba63f6288a1f9b52ce1da5e4899fd5f94753fac8e6e3c4a7248a4",
+  "source_example_id": "mix_dev_0285+durec_src_0965+hb_0174",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

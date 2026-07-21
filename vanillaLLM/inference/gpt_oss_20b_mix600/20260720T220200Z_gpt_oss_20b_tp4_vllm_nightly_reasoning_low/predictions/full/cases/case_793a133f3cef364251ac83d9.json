@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_793a133f3cef364251ac83d9",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.036636145785451,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_555a9a9e5cb83b6f273ac072",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"Los Angeles\", destination=\"Denver\", departure_date=\"2019-03-12\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need origin, destination, departure_date. flight_class? not specified. Use defaults. So: GetFlights(origin=\"Los Angeles\", destination=\"Denver\", departure_date=\"2019-03-12\") maybe year? assume 2019. Output format: GetFlights(origin=\"Los Angeles\", destination=\"Denver\", departure_date=\"2019-03-12\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615052,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a4d3a9e8baed4822",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 108,
+      "prompt_tokens": 7415,
+      "prompt_tokens_details": null,
+      "total_tokens": 7523
+    }
+  },
+  "request_sha256": "c76ac3cfbb9cf50d8eca050161877050d85fe707daf0f8780accd0c5f213bd74",
+  "source_example_id": "dev_0098",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

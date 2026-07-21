@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c54dcec5429c37936bbf7ac9",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9843382984399796,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_91a7af0b0ff4ca2ed16725fd",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents()",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need slots: category, city, date, event_name, event_type, number_of_tickets. From history: no explicit preference. But user wants events nearby. Likely city unspecified. Maybe default to current location? No data. We can leave empty. Provide empty object.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615158,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ae5757206b10fc8e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 74,
+      "prompt_tokens": 8324,
+      "prompt_tokens_details": null,
+      "total_tokens": 8398
+    }
+  },
+  "request_sha256": "b2a2c7965f5afb213689f99c1b922c4fce587fc4dd5d9656078f08b95d76ebb4",
+  "source_example_id": "mix_dev_0283+hb_0071",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

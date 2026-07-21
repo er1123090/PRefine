@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c92428e1ddd3ee5a7673bcc5",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.789414963684976,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b31e886a90de88ff4bb05ca1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(origin=\"Seattle\", destination=\"Kuala Lumpur\", departure_date=\"2019-03-02\", return_date=\"2019-03-06\", passengers=\"1\", flight_class=\"Economy\", airlines=\"Delta Airlines\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history: user wants flights to Kuala Lumpur? Actually earlier session 2: user wanted round trip flights to Kuala Lumpur from Seattle. That was GetFlights with departure_date 2019-03-02, destination Kuala Lumpur, origin Seattle, return_date 2019-03-06. Now current utterance: \"I’m planning a trip and would like to search for available flights.\" No specifics. We infer preferences: earlier they used Seattle to Kuala Lumpur, round trip. Likely same. So set origin Seattle, destination Kuala Lumpur, departure_date maybe next week? But we can leave unspecified? We need to provide values. Use past: departure_date \"2019-03-02\", return_date \"2019-03-06\". Passengers maybe 1? Not specified. flight_class maybe Economy. airlines maybe Delta. We'll output those.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615165,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9d20fbefcdf2cc04",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 255,
+      "prompt_tokens": 8495,
+      "prompt_tokens_details": null,
+      "total_tokens": 8750
+    }
+  },
+  "request_sha256": "3b1f087415ab8fcd96f10182fd93b2d510eac7fb9d07f70f91537042a234c5f0",
+  "source_example_id": "mix_dev_0231+hb_0495",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

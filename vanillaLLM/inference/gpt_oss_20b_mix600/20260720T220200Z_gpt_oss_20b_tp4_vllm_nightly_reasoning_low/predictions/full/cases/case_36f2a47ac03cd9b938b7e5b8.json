@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_36f2a47ac03cd9b938b7e5b8",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.458196794614196,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_9bc5f4f6e568f724c719cbfc",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\", dropoff_date=\"2019-03-10\", pickup_location=\"Downtown Berlin\", car_type=\"Standard\", number_of_seats",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? pickup_location? car_type? number_of_seats? From history, user didn't specify car_type, seats. Use defaults? We infer from pattern: often car_type default Standard. pickup_city Berlin not in enum. But enum includes many US cities. Berlin not present. Maybe ignore? But must match schema. We can set pickup_city to \"Berlin\" though not in enum; but schema expects enum. We might set pickup_city to \"Berlin\" but it's invalid. Maybe choose nearest? But we must output something. Probably set pickup_city=\"Berlin\" anyway. pickup_date=\"2019-03-08\", pickup_time=\"12:00\". dropoff_date maybe \"2019-03-10\" (couple days). car_type default \"Standard\". pickup_location maybe \"Downtown Berlin\". number_of_seats maybe \"1\". Let's output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614947,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8d2b20d46adafd84",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 256,
+      "prompt_tokens": 8865,
+      "prompt_tokens_details": null,
+      "total_tokens": 9121
+    }
+  },
+  "request_sha256": "93755c9757559456c249f1f2543041e3716f78c39bcc5d975e49937188fc37c3",
+  "source_example_id": "dev_0041",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

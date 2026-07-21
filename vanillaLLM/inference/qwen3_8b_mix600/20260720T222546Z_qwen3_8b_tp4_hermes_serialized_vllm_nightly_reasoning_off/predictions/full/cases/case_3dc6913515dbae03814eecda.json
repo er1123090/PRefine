@@ -1,0 +1,74 @@
+{
+  "attempts": 1,
+  "case_id": "case_3dc6913515dbae03814eecda",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.299586970359087,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "average_star": "2",
+        "has_wifi": true,
+        "location": "San Diego",
+        "number_of_rooms": "2"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_eb9e36c1b074734d92f5486c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"San Diego\", \"has_wifi\": \"True\", \"number_of_rooms\": \"2\", \"average_star\": \"2\"}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-82a8b357729e8632",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587313,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b30616d0fa61f54e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 44,
+      "prompt_tokens": 13347,
+      "prompt_tokens_details": null,
+      "total_tokens": 13391
+    }
+  },
+  "request_sha256": "09790d5bd24854ca412dad09a6cfef86fa78e7e79ad0abd6404957b159955715",
+  "source_example_id": "mix_dev_0266+durec_src_0131+hb_0167",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

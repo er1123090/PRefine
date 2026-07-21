@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_258a547a1d418a7526ece0eb",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.8194127632305026,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_368fb4079c1e2d36e7667328",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"San Mateo\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetRestaurants. Slots: category, date, number_of_seats, price_range, restaurant_name, time, city. From history: user likes lobster, San Mateo. Also earlier restaurant: Andes Cafe San Mateo. Also later: Ruiyu Roasted Fish. So likely prefers seafood, maybe lobster. City: San Mateo. No date/time. So output: GetRestaurants(city=\"San Mateo\", category=\"Seafood\"? not in enum. Maybe \"Seafood\" not available. Could choose \"American\" or \"Seafood\" not. Maybe \"Seafood\" not in list. So maybe no category. Provide city. Also maybe price_range moderate. We'll output minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614912,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bdee42ff1323a019",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 158,
+      "prompt_tokens": 9454,
+      "prompt_tokens_details": null,
+      "total_tokens": 9612
+    }
+  },
+  "request_sha256": "2d9af383e6c60ab5da1908ee9c175e1499b726fb49fc499f11631f23d0ed0c50",
+  "source_example_id": "mix_dev_0100+durec_src_0831+hb_0371",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

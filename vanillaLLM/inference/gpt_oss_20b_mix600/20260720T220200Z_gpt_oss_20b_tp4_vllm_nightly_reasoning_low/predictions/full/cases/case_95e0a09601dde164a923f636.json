@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_95e0a09601dde164a923f636",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9885607389733195,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_5f73e504e8810b5499995879",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(destination=\"Orlando\", good_for_kids=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: category, departure_date, destination, free_entry, good_for_kids, location. User says family trip to Orlando during summer. Likely destination Orlando. Good_for_kids true. free_entry unknown. departure_date unspecified. So output: GetTravel(destination=\"Orlando\", good_for_kids=\"True\") maybe location also Orlando. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615092,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9def07b55d591c4e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 101,
+      "prompt_tokens": 10365,
+      "prompt_tokens_details": null,
+      "total_tokens": 10466
+    }
+  },
+  "request_sha256": "f97cd5dcef4adb27ed26036fb9b322a7cf4dcea50c6dccec02c97d74b6e8e867",
+  "source_example_id": "mix_dev_0059+durec_src_0234+hb_0462",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

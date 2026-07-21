@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_6853b6e4ec5b008a884b9eca",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.5310718761757016,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b3fff650af0ad297af948aab",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants restaurant options. No city given. Past preferences: user often chooses restaurants in specific cities: Fremont, Sebastopol, Redwood City. Likely wants local. Maybe default to last city used: Sebastopol? But earlier they asked for restaurant in Sebastopol. Also earlier they asked for restaurant in Fremont. No city now. Could infer they want in current location? Hard. Maybe default to \"San Francisco\" but not seen. I'd choose \"San Francisco\" as common. But pattern: user often picks city they are in. Without city, maybe ask. But we must output a function call. We can leave city empty? It's optional. Provide no slot. So call GetRestaurants with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615029,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b622df0388fbc911",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 164,
+      "prompt_tokens": 8871,
+      "prompt_tokens_details": null,
+      "total_tokens": 9035
+    }
+  },
+  "request_sha256": "93e8f15f87891f242a6deac914beda9909e74ebf85a95e82bdc59ea90fe70c9e",
+  "source_example_id": "dev_0217",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

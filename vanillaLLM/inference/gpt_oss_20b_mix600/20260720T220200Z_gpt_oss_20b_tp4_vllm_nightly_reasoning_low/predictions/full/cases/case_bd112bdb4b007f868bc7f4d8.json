@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_bd112bdb4b007f868bc7f4d8",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1645372323691845,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d0f0d8d12c868cdad6e5437b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for travel domain. Likely GetTravel. Slots: category, departure_date, destination, free_entry, good_for_kids, location. User says planning a trip and want to explore travel options. No specifics. We infer preferences from history: user often wants economy flights, prefers flights from various origins. For travel, maybe wants free entry? Not sure. We can default empty. But need to output function call. Probably GetTravel with no slots? But need at least domain. We can output GetTravel() with empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615148,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9407fe53f28cc83f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 124,
+      "prompt_tokens": 10813,
+      "prompt_tokens_details": null,
+      "total_tokens": 10937
+    }
+  },
+  "request_sha256": "dceaf4dfcb848da3cb9933f4dcdfaa08d9fd2236bfa6ceef36bb4b287bb2ebfe",
+  "source_example_id": "mix_dev_0108+durec_src_1278+hb_0340",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

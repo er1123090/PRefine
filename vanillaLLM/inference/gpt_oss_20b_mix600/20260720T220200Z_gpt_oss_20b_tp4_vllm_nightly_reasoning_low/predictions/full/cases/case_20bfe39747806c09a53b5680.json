@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_20bfe39747806c09a53b5680",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1686881594359875,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_85e5705d2bb78273bbe3be9c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"American Airlines\", flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. No preferences given. From history, user often chooses economy. Also prefers American Airlines? In session3 they chose American. So set airlines=\"American Airlines\", flight_class=\"Economy\". No origin/destination given. We can't guess. Maybe default? But need slots. We can leave empty. Provide function call with those.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614899,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9da286d447898719",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 95,
+      "prompt_tokens": 8871,
+      "prompt_tokens_details": null,
+      "total_tokens": 8966
+    }
+  },
+  "request_sha256": "b08e1421a5fe7f089a48f7bf68d1c227efc8d6353c6ffbdb6e0289f03f9927e4",
+  "source_example_id": "dev_0217",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

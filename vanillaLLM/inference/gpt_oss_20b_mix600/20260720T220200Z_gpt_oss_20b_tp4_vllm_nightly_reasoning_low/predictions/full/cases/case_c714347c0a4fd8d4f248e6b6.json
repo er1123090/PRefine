@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c714347c0a4fd8d4f248e6b6",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.8400334743782878,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_ade53986fff4e300b639740c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"San Francisco\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant: likely city? Past: user asked for restaurants in SFO, Morgan Hill, etc. No explicit city now. We can infer default city maybe previous city? Last restaurant was Morgan Hill. But earlier SFO. Maybe user wants options in current location? No location given. We can guess city \"San Francisco\" as common. Also price_range? No. Category? No. We can use most frequent: earlier SFO, Morgan Hill. Maybe default city \"San Francisco\". Provide GetRestaurants with city=\"San Francisco\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615161,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-afc129e083c883c3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 134,
+      "prompt_tokens": 10504,
+      "prompt_tokens_details": null,
+      "total_tokens": 10638
+    }
+  },
+  "request_sha256": "26066ec5fe5bbf5ecfef84a5e91cb87c631b8ae949f94c55bd14a8cd3576f988",
+  "source_example_id": "mix_dev_0286+durec_src_0723+hb_0283",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

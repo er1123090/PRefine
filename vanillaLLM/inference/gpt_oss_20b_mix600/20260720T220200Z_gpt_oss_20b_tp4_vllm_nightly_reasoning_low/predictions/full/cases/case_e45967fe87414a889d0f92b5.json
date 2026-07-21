@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e45967fe87414a889d0f92b5",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.824720611795783,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1f500ea6cee8c3427862ad35",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(average_star=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user booked 1 room 6 days 1 star hotel. Likely prefers 1 star? Also earlier used 1 star. So set average_star=\"1\". location maybe Anaheim? But current request generic. Use location unspecified. We'll include average_star=\"1\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615200,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-800b7f4cac6aef83",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 84,
+      "prompt_tokens": 10516,
+      "prompt_tokens_details": null,
+      "total_tokens": 10600
+    }
+  },
+  "request_sha256": "21c1a06e740dd6c6d2aee467ee9a093ad89c0d7d3d689d33ca56b6a159d3ed6a",
+  "source_example_id": "mix_dev_0192+durec_src_0151+hb_0009",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

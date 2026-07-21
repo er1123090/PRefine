@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_c9f43c2066abf3e94d05ac90",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.6864837044849992,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_fe6f2e9ea3b064ce6922e96c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. Slots: category, city, date, number_of_seats, price_range, restaurant_name, time. User just says find a restaurant. No preferences. We infer from history: user often wants coffee & light bites? But no. We can default none. So empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615167,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8904cc810c11a80e",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 73,
+      "prompt_tokens": 9687,
+      "prompt_tokens_details": null,
+      "total_tokens": 9760
+    }
+  },
+  "request_sha256": "f83e562b6fb36906a5d504684538cf42d5c198084589d8bfe089363c4b91e3af",
+  "source_example_id": "mix_dev_0281+hb_0424",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

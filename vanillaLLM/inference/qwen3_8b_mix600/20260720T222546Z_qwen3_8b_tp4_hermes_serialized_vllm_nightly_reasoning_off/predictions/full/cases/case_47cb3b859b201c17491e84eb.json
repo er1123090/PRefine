@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_47cb3b859b201c17491e84eb",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.691655275411904,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Sushi",
+        "location": "Dublin"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_de22a397eddeae9fb8cd1334",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Sushi\", \"location\": \"Dublin\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-9de5e5375bfd7ab0",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587366,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-92a80a115bd3f650",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 9682,
+      "prompt_tokens_details": null,
+      "total_tokens": 9711
+    }
+  },
+  "request_sha256": "3487a153b9ec860d9aea0010e87b006d1c2b46ebeb938b5fbc9221d2ada4b216",
+  "source_example_id": "mix_dev_0110+durec_src_1287",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_1819c2b525eeec237b1dd2af",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.9527744371443987,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_5ebeb61fd9c15877fdb98ac0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(destination=\"Berkeley\", departure_date=\"2023-03-11\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: category? free_entry? good_for_kids? location? destination? departure_date? Probably destination=Berkeley? but location enum includes many cities but not Berkeley. Maybe use GetTravel with location=\"Berkeley\"? not in enum. Maybe use GetTravel with destination=\"Berkeley\" and departure_date=\"2023-03-11\". Also maybe category unspecified. We'll output minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614877,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9f7aaa4d5cfa4bd2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 111,
+      "prompt_tokens": 10148,
+      "prompt_tokens_details": null,
+      "total_tokens": 10259
+    }
+  },
+  "request_sha256": "ccbe6872e221abee426429379ee320d0dd4dea2302718e9c1db7194ef58e2988",
+  "source_example_id": "mix_dev_0271+durec_src_1237+hb_0397",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

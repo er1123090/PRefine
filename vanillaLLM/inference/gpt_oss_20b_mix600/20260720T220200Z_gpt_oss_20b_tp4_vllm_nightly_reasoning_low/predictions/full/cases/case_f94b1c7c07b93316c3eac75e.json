@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f94b1c7c07b93316c3eac75e",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7722556674852967,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_9c35e597f1e2c9979a4fcc51",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history: user likes Peruvian in San Fran, American in San Jose, vegetarian Sichuan in Dublin, steakhouse in Napa. No consistent cuisine. Maybe default price_range? Not seen. Probably no preference. So output empty? But need function call. Provide GetRestaurants with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615226,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-971c9949eea17dfa",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 81,
+      "prompt_tokens": 12387,
+      "prompt_tokens_details": null,
+      "total_tokens": 12468
+    }
+  },
+  "request_sha256": "5a5af461fbe5314579154219c2b8edeed1658758701066fa7e6dfaa6fdb2d867",
+  "source_example_id": "mix_dev_0303+durec_src_0162+hb_0413",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

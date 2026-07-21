@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_6f3c591a4c55fb0f69d965ce",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 8.457901943475008,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "New York",
+        "origin": "Washington"
+      },
+      "name": "GetBuses"
+    }
+  ],
+  "pair_id": "pair_83db6eac01a78f8ea84cb701",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"New York\", \"origin\": \"Washington\"}",
+                "name": "GetBuses"
+              },
+              "id": "chatcmpl-tool-99bf8fa175c101de",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784570226,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9337761f5f4049df",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 22,
+      "prompt_tokens": 12399,
+      "prompt_tokens_details": null,
+      "total_tokens": 12421
+    }
+  },
+  "request_sha256": "161a1474fafb1259cf7373d777c54ab05998e939ff9d9a76ada056340bad3570",
+  "source_example_id": "mix_dev_0127+durec_src_0622+hb_0200",
+  "status": "success",
+  "target_domain": "GetBuses"
+}

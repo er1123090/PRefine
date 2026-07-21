@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_d6f967712732f6bbf766aefb",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 13.872564974240959,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "39145 Farwell Drive",
+        "pickup_time": "18:15"
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_efb64303d026dbf5e6ea0a94",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"39145 Farwell Drive\", \"pickup_time\": \"18:15\"}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-b09e0906ef0ed404",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784571698,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9371d98cae0c270a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 34,
+      "prompt_tokens": 9733,
+      "prompt_tokens_details": null,
+      "total_tokens": 9767
+    }
+  },
+  "request_sha256": "0c6152419ad1cca4e7715fb966dfd107dab3cc91d17f024ce25318f5c77d3f8f",
+  "source_example_id": "dev_0050",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

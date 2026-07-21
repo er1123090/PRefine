@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_e6b67c13be12a4f2d1404ad4",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.796207565814257,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Mexican",
+        "location": "Oakland",
+        "price_range": "cheap"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_dbcb60110cea3af7b54820c5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Mexican\", \"price_range\": \"cheap\", \"location\": \"Oakland\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-b6bc9857eba5571a",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588357,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-86cfaff29ba9b4cd",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 36,
+      "prompt_tokens": 11389,
+      "prompt_tokens_details": null,
+      "total_tokens": 11425
+    }
+  },
+  "request_sha256": "117bd656359ba21dc4550a6ee1b97dbbb825dc2d0d67b16fbc10235da1097976",
+  "source_example_id": "mix_dev_0252+durec_src_1277+hb_0257",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

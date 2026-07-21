@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_04171079b19d7581fc5c504a",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.5698879370465875,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_55f71128ccd98ad1fb6685e8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"American Airlines\", flight_class=\"Economy\", passengers=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history, user often picks American Airlines, economy, 1 passenger. So output: GetFlights(airlines=\"American Airlines\", flight_class=\"Economy\", passengers=\"1\") others unspecified.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614807,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a9c0520837bda233",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 94,
+      "prompt_tokens": 10578,
+      "prompt_tokens_details": null,
+      "total_tokens": 10672
+    }
+  },
+  "request_sha256": "381ad7fee1d10b7a39602ff083ef814bd887da5458110098f02bea66a381491f",
+  "source_example_id": "mix_dev_0127+durec_src_0622+hb_0200",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

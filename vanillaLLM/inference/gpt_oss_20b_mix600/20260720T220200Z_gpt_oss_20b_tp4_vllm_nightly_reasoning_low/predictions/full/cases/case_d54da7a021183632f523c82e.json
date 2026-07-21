@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d54da7a021183632f523c82e",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2621629210188985,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a9d9faae1c75f02bcf2c01f0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"checking\")",
+          "function_call": null,
+          "reasoning": "We need GetBanks with recipient_account_type. From history, user used savings and checking. Which preference? In session6 they did transfer from savings to checking. So likely savings as source. So output GetBanks(recipient_account_type=\"savings\")? Actually transfer: need recipient account type? They want to transfer money to someone. Probably recipient account type is checking? But they didn't specify. Use most frequent: savings used as source. But slot is recipient_account_type. In past, they used both. Frequency: savings once, checking once. Maybe default checking? I'll choose checking.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615180,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8a2a92644573d5e3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 137,
+      "prompt_tokens": 11061,
+      "prompt_tokens_details": null,
+      "total_tokens": 11198
+    }
+  },
+  "request_sha256": "29bf6e431c69c72c8476db78b4a7f5fbcbfe80759509a2f447669ee5c23ee655",
+  "source_example_id": "mix_dev_0218+durec_src_0593+hb_0171",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

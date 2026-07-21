@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f0df2bbc3b8a6717262fde0c",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.0070583587512374,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f6460197a64e89d49c430750",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"Delta Airlines\", flight_class=\"Economy\", passengers=\"2\")",
+          "function_call": null,
+          "reasoning": "User wants flights. Need deduce preferences: from history, user often prefers Delta Airlines, economy, 3 seats? In session4 they wanted 3 seats Delta. Session8 wanted 2 seats Delta. So likely Delta, economy, maybe 2-3 seats. We'll output GetFlights with airlines=Delta Airlines, flight_class=Economy, passengers=\"2\". No dates given.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615216,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8075cc5bda4cc0e4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 108,
+      "prompt_tokens": 9067,
+      "prompt_tokens_details": null,
+      "total_tokens": 9175
+    }
+  },
+  "request_sha256": "72afc220c8a2b31e527bb56124e226b6747cf7583f194eb4963da5790766b2aa",
+  "source_example_id": "dev_0042",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

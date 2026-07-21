@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a853d2f01f40e987c101ece5",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4540820708498359,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_86bf9f36c6b754a39a40d87a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Need slots: category, departure_date, destination, free_entry, good_for_kids, location. User says planning a trip explore travel options. No specifics. Use patterns: previous travel: user liked attractions, free entry? Not seen. Likely want a tourist attraction. Use default? Maybe category \"Tourist Attraction\" not in enum. Use \"Theme Park\" or \"Museum\". We guess \"Museum\". Destination unspecified. Maybe location \"Los Angeles\" from earlier. Use departure_date maybe today? Not given. We can leave empty. Output with empty values? Provide none. Probably need at least domain. We'll output GetTravel with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615116,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ab149ca9c4526ed4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 149,
+      "prompt_tokens": 10597,
+      "prompt_tokens_details": null,
+      "total_tokens": 10746
+    }
+  },
+  "request_sha256": "3cbf57898a500b451f762041de1c70248d1ca6e69f80cd59d752d0ecbfffad49",
+  "source_example_id": "mix_dev_0107+durec_src_0236+hb_0188",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

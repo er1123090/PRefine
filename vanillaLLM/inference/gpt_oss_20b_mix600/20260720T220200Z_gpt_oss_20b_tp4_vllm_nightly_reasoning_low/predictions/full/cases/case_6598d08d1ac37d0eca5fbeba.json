@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_6598d08d1ac37d0eca5fbeba",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.483024419285357,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4b5151add435633fe61bf75c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2019-03-09\", destination=\"Seattle\", origin=\"San Francisco\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Determine slots: airlines? not specified. departure_date=2019-03-09? Actually current year? Use date string. destination=Seattle, origin=San Francisco. flight_class? not specified. passengers? not. So only origin, destination, departure_date. Output format: GetFlights(departure_date=\"2019-03-09\", destination=\"Seattle\", origin=\"San Francisco\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615025,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aade09ce41510164",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 118,
+      "prompt_tokens": 10557,
+      "prompt_tokens_details": null,
+      "total_tokens": 10675
+    }
+  },
+  "request_sha256": "18174d4599741fe8814955196f00f2e226208345502e8dea28414cbb83c462c7",
+  "source_example_id": "mix_dev_0065+durec_src_0412+hb_0408",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

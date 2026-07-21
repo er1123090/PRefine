@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_5c68f9135e7751d0fe6c4b75",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2392868651077151,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3466379508e6a4ec43ef282c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jay Chou\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants music. We need GetMusic. Slots: artist, playback_device, song_name. From history, user likes Jay Chou. So artist likely Jay Chou. No device preference. So output GetMusic(artist=\"Jay Chou\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615011,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-961562a2e8a7b06d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 75,
+      "prompt_tokens": 7883,
+      "prompt_tokens_details": null,
+      "total_tokens": 7958
+    }
+  },
+  "request_sha256": "109200e1c3301d7c8384f097a96d81b67445ff70b778287f77726ac331929ff4",
+  "source_example_id": "mix_durec_src_0987+hb_0186",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

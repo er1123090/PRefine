@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4f2e49039bde3fc3fdc2ff4f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.547667507082224,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_4f9bc8bd34e6cdaa0d96382f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history, user hasn't specified. We infer preferences: In session 11, user rented car in Phoenix, wants hotel with wifi. No flight preference. But maybe earlier: no. So we need to deduce defaults: maybe economy, no airline preference, origin unspecified. We can leave empty. Output format: GetFlights(...). Provide empty strings? Probably omit. We'll include only slots we can infer: none. So empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614988,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9017fafce8e34883",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 125,
+      "prompt_tokens": 7912,
+      "prompt_tokens_details": null,
+      "total_tokens": 8037
+    }
+  },
+  "request_sha256": "39df3485071360db64847df913f906707d4fb33546d73dde19984976067b9c84",
+  "source_example_id": "mix_dev_0284+hb_0341",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

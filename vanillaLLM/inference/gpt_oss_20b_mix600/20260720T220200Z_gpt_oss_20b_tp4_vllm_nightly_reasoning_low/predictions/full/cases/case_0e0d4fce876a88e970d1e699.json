@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0e0d4fce876a88e970d1e699",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.0212030671536922,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a608e73da8c6ff32f37dce52",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. From history: user used ride sharing to Angels Flight Railway, 1 seat, shared ride True. So preference: shared_ride True. Destination unspecified now. We can leave empty? Provide defaults? We can set shared_ride=\"True\". Others empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614842,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a7717faa44507b4d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 93,
+      "prompt_tokens": 9196,
+      "prompt_tokens_details": null,
+      "total_tokens": 9289
+    }
+  },
+  "request_sha256": "7c10ef9feb2a14904ac59b75dcb39a5ec6f9959014f57b39a917fa0e1f75672b",
+  "source_example_id": "dev_0322",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

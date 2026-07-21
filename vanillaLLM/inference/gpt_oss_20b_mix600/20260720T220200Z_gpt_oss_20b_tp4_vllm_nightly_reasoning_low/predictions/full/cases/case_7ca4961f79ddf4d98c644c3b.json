@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_7ca4961f79ddf4d98c644c3b",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.248497162014246,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_90bd6840fb8b757e8d2a637e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"San Francisco\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. No preferences given. From history, user likes light meal, prefers San Francisco. Also earlier asked for restaurant in SF. So likely location San Francisco, maybe category? He said light meal. No category. We'll set city=\"San Francisco\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615055,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-93d948c9950e6274",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 74,
+      "prompt_tokens": 10694,
+      "prompt_tokens_details": null,
+      "total_tokens": 10768
+    }
+  },
+  "request_sha256": "55f81178fa0519a0c62f2b2ba385c4c9eef162fea682be83f363b5b830622c91",
+  "source_example_id": "mix_dev_0258+durec_src_0028+hb_0423",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

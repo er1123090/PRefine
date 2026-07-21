@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_d50a86fc49458648c9700fce",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.315622670575976,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "city": "San Mateo",
+        "price_range": "moderate"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_94f2bbb69f42e60e77329f7a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"city\": \"San Mateo\", \"price_range\": \"moderate\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-b7b4376044e2023e",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784571673,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b0e8c11590973d7d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 23,
+      "prompt_tokens": 13058,
+      "prompt_tokens_details": null,
+      "total_tokens": 13081
+    }
+  },
+  "request_sha256": "6aa496d6bc06b78b32558cb0c0e0389f95cf5ed162d10aed343cf2eb0d346836",
+  "source_example_id": "mix_dev_0032+durec_src_0562+hb_0178",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

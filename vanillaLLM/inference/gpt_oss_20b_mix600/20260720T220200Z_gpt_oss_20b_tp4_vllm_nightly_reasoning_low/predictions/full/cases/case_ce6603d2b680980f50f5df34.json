@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ce6603d2b680980f50f5df34",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1485136011615396,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_68f1d88607eb2b20d631b8a5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. From history, user often chooses economy. No preference. Maybe default? We infer from past: no explicit preference. Use default? We can leave empty. But need at least some slots? We can provide empty object. But format requires slots. We can provide none. So output: GetFlights() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615173,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b3488d4961338973",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 102,
+      "prompt_tokens": 11230,
+      "prompt_tokens_details": null,
+      "total_tokens": 11332
+    }
+  },
+  "request_sha256": "b38ca3421a0d04f9c3d8d0ccb44e5479dcd6b1be6b7bb9adda4b1759a8067d93",
+  "source_example_id": "mix_dev_0126+durec_src_1001+hb_0443",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

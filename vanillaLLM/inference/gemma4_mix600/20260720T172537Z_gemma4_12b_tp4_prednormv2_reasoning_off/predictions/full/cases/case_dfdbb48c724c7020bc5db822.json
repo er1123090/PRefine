@@ -1,0 +1,77 @@
+{
+  "attempts": 1,
+  "case_id": "case_dfdbb48c724c7020bc5db822",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 33.85634165536612,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "airlines": "Delta Airlines",
+        "departure_date": "2019-03-07",
+        "destination": "New York",
+        "flight_class": "Premium Economy",
+        "origin": "Philadelphia",
+        "passengers": "3",
+        "return_date": "2019-03-12"
+      },
+      "name": "GetFlights"
+    }
+  ],
+  "pair_id": "pair_3281c94d722dc42056790960",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"airlines\": \"Delta Airlines\", \"departure_date\": \"2019-03-07\", \"destination\": \"New York\", \"flight_class\": \"Premium Economy\", \"origin\": \"Philadelphia\", \"passengers\": \"3\", \"return_date\": \"2019-03-12\"}",
+                "name": "GetFlights"
+              },
+              "id": "chatcmpl-tool-9e7a190ae050ac4c",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784571839,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9ede12d7bea174f0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 78,
+      "prompt_tokens": 12703,
+      "prompt_tokens_details": null,
+      "total_tokens": 12781
+    }
+  },
+  "request_sha256": "6a5d67e6fff318558105971b97e0a84815cf76cfed3cf8e902a5fac1f29d80da",
+  "source_example_id": "mix_dev_0163+durec_src_0721+hb_0105",
+  "status": "success",
+  "target_domain": "GetFlights"
+}

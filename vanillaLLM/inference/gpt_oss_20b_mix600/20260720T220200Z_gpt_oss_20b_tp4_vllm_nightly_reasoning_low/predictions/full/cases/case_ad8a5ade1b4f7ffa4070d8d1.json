@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ad8a5ade1b4f7ffa4070d8d1",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6824022429063916,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_fac8c9d3008440a81613fe96",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(price_range=\"cheap\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. Past: user asked for steakhouse cheap in Santa Rosa, got Cattlemens. Also earlier asked for Italian in Santa Clara, got Fiorillo's. No explicit preference for price or category. But pattern: user wants affordable. Also earlier asked for restaurant in Santa Rosa cheap. So likely wants cheap or moderate. Also location unspecified. So we can default to price_range \"cheap\" or \"moderate\". Maybe also category unspecified. We can choose price_range=\"cheap\". No city. So output: GetRestaurants(price_range=\"cheap\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615124,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9b761d9a14ef3616",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 135,
+      "prompt_tokens": 8839,
+      "prompt_tokens_details": null,
+      "total_tokens": 8974
+    }
+  },
+  "request_sha256": "cc4fc941adfc289c38d0fc2645f39e20ad29e6cb1a597c65f72712f437595e53",
+  "source_example_id": "mix_dev_0278+hb_0161",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2044736f3ee18d414ab0f97e",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.132586520165205,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e229a3317a34c99a338e8d9a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(average_star=\"3\", has_wifi=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user likes 3 star hotels with wifi. Also earlier used 3 star. So set average_star=\"3\", has_wifi=true. location unspecified. So output GetHotels(average_star=\"3\", has_wifi=\"True\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614898,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b48443f255711336",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 80,
+      "prompt_tokens": 11989,
+      "prompt_tokens_details": null,
+      "total_tokens": 12069
+    }
+  },
+  "request_sha256": "054c6c9935233237c81b6242918cf7cbe03a3d41cc7cfa397983b4227d54c372",
+  "source_example_id": "mix_dev_0221+durec_src_0569+hb_0281",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

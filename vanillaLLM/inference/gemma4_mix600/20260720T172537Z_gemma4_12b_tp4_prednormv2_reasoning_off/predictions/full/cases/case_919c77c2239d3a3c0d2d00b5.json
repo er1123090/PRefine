@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_919c77c2239d3a3c0d2d00b5",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.0653220899403095,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "car_type": "Standard",
+        "pickup_location": "Clayton Valley"
+      },
+      "name": "GetRentalCars"
+    }
+  ],
+  "pair_id": "pair_d94acc5c52bec92d0abe21af",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"car_type\": \"Standard\", \"pickup_location\": \"Clayton Valley\"}",
+                "name": "GetRentalCars"
+              },
+              "id": "chatcmpl-tool-ad7a0513b4630658",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784570676,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-952cd93089fd54e5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 27,
+      "prompt_tokens": 11359,
+      "prompt_tokens_details": null,
+      "total_tokens": 11386
+    }
+  },
+  "request_sha256": "18c551e2825033cb9fcc0953812802682701e79658e67343582ef07481344d15",
+  "source_example_id": "mix_dev_0270+durec_src_1002",
+  "status": "success",
+  "target_domain": "GetRentalCars"
+}

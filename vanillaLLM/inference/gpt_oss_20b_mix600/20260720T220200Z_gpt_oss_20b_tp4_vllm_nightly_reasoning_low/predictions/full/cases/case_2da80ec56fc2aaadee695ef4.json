@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2da80ec56fc2aaadee695ef4",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1535734347999096,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c9d570752663285e65ae1ee1",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Washington\", car_type=\"Compact\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No slots given. We infer preferences: earlier user used Compact car, pickup Washington, date 3rd. So likely wants Compact. Also pickup_city Washington. So output GetRentalCars(pickup_city=\"Washington\", car_type=\"Compact\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614929,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-ae037abc19a8dbc2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 80,
+      "prompt_tokens": 9306,
+      "prompt_tokens_details": null,
+      "total_tokens": 9386
+    }
+  },
+  "request_sha256": "46022eb3e3b6f6a2b0352ff16af5eacd5f9394c80993c59166ce9dc186d8d292",
+  "source_example_id": "mix_dev_0056+hb_0089",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

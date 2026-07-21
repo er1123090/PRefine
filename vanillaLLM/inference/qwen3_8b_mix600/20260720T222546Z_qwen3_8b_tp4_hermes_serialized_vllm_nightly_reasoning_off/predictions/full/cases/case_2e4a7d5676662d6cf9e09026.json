@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_2e4a7d5676662d6cf9e09026",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 7.841689205728471,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Korean Barbeque",
+        "city": "Concord",
+        "date": "2019-03-01",
+        "number_of_seats": "2",
+        "price_range": "moderate"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_4f6866539da1cf84d87c5857",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Korean Barbeque\", \"city\": \"Concord\", \"date\": \"2019-03-01\", \"number_of_seats\": \"2\", \"price_range\": \"moderate\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-b43fe0d95c91b46a",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587209,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a0953567bd43ec87",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 64,
+      "prompt_tokens": 11604,
+      "prompt_tokens_details": null,
+      "total_tokens": 11668
+    }
+  },
+  "request_sha256": "cf66b8c9ab84767f4012227e842b8aaa21e3b7075fd30abd2abd6ca55aa8c6f1",
+  "source_example_id": "mix_dev_0212+durec_src_0515+hb_0273",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

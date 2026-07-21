@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_08f52d0f3463539d224dcc81",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 9.32045293878764,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "Barnes Foundation",
+        "number_of_seats": "4",
+        "shared_ride": true
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_86da1a3141ace35a8252d238",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"Barnes Foundation\", \"number_of_seats\": \"4\", \"shared_ride\": true}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-b61154024af0a10b",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784586829,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-adf469e8dc82d103",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 41,
+      "prompt_tokens": 10040,
+      "prompt_tokens_details": null,
+      "total_tokens": 10081
+    }
+  },
+  "request_sha256": "251f44351efbbf02d926544d04bd0635aa9030b5c5b97a4963d8aa2cf38df3fd",
+  "source_example_id": "mix_dev_0082+hb_0302",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

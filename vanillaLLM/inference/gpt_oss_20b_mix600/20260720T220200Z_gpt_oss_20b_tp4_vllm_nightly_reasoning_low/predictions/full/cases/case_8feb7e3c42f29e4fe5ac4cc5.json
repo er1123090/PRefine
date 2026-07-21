@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8feb7e3c42f29e4fe5ac4cc5",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.6407597837969661,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f532e2f9c6e1f7d13f06084c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants hotels. No specifics. From history, user often wants 1 room, 3 days, prefers wifi, maybe 4 star. But no explicit. We can default to no slots. So call GetHotels with empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615081,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-936bcabc64cc1f9b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 66,
+      "prompt_tokens": 11188,
+      "prompt_tokens_details": null,
+      "total_tokens": 11254
+    }
+  },
+  "request_sha256": "9e31986a2e4b6c4711296665f8b3df435102f5b4dc922369984bc3b0dc238f94",
+  "source_example_id": "mix_dev_0267+durec_src_1286+hb_0208",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

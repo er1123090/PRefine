@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_aa9d8d4a6edf209f1ef3a4d2",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8730963263660669,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_02632f30fe735c43c35b016b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Indian\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history, user likes spicy Indian, also earlier asked for restaurant in Santa Rosa, Kafal. Also earlier asked for Italian in Redwood City. So preferences: category? They said spicy Indian. So category \"Indian\". Also maybe price_range? Not specified. So output GetRestaurants with category=\"Indian\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615119,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-af366061086b017b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 91,
+      "prompt_tokens": 11849,
+      "prompt_tokens_details": null,
+      "total_tokens": 11940
+    }
+  },
+  "request_sha256": "3ac7230058057245593a9e4e4fdec80d9d762600113419cf3d35b1f8099e56a6",
+  "source_example_id": "mix_dev_0210+durec_src_0510+hb_0287",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

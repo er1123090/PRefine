@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_20d0725c61c656ddeca01643",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9711432019248605,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d11457915577e6f140c2ea3f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(average_star=\"3\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user often wants 3-star hotels. Also sometimes 4-star. But pattern: Session5: 3-star. Session9: 4-star. Likely prefers 3-star. We'll output GetHotels(average_star=\"3\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614899,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-938f019515112cc3",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 78,
+      "prompt_tokens": 8962,
+      "prompt_tokens_details": null,
+      "total_tokens": 9040
+    }
+  },
+  "request_sha256": "ea9ee33588a1157ed43ea6e6c4c16135a520caafe588a9490a4c4f6d660e089e",
+  "source_example_id": "mix_dev_0243+hb_0032",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

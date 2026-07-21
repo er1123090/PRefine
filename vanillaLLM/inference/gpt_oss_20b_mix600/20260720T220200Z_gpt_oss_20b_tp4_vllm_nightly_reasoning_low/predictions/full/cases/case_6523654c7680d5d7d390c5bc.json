@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_6523654c7680d5d7d390c5bc",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.116918464191258,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_5fc1c69ded9511b97cd2013c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"San Francisco\", category=\"Museum\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel with category maybe \"Museum\" or \"Art exhibition\" category? In schema category includes \"Museum\". So slot category=\"Museum\", location=\"San Francisco\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615024,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9804babb8f1b8834",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 60,
+      "prompt_tokens": 8112,
+      "prompt_tokens_details": null,
+      "total_tokens": 8172
+    }
+  },
+  "request_sha256": "8ee107fb99312c5fe0098c7da174e7d3cb777b8bcac62119d3a4aeeb674f38fe",
+  "source_example_id": "dev_0239",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

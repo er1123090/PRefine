@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_58d89c7fd2be0f67dee431cb",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1755456123501062,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e86e76a98b3a4977b2db473d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Leehom Wang\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants to listen to some music. We need to output GetMusic with inferred artist or song_name? From history, user likes Leehom Wang. So default artist Leehom Wang. No song specified. So output GetMusic(artist=\"Leehom Wang\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615005,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bfa66af5223c5b0d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 81,
+      "prompt_tokens": 8070,
+      "prompt_tokens_details": null,
+      "total_tokens": 8151
+    }
+  },
+  "request_sha256": "02f08362da6831d8c7385f86fded94c9404da3a9f68d43f6973f9584f9e92725",
+  "source_example_id": "mix_durec_src_0652+hb_0136",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

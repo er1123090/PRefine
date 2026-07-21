@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_1e9d07013bb3935289883363",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.2632094360888004,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_524138be785a1ef804ff56ac",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for travel domain. From history, user often chooses flights with specific airlines? In session13: chose American Airlines. Session5: bus from Fresno. For travel, likely wants flights. Preferences: maybe prefers economy? Not clear. For GetTravel? They want travel options. We need to output function call. Probably GetTravel with location? They didn't specify. We infer they want travel options, maybe destination unspecified. We can provide empty? But need slot values. Maybe default: category? Not sure. Maybe they want travel options: likely GetTravel with location unspecified. We can leave empty. But need to output function call with slots. We can choose GetTravel with no slots? But schema requires object. We can provide empty object. Let's output GetTravel().\n\n",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614895,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-87b5bf75b9f94644",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 172,
+      "prompt_tokens": 12157,
+      "prompt_tokens_details": null,
+      "total_tokens": 12329
+    }
+  },
+  "request_sha256": "936e0d5045f82ff00a1579021140467d455f33627fc8149942b8b9e1278d4be4",
+  "source_example_id": "mix_dev_0087+durec_src_0532+hb_0096",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

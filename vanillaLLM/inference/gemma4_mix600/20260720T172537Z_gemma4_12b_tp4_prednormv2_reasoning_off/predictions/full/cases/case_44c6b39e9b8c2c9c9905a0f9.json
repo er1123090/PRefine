@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_44c6b39e9b8c2c9c9905a0f9",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 10.706870508380234,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "good_for_kids": true,
+        "location": "Orlando"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_e329df1796a7217f0672dcef",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"good_for_kids\": true, \"location\": \"Orlando\"}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-ad3873cf02b1be33",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569680,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9d2ee4acfcd43e7f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 22,
+      "prompt_tokens": 11199,
+      "prompt_tokens_details": null,
+      "total_tokens": 11221
+    }
+  },
+  "request_sha256": "73d3bab7716bd80ff585024c46aa1baa57a2d66c8957a037b71c22de07e6206e",
+  "source_example_id": "mix_dev_0147+hb_0043",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

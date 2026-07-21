@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_454fbca2c9f4c4f4f8e0a05d",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.7609080718830228,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_072fe4cd7af794625808cc9f",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Berkeley\", departure_date=\"2019-03-11\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Slots: category, free_entry, good_for_kids, location, departure_date, destination. User says short trip to Berkeley, March 11, one night. Likely travel category unspecified. We infer preferences: earlier user wanted free child-friendly attraction in Philadelphia, 4 star hotel with Wi-Fi. So maybe wants free entry? Not sure. Use location=\"Berkeley\". departure_date=\"2019-03-11\" (assuming year). destination maybe \"Berkeley\". free_entry maybe true? good_for_kids maybe true? But not sure. Use defaults none. Provide minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614971,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-988a1b48a917d079",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 151,
+      "prompt_tokens": 10162,
+      "prompt_tokens_details": null,
+      "total_tokens": 10313
+    }
+  },
+  "request_sha256": "ef78042c72eb304123ede1399a04b84c2393b0cbf94bb28137afd18b2fa9cfd3",
+  "source_example_id": "mix_dev_0226+durec_src_1005+hb_0353",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

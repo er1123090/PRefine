@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_cd8c414097e286807647aff9",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7410499481484294,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e2c45ef8a753ef20fab21a20",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"San Mateo\", price_range=\"cheap\")",
+          "function_call": null,
+          "reasoning": "Need GetRestaurants. No preferences given. From history, user likes cheap, noodles. So set category maybe \"Noodles\" not in enum. Use price_range \"cheap\". city maybe \"San Mateo\" from earlier. So output GetRestaurants(city=\"San Mateo\", price_range=\"cheap\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615172,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bb7a5e8fab13c245",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 80,
+      "prompt_tokens": 9649,
+      "prompt_tokens_details": null,
+      "total_tokens": 9729
+    }
+  },
+  "request_sha256": "7e466810ec71ec5bceba1efb1125ca2584e0416d55f03ac44ffd97558f9d04cb",
+  "source_example_id": "mix_dev_0262+durec_src_0207+hb_0087",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

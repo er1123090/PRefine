@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0888a481796dc53ea1c9e97b",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.9565623914822936,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_410c42930b04d1ae1a89f52a",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"San Francisco\", category=\"Thai\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. No preferences given. From history, user likes spicy noodles, wants San Fran. Also earlier restaurant: Baan Thai House & wine bar. So likely wants Asian/Thai. We'll set city=\"San Francisco\", category=\"Thai\" maybe. No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614822,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b9279ea03ceed4c5",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 78,
+      "prompt_tokens": 9197,
+      "prompt_tokens_details": null,
+      "total_tokens": 9275
+    }
+  },
+  "request_sha256": "aefb9b4cf2901cbdf7e264f806eaa67d92b598e6a94955ab2b7d772eaa3f6d0f",
+  "source_example_id": "mix_dev_0082+hb_0302",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_226853b824cfee6d89f1c813",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.9211661964654922,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f1d1af9fef0b09b8854f9552",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBanks(recipient_account_type=\"checking\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetBanks: recipient_account_type. From history: Session4: user asked checking account balance, then transfer? They said \"I need to find a restaurant there.\" Later \"I need to find a restaurant there.\" Then later \"I need to find a restaurant there.\" Not relevant. In Session8: user asked flight, then asked balance of savings, then checking. Then \"Are you looking to make a bank transfer?\" User: Yes please from my checking account to Kagiso. So transfer from checking. So preference likely checking. Also earlier Session4: user asked checking account balance. So likely checking. So output GetBanks(recipient_account_type=\"checking\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614905,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a669e20359c42d85",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 158,
+      "prompt_tokens": 10753,
+      "prompt_tokens_details": null,
+      "total_tokens": 10911
+    }
+  },
+  "request_sha256": "e2fd38f33c729be59e4bbee821a440b21a832f23aa490bd2c7a015e32a088c8e",
+  "source_example_id": "mix_dev_0272+durec_src_0538+hb_0344",
+  "status": "model_no_tool",
+  "target_domain": "GetBanks"
+}

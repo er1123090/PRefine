@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_44bc6a309b34ff2e085ee955",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.6227078484371305,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_32c09b084d247c8929ed1445",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. Past: user asked for restaurant in Fremont (Malaysian) and in Sebastopol (American). No explicit preference. But maybe they like Malaysian? Not consistent. We can default to no slot. So call GetRestaurants with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614970,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b39464bc706e2b79",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 71,
+      "prompt_tokens": 8871,
+      "prompt_tokens_details": null,
+      "total_tokens": 8942
+    }
+  },
+  "request_sha256": "93e8f15f87891f242a6deac914beda9909e74ebf85a95e82bdc59ea90fe70c9e",
+  "source_example_id": "dev_0217",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

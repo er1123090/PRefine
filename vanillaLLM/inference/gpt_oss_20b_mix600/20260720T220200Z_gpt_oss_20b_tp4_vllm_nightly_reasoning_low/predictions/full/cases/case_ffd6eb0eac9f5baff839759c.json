@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ffd6eb0eac9f5baff839759c",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8898580046370625,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_abdd8c9145c10ebdad744d60",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2019-03-09\", origin=\"San Francisco\", destination=\"Seattle\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines?, departure_date, destination, flight_class?, origin, passengers?, return_date?. From history, user often chooses economy? Not seen. No preference. So leave empty. Provide date, origin, destination. Output format: GetFlights(departure_date=\"2019-03-09\", origin=\"San Francisco\", destination=\"Seattle\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615234,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b69fcc90a29b4a48",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 109,
+      "prompt_tokens": 9119,
+      "prompt_tokens_details": null,
+      "total_tokens": 9228
+    }
+  },
+  "request_sha256": "592108a3b650c95a6074a656ab3192047213fb9e65591395711179c37ce82871",
+  "source_example_id": "mix_dev_0150+hb_0004",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_75681bbece2dfd0c7fe3cb6b",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.7397215217351913,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "Blue Note Napa",
+        "number_of_seats": "3",
+        "shared_ride": true
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_47c264c50295e3810638f865",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"Blue Note Napa\", \"number_of_seats\": \"3\", \"shared_ride\": true}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-8b243f2226bdeb37",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587643,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9fc23d4398e0f6d6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 41,
+      "prompt_tokens": 11369,
+      "prompt_tokens_details": null,
+      "total_tokens": 11410
+    }
+  },
+  "request_sha256": "74bbdd778f2f3d86a3f31b4e50784d186a80cf0e0ca4ffde6f32e75fb53bdd00",
+  "source_example_id": "mix_dev_0315+durec_src_0485+hb_0027",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

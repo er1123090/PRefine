@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_39d8fa63d13e298d97f879a4",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1350271319970489,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_06fe52975306d1d3f2e9919e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", shared_ride=\"False\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Destination \"39145 Farwell Drive\". number_of_seats? user didn't specify, default 1. shared_ride? not mentioned, assume False? In past, when not specified, they asked. Here user didn't say. We can default to False. So output: GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", shared_ride=\"False\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614954,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-89eecc846c0b4147",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 119,
+      "prompt_tokens": 13000,
+      "prompt_tokens_details": null,
+      "total_tokens": 13119
+    }
+  },
+  "request_sha256": "04195be4a722b9e1044c84eb6fd921bf238d96156d2e2d0bb05679ec9eb2f0cb",
+  "source_example_id": "mix_dev_0015+durec_src_0969+hb_0384",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

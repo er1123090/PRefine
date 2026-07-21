@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_bba96d6f485b3745523495af",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.6469479771330953,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_61b044114dde3e89235ba820",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Compact\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No preferences given. From history, user often wants compact or standard. In session3 compact, session4 standard. No pattern. Maybe default compact? We'll choose car_type=\"Compact\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615147,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b0b232fd9fd4ceae",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 65,
+      "prompt_tokens": 6943,
+      "prompt_tokens_details": null,
+      "total_tokens": 7008
+    }
+  },
+  "request_sha256": "9046b7c50ebad127d8a1e4c453813adb56c2fc845caedc47afc6c1ea5de497ad",
+  "source_example_id": "dev_0037",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

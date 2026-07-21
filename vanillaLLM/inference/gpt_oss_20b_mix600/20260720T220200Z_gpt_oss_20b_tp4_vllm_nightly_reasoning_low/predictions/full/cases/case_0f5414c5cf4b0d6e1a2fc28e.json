@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0f5414c5cf4b0d6e1a2fc28e",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.4806041959673166,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d2781cbec9ff8e0ad5a2ef11",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", pickup_time=\"in 30 minutes\", shared_ride=\"false\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. User says need a ride to get across town to 39145 Farwell Drive. No seats, no shared, pickup time about half an hour from now. We can set pickup_time maybe \"in 30 minutes\" or a time string. Use default? We can set pickup_time=\"in 30 minutes\". number_of_seats unspecified, maybe default 1. shared_ride false. Output format: GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", pickup_time=\"in 30 minutes\", shared_ride=\"false\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614847,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-91181d788b97fe9d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 178,
+      "prompt_tokens": 9116,
+      "prompt_tokens_details": null,
+      "total_tokens": 9294
+    }
+  },
+  "request_sha256": "f1ec1a64ec92ab05597a4b2136553eff3b69c7a7d2b5a6cef8335cbbab2ef089",
+  "source_example_id": "dev_0042",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

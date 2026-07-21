@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_2d413de72a607335370ad9ee",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.118239971809089,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_442cd2baff953176c41fe0b7",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need slots: airlines, departure_date, destination, flight_class, origin, passengers, return_date. User says planning a trip, search available flights. No specifics. Use past pattern: default maybe no preference. But we can infer from history: user often uses American Airlines, prefers economy? In session7 used American and Alaska. In session16 used American. So likely American. No date, origin/destination unknown. We can leave empty. So call with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614929,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a61d0d3c5843d1eb",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 113,
+      "prompt_tokens": 10428,
+      "prompt_tokens_details": null,
+      "total_tokens": 10541
+    }
+  },
+  "request_sha256": "8126740b8fbfb473ec95fbdccdfe9820975d2e6e0cebd7a9455119f53067ad71",
+  "source_example_id": "mix_dev_0131+durec_src_0415+hb_0429",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

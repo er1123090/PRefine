@@ -1,0 +1,76 @@
+{
+  "attempts": 1,
+  "case_id": "case_36934e344414a5cede3176bd",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 6.010515083558857,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "departure_date": "2019-03-11",
+        "destination": "Washington",
+        "flight_class": "Economy",
+        "origin": "San Diego",
+        "passengers": "2",
+        "return_date": "2019-03-13"
+      },
+      "name": "GetFlights"
+    }
+  ],
+  "pair_id": "pair_440ddaca5cd49b0770c582f4",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"origin\": \"San Diego\", \"destination\": \"Washington\", \"departure_date\": \"2019-03-11\", \"return_date\": \"2019-03-13\", \"flight_class\": \"Economy\", \"passengers\": \"2\"}",
+                "name": "GetFlights"
+              },
+              "id": "chatcmpl-tool-b35a9fe0b84cf23b",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587265,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-94fac40d177c20d2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 75,
+      "prompt_tokens": 11113,
+      "prompt_tokens_details": null,
+      "total_tokens": 11188
+    }
+  },
+  "request_sha256": "997fc96c063b58db10820f530c288e92da0715ae9ed0028407302f8d8d2cfcc1",
+  "source_example_id": "mix_dev_0279+durec_src_0522+hb_0243",
+  "status": "success",
+  "target_domain": "GetFlights"
+}

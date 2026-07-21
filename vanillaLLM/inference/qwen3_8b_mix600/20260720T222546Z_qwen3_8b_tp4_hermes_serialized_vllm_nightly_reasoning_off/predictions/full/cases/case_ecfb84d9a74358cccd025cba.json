@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_ecfb84d9a74358cccd025cba",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.4528422886505723,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "has_wifi": true,
+        "location": "San Francisco",
+        "number_of_days": "10"
+      },
+      "name": "GetHotels"
+    }
+  ],
+  "pair_id": "pair_1b77bb21c5a1c2f818384182",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"location\": \"San Francisco\", \"number_of_days\": \"10\", \"has_wifi\": true}",
+                "name": "GetHotels"
+              },
+              "id": "chatcmpl-tool-ab21c2f6d1646838",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588387,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bd5dc855e5b4d060",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 37,
+      "prompt_tokens": 10294,
+      "prompt_tokens_details": null,
+      "total_tokens": 10331
+    }
+  },
+  "request_sha256": "e1f314d7942e163b93d71a85de2ef61ceeb9fb2f6bdf48199e2f003a796f72e5",
+  "source_example_id": "mix_dev_0084+hb_0276",
+  "status": "success",
+  "target_domain": "GetHotels"
+}

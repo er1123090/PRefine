@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f4fefce0530716afb4cd0b5f",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.585749151185155,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_db279e7f5b20d106ad637e03",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetBuses(origin=\"\", destination=\"\", departure_date=\"\", group_size=\"\")",
+          "function_call": null,
+          "reasoning": "We need GetBuses. Need slots: origin, destination, departure_date, group_size. From history, user wants bus options for trip. No specifics. Use pattern: often origin from user. Maybe default? We infer likely origin? In past, user asked bus options from Washington to Philadelphia. But current utterance generic. We can guess origin? Maybe user hasn't specified. We can leave empty? But need values. We can infer from previous sessions: user often from Washington or Seattle. But no context. Maybe use last used origin: Washington. Destination? maybe Philadelphia? But uncertain. We can set empty? But schema requires strings optional. We can provide empty strings. Let's output GetBuses with empty values.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615221,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-851b24af1a3b4ad0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 169,
+      "prompt_tokens": 8317,
+      "prompt_tokens_details": null,
+      "total_tokens": 8486
+    }
+  },
+  "request_sha256": "0020600a7162fd84619fb8961106832b7c54845e37da81fd3a9a11d1637762fe",
+  "source_example_id": "dev_0009",
+  "status": "model_no_tool",
+  "target_domain": "GetBuses"
+}

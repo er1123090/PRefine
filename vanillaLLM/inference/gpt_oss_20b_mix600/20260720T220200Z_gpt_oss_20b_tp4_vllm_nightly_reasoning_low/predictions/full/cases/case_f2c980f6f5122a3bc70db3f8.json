@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f2c980f6f5122a3bc70db3f8",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.5298630874603987,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3df55a1e08465ca4303316dc",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(destination=\"San Francisco\", departure_date=\"2023-03-11\", number_of_days=\"1",
+          "function_call": null,
+          "reasoning": "We need GetTravel? They plan trip to Berkeley, one night. Need destination, departure_date, maybe category? Not specified. Use GetTravel with destination=\"Berkeley\"? Not in enum. Travel domain has location enum includes many cities but not Berkeley. Maybe use GetFlights? They plan short trip, likely flight. Destination Berkeley? Not in list. Maybe GetHotels? They stay one night. Need location=Berkeley not in list. Maybe GetTravel with destination? Not in enum. Could use GetHotels with location? Not Berkeley. Maybe GetFlights with destination? Not Berkeley. So maybe GetTravel with destination \"Berkeley\" but not in enum. But we can still provide? The schema requires enum. We must choose closest: \"San Francisco\" maybe. But user said Berkeley. We could set destination=\"San Francisco\" as nearest. Provide departure_date \"2023-03-11\". number_of_days \"1\". category maybe \"Tourist Attraction\"? Not needed. We'll output GetTravel(destination=\"San Francisco\", departure_date=\"2023-03-11\", number_of_days=\"1\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615218,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-84ece1c28c12c624",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 256,
+      "prompt_tokens": 10248,
+      "prompt_tokens_details": null,
+      "total_tokens": 10504
+    }
+  },
+  "request_sha256": "110246bc5adb31c6192576440e13923110f7c7907a5487d7526a56a47b65163e",
+  "source_example_id": "mix_dev_0279+durec_src_0522+hb_0243",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

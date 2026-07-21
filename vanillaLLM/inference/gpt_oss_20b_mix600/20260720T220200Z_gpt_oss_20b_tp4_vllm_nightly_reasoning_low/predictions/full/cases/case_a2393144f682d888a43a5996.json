@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a2393144f682d888a43a5996",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8234033174812794,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a234103500e60415605c5d07",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Compact\", pickup_city=\"Concord\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No preferences given. From history, user liked Compact cars. Also earlier used Compact. So default car_type Compact. No pickup_city known. Probably Concord? In session5 they used Concord. So pickup_city Concord. No dates. We'll leave empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615109,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aec30021093850d8",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 80,
+      "prompt_tokens": 10493,
+      "prompt_tokens_details": null,
+      "total_tokens": 10573
+    }
+  },
+  "request_sha256": "e7d6454a7bc6610cb5a3fb84beb1d4441d797cb237c45268a2f20fa6e610ae42",
+  "source_example_id": "mix_dev_0047+durec_src_0547+hb_0108",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

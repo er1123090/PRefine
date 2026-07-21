@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_17c542deedc04225a2e539ce",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.6428601602092385,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b0f4e8b65e24da6f303782a8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(airlines=\"United Airlines\", flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. No preferences given. From history, user used United Airlines, Economy. Likely preference. So output GetFlights(airlines=\"United Airlines\", flight_class=\"Economy\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614876,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-be7a66e4393fc60f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 65,
+      "prompt_tokens": 10134,
+      "prompt_tokens_details": null,
+      "total_tokens": 10199
+    }
+  },
+  "request_sha256": "038c613d17eaf04dc98728a70e72405412f7ab3099de6a0125e07dfa62a1f55a",
+  "source_example_id": "mix_dev_0220+durec_src_0428+hb_0334",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_952d2a9768ea215ad094c3ae",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2153520714491606,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_be41d87e3920f490b8a74862",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(has_wifi=\"true\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants hotels. No specifics. From history, user often wants wifi, 3-star, etc. In session 15, user wanted 3-star. In session 16, user wanted wifi. In session 13, user looked for 2-star. So preferences: wifi yes, 3-star? But not consistent. Maybe default: wifi. Also location unspecified. We can output GetHotels with has_wifi=true. No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615091,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bc2b90bf64110a70",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 113,
+      "prompt_tokens": 11455,
+      "prompt_tokens_details": null,
+      "total_tokens": 11568
+    }
+  },
+  "request_sha256": "94a8ed343cbae7d7a257f2a2bb35ec31f54b974c14145dd3757bb4b389c2d64c",
+  "source_example_id": "mix_dev_0021+durec_src_0825+hb_0405",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e96c4edde1e7a2f5ffb608de",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7857623593881726,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_3f53594656bf52173a3782ee",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "Restaurants()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history, user asked for restaurants? Session 7 had hotels, not restaurants. No restaurant preferences. But maybe they prefer price_range? In session 7, they asked for hotels. No restaurant. So no preference. We can leave empty. Output format: Restaurants(domain). So: Restaurants()",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615207,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-95543b00a2a1c04d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 81,
+      "prompt_tokens": 11588,
+      "prompt_tokens_details": null,
+      "total_tokens": 11669
+    }
+  },
+  "request_sha256": "9f5099f231fa310766f02f644094d7f031772320e9ebb2b7062a75040252edcc",
+  "source_example_id": "mix_dev_0320+durec_src_0220+hb_0168",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

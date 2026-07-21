@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_69fb6024ddc55d16ff3875ac",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.344025551341474,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_e7af11b291383a0854ca9cbf",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"Vallejo\", check_in_date=\"2023-03-05\", number_of_days=\"1\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. Slots: location=Vallejo, check_in_date=2023-03-05? date format likely \"2019-03-05\" but use \"2023-03-05\". number_of_days=1. No other preferences. Output format: GetHotels(location=\"Vallejo\", check_in_date=\"2023-03-05\", number_of_days=\"1\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615031,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a4b4a1277ab29ab1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 118,
+      "prompt_tokens": 8947,
+      "prompt_tokens_details": null,
+      "total_tokens": 9065
+    }
+  },
+  "request_sha256": "79b9570b9518463384fed71778c7fb8ee3299dd7b9e870e9cbbe171a3a2d4305",
+  "source_example_id": "mix_dev_0251+hb_0118",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

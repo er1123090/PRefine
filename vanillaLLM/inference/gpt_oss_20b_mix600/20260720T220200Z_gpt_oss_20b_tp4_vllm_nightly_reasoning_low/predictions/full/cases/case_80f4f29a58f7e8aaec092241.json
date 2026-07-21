@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_80f4f29a58f7e8aaec092241",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6273564146831632,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_eb82a98f6e34bfb43d0898f6",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for travel domain. From history, user likes economy flights, prefers American Airlines or Southwest, 0 bags, 0 stops. Also bus from Washington to New York. For travel, likely wants flights. So GetTravel? Actually travel domain includes category etc. But user says \"explore travel options\" ambiguous. Maybe GetFlights. Provide most frequent: economy, 0 stops, airlines American or Southwest. We'll output GetFlights with inferred defaults: flight_class=\"Economy\", airlines=\"American Airlines\", passengers=\"1\", origin unknown, destination unknown. But we need slots. We can leave optional. Provide empty? We need at least function name. Provide empty object.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615062,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b8dcb51ef1db73bb",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 153,
+      "prompt_tokens": 10576,
+      "prompt_tokens_details": null,
+      "total_tokens": 10729
+    }
+  },
+  "request_sha256": "b9260029f22ce4d53ae9af9c6cfbea3740cf4243c85dd25f85141902afd4441b",
+  "source_example_id": "mix_dev_0127+durec_src_0622+hb_0200",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_7c9a23d511889431bd370d92",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4186680186539888,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_35a03e3e27432eeb8fd2347b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Asian\", price_range=\"moderate\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for restaurant domain. From history, user likes Asian fusion, moderate price, vegetarian options. Also earlier asked for restaurant in San leandro, Asian fusion, moderate price. So preference: category Asian, price_range moderate, maybe vegetarian. Also city unspecified. So output GetRestaurants with category=\"Asian\", price_range=\"moderate\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615055,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b41ed22e3c1177da",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 93,
+      "prompt_tokens": 12577,
+      "prompt_tokens_details": null,
+      "total_tokens": 12670
+    }
+  },
+  "request_sha256": "e6325345cd8df6a71d82bc9fa9a24682aa835d307ad3a0a104b420bdd095896e",
+  "source_example_id": "mix_dev_0099+durec_src_0572+hb_0102",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

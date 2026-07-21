@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_012f2eb228c0fe7e68bb6312",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.8459158055484295,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_6e5f9775499a4487352b00e8",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMovies(genre=\"Fantasy\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for domain likely GetMovies or GetMedia? User: \"I’m looking for something to watch.\" No context. We need deduce preference from history. They often watch movies, music. Preference: movie genre? Past: Fantasy, Adventure, etc. They liked Fantasy, Adventure. Also liked Tim Burton, Michael Buffer. But general preference maybe \"Fantasy\" or \"Adventure\". Also they like movies with subtitles? Not sure. I'll choose GetMovies with genre \"Fantasy\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614796,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9e220b7443be9983",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 117,
+      "prompt_tokens": 11309,
+      "prompt_tokens_details": null,
+      "total_tokens": 11426
+    }
+  },
+  "request_sha256": "30f7c1b431008fb042e96c2a93d44d2282d4b2527c6de3b94538a1f719cd43fb",
+  "source_example_id": "mix_dev_0109+durec_src_0404+hb_0248",
+  "status": "model_no_tool",
+  "target_domain": "GetMedia"
+}

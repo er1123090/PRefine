@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_b73fe10adcab6873341876f5",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.123384764418006,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a74ccfd0e4c725b5acfdc2fc",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", number_of_seats=\"1\", pickup_time=\"30 minutes from now\", shared_ride=\"false\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, number_of_seats, pickup_time, shared_ride? User didn't specify seats or shared. Default? Probably 1 seat, not shared. pickup_time: about half an hour from now. We don't have current time. Use placeholder? Maybe \"30 minutes from now\". We'll set pickup_time=\"30 minutes from now\". shared_ride=false.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615141,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b783360a9dfbcea6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 121,
+      "prompt_tokens": 10289,
+      "prompt_tokens_details": null,
+      "total_tokens": 10410
+    }
+  },
+  "request_sha256": "0a0c0340d3cc2f6a7fb83d5e316c4fbccc9673d3df9cd0e1b91cf5fb976774b1",
+  "source_example_id": "mix_dev_0172+durec_src_0331+hb_0487",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

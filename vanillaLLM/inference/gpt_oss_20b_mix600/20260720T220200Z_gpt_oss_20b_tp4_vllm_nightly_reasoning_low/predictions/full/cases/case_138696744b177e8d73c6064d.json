@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_138696744b177e8d73c6064d",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.701333014294505,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_534357f66312dd8e3cebad69",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Leslie Cheung\", playback_device=\"phone\", song_name=\"Run Toward the Future\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetMusic. Slots: artist, playback_device, song_name. User wants music. No specifics. From history, user likes Leslie Cheung songs. Also likes music events. Likely prefers Leslie Cheung. Playback device? Not specified. Maybe default phone? But we can guess \"phone\". Song_name? Not specified. We can leave empty? But need values. We can choose artist=\"Leslie Cheung\", playback_device=\"phone\", song_name=\"\"? But schema requires string. Maybe choose a popular song: \"Run Toward the Future\". Use that. So output: GetMusic(artist=\"Leslie Cheung\", playback_device=\"phone\", song_name=\"Run Toward the Future\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614865,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8938ba0816603d5b",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 181,
+      "prompt_tokens": 10781,
+      "prompt_tokens_details": null,
+      "total_tokens": 10962
+    }
+  },
+  "request_sha256": "89862f9772fd9302f1d4d5ec005b57fd135635aa5aadb2a587dd0fa766fddaf2",
+  "source_example_id": "mix_dev_0029+durec_src_0681+hb_0427",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

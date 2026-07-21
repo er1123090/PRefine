@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_bd5735b4f0a3d33c2350ba91",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 5.9175562700256705,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Music",
+        "city": "San Francisco",
+        "date": "2019-03-11"
+      },
+      "name": "GetEvents"
+    }
+  ],
+  "pair_id": "pair_1c316ac7cd11024673b0205e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Music\", \"city\": \"San Francisco\", \"date\": \"2019-03-11\"}",
+                "name": "GetEvents"
+              },
+              "id": "chatcmpl-tool-819ed0b7c78301fa",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588088,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b2086ec5ce14ee7a",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 42,
+      "prompt_tokens": 11618,
+      "prompt_tokens_details": null,
+      "total_tokens": 11660
+    }
+  },
+  "request_sha256": "2a8e579fec1ec4ca0f453c47053e1220618ddce9a0627ae6c078e3ea44dc61c2",
+  "source_example_id": "mix_dev_0258+durec_src_0028+hb_0423",
+  "status": "success",
+  "target_domain": "GetEvents"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_740590092a9f2f004c059f21",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1295140031725168,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_49f3a9aad168d2ae6c4dd5f3",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(location=\"San Francisco\")",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user booked 2-star hotel in SF, 3-star in London. Likely prefers 2-3 star. Also wants wifi? Not sure. We'll guess average_star=\"2\" or \"3\". Maybe 2-star. Provide location unspecified. We'll just leave empty? But need at least slot? We can provide no slots. But format requires slots. We can set location=\"San Francisco\" maybe. Let's output GetHotels(location=\"San Francisco\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615043,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9d80261cf81db20c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 121,
+      "prompt_tokens": 10724,
+      "prompt_tokens_details": null,
+      "total_tokens": 10845
+    }
+  },
+  "request_sha256": "e71bc38be644c25772d327d60f0146d21ab87c5069aaceca630f7c5541bb6646",
+  "source_example_id": "mix_dev_0260+durec_src_1288+hb_0055",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

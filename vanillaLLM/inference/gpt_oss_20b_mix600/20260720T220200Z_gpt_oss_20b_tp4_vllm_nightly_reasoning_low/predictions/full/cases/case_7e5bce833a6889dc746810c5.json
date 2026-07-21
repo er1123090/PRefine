@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_7e5bce833a6889dc746810c5",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4514505621045828,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a0ef4dd450b9e8b31d909ee2",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2019-03-12\", origin=\"Los Angeles\", destination=\"Denver\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Need airlines? not specified. Use pattern: previous flights often United. But user didn't specify. We can leave airlines unspecified. Also passengers? default 1. flight_class? not specified. So output: GetFlights(departure_date=\"2019-03-12\", origin=\"Los Angeles\", destination=\"Denver\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615059,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-894e4d38d7d6b965",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 102,
+      "prompt_tokens": 8136,
+      "prompt_tokens_details": null,
+      "total_tokens": 8238
+    }
+  },
+  "request_sha256": "498c040fa47b32ff940cb9ccf99c3e144ee705f5cf2aabfe24e2cbef2e8da6cb",
+  "source_example_id": "dev_0239",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

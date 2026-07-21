@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_bed65a703d84aeeab24a7814",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8383870897814631,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_411d30e7cbb25f8ec1e47dcf",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Compact\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need slots: car_type, dropoff_date, pickup_city, pickup_date, pickup_location, pickup_time. No info given. Use preferences: earlier user chose Compact. Likely same. No dates. We can leave empty. Output format: GetRentalCars(car_type=\"Compact\")? but need all slots? Provide only known.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615150,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b623597a4b7a2f50",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 91,
+      "prompt_tokens": 9086,
+      "prompt_tokens_details": null,
+      "total_tokens": 9177
+    }
+  },
+  "request_sha256": "6333645d142bb274d04a18eceae58091ff24aaad3b3097dfd22676ab0dd32bc5",
+  "source_example_id": "mix_dev_0036+durec_src_0800+hb_0452",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

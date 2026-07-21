@@ -1,0 +1,69 @@
+{
+  "attempts": 1,
+  "case_id": "case_55d23161f941a5330f177bae",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.3838087124750018,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {},
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_1eb4fe0b3708feb48ac3b3e0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-90c1fbf586de9a3a",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784569899,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9665cfa65b8ddcf7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 8,
+      "prompt_tokens": 13593,
+      "prompt_tokens_details": null,
+      "total_tokens": 13601
+    }
+  },
+  "request_sha256": "192847af49d56b1898be539e4115b9cc69ffac9bb1ed618876ba93689ae4a907",
+  "source_example_id": "mix_dev_0331+durec_src_1229+hb_0436",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

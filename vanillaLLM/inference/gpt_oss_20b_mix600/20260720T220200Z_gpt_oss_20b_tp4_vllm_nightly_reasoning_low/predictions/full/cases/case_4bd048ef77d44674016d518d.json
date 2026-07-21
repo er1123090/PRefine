@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4bd048ef77d44674016d518d",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.0672564366832376,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_820c1a221a79aad53787bdcb",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Compact\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants rental car. We need GetRentalCars. Need slots: car_type, dropoff_date, pickup_city, pickup_date, pickup_location, pickup_time. From history, user often picks Standard or Compact. In session4, Standard. Session7 Compact. Session8 Standard. Session14 Compact. Preference: likely Compact? But also Standard. Frequency: Standard used 2 times, Compact 2 times. Maybe default Standard? Also pickup_city: user often picks from New York, Los Angeles, Fremont, etc. No preference. We can leave unspecified. Provide empty? We need to output function call with slots we can infer. We can set car_type=\"Compact\" as common. Provide pickup_city unspecified. We'll output minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614982,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b46d324e3d8ff1de",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 172,
+      "prompt_tokens": 10506,
+      "prompt_tokens_details": null,
+      "total_tokens": 10678
+    }
+  },
+  "request_sha256": "1d8375d1e383d4eaffc2eaf6c772e08e1dcd6cd1162f2f894cacff8ac85b532d",
+  "source_example_id": "mix_dev_0165+durec_src_0519+hb_0404",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

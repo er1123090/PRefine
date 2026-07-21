@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4ce212f3cf5d8fbf04b09687",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.8516158116981387,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_8ba868bc25ff3cdacf943eba",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents()",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need city? \"nearby\" ambiguous. Past preferences: user often asks events in city they mention. No city given. Maybe default to previous city? Last city used was Fairfield for homes. But events earlier: San Francisco, New York, San Diego. No pattern. Could infer they want local events near current location? No location known. Maybe ask for city? But we must output function call. We can leave city empty. So GetEvents with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614984,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bb8c8abb2b7a15be",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 112,
+      "prompt_tokens": 8189,
+      "prompt_tokens_details": null,
+      "total_tokens": 8301
+    }
+  },
+  "request_sha256": "da4eef178e789d1449269b0762131511f36498d5d6810fe137693e0c7de5cd5d",
+  "source_example_id": "dev_0050",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_e26a9ed0bb5979366d3c7310",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 15.587129511870444,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "39145 Farwell Drive",
+        "pickup_time": "in 30 minutes",
+        "shared_ride": true
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_dc339f9d7d8b75b4abc6c57b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"39145 Farwell Drive\", \"pickup_time\": \"in 30 minutes\", \"shared_ride\": true}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-9b97c20a44cb9fb2",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784571874,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bb981ce3f86ea0b0",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 40,
+      "prompt_tokens": 11234,
+      "prompt_tokens_details": null,
+      "total_tokens": 11274
+    }
+  },
+  "request_sha256": "40004022961c3bbc05f5304f7b3202fd7e69026b49bbffb0c387d0aade44d940",
+  "source_example_id": "mix_dev_0100+durec_src_0831+hb_0371",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_d005d2f06dc67da07c4d6a81",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.5625050878152251,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "car_type": "Standard",
+        "pickup_city": "Vancouver"
+      },
+      "name": "GetRentalCars"
+    }
+  ],
+  "pair_id": "pair_04f98f65bc16c6241ab8d25c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"car_type\": \"Standard\", \"pickup_city\": \"Vancouver\"}",
+                "name": "GetRentalCars"
+              },
+              "id": "chatcmpl-tool-90454803ead620f3",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784568602,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b265e77f4159f463",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 25,
+      "prompt_tokens": 11940,
+      "prompt_tokens_details": null,
+      "total_tokens": 11965
+    }
+  },
+  "request_sha256": "ea85502d445bbd50cb380350dc216c8f2e58ff11e8806aa729e2daf55ec8688f",
+  "source_example_id": "mix_dev_0186+durec_src_0139+hb_0400",
+  "status": "success",
+  "target_domain": "GetRentalCars"
+}

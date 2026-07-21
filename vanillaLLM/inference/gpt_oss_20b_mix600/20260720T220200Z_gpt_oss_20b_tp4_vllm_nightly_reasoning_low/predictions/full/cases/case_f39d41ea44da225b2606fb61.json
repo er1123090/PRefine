@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_f39d41ea44da225b2606fb61",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.090721033513546,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_10b3cfaad85494674d817740",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"San Francisco\", category=\"Sports\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetEvents? The user wants something to do this weekend in San Francisco. We need to output a function call with inferred slots. Target schema includes GetEvents. We need to fill slots: category, city, date, event_name, event_type, number_of_tickets. We have city San Francisco. Date: weekend unspecified; likely current date? No context. We can infer weekend: maybe upcoming weekend. But we don't have date. We can leave date empty? But function requires object; slots optional. We can provide city=\"San Francisco\". Maybe category? Past preferences: user liked sports events in Seattle, Anaheim. Also liked sports. So category likely \"Sports\". event_type maybe \"Basketball\" or \"Baseball\". But we can guess \"Sports\". number_of_tickets maybe default? We can leave empty. So output: GetEvents(city=\"San Francisco\", category=\"Sports\").",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615219,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-860925f6bcb07553",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 207,
+      "prompt_tokens": 11632,
+      "prompt_tokens_details": null,
+      "total_tokens": 11839
+    }
+  },
+  "request_sha256": "d311b2e957f9a102d4cb40490f41b72560790f2950df48f5a0fe2055c293697c",
+  "source_example_id": "mix_dev_0118+durec_src_0728+hb_0002",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

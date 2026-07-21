@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_879e4f4a8e4455fc37568fdd",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.31207219325006,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f8fc2212bc516dfd4fac93c0",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need slots: car_type, dropoff_date, pickup_city, pickup_date, pickup_location, pickup_time. User didn't specify. Use patterns: previous rental: Session6: pickup_city Fremont, pickup_date 6, pickup_time 9:30, car_type Standard. Session8: pickup_city Seattle, pickup_date 2, pickup_time 14:00, car_type Standard. So default Standard. No date/time. We can leave empty. Output format: GetRentalCars(car_type=\"Standard\")? but need all slots? Only include those we know. Probably just car_type.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615072,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b4aaba64b7af76bb",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 143,
+      "prompt_tokens": 8995,
+      "prompt_tokens_details": null,
+      "total_tokens": 9138
+    }
+  },
+  "request_sha256": "eaf2224bbddbbd073d407b99b265ede553d21c778754dbb93ab059504d00e277",
+  "source_example_id": "dev_0256",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

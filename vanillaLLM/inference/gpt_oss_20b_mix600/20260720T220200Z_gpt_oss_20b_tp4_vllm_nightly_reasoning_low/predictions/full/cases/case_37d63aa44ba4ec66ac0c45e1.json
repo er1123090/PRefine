@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_37d63aa44ba4ec66ac0c45e1",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.7282686503604054,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c5f578ba74a18505a3df6a8d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels(average_star=\"3\", location=\"Los Angeles\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences for GetHotels. From history: user asked for 3 star hotel in LAX, 3 star in Sacramento, 3 star in LAX earlier. Also 3 star in LAX. So preference: average_star=\"3\". location likely \"Los Angeles\" or \"LAX\" but domain expects location enum includes \"Los Angeles\". So set location=\"Los Angeles\". Also maybe number_of_rooms? Not specified. We'll output GetHotels with average_star=\"3\", location=\"Los Angeles\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614950,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-84a0f5ea6f19ebe7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 128,
+      "prompt_tokens": 10790,
+      "prompt_tokens_details": null,
+      "total_tokens": 10918
+    }
+  },
+  "request_sha256": "897f1b5e0c28fcbc9fdea30b60cbc4164a38ca10d6417a2823c0082c7831d5b0",
+  "source_example_id": "mix_dev_0029+durec_src_0681+hb_0427",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

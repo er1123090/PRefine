@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_9142f1e61c28dc59387bf65a",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.352343915961683,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_ab9d6cd45c04baeb2a8c13fc",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(destination=\"Berkeley\", departure_date=\"2023-03-11\", passengers=\"1\", flight_class=\"Economy\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights? Actually trip: travel to Berkeley. That's a city in California. Likely flight. Use GetFlights. Need origin? Not given. Assume user from somewhere unspecified. We can infer from past: user often from San Jose? Not sure. But we can leave origin unspecified. Provide destination \"Berkeley\". departure_date \"2023-03-11\" (assuming current year). passengers \"1\". flight_class maybe Economy. airlines unspecified. So output: GetFlights(destination=\"Berkeley\", departure_date=\"2023-03-11\", passengers=\"1\", flight_class=\"Economy\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615083,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-99837b7039b935e7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 160,
+      "prompt_tokens": 10534,
+      "prompt_tokens_details": null,
+      "total_tokens": 10694
+    }
+  },
+  "request_sha256": "f9343ff33ff5b48f32a5e76dd78eccd68ad3e2026ac7592f17417002e31f6cb0",
+  "source_example_id": "mix_dev_0047+durec_src_0547+hb_0108",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

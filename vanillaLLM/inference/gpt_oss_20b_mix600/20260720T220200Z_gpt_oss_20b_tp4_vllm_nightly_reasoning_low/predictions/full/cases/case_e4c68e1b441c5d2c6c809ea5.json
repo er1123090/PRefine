@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_e4c68e1b441c5d2c6c809ea5",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.035342496819794,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1f346a80f201caeb9262e72e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels()",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants hotels. Past: Session17: 1 star, 2 rooms, 4 days, checkin 1st March. Session18: 3 star, 1 room, 2 days. Session19: 3 rooms. So preferences: likely wants 1-3 rooms, 1-3 star, maybe 2 days. Also earlier: 1 star acceptable. So we can guess: average_star maybe \"3\" or \"1\". But we need to output function call. We can choose GetHotels with location unspecified? We need slot values. We can infer location? Not given. Maybe default? We can leave empty. But we need to provide some slots. We can guess location \"San Francisco\" maybe? But better to not guess. We can provide empty object? But function requires object. We can provide no slots. So output: GetHotels().\n\nBut format: {Domain}({slot_name}=\"{value}\", ...). So: GetHotels().\n\nLet's output.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615201,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b2e2253cb94a8a48",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 224,
+      "prompt_tokens": 10277,
+      "prompt_tokens_details": null,
+      "total_tokens": 10501
+    }
+  },
+  "request_sha256": "f7b07590d88a1a55f9de0579e13968986a1127ee6eb62eaf64b4458a64f3affc",
+  "source_example_id": "mix_dev_0223+durec_src_0399+hb_0444",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_5e2a0c962e4ecd60753f168d",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7455243626609445,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_5bd2dffde29e2d51df083280",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetEvents(city=\"New York\")",
+          "function_call": null,
+          "reasoning": "We need GetEvents. Need city? user says nearby. No city given. We infer from past: user often uses New York, Walnut Creek, etc. But no pattern. Maybe default to last city used: New York. So city=\"New York\". No other slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615014,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-94d696fc20bb2592",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 73,
+      "prompt_tokens": 9193,
+      "prompt_tokens_details": null,
+      "total_tokens": 9266
+    }
+  },
+  "request_sha256": "2eebedd63e74b92013cdccd8c9a0ea2a70edd38ca7a326cbd24d301be19c0eed",
+  "source_example_id": "mix_dev_0274+durec_src_0012+hb_0153",
+  "status": "model_no_tool",
+  "target_domain": "GetEvents"
+}

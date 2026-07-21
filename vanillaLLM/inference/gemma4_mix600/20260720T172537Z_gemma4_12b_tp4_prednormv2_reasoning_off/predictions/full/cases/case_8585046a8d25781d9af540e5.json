@@ -1,0 +1,71 @@
+{
+  "attempts": 1,
+  "case_id": "case_8585046a8d25781d9af540e5",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 8.03294479381293,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "genre": "Comedy"
+      },
+      "name": "GetMedia"
+    }
+  ],
+  "pair_id": "pair_175e929e9d242ab69f33c1ca",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"genre\": \"Comedy\"}",
+                "name": "GetMedia"
+              },
+              "id": "chatcmpl-tool-bbee34e77607cf3c",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": 50,
+        "token_ids": null
+      }
+    ],
+    "created": 1784570541,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-94797adaa285f1c1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "google/gemma-4-12B-it",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-fc7b9360",
+    "usage": {
+      "completion_tokens": 14,
+      "prompt_tokens": 9910,
+      "prompt_tokens_details": null,
+      "total_tokens": 9924
+    }
+  },
+  "request_sha256": "bd6242db066fea6aa8e82d9f03384d8daa2407f4b05aa16b67c205a216a8bde4",
+  "source_example_id": "dev_0306",
+  "status": "success",
+  "target_domain": "GetMedia"
+}

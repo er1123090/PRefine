@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_33378cc4fd5d4eac5432c8c3",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.291054061613977,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_a42e34fb51d7773cfe88ee7d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"\", number_of_seats=\"1\", pickup_time=\"\", shared_ride=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Slots: destination, number_of_seats, pickup_time, shared_ride. User says need a ride and want to check available ride-sharing options. No specifics. Use past pattern: default shared_ride True? In session 14 they set shared_ride True. Likely default True. Destination unknown. Maybe leave empty? But must provide values? We can set destination=\"\"? Probably omit. But format requires slot_name=\"value\". We can set destination=\"\"? Let's set destination=\"\". number_of_seats=\"1\". pickup_time=\"\"? shared_ride=\"True\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614942,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b384b295e399d5f9",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 153,
+      "prompt_tokens": 10133,
+      "prompt_tokens_details": null,
+      "total_tokens": 10286
+    }
+  },
+  "request_sha256": "6340dc9cf287a150b06fb2f7ef269eea14573fdbd4bdbc2309d189f626222b2b",
+  "source_example_id": "mix_dev_0220+durec_src_0428+hb_0334",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

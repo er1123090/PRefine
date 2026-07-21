@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_e0a2f2f416713a0812111173",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.9231922002509236,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "destination": "139 Petaluma Boulevard North B",
+        "number_of_seats": "2",
+        "shared_ride": true
+      },
+      "name": "GetRideSharing"
+    }
+  ],
+  "pair_id": "pair_346aaaa3dc4f1c919c5a6d92",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"destination\": \"139 Petaluma Boulevard North B\", \"number_of_seats\": \"2\", \"shared_ride\": true}",
+                "name": "GetRideSharing"
+              },
+              "id": "chatcmpl-tool-997261963b5c1ee6",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588314,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b8c851041bbdcea4",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 46,
+      "prompt_tokens": 12413,
+      "prompt_tokens_details": null,
+      "total_tokens": 12459
+    }
+  },
+  "request_sha256": "41dd7f5a1a652ccadb5b1e34c3b9c11b7e48c457b13e489c71267b9d285889e8",
+  "source_example_id": "mix_dev_0102+durec_src_0082+hb_0473",
+  "status": "success",
+  "target_domain": "GetRideSharing"
+}

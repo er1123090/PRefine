@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_74b88ba6e7479eb9c7017111",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.542129909619689,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_94b8f66394ba0a5aaa355e0e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetMusic(artist=\"Jacky Cheung\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants music. No specific artist or genre. From history, user likes Jacky Cheung songs, but also other. Preference: likely artist Jacky Cheung? But not explicit. We can choose default none. Maybe choose artist=\"Jacky Cheung\" because frequent. But could be any. I'll set artist=\"Jacky Cheung\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615045,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a93966792261be34",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 96,
+      "prompt_tokens": 11614,
+      "prompt_tokens_details": null,
+      "total_tokens": 11710
+    }
+  },
+  "request_sha256": "0a90fc951e4632937a18dec29b84f5082216d39be9a2141b1bb6f4f2478a911d",
+  "source_example_id": "mix_dev_0118+durec_src_0728+hb_0002",
+  "status": "model_no_tool",
+  "target_domain": "GetMusic"
+}

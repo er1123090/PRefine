@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4e73bae7d213de6ff4663149",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.8630928294733167,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d526ec193b919dcfc00ab1a5",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need to infer preferences. User wants rental car. No specifics. From history, user often wants Standard car, medium size. In session14, user wanted medium-sized car, got Standard. In session16, Standard. So preference: car_type=\"Standard\". Also pickup_date? Not specified. We can leave empty. So output GetRentalCars with car_type=\"Standard\".",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614986,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a29689842e74bd23",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 94,
+      "prompt_tokens": 10602,
+      "prompt_tokens_details": null,
+      "total_tokens": 10696
+    }
+  },
+  "request_sha256": "b1e333e0decd04cd38e5906877baf06413b46259a7345d65f41973810dbf7101",
+  "source_example_id": "mix_dev_0107+durec_src_0236+hb_0188",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_93e03e45b76564024ceeb8fe",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.7763935253024101,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b26dc2b430adfae7bf1e4157",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars()",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. No slots given. We infer preferences: earlier user wanted Large car, pickup New York, time 6pm, dates 9-10. But current request generic. Use most frequent: car_type? earlier had Standard, Compact, Full-size. No preference. Maybe default Standard. Provide empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615088,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-afea5f4ebca57031",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 80,
+      "prompt_tokens": 11306,
+      "prompt_tokens_details": null,
+      "total_tokens": 11386
+    }
+  },
+  "request_sha256": "2120b87dd01a77cc08bf0269c8ce9359e6d3bef86ac0e764236bf032a5840700",
+  "source_example_id": "mix_dev_0109+durec_src_0404+hb_0248",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

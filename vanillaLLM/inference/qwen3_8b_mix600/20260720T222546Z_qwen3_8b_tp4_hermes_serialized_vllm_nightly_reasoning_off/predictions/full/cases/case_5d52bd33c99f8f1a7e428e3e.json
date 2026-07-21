@@ -1,0 +1,73 @@
+{
+  "attempts": 1,
+  "case_id": "case_5d52bd33c99f8f1a7e428e3e",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.2274009017273784,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Historical Landmark",
+        "good_for_kids": true,
+        "location": "Anaheim"
+      },
+      "name": "GetTravel"
+    }
+  ],
+  "pair_id": "pair_f0d53990e798dd9a188d003d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Historical Landmark\", \"location\": \"Anaheim\", \"good_for_kids\": true}",
+                "name": "GetTravel"
+              },
+              "id": "chatcmpl-tool-99da3ff89d61323a",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587509,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8deb1df36e822edb",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 38,
+      "prompt_tokens": 11418,
+      "prompt_tokens_details": null,
+      "total_tokens": 11456
+    }
+  },
+  "request_sha256": "8d27f083280bd01ea6cb2bcdb1b11061dfddd7c370fc6151c7f5e2c7aba729e4",
+  "source_example_id": "mix_dev_0192+durec_src_0151+hb_0009",
+  "status": "success",
+  "target_domain": "GetTravel"
+}

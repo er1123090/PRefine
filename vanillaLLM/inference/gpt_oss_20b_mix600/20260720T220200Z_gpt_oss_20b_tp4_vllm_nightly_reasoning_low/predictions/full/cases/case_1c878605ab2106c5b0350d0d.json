@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_1c878605ab2106c5b0350d0d",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.8626044653356075,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_1522b6532a6f89cb5e66ae98",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel()",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Need slots: category, free_entry, good_for_kids, location, destination, departure_date. From history, user wants travel options. No specifics. Use patterns: previous travel: user asked free attractions similar to Nature Preserve, got free entry True, good_for_kids True, location New York. Also earlier travel? none. So default maybe free_entry True, good_for_kids True? But not sure. We can leave optional. Provide location maybe unspecified. But need at least domain. We can provide empty. Probably best to call GetTravel with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614889,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aceb4270b50f86c1",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 133,
+      "prompt_tokens": 7806,
+      "prompt_tokens_details": null,
+      "total_tokens": 7939
+    }
+  },
+  "request_sha256": "19b3c571dbfaad74770ba3ef84f1665f6395b3924e32b1fcde89ea131c0fd4ef",
+  "source_example_id": "mix_dev_0164+hb_0217",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

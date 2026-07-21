@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_a42da7c13600e7f046bada20",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.9309997698292136,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_f01fca33edc63c33499321cc",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(city=\"Napa\", category=\"Mexican\", price_range=\"moderate\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants. No preferences given. From history, user likes Latin American food, moderate price. So set category=\"Latin American\"? but enum doesn't have that. They used \"Mexican\" earlier. So category=\"Mexican\". location? user in Napa. So city=\"Napa\". price_range=\"moderate\". Return.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615112,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a7f2e417d38d16e2",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 96,
+      "prompt_tokens": 8099,
+      "prompt_tokens_details": null,
+      "total_tokens": 8195
+    }
+  },
+  "request_sha256": "22bc32df8d80a00fa1386072379ce7c1ed9ec65919085e9626bffff3aff8efe3",
+  "source_example_id": "dev_0239",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

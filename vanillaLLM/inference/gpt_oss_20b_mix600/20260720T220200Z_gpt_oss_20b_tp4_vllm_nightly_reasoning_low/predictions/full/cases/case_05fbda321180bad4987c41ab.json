@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_05fbda321180bad4987c41ab",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.32721365429461,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_9e272fad0ae960ec8f413a32",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRideSharing(destination=\"39145 Farwell Drive\", pickup_time=\"in about half an hour\", number_of_seats=\"1\", shared_ride=\"False\")",
+          "function_call": null,
+          "reasoning": "We need GetRideSharing. Need destination, pickup_time, number_of_seats default 1, shared_ride maybe false. Destination \"39145 Farwell Drive\". pickup_time \"in about half an hour\" unclear. We'll set pickup_time=\"in about half an hour\". shared_ride=false.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614812,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-a931752f120fb097",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 104,
+      "prompt_tokens": 10312,
+      "prompt_tokens_details": null,
+      "total_tokens": 10416
+    }
+  },
+  "request_sha256": "18e58553c44d4cb1c96356d21ad3db49313a6b521fa6afd832ad21d5e97e3c5b",
+  "source_example_id": "mix_dev_0238+durec_src_1341+hb_0269",
+  "status": "model_no_tool",
+  "target_domain": "GetRideSharing"
+}

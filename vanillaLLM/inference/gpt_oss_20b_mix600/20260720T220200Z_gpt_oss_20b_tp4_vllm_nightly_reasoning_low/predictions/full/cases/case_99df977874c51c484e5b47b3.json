@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_99df977874c51c484e5b47b3",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.6368183409795165,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_996ae6fc0b220a98f13858ea",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2023-03-08\", pickup_time=\"12:00\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: car_type, dropoff_date, pickup_city, pickup_date, pickup_location, pickup_time. From user: pick up downtown Berlin. So pickup_city=Berlin? but enum includes many US cities, not Berlin. So maybe default none. pickup_date=March 8th. pickup_time=around noon. dropoff_date? couple of days, maybe March 10? but not specified. car_type? not specified. So leave empty. Output format: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2023-03-08\", pickup_time=\"12:00\") but date format? Use string.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615097,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bc22a146d0af143d",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 171,
+      "prompt_tokens": 9651,
+      "prompt_tokens_details": null,
+      "total_tokens": 9822
+    }
+  },
+  "request_sha256": "557feef38e371cddb0c684066fe0092a7ed5666e249d04d444ad0f60fa141e85",
+  "source_example_id": "mix_dev_0234+durec_src_0677+hb_0357",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

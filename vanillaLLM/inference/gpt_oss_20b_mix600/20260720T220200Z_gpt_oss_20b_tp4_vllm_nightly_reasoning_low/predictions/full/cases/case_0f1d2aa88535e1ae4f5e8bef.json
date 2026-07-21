@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_0f1d2aa88535e1ae4f5e8bef",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 3.450955305248499,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_59d9fd8587598346d5698f36",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetFlights(departure_date=\"2019-03-09\", origin=\"San Francisco\", destination=\"Seattle\")",
+          "function_call": null,
+          "reasoning": "We need GetFlights. Determine preferences: airlines? none. flight_class? none. passengers? none. return_date? none. But pattern: previous flights: session4 used American Airlines. No preference. So leave empty. Output: GetFlights(departure_date=\"2019-03-09\", origin=\"San Francisco\", destination=\"Seattle\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614844,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-aec924aad3235c37",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 103,
+      "prompt_tokens": 9140,
+      "prompt_tokens_details": null,
+      "total_tokens": 9243
+    }
+  },
+  "request_sha256": "59f0132214768853b8df2f1dedcfd3917443260a4b0dd2c630502cadeee9b42a",
+  "source_example_id": "mix_dev_0036+durec_src_0800+hb_0452",
+  "status": "model_no_tool",
+  "target_domain": "GetFlights"
+}

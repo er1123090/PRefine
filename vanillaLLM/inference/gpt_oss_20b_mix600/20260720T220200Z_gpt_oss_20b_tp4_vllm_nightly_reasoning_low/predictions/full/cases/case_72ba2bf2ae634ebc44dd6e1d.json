@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_72ba2bf2ae634ebc44dd6e1d",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1799892811104655,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_8109de3579bb3d5879742819",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels()",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user often wants 2-3 star hotels, sometimes 1 star. In session7 they wanted 2 star. Session18 3 star. So likely 2-3 star. We'll default to 2 star? But slot recipient_account_type not relevant. We'll output GetHotels with no slots? But need at least something. Maybe location unspecified. We'll just empty.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615041,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-8b44bb779176e977",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 100,
+      "prompt_tokens": 10111,
+      "prompt_tokens_details": null,
+      "total_tokens": 10211
+    }
+  },
+  "request_sha256": "c895ab927e4e89a9c30f853c5a54a7fc33ac9ba579d65e4ba2010300309c3e74",
+  "source_example_id": "mix_dev_0035+durec_src_0259+hb_0439",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

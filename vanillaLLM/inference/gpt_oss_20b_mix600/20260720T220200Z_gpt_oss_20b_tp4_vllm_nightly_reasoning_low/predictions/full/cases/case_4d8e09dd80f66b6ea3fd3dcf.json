@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4d8e09dd80f66b6ea3fd3dcf",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.1366835534572601,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c634d8b00239fd9584f46492",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2026-07-08\", pickup_time=\"12:00\", car_type=\"Standard\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Need pickup_city, pickup_date, pickup_time, dropoff_date? user says couple of days. no dropoff date given. maybe default? but we can infer from pattern: they often ask dropoff. but not here. We can set dropoff_date empty. car_type? not specified. default? maybe Standard. We'll output minimal.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614986,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b06981bdc53e8fe7",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 117,
+      "prompt_tokens": 12290,
+      "prompt_tokens_details": null,
+      "total_tokens": 12407
+    }
+  },
+  "request_sha256": "ee36a765a8288c934212e560906bfe99ca3ef68c9098092b6d3e3e76e94251d5",
+  "source_example_id": "mix_dev_0205+durec_src_0960+hb_0143",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

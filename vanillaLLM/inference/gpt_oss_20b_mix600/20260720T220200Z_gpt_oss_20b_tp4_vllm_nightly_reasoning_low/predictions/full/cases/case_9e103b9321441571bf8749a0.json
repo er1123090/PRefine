@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_9e103b9321441571bf8749a0",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.8864943711087108,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b8ac5a5236a4817053a45353",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\")",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says couple days, no end date. We can omit dropoff_date. pickup_city: \"Downtown Berlin\" but enum includes cities like Anaheim, etc. Berlin not in list. So maybe city not valid. But we must still call. Maybe use pickup_city=\"Berlin\"? Not in enum. We could leave empty. But need at least pickup_date and pickup_time. Provide pickup_date=\"2019-03-08\" (assuming year 2019). pickup_time=\"12:00\". car_type default? not specified. We'll leave empty. Output format: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615103,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-97b0bf4e755af3ad",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 200,
+      "prompt_tokens": 10217,
+      "prompt_tokens_details": null,
+      "total_tokens": 10417
+    }
+  },
+  "request_sha256": "f3e58b3ee5459beaea30e421630197153fd55389a596d08949fd5c60830b6c08",
+  "source_example_id": "mix_dev_0220+durec_src_0428+hb_0334",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

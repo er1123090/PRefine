@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_ed29a9d8fe8dafdcac0a2fe0",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.5796094182878733,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_b04f4f5ecebf8d7c5881586b",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants(category=\"Italian\")",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants with category Italian, price_range? user didn't specify. Also no alcohol. In schema, no alcohol slot. So just category Italian, city unknown. So output GetRestaurants(category=\"Italian\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615211,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-957091020ada8a0f",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 58,
+      "prompt_tokens": 10462,
+      "prompt_tokens_details": null,
+      "total_tokens": 10520
+    }
+  },
+  "request_sha256": "032b6d095b3651076343e328952a652dc26ebe653f1693fcd96399d1e3bf6a58",
+  "source_example_id": "mix_dev_0190+durec_src_1319+hb_0392",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

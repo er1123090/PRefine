@@ -1,0 +1,75 @@
+{
+  "attempts": 1,
+  "case_id": "case_c7cf11886c441c73d59e7b8f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 7.45140565559268,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Italian",
+        "city": "Newark",
+        "has_wifi": true,
+        "number_of_seats": "2",
+        "price_range": "moderate"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_a880ec0691c7b9e665e1f368",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Italian\", \"price_range\": \"moderate\", \"has_wifi\": true, \"number_of_seats\": \"2\", \"city\": \"Newark\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-80e3a436dc82606d",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784588160,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9070cb12d3091e8c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 51,
+      "prompt_tokens": 8143,
+      "prompt_tokens_details": null,
+      "total_tokens": 8194
+    }
+  },
+  "request_sha256": "054165a287f41ea59b53a9e00aaab4e0d25777d060c09aed27f4f44b0a45ad19",
+  "source_example_id": "dev_0098",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

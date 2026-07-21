@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_4ccd8cc54e250c95e638371f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.9100424079224467,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_2c83292e56efb54379143b08",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetTravel(location=\"Delhi\", free_entry=\"True\", good_for_kids=\"True\")",
+          "function_call": null,
+          "reasoning": "We need GetTravel. Need slots: category, free_entry, good_for_kids, location, destination, departure_date. From history: user likes free entry, kids? In session4 they asked free and kids. Likely prefers free_entry=True, good_for_kids=True. Location maybe Delhi? But current utterance generic. Use past preference: Delhi. So output GetTravel(location=\"Delhi\", free_entry=\"True\", good_for_kids=\"True\")",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614984,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9a080541094d2e57",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 121,
+      "prompt_tokens": 9081,
+      "prompt_tokens_details": null,
+      "total_tokens": 9202
+    }
+  },
+  "request_sha256": "5a5202dd7e548c5b444ab606e36ebb6c39156a2d9577535d91fdcd69d9a3360a",
+  "source_example_id": "mix_dev_0036+durec_src_0800+hb_0452",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}

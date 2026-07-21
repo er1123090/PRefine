@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_8ccf66d691db051f639b6572",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.2662290567532182,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_aa8bde627eb00bf572a309aa",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetHotels()",
+          "function_call": null,
+          "reasoning": "We need GetHotels. No preferences given. From history, user often wants 1 room, 5 days? But not specified. We can default minimal. Provide location? Not given. We can infer maybe user wants in some city? No. We can leave empty. So call GetHotels with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615077,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9f7d9a8c6178cdd6",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 76,
+      "prompt_tokens": 8803,
+      "prompt_tokens_details": null,
+      "total_tokens": 8879
+    }
+  },
+  "request_sha256": "b4f63c4e94f3fe7933c7db9d87812d458e59f7860da8de9a3d525573cd8f6ab5",
+  "source_example_id": "mix_dev_0216+durec_src_0964",
+  "status": "model_no_tool",
+  "target_domain": "GetHotels"
+}

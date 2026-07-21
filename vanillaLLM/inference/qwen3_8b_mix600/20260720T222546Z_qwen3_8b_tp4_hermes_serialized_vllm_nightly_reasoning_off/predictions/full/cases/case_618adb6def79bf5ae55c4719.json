@@ -1,0 +1,72 @@
+{
+  "attempts": 1,
+  "case_id": "case_618adb6def79bf5ae55c4719",
+  "difficulty": "medium",
+  "infrastructure_errors": [],
+  "latency_seconds": 4.737180110067129,
+  "mode": "single",
+  "model_error": null,
+  "normalized_calls": [
+    {
+      "arguments": {
+        "category": "Burmese",
+        "location": "San Francisco"
+      },
+      "name": "GetRestaurants"
+    }
+  ],
+  "pair_id": "pair_5ee4cae9d1d1ab7d8fadab5c",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": null,
+          "function_call": null,
+          "reasoning": null,
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"category\": \"Burmese\", \"location\": \"San Francisco\"}",
+                "name": "GetRestaurants"
+              },
+              "id": "chatcmpl-tool-9c97031af9cfb3e3",
+              "type": "function"
+            }
+          ]
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784587535,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bb430f6bc8c50f12",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "Qwen/Qwen3-8B",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-95b0a127",
+    "usage": {
+      "completion_tokens": 30,
+      "prompt_tokens": 12421,
+      "prompt_tokens_details": null,
+      "total_tokens": 12451
+    }
+  },
+  "request_sha256": "32290e4fa94105740b486ffc6cf2bbe6278cdee407069462f4cbfeb27e2f02b1",
+  "source_example_id": "mix_dev_0021+durec_src_0825+hb_0405",
+  "status": "success",
+  "target_domain": "GetRestaurants"
+}

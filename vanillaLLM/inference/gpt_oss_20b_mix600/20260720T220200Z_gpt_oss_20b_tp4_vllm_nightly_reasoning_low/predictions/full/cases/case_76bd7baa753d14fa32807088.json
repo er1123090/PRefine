@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_76bd7baa753d14fa32807088",
+  "difficulty": "easy",
+  "infrastructure_errors": [],
+  "latency_seconds": 0.5873311329632998,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_c96e87650cbbad3d8df4890d",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRestaurants()",
+          "function_call": null,
+          "reasoning": "We need GetRestaurants with cuisine Italian, no alcohol. In schema, no slot for cuisine or alcohol. But we can set category maybe? Italian not in list. We can leave empty. Just call GetRestaurants with no params.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615049,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-bc7ed1fba383b463",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 59,
+      "prompt_tokens": 13009,
+      "prompt_tokens_details": null,
+      "total_tokens": 13068
+    }
+  },
+  "request_sha256": "84b03f4a606ffb85248d07dba5bb5aaa4839d3cb52d3dfec4e9cb6fd0d3c3a6b",
+  "source_example_id": "mix_dev_0015+durec_src_0969+hb_0384",
+  "status": "model_no_tool",
+  "target_domain": "GetRestaurants"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_d443a0957ceec0b8983e536f",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 2.0381599506363273,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_2133266d1cff8bda8a4deaeb",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "GetRentalCars()",
+          "function_call": null,
+          "reasoning": "We need GetRentalCars. Slots: pickup_city, pickup_date, pickup_time, dropoff_date? user says pick up noon March 8, keep couple days. No dropoff date given. We infer dropoff_date maybe March 10? but not in schema. We can omit. Also pickup_location? not specified. So output: GetRentalCars(pickup_city=\"Berlin\", pickup_date=\"2023-03-08\", pickup_time=\"12:00\") but city enum doesn't include Berlin. So cannot. Maybe use nearest: none. So we can't match. Maybe choose default? But must match enum. Berlin not in list. So cannot. Maybe we should not call? But must produce. Maybe use \"San Francisco\"? No. Probably cannot. Maybe we skip? But must produce. I'll output with city \"San Francisco\" as placeholder? But that violates. Maybe we should not call. But instruction says produce final Service API call. I'll output empty? I'll output GetRentalCars() with no slots.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784615179,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-9eaa2121d0625d4c",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 221,
+      "prompt_tokens": 9732,
+      "prompt_tokens_details": null,
+      "total_tokens": 9953
+    }
+  },
+  "request_sha256": "d39e6632311f297b395460ec012a3838d12ab7bd29a3a141b4f0c30fadca8eb0",
+  "source_example_id": "mix_dev_0262+durec_src_0207+hb_0087",
+  "status": "model_no_tool",
+  "target_domain": "GetRentalCars"
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1,
+  "case_id": "case_31dab6eabd35879fdd40071a",
+  "difficulty": "hard",
+  "infrastructure_errors": [],
+  "latency_seconds": 1.4823835073038936,
+  "mode": "multi",
+  "model_error": null,
+  "normalized_calls": [],
+  "pair_id": "pair_d1df5aa5d76b8bd925d9da4e",
+  "raw_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "annotations": null,
+          "audio": null,
+          "content": "No suitable function call can be made with the provided schema.",
+          "function_call": null,
+          "reasoning": "We need GetHotels? user planning short trip to Berkeley, one night. Need location Berkeley. In schema, location enum includes many but not Berkeley. So cannot. Maybe GetTravel? but location not Berkeley. Maybe GetHotels with location \"Berkeley\" not in enum. So no match. Maybe GetTravel? location not Berkeley. So no function. Probably no call.",
+          "refusal": null,
+          "role": "assistant"
+        },
+        "routed_experts": null,
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "created": 1784614939,
+    "ec_transfer_params": null,
+    "id": "chatcmpl-b27d727feeff8c68",
+    "kv_transfer_params": null,
+    "metrics": null,
+    "model": "openai/gpt-oss-20b",
+    "object": "chat.completion",
+    "prompt_logprobs": null,
+    "prompt_text": null,
+    "prompt_token_ids": null,
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.23.1rc1.dev1279+gdcfebf93f-tp4-4cb6bb6b",
+    "usage": {
+      "completion_tokens": 97,
+      "prompt_tokens": 8883,
+      "prompt_tokens_details": null,
+      "total_tokens": 8980
+    }
+  },
+  "request_sha256": "d58df97e770975bb46b0ca8adc096bced03f0404bc9da63d17e1a960298fde4e",
+  "source_example_id": "mix_dev_0278+hb_0161",
+  "status": "model_no_tool",
+  "target_domain": "GetTravel"
+}
