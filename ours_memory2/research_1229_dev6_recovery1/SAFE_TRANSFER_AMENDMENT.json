@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "kind": "verified_latent_transfer_safe_restoration_amendment",
+  "status": "immutable_before_any_target_model_or_metric_call",
+  "candidate_id": "ecpr_v1",
+  "candidate_revision": "vlt1",
+  "parent_latent_scope_amendment_sha256": "40ff3655dc6ca0be53eb40e7fc44b7f9aa9f593d237eb2e6de7c2a09cca9aec2",
+  "parent_expected_runtime_contract_sha256": "b5a0a2327401913063b3fb76b95ff7113bb733bbafd9e4462cba2a704c7b840f",
+  "latent_trait_ontology_sha256": "1d9ffdf29a2af37367bbd63033c927473789e6eddb71926999bb88e56bb198a1",
+  "provenance_contract_sha256": "12fe6ddbe311eb6b6158990e92225630769002d59228dffb0ae91a022fb1deed",
+  "safe_transfer_contract": {
+    "method": "deterministic_verified_latent_transfer_v1",
+    "candidate_revision": "vlt1",
+    "trait_count": 2,
+    "normalization": "NFKC_then_casefold_then_unicode_token_boundary",
+    "unsafe_input_policy": "reject_control_bidi_zero_width_quotes_backticks_multiline_overcap_instruction_like_any_negation_zero_trait_or_multiple_traits",
+    "attestation_policy": "final_generated_session_verifier_valid_is_exactly_true_with_full_draft_implicit_pref_request_response_and_journal_attempt_call_bindings",
+    "corroboration_policy": "at_least_two_policy_qualified_supporting_hypotheses_from_distinct_non_target_domains_and_no_policy_qualified_opposing_trait_in_any_domain",
+    "target_slot_policy": "omit_if_any_policy_routed_selected_target_same_slot_evidence;different_value_is_conflict_and_equal_value_is_redundant",
+    "output_policy": "one_schema_valid_closed_json_tuple_or_NONE_never_raw_latent",
+    "ablation_policy": "no_latent_or_no_typed_forces_NONE;no_counterevidence_or_no_routing_never_relaxes_vlt_qualification",
+    "baseline_policy": "source_faithful_final_draft_projection_unchanged"
+  },
+  "candidate_memory_scope": {
+    "method": "candidate_typed_routed_plus_verified_closed_tuple_vlt1",
+    "parent_method": "candidate_typed_routed_evidence_only_v1",
+    "candidate_revision": "vlt1",
+    "selection_authority": "public_query_relevance_gate_v1",
+    "selected_domain_scope": "selected_schema_domain_only",
+    "serialized_evidence": "selected_target_domain_routed_typed_hypotheses_plus_optional_authorized_closed_vlt_tuple",
+    "untyped_latent_serialization": "forbidden_in_all_candidate_prompts",
+    "abstain_policy": "no_memory_evidence",
+    "zero_surviving_target_typed_policy": "closed_vlt_tuple_only_when_cross_domain_corroborated_and_fully_authorized",
+    "cross_domain_evidence_serialization": "forbidden_audit_digests_only",
+    "typed_provenance_serialization": "audit_only_never_candidate_prompt",
+    "same_target_slot_policy": "omit_vlt_even_if_equal;different_is_conflict",
+    "selection_implication": "never_implies_requested_domain_or_operation",
+    "baseline_memory_scope": "unchanged_source_faithful_prefine_final_draft_without_candidate_attestation_filter",
+    "no_latent_ablation_compatibility": "forces_no_vlt_tuple",
+    "no_typed_ablation_compatibility": "forces_no_vlt_tuple_without_hidden_typed_use",
+    "qualification_ablation_policy": "no_routing_and_no_counterevidence_never_relax_vlt_policy_thresholds"
+  },
+  "supersession": {
+    "supersedes": "only_zero_surviving_typed_policy_from_typed_only_scope_v1",
+    "restored_authority": "optional_closed_tuple_when_zero_target_routed_typed_evidence_survives_only_after_exact_attestation_and_two_distinct_non_target_domain_supports",
+    "preserves": [
+      "PQR_ABSTAIN_serializes_no_memory",
+      "raw_free_form_latent_is_never_serialized",
+      "target_routed_typed_evidence_is_selected_domain_only",
+      "baseline_projection_and_prompt_are_unchanged"
+    ]
+  },
+  "implementation_sha256": {
+    "ecpr/contracts.py": "c29b2f0259fbe13133a226b3bf7f8235c81b4ce6c42523ef490a7d988f018365",
+    "ecpr/inference.py": "e9cec664a6909d6920d6ee99a2515c1df906d653b950852fb9e8a8baca3cf13a",
+    "ecpr/latent_firewall.py": "5322bb572559b4ce1d4388369cb6951d915b5f548d1913000c40e21c4a34ba77",
+    "ecpr/ledger.py": "d720001d211d9c67b250264d2f3e47d717a4644a16bd3e6485546173606f0a55",
+    "ecpr/memory.py": "f68aa9aba1102b0e96e235e34bd1e654e54259cf9aadbe2ec285cd94e2758bcc",
+    "ecpr/prompts.py": "b85bbfa1839b0ef35ff4c31b8b30df76375d633f7160c08172ceaec30edc0e8f",
+    "ecpr/router.py": "0d384b55acb7daabddcc220f0e0abcf30d1096f8690ab968866dae027894301f"
+  },
+  "justification": "safe_restoration_of_originally_preregistered_latent_channel_before_any_target_model_call_or_target_metric",
+  "prior_target_model_calls": 0,
+  "prior_target_metrics_computed": 0
+}

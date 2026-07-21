@@ -1,0 +1,988 @@
+{
+  "schema_version": 3,
+  "kind": "latent_trait_ontology_vlt3",
+  "method": "append_only_table5_verified_latent_transfer_v3",
+  "candidate_id": "ecpr_v1",
+  "candidate_revision": "vlt3",
+  "parent_ontology_sha256": "be2070439b5928d6f2b1468ea0b8b63c0a42f48b578b4755a6ef949880fe005b",
+  "normalization": "NFKC_then_casefold_then_unicode_token_boundary",
+  "maximum_normalized_codepoints": 256,
+  "mapping_identity": [
+    "trait_id",
+    "domain"
+  ],
+  "schema_keys": [
+    "single",
+    "multi"
+  ],
+  "query_constraint_policy": {
+    "normalization": "NFKC_then_casefold_then_unicode_token_boundary",
+    "count_alias_distance_tokens": 3,
+    "numeric_word_tokens": [
+      "zero",
+      "one",
+      "two",
+      "three",
+      "four",
+      "five",
+      "six",
+      "seven",
+      "eight",
+      "nine",
+      "ten",
+      "eleven",
+      "twelve"
+    ],
+    "mapping_constraints": [
+      {
+        "trait_id": "LOW_COST",
+        "domain": "GetRestaurants",
+        "slot": "price_range",
+        "schema_keys": [
+          "single",
+          "multi"
+        ],
+        "target_mapping_ref": {
+          "trait_id": "LOW_COST",
+          "domain": "GetRestaurants"
+        },
+        "slot_aliases": [
+          "price",
+          "price range",
+          "cost",
+          "budget"
+        ],
+        "explicit_value_phrases": [
+          "cheap",
+          "cheapest",
+          "inexpensive",
+          "moderate",
+          "pricey",
+          "expensive",
+          "very expensive",
+          "low cost",
+          "high cost"
+        ],
+        "detect_count_near_slot_alias": false
+      },
+      {
+        "trait_id": "HIGH_COST",
+        "domain": "GetRestaurants",
+        "slot": "price_range",
+        "schema_keys": [
+          "single",
+          "multi"
+        ],
+        "target_mapping_ref": {
+          "trait_id": "HIGH_COST",
+          "domain": "GetRestaurants"
+        },
+        "slot_aliases": [
+          "price",
+          "price range",
+          "cost",
+          "budget"
+        ],
+        "explicit_value_phrases": [
+          "cheap",
+          "cheapest",
+          "inexpensive",
+          "moderate",
+          "pricey",
+          "expensive",
+          "very expensive",
+          "low cost",
+          "high cost"
+        ],
+        "detect_count_near_slot_alias": false
+      },
+      {
+        "trait_id": "LOW_COST",
+        "domain": "GetRentalCars",
+        "slot": "car_type",
+        "schema_keys": [
+          "single",
+          "multi"
+        ],
+        "target_mapping_ref": {
+          "trait_id": "LOW_COST",
+          "domain": "GetRentalCars"
+        },
+        "slot_aliases": [
+          "car",
+          "car type",
+          "vehicle",
+          "vehicle type"
+        ],
+        "explicit_value_phrases": [
+          "compact",
+          "standard",
+          "full size",
+          "full-size"
+        ],
+        "detect_count_near_slot_alias": false
+      },
+      {
+        "trait_id": "HIGH_COST",
+        "domain": "GetRentalCars",
+        "slot": "car_type",
+        "schema_keys": [
+          "single",
+          "multi"
+        ],
+        "target_mapping_ref": {
+          "trait_id": "HIGH_COST",
+          "domain": "GetRentalCars"
+        },
+        "slot_aliases": [
+          "car",
+          "car type",
+          "vehicle",
+          "vehicle type"
+        ],
+        "explicit_value_phrases": [
+          "compact",
+          "standard",
+          "full size",
+          "full-size"
+        ],
+        "detect_count_near_slot_alias": false
+      },
+      {
+        "trait_id": "LOW_COST",
+        "domain": "GetFlights",
+        "slot": "flight_class",
+        "schema_keys": [
+          "single",
+          "multi"
+        ],
+        "target_mapping_ref": {
+          "trait_id": "LOW_COST",
+          "domain": "GetFlights"
+        },
+        "slot_aliases": [
+          "class",
+          "flight class",
+          "cabin",
+          "cabin class"
+        ],
+        "explicit_value_phrases": [
+          "economy",
+          "premium economy",
+          "business class",
+          "first class"
+        ],
+        "detect_count_near_slot_alias": false
+      },
+      {
+        "trait_id": "LOW_COST",
+        "domain": "GetRideSharing",
+        "slot": "shared_ride",
+        "schema_keys": [
+          "single",
+          "multi"
+        ],
+        "target_mapping_ref": {
+          "trait_id": "LOW_COST",
+          "domain": "GetRideSharing"
+        },
+        "slot_aliases": [
+          "shared ride",
+          "ride sharing",
+          "ride type"
+        ],
+        "explicit_value_phrases": [
+          "shared ride",
+          "private ride",
+          "shared",
+          "private"
+        ],
+        "detect_count_near_slot_alias": false
+      },
+      {
+        "trait_id": "LOW_COST",
+        "domain": "GetTravel",
+        "slot": "free_entry",
+        "schema_keys": [
+          "single",
+          "multi"
+        ],
+        "target_mapping_ref": {
+          "trait_id": "LOW_COST",
+          "domain": "GetTravel"
+        },
+        "slot_aliases": [
+          "admission",
+          "entry",
+          "entry fee"
+        ],
+        "explicit_value_phrases": [
+          "free admission",
+          "free entry",
+          "paid admission",
+          "entry fee"
+        ],
+        "detect_count_near_slot_alias": false
+      },
+      {
+        "trait_id": "SOLO_USAGE",
+        "domain": "GetBuses",
+        "slot": "group_size",
+        "schema_keys": [
+          "single",
+          "multi"
+        ],
+        "target_mapping_ref": {
+          "trait_id": "SOLO_USAGE",
+          "domain": "GetBuses"
+        },
+        "slot_aliases": [
+          "group",
+          "group size",
+          "passenger",
+          "passengers",
+          "people",
+          "person",
+          "traveler",
+          "travelers"
+        ],
+        "explicit_value_phrases": [
+          "alone",
+          "as a group",
+          "by myself",
+          "solo",
+          "with family",
+          "with friends"
+        ],
+        "detect_count_near_slot_alias": true
+      },
+      {
+        "trait_id": "SOLO_USAGE",
+        "domain": "GetFlights",
+        "slot": "passengers",
+        "schema_keys": [
+          "single",
+          "multi"
+        ],
+        "target_mapping_ref": {
+          "trait_id": "SOLO_USAGE",
+          "domain": "GetFlights"
+        },
+        "slot_aliases": [
+          "passenger",
+          "passengers",
+          "people",
+          "person",
+          "traveler",
+          "travelers"
+        ],
+        "explicit_value_phrases": [
+          "alone",
+          "as a group",
+          "by myself",
+          "solo",
+          "with family",
+          "with friends"
+        ],
+        "detect_count_near_slot_alias": true
+      },
+      {
+        "trait_id": "SOLO_USAGE",
+        "domain": "GetRideSharing",
+        "slot": "number_of_seats",
+        "schema_keys": [
+          "single",
+          "multi"
+        ],
+        "target_mapping_ref": {
+          "trait_id": "SOLO_USAGE",
+          "domain": "GetRideSharing"
+        },
+        "slot_aliases": [
+          "passenger",
+          "passengers",
+          "people",
+          "person",
+          "seat",
+          "seats"
+        ],
+        "explicit_value_phrases": [
+          "alone",
+          "as a group",
+          "by myself",
+          "solo",
+          "with family",
+          "with friends"
+        ],
+        "detect_count_near_slot_alias": true
+      },
+      {
+        "trait_id": "SOLO_USAGE",
+        "domain": "GetEvents",
+        "slot": "number_of_tickets",
+        "schema_keys": [
+          "single",
+          "multi"
+        ],
+        "target_mapping_ref": {
+          "trait_id": "SOLO_USAGE",
+          "domain": "GetEvents"
+        },
+        "slot_aliases": [
+          "people",
+          "person",
+          "ticket",
+          "tickets"
+        ],
+        "explicit_value_phrases": [
+          "alone",
+          "as a group",
+          "by myself",
+          "solo",
+          "with family",
+          "with friends"
+        ],
+        "detect_count_near_slot_alias": true
+      },
+      {
+        "trait_id": "SOLO_USAGE",
+        "domain": "GetRestaurants",
+        "slot": "number_of_seats",
+        "schema_keys": [
+          "multi"
+        ],
+        "target_mapping_ref": {
+          "trait_id": "SOLO_USAGE",
+          "domain": "GetRestaurants"
+        },
+        "slot_aliases": [
+          "diner",
+          "diners",
+          "guest",
+          "guests",
+          "people",
+          "person",
+          "seat",
+          "seats"
+        ],
+        "explicit_value_phrases": [
+          "alone",
+          "as a group",
+          "by myself",
+          "solo",
+          "with family",
+          "with friends"
+        ],
+        "detect_count_near_slot_alias": true
+      }
+    ],
+    "registry_origin": "target_independent_hand_authored_conservative_public_schema_lexicon",
+    "held_out_or_current_target_query_use": "forbidden_for_alias_phrase_distance_and_test_design",
+    "registry_component_provenance": {
+      "slot_aliases": {
+        "authority": "frozen_public_schema_slot_names_plus_target_independent_generic_lexical_patterns",
+        "source": [
+          "configs/schema_single.json",
+          "configs/schema_multi.json",
+          "configs/preference_slots.json",
+          "generic_language_lexicon"
+        ],
+        "rationale": "conservative_direct_slot_reference_detection_only",
+        "freeze": "vlt3_pre_evaluation_append_only",
+        "held_out_or_current_target_query_or_test_use": "forbidden"
+      },
+      "explicit_value_phrases": {
+        "authority": "frozen_public_schema_enums_plus_target_independent_generic_lexical_patterns",
+        "source": [
+          "configs/schema_single.json",
+          "configs/schema_multi.json",
+          "generic_language_lexicon"
+        ],
+        "rationale": "conservative_explicit_value_or_party_statement_suppression_only",
+        "freeze": "vlt3_pre_evaluation_append_only",
+        "held_out_or_current_target_query_or_test_use": "forbidden"
+      },
+      "numeric_word_tokens": {
+        "authority": "closed_language_generic_zero_through_twelve_list",
+        "source": [
+          "generic_english_number_words"
+        ],
+        "rationale": "bounded_count_detection_without_query_specific_terms",
+        "freeze": "vlt3_pre_evaluation_append_only",
+        "held_out_or_current_target_query_or_test_use": "forbidden"
+      },
+      "count_alias_distance_tokens": {
+        "authority": "hand_authored_conservative_fixed_window",
+        "source": [
+          "engineering_safety_prior_only"
+        ],
+        "rationale": "mask_only_when_count_and_public_slot_alias_are_locally_adjacent",
+        "frozen_value": 3,
+        "freeze": "vlt3_pre_evaluation_append_only",
+        "held_out_or_current_target_query_or_test_use": "forbidden"
+      }
+    }
+  },
+  "provenance": {
+    "taxonomy_authority": "paper_table_5_budget_and_solo_usage_taxonomy",
+    "corroboration_authority": "paper_section_5_2_repeated_in_domain_or_cross_domain_regularities",
+    "mapping_authority": "paper_table_5_taxonomy_intersected_with_frozen_public_schemas_and_preference_slots",
+    "query_constraint_registry_authority": "target_independent_hand_authored_conservative_public_schema_lexicon_not_paper_derived",
+    "paper": {
+      "repository_relative_path": "_paper/8. Latent_Preference_Modeling_for_Cross_Session_Personalized_Tool_Calling.pdf",
+      "sha256": "58de92a7746f671917a4faef5301efa02f05b440888f27845c34d40db5c3d6d8",
+      "runtime_dependency": false,
+      "retained_sections": [
+        "section_5_2",
+        "table_5",
+        "table_8"
+      ]
+    },
+    "original_source_prompt": {
+      "repository_relative_path": "ours_memory2/ours_memory2/prompts.py",
+      "sha256": "2a7e69a3ab13b40727793de7b935b4643c14069983f5bc83900e64707d3ce411",
+      "runtime_dependency": false,
+      "retained_concepts": [
+        "cost sensitivity"
+      ],
+      "removed_claims": [
+        "service_level_implies_high_cost"
+      ]
+    },
+    "preference_slots": {
+      "path": "configs/preference_slots.json",
+      "sha256": "f5994dab209909ed31d15cbabe6a88a84ef5d95f85c156795549c96fd5126091"
+    },
+    "schemas": {
+      "multi": {
+        "path": "configs/schema_multi.json",
+        "sha256": "c3639e58e42c8cbe2f202ea9798dd158da305da8229614e3db09f829b945628f"
+      },
+      "single": {
+        "path": "configs/schema_single.json",
+        "sha256": "ef388951dcff703e3f3a41be0a20315e54125c43e885dca6aeb85e6fbd77dfb9"
+      }
+    },
+    "forbidden_sources": [
+      "current_public_target_queries_for_taxonomy_or_threshold_selection",
+      "held_out_or_current_target_queries_for_query_registry_alias_distance_or_test_design",
+      "current_or_legacy_latent_outputs",
+      "preference_groups",
+      "gold_or_answers",
+      "target_metadata",
+      "metrics"
+    ]
+  },
+  "trait_order": [
+    "LOW_COST",
+    "HIGH_COST",
+    "SOLO_USAGE"
+  ],
+  "trait_groups": {
+    "BUDGET": {
+      "members": [
+        "LOW_COST",
+        "HIGH_COST"
+      ],
+      "opposition_pairs": [
+        [
+          "LOW_COST",
+          "HIGH_COST"
+        ]
+      ]
+    },
+    "TRAVEL_PARTY": {
+      "members": [
+        "SOLO_USAGE"
+      ],
+      "opposition_pairs": []
+    }
+  },
+  "traits": [
+    {
+      "trait_id": "LOW_COST",
+      "group_id": "BUDGET",
+      "opposes": [
+        "HIGH_COST"
+      ],
+      "strong_phrases": [
+        "low cost",
+        "lower cost",
+        "lowest cost",
+        "minimize cost",
+        "cost sensitive",
+        "cost sensitivity",
+        "price sensitive",
+        "price sensitivity",
+        "cost conscious",
+        "budget conscious",
+        "budget friendly",
+        "prioritizes affordability",
+        "values affordability",
+        "economical options",
+        "cheap",
+        "inexpensive"
+      ]
+    },
+    {
+      "trait_id": "HIGH_COST",
+      "group_id": "BUDGET",
+      "opposes": [
+        "LOW_COST"
+      ],
+      "strong_phrases": [
+        "high cost",
+        "higher cost",
+        "highest cost",
+        "pricey",
+        "expensive",
+        "very expensive"
+      ]
+    },
+    {
+      "trait_id": "SOLO_USAGE",
+      "group_id": "TRAVEL_PARTY",
+      "opposes": [],
+      "strong_phrases": [
+        "solo usage",
+        "solo travel",
+        "travels solo",
+        "travels alone",
+        "prefers to travel alone",
+        "prefers traveling alone",
+        "prefers travelling alone",
+        "prefers solo trips"
+      ]
+    }
+  ],
+  "negation_tokens": [
+    "avoid",
+    "avoided",
+    "avoiding",
+    "avoids",
+    "cannot",
+    "didnt",
+    "doesnt",
+    "dont",
+    "neither",
+    "never",
+    "no",
+    "none",
+    "nor",
+    "not",
+    "without",
+    "wont",
+    "non",
+    "anti"
+  ],
+  "affix_negation_prefixes": [
+    "non",
+    "anti",
+    "not"
+  ],
+  "negatable_heads": [
+    "cost",
+    "price",
+    "budget",
+    "cheap",
+    "inexpensive",
+    "expensive",
+    "affordable",
+    "solo",
+    "travel",
+    "travels",
+    "alone"
+  ],
+  "instruction_phrases": [
+    "assistant message",
+    "call",
+    "disregard",
+    "execute command",
+    "follow instruction",
+    "ignore",
+    "ignore previous",
+    "invoke",
+    "obey",
+    "output",
+    "override system",
+    "respond",
+    "return json",
+    "system prompt",
+    "tool call"
+  ],
+  "quote_like_characters": [
+    "'",
+    "\"",
+    "`",
+    "‘",
+    "’",
+    "“",
+    "”",
+    "„",
+    "‟",
+    "‹",
+    "›",
+    "«",
+    "»",
+    "′",
+    "″",
+    "‵",
+    "‶"
+  ],
+  "target_mappings": [
+    {
+      "trait_id": "LOW_COST",
+      "domain": "GetRestaurants",
+      "slot": "price_range",
+      "schema_type": "string",
+      "schema_keys": [
+        "single",
+        "multi"
+      ],
+      "exact_literal": {
+        "type": "string",
+        "value": "cheap"
+      }
+    },
+    {
+      "trait_id": "HIGH_COST",
+      "domain": "GetRestaurants",
+      "slot": "price_range",
+      "schema_type": "string",
+      "schema_keys": [
+        "single",
+        "multi"
+      ],
+      "exact_literal": {
+        "type": "string",
+        "value": "pricey"
+      }
+    },
+    {
+      "trait_id": "LOW_COST",
+      "domain": "GetRentalCars",
+      "slot": "car_type",
+      "schema_type": "string",
+      "schema_keys": [
+        "single",
+        "multi"
+      ],
+      "exact_literal": {
+        "type": "string",
+        "value": "Compact"
+      }
+    },
+    {
+      "trait_id": "HIGH_COST",
+      "domain": "GetRentalCars",
+      "slot": "car_type",
+      "schema_type": "string",
+      "schema_keys": [
+        "single",
+        "multi"
+      ],
+      "exact_literal": {
+        "type": "string",
+        "value": "Full-size"
+      }
+    },
+    {
+      "trait_id": "LOW_COST",
+      "domain": "GetFlights",
+      "slot": "flight_class",
+      "schema_type": "string",
+      "schema_keys": [
+        "single",
+        "multi"
+      ],
+      "exact_literal": {
+        "type": "string",
+        "value": "Economy"
+      }
+    },
+    {
+      "trait_id": "LOW_COST",
+      "domain": "GetRideSharing",
+      "slot": "shared_ride",
+      "schema_type": "boolean",
+      "schema_keys": [
+        "single",
+        "multi"
+      ],
+      "exact_literal": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "trait_id": "LOW_COST",
+      "domain": "GetTravel",
+      "slot": "free_entry",
+      "schema_type": "boolean",
+      "schema_keys": [
+        "single",
+        "multi"
+      ],
+      "exact_literal": {
+        "type": "boolean",
+        "value": true
+      }
+    },
+    {
+      "trait_id": "SOLO_USAGE",
+      "domain": "GetBuses",
+      "slot": "group_size",
+      "schema_type": "string",
+      "schema_keys": [
+        "single",
+        "multi"
+      ],
+      "exact_literal": {
+        "type": "string",
+        "value": "1"
+      }
+    },
+    {
+      "trait_id": "SOLO_USAGE",
+      "domain": "GetFlights",
+      "slot": "passengers",
+      "schema_type": "string",
+      "schema_keys": [
+        "single",
+        "multi"
+      ],
+      "exact_literal": {
+        "type": "string",
+        "value": "1"
+      }
+    },
+    {
+      "trait_id": "SOLO_USAGE",
+      "domain": "GetRideSharing",
+      "slot": "number_of_seats",
+      "schema_type": "string",
+      "schema_keys": [
+        "single",
+        "multi"
+      ],
+      "exact_literal": {
+        "type": "string",
+        "value": "1"
+      }
+    },
+    {
+      "trait_id": "SOLO_USAGE",
+      "domain": "GetEvents",
+      "slot": "number_of_tickets",
+      "schema_type": "string",
+      "schema_keys": [
+        "single",
+        "multi"
+      ],
+      "exact_literal": {
+        "type": "string",
+        "value": "1"
+      }
+    },
+    {
+      "trait_id": "SOLO_USAGE",
+      "domain": "GetRestaurants",
+      "slot": "number_of_seats",
+      "schema_type": "string",
+      "schema_keys": [
+        "multi"
+      ],
+      "exact_literal": {
+        "type": "string",
+        "value": "1"
+      }
+    }
+  ],
+  "typed_support_registry": {
+    "LOW_COST": [
+      {
+        "domain": "GetRestaurants",
+        "slot": "price_range",
+        "match_policy": "exact_literal",
+        "exact_literal": {
+          "type": "string",
+          "value": "cheap"
+        }
+      },
+      {
+        "domain": "GetRentalCars",
+        "slot": "car_type",
+        "match_policy": "exact_literal",
+        "exact_literal": {
+          "type": "string",
+          "value": "Compact"
+        }
+      },
+      {
+        "domain": "GetHotels",
+        "slot": "average_star",
+        "match_policy": "exact_literal",
+        "exact_literal": {
+          "type": "string",
+          "value": "1"
+        }
+      },
+      {
+        "domain": "GetHotels",
+        "slot": "average_star",
+        "match_policy": "exact_literal",
+        "exact_literal": {
+          "type": "string",
+          "value": "2"
+        }
+      },
+      {
+        "domain": "GetRideSharing",
+        "slot": "shared_ride",
+        "match_policy": "exact_literal",
+        "exact_literal": {
+          "type": "string",
+          "value": "True"
+        }
+      },
+      {
+        "domain": "GetTravel",
+        "slot": "free_entry",
+        "match_policy": "exact_literal",
+        "exact_literal": {
+          "type": "string",
+          "value": "True"
+        }
+      },
+      {
+        "domain": "GetFlights",
+        "slot": "flight_class",
+        "match_policy": "exact_literal",
+        "exact_literal": {
+          "type": "string",
+          "value": "Economy"
+        }
+      }
+    ],
+    "HIGH_COST": [
+      {
+        "domain": "GetRestaurants",
+        "slot": "price_range",
+        "match_policy": "exact_literal",
+        "exact_literal": {
+          "type": "string",
+          "value": "pricey"
+        }
+      },
+      {
+        "domain": "GetRentalCars",
+        "slot": "car_type",
+        "match_policy": "exact_literal",
+        "exact_literal": {
+          "type": "string",
+          "value": "Full-size"
+        }
+      },
+      {
+        "domain": "GetHotels",
+        "slot": "average_star",
+        "match_policy": "exact_literal",
+        "exact_literal": {
+          "type": "string",
+          "value": "4"
+        }
+      },
+      {
+        "domain": "GetHotels",
+        "slot": "average_star",
+        "match_policy": "exact_literal",
+        "exact_literal": {
+          "type": "string",
+          "value": "5"
+        }
+      }
+    ],
+    "SOLO_USAGE": [
+      {
+        "domain": "GetBuses",
+        "slot": "group_size",
+        "match_policy": "exact_literal",
+        "exact_literal": {
+          "type": "string",
+          "value": "1"
+        }
+      },
+      {
+        "domain": "GetFlights",
+        "slot": "passengers",
+        "match_policy": "exact_literal",
+        "exact_literal": {
+          "type": "string",
+          "value": "1"
+        }
+      },
+      {
+        "domain": "GetRideSharing",
+        "slot": "number_of_seats",
+        "match_policy": "exact_literal",
+        "exact_literal": {
+          "type": "string",
+          "value": "1"
+        }
+      },
+      {
+        "domain": "GetEvents",
+        "slot": "number_of_tickets",
+        "match_policy": "exact_literal",
+        "exact_literal": {
+          "type": "string",
+          "value": "1"
+        }
+      },
+      {
+        "domain": "GetRestaurants",
+        "slot": "number_of_seats",
+        "match_policy": "exact_literal",
+        "exact_literal": {
+          "type": "string",
+          "value": "1"
+        }
+      }
+    ]
+  },
+  "corroboration_policy": {
+    "minimum_policy_qualified_non_target_hypotheses": 1,
+    "minimum_distinct_non_target_domains": 1,
+    "uniform_across_traits": true,
+    "aggregate_group_evidence_creates_transfer": false,
+    "non_solo_group_size_values_never_create_positive_trait": true,
+    "any_policy_qualified_low_or_high_cost_evidence_vetoes_opposed_budget_trait": true,
+    "cost_and_solo_evidence_are_opposition_neutral": true
+  },
+  "paper_name_correspondence": [
+    {
+      "internal_name": "BUDGET",
+      "paper_name": "Budget",
+      "kind": "trait_group",
+      "status": "included"
+    },
+    {
+      "internal_name": "TRAVEL_PARTY",
+      "paper_name": "Travel",
+      "kind": "trait_group",
+      "status": "included"
+    },
+    {
+      "internal_name": "SOLO_USAGE",
+      "paper_name": "solo",
+      "kind": "trait",
+      "status": "included"
+    },
+    {
+      "internal_name": "GROUP_USAGE",
+      "paper_name": "group",
+      "kind": "trait",
+      "status": "excluded"
+    }
+  ]
+}

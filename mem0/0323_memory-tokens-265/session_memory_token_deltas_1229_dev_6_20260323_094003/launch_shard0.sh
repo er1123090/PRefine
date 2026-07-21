@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+printf '%s\n' "$$" > "/data/minseo/experiments4/mem0/output/session_memory_token_deltas_1229_dev_6_20260323_094003/shard0.pid"
+exec python -u "/data/minseo/experiments4/mem0/measure_session_memory_token_delta.py"   --input_path "/data/minseo/experiments4/data/1229_dev_6.json"   --start_example "0"   --end_example "45"   --skip_delete_all   --continue_on_error   --app_id "experiments4-session-token-delta-20260323_094003-shard0"   --output_csv "/data/minseo/experiments4/mem0/output/session_memory_token_deltas_1229_dev_6_20260323_094003/shard0.csv"   --summary_json "/data/minseo/experiments4/mem0/output/session_memory_token_deltas_1229_dev_6_20260323_094003/shard0.summary.json"   > "/data/minseo/experiments4/mem0/output/session_memory_token_deltas_1229_dev_6_20260323_094003/shard0.log" 2>&1 < /dev/null

@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "normalizations": [
+    {
+      "name": "scalar_ids_to_strings",
+      "source_behavior": "Scalar identifiers may retain heterogeneous JSON scalar types.",
+      "target_behavior": "Every nonempty string, integer, float, or boolean identifier is normalized deterministically to a string; collisions are rejected.",
+      "semantic_reason": "Stable joins and serialized identities must not depend on input scalar type."
+    },
+    {
+      "name": "strict_line_local_utf8_jsonl",
+      "source_behavior": "The source loader accepts permissive whole-file object or array JSON shapes.",
+      "target_behavior": "Each nonblank physical UTF-8 line must contain exactly one example object; arrays, wrappers, and pretty-printed whole-file objects are rejected.",
+      "semantic_reason": "The standalone CLI has one explicit, streaming-safe external input contract."
+    },
+    {
+      "name": "strict_verifier_shape",
+      "source_behavior": "Malformed verifier data may be treated as an empty object.",
+      "target_behavior": "Verifier decisions require an explicit boolean validity value; later method code records parse failures rather than coercing truthiness.",
+      "semantic_reason": "Verification state remains typed and auditable."
+    },
+    {
+      "name": "provider_errors_are_explicit",
+      "source_behavior": "Provider failures may be swallowed and represented as an empty response.",
+      "target_behavior": "Transport, timeout, HTTP, envelope, and content failures raise ProviderError without implicit retry.",
+      "semantic_reason": "A failed provider call cannot be mistaken for a semantic model response."
+    },
+    {
+      "name": "source_context_alias",
+      "source_behavior": "One historical label uses api-only punctuation.",
+      "target_behavior": "The public context is api_only; the historical spelling is documentation-only and is not accepted by runtime validation.",
+      "semantic_reason": "All four public context names use one underscore convention."
+    }
+  ]
+}
+

@@ -1,0 +1,261 @@
+{
+  "schema_version": 2,
+  "kind": "latent_trait_ontology_vlt2",
+  "method": "audited_verified_latent_transfer_v2",
+  "candidate_id": "ecpr_v1",
+  "candidate_revision": "vlt2",
+  "parent_ontology_sha256": "1d9ffdf29a2af37367bbd63033c927473789e6eddb71926999bb88e56bb198a1",
+  "normalization": "NFKC_then_casefold_then_unicode_token_boundary",
+  "maximum_normalized_codepoints": 256,
+  "provenance": {
+    "taxonomy_authority": "paper_table_5_low_cost_and_high_cost_taxonomy_as_frozen_by_user_instruction",
+    "mapping_authority": "paper_table_5_taxonomy_intersected_with_frozen_public_schema_enums",
+    "original_source_prompt": {
+      "repository_relative_path": "ours_memory2/prompts.py",
+      "sha256": "2a7e69a3ab13b40727793de7b935b4643c14069983f5bc83900e64707d3ce411",
+      "runtime_dependency": false,
+      "retained_concepts": [
+        "cost sensitivity"
+      ],
+      "removed_claims": [
+        "service_level_implies_high_cost"
+      ]
+    },
+    "preference_slots": {
+      "path": "configs/preference_slots.json",
+      "sha256": "f5994dab209909ed31d15cbabe6a88a84ef5d95f85c156795549c96fd5126091"
+    },
+    "schemas": {
+      "multi": {
+        "path": "configs/schema_multi.json",
+        "sha256": "c3639e58e42c8cbe2f202ea9798dd158da305da8229614e3db09f829b945628f"
+      },
+      "single": {
+        "path": "configs/schema_single.json",
+        "sha256": "ef388951dcff703e3f3a41be0a20315e54125c43e885dca6aeb85e6fbd77dfb9"
+      }
+    },
+    "forbidden_sources": [
+      "current_public_target_queries",
+      "current_or_legacy_latent_outputs",
+      "preference_groups",
+      "gold_or_answers",
+      "target_metadata",
+      "metrics"
+    ]
+  },
+  "trait_order": [
+    "LOW_COST",
+    "HIGH_COST"
+  ],
+  "traits": [
+    {
+      "trait_id": "LOW_COST",
+      "strong_phrases": [
+        "low cost",
+        "lower cost",
+        "lowest cost",
+        "minimize cost",
+        "cost sensitive",
+        "cost sensitivity",
+        "price sensitive",
+        "price sensitivity",
+        "cost conscious",
+        "budget conscious",
+        "budget friendly",
+        "prioritizes affordability",
+        "values affordability",
+        "economical options",
+        "cheap",
+        "inexpensive"
+      ]
+    },
+    {
+      "trait_id": "HIGH_COST",
+      "strong_phrases": [
+        "high cost",
+        "higher cost",
+        "highest cost",
+        "pricey",
+        "expensive",
+        "very expensive"
+      ]
+    }
+  ],
+  "negation_tokens": [
+    "avoid",
+    "avoided",
+    "avoiding",
+    "avoids",
+    "cannot",
+    "didnt",
+    "doesnt",
+    "dont",
+    "neither",
+    "never",
+    "no",
+    "none",
+    "nor",
+    "not",
+    "without",
+    "wont",
+    "non",
+    "anti"
+  ],
+  "affix_negation_prefixes": [
+    "non",
+    "anti",
+    "not"
+  ],
+  "instruction_phrases": [
+    "assistant message",
+    "call",
+    "disregard",
+    "execute command",
+    "follow instruction",
+    "ignore",
+    "ignore previous",
+    "invoke",
+    "obey",
+    "output",
+    "override system",
+    "respond",
+    "return json",
+    "system prompt",
+    "tool call"
+  ],
+  "quote_like_characters": [
+    "'",
+    "\"",
+    "`",
+    "‘",
+    "’",
+    "“",
+    "”",
+    "„",
+    "‟",
+    "‹",
+    "›",
+    "«",
+    "»",
+    "′",
+    "″",
+    "‵",
+    "‶"
+  ],
+  "target_mappings": [
+    {
+      "domain": "GetRestaurants",
+      "slot": "price_range",
+      "schema_type": "string",
+      "trait_values": {
+        "LOW_COST": "cheap",
+        "HIGH_COST": "pricey"
+      }
+    },
+    {
+      "domain": "GetRentalCars",
+      "slot": "car_type",
+      "schema_type": "string",
+      "trait_values": {
+        "LOW_COST": "Compact",
+        "HIGH_COST": "Full-size"
+      }
+    },
+    {
+      "domain": "GetFlights",
+      "slot": "flight_class",
+      "schema_type": "string",
+      "trait_values": {
+        "LOW_COST": "Economy"
+      }
+    },
+    {
+      "domain": "GetRideSharing",
+      "slot": "shared_ride",
+      "schema_type": "boolean",
+      "trait_values": {
+        "LOW_COST": true
+      }
+    },
+    {
+      "domain": "GetTravel",
+      "slot": "free_entry",
+      "schema_type": "boolean",
+      "trait_values": {
+        "LOW_COST": true
+      }
+    }
+  ],
+  "typed_support_registry": {
+    "LOW_COST": [
+      {
+        "domain": "GetRestaurants",
+        "slot": "price_range",
+        "values": [
+          "cheap"
+        ]
+      },
+      {
+        "domain": "GetRentalCars",
+        "slot": "car_type",
+        "values": [
+          "Compact"
+        ]
+      },
+      {
+        "domain": "GetHotels",
+        "slot": "average_star",
+        "values": [
+          1,
+          2
+        ]
+      },
+      {
+        "domain": "GetRideSharing",
+        "slot": "shared_ride",
+        "values": [
+          true
+        ]
+      },
+      {
+        "domain": "GetTravel",
+        "slot": "free_entry",
+        "values": [
+          true
+        ]
+      },
+      {
+        "domain": "GetFlights",
+        "slot": "flight_class",
+        "values": [
+          "Economy"
+        ]
+      }
+    ],
+    "HIGH_COST": [
+      {
+        "domain": "GetRestaurants",
+        "slot": "price_range",
+        "values": [
+          "pricey"
+        ]
+      },
+      {
+        "domain": "GetRentalCars",
+        "slot": "car_type",
+        "values": [
+          "Full-size"
+        ]
+      },
+      {
+        "domain": "GetHotels",
+        "slot": "average_star",
+        "values": [
+          4,
+          5
+        ]
+      }
+    ]
+  }
+}

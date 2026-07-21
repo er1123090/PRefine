@@ -1,0 +1,652 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "GetBanks",
+      "description": "Auto-generated minimal schema for GetBanks (pruned to match CSV domain/slot/value).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "recipient_account_type": {
+            "type": "string",
+            "enum": [
+              "checking",
+              "savings"
+            ]
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetBuses",
+      "description": "Auto-generated minimal schema for GetBuses (pruned to match CSV domain/slot/value).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "departure_date": {
+            "type": "string"
+          },
+          "departure_time": {
+            "type": "string"
+          },
+          "destination": {
+            "type": "string",
+            "enum": [
+              "Anaheim",
+              "Fresno",
+              "Las Vegas",
+              "Long Beach",
+              "Los Angeles",
+              "New York",
+              "Philadelphia",
+              "Portland",
+              "Sacramento",
+              "San Diego",
+              "San Francisco",
+              "Seattle",
+              "Vancouver",
+              "Washington"
+            ]
+          },
+          "group_size": {
+            "type": "string"
+          },
+          "origin": {
+            "type": "string",
+            "enum": [
+              "Anaheim",
+              "Fresno",
+              "Las Vegas",
+              "Long Beach",
+              "Los Angeles",
+              "New York",
+              "Philadelphia",
+              "Portland",
+              "Sacramento",
+              "San Diego",
+              "San Francisco",
+              "Seattle",
+              "Vancouver",
+              "Washington"
+            ]
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetEvents",
+      "description": "Auto-generated minimal schema for GetEvents (pruned to match CSV domain/slot/value).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "Music",
+              "Sports"
+            ]
+          },
+          "city": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "event_name": {
+            "type": "string"
+          },
+          "event_type": {
+            "type": "string",
+            "enum": [
+              "American Football",
+              "Baseball",
+              "Basketball",
+              "Blues",
+              "Christian",
+              "Country",
+              "Electronica",
+              "Football",
+              "Hip Hop",
+              "Jazz",
+              "Pop",
+              "Rock"
+            ]
+          },
+          "number_of_tickets": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetFlights",
+      "description": "Auto-generated minimal schema for GetFlights (pruned to match CSV domain/slot/value).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "airlines": {
+            "type": "string",
+            "enum": [
+              "Alaska Airlines",
+              "American Airlines",
+              "Delta Airlines",
+              "Southwest Airlines",
+              "United Airlines"
+            ]
+          },
+          "departure_date": {
+            "type": "string"
+          },
+          "destination": {
+            "type": "string",
+            "enum": [
+              "Atlanta",
+              "Chicago",
+              "Delhi",
+              "Kuala Lumpur",
+              "Las Vegas",
+              "London",
+              "Los Angeles",
+              "Mexico City",
+              "Nairobi",
+              "New York",
+              "Paris",
+              "Philadelphia",
+              "Phoenix",
+              "Portland",
+              "San Diego",
+              "San Francisco",
+              "Seattle",
+              "Sydney",
+              "Toronto",
+              "Vancouver",
+              "Washington"
+            ]
+          },
+          "flight_class": {
+            "type": "string",
+            "enum": [
+              "Economy",
+              "Premium Economy"
+            ]
+          },
+          "origin": {
+            "type": "string",
+            "enum": [
+              "Atlanta",
+              "Chicago",
+              "Delhi",
+              "Las Vegas",
+              "London",
+              "Los Angeles",
+              "Mexico City",
+              "Nairobi",
+              "New York",
+              "Paris",
+              "Philadelphia",
+              "Phoenix",
+              "Portland",
+              "San Diego",
+              "San Francisco",
+              "Seattle",
+              "Sydney",
+              "Toronto",
+              "Vancouver",
+              "Washington"
+            ]
+          },
+          "passengers": {
+            "type": "string"
+          },
+          "return_date": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetHomes",
+      "description": "Auto-generated minimal schema for GetHomes (pruned to match CSV domain/slot/value).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "area": {
+            "type": "string",
+            "enum": [
+              "Castro Valley",
+              "Concord",
+              "Dublin",
+              "Fairfield",
+              "Foster City",
+              "Fremont",
+              "Hayward",
+              "Livermore",
+              "Mountain View",
+              "Napa",
+              "Newark",
+              "Novato",
+              "Palo Alto",
+              "Rohnert Park",
+              "San Jose",
+              "San Leandro",
+              "San Ramon",
+              "Santa Clara",
+              "Santa Rosa",
+              "Sebastopol",
+              "Suisun City",
+              "Sunnyvale",
+              "Union City",
+              "Vacaville"
+            ]
+          },
+          "number_of_baths": {
+            "type": "string"
+          },
+          "number_of_beds": {
+            "type": "string"
+          },
+          "pets_allowed": {
+            "type": "boolean"
+          },
+          "property_name": {
+            "type": "string"
+          },
+          "visit_date": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetHotels",
+      "description": "Auto-generated minimal schema for GetHotels (pruned to match CSV domain/slot/value).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "average_star": {
+            "type": "string"
+          },
+          "check_in_date": {
+            "type": "string"
+          },
+          "has_wifi": {
+            "type": "boolean"
+          },
+          "hotel_name": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string",
+            "enum": [
+              "Anaheim",
+              "Atlanta",
+              "Chicago",
+              "Delhi",
+              "Fresno",
+              "Kuala Lumpur",
+              "Las Vegas",
+              "London",
+              "Long Beach",
+              "Los Angeles",
+              "Nairobi",
+              "New York",
+              "Paris",
+              "Philadelphia",
+              "Phoenix",
+              "Portland",
+              "Sacramento",
+              "San Diego",
+              "San Francisco",
+              "Seattle",
+              "Sydney",
+              "Toronto",
+              "Vancouver",
+              "Washington D.C."
+            ]
+          },
+          "number_of_days": {
+            "type": "string"
+          },
+          "number_of_rooms": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetMedia",
+      "description": "Auto-generated minimal schema for GetMedia (pruned to match CSV domain/slot/value).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "genre": {
+            "type": "string",
+            "enum": [
+              "Adventure",
+              "Animation",
+              "Biographical",
+              "Comedy",
+              "Documentary",
+              "Drama",
+              "Fantasy",
+              "Mafia",
+              "Musical",
+              "Mystery",
+              "Romance",
+              "Sports",
+              "Thriller",
+              "War"
+            ]
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetMovies",
+      "description": "Auto-generated minimal schema for GetMovies (pruned to match CSV domain/slot/value).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "genre": {
+            "type": "string",
+            "enum": [
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Drama",
+              "Fantasy",
+              "Horror",
+              "Mystery",
+              "Romance",
+              "Thriller"
+            ]
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetMusic",
+      "description": "Auto-generated minimal schema for GetMusic (pruned to match CSV domain/slot/value).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "artist": {
+            "type": "string"
+          },
+          "playback_device": {
+            "type": "string",
+            "enum": [
+              "Bedroom speaker",
+              "Kitchen speaker",
+              "TV"
+            ]
+          },
+          "song_name": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetRentalCars",
+      "description": "Auto-generated minimal schema for GetRentalCars (pruned to match CSV domain/slot/value).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "car_type": {
+            "type": "string",
+            "enum": [
+              "Compact",
+              "Full-size",
+              "Standard"
+            ]
+          },
+          "dropoff_date": {
+            "type": "string"
+          },
+          "pickup_city": {
+            "type": "string",
+            "enum": [
+              "Anaheim",
+              "Atlanta",
+              "Chicago",
+              "Concord",
+              "Fremont",
+              "Las Vegas",
+              "London",
+              "Long Beach",
+              "Los Angeles",
+              "Mexico City",
+              "Nairobi",
+              "New York",
+              "Paris",
+              "Philadelphia",
+              "Phoenix",
+              "Portland",
+              "Sacramento",
+              "San Diego",
+              "San Francisco",
+              "San Jose",
+              "Seattle",
+              "Vancouver",
+              "Walnut Creek",
+              "Washington"
+            ]
+          },
+          "pickup_date": {
+            "type": "string"
+          },
+          "pickup_location": {
+            "type": "string"
+          },
+          "pickup_time": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetRestaurants",
+      "description": "Auto-generated minimal schema for GetRestaurants (pruned to match CSV domain/slot/value).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "American",
+              "Asian",
+              "Breakfast",
+              "Brunch",
+              "Burmese",
+              "Burrito",
+              "Chinese",
+              "Coffeehouse",
+              "Ethiopian",
+              "French",
+              "Greek",
+              "Halal",
+              "Indian",
+              "Italian",
+              "Japanese",
+              "Korean",
+              "Mexican",
+              "Moroccan",
+              "Nicaraguan",
+              "Sandwich",
+              "Sushi",
+              "Tapas",
+              "Thai"
+            ]
+          },
+          "date": {
+            "type": "string"
+          },
+          "number_of_seats": {
+            "type": "string"
+          },
+          "price_range": {
+            "type": "string",
+            "enum": [
+              "cheap",
+              "moderate",
+              "pricey"
+            ]
+          },
+          "restaurant_name": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetRideSharing",
+      "description": "Auto-generated minimal schema for GetRideSharing (pruned to match CSV domain/slot/value).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "destination": {
+            "type": "string"
+          },
+          "number_of_seats": {
+            "type": "string"
+          },
+          "shared_ride": {
+            "type": "boolean"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetTravel",
+      "description": "Auto-generated minimal schema for GetTravel (pruned to match CSV domain/slot/value).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "Historical Landmark",
+              "Museum",
+              "Nature Preserve",
+              "Park",
+              "Performing Arts Venue",
+              "Place of Worship",
+              "Shopping Area",
+              "Sports Venue",
+              "Theme Park",
+              "Tourist Attraction"
+            ]
+          },
+          "free_entry": {
+            "type": "boolean"
+          },
+          "good_for_kids": {
+            "type": "boolean"
+          },
+          "location": {
+            "type": "string",
+            "enum": [
+              "Anaheim",
+              "Atlanta",
+              "Chicago",
+              "Delhi",
+              "Fresno",
+              "Kuala Lumpur",
+              "Las Vegas",
+              "London",
+              "Long Beach",
+              "Los Angeles",
+              "Mexico City",
+              "Nairobi",
+              "New York",
+              "Paris",
+              "Philadelphia",
+              "Phoenix",
+              "Portland",
+              "Sacramento",
+              "San Diego",
+              "San Francisco",
+              "Seattle",
+              "Sydney",
+              "Toronto",
+              "Vancouver",
+              "Washington D.C."
+            ]
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetWeather",
+      "description": "Auto-generated minimal schema for GetWeather (pruned to match CSV domain/slot/value).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  }
+]

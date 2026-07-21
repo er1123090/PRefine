@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "kind": "latent_trait_ontology_v1",
+  "method": "deterministic_verified_latent_transfer_v1",
+  "candidate_id": "ecpr_v1",
+  "candidate_revision": "vlt1",
+  "normalization": "NFKC_then_casefold_then_unicode_token_boundary",
+  "maximum_normalized_codepoints": 256,
+  "provenance": {
+    "original_source_prompt": {
+      "repository_relative_path": "ours_memory2/prompts.py",
+      "sha256": "2a7e69a3ab13b40727793de7b935b4643c14069983f5bc83900e64707d3ce411",
+      "runtime_dependency": false,
+      "concepts": [
+        "cost sensitivity",
+        "service level"
+      ]
+    },
+    "preference_slots": {
+      "path": "configs/preference_slots.json",
+      "sha256": "f5994dab209909ed31d15cbabe6a88a84ef5d95f85c156795549c96fd5126091"
+    },
+    "schemas": {
+      "multi": {
+        "path": "configs/schema_multi.json",
+        "sha256": "c3639e58e42c8cbe2f202ea9798dd158da305da8229614e3db09f829b945628f"
+      },
+      "single": {
+        "path": "configs/schema_single.json",
+        "sha256": "ef388951dcff703e3f3a41be0a20315e54125c43e885dca6aeb85e6fbd77dfb9"
+      }
+    },
+    "support_registry_authority": "frozen_user_contract_from_paper_figures_1_2_original_prompt_concepts_and_public_schema_semantics",
+    "forbidden_sources": [
+      "current_public_target_queries",
+      "current_or_legacy_latent_outputs",
+      "preference_groups",
+      "gold_or_answers",
+      "target_metadata"
+    ]
+  },
+  "trait_order": [
+    "COST_MINIMIZING",
+    "PREMIUM_SERVICE_SEEKING"
+  ],
+  "traits": [
+    {
+      "trait_id": "COST_MINIMIZING",
+      "strong_phrases": [
+        "cost sensitive",
+        "cost sensitivity",
+        "minimize cost",
+        "lowest cost",
+        "budget conscious",
+        "budget friendly",
+        "price sensitive",
+        "price sensitivity",
+        "cost conscious",
+        "lower cost",
+        "prioritizes affordability",
+        "values affordability",
+        "economical options"
+      ]
+    },
+    {
+      "trait_id": "PREMIUM_SERVICE_SEEKING",
+      "strong_phrases": [
+        "premium service",
+        "premium service seeking",
+        "high service level",
+        "highest service level",
+        "maximize service level",
+        "premium options",
+        "higher service level",
+        "upscale options",
+        "luxury options"
+      ]
+    }
+  ],
+  "negation_tokens": [
+    "avoid",
+    "avoided",
+    "avoiding",
+    "avoids",
+    "cannot",
+    "didnt",
+    "doesnt",
+    "dont",
+    "neither",
+    "never",
+    "no",
+    "none",
+    "nor",
+    "not",
+    "without",
+    "wont"
+  ],
+  "instruction_phrases": [
+    "assistant message",
+    "execute command",
+    "follow instruction",
+    "ignore previous",
+    "override system",
+    "return json",
+    "system prompt",
+    "tool call"
+  ],
+  "target_mappings": [
+    {
+      "domain": "GetFlights",
+      "slot": "flight_class",
+      "schema_type": "string",
+      "ordered_values": [
+        "Economy",
+        "Premium Economy",
+        "Business",
+        "First Class"
+      ],
+      "trait_directions": {
+        "COST_MINIMIZING": "lowest_available",
+        "PREMIUM_SERVICE_SEEKING": "highest_available"
+      }
+    },
+    {
+      "domain": "GetRentalCars",
+      "slot": "car_type",
+      "schema_type": "string",
+      "ordered_values": [
+        "Compact",
+        "Standard",
+        "Full-size"
+      ],
+      "trait_directions": {
+        "COST_MINIMIZING": "lowest_available"
+      }
+    },
+    {
+      "domain": "GetRideSharing",
+      "slot": "shared_ride",
+      "schema_type": "boolean",
+      "trait_values": {
+        "COST_MINIMIZING": true,
+        "PREMIUM_SERVICE_SEEKING": false
+      }
+    },
+    {
+      "domain": "GetTravel",
+      "slot": "free_entry",
+      "schema_type": "boolean",
+      "trait_values": {
+        "COST_MINIMIZING": true
+      }
+    }
+  ],
+  "typed_support_registry": {
+    "COST_MINIMIZING": [
+      {
+        "domain": "GetRestaurants",
+        "slot": "price_range",
+        "values": [
+          "cheap",
+          "inexpensive"
+        ]
+      },
+      {
+        "domain": "GetTravel",
+        "slot": "free_entry",
+        "values": [
+          true
+        ]
+      },
+      {
+        "domain": "GetRentalCars",
+        "slot": "car_type",
+        "values": [
+          "Compact"
+        ]
+      },
+      {
+        "domain": "GetFlights",
+        "slot": "flight_class",
+        "values": [
+          "Economy"
+        ]
+      },
+      {
+        "domain": "GetRideSharing",
+        "slot": "shared_ride",
+        "values": [
+          true
+        ]
+      }
+    ],
+    "PREMIUM_SERVICE_SEEKING": [
+      {
+        "domain": "GetRestaurants",
+        "slot": "price_range",
+        "values": [
+          "expensive",
+          "very expensive",
+          "pricey"
+        ]
+      },
+      {
+        "domain": "GetRideSharing",
+        "slot": "shared_ride",
+        "values": [
+          false
+        ]
+      },
+      {
+        "domain": "GetFlights",
+        "slot": "flight_class",
+        "values": [
+          "Premium Economy",
+          "Business",
+          "First Class"
+        ]
+      }
+    ]
+  }
+}

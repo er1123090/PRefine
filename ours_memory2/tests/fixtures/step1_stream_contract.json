@@ -1,0 +1,42 @@
+{
+  "final_required": [
+    "example_id",
+    "final_implicit_preference",
+    "final_accumulated_api_calls",
+    "final_accumulated_dialogue",
+    "total_sessions_processed",
+    "preference_evolution_history",
+    "metadata"
+  ],
+  "draft_required": [
+    "example_id",
+    "session_index",
+    "step",
+    "draft_preference",
+    "generation_purpose",
+    "refinement_parent",
+    "refinement_feedback"
+  ],
+  "verifier_required": [
+    "example_id",
+    "session_index",
+    "step",
+    "is_valid",
+    "verifier_feedback",
+    "verifier_input",
+    "verifier_output"
+  ],
+  "source_to_target": {
+    "result_record.example_id": "final.example_id",
+    "MemoryState.implicit_pref": "final.final_implicit_preference",
+    "MemoryState.accumulated_api_calls": "final.final_accumulated_api_calls",
+    "MemoryState.accumulated_dialogue": "final.final_accumulated_dialogue",
+    "MemoryState.session_count": "final.total_sessions_processed",
+    "MemoryState.evolution_log": "final.preference_evolution_history",
+    "refinement_logs.draft_preference": "draft.draft_preference",
+    "attempt.generation_lineage": "draft.generation_purpose+refinement_parent+refinement_feedback",
+    "verifier_logs.is_valid": "verifier.is_valid",
+    "verifier_logs.verifier_input": "verifier.verifier_input",
+    "verifier_logs.verifier_output": "verifier.verifier_output"
+  }
+}

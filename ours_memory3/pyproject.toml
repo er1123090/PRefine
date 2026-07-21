@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ours-memory3"
+version = "0.1.0"
+description = "Standalone query-conditioned evidence-calibrated preference overlay"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+ours-memory3 = "ours_memory3.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ours_memory3*"]

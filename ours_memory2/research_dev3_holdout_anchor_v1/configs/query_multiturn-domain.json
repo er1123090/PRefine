@@ -1,0 +1,538 @@
+{
+  "GetRestaurants": [
+    {
+      "query_id": "GetRestaurants",
+      "query": [
+        {
+          "role": "User",
+          "message": "I want to find a nice to-go meal. Any suggestions?"
+        },
+        {
+          "role": "Assistant",
+          "message": "Sure. What city should I search in?",
+          "service": [
+            "GetRestaurants(category=\"Take-out\")"
+          ]
+        },
+        {
+          "role": "User",
+          "message": "Vallejo."
+        },
+        {
+          "role": "Assistant",
+          "message": "Alright. Are you looking to get food on a specific date?"
+        },
+        {
+          "role": "User",
+          "message": "Yes, on March 5th."
+        },
+        {
+          "role": "Assistant",
+          "message": "Got it. Do you have a time in mind?"
+        },
+        {
+          "role": "User",
+          "message": "Around 6:15 in the evening."
+        }
+      ],
+      "api_call": [
+        "GetRestaurants(city=\"Vallejo\", date=\"2019-03-05\", time=\"18:15\")"
+      ],
+      "target": [
+        {
+          "domain": "GetRestaurants",
+          "slot": "price_range",
+          "value": [
+            "cheap"
+          ]
+        }
+      ]
+    }
+  ],
+  "GetRentalCars": [
+    {
+      "query_id": "GetRentalCars",
+      "query": [
+        {
+          "role": "User",
+          "message": "I’ll be visiting the city for a short stay and I’m thinking about renting a car."
+        },
+        {
+          "role": "Assistant",
+          "message": "Sure. Where would you like to pick up the car?",
+          "service": [
+            "GetRentalCars()"
+          ]
+        },
+        {
+          "role": "User",
+          "message": "Downtown Berlin would be best."
+        },
+        {
+          "role": "Assistant",
+          "message": "Got it. When would you like to pick it up?"
+        },
+        {
+          "role": "User",
+          "message": "Around noon on March 8th."
+        },
+        {
+          "role": "Assistant",
+          "message": "How long do you plan to keep the car?"
+        },
+        {
+          "role": "User",
+          "message": "Just for a couple of days. I’ll mostly be driving within the city."
+        }
+      ],
+      "api_call": [
+        "GetRentalCars(pickup_location=\"Berlin\", pickup_date=\"2019-03-08\", pickup_time=\"12:00\")"
+      ],
+      "target": [
+        {
+          "domain": "GetRentalCars",
+          "slot": "car_type",
+          "value": [
+            "Compact"
+          ]
+        }
+      ]
+    }
+  ],
+  "GetHotels": [
+    {
+      "query_id": "GetHotels",
+      "query": [
+        {
+          "role": "User",
+          "message": "I need a place to stay during my trip."
+        },
+        {
+          "role": "Assistant",
+          "message": "Sure. Which city are you planning to stay in?",
+          "service": [
+            "GetHotels()"
+          ]
+        },
+        {
+          "role": "User",
+          "message": "I’ll be staying in Vallejo."
+        },
+        {
+          "role": "Assistant",
+          "message": "Got it. When will you be checking in?"
+        },
+        {
+          "role": "User",
+          "message": "March 5th."
+        },
+        {
+          "role": "Assistant",
+          "message": "And how long will you be staying?"
+        },
+        {
+          "role": "User",
+          "message": "Just for one night."
+        }
+      ],
+      "api_call": [
+        "GetHotels(location=\"Vallejo\", check_in_date=\"2019-03-05\", number_of_days=\"1\")"
+      ],
+      "target": [
+        {
+          "domain": "GetHotels",
+          "slot": "average_star",
+          "value": [
+            "1",
+            "2"
+          ]
+        }
+      ]
+    }
+  ],
+  "GetRideSharing": [
+    {
+      "query_id": "GetRideSharing",
+      "query": [
+        {
+          "role": "User",
+          "message": "I need a ride to get across town."
+        },
+        {
+          "role": "Assistant",
+          "message": "Sure. Where would you like to go?",
+          "service": [
+            "GetRideSharing()"
+          ]
+        },
+        {
+          "role": "User",
+          "message": "To 39145 Farwell Drive."
+        },
+        {
+          "role": "Assistant",
+          "message": "Got it. When would you like to be picked up?"
+        },
+        {
+          "role": "User",
+          "message": "In about half an hour."
+        },
+        {
+          "role": "Assistant",
+          "message": "Okay, I’ll note that."
+        }
+      ],
+      "api_call": [
+        "GetRideSharing(destination=\"39145 Farwell Drive\", pickup_time=\"18:15\")"
+      ],
+      "target": [
+        {
+          "domain": "GetRideSharing",
+          "slot": "shared_ride",
+          "value": [
+            "True"
+          ]
+        }
+      ]
+    }
+  ],
+  "GetTravel": [
+    {
+      "query_id": "GetTravel",
+      "query": [
+        {
+          "role": "User",
+          "message": "I’m planning a short trip."
+        },
+        {
+          "role": "Assistant",
+          "message": "Sure. Where are you planning to go?",
+          "service": [
+            "GetTravel()"
+          ]
+        },
+        {
+          "role": "User",
+          "message": "Berkeley."
+        },
+        {
+          "role": "Assistant",
+          "message": "When do you plan to travel?"
+        },
+        {
+          "role": "User",
+          "message": "On March 11th."
+        },
+        {
+          "role": "Assistant",
+          "message": "How long do you expect to stay?"
+        },
+        {
+          "role": "User",
+          "message": "Just for one night."
+        }
+      ],
+      "api_call": [
+        "GetTravel(destination=\"Berkeley\", departure_date=\"2019-03-11\")"
+      ],
+      "target": [
+        {
+          "domain": "GetTravel",
+          "slot": "free_entry",
+          "value": [
+            "True"
+          ]
+        }
+      ]
+    }
+  ],
+  "GetFlights": [
+    {
+      "query_id": "GetFlights",
+      "query": [
+        {
+          "role": "User",
+          "message": "I need to book a flight for an upcoming trip."
+        },
+        {
+          "role": "Assistant",
+          "message": "Sure. Where will you be flying from and to?",
+          "service": [
+            "GetFlights()"
+          ]
+        },
+        {
+          "role": "User",
+          "message": "From San Francisco to Seattle."
+        },
+        {
+          "role": "Assistant",
+          "message": "When do you plan to depart?"
+        },
+        {
+          "role": "User",
+          "message": "On March 9th."
+        },
+        {
+          "role": "Assistant",
+          "message": "Do you have a preferred departure time?"
+        },
+        {
+          "role": "User",
+          "message": "No, anytime during the day works."
+        }
+      ],
+      "api_call": [
+        "GetFlights(origin=\"San Francisco\", destination=\"Seattle\", departure_date=\"2019-03-09\")"
+      ],
+      "target": [
+        {
+          "domain": "GetFlights",
+          "slot": "flight_class",
+          "value": [
+            "Economy"
+          ]
+        }
+      ]
+    }
+  ],
+  "GetBuses": [
+    {
+      "query_id": "GetBuses",
+      "query": [
+        {
+          "role": "User",
+          "message": "I need to take a bus to another city."
+        },
+        {
+          "role": "Assistant",
+          "message": "Sure. Where will you be traveling from and to?",
+          "service": [
+            "GetBuses()"
+          ]
+        },
+        {
+          "role": "User",
+          "message": "From San Jose to Sacramento."
+        },
+        {
+          "role": "Assistant",
+          "message": "When would you like to depart?"
+        },
+        {
+          "role": "User",
+          "message": "On March 10th in the morning."
+        },
+        {
+          "role": "Assistant",
+          "message": "Is there anything else I should consider for your trip?"
+        },
+        {
+          "role": "User",
+          "message": "No, it’s just a straightforward trip."
+        }
+      ],
+      "api_call": [
+        "GetBuses(origin=\"San Jose\", destination=\"Sacramento\", departure_date=\"2019-03-10\", departure_time=\"09:00\")"
+      ],
+      "target": [
+        {
+          "domain": "GetBuses",
+          "slot": "group_size",
+          "value": [
+            "1"
+          ]
+        }
+      ]
+    }
+  ],
+  "GetEvents": [
+    {
+      "query_id": "GetEvents",
+      "query": [
+        {
+          "role": "User",
+          "message": "I’m interested in attending an art exhibition."
+        },
+        {
+          "role": "Assistant",
+          "message": "Sure. Which city should I look in?"
+        },
+        {
+          "role": "User",
+          "message": "San Francisco."
+        }
+      ],
+      "api_call": [
+        "GetEvents(city=\"San Francisco\")"
+      ],
+      "target": [
+        {
+          "domain": "GetEvents",
+          "slot": "number_of_tickets",
+          "value": [
+            "1"
+          ]
+        }
+      ]
+    }
+  ],
+  "GetHomes": [
+    {
+      "query_id": "GetHomes",
+      "query": [
+        {
+          "role": "User",
+          "message": "I’m looking for a place to live."
+        },
+        {
+          "role": "Assistant",
+          "message": "Sure. Which area are you interested in?",
+          "service": [
+            "GetHomes()"
+          ]
+        },
+        {
+          "role": "User",
+          "message": "Somewhere in San Jose."
+        }
+      ],
+      "api_call": [
+        "GetHomes(area=\"San Jose\")"
+      ],
+      "target": [
+        {
+          "domain": "GetHomes",
+          "slot": "number_of_beds",
+          "value": [
+            "3"
+          ]
+        }
+      ]
+    }
+  ],
+  "GetBanks": [
+    {
+      "query_id": "GetBanks",
+      "query": [
+        {
+          "role": "User",
+          "message": "I need to make a bank transfer."
+        },
+        {
+          "role": "Assistant",
+          "message": "Sure. I can help with that.",
+          "service": [
+            "GetBanks()"
+          ]
+        }
+      ],
+      "api_call": [
+        "GetBanks()"
+      ],
+      "target": [
+        {
+          "domain": "GetBanks",
+          "slot": "recipient_account_type",
+          "value": [
+            "savings"
+          ]
+        }
+      ]
+    }
+  ],
+  "GetMedia": [
+    {
+      "query_id": "GetMedia",
+      "query": [
+        {
+          "role": "User",
+          "message": "I’m looking for something to watch."
+        },
+        {
+          "role": "Assistant",
+          "message": "Sure. I can help with that.",
+          "service": [
+            "GetMedia()"
+          ]
+        }
+      ],
+      "api_call": [
+        "GetMedia()"
+      ],
+      "target": [
+        {
+          "domain": "GetMedia",
+          "slot": "genre",
+          "value": [
+            "Documentary"
+          ]
+        }
+      ]
+    }
+  ],
+  "GetMovies": [
+    {
+      "query_id": "GetMovies",
+      "query": [
+        {
+          "role": "User",
+          "message": "I’m looking for a movie to watch."
+        },
+        {
+          "role": "Assistant",
+          "message": "Sure. I can help with that.",
+          "service": [
+            "GetMovies()"
+          ]
+        }
+      ],
+      "api_call": [
+        "GetMovies()"
+      ],
+      "target": [
+        {
+          "domain": "GetMovies",
+          "slot": "genre",
+          "value": [
+            "Adventure"
+          ]
+        }
+      ]
+    }
+  ],
+  "GetMusic": [
+    {
+      "query_id": "GetMusic",
+      "query": [
+        {
+          "role": "User",
+          "message": "I’d like to listen to some music."
+        },
+        {
+          "role": "Assistant",
+          "message": "Sure. Where would you like to play it?",
+          "service": [
+            "GetMusic()"
+          ]
+        },
+        {
+          "role": "User",
+          "message": "On my phone."
+        }
+      ],
+      "api_call": [
+        "GetMusic(playback_device=\"phone\")"
+      ],
+      "target": [
+        {
+          "domain": "GetMusic",
+          "slot": "artist",
+          "value": [
+            "Ariana Grande"
+          ]
+        }
+      ]
+    }
+  ]
+}

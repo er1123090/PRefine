@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "kind": "expected_final_runtime_model_pipeline_contract",
+  "runner_mode": "explicit_--final_or_--preflight-only",
+  "candidate_id": "ecpr_v1",
+  "final_attempts_allowed": 1,
+  "model": {
+    "id": "Qwen/Qwen3-8B",
+    "snapshot": "b968826d9c46dd6066d109eabc6255188de91218",
+    "snapshot_path": "/data/minseo/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+    "served_model_name": "Qwen/Qwen3-8B",
+    "tensor_parallel_size": 4
+  },
+  "runtime": {
+    "vllm_executable": "/home/minseo/miniconda3/bin/vllm",
+    "host": "127.0.0.1",
+    "port": 8129,
+    "gpu_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "gpu_preflight_command": [
+      "timeout",
+      "5",
+      "nvidia-smi",
+      "--query-gpu=index",
+      "--format=csv,noheader"
+    ],
+    "gpu_preflight_subprocess_timeout_seconds": 8,
+    "server_start_timeout_seconds": 600
+  },
+  "action_budget": {
+    "temperature": 0.0,
+    "seed": 2026071600,
+    "max_tokens": 1024,
+    "calls_per_case": 1,
+    "retries": 0,
+    "n": 1
+  },
+  "candidate_policy": {
+    "minimum_support": 2,
+    "minimum_confidence": 0.67,
+    "maximum_conflict_ratio": 0.34,
+    "maximum_stored_hypotheses": 24,
+    "maximum_routed_hypotheses": 6,
+    "overlay_lexical_token_cap": 384,
+    "memory_lexical_token_cap": 1536,
+    "recency_tiebreak_only": true,
+    "raw_api_history_in_candidate_prompt": false
+  },
+  "routing_gate": {
+    "method": "public_query_relevance_gate_v1",
+    "ontology_path": "configs/public_domain_ontology.json",
+    "normalization": "NFKC_then_casefold_then_whitespace_collapse",
+    "multiturn_extraction": "recognized_role_tags_present=>nonempty_User_payloads_only_else_whole_query;malformed_or_no_User=>ABSTAIN",
+    "matching": "contiguous_unicode_token_boundary_phrase_match",
+    "domain_score": "maximum_matching_alias_weight_never_sum",
+    "alias_weight_classes": {
+      "canonical_or_domain_specific": 4,
+      "generic": 3,
+      "weak": 1
+    },
+    "minimum_top_score": 3,
+    "minimum_margin": 2,
+    "tie_policy": "ABSTAIN",
+    "multi_intent_policy": "ABSTAIN_if_two_or_more_domains_score_at_least_3",
+    "selection_policy": "SELECT_only_unique_top_at_least_3_with_margin_at_least_2",
+    "candidate_scope": "selected_schema_domain_only;selection_never_implies_requested_operation",
+    "latent_policy": "ABSTAIN always omits; SELECT may serialize authorized closed VLT even with zero target-routed typed evidence"
+  },
+  "candidate_memory_scope": {
+    "abstain_policy": "always_no_memory_evidence",
+    "baseline_memory_scope": "unchanged_source_faithful_prefine_final_draft_without_candidate_attestation_filter",
+    "candidate_revision": "vlt3",
+    "cross_domain_evidence_serialization": "forbidden_audit_digests_only",
+    "method": "candidate_typed_routed_plus_append_only_table5_closed_tuple_vlt3",
+    "no_latent_ablation_compatibility": "forces_no_vlt_tuple",
+    "no_typed_ablation_compatibility": "forces_no_vlt_tuple_without_hidden_typed_use",
+    "parent_method": "candidate_typed_routed_plus_audited_closed_tuple_vlt2",
+    "qualification_ablation_policy": "all_vlt_policy_and_target_slot_checks_are_ablation_independent",
+    "same_target_slot_policy": "all_policy_qualified_raw_values_preserve_type;multiple_ambiguous;one_exact_equal_redundant;one_different_conflict",
+    "selected_domain_scope": "selected_schema_domain_only",
+    "selection_authority": "public_query_relevance_gate_v1",
+    "selection_implication": "never_implies_requested_domain_or_operation",
+    "serialized_evidence": "selected_target_domain_routed_typed_hypotheses_plus_optional_schema_revalidated_replay_authorized_closed_vlt_tuple",
+    "tuple_serializer_policy": "independent_vlt3_ontology_schema_key_query_scope_and_preference_slot_revalidation",
+    "typed_provenance_serialization": "audit_only_never_candidate_prompt",
+    "untyped_latent_serialization": "forbidden_in_all_candidate_prompts",
+    "zero_surviving_target_typed_policy": "SELECT_may_serialize_closed_tuple_only_when_all_vlt2_checks_authorize"
+  },
+  "latent_scope_amendment_sha256": "40ff3655dc6ca0be53eb40e7fc44b7f9aa9f593d237eb2e6de7c2a09cca9aec2",
+  "pipeline": {
+    "stages": [
+      "serve_model",
+      "build_sealed_memory",
+      "infer_baseline",
+      "infer_candidate",
+      "evaluate_sealed",
+      "critic_strict"
+    ],
+    "forbidden_stages": [
+      "prepare"
+    ],
+    "base_url": "http://127.0.0.1:8129",
+    "outputs": {
+      "journal": "artifacts/provider_calls.final.jsonl",
+      "baseline_latent": "artifacts/memory.prefine.jsonl",
+      "baseline_latent_manifest": "artifacts/memory.prefine.jsonl.manifest.json",
+      "memory": "artifacts/memory.ecpr.jsonl",
+      "memory_manifest": "artifacts/memory.ecpr.jsonl.manifest.json",
+      "baseline": "artifacts/predictions.baseline.jsonl",
+      "baseline_manifest": "artifacts/predictions.baseline.jsonl.manifest.json",
+      "candidate": "artifacts/predictions.candidate.jsonl",
+      "candidate_manifest": "artifacts/predictions.candidate.jsonl.manifest.json",
+      "summary": "reports/summary.json"
+    }
+  },
+  "candidate_revision": "vlt3",
+  "parent_expected_runtime_contract_sha256": "effbdec6656f927c2b4c3ba009cb97556debdd22fa1724757ed25f9181c13c2d",
+  "safe_transfer_amendment_sha256": "2c5f29e58818d3a0d4d7fec6c94decfc049bf1d0ad825a456d5c0995468ea9d7",
+  "latent_trait_ontology_sha256": "652febe52842c3ac9d4b5fb4bb1f4e81a8a0c3072610e9717513eca121efc0d3",
+  "safe_transfer_contract": {
+    "action_prompt_policy": "detailed_single_multi_templates_selected_by_exact_mode_schema_key_pair",
+    "baseline_policy": "source_local_mode_specific_prefine_action_prompt_shared_byte_identically_across_arms",
+    "candidate_revision": "vlt3",
+    "corroboration_policy": "at_least_one_policy_qualified_non_target_hypothesis_uniformly_for_every_trait",
+    "current_query_limit": "deterministic_mask_covers_only_frozen_Table5_mapped_slots;other_natural_language_or_non_Table5_slots_remain_under_prompt_precedence",
+    "current_query_policy": "ontology_frozen_mapping_specific_public_phrases_enums_slot_aliases_and_conservative_count_detection",
+    "group_usage_policy": "never_create_transfer_or_global_veto",
+    "mapping_identity": [
+      "trait_id",
+      "domain"
+    ],
+    "method": "append_only_table5_verified_latent_transfer_v3",
+    "opposition_policy": "explicit_same_group_only_LOW_COST_opposes_HIGH_COST_and_cost_is_neutral_to_SOLO_USAGE",
+    "output_policy": "one_schema_key_revalidated_closed_json_tuple_or_NONE_never_raw_latent",
+    "target_slot_policy": "all_policy_qualified_raw_values_preserve_type;multiple_ambiguous;one_exact_equal_redundant;one_different_conflict",
+    "trait_count": 3,
+    "trait_taxonomy": "paper_table_5_LOW_COST_HIGH_COST_and_SOLO_USAGE",
+    "typed_support_wire_policy": "exact_JSON_scalar_source_literal_type_and_value_for_support;target_mapping_keeps_exact_public_schema_output_type"
+  },
+  "vlt3_audit_amendment_sha256": "236dc25599924efc94c29297e2444760790070155f8629c6d6915d9f30f68852",
+  "r3_method_scope_clarification_sha256": "a5e582293faa22c7e5b1496362a4e0b9c61f03ce66b2aaaa1e2db05a73be09cc",
+  "r3_action_prompt_amendment_sha256": "a73d15836e20a8e56f87c2c93e1eacf8408cb12b9b6160fe303612efbcd59e98",
+  "latent_trait_ontology_path": "configs/latent_trait_ontology.vlt3.json",
+  "target_free_vlt3_report_sha256": "d32f7f8e85bf043e721004531190f8f506878fd1bed28111c3138f4694b2c7bc",
+  "provider_timeout_seconds": 120.0,
+  "one_shot_protocol": {
+    "stage_order": [
+      "runtime",
+      "pre_gold",
+      "gold_open",
+      "result",
+      "critic"
+    ],
+    "strict_success": "hash_bound_PASS_critic_receipt_required",
+    "failure_integrity_status": "FAIL",
+    "same_fd_inputs": [
+      "predictions",
+      "gold",
+      "summary",
+      "evaluation_evidence",
+      "provider_journal"
+    ],
+    "sealed_command_timeout_seconds": {
+      "memory": 172800,
+      "baseline": 43200,
+      "candidate": 43200,
+      "evaluate": 1800,
+      "critic": 1800
+    }
+  }
+}

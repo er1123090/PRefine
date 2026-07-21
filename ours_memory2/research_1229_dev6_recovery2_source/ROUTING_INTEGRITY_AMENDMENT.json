@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "kind": "public_query_relevance_gate_integrity_amendment",
+  "status": "immutable_before_any_target_model_or_metric_call",
+  "candidate_id": "ecpr_v1",
+  "original_preregistration_sha256": "2ec42394f9157fa0fe690195dc3010afc81c2bb117d0e94a9dfeef0535b5dae0",
+  "protocol_amendment_sha256": "af619d4fcbb9a693af70221bc9571cb494ced00afde6a321123293485377c251",
+  "candidate_registration_sha256": "df09c42c636c1b0857d84e7025fd3b56383c81c2770e9200ede3aa4dcc7cd153",
+  "public_domain_ontology_sha256": "149fc75e5ac6f4745f236bd088bfdd0d73f9e998956cb79f52f595e0e702fd8d",
+  "routing_gate": {
+    "method": "public_query_relevance_gate_v1",
+    "ontology_path": "configs/public_domain_ontology.json",
+    "normalization": "NFKC_then_casefold_then_whitespace_collapse",
+    "multiturn_extraction": "recognized_role_tags_present=>nonempty_User_payloads_only_else_whole_query;malformed_or_no_User=>ABSTAIN",
+    "matching": "contiguous_unicode_token_boundary_phrase_match",
+    "domain_score": "maximum_matching_alias_weight_never_sum",
+    "alias_weight_classes": {
+      "canonical_or_domain_specific": 4,
+      "generic": 3,
+      "weak": 1
+    },
+    "minimum_top_score": 3,
+    "minimum_margin": 2,
+    "tie_policy": "ABSTAIN",
+    "multi_intent_policy": "ABSTAIN_if_two_or_more_domains_score_at_least_3",
+    "selection_policy": "SELECT_only_unique_top_at_least_3_with_margin_at_least_2",
+    "candidate_scope": "selected_schema_domain_only;selection_never_implies_requested_operation",
+    "latent_policy": "omit_on_ABSTAIN_or_zero_surviving_typed_evidence"
+  },
+  "prior_target_model_calls": 0,
+  "prior_target_metrics_computed": 0
+}

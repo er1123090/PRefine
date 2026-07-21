@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "kind": "r3_source_faithful_action_prompt_amendment",
+  "status": "immutable_before_any_target_model_call_gold_open_or_target_metric",
+  "candidate_id": "ecpr_v1",
+  "candidate_revision": "vlt3",
+  "parent_preregistration_sha256": "2ec42394f9157fa0fe690195dc3010afc81c2bb117d0e94a9dfeef0535b5dae0",
+  "parent_r3_rubric_sha256": "c317887ddd2b9ce34266b5aff8eb2571a4e7bcbd66ed5be096f217d4f14a2dba",
+  "parent_r3_method_scope_clarification_sha256": "a5e582293faa22c7e5b1496362a4e0b9c61f03ce66b2aaaa1e2db05a73be09cc",
+  "local_paper_sha256": "58de92a7746f671917a4faef5301efa02f05b440888f27845c34d40db5c3d6d8",
+  "standalone_prompts_sha256": "2a7e69a3ab13b40727793de7b935b4643c14069983f5bc83900e64707d3ce411",
+  "research_action_prompts": {
+    "path": "ecpr/prompts.py",
+    "sha256": "2e76418a980d251e3eef467ab67793b977a631f8b92cba9481b333b4f0673f57"
+  },
+  "action_prompt_contract": {
+    "mode_schema_pairs": {
+      "singleturn": "single",
+      "multiturn": "multi"
+    },
+    "mode_schema_mismatch": "fail_closed_before_provider_call",
+    "template_authority": "source_local_detailed_SINGLE_and_MULTI_prefine_templates",
+    "same_mode_arm_isolation": "baseline_and_candidate_prompt_bytes_are_identical_except_exactly_one_serialized_memory_block",
+    "schema_serialization": "ensure_ascii_false_sort_keys_true_indent_2",
+    "precedence": "current_user_dialogue_and_schema_override_memory;memory_fills_only_otherwise_missing_preference_slots",
+    "transient_and_replay_policy": "never_replay_full_historical_call_or_copy_transient_date_time_location_address_name_identifier_or_itinerary_values",
+    "output": "exactly_one_FunctionName_slot_value_call_without_wrapper_or_explanation",
+    "post_freeze_prompt_variants_allowed": 0
+  },
+  "prior_target_model_calls": 0,
+  "prior_gold_opens": 0,
+  "prior_target_metrics_computed": 0
+}

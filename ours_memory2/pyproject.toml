@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ours-memory2"
+version = "0.1.0"
+description = "Standalone foundation for a two-stage preference-memory method"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+ours-memory2 = "ours_memory2.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ours_memory2*"]
+

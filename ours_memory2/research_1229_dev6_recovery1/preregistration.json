@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "locked_date": "2026-07-16",
+  "status": "locked_before_target_metrics",
+  "candidate": "ecpr_v1",
+  "baseline": "standalone_source_faithful_prefine",
+  "inputs": {
+    "history_data": {"path": "/data/minseo/experiments4/data/1229_dev_6.json", "sha256": "911f37c195c52722ecf85a23bfa55be22c4c843112f49c633267f9d09b5d64ae"},
+    "single_query": {"path": "/data/minseo/experiments5/config/query_singleturn.json", "sha256": "e8a25828cf319e63c573fbcb8a485e7ece1ed3a7d49120d41ac5d716adc897c7"},
+    "single_schema": {"path": "/data/minseo/experiments5/config/schema_easy.json", "sha256": "ef388951dcff703e3f3a41be0a20315e54125c43e885dca6aeb85e6fbd77dfb9"},
+    "multi_query": {"path": "/data/minseo/experiments5/config/query_multiturn-domain.json", "sha256": "745f578f71b63c38fd052904a0a9e5a7601df6e9e52c1335ab251fc8d720c627", "condition": "legacy_13_domain"},
+    "multi_schema": {"path": "/data/minseo/experiments5/config/schema_all.json", "sha256": "c3639e58e42c8cbe2f202ea9798dd158da305da8229614e3db09f829b945628f"},
+    "preference_slots": {"path": "/data/minseo/experiments5/config/pref_list.json", "sha256": "f5994dab209909ed31d15cbabe6a88a84ef5d95f85c156795549c96fd5126091"},
+    "preference_groups": {"path": "/data/minseo/experiments5/config/pref_group.json", "sha256": "aac0cc9210a59b15e1422d0946bab0e37c9c38b538f29a2d7c24b84ccd8348fb"}
+  },
+  "model": {"id": "Qwen/Qwen3-8B", "snapshot": "b968826d9c46dd6066d109eabc6255188de91218", "tensor_parallel_size": 4},
+  "candidate_parameters": {
+    "minimum_support": 2,
+    "minimum_confidence": 0.67,
+    "maximum_conflict_ratio": 0.34,
+    "maximum_stored_hypotheses": 24,
+    "maximum_routed_hypotheses": 6,
+    "overlay_lexical_token_cap": 384,
+    "memory_lexical_token_cap": 1536,
+    "recency_tiebreak_only": true,
+    "raw_api_history_in_candidate_prompt": false
+  },
+  "ablation_flags": ["no_latent", "no_typed", "no_counterevidence", "no_routing"],
+  "inference_budget": {"temperature": 0.0, "seed": 2026071600, "max_tokens": 1024, "calls_per_case": 1, "retries": 0},
+  "primary_metric": "0.5*singleturn_pooled_micro_f1+0.5*multiturn_pooled_micro_f1",
+  "guardrails": {"minimum_each_task_delta_f1": -0.005, "maximum_preference_f1_drop": 0.005, "maximum_nonpreference_f1_drop": 0.005, "maximum_parse_failure_rate_increase": 0.005, "required_coverage": 1.0, "equal_action_budget": true},
+  "statistics": {"cluster": "example_id", "bootstrap_draws": 10000, "bootstrap_seed": 2026071601, "randomization_draws": 100000, "randomization_seed": 2026071602, "alternative": "candidate_greater_than_baseline"},
+  "pass": {"minimum_delta_bmf1": 0.01, "ci_lower_strictly_positive": true, "maximum_p_value_exclusive": 0.05, "all_guardrails": true},
+  "development": {"maximum_candidates": 20, "small_gain_threshold": 0.0025, "stop_after_consecutive_small_gains": 5, "final_test_runs_after_lock": 1},
+  "gpu_unavailable_policy": "implementation_and_non_target_validation_only_no_pass_claim"
+}

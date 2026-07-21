@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "kind": "target_free_pid_namespace_gpu_topology_diagnostic",
+  "status": "complete_no_inference_no_gold_open_no_target_metric",
+  "failed_attempt": {
+    "attempt_id": "34615be6-82ab-4f17-aa7f-5522a24a8a96",
+    "implementation_manifest_sha256": "04a479a708d362f812a5c4467c9669915d6c2f74de227c3f36abb44c3b5f47b2",
+    "attempt_receipt_sha256": "e169e00a359b2d5d7a39deed9553888e70b1111da0fa74eddf201e33c5cfc72a",
+    "result_receipt_sha256": "f33488d29d784a4b969ab1d26b7aeba6e06c258cb71797e35a7c68822d6c97d5",
+    "vllm_log_sha256": "9ccb7a10ec4b58d0cf3ef9ef2a356ce7eb91a47e18a37824790d40c050528b68",
+    "v1_models_get_count": 1,
+    "completion_post_count": 0,
+    "provider_journal_created": false,
+    "gold_open_count": 0,
+    "target_metric_count": 0
+  },
+  "diagnostic_evidence": {
+    "script_sha256": "66207e65889fd025975b8c563aba47bae08364d7e7e7f557cf3d7ce279c1d284",
+    "vllm_log_sha256": "3aa9d615125644dd8cdd70cdd30290bc4f42f8b145e3346e0492753a0231b3ec",
+    "diagnostic_invocation_count": 2,
+    "model_completion_requests": 0,
+    "gold_opens": 0,
+    "target_metrics": 0,
+    "container_descendant_pids": [30726, 30727, 30728, 30729],
+    "host_compute_apps": [
+      {
+        "host_pid": 3711694,
+        "gpu_uuid": "GPU-0ab65810-6533-4eca-4c14-30af68fdf06f",
+        "pci_bus_id": "00000000:AF:00.0",
+        "used_gpu_memory_mib": 45842
+      },
+      {
+        "host_pid": 3711692,
+        "gpu_uuid": "GPU-15bec789-142f-2365-4260-5533f56bfe77",
+        "pci_bus_id": "00000000:3B:00.0",
+        "used_gpu_memory_mib": 45842
+      },
+      {
+        "host_pid": 3711695,
+        "gpu_uuid": "GPU-3a70ad37-6274-a0ba-b115-b33b0cb6c253",
+        "pci_bus_id": "00000000:D8:00.0",
+        "used_gpu_memory_mib": 45842
+      },
+      {
+        "host_pid": 3711693,
+        "gpu_uuid": "GPU-5c5a7e7b-289c-f56c-2ba4-37384d488da9",
+        "pci_bus_id": "00000000:5E:00.0",
+        "used_gpu_memory_mib": 45842
+      }
+    ]
+  },
+  "finding": {
+    "gpu_uuid_and_pci_sets_match_the_sealed_gpu_0_1_2_3_set": true,
+    "host_and_container_pid_sets_are_disjoint": true,
+    "nvidia_smi_process_names_visible_in_container": false,
+    "root_cause": "nvidia-smi reports host-namespace PIDs while procfs exposes container-namespace PIDs; equality across those namespaces is invalid"
+  },
+  "recovery_contract": {
+    "ownership_contract": "exclusive_empty_baseline_then_exact_four_uuid_contexts",
+    "pid_namespace_contract": "host_compute_pids_are_opaque_and_never_compared_to_container_pids",
+    "pre_attempt_requirement": "all nvidia compute-app rows empty",
+    "post_attempt_prelaunch_requirement": "all nvidia compute-app rows still empty",
+    "readiness_requirement": "exactly four unique positive-memory rows matching the sealed UUID and PCI pairs",
+    "continuity_requirement": "host PID UUID PCI identities remain fixed after first provider stage and after all provider stages",
+    "container_lifecycle_requirement": "procfs descendant and process-group identities remain independently responsible for exact shutdown"
+  },
+  "forbidden_sources_not_used": [
+    "evaluator_vault/gold.jsonl",
+    "reference_ground_truth",
+    "target_predictions",
+    "target_metrics",
+    "query_answers"
+  ]
+}

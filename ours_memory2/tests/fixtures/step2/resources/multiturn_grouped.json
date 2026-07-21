@@ -1,0 +1,9 @@
+{
+  "Restaurant": [
+    {"query_id":"r-base","query":[{"role":"User","message":"RESTAURANT-FIRST"}],"api_call":["Restaurant(city='Seoul')"],"target":[{"domain":"Restaurant","slot":"city"}]},
+    {"query_id":"r-pref","query":[{"role":"User","message":"RESTAURANT-PREF-FIRST"},{"role":"Assistant","message":"RESTAURANT-PREF-SECOND"}],"api_call":["Restaurant(city='Seoul')"],"target":[{"domain":"Restaurant","slot":"seating"}]}
+  ],
+  "Hotel": [
+    {"query_id":"h-pref","query":[{"role":"User","message":"HOTEL-FIRST"},{"role":"Assistant","message":"HOTEL-SECOND"}],"api_call":["Hotel(city='Seoul')"],"target":[{"domain":"Hotel","slot":"room"}]}
+  ]
+}

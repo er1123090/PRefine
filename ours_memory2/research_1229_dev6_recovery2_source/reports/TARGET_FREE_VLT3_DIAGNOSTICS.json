@@ -1,0 +1,223 @@
+{
+  "candidate_id": "ecpr_v1",
+  "candidate_policy": {
+    "maximum_conflict_ratio": 0.34,
+    "maximum_routed_hypotheses": 6,
+    "maximum_stored_hypotheses": 24,
+    "memory_lexical_token_cap": 1536,
+    "minimum_confidence": 0.67,
+    "minimum_support": 2,
+    "overlay_lexical_token_cap": 384,
+    "raw_api_history_in_candidate_prompt": false,
+    "recency_tiebreak_only": true
+  },
+  "candidate_revision": "vlt3",
+  "forbidden_sources_not_opened": [
+    "artifacts/tasks.jsonl",
+    "configs/query_singleturn.json",
+    "configs/query_multiturn-domain.json",
+    "evaluator_vault/gold.jsonl",
+    "current_or_legacy_latent_outputs",
+    "current_or_legacy_predictions",
+    "evaluator_outputs_or_metrics",
+    "preference_groups"
+  ],
+  "inputs": {
+    "latent_trait_ontology": {
+      "path": "configs/latent_trait_ontology.vlt3.json",
+      "sha256": "652febe52842c3ac9d4b5fb4bb1f4e81a8a0c3072610e9717513eca121efc0d3"
+    },
+    "preference_slots": {
+      "path": "configs/preference_slots.json",
+      "sha256": "f5994dab209909ed31d15cbabe6a88a84ef5d95f85c156795549c96fd5126091"
+    },
+    "preregistration": {
+      "path": "preregistration.json",
+      "sha256": "2ec42394f9157fa0fe690195dc3010afc81c2bb117d0e94a9dfeef0535b5dae0"
+    },
+    "sanitized_history": {
+      "path": "artifacts/history.sanitized.jsonl",
+      "records": 265,
+      "sha256": "a641186ea89e414af3a1c975f07d465ea9894466de41b563ae5e4b7931756644"
+    }
+  },
+  "interpretation_limit": "These are history-only typed-evidence preconditions. They do not inspect or predict final PQR selection, query explicit-constraint masks, verified latent trait authorization, action outputs, gold, or task metrics.",
+  "kind": "target_free_vlt3_structural_diagnostics",
+  "production_code": {
+    "policy_predicate": "ecpr.latent_firewall._policy_qualified",
+    "trait_matcher": "ecpr.latent_firewall.qualified_trait_diagnostics",
+    "typed_hypothesis_builder": "ecpr.memory.build_typed_hypotheses"
+  },
+  "schema_version": 1,
+  "status": "aggregate_only_no_query_gold_latent_model_output_or_metric",
+  "target_mapping_typed_only_preconditions": [
+    {
+      "examples_meeting_typed_only_preconditions": 1,
+      "examples_with_non_target_support": 1,
+      "examples_with_opposing_trait_veto": 62,
+      "examples_with_policy_qualified_target_slot": 44,
+      "target_domain": "GetRentalCars",
+      "target_slot": "car_type",
+      "trait_id": "HIGH_COST"
+    },
+    {
+      "examples_meeting_typed_only_preconditions": 3,
+      "examples_with_non_target_support": 3,
+      "examples_with_opposing_trait_veto": 62,
+      "examples_with_policy_qualified_target_slot": 0,
+      "target_domain": "GetRestaurants",
+      "target_slot": "price_range",
+      "trait_id": "HIGH_COST"
+    },
+    {
+      "examples_meeting_typed_only_preconditions": 58,
+      "examples_with_non_target_support": 58,
+      "examples_with_opposing_trait_veto": 3,
+      "examples_with_policy_qualified_target_slot": 4,
+      "target_domain": "GetFlights",
+      "target_slot": "flight_class",
+      "trait_id": "LOW_COST"
+    },
+    {
+      "examples_meeting_typed_only_preconditions": 55,
+      "examples_with_non_target_support": 61,
+      "examples_with_opposing_trait_veto": 3,
+      "examples_with_policy_qualified_target_slot": 44,
+      "target_domain": "GetRentalCars",
+      "target_slot": "car_type",
+      "trait_id": "LOW_COST"
+    },
+    {
+      "examples_meeting_typed_only_preconditions": 62,
+      "examples_with_non_target_support": 62,
+      "examples_with_opposing_trait_veto": 3,
+      "examples_with_policy_qualified_target_slot": 0,
+      "target_domain": "GetRestaurants",
+      "target_slot": "price_range",
+      "trait_id": "LOW_COST"
+    },
+    {
+      "examples_meeting_typed_only_preconditions": 7,
+      "examples_with_non_target_support": 7,
+      "examples_with_opposing_trait_veto": 3,
+      "examples_with_policy_qualified_target_slot": 55,
+      "target_domain": "GetRideSharing",
+      "target_slot": "shared_ride",
+      "trait_id": "LOW_COST"
+    },
+    {
+      "examples_meeting_typed_only_preconditions": 61,
+      "examples_with_non_target_support": 61,
+      "examples_with_opposing_trait_veto": 3,
+      "examples_with_policy_qualified_target_slot": 1,
+      "target_domain": "GetTravel",
+      "target_slot": "free_entry",
+      "trait_id": "LOW_COST"
+    },
+    {
+      "examples_meeting_typed_only_preconditions": 15,
+      "examples_with_non_target_support": 16,
+      "examples_with_opposing_trait_veto": 0,
+      "examples_with_policy_qualified_target_slot": 14,
+      "target_domain": "GetBuses",
+      "target_slot": "group_size",
+      "trait_id": "SOLO_USAGE"
+    },
+    {
+      "examples_meeting_typed_only_preconditions": 12,
+      "examples_with_non_target_support": 15,
+      "examples_with_opposing_trait_veto": 0,
+      "examples_with_policy_qualified_target_slot": 17,
+      "target_domain": "GetEvents",
+      "target_slot": "number_of_tickets",
+      "trait_id": "SOLO_USAGE"
+    },
+    {
+      "examples_meeting_typed_only_preconditions": 15,
+      "examples_with_non_target_support": 15,
+      "examples_with_opposing_trait_veto": 0,
+      "examples_with_policy_qualified_target_slot": 5,
+      "target_domain": "GetFlights",
+      "target_slot": "passengers",
+      "trait_id": "SOLO_USAGE"
+    },
+    {
+      "examples_meeting_typed_only_preconditions": 13,
+      "examples_with_non_target_support": 17,
+      "examples_with_opposing_trait_veto": 0,
+      "examples_with_policy_qualified_target_slot": 30,
+      "target_domain": "GetRestaurants",
+      "target_slot": "number_of_seats",
+      "trait_id": "SOLO_USAGE"
+    },
+    {
+      "examples_meeting_typed_only_preconditions": 5,
+      "examples_with_non_target_support": 7,
+      "examples_with_opposing_trait_veto": 0,
+      "examples_with_policy_qualified_target_slot": 18,
+      "target_domain": "GetRideSharing",
+      "target_slot": "number_of_seats",
+      "trait_id": "SOLO_USAGE"
+    }
+  ],
+  "trait_aggregates": {
+    "HIGH_COST": {
+      "aggregate_qualified_hypotheses_by_source_domain": {
+        "GetHotels": 1,
+        "GetRentalCars": 2
+      },
+      "distinct_support_domains_per_example_histogram": {
+        "0": 262,
+        "1": 3
+      },
+      "examples_with_at_least_one_policy_qualified_hypothesis": 3,
+      "policy_qualified_hypothesis_count": 3,
+      "qualified_hypotheses_per_example_histogram": {
+        "0": 262,
+        "1": 3
+      }
+    },
+    "LOW_COST": {
+      "aggregate_qualified_hypotheses_by_source_domain": {
+        "GetFlights": 4,
+        "GetHotels": 1,
+        "GetRentalCars": 1,
+        "GetRideSharing": 55,
+        "GetTravel": 1
+      },
+      "distinct_support_domains_per_example_histogram": {
+        "0": 203,
+        "1": 62
+      },
+      "examples_with_at_least_one_policy_qualified_hypothesis": 62,
+      "policy_qualified_hypothesis_count": 62,
+      "qualified_hypotheses_per_example_histogram": {
+        "0": 203,
+        "1": 62
+      }
+    },
+    "SOLO_USAGE": {
+      "aggregate_qualified_hypotheses_by_source_domain": {
+        "GetBuses": 2,
+        "GetEvents": 4,
+        "GetFlights": 2,
+        "GetRestaurants": 2,
+        "GetRideSharing": 12
+      },
+      "distinct_support_domains_per_example_histogram": {
+        "0": 248,
+        "1": 15,
+        "3": 1,
+        "4": 1
+      },
+      "examples_with_at_least_one_policy_qualified_hypothesis": 17,
+      "policy_qualified_hypothesis_count": 22,
+      "qualified_hypotheses_per_example_histogram": {
+        "0": 248,
+        "1": 15,
+        "3": 1,
+        "4": 1
+      }
+    }
+  }
+}

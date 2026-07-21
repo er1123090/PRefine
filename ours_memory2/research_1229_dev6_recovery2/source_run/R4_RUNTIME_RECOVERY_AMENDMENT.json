@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "kind": "append_only_pid_namespace_runtime_recovery_amendment",
+  "status": "immutable_after_failed_pre_inference_attempt_before_any_target_call_gold_open_or_metric",
+  "candidate_id": "ecpr_v1",
+  "candidate_revision": "vlt3",
+  "parent_implementation_manifest_sha256": "04a479a708d362f812a5c4467c9669915d6c2f74de227c3f36abb44c3b5f47b2",
+  "parent_inventory_sha256": "da46c33fbd3320039b001fdbb8d86a4700019471e21aa0f97d268e9f0e14d8de",
+  "failed_attempt": {
+    "attempt_id": "34615be6-82ab-4f17-aa7f-5522a24a8a96",
+    "implementation_manifest_sha256": "04a479a708d362f812a5c4467c9669915d6c2f74de227c3f36abb44c3b5f47b2",
+    "attempt_receipt_sha256": "e169e00a359b2d5d7a39deed9553888e70b1111da0fa74eddf201e33c5cfc72a",
+    "result_receipt_sha256": "f33488d29d784a4b969ab1d26b7aeba6e06c258cb71797e35a7c68822d6c97d5",
+    "vllm_log_sha256": "9ccb7a10ec4b58d0cf3ef9ef2a356ce7eb91a47e18a37824790d40c050528b68",
+    "v1_models_get_count": 1,
+    "completion_post_count": 0,
+    "provider_journal_created": false,
+    "gold_open_count": 0,
+    "target_metric_count": 0
+  },
+  "diagnostic_report_sha256": "9f4a396e0cc802e1d32e59a90ed7bdd71d2eb6671cc37b333af2df8a9a0fb777",
+  "changed_files": {
+    "ecpr/final_protocol.py": {
+      "before_sha256": "e168346631213f7e7e9d491fbdd55f4b195dbd43f88c1b66713f7f8544294f9e",
+      "after_sha256": "4205f072a29e2b5dc7a0ff433cb4f549942c3d8b45f70e36cec80ae614d04d45",
+      "scope": "exclusive_gpu_lease_receipt_validation_only"
+    },
+    "ecpr/integrity.py": {
+      "before_sha256": "7fa4692c6bc19bed8cea73b6c0228209dc99169d9954296b18bdf9957554d92e",
+      "after_sha256": "909787ecc64652ff21da7d50b567e69fa39d7ca47757ad30f0b53b94eb40fc71",
+      "scope": "append_only_recovery_lineage_validation_only"
+    },
+    "run_gpu.py": {
+      "before_sha256": "74dd8e040d4bb16fcebb9f267634119b0a9ab8dc608d967851fb888b1be19b2e",
+      "after_sha256": "4dec6d6456df8e371760bfcfc5d38d5099fd9dd1779a39f50e43d1fb069f6c18",
+      "scope": "exclusive_gpu_lease_and_pid_namespace_runtime_telemetry_only"
+    }
+  },
+  "unchanged_influence_contract": {
+    "parent_manifest_files_checked": true,
+    "allowed_changed_parent_files": [
+      "ecpr/final_protocol.py",
+      "ecpr/integrity.py",
+      "run_gpu.py"
+    ],
+    "method_prompt_query_task_history_and_evaluator_contract_bytes_unchanged": true,
+    "candidate_id_and_revision_unchanged": true,
+    "gold_file_not_opened": true
+  },
+  "runtime_recovery_contract": {
+    "ownership_contract": "exclusive_empty_baseline_then_exact_four_uuid_contexts",
+    "pid_namespace_contract": "host_compute_pids_are_opaque_and_never_compared_to_container_pids",
+    "pre_attempt_requirement": "all nvidia compute-app rows empty",
+    "post_attempt_prelaunch_requirement": "all nvidia compute-app rows still empty",
+    "readiness_requirement": "exactly four unique positive-memory rows matching the sealed UUID and PCI pairs",
+    "continuity_requirement": "host PID UUID PCI identities remain fixed after first provider stage and after all provider stages",
+    "container_lifecycle_requirement": "procfs descendant and process-group identities remain independently responsible for exact shutdown"
+  },
+  "prior_target_model_calls": 0,
+  "prior_gold_opens": 0,
+  "prior_target_metrics_computed": 0
+}

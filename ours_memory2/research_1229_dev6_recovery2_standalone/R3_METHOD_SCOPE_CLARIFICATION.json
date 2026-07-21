@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "kind": "autoresearch_r3_method_scope_clarification",
+  "status": "immutable_before_any_target_model_call_gold_open_or_target_metric",
+  "candidate_id": "ecpr_v1",
+  "candidate_revision": "vlt3",
+  "parent_r3_rubric_sha256": "c317887ddd2b9ce34266b5aff8eb2571a4e7bcbd66ed5be096f217d4f14a2dba",
+  "parent_preregistration_sha256": "2ec42394f9157fa0fe690195dc3010afc81c2bb117d0e94a9dfeef0535b5dae0",
+  "parent_safe_transfer_amendment_sha256": "2c5f29e58818d3a0d4d7fec6c94decfc049bf1d0ad825a456d5c0995468ea9d7",
+  "parent_vlt2_ontology_sha256": "be2070439b5928d6f2b1468ea0b8b63c0a42f48b578b4755a6ef949880fe005b",
+  "clarification_authority": {
+    "purpose": "resolve_the_literal_tension_between_required_generate_verify_refine_and_the_ban_on_using_current_run_outputs_to_construct_another_call",
+    "effect": "narrow_interpretation_only",
+    "may_relax_information_firewall": false,
+    "may_relax_performance_or_integrity_gates": false,
+    "may_change_original_rubric_bytes": false,
+    "may_authorize_a_second_final_attempt": false
+  },
+  "history_only_generate_verify_refine": {
+    "inputs": [
+      "sanitized_chronological_history_dialogue",
+      "sanitized_chronological_history_api_calls",
+      "prior_session_accepted_memory",
+      "frozen_generation_or_refinement_prompt",
+      "frozen_verifier_prompt"
+    ],
+    "allowed_causal_edges": [
+      "generator_draft_to_frozen_verifier_prompt_candidate_field",
+      "verifier_feedback_to_frozen_refinement_prompt_feedback_field",
+      "accepted_verified_memory_to_next_history_session_prior_memory_field",
+      "accepted_verified_memory_to_the_predeclared_final_action_memory_block",
+      "attempt_budget_exhausted_last_draft_to_next_history_session_prior_memory_with_candidate_transfer_kept_fail_closed_by_invalid_attestation"
+    ],
+    "frozen_call_graph": "for_each_history_session_attempt_0_generate_then_verify;on_exact_valid_true_accept_and_advance;otherwise_attempt_1_through_9_refine_then_verify;after_attempt_9_stop_and_advance_with_the_last_draft_under_the_frozen_attestation_policy",
+    "maximum_generation_slots_per_history_session": 10,
+    "generation": {
+      "temperature": 0.4,
+      "maximum_tokens": 2048,
+      "json_object": true,
+      "seed_schedule": "base_seed_plus_session_index_times_100_plus_attempt_index_times_2"
+    },
+    "verification": {
+      "temperature": 0.0,
+      "maximum_tokens": 512,
+      "json_object": true,
+      "seed_schedule": "base_seed_plus_session_index_times_100_plus_attempt_index_times_2_plus_1"
+    },
+    "stop_rule": "exact_JSON_boolean_valid_true_or_frozen_attempt_budget_exhaustion",
+    "justification_for_ten_slots": "source_faithful_standalone_ours_memory2_MAX_GENERATION_SLOTS_10_frozen_without_held_out_query_gold_target_output_or_metric;the_paper_reports_three_as_the_main_experiment_cap_and_ten_as_a_target_free_appendix_sensitivity_setting_with_no_consistent_gain",
+    "prompt_and_schema_identity": "hash_bound_by_the_final_implementation_manifest_and_pre_gold_commitment_before_gold_open"
+  },
+  "forbidden_feedback_edges": [
+    "held_out_action_prediction_to_any_later_model_call",
+    "baseline_action_prediction_to_candidate_action_call",
+    "candidate_action_prediction_to_any_later_model_call",
+    "gold_or_target_label_or_target_metadata_to_any_model_call_or_routing_decision",
+    "evaluator_metric_score_error_or_failure_analysis_to_any_model_call_or_design_change",
+    "provider_response_from_final_action_inference_to_retry_refinement_or_repair",
+    "generate_verify_refine_output_to_ontology_mapping_threshold_prompt_variant_budget_or_query_registry_change",
+    "held_out_query_or_schema_to_memory_generation_latent_induction_or_trait_authorization"
+  ],
+  "final_action_call": {
+    "calls_per_case_per_arm": 1,
+    "retries": 0,
+    "n": 1,
+    "baseline_candidate_causal_isolation": true,
+    "identical_query_schema_and_action_instruction": true,
+    "only_declared_difference": "serialized_memory_block",
+    "provider_error_or_parse_failure": "record_once_and_score_as_empty_without_another_call"
+  },
+  "query_gate_scope": {
+    "routing_authority": "only_during_final_inference_for_the_current_case",
+    "allowed_inputs": [
+      "current_held_out_query",
+      "current_public_schema",
+      "frozen_target_independent_domain_registry",
+      "frozen_target_independent_explicit_constraint_registry"
+    ],
+    "forbidden_design_uses": [
+      "alias_or_phrase_selection",
+      "alias_distance_selection",
+      "ontology_or_mapping_selection",
+      "threshold_selection",
+      "prompt_or_variant_selection",
+      "synthetic_or_metamorphic_test_construction"
+    ],
+    "post_freeze_deterministic_replay": {
+      "allowed": true,
+      "authority": "non_authoritative_structural_coverage_audit_only",
+      "may_route_a_model_call": false,
+      "may_change_code_config_prompt_mapping_threshold_variant_or_budget": false,
+      "may_select_a_candidate": false,
+      "per_example_output_may_be_used_for_design": false,
+      "aggregate_select_abstain_counts_may_be_reported": true,
+      "frozen_report_sha256": "eabee6e7a41072c87d48ea52dc6b23d126f5fa2714782cf09a0084f5eec23463"
+    }
+  },
+  "source_authority": {
+    "local_paper_sha256": "58de92a7746f671917a4faef5301efa02f05b440888f27845c34d40db5c3d6d8",
+    "research_prefine_state_machine_sha256": "15633ea2e4ecfdd556131db63234a68fb0cd1864eaf64ef51519ff9321d21fde",
+    "standalone_step1_sha256": "dc223d9e5c5a02e9cbfcdc5a2d1f480312fb6fca69289cb2823d51905dbc2b37",
+    "standalone_prompts_sha256": "2a7e69a3ab13b40727793de7b935b4643c14069983f5bc83900e64707d3ce411"
+  },
+  "prior_target_model_calls": 0,
+  "prior_gold_opens": 0,
+  "prior_target_metrics_computed": 0
+}

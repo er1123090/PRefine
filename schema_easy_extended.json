@@ -1,0 +1,472 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "GetRestaurants",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetRestaurants schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "price_range": {
+            "type": "string",
+            "enum": ["cheap", "moderate", "pricey"]
+          },
+          "number_of_seats": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetFlights",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetFlights schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "flight_class": {
+            "type": "string",
+            "enum": ["Economy", "Premium Economy"]
+          },
+          "passengers": {
+            "type": "string"
+          },
+          "airlines": {
+            "type": "string",
+            "enum": [
+              "Alaska Airlines",
+              "American Airlines",
+              "Delta Airlines",
+              "Southwest Airlines",
+              "United Airlines"
+            ]
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetHotels",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetHotels schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "average_star": {
+            "type": "string"
+          },
+          "number_of_rooms": {
+            "type": "string"
+          },
+          "has_wifi": {
+            "type": "boolean"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetRentalCars",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetRentalCars schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "car_type": {
+            "type": "string",
+            "enum": ["Compact", "Full-size", "Standard"]
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetTravel",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetTravel schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "free_entry": {
+            "type": "boolean"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "Historical Landmark",
+              "Museum",
+              "Nature Preserve",
+              "Park",
+              "Performing Arts Venue",
+              "Place of Worship",
+              "Shopping Area",
+              "Sports Venue",
+              "Theme Park",
+              "Tourist Attraction"
+            ]
+          },
+          "good_for_kids": {
+            "type": "boolean"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetRideSharing",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetRideSharing schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "shared_ride": {
+            "type": "boolean"
+          },
+          "number_of_seats": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetHomes",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetHomes schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "number_of_beds": {
+            "type": "string"
+          },
+          "number_of_baths": {
+            "type": "string"
+          },
+          "pets_allowed": {
+            "type": "boolean"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetEvents",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetEvents schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "number_of_tickets": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "enum": ["Music", "Sports"]
+          },
+          "event_type": {
+            "type": "string",
+            "enum": [
+              "American Football",
+              "Baseball",
+              "Basketball",
+              "Blues",
+              "Christian",
+              "Country",
+              "Electronica",
+              "Football",
+              "Hip Hop",
+              "Jazz",
+              "Pop",
+              "Rock"
+            ]
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetBuses",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetBuses schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "group_size": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetBanks",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetBanks schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "recipient_account_type": {
+            "type": "string",
+            "enum": ["checking", "savings"]
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetMedia",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetMedia schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "genre": {
+            "type": "string",
+            "enum": [
+              "Adventure",
+              "Animation",
+              "Biographical",
+              "Comedy",
+              "Documentary",
+              "Drama",
+              "Fantasy",
+              "Mafia",
+              "Musical",
+              "Mystery",
+              "Romance",
+              "Sports",
+              "Thriller",
+              "War"
+            ]
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetMovies",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetMovies schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "genre": {
+            "type": "string",
+            "enum": [
+              "Adventure",
+              "Animation",
+              "Comedy",
+              "Drama",
+              "Fantasy",
+              "Horror",
+              "Mystery",
+              "Romance",
+              "Thriller"
+            ]
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetMusic",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetMusic schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "artist": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetCampground",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetCampground schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "site_type": {
+            "type": "string",
+            "enum": ["Glamping cabin", "Tent site"]
+          },
+          "number_of_guests": {
+            "type": "string"
+          },
+          "has_electricity": {
+            "type": "boolean"
+          },
+          "pet_friendly": {
+            "type": "boolean"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetCityTour",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetCityTour schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "number_of_people": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "good_for_kids": {
+            "type": "boolean"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetCookingClass",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetCookingClass schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "class_type": {
+            "type": "string",
+            "enum": ["Group class", "Private"]
+          },
+          "number_of_attendees": {
+            "type": "string"
+          },
+          "cuisine_type": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetFitnessClass",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetFitnessClass schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "class_type": {
+            "type": "string",
+            "enum": ["Group session", "Personal training"]
+          },
+          "number_of_attendees": {
+            "type": "string"
+          },
+          "fitness_type": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetSkiPass",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetSkiPass schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "pass_type": {
+            "type": "string"
+          },
+          "number_of_passes": {
+            "type": "string"
+          },
+          "night_skiing_available": {
+            "type": "boolean"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetParkingSpot",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetParkingSpot schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "parking_type": {
+            "type": "string",
+            "enum": ["Self-park garage", "Valet"]
+          },
+          "ev_charging": {
+            "type": "boolean"
+          },
+          "handicap_accessible": {
+            "type": "boolean"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetThemePark",
+      "description": "Subset schema containing only selected preference-related arguments from the original GetThemePark schema.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "ticket_type": {
+            "type": "string"
+          },
+          "number_of_tickets": {
+            "type": "string"
+          },
+          "good_for_kids": {
+            "type": "boolean"
+          }
+        },
+        "required": []
+      }
+    }
+  }
+]

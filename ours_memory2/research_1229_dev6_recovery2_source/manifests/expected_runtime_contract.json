@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "kind": "expected_final_runtime_model_pipeline_contract",
+  "runner_mode": "explicit_--final_or_--preflight-only",
+  "candidate_id": "ecpr_v1",
+  "final_attempts_allowed": 1,
+  "model": {
+    "id": "Qwen/Qwen3-8B",
+    "snapshot": "b968826d9c46dd6066d109eabc6255188de91218",
+    "snapshot_path": "/data/minseo/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+    "served_model_name": "Qwen/Qwen3-8B",
+    "tensor_parallel_size": 4
+  },
+  "runtime": {
+    "vllm_executable": "/home/minseo/miniconda3/bin/vllm",
+    "host": "127.0.0.1",
+    "port": 8129,
+    "gpu_indices": [0, 1, 2, 3],
+    "gpu_preflight_command": [
+      "timeout",
+      "5",
+      "nvidia-smi",
+      "--query-gpu=index",
+      "--format=csv,noheader"
+    ],
+    "gpu_preflight_subprocess_timeout_seconds": 8,
+    "server_start_timeout_seconds": 600
+  },
+  "action_budget": {
+    "temperature": 0.0,
+    "seed": 2026071600,
+    "max_tokens": 1024,
+    "calls_per_case": 1,
+    "retries": 0,
+    "n": 1
+  },
+  "candidate_policy": {
+    "minimum_support": 2,
+    "minimum_confidence": 0.67,
+    "maximum_conflict_ratio": 0.34,
+    "maximum_stored_hypotheses": 24,
+    "maximum_routed_hypotheses": 6,
+    "overlay_lexical_token_cap": 384,
+    "memory_lexical_token_cap": 1536,
+    "recency_tiebreak_only": true,
+    "raw_api_history_in_candidate_prompt": false
+  },
+  "routing_gate": {
+    "method": "public_query_relevance_gate_v1",
+    "ontology_path": "configs/public_domain_ontology.json",
+    "normalization": "NFKC_then_casefold_then_whitespace_collapse",
+    "multiturn_extraction": "recognized_role_tags_present=>nonempty_User_payloads_only_else_whole_query;malformed_or_no_User=>ABSTAIN",
+    "matching": "contiguous_unicode_token_boundary_phrase_match",
+    "domain_score": "maximum_matching_alias_weight_never_sum",
+    "alias_weight_classes": {
+      "canonical_or_domain_specific": 4,
+      "generic": 3,
+      "weak": 1
+    },
+    "minimum_top_score": 3,
+    "minimum_margin": 2,
+    "tie_policy": "ABSTAIN",
+    "multi_intent_policy": "ABSTAIN_if_two_or_more_domains_score_at_least_3",
+    "selection_policy": "SELECT_only_unique_top_at_least_3_with_margin_at_least_2",
+    "candidate_scope": "selected_schema_domain_only;selection_never_implies_requested_operation",
+    "latent_policy": "omit_on_ABSTAIN_or_zero_surviving_typed_evidence"
+  },
+  "candidate_memory_scope": {
+    "method": "candidate_typed_routed_evidence_only_v1",
+    "selection_authority": "public_query_relevance_gate_v1",
+    "selected_domain_scope": "selected_schema_domain_only",
+    "serialized_evidence": "typed_hypotheses_only",
+    "untyped_latent_serialization": "forbidden_in_all_candidate_prompts",
+    "abstain_policy": "no_memory_evidence",
+    "zero_surviving_typed_policy": "no_memory_evidence",
+    "selection_implication": "never_implies_requested_domain_or_operation",
+    "baseline_memory_scope": "unchanged_prefine_latent_abstraction",
+    "no_latent_ablation_compatibility": "accepted_scratch_flag_no_runtime_effect"
+  },
+  "latent_scope_amendment_sha256": "40ff3655dc6ca0be53eb40e7fc44b7f9aa9f593d237eb2e6de7c2a09cca9aec2",
+  "pipeline": {
+    "stages": [
+      "serve_model",
+      "build_sealed_memory",
+      "infer_baseline",
+      "infer_candidate",
+      "evaluate_sealed",
+      "critic_strict"
+    ],
+    "forbidden_stages": ["prepare"],
+    "base_url": "http://127.0.0.1:8129",
+    "outputs": {
+      "journal": "artifacts/provider_calls.final.jsonl",
+      "baseline_latent": "artifacts/memory.prefine.jsonl",
+      "baseline_latent_manifest": "artifacts/memory.prefine.jsonl.manifest.json",
+      "memory": "artifacts/memory.ecpr.jsonl",
+      "memory_manifest": "artifacts/memory.ecpr.jsonl.manifest.json",
+      "baseline": "artifacts/predictions.baseline.jsonl",
+      "baseline_manifest": "artifacts/predictions.baseline.jsonl.manifest.json",
+      "candidate": "artifacts/predictions.candidate.jsonl",
+      "candidate_manifest": "artifacts/predictions.candidate.jsonl.manifest.json",
+      "summary": "reports/summary.json"
+    }
+  }
+}
