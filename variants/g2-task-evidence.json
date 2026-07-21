@@ -1,0 +1,331 @@
+{
+  "schema": "experiments7-native-task-evidence/v1",
+  "canonical_task_id": "/root/controller7_exact3_code_review",
+  "lane": "Executor",
+  "agent_type": "executor",
+  "terminal_state": "COMPLETE",
+  "completion_scope": "neutral metadata facade, explicit profiles/adapters, validators, fixtures, and fail-closed planning",
+  "cp2_state": "BLOCKED",
+  "cp2_claimed": false,
+  "writer_scope": [
+    "experiments7/src/facade/**",
+    "experiments7/scripts/runtime/**",
+    "experiments7/scripts/validation/**",
+    "experiments7/configs/adapters.json",
+    "experiments7/configs/snapshot-plan.json",
+    "experiments7/variants/profiles.json",
+    "experiments7/variants/compatibility.json",
+    "experiments7/variants/g2-task-evidence.json",
+    "experiments7/runs/fixtures/**",
+    "experiments7/tests/**",
+    "experiments7/docs/README.md"
+  ],
+  "excluded_shared_scope": [
+    "experiments7/paper_outputs/inventory/**",
+    "experiments7/scripts/provenance/**",
+    "experiments7/manifests/admission/**",
+    "experiments7/paper_outputs/raw/**",
+    "experiments7/scripts/g0/**",
+    "experiments7/manifests/sealed-runs/**"
+  ],
+  "reason_codes": [
+    "G2_METADATA_FACADE_COMPLETE",
+    "G2_VARIANT_COVERAGE_85_OF_85",
+    "G2_EXPLICIT_PROFILES_30",
+    "ORIGIN_LABELS_PRESERVED",
+    "NO_SEMANTIC_VARIANT_MERGING",
+    "PARSER_SNAPSHOTS_REFERENCE_ONLY",
+    "EXTERNAL_SEMANTIC_EXECUTION_NOT_ATTEMPTED",
+    "EXTERNAL_PREREQUISITES_UNAVAILABLE",
+    "CP1_ACCEPTANCE_NOT_OBSERVED",
+    "PROTECTED_SNAPSHOT_EXECUTOR_UNAVAILABLE",
+    "RUNNABLE_LINEAGE_CLOSURE_INCOMPLETE",
+    "PROTECTED_SNAPSHOTS_PENDING_129",
+    "CP2_NOT_CLAIMED",
+    "NO_PROTECTED_READS",
+    "NO_PROTECTED_WRITES",
+    "NO_RAW_INFERENCE_COPIES",
+    "ROOT_README_UNCHANGED"
+  ],
+  "frozen_inputs": [
+    {
+      "path": "variants/registry.json",
+      "sha256": "7126e93f2bfdfff49f250f5d1308df0de736fa10fe54959b49f3a4582ce24b38",
+      "bytes": 129946
+    },
+    {
+      "path": "lineage/code.jsonl",
+      "sha256": "ce0d6a295fbc91f655b1a0abda439ec8d50e7645012b2ceb7a31089f6d44dc7a",
+      "bytes": 84848
+    },
+    {
+      "path": "lineage/config.jsonl",
+      "sha256": "71d64df6953be1ef359c06be57d4e3f300e6003a5d31f22e34a9e4c1615433ec",
+      "bytes": 7371
+    },
+    {
+      "path": "variants/g1-task-evidence.json",
+      "sha256": "2a45ad08c84da2a6b23e27ce050f7fd03643090cc40b4d97b3475d5617f08d6c",
+      "bytes": 3867
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/README.md",
+      "sha256": "cfb16a361225fa6df4a415c6c61ee4249957e7ceae4b93fc962a581282a9c4ff",
+      "bytes": 3464
+    },
+    {
+      "path": "src/facade/__init__.py",
+      "sha256": "cb414231ab74f5952296efb751e17637f9892ed5d284ee8fe1a4bedb93ec7095",
+      "bytes": 89
+    },
+    {
+      "path": "src/facade/selection.py",
+      "sha256": "8fcb1f311da573ed393d5da5772e5b33c50279684b94156423890af08b831e59",
+      "bytes": 1126
+    },
+    {
+      "path": "src/facade/metadata.py",
+      "sha256": "66e49253d8d4501b68900755e5f69ddc1bbb26be173900e319c25de813e76d6f",
+      "bytes": 25551
+    },
+    {
+      "path": "src/facade/registry.py",
+      "sha256": "5541bc97044f8f5adfd9d5b446583a58106f1aff5f593ffa247dd6334f99129c",
+      "bytes": 16547
+    },
+    {
+      "path": "src/facade/planner.py",
+      "sha256": "825fd3d462f4a6ad97d9173b98d7d0a51cf731098b7dc981e5c4adcfdad80465",
+      "bytes": 4867
+    },
+    {
+      "path": "src/facade/runner.py",
+      "sha256": "1aba011946b321dd37718204c125861a2865af9be88aa69a0fb8c2c1a6f13b21",
+      "bytes": 7480
+    },
+    {
+      "path": "src/facade/cli.py",
+      "sha256": "41bc97684565e0a99f9f841a0e07516477acac7b175efa4fdeb5d8391de41c53",
+      "bytes": 4982
+    },
+    {
+      "path": "scripts/runtime/generate_metadata.py",
+      "sha256": "a2fac8e9c88f8da6e5e3965648f357b753b432e3d2380f0c78a68876ea7e03d3",
+      "bytes": 2020
+    },
+    {
+      "path": "scripts/runtime/facade.py",
+      "sha256": "11c97be6797365dbc85da37079b51da628d5cfb9e50e9dd2165c02b6facf529b",
+      "bytes": 363
+    },
+    {
+      "path": "scripts/runtime/snapshot_registered.py",
+      "sha256": "5b6e931ffcd979344e4fbebf0333c5c2cd8362d118b93f5a7072280a5fc7fa06",
+      "bytes": 2159
+    },
+    {
+      "path": "scripts/validation/validate_registry.py",
+      "sha256": "0e465da60a02e9bd93b75062401ed711b354be8405a19c73ab1deb49f5d4de42",
+      "bytes": 1567
+    },
+    {
+      "path": "scripts/validation/validate_lineage.py",
+      "sha256": "6ef67a05f07aac19f35305d5ab839b154a4eba55d4ca42a1d1227fa4affcae87",
+      "bytes": 1827
+    },
+    {
+      "path": "configs/adapters.json",
+      "sha256": "3fa3b63aed9b46f8ebf6f44da10c1f1bee2c5a084c9159201e9e376dda6b9f0a",
+      "bytes": 270387
+    },
+    {
+      "path": "configs/snapshot-plan.json",
+      "sha256": "71981294ef0d7f3bce728f4ef5b998078c38c820089bac7bfda9cf1381b030d1",
+      "bytes": 126063
+    },
+    {
+      "path": "variants/profiles.json",
+      "sha256": "a81b5137ef094402fb08e17c3851402372e456f0f74a310c6764f1d2f8210c7b",
+      "bytes": 47132
+    },
+    {
+      "path": "variants/compatibility.json",
+      "sha256": "b0bab6ace565cdca04aeb988a44fbc4b70f8128a6480015572a7b4b092076c9e",
+      "bytes": 26801
+    },
+    {
+      "path": "runs/fixtures/routing_basic.json",
+      "sha256": "9452e5c119263284b3f872697810171f450198e63de06d04eccc9587e958b308",
+      "bytes": 236
+    },
+    {
+      "path": "runs/fixtures/parser_reference_0103a.json",
+      "sha256": "71432e5c72c52d5705c6b2d5aecf28f65b34a763eca81c633046dcf216ef2b34",
+      "bytes": 258
+    },
+    {
+      "path": "runs/fixtures/parser_reference_0103b.json",
+      "sha256": "11cc8dee3ba5dadcfea3b8760873f358d99df5cfdd820cd276b9ec270250a53b",
+      "bytes": 258
+    },
+    {
+      "path": "runs/fixtures/synthetic/dataset.json",
+      "sha256": "94ca7efc2577b77a6d0bc1f7bfd7d836f21cee292275e9b3caa21812cb591d0e",
+      "bytes": 143
+    },
+    {
+      "path": "runs/fixtures/synthetic/preference_config.json",
+      "sha256": "b6a60a02fb1fcc92d5e05460d214e615fc93b9458ad5b8fd1404bed799f54b8a",
+      "bytes": 152
+    },
+    {
+      "path": "runs/fixtures/synthetic/query.json",
+      "sha256": "20699641290a8a6e0c72690e76f852e5c045f777b5feb0ecbd10f17ff0490266",
+      "bytes": 172
+    },
+    {
+      "path": "runs/fixtures/synthetic/tool_schema.json",
+      "sha256": "10251490b98eb43fe0203f7d4c10ee0cb0fc26fdea2fb9581692ef4e4c7e7467",
+      "bytes": 142
+    },
+    {
+      "path": "runs/fixtures/synthetic/memory.json",
+      "sha256": "ab7f74ba3c65f04533e0b95f54d4640b211ad6d7c688d06e6c00dbd1a8083151",
+      "bytes": 184
+    },
+    {
+      "path": "runs/fixtures/synthetic/model_output.json",
+      "sha256": "a9e071be10aaa120cd6d464743beae3cdd74205c33b9220d7fc843e60f738bd5",
+      "bytes": 217
+    },
+    {
+      "path": "tests/test_registry.py",
+      "sha256": "0862d8282c2a4bc48733407b442b29ff40a6ebdb9c3640d52cf60ef4414c3ae9",
+      "bytes": 2579
+    },
+    {
+      "path": "tests/test_profiles.py",
+      "sha256": "af9b7dface5f6ed3da63d360099005c889b929fb8582aba96fca147554d60f20",
+      "bytes": 2469
+    },
+    {
+      "path": "tests/test_facade_cli.py",
+      "sha256": "0cd6487ad30f18c7edaa3d2156c9968a1093c34973f6f9f92d20a422d083890e",
+      "bytes": 2761
+    },
+    {
+      "path": "tests/test_snapshot_integrity.py",
+      "sha256": "8b486c3f1524f0ef2edc482ee92b32b5bae289dfa38a8b69ef800db7217220cd",
+      "bytes": 1459
+    },
+    {
+      "path": "tests/test_output_containment.py",
+      "sha256": "2894aff49455323f747018763fa80b1890dbfad0d8eb8f2dfa5df79acc1464e5",
+      "bytes": 1780
+    },
+    {
+      "path": "tests/test_origin_golden.py",
+      "sha256": "15a4108a89ae604a47fd9560cb2dff091f2c7501409814cd8a8aa09e6bade958",
+      "bytes": 6170
+    }
+  ],
+  "task_evidence_digest": {
+    "path": "variants/g2-task-evidence.json",
+    "sha256": null,
+    "bytes": null,
+    "binding": "detached digest reported by the executor after final write"
+  },
+  "closure": {
+    "families": 16,
+    "registered_variants": 85,
+    "adapters": 85,
+    "profiles": 30,
+    "profile_covered_variants": 85,
+    "stages": 16,
+    "reference_only_variants": 2,
+    "registry_referenced_lineage": 129,
+    "lineage_resolved_exactly_once": 129,
+    "code_lineage_records": 118,
+    "config_lineage_records": 11,
+    "pending_snapshot_records": 129,
+    "published_snapshot_records": 0
+  },
+  "validation_commands": [
+    {
+      "command": "python -B scripts/runtime/generate_metadata.py --check",
+      "exit_code": 0,
+      "result": "PASS",
+      "evidence": "four generated artifacts matched byte-for-byte; protected_reads=0"
+    },
+    {
+      "command": "python -B scripts/validation/validate_registry.py",
+      "exit_code": 0,
+      "result": "PASS",
+      "evidence": "16 families, 85 variants, 85 adapters, 30 profiles, 85 covered variants"
+    },
+    {
+      "command": "python -B scripts/validation/validate_lineage.py",
+      "exit_code": 0,
+      "result": "PASS",
+      "evidence": "118 code plus 11 config records; all 129 snapshot records pending"
+    },
+    {
+      "command": "python -B scripts/runtime/snapshot_registered.py --json",
+      "exit_code": 0,
+      "result": "PASS",
+      "evidence": "129 exact no-glob pending records; protected_reads=0"
+    },
+    {
+      "command": "python -B scripts/runtime/snapshot_registered.py --execute --json",
+      "exit_code": 2,
+      "result": "EXPECTED_BLOCK",
+      "evidence": "PROTECTED_SNAPSHOT_REQUIRES_SEALED_G0_EXECUTOR; protected_reads=0"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_*.py' -v",
+      "exit_code": 0,
+      "result": "PASS",
+      "evidence": "25 tests passed"
+    },
+    {
+      "command": "python -B -c <AST parse of G2 Python files>",
+      "exit_code": 0,
+      "result": "PASS",
+      "evidence": "18 Python files parsed"
+    }
+  ],
+  "protected_access_audit": {
+    "g0_provider_activated": false,
+    "sealed_run_id": null,
+    "envelope_ids": [],
+    "bundle_hashes": [],
+    "protected_reads": 0,
+    "protected_writes": 0,
+    "reason": "sealed G0 snapshot executor was unavailable; execution refused before protected traversal"
+  },
+  "mutation_audit": {
+    "experiments4_writes": 0,
+    "experiments5_writes": 0,
+    "experiments6_writes": 0,
+    "paper_directory_writes": 0,
+    "pdf_writes": 0,
+    "raw_inference_copies": 0,
+    "basis": "G2 command audit and fail-closed snapshot path; no protected provider was activated"
+  },
+  "root_readme": {
+    "before_sha256": "3f32154f9bf480fcc077e94d26378a6997811bed4fc955160567a615dd4b32fc",
+    "after_sha256": "3f32154f9bf480fcc077e94d26378a6997811bed4fc955160567a615dd4b32fc",
+    "equal": true
+  },
+  "external_execution": {
+    "semantic_execution_attempted": false,
+    "routing_evidence_emitted_before_refusal": true,
+    "reason_codes": [
+      "EXTERNAL_PREREQUISITES_UNAVAILABLE",
+      "PUBLISHED_ORIGIN_SNAPSHOTS_REQUIRED",
+      "RUNTIME_CLOSURE_REQUIRED"
+    ]
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "schema": "experiments7-g010-ultraqa-scope-verifier/v1",
+  "goal_id": "G010-v6-pre-g0-strict-bootstrap-and-fixtu",
+  "canonical_task": "/root/g010_ultraqa_scope_v6",
+  "verdict": "PASS",
+  "independent": true,
+  "review_artifact_binding": {
+    "review_artifact": "docs/reviews/g010-code-review-v6.json",
+    "review_artifact_sha256": "c25463671bee65b2958e2d06d974bd452a3298acef50636ee1ca804409549543",
+    "declared_file_count": 8,
+    "matched_file_count": 8,
+    "mismatch_count": 0,
+    "file_sha256": {
+      "scripts/strict_run/publish_checkpoint.py": "5ae23c57cc3b0a36238f33bee43c91e9372cdf52e8471307dbd2f9658b8b3d96",
+      "src/provenance/strict_v6.py": "314c8d73ec8b0ba07e2cd522955470b698535759f6f76be12cbfa8a491871c66",
+      "src/strict_run/checkpoint.py": "12fd0a975d847523e7ce9d5b4303a56b824d65b46453f8458d69f7401676fa59",
+      "src/strict_run/semantics.py": "7bb1f9c677e3b2e4acd8feabcaeb66c062bef35993d1990f7979ad451191fc62",
+      "tests/test_provenance_v6_contract.py": "4b5772cb58f3a80e2b2b4b10f3d30f85d0959c86a5c610f54133de902b59c04c",
+      "tests/test_strict_run_v6_checkpoint_dispatch.py": "d1122ad09c6eed7f7bbbfe053e54d11858bcb127c25b476479af6bec75521efa",
+      "tests/test_strict_run_v6_cli.py": "b03b21fcf47480ac9ebd38b3139ff4bb0a8cf24bd840c893a6d33a26358a43ea",
+      "tests/test_strict_run_v6_semantics.py": "9738f94403741115d185034d8bccaf110cfcb3e206d6a7bd701a4682c7b233ae"
+    }
+  },
+  "verified_invariants": {
+    "canonical_checkpoint_chain_endpoints": {
+      "cp3": 2,
+      "cp4": 3,
+      "cp5": 4,
+      "cp6": 5
+    },
+    "cp0_historical_bindings_recomputed": true,
+    "cp0_stored_semantics_replayed": true,
+    "cp6_evidence_categories": {
+      "tool_evidence_sha256": "frozen/",
+      "runtime_evidence_sha256": "runtime/",
+      "test_evidence_sha256": "admission/final/"
+    },
+    "cp6_three_evidence_digests_distinct": true,
+    "copy_ledger_row_keys_exact": true
+  },
+  "commands": [
+    {
+      "command": "timeout 180s env PYTHONDONTWRITEBYTECODE=1 python -B -m unittest -v tests.test_strict_run_v6_checkpoint_dispatch tests.test_strict_run_v6_semantics tests.test_provenance_v6_contract tests.test_runtime_v6_sandbox",
+      "exit_code": 0,
+      "test_count": 75,
+      "failures": 0,
+      "errors": 0,
+      "duration_seconds": 6.912
+    },
+    {
+      "command": "timeout 60s env PYTHONDONTWRITEBYTECODE=1 python -B scripts/validate_runtime_boundary.py --json",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "result": "EXPECTED_BLOCKED"
+    },
+    {
+      "command": "timeout 180s env PYTHONDONTWRITEBYTECODE=1 python -B -m unittest tests.test_strict_run_v6_checkpoint_dispatch tests.test_strict_run_v6_semantics tests.test_provenance_v6_contract tests.test_runtime_v6_sandbox",
+      "exit_code": 0,
+      "test_count": 75,
+      "failures": 0,
+      "errors": 0,
+      "duration_seconds": 7.33,
+      "purpose": "flake rerun"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python -B review-artifact hash comparison probe",
+      "exit_code": 0,
+      "checked_file_count": 8,
+      "mismatch_count": 0
+    }
+  ],
+  "runtime_boundary": {
+    "state": "BLOCKED",
+    "mechanism_state": "PASS",
+    "backend": "landlock+seccomp",
+    "claim": "synthetic mechanism validation only; not CP2 execution proof",
+    "reason_codes": [
+      "RUNTIME_PROOF_ENVIRONMENT_UNAVAILABLE"
+    ],
+    "environment_reason_codes": [
+      "NO_PRIVILEGE_SEPARATED_SUPERVISOR",
+      "PROTECTED_MOUNT_WRITABLE",
+      "UNCONFINED_SAME_UID_COOPERATING_SUBJECT"
+    ],
+    "protected_reads": 0,
+    "protected_writes": 0,
+    "live_network_attempted": false,
+    "positive_cp2_proof_granted": false,
+    "expected_fail_closed": true
+  },
+  "scope_boundary": {
+    "experiments4_5_6_content_reads": 0,
+    "experiments4_5_6_writes": 0,
+    "experiments7_paper_pdf_reads": 0,
+    "experiments7_paper_pdf_writes": 0,
+    "verification_lane_repo_edits": 0,
+    "verification_lane_git_commands": 0,
+    "git_used": false,
+    "artifact_authoring_changes": [
+      "docs/reviews/g010-ultraqa-scope-verifier-v6.json"
+    ]
+  },
+  "cleanup": {
+    "lane_created_persistent_temp_artifacts": 0,
+    "lane_created_persistent_processes": 0,
+    "preexisting_temp_artifacts_modified_or_removed": false
+  },
+  "residual_watch": [
+    "The current host cannot produce positive CP2 execution proof because the required privilege-separated supervisor, read-only protected mount boundary, and confinement of same-effective-UID cooperating subjects are absent. This is an environment blocker for an actual CP2 run, not a failure of the G010 mechanism/fixture acceptance lane."
+  ]
+}

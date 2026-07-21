@@ -1,0 +1,158 @@
+{
+  "contract_version": 1,
+  "description": "Frozen experiments4 VanillaLLM mix600 query/GT generation contract before experiments7 restructuring.",
+  "legacy_root": "../experiments4",
+  "source_example_count": 600,
+  "expected_total_instances": 2638,
+  "canonicalization": {
+    "record_fields": [
+      "example_id",
+      "query",
+      "ground_truth"
+    ],
+    "ground_truth": "Sort the list of accepted API-call strings; their order is not evaluation-semantic.",
+    "multiset": "Serialize records as compact UTF-8 JSON with sorted object keys, sort serialized records, join with LF, and append a final LF.",
+    "legacy_instance_id": "{example_id}_{sub_idx}; only the ID multiset is stable because legacy medium/hard builders iterate sets."
+  },
+  "sources": {
+    "mix600": {
+      "path": "data/mix600.json",
+      "bytes": 20040944,
+      "sha256": "e0748a987fdba01ba2a68fc6ab781277028a93b2ba5de1987752298ce6609ea3"
+    },
+    "query_singleturn": {
+      "path": "query_singleturn.json",
+      "bytes": 1134,
+      "sha256": "e8a25828cf319e63c573fbcb8a485e7ece1ed3a7d49120d41ac5d716adc897c7"
+    },
+    "query_multiturn": {
+      "path": "query_multiturn.json",
+      "bytes": 15282,
+      "sha256": "68ee30d98a071aa6cc44195b366ff17c2e46d93530821ce2af7c6f6e9350defd"
+    },
+    "pref_list": {
+      "path": "pref_list.json",
+      "bytes": 614,
+      "sha256": "f5994dab209909ed31d15cbabe6a88a84ef5d95f85c156795549c96fd5126091"
+    },
+    "pref_group": {
+      "path": "pref_group.json",
+      "bytes": 1433,
+      "sha256": "aac0cc9210a59b15e1422d0946bab0e37c9c38b538f29a2d7c24b84ccd8348fb"
+    },
+    "schema_singleturn": {
+      "path": "schema_easy.json",
+      "bytes": 6398,
+      "sha256": "ef388951dcff703e3f3a41be0a20315e54125c43e885dca6aeb85e6fbd77dfb9"
+    },
+    "schema_multiturn": {
+      "path": "schema_all.json",
+      "bytes": 15761,
+      "sha256": "c3639e58e42c8cbe2f202ea9798dd158da305da8229614e3db09f829b945628f"
+    },
+    "builder_singleturn": {
+      "path": "vanillaLLM/vanillaLLM_inference-api-single.py",
+      "bytes": 33944,
+      "sha256": "9cb25108da12f664a8266a2c084d52f11d52b58da3841d94a6f998c789d8c71f"
+    },
+    "builder_multiturn": {
+      "path": "vanillaLLM/vanillaLLM_inference-api-multi.py",
+      "bytes": 36133,
+      "sha256": "ac6edae7f7707befa91b3ed7e592f8fc96f17883e21de980ef15aaa90b91211f"
+    }
+  },
+  "input_preference_group_counts": {
+    "eco": 130,
+    "high_cost": 4,
+    "low_cost": 93,
+    "prefers_star": 468,
+    "solo_usage": 39
+  },
+  "supported_medium_hard_groups": [
+    "high_cost",
+    "low_cost",
+    "solo_usage"
+  ],
+  "scenarios": {
+    "singleturn.easy": {
+      "count": 554,
+      "source_examples": 335,
+      "instance_ids_sha256": "401ad6735157ad015a1b7645b9a599b10899a38a08b565288b7454b17820a9c9",
+      "semantic_multiset_sha256": "44c1af82d947e406ae48184956748ecad1c855d1f613abe16d2495e717ab7f25"
+    },
+    "singleturn.medium": {
+      "count": 293,
+      "source_examples": 123,
+      "instance_ids_sha256": "c9ddfe70f6419a21c1611946b5dd3f12f70151e500c10cfb7ce6f4c066fd03c0",
+      "semantic_multiset_sha256": "cad0b4352084eb423455d72d5ad97bdedab911a23a00b62427bf9f4fd5b18fea"
+    },
+    "singleturn.hard": {
+      "count": 472,
+      "source_examples": 123,
+      "instance_ids_sha256": "8487986ab550fb4c17f14399ea05c420c3668ce3b9e637c19334ba8d26634b47",
+      "semantic_multiset_sha256": "ea3fa34f4b3e6dee50ff4a2b5765818bcc299af29fe4e988529260563a53c25a"
+    },
+    "multiturn.easy": {
+      "count": 554,
+      "source_examples": 335,
+      "instance_ids_sha256": "401ad6735157ad015a1b7645b9a599b10899a38a08b565288b7454b17820a9c9",
+      "semantic_multiset_sha256": "b9ab7bcd07e0f3381c65aced9e2c5cfabaf3d58d25c2012b2e23e6b59f200f0a"
+    },
+    "multiturn.medium": {
+      "count": 293,
+      "source_examples": 123,
+      "instance_ids_sha256": "c9ddfe70f6419a21c1611946b5dd3f12f70151e500c10cfb7ce6f4c066fd03c0",
+      "semantic_multiset_sha256": "e4d73ad16cbcda2de01b15a8875ab99af30214949de5db636fd099c5e7eded23"
+    },
+    "multiturn.hard": {
+      "count": 472,
+      "source_examples": 123,
+      "instance_ids_sha256": "8487986ab550fb4c17f14399ea05c420c3668ce3b9e637c19334ba8d26634b47",
+      "semantic_multiset_sha256": "017f5ee8cefa0bc64baa878e4e52d15943b1b25d843202ecf2658549b943a585"
+    }
+  },
+  "representative_records": {
+    "singleturn.easy": {
+      "example_id": "dev_0009",
+      "query": "I want to look for events happening nearby.",
+      "ground_truth": [
+        "GetEvents(number_of_tickets=\"2\")"
+      ]
+    },
+    "singleturn.medium": {
+      "example_id": "dev_0009",
+      "query": "I want to check bus options for my trip.",
+      "ground_truth": [
+        "GetBuses(group_size=\"1\")"
+      ]
+    },
+    "singleturn.hard": {
+      "example_id": "dev_0009",
+      "query": "I want to rent a car for my trip. Can you show me available options?",
+      "ground_truth": [
+        "GetRentalCars(car_type=\"Full-size\")"
+      ]
+    },
+    "multiturn.easy": {
+      "example_id": "dev_0009",
+      "query": "User: I’m interested in attending an art exhibition.\nAssistant: Sure. Which city should I look in?\nUser: San Francisco.",
+      "ground_truth": [
+        "GetEvents(city=\"San Francisco\", number_of_tickets=\"2\")"
+      ]
+    },
+    "multiturn.medium": {
+      "example_id": "dev_0009",
+      "query": "User: I need to take a bus to another city.\nAssistant: Sure. Where will you be traveling from and to?\nUser: From San Jose to Sacramento.\nAssistant: When would you like to depart?\nUser: On March 10th in the morning.\nAssistant: Is there anything else I should consider for your trip?\nUser: No, it’s just a straightforward trip.",
+      "ground_truth": [
+        "GetBuses(departure_date=\"2019-03-10\", departure_time=\"09:00\", destination=\"Sacramento\", group_size=\"1\", origin=\"San Jose\")"
+      ]
+    },
+    "multiturn.hard": {
+      "example_id": "dev_0009",
+      "query": "User: I’ll be visiting the city for a short stay and I’m thinking about renting a car.\nAssistant: Sure. Where would you like to pick up the car?\nUser: Downtown Berlin would be best.\nAssistant: Got it. When would you like to pick it up?\nUser: Around noon on March 8th.\nAssistant: How long do you plan to keep the car?\nUser: Just for a couple of days. I’ll mostly be driving within the city.",
+      "ground_truth": [
+        "GetRentalCars(car_type=\"Full-size\", pickup_date=\"2019-03-08\", pickup_location=\"Berlin\", pickup_time=\"12:00\")"
+      ]
+    }
+  }
+}

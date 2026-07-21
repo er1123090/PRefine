@@ -1,0 +1,61 @@
+{
+  "schema": "experiments7-g010-code-review/v1",
+  "goal_id": "G010-v6-pre-g0-strict-bootstrap-and-fixtu",
+  "completed_at_utc": "2026-07-17T15:07:32Z",
+  "clean": true,
+  "code_review": {
+    "canonical_task": "/root/g010_code_reviewer_v6",
+    "verdict": "APPROVE",
+    "blocker_count": 0,
+    "major_count": 0,
+    "minor_count": 0
+  },
+  "architecture_review": {
+    "canonical_task": "/root/g010_architect_v6",
+    "verdict": "CLEAR",
+    "blocking_finding_count": 0,
+    "watch": [
+      "The current host cannot produce a positive CP2 runtime proof, so successful CP3-to-CP6 CLI coverage remains synthetic and typed-validator based."
+    ]
+  },
+  "verification": {
+    "full_unittest_discover": {
+      "test_count": 211,
+      "failures": 0,
+      "errors": 0,
+      "duration_seconds": 258.127
+    },
+    "checkpoint_semantics_focus": {
+      "test_count": 34,
+      "failures": 0,
+      "errors": 0
+    },
+    "cli_focus": {
+      "test_count": 11,
+      "failures": 0,
+      "errors": 0
+    },
+    "cp3_cp45_integration": {
+      "test_count": 103,
+      "failures": 0,
+      "errors": 0,
+      "duration_seconds": 304.563
+    }
+  },
+  "file_sha256": {
+    "scripts/strict_run/publish_checkpoint.py": "5ae23c57cc3b0a36238f33bee43c91e9372cdf52e8471307dbd2f9658b8b3d96",
+    "src/provenance/strict_v6.py": "314c8d73ec8b0ba07e2cd522955470b698535759f6f76be12cbfa8a491871c66",
+    "src/strict_run/checkpoint.py": "12fd0a975d847523e7ce9d5b4303a56b824d65b46453f8458d69f7401676fa59",
+    "src/strict_run/semantics.py": "7bb1f9c677e3b2e4acd8feabcaeb66c062bef35993d1990f7979ad451191fc62",
+    "tests/test_provenance_v6_contract.py": "4b5772cb58f3a80e2b2b4b10f3d30f85d0959c86a5c610f54133de902b59c04c",
+    "tests/test_strict_run_v6_checkpoint_dispatch.py": "d1122ad09c6eed7f7bbbfe053e54d11858bcb127c25b476479af6bec75521efa",
+    "tests/test_strict_run_v6_cli.py": "b03b21fcf47480ac9ebd38b3139ff4bb0a8cf24bd840c893a6d33a26358a43ea",
+    "tests/test_strict_run_v6_semantics.py": "9738f94403741115d185034d8bccaf110cfcb3e206d6a7bd701a4682c7b233ae"
+  },
+  "scope_boundary": {
+    "experiments7_only": true,
+    "protected_content_read_for_review": false,
+    "protected_write": false,
+    "git_used": false
+  }
+}

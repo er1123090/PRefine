@@ -1,0 +1,17 @@
+{
+  "expected": {
+    "non_preference": {"f1": 0.8, "fn": 0, "fp": 1, "precision": 0.6666666666666666, "recall": 1.0, "tp": 2},
+    "overall": {"f1": 0.6666666666666665, "fn": 1, "fp": 2, "precision": 0.6, "recall": 0.75, "tp": 3},
+    "preference_exact_match": {"count": 1, "rate": 0.5, "total": 2},
+    "preference_slot_value": {"f1": 0.5, "fn": 1, "fp": 1, "precision": 0.5, "recall": 0.5, "tp": 1}
+  },
+  "predictions": [
+    {"difficulty": "easy", "instance_id": "fixture:singleturn:easy:1", "llm_output": "{\"name\": \"BookHotel\", \"arguments\": {\"city\": \"Seoul\", \"price\": \"budget\"}}", "reference_ground_truth": ["Tampered(wrong=\"value\")"], "source_example_id": "source-1", "turn": "singleturn"},
+    {"difficulty": "easy", "instance_id": "fixture:singleturn:easy:2", "llm_output": "```json\n{FindTrain}(day=\"2026-07-21\", seat=\"aisle\", extra=\"x\")\n```", "reference_ground_truth": ["Tampered(wrong=\"value\")"], "source_example_id": "source-2", "turn": "singleturn"}
+  ],
+  "preference_slots": {"BookHotel": ["price"], "FindTrain": ["seat"]},
+  "prepared": [
+    {"dataset_id": "fixture-v1", "difficulty": "easy", "ground_truth": ["BookHotel(city=\"Seoul\", price=\"low\")", "BookHotel(city=\"Seoul\", price=\"budget\")"], "instance_id": "fixture:singleturn:easy:1", "query": "Find a hotel.", "source_example_id": "source-1", "turn": "singleturn"},
+    {"dataset_id": "fixture-v1", "difficulty": "easy", "ground_truth": ["FindTrain(day=\"07-21\", seat=\"window\")"], "instance_id": "fixture:singleturn:easy:2", "query": "Find a train.", "source_example_id": "source-2", "turn": "singleturn"}
+  ]
+}

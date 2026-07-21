@@ -1,0 +1,122 @@
+{
+  "schema": "experiments7-native-task-evidence/v1",
+  "canonical_task_id": "/root/executor_g1_registry_writer",
+  "lane": "Executor",
+  "agent_type": "executor",
+  "terminal_state": "COMPLETE",
+  "writer_scope": [
+    "experiments7/variants/**",
+    "experiments7/lineage/**"
+  ],
+  "reason_codes": [
+    "RUNTIME_OWNERSHIP_REPAIRED",
+    "G1_REGISTRY_WRITTEN",
+    "OPEN_STAGE_VARIANTS_PRESERVED",
+    "MINIMUM_IDS_EXACTLY_ONCE",
+    "NEUTRAL_FAMILIES_NONSELCTABLE",
+    "LINEAGE_SOURCE_PRE_EXACT_MATCH",
+    "REGISTRY_LINEAGE_CLOSURE_COMPLETE",
+    "PARSER_SNAPSHOTS_UNRESOLVED",
+    "NO_G2_ARTIFACTS_CREATED",
+    "ROOT_README_UNCHANGED",
+    "NO_PROTECTED_WRITES"
+  ],
+  "artifacts": [
+    {
+      "path": "variants/registry.json",
+      "sha256": "7126e93f2bfdfff49f250f5d1308df0de736fa10fe54959b49f3a4582ce24b38",
+      "bytes": 129946,
+      "record_counts": {
+        "families": 16,
+        "variants": 85,
+        "required_variants": 8,
+        "additional_variants": 77
+      }
+    },
+    {
+      "path": "lineage/code.jsonl",
+      "sha256": "ce0d6a295fbc91f655b1a0abda439ec8d50e7645012b2ceb7a31089f6d44dc7a",
+      "bytes": 84848,
+      "record_count": 118
+    },
+    {
+      "path": "lineage/config.jsonl",
+      "sha256": "71d64df6953be1ef359c06be57d4e3f300e6003a5d31f22e34a9e4c1615433ec",
+      "bytes": 7371,
+      "record_count": 11
+    }
+  ],
+  "baseline_hashes": {
+    "cp0_seal_sha256": "127a791d91860feb01296396f246f511b198ed75b684f973f586066abeb3be1f",
+    "source_pre_sha256": "6ab9fd4b02a55b2c59889ee2034f42d8162bca99a6abbfc35a0d65ca02d63bbc",
+    "root_readme_sha256": "3f32154f9bf480fcc077e94d26378a6997811bed4fc955160567a615dd4b32fc"
+  },
+  "validation_assertions": [
+    {
+      "check_id": "G1-JSON-JSONL",
+      "result": "PASS",
+      "evidence": "registry standard-library JSON parse and all 129 JSONL records parsed"
+    },
+    {
+      "check_id": "G1-MINIMUM-IDS",
+      "result": "PASS",
+      "evidence": "eight required ids occur exactly once with required stages and neutral parents"
+    },
+    {
+      "check_id": "G1-NEUTRAL-FAMILIES",
+      "result": "PASS",
+      "evidence": "16 origin-neutral family records are nonselectable and have null selectors"
+    },
+    {
+      "check_id": "G1-OPEN-INVENTORY",
+      "result": "PASS",
+      "evidence": "77 substantiated additional variants retained"
+    },
+    {
+      "check_id": "G1-SNAPSHOT-UNCERTAINTY",
+      "result": "PASS",
+      "evidence": "eval4_mt_parse_0103a and eval4_mt_parse_0103b remain unresolved_equivalence"
+    },
+    {
+      "check_id": "G1-FORBIDDEN-STATE-FIELDS",
+      "result": "PASS",
+      "evidence": "registry and lineage contain no status, verified, or derived_state keys"
+    },
+    {
+      "check_id": "G1-UNIQUE-IDENTITIES",
+      "result": "PASS",
+      "evidence": "variant ids, lineage ids, planned destinations, and origin-root/path/variant tuples are unique"
+    },
+    {
+      "check_id": "G1-EXACT-PATHS",
+      "result": "PASS",
+      "evidence": "all source paths are exact relative no-glob paths without dot-dot components"
+    },
+    {
+      "check_id": "G1-SOURCE-PRE",
+      "result": "PASS",
+      "evidence": "all 129 lineage path/hash/record-id bindings exactly match manifests/source-pre.jsonl"
+    },
+    {
+      "check_id": "G1-LINEAGE-CLOSURE",
+      "result": "PASS",
+      "evidence": "129 of 129 registry-referenced lineage records resolve exactly once"
+    },
+    {
+      "check_id": "G1-NO-G2",
+      "result": "PASS",
+      "evidence": "profiles.json and compatibility.json were not created by G1"
+    },
+    {
+      "check_id": "G1-ROOT-README",
+      "result": "PASS",
+      "evidence": "README.md SHA-256 remains 3f32154f9bf480fcc077e94d26378a6997811bed4fc955160567a615dd4b32fc"
+    }
+  ],
+  "registry_to_lineage_closure": {
+    "referenced": 129,
+    "resolved_exactly_once": 129
+  },
+  "protected_writes": 0
+}
+

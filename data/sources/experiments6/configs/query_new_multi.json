@@ -1,0 +1,498 @@
+[
+  {
+    "query_id": "GetCampground_site_type_Tent_site",
+    "query": [
+      {
+        "role": "User",
+        "message": "I'm looking for a campsite for an upcoming trip."
+      },
+      {
+        "role": "Assistant",
+        "message": "Sure. Where are you looking to camp?",
+        "service": [
+          "GetCampground()"
+        ]
+      },
+      {
+        "role": "User",
+        "message": "Near Yosemite."
+      },
+      {
+        "role": "Assistant",
+        "message": "When do you plan to check in?"
+      },
+      {
+        "role": "User",
+        "message": "March 15th."
+      },
+      {
+        "role": "Assistant",
+        "message": "How many nights will you be staying?"
+      },
+      {
+        "role": "User",
+        "message": "Two nights."
+      }
+    ],
+    "api_call": [
+      "GetCampground(location=\"Yosemite\", check_in_date=\"2019-03-15\", number_of_nights=\"2\")"
+    ],
+    "target": [
+      {
+        "domain": "GetCampground",
+        "slot": "site_type",
+        "value": [
+          "Tent site"
+        ]
+      }
+    ]
+  },
+  {
+    "query_id": "GetCampground_number_of_guests_1",
+    "query": [
+      {
+        "role": "User",
+        "message": "I'm planning a camping trip."
+      },
+      {
+        "role": "Assistant",
+        "message": "Sure. Where are you looking to camp?",
+        "service": [
+          "GetCampground()"
+        ]
+      },
+      {
+        "role": "User",
+        "message": "Near Lake Tahoe."
+      },
+      {
+        "role": "Assistant",
+        "message": "When do you plan to check in?"
+      },
+      {
+        "role": "User",
+        "message": "March 20th."
+      },
+      {
+        "role": "Assistant",
+        "message": "How many nights?"
+      },
+      {
+        "role": "User",
+        "message": "Three nights."
+      }
+    ],
+    "api_call": [
+      "GetCampground(location=\"Lake Tahoe\", check_in_date=\"2019-03-20\", number_of_nights=\"3\")"
+    ],
+    "target": [
+      {
+        "domain": "GetCampground",
+        "slot": "number_of_guests",
+        "value": [
+          "1"
+        ]
+      }
+    ]
+  },
+  {
+    "query_id": "GetCityTour_number_of_people_1",
+    "query": [
+      {
+        "role": "User",
+        "message": "I'd like to book a city tour in Rome."
+      },
+      {
+        "role": "Assistant",
+        "message": "Sure. When are you planning to go?",
+        "service": [
+          "GetCityTour()"
+        ]
+      },
+      {
+        "role": "User",
+        "message": "March 12th."
+      },
+      {
+        "role": "Assistant",
+        "message": "Any particular areas you'd like to focus on?"
+      },
+      {
+        "role": "User",
+        "message": "The historic sites."
+      }
+    ],
+    "api_call": [
+      "GetCityTour(city=\"Rome\", date=\"2019-03-12\")"
+    ],
+    "target": [
+      {
+        "domain": "GetCityTour",
+        "slot": "number_of_people",
+        "value": [
+          "1"
+        ]
+      }
+    ]
+  },
+  {
+    "query_id": "GetCookingClass_class_type_Group_class",
+    "query": [
+      {
+        "role": "User",
+        "message": "I'd like to sign up for a cooking class."
+      },
+      {
+        "role": "Assistant",
+        "message": "Sure. Which city are you looking in?",
+        "service": [
+          "GetCookingClass()"
+        ]
+      },
+      {
+        "role": "User",
+        "message": "San Francisco."
+      },
+      {
+        "role": "Assistant",
+        "message": "When would you like to attend?"
+      },
+      {
+        "role": "User",
+        "message": "March 9th."
+      }
+    ],
+    "api_call": [
+      "GetCookingClass(location=\"San Francisco\", date=\"2019-03-09\")"
+    ],
+    "target": [
+      {
+        "domain": "GetCookingClass",
+        "slot": "class_type",
+        "value": [
+          "Group class"
+        ]
+      }
+    ]
+  },
+  {
+    "query_id": "GetCookingClass_number_of_attendees_1",
+    "query": [
+      {
+        "role": "User",
+        "message": "I'd like to take a cooking class while I'm in the city."
+      },
+      {
+        "role": "Assistant",
+        "message": "Sure. Which city?",
+        "service": [
+          "GetCookingClass()"
+        ]
+      },
+      {
+        "role": "User",
+        "message": "San Francisco."
+      },
+      {
+        "role": "Assistant",
+        "message": "When would you like to attend?"
+      },
+      {
+        "role": "User",
+        "message": "March 9th."
+      }
+    ],
+    "api_call": [
+      "GetCookingClass(location=\"San Francisco\", date=\"2019-03-09\")"
+    ],
+    "target": [
+      {
+        "domain": "GetCookingClass",
+        "slot": "number_of_attendees",
+        "value": [
+          "1"
+        ]
+      }
+    ]
+  },
+  {
+    "query_id": "GetFitnessClass_class_type_Group_session",
+    "query": [
+      {
+        "role": "User",
+        "message": "I'm looking to join a fitness class."
+      },
+      {
+        "role": "Assistant",
+        "message": "Sure. Which city are you in?",
+        "service": [
+          "GetFitnessClass()"
+        ]
+      },
+      {
+        "role": "User",
+        "message": "Austin."
+      },
+      {
+        "role": "Assistant",
+        "message": "When would you like to attend?"
+      },
+      {
+        "role": "User",
+        "message": "March 7th."
+      }
+    ],
+    "api_call": [
+      "GetFitnessClass(location=\"Austin\", date=\"2019-03-07\")"
+    ],
+    "target": [
+      {
+        "domain": "GetFitnessClass",
+        "slot": "class_type",
+        "value": [
+          "Group session"
+        ]
+      }
+    ]
+  },
+  {
+    "query_id": "GetFitnessClass_number_of_attendees_1",
+    "query": [
+      {
+        "role": "User",
+        "message": "I'd like to book a fitness class."
+      },
+      {
+        "role": "Assistant",
+        "message": "Sure. Which city are you in?",
+        "service": [
+          "GetFitnessClass()"
+        ]
+      },
+      {
+        "role": "User",
+        "message": "Austin."
+      },
+      {
+        "role": "Assistant",
+        "message": "When would you like to attend?"
+      },
+      {
+        "role": "User",
+        "message": "March 7th."
+      }
+    ],
+    "api_call": [
+      "GetFitnessClass(location=\"Austin\", date=\"2019-03-07\")"
+    ],
+    "target": [
+      {
+        "domain": "GetFitnessClass",
+        "slot": "number_of_attendees",
+        "value": [
+          "1"
+        ]
+      }
+    ]
+  },
+  {
+    "query_id": "GetSkiPass_pass_type_Standard_pass",
+    "query": [
+      {
+        "role": "User",
+        "message": "I need to get a ski pass for a trip."
+      },
+      {
+        "role": "Assistant",
+        "message": "Sure. Which resort are you heading to?",
+        "service": [
+          "GetSkiPass()"
+        ]
+      },
+      {
+        "role": "User",
+        "message": "Lake Tahoe."
+      },
+      {
+        "role": "Assistant",
+        "message": "When are you going?"
+      },
+      {
+        "role": "User",
+        "message": "March 3rd."
+      }
+    ],
+    "api_call": [
+      "GetSkiPass(resort=\"Lake Tahoe\", date=\"2019-03-03\")"
+    ],
+    "target": [
+      {
+        "domain": "GetSkiPass",
+        "slot": "pass_type",
+        "value": [
+          "Standard pass"
+        ]
+      }
+    ]
+  },
+  {
+    "query_id": "GetSkiPass_number_of_passes_1",
+    "query": [
+      {
+        "role": "User",
+        "message": "I'd like to get a ski pass for an upcoming trip."
+      },
+      {
+        "role": "Assistant",
+        "message": "Sure. Which resort?",
+        "service": [
+          "GetSkiPass()"
+        ]
+      },
+      {
+        "role": "User",
+        "message": "Lake Tahoe."
+      },
+      {
+        "role": "Assistant",
+        "message": "When are you going?"
+      },
+      {
+        "role": "User",
+        "message": "March 3rd."
+      }
+    ],
+    "api_call": [
+      "GetSkiPass(resort=\"Lake Tahoe\", date=\"2019-03-03\")"
+    ],
+    "target": [
+      {
+        "domain": "GetSkiPass",
+        "slot": "number_of_passes",
+        "value": [
+          "1"
+        ]
+      }
+    ]
+  },
+  {
+    "query_id": "GetParkingSpot_parking_type_Self_park_garage",
+    "query": [
+      {
+        "role": "User",
+        "message": "I need to find parking near downtown."
+      },
+      {
+        "role": "Assistant",
+        "message": "Sure. Which city?",
+        "service": [
+          "GetParkingSpot()"
+        ]
+      },
+      {
+        "role": "User",
+        "message": "Chicago."
+      },
+      {
+        "role": "Assistant",
+        "message": "When do you need it?"
+      },
+      {
+        "role": "User",
+        "message": "March 6th around noon."
+      }
+    ],
+    "api_call": [
+      "GetParkingSpot(location=\"Chicago\", date=\"2019-03-06\", time=\"12:00\")"
+    ],
+    "target": [
+      {
+        "domain": "GetParkingSpot",
+        "slot": "parking_type",
+        "value": [
+          "Self-park garage"
+        ]
+      }
+    ]
+  },
+  {
+    "query_id": "GetThemePark_ticket_type_General_admission",
+    "query": [
+      {
+        "role": "User",
+        "message": "I'd like to get tickets for a theme park visit."
+      },
+      {
+        "role": "Assistant",
+        "message": "Sure. Which theme park are you visiting?",
+        "service": [
+          "GetThemePark()"
+        ]
+      },
+      {
+        "role": "User",
+        "message": "Disneyland."
+      },
+      {
+        "role": "Assistant",
+        "message": "When are you planning to go?"
+      },
+      {
+        "role": "User",
+        "message": "March 10th."
+      }
+    ],
+    "api_call": [
+      "GetThemePark(park=\"Disneyland\", date=\"2019-03-10\")"
+    ],
+    "target": [
+      {
+        "domain": "GetThemePark",
+        "slot": "ticket_type",
+        "value": [
+          "General admission"
+        ]
+      }
+    ]
+  },
+  {
+    "query_id": "GetThemePark_number_of_tickets_1",
+    "query": [
+      {
+        "role": "User",
+        "message": "I need to book a theme park ticket."
+      },
+      {
+        "role": "Assistant",
+        "message": "Sure. Which park?",
+        "service": [
+          "GetThemePark()"
+        ]
+      },
+      {
+        "role": "User",
+        "message": "Universal Studios."
+      },
+      {
+        "role": "Assistant",
+        "message": "When would you like to go?"
+      },
+      {
+        "role": "User",
+        "message": "March 11th."
+      }
+    ],
+    "api_call": [
+      "GetThemePark(park=\"Universal Studios\", date=\"2019-03-11\")"
+    ],
+    "target": [
+      {
+        "domain": "GetThemePark",
+        "slot": "number_of_tickets",
+        "value": [
+          "1"
+        ]
+      }
+    ]
+  }
+]

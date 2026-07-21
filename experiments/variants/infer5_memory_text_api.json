@@ -1,0 +1,25 @@
+{
+  "affected_outputs": [
+    "experiments5-native predictions",
+    "downstream evaluation outputs",
+    "v1 singleturn predictions",
+    "v1 multiturn predictions",
+    "v2 singleturn predictions",
+    "v2 multiturn predictions"
+  ],
+  "code_paths": [
+    "experiments/experiments5/shared/src/llm_client.py",
+    "methods/our_memory/experiments5/inference_api_multiturn.py",
+    "methods/our_memory/experiments5/inference_api_singleturn.py",
+    "methods/our_memory/experiments5/v2/inference_api_multiturn.py",
+    "methods/our_memory/experiments5/v2/inference_api_singleturn.py"
+  ],
+  "distinction": "Root/v1 are byte-identical and v2 only imports the corresponding text memory builder; inference behavior is the same.",
+  "schema": "experiments7-readable-variant/v1",
+  "semantic_label": "infer5_memory_text_api",
+  "source_origins": [
+    "experiments5"
+  ],
+  "stage": "inference",
+  "variant_id": "infer5_memory_text_api"
+}

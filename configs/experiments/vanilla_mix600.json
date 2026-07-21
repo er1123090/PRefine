@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "experiment_id": "vanilla_mix600",
+  "dataset": {
+    "dataset_id": "mix600-v1",
+    "format_version": 1,
+    "prepared_root": "artifacts/prepared/mix600-v1",
+    "manifest": "artifacts/prepared/mix600-v1/manifest.json"
+  },
+  "method": {
+    "method_id": "vanilla_llm"
+  },
+  "provider": {
+    "type": "openai_compatible",
+    "model": "gpt-5-mini",
+    "api_key_env": "OPENAI_API_KEY",
+    "base_url": null,
+    "reasoning_effort": null,
+    "temperature": null,
+    "max_tokens": null,
+    "timeout": null
+  },
+  "conditions": [
+    {
+      "turn": "singleturn",
+      "difficulty": "easy"
+    },
+    {
+      "turn": "singleturn",
+      "difficulty": "medium"
+    },
+    {
+      "turn": "singleturn",
+      "difficulty": "hard"
+    },
+    {
+      "turn": "multiturn",
+      "difficulty": "easy"
+    },
+    {
+      "turn": "multiturn",
+      "difficulty": "medium"
+    },
+    {
+      "turn": "multiturn",
+      "difficulty": "hard"
+    }
+  ],
+  "evaluator": {
+    "variant": "exp6_slot_value_or_v1"
+  },
+  "output": {
+    "root": "artifacts/runs",
+    "run_name_prefix": "vanilla-mix600"
+  },
+  "runtime": {
+    "python_bin": "python"
+  }
+}

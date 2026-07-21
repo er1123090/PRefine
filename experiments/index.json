@@ -1,0 +1,1628 @@
+{
+  "entries": [
+    {
+      "affected_outputs": [
+        "micro-summed TP/FP/FN",
+        "aggregate metrics",
+        "multiturn final metrics"
+      ],
+      "canonical_path": "experiments/experiments4/evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+      "code_paths": [
+        "experiments/experiments4/evaluation/evaluation_multiturn-f1-parse-aggregate.py"
+      ],
+      "distinction": "turn-specific experiments4 multiturn behavior; experiments6 is a release/path alias",
+      "experiment_id": "aggregation4_multiturn_legacy",
+      "semantic_label": "aggregation4_multiturn_legacy",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "aggregation"
+    },
+    {
+      "affected_outputs": [
+        "micro-summed TP/FP/FN",
+        "aggregate metrics",
+        "singleturn final metrics"
+      ],
+      "canonical_path": "experiments/experiments4/evaluation/evaluation_singleturn-f1-aggregate.py",
+      "code_paths": [
+        "experiments/experiments4/evaluation/evaluation_singleturn-f1-aggregate.py"
+      ],
+      "distinction": "turn-specific experiments4 singleturn behavior; experiments6 is a release/path alias",
+      "experiment_id": "aggregation4_single_legacy",
+      "semantic_label": "aggregation4_single_legacy",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "aggregation"
+    },
+    {
+      "affected_outputs": [
+        "per-file and aggregate canonical metrics"
+      ],
+      "canonical_path": "experiments/experiments5/evaluation/eval_multiturn.py",
+      "code_paths": [
+        "experiments/experiments5/evaluation/eval_multiturn.py",
+        "experiments/experiments5/evaluation/eval_singleturn.py"
+      ],
+      "distinction": "experiments5 canonical sorted-file aggregation",
+      "experiment_id": "aggregation5_canonical",
+      "semantic_label": "aggregation5_canonical",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "aggregation"
+    },
+    {
+      "affected_outputs": [
+        "Exp4 provider-specific prompt/parser/runtime."
+      ],
+      "canonical_path": "methods/vanilla_llm/experiments4/prompt.py",
+      "code_paths": [
+        "methods/vanilla_llm/experiments4/prompt.py",
+        "methods/vanilla_llm/experiments4/vanillaLLM_inference-api-multi.py",
+        "methods/vanilla_llm/experiments4/vanillaLLM_inference-api-single.py"
+      ],
+      "distinction": "Exp4 provider-specific prompt/parser/runtime.",
+      "experiment_id": "base4_api",
+      "paper_role": "Base Prompting",
+      "semantic_label": "base4_api",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "Local vLLM runtime is distinct from exp4 API runtime."
+      ],
+      "canonical_path": "methods/vanilla_llm/experiments4/prompt.py",
+      "code_paths": [
+        "methods/vanilla_llm/experiments4/prompt.py",
+        "methods/vanilla_llm/experiments4/vanillaLLM_inference-vllm-multi.py",
+        "methods/vanilla_llm/experiments4/vanillaLLM_inference-vllm-single.py"
+      ],
+      "distinction": "Local vLLM runtime is distinct from exp4 API runtime.",
+      "experiment_id": "base4_vllm",
+      "paper_role": "Base Prompting",
+      "semantic_label": "base4_vllm",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "Uses shared exp5 prompt/data_utils/llm_client and must remain separate from base4_api."
+      ],
+      "canonical_path": "methods/vanilla_llm/experiments5/inference_api_multiturn.py",
+      "code_paths": [
+        "methods/vanilla_llm/experiments5/inference_api_multiturn.py",
+        "methods/vanilla_llm/experiments5/inference_api_singleturn.py"
+      ],
+      "distinction": "Uses shared exp5 prompt/data_utils/llm_client and must remain separate from base4_api.",
+      "experiment_id": "base5_api",
+      "paper_role": "Base Prompting",
+      "semantic_label": "base5_api",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "Uses exp5 shared prompt/data utilities with local vLLM."
+      ],
+      "canonical_path": "methods/vanilla_llm/experiments5/inference_vllm_multiturn.py",
+      "code_paths": [
+        "methods/vanilla_llm/experiments5/inference_vllm_multiturn.py",
+        "methods/vanilla_llm/experiments5/inference_vllm_singleturn.py"
+      ],
+      "distinction": "Uses exp5 shared prompt/data utilities with local vLLM.",
+      "experiment_id": "base5_vllm",
+      "paper_role": "Base Prompting",
+      "semantic_label": "base5_vllm",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "selected examples",
+        "session histories",
+        "all downstream inference and evaluation outputs"
+      ],
+      "canonical_path": "data/sources/experiments4/data/1229_dev_6.json",
+      "code_paths": [
+        "data/sources/experiments4/data/1229_dev_6.json",
+        "data/sources/experiments5/data/1229_dev_6.json",
+        "data/sources/experiments6/data/1229_dev_6.json"
+      ],
+      "distinction": "Byte-identical dataset SHA256 911f37c195c52722ecf85a23bfa55be22c4c843112f49c633267f9d09b5d64ae.",
+      "experiment_id": "dataset_dev6",
+      "semantic_label": "dataset_dev6",
+      "source_origins": [
+        "experiments4",
+        "experiments5",
+        "experiments6"
+      ],
+      "stage": "dataset"
+    },
+    {
+      "affected_outputs": [
+        "precision/recall/F1 denominators",
+        "missing-value treatment",
+        "multiturn final metrics"
+      ],
+      "canonical_path": "experiments/experiments4/evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+      "code_paths": [
+        "experiments/experiments4/evaluation/evaluation_multiturn-f1-parse-aggregate.py"
+      ],
+      "distinction": "turn-specific experiments4 multiturn behavior; experiments6 is a release/path alias",
+      "experiment_id": "denominator4_multiturn_legacy",
+      "semantic_label": "denominator4_multiturn_legacy",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "denominator"
+    },
+    {
+      "affected_outputs": [
+        "precision/recall/F1 denominators",
+        "missing-value treatment",
+        "singleturn final metrics"
+      ],
+      "canonical_path": "experiments/experiments4/evaluation/evaluation_singleturn-f1-aggregate.py",
+      "code_paths": [
+        "experiments/experiments4/evaluation/evaluation_singleturn-f1-aggregate.py"
+      ],
+      "distinction": "turn-specific experiments4 singleturn behavior; experiments6 is a release/path alias",
+      "experiment_id": "denominator4_single_legacy",
+      "semantic_label": "denominator4_single_legacy",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "denominator"
+    },
+    {
+      "affected_outputs": [
+        "zero-denominator values",
+        "preference-EM example count"
+      ],
+      "canonical_path": "experiments/experiments5/evaluation/metrics.py",
+      "code_paths": [
+        "experiments/experiments5/evaluation/metrics.py"
+      ],
+      "distinction": "experiments5 canonical denominator and missing-value semantics",
+      "experiment_id": "denominator5_canonical",
+      "semantic_label": "denominator5_canonical",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "denominator"
+    },
+    {
+      "affected_outputs": [
+        "E-Mem singleturn predictions",
+        "E-Mem multiturn predictions"
+      ],
+      "canonical_path": "methods/emem/experiments4/step2_evaluate_multiturn.py",
+      "code_paths": [
+        "methods/emem/experiments4/step2_evaluate_multiturn.py",
+        "methods/emem/experiments4/step2_evaluate_singleturn.py"
+      ],
+      "distinction": "experiments4 E-Mem inference",
+      "experiment_id": "emem4_infer",
+      "semantic_label": "emem4_infer",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "E-Mem index",
+        "retrieved memories"
+      ],
+      "canonical_path": "methods/emem/experiments4/common.py",
+      "code_paths": [
+        "methods/emem/experiments4/common.py",
+        "methods/emem/experiments4/step1_build_memory.py"
+      ],
+      "distinction": "experiments4 E-Mem build pipeline",
+      "experiment_id": "emem4_preprocess",
+      "semantic_label": "emem4_preprocess",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "preprocessing"
+    },
+    {
+      "affected_outputs": [
+        "E-Mem retrieval and response prompts"
+      ],
+      "canonical_path": "methods/emem/experiments4/prompt_inference.py",
+      "code_paths": [
+        "methods/emem/experiments4/prompt_inference.py"
+      ],
+      "distinction": "experiments4 E-Mem-local prompt",
+      "experiment_id": "emem4_prompt",
+      "semantic_label": "emem4_prompt",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "prompt"
+    },
+    {
+      "affected_outputs": [
+        "E-Mem singleturn predictions",
+        "E-Mem multiturn predictions"
+      ],
+      "canonical_path": "methods/emem/experiments5/step2_evaluate_multiturn.py",
+      "code_paths": [
+        "methods/emem/experiments5/step2_evaluate_multiturn.py",
+        "methods/emem/experiments5/step2_evaluate_singleturn.py"
+      ],
+      "distinction": "experiments5 E-Mem inference",
+      "experiment_id": "emem5_infer",
+      "semantic_label": "emem5_infer",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "E-Mem index",
+        "retrieved memories"
+      ],
+      "canonical_path": "methods/emem/experiments5/common.py",
+      "code_paths": [
+        "methods/emem/experiments5/common.py",
+        "methods/emem/experiments5/step1_build_memory.py"
+      ],
+      "distinction": "experiments5 E-Mem build pipeline",
+      "experiment_id": "emem5_preprocess",
+      "semantic_label": "emem5_preprocess",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "preprocessing"
+    },
+    {
+      "affected_outputs": [
+        "E-Mem retrieval and response prompts"
+      ],
+      "canonical_path": "experiments/experiments5/shared/src/prompts.py",
+      "code_paths": [
+        "experiments/experiments5/shared/src/prompts.py"
+      ],
+      "distinction": "experiments5 shared prompt bundle used by E-Mem",
+      "experiment_id": "emem5_prompt",
+      "semantic_label": "emem5_prompt",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "prompt"
+    },
+    {
+      "affected_outputs": [
+        "missing/invalid model outputs",
+        "retry outcomes",
+        "multiturn final metrics"
+      ],
+      "canonical_path": "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_singleturn_api.py",
+      "code_paths": [
+        "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_singleturn_api.py"
+      ],
+      "distinction": "turn-specific experiments4 multiturn behavior; experiments6 is a release/path alias",
+      "experiment_id": "error4_multiturn_legacy",
+      "semantic_label": "error4_multiturn_legacy",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "error_policy"
+    },
+    {
+      "affected_outputs": [
+        "missing/invalid model outputs",
+        "retry outcomes",
+        "singleturn final metrics"
+      ],
+      "canonical_path": "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_singleturn_api.py",
+      "code_paths": [
+        "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_singleturn_api.py"
+      ],
+      "distinction": "turn-specific experiments4 singleturn behavior; experiments6 is a release/path alias",
+      "experiment_id": "error4_single_legacy",
+      "semantic_label": "error4_single_legacy",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "error_policy"
+    },
+    {
+      "affected_outputs": [
+        "provider errors",
+        "parse failures",
+        "missing preference config behavior"
+      ],
+      "canonical_path": "experiments/experiments5/evaluation/metrics.py",
+      "code_paths": [
+        "experiments/experiments5/evaluation/metrics.py",
+        "experiments/experiments5/shared/src/llm_client.py"
+      ],
+      "distinction": "experiments5 shared runtime/evaluator error policy",
+      "experiment_id": "error5_native",
+      "semantic_label": "error5_native",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "error_policy"
+    },
+    {
+      "affected_outputs": [
+        "legacy evaluation outputs",
+        "paper-facing aggregate metrics",
+        "multiturn final metrics",
+        "legacy experiments5 multiturn TP/FP/FN/F1"
+      ],
+      "canonical_path": "experiments/experiments4/evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+      "code_paths": [
+        "experiments/experiments4/evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+        "experiments/experiments5/evaluation/evaluation_multiturn-f1-parse-aggregate.py"
+      ],
+      "distinction": "Only pref_list default root differs from exp4 multiturn evaluator.",
+      "experiment_id": "eval4_multiturn_legacy",
+      "semantic_label": "eval4_multiturn_legacy",
+      "source_origins": [
+        "experiments4",
+        "experiments5"
+      ],
+      "stage": "evaluation"
+    },
+    {
+      "affected_outputs": [
+        "legacy evaluation outputs",
+        "paper-facing aggregate metrics",
+        "singleturn final metrics"
+      ],
+      "canonical_path": "experiments/experiments4/evaluation/evaluation_singleturn-f1-aggregate.py",
+      "code_paths": [
+        "experiments/experiments4/evaluation/evaluation_singleturn-f1-aggregate.py"
+      ],
+      "distinction": "turn-specific experiments4 singleturn behavior; experiments6 is a release/path alias",
+      "experiment_id": "eval4_single_legacy",
+      "semantic_label": "eval4_single_legacy",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "evaluation"
+    },
+    {
+      "affected_outputs": [
+        "canonical evaluation outputs",
+        "paper-facing aggregate metrics"
+      ],
+      "canonical_path": "experiments/experiments5/evaluation/eval_multiturn.py",
+      "code_paths": [
+        "experiments/experiments5/evaluation/eval_multiturn.py",
+        "experiments/experiments5/evaluation/eval_singleturn.py",
+        "experiments/experiments5/evaluation/metrics.py"
+      ],
+      "distinction": "required compatibility selector expanding to explicit evaluation substages",
+      "experiment_id": "eval5_canonical",
+      "semantic_label": "eval5_canonical",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "evaluation"
+    },
+    {
+      "affected_outputs": [
+        "Figure artifact provenance, not inference runtime."
+      ],
+      "canonical_path": "data/sources/experiments4/data/calculate_avg_tokens.py",
+      "code_paths": [
+        "data/sources/experiments4/data/calculate_avg_tokens.py",
+        "methods/mem0/experiments4/calculate_avg_tokens.py",
+        "methods/rag/experiments4/calculate_avg_tokens_20260120.py"
+      ],
+      "distinction": "Figure artifact provenance, not inference runtime.",
+      "experiment_id": "figure5_footprint_eval4",
+      "paper_role": "Figure 5(a) average memory footprint",
+      "semantic_label": "figure5_footprint_eval4",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "reporting"
+    },
+    {
+      "affected_outputs": [
+        "Figure artifact provenance, not inference runtime."
+      ],
+      "canonical_path": "methods/langmem/experiments4/memory_snapshots/semantic-custom/0325_main_token_growth/semantic_custom_main_token_growth_by_model.summary.csv",
+      "code_paths": [
+        "methods/langmem/experiments4/memory_snapshots/semantic-custom/0325_main_token_growth/semantic_custom_main_token_growth_by_model.summary.csv",
+        "methods/langmem/experiments4/plot_snapshot_memory_token_growth_report.py",
+        "methods/mem0/experiments4/0323_memory-tokens-265/0325_main_token_growth/mem0_token_growth.summary.csv",
+        "methods/mem0/experiments4/plot_session_memory_token_growth.py",
+        "methods/our_memory/experiments4/inference/1231_MEMORY3/0325_main_token_growth/1231_memory3_main_token_growth_by_model.summary.csv",
+        "methods/our_memory/experiments4/plot_implicit_memory_token_growth.py"
+      ],
+      "distinction": "Figure artifact provenance, not inference runtime.",
+      "experiment_id": "figure5_growth_eval4",
+      "paper_role": "Figure 5(b) memory growth over sessions",
+      "semantic_label": "figure5_growth_eval4",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "reporting"
+    },
+    {
+      "affected_outputs": [
+        "included session-memory examples",
+        "filtered summaries"
+      ],
+      "canonical_path": "methods/our_memory/experiments4/session_memory_eval_0312/generate_filtered_analysis_from_existing.py",
+      "code_paths": [
+        "methods/our_memory/experiments4/session_memory_eval_0312/generate_filtered_analysis_from_existing.py",
+        "methods/our_memory/experiments6/session_memory_eval/generate_filtered_analysis_from_existing.py"
+      ],
+      "distinction": "Exact byte identity.",
+      "experiment_id": "filter4_session",
+      "semantic_label": "filter4_session",
+      "source_origins": [
+        "experiments4",
+        "experiments6"
+      ],
+      "stage": "filtering"
+    },
+    {
+      "affected_outputs": [
+        "example_id_sub selection",
+        "max_queries subsampling"
+      ],
+      "canonical_path": "experiments/experiments5/shared/src/data_utils.py",
+      "code_paths": [
+        "experiments/experiments5/shared/src/data_utils.py"
+      ],
+      "distinction": "experiments5 deterministic filtering/subsampling",
+      "experiment_id": "filter5_data_utils",
+      "semantic_label": "filter5_data_utils",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "filtering"
+    },
+    {
+      "affected_outputs": [
+        "singleturn predictions",
+        "multiturn predictions",
+        "release singleturn predictions",
+        "release multiturn predictions"
+      ],
+      "canonical_path": "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_multiturn_api.py",
+      "code_paths": [
+        "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_multiturn_api.py",
+        "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_singleturn_api.py",
+        "methods/our_memory/experiments6/Preference_Memory_step2_ACTION_multiturn_api.py",
+        "methods/our_memory/experiments6/Preference_Memory_step2_ACTION_singleturn_api.py"
+      ],
+      "distinction": "Only hard-coded root paths differ.",
+      "experiment_id": "infer4_api",
+      "semantic_label": "infer4_api",
+      "source_origins": [
+        "experiments4",
+        "experiments6"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "singleturn predictions",
+        "multiturn predictions",
+        "release singleturn predictions",
+        "release multiturn predictions"
+      ],
+      "canonical_path": "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_multiturn_VLLM.py",
+      "code_paths": [
+        "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_multiturn_VLLM.py",
+        "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_singleturn_VLLM.py",
+        "methods/our_memory/experiments6/Preference_Memory_step2_ACTION_multiturn_VLLM.py",
+        "methods/our_memory/experiments6/Preference_Memory_step2_ACTION_singleturn_VLLM.py"
+      ],
+      "distinction": "Only hard-coded root paths differ.",
+      "experiment_id": "infer4_vllm",
+      "semantic_label": "infer4_vllm",
+      "source_origins": [
+        "experiments4",
+        "experiments6"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "experiments5-native predictions",
+        "downstream evaluation outputs",
+        "v1 singleturn predictions",
+        "v1 multiturn predictions",
+        "v2 singleturn predictions",
+        "v2 multiturn predictions"
+      ],
+      "canonical_path": "experiments/experiments5/shared/src/llm_client.py",
+      "code_paths": [
+        "experiments/experiments5/shared/src/llm_client.py",
+        "methods/our_memory/experiments5/inference_api_multiturn.py",
+        "methods/our_memory/experiments5/inference_api_singleturn.py",
+        "methods/our_memory/experiments5/v2/inference_api_multiturn.py",
+        "methods/our_memory/experiments5/v2/inference_api_singleturn.py"
+      ],
+      "distinction": "Root/v1 are byte-identical and v2 only imports the corresponding text memory builder; inference behavior is the same.",
+      "experiment_id": "infer5_memory_text_api",
+      "semantic_label": "infer5_memory_text_api",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "v1 singleturn predictions",
+        "v1 multiturn predictions",
+        "v2 singleturn predictions",
+        "v2 multiturn predictions"
+      ],
+      "canonical_path": "methods/our_memory/experiments5/inference_vllm_multiturn.py",
+      "code_paths": [
+        "methods/our_memory/experiments5/inference_vllm_multiturn.py",
+        "methods/our_memory/experiments5/inference_vllm_singleturn.py",
+        "methods/our_memory/experiments5/v2/inference_vllm_multiturn.py",
+        "methods/our_memory/experiments5/v2/inference_vllm_singleturn.py"
+      ],
+      "distinction": "Only the imported text memory builder path differs.",
+      "experiment_id": "infer5_memory_text_vllm",
+      "semantic_label": "infer5_memory_text_vllm",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "v3 singleturn predictions",
+        "v3 multiturn predictions"
+      ],
+      "canonical_path": "methods/our_memory/experiments5/v3/inference_api_multiturn.py",
+      "code_paths": [
+        "methods/our_memory/experiments5/v3/inference_api_multiturn.py",
+        "methods/our_memory/experiments5/v3/inference_api_singleturn.py"
+      ],
+      "distinction": "experiments5 v3 hosted-API implementation with expanded JSON/tool logic",
+      "experiment_id": "infer5_v3_api",
+      "semantic_label": "infer5_v3_api",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "v3 singleturn predictions",
+        "v3 multiturn predictions"
+      ],
+      "canonical_path": "methods/our_memory/experiments5/v3/inference_vllm_multiturn.py",
+      "code_paths": [
+        "methods/our_memory/experiments5/v3/inference_vllm_multiturn.py",
+        "methods/our_memory/experiments5/v3/inference_vllm_singleturn.py"
+      ],
+      "distinction": "experiments5 v3 VLLM implementation",
+      "experiment_id": "infer5_v3_vllm",
+      "semantic_label": "infer5_v3_vllm",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "Exp4/5 build logic differs only in roots/descriptions and is one semantic variant."
+      ],
+      "canonical_path": "methods/langmem/experiments4/common.py",
+      "code_paths": [
+        "methods/langmem/experiments4/common.py",
+        "methods/langmem/experiments4/run_langmem_build.sh",
+        "methods/langmem/experiments4/run_langmem_build_vllm.sh",
+        "methods/langmem/experiments4/step1_build_memory.py",
+        "methods/langmem/experiments5/common.py",
+        "methods/langmem/experiments5/run_langmem_build.sh",
+        "methods/langmem/experiments5/run_langmem_build_vllm.sh",
+        "methods/langmem/experiments5/step1_build_memory.py"
+      ],
+      "distinction": "Exp4/5 build logic differs only in roots/descriptions and is one semantic variant.",
+      "experiment_id": "langmem_build45",
+      "paper_role": "LangMem memory construction",
+      "semantic_label": "langmem_build45",
+      "source_origins": [
+        "experiments4",
+        "experiments5"
+      ],
+      "stage": "preprocessing"
+    },
+    {
+      "affected_outputs": [
+        "Local prompt includes dialogue/history wording; exp6 is a path alias."
+      ],
+      "canonical_path": "methods/langmem/experiments4/langmem_inference_multi.py",
+      "code_paths": [
+        "methods/langmem/experiments4/langmem_inference_multi.py",
+        "methods/langmem/experiments4/langmem_inference_single.py",
+        "methods/langmem/experiments4/prompt_inference.py",
+        "methods/langmem/experiments4/run_langmem_multi.sh",
+        "methods/langmem/experiments4/run_langmem_single.sh"
+      ],
+      "distinction": "Local prompt includes dialogue/history wording; exp6 is a path alias.",
+      "experiment_id": "langmem_infer46_context_prompt",
+      "paper_role": "LangMem inference",
+      "semantic_label": "langmem_infer46_context_prompt",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "Uses shared exp5 memory prompt that removes dialogue_history and reframes accumulated API history."
+      ],
+      "canonical_path": "methods/langmem/experiments5/langmem_inference_multi.py",
+      "code_paths": [
+        "methods/langmem/experiments5/langmem_inference_multi.py",
+        "methods/langmem/experiments5/langmem_inference_single.py",
+        "methods/langmem/experiments5/run_langmem_multi.sh",
+        "methods/langmem/experiments5/run_langmem_single.sh"
+      ],
+      "distinction": "Uses shared exp5 memory prompt that removes dialogue_history and reframes accumulated API history.",
+      "experiment_id": "langmem_infer5_shared_prompt",
+      "paper_role": "LangMem inference",
+      "semantic_label": "langmem_infer5_shared_prompt",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "latent preference memories",
+        "downstream tool calls"
+      ],
+      "canonical_path": "methods/our_memory/experiments4/Preference_Memory_step1_LATENTPREF.py",
+      "code_paths": [
+        "methods/our_memory/experiments4/Preference_Memory_step1_LATENTPREF.py",
+        "methods/our_memory/experiments6/Preference_Memory_step1_LATENTPREF.py"
+      ],
+      "distinction": "Release path alias.",
+      "experiment_id": "latentpref4_api",
+      "semantic_label": "latentpref4_api",
+      "source_origins": [
+        "experiments4",
+        "experiments6"
+      ],
+      "stage": "preprocessing"
+    },
+    {
+      "affected_outputs": [
+        "latent preference memories",
+        "downstream tool calls"
+      ],
+      "canonical_path": "methods/our_memory/experiments4/Preference_Memory_step1_LATENTPREF_VLLM.py",
+      "code_paths": [
+        "methods/our_memory/experiments4/Preference_Memory_step1_LATENTPREF_VLLM.py",
+        "methods/our_memory/experiments6/Preference_Memory_step1_LATENTPREF_VLLM.py"
+      ],
+      "distinction": "Release path alias.",
+      "experiment_id": "latentpref4_vllm",
+      "semantic_label": "latentpref4_vllm",
+      "source_origins": [
+        "experiments4",
+        "experiments6"
+      ],
+      "stage": "preprocessing"
+    },
+    {
+      "affected_outputs": [
+        "Exp4 prompt/provider-specific inference."
+      ],
+      "canonical_path": "methods/mem0/experiments4/prompt_inference.py",
+      "code_paths": [
+        "methods/mem0/experiments4/prompt_inference.py",
+        "methods/mem0/experiments4/step2_evaluate_multiturn.py",
+        "methods/mem0/experiments4/step2_evaluate_singleturn.py"
+      ],
+      "distinction": "Exp4 prompt/provider-specific inference.",
+      "experiment_id": "mem0_infer4_api",
+      "paper_role": "Mem0 inference",
+      "semantic_label": "mem0_infer4_api",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "Exp5 shared API runtime/output context."
+      ],
+      "canonical_path": "methods/mem0/experiments5/inference_api_multiturn.py",
+      "code_paths": [
+        "methods/mem0/experiments5/inference_api_multiturn.py",
+        "methods/mem0/experiments5/inference_api_singleturn.py"
+      ],
+      "distinction": "Exp5 shared API runtime/output context.",
+      "experiment_id": "mem0_infer5_api",
+      "paper_role": "Mem0 inference",
+      "semantic_label": "mem0_infer5_api",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "Exp5 local vLLM runtime."
+      ],
+      "canonical_path": "methods/mem0/experiments5/inference_vllm_multiturn.py",
+      "code_paths": [
+        "methods/mem0/experiments5/inference_vllm_multiturn.py",
+        "methods/mem0/experiments5/inference_vllm_singleturn.py"
+      ],
+      "distinction": "Exp5 local vLLM runtime.",
+      "experiment_id": "mem0_infer5_vllm",
+      "paper_role": "Mem0 inference",
+      "semantic_label": "mem0_infer5_vllm",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "Normal known-user ingestion algorithm is equivalent; preserve both origins for default/unknown-ID provenance."
+      ],
+      "canonical_path": "methods/mem0/experiments4/step1_add.py",
+      "code_paths": [
+        "methods/mem0/experiments4/step1_add.py",
+        "methods/mem0/experiments5/step1_add.py"
+      ],
+      "distinction": "Normal known-user ingestion algorithm is equivalent; preserve both origins for default/unknown-ID provenance.",
+      "experiment_id": "mem0_ingest45",
+      "paper_role": "Mem0 ingestion",
+      "semantic_label": "mem0_ingest45",
+      "source_origins": [
+        "experiments4",
+        "experiments5"
+      ],
+      "stage": "preprocessing"
+    },
+    {
+      "affected_outputs": [
+        "typed memories",
+        "downstream v1 calls"
+      ],
+      "canonical_path": "methods/our_memory/experiments5/step1_extract.py",
+      "code_paths": [
+        "methods/our_memory/experiments5/step1_extract.py"
+      ],
+      "distinction": "Current registry points to methods/our_memory/step1_extract.py, which is the newer true-blind/generation-only builder, not explicit v1.",
+      "experiment_id": "memory5_main_true_blind",
+      "semantic_label": "memory5_main_true_blind",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "preprocessing"
+    },
+    {
+      "affected_outputs": [
+        "Lacks true_blind and generation_only_accum behavior present in the current root builder."
+      ],
+      "canonical_path": "methods/our_memory/experiments5/v1/step1_extract.py",
+      "code_paths": [
+        "methods/our_memory/experiments5/v1/step1_extract.py"
+      ],
+      "distinction": "Lacks true_blind and generation_only_accum behavior present in the current root builder.",
+      "experiment_id": "memory5_v1_legacy",
+      "paper_role": "legacy PREFINE implementation variant",
+      "semantic_label": "memory5_v1_legacy",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "preprocessing"
+    },
+    {
+      "affected_outputs": [
+        "slot TP/FP/FN",
+        "precision",
+        "recall",
+        "F1",
+        "preference EM",
+        "multiturn final metrics"
+      ],
+      "canonical_path": "experiments/experiments4/evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+      "code_paths": [
+        "experiments/experiments4/evaluation/evaluation_multiturn-f1-parse-aggregate.py"
+      ],
+      "distinction": "turn-specific experiments4 multiturn behavior; experiments6 is a release/path alias",
+      "experiment_id": "metric4_multiturn_legacy",
+      "semantic_label": "metric4_multiturn_legacy",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "metric"
+    },
+    {
+      "affected_outputs": [
+        "slot TP/FP/FN",
+        "precision",
+        "recall",
+        "F1",
+        "preference EM",
+        "singleturn final metrics"
+      ],
+      "canonical_path": "experiments/experiments4/evaluation/evaluation_singleturn-f1-aggregate.py",
+      "code_paths": [
+        "experiments/experiments4/evaluation/evaluation_singleturn-f1-aggregate.py"
+      ],
+      "distinction": "turn-specific experiments4 singleturn behavior; experiments6 is a release/path alias",
+      "experiment_id": "metric4_single_legacy",
+      "semantic_label": "metric4_single_legacy",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "metric"
+    },
+    {
+      "affected_outputs": [
+        "slot TP/FP/FN",
+        "precision",
+        "recall",
+        "F1",
+        "preference EM"
+      ],
+      "canonical_path": "experiments/experiments5/evaluation/metrics.py",
+      "code_paths": [
+        "experiments/experiments5/evaluation/metrics.py"
+      ],
+      "distinction": "experiments5 canonical metric implementation",
+      "experiment_id": "metric5_canonical",
+      "semantic_label": "metric5_canonical",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "metric"
+    },
+    {
+      "affected_outputs": [
+        "normalized slot values",
+        "legacy TP/FP/FN",
+        "multiturn final metrics"
+      ],
+      "canonical_path": "experiments/experiments4/evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+      "code_paths": [
+        "experiments/experiments4/evaluation/evaluation_multiturn-f1-parse-aggregate.py"
+      ],
+      "distinction": "turn-specific experiments4 multiturn behavior; experiments6 is a release/path alias",
+      "experiment_id": "normalization4_multiturn_dateparser",
+      "semantic_label": "normalization4_multiturn_dateparser",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "normalization"
+    },
+    {
+      "affected_outputs": [
+        "normalized slot values",
+        "legacy TP/FP/FN",
+        "singleturn final metrics"
+      ],
+      "canonical_path": "experiments/experiments4/evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+      "code_paths": [
+        "experiments/experiments4/evaluation/evaluation_multiturn-f1-parse-aggregate.py"
+      ],
+      "distinction": "turn-specific experiments4 singleturn behavior; experiments6 is a release/path alias",
+      "experiment_id": "normalization4_single_raw",
+      "semantic_label": "normalization4_single_raw",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "normalization"
+    },
+    {
+      "affected_outputs": [
+        "date/time and slot normalization",
+        "canonical TP/FP/FN"
+      ],
+      "canonical_path": "experiments/experiments5/evaluation/metrics.py",
+      "code_paths": [
+        "experiments/experiments5/evaluation/metrics.py"
+      ],
+      "distinction": "experiments5 canonical normalization with optional dateparser capability",
+      "experiment_id": "normalization5_canonical",
+      "semantic_label": "normalization5_canonical",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "normalization"
+    },
+    {
+      "affected_outputs": [
+        "parsed tool calls",
+        "parse failures"
+      ],
+      "canonical_path": "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_singleturn_api.py",
+      "code_paths": [
+        "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_singleturn_api.py",
+        "methods/our_memory/experiments6/Preference_Memory_step2_ACTION_singleturn_api.py"
+      ],
+      "distinction": "Release path alias.",
+      "experiment_id": "parser4_inline",
+      "semantic_label": "parser4_inline",
+      "source_origins": [
+        "experiments4",
+        "experiments6"
+      ],
+      "stage": "parser"
+    },
+    {
+      "affected_outputs": [
+        "evaluation tool-call extraction",
+        "TP/FP/FN inputs"
+      ],
+      "canonical_path": "experiments/experiments5/evaluation/metrics.py",
+      "code_paths": [
+        "experiments/experiments5/evaluation/metrics.py"
+      ],
+      "distinction": "experiments5 canonical JSON/regex/braced-call parser",
+      "experiment_id": "parser5_canonical",
+      "semantic_label": "parser5_canonical",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "parser"
+    },
+    {
+      "affected_outputs": [
+        "parsed structured text/tool calls",
+        "parse failures"
+      ],
+      "canonical_path": "experiments/experiments5/shared/src/llm_client.py",
+      "code_paths": [
+        "experiments/experiments5/shared/src/llm_client.py"
+      ],
+      "distinction": "experiments5 provider-aware text-call parser",
+      "experiment_id": "parser5_native",
+      "semantic_label": "parser5_native",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "parser"
+    },
+    {
+      "affected_outputs": [
+        "preference labels",
+        "preference exact-match",
+        "grouped reports"
+      ],
+      "canonical_path": "data/sources/experiments5/config/pref_group.json",
+      "code_paths": [
+        "data/sources/experiments5/config/pref_group.json",
+        "data/sources/experiments5/config/pref_list.json",
+        "data/sources/experiments6/configs/pref_group.json",
+        "data/sources/experiments6/configs/pref_list.json",
+        "experiments/experiments4/shared/pref_group.json",
+        "experiments/experiments4/shared/pref_list.json"
+      ],
+      "distinction": "Preference/query config files are byte-identical across roots.",
+      "experiment_id": "preference_config_dev6",
+      "semantic_label": "preference_config_dev6",
+      "source_origins": [
+        "experiments4",
+        "experiments5",
+        "experiments6"
+      ],
+      "stage": "dataset"
+    },
+    {
+      "affected_outputs": [
+        "typed memories",
+        "downstream v2 calls"
+      ],
+      "canonical_path": "methods/our_memory/experiments5/v2/step1_extract.py",
+      "code_paths": [
+        "methods/our_memory/experiments5/v2/step1_extract.py"
+      ],
+      "distinction": "experiments5 v2 extraction",
+      "experiment_id": "preprocess5_v2",
+      "semantic_label": "preprocess5_v2",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "preprocessing"
+    },
+    {
+      "affected_outputs": [
+        "typed memories",
+        "downstream v3 calls"
+      ],
+      "canonical_path": "methods/our_memory/experiments5/v3/step1_extract.py",
+      "code_paths": [
+        "methods/our_memory/experiments5/v3/step1_extract.py"
+      ],
+      "distinction": "experiments5 v3 extraction",
+      "experiment_id": "preprocess5_v3",
+      "semantic_label": "preprocess5_v3",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "preprocessing"
+    },
+    {
+      "affected_outputs": [
+        "tool-call prompt text",
+        "model predictions"
+      ],
+      "canonical_path": "methods/our_memory/experiments4/prompt_inference.py",
+      "code_paths": [
+        "methods/our_memory/experiments4/prompt_inference.py",
+        "methods/our_memory/experiments6/prompt_inference.py"
+      ],
+      "distinction": "Exact byte identity.",
+      "experiment_id": "prompt4_inference",
+      "semantic_label": "prompt4_inference",
+      "source_origins": [
+        "experiments4",
+        "experiments6"
+      ],
+      "stage": "prompt"
+    },
+    {
+      "affected_outputs": [
+        "two-layer abstract and instantiated constraints",
+        "model predictions"
+      ],
+      "canonical_path": "methods/our_memory/experiments4/prompt_update0.py",
+      "code_paths": [
+        "methods/our_memory/experiments4/prompt_update0.py",
+        "methods/our_memory/experiments6/prompt_update0.py"
+      ],
+      "distinction": "Exact byte identity.",
+      "experiment_id": "prompt4_update0",
+      "semantic_label": "prompt4_update0",
+      "source_origins": [
+        "experiments4",
+        "experiments6"
+      ],
+      "stage": "prompt"
+    },
+    {
+      "affected_outputs": [
+        "implicit preference constraint",
+        "model predictions"
+      ],
+      "canonical_path": "methods/our_memory/experiments4/prompt_update2.py",
+      "code_paths": [
+        "methods/our_memory/experiments4/prompt_update2.py",
+        "methods/our_memory/experiments6/prompt_update2.py"
+      ],
+      "distinction": "Exact byte identity.",
+      "experiment_id": "prompt4_update2",
+      "semantic_label": "prompt4_update2",
+      "source_origins": [
+        "experiments4",
+        "experiments6"
+      ],
+      "stage": "prompt"
+    },
+    {
+      "affected_outputs": [
+        "stable-pattern implicit constraint",
+        "model predictions"
+      ],
+      "canonical_path": "methods/our_memory/experiments4/prompt_update3.py",
+      "code_paths": [
+        "methods/our_memory/experiments4/prompt_update3.py",
+        "methods/our_memory/experiments6/prompt_update3.py"
+      ],
+      "distinction": "Exact byte identity.",
+      "experiment_id": "prompt4_update3",
+      "semantic_label": "prompt4_update3",
+      "source_origins": [
+        "experiments4",
+        "experiments6"
+      ],
+      "stage": "prompt"
+    },
+    {
+      "affected_outputs": [
+        "memory and tool-call prompt text",
+        "model predictions"
+      ],
+      "canonical_path": "experiments/experiments5/shared/src/prompts.py",
+      "code_paths": [
+        "experiments/experiments5/shared/src/prompts.py"
+      ],
+      "distinction": "experiments5 bundled prompt module",
+      "experiment_id": "prompt5_bundle",
+      "semantic_label": "prompt5_bundle",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "prompt"
+    },
+    {
+      "affected_outputs": [
+        "Provider-routed exp4 implementation; exp6 is a release alias."
+      ],
+      "canonical_path": "methods/rag/experiments4/RAG_inference_multi.py",
+      "code_paths": [
+        "methods/rag/experiments4/RAG_inference_multi.py",
+        "methods/rag/experiments4/RAG_inference_single.py",
+        "methods/rag/experiments4/prompt_inference.py"
+      ],
+      "distinction": "Provider-routed exp4 implementation; exp6 is a release alias.",
+      "experiment_id": "rag4_api",
+      "paper_role": "RAG Top-5 inference",
+      "semantic_label": "rag4_api",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "IDs use {user}_sess_{n}; API document wording differs from exp5 and changes embeddings/retrieval."
+      ],
+      "canonical_path": "methods/rag/experiments4/RAG_add.py",
+      "code_paths": [
+        "methods/rag/experiments4/RAG_add.py"
+      ],
+      "distinction": "IDs use {user}_sess_{n}; API document wording differs from exp5 and changes embeddings/retrieval.",
+      "experiment_id": "rag4_index",
+      "paper_role": "RAG Top-5 ingestion",
+      "semantic_label": "rag4_index",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "preprocessing"
+    },
+    {
+      "affected_outputs": [
+        "Exp5 shared API runtime/prompt."
+      ],
+      "canonical_path": "methods/rag/experiments5/inference_api_multiturn.py",
+      "code_paths": [
+        "methods/rag/experiments5/inference_api_multiturn.py",
+        "methods/rag/experiments5/inference_api_singleturn.py"
+      ],
+      "distinction": "Exp5 shared API runtime/prompt.",
+      "experiment_id": "rag5_api",
+      "paper_role": "RAG Top-5 inference",
+      "semantic_label": "rag5_api",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "IDs use {user}_d_{n}/{user}_a_{n}; document wording differs from exp4."
+      ],
+      "canonical_path": "methods/rag/experiments5/add.py",
+      "code_paths": [
+        "methods/rag/experiments5/add.py"
+      ],
+      "distinction": "IDs use {user}_d_{n}/{user}_a_{n}; document wording differs from exp4.",
+      "experiment_id": "rag5_index",
+      "paper_role": "RAG Top-5 ingestion",
+      "semantic_label": "rag5_index",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "preprocessing"
+    },
+    {
+      "affected_outputs": [
+        "Exp5 local vLLM runtime."
+      ],
+      "canonical_path": "methods/rag/experiments5/inference_vllm_multiturn.py",
+      "code_paths": [
+        "methods/rag/experiments5/inference_vllm_multiturn.py",
+        "methods/rag/experiments5/inference_vllm_singleturn.py"
+      ],
+      "distinction": "Exp5 local vLLM runtime.",
+      "experiment_id": "rag5_vllm",
+      "paper_role": "RAG Top-5 inference",
+      "semantic_label": "rag5_vllm",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "Exp5 only defers log handler setup from import time to main; no output algorithm split. Exp4 and exp6 are exact aliases."
+      ],
+      "canonical_path": "methods/remem/experiments4/memory_dev/evaluate/evaluate.py",
+      "code_paths": [
+        "methods/remem/experiments4/memory_dev/evaluate/evaluate.py",
+        "methods/remem/experiments4/memory_dev/remem.prompt",
+        "methods/remem/experiments4/memory_dev/run_all.sh",
+        "methods/remem/experiments4/memory_dev/script.py",
+        "methods/remem/experiments5/script.py"
+      ],
+      "distinction": "Exp5 only defers log handler setup from import time to main; no output algorithm split. Exp4 and exp6 are exact aliases.",
+      "experiment_id": "remem_support",
+      "paper_role": "Not mentioned in the paper; dataset-tool/support code only.",
+      "semantic_label": "remem_support",
+      "source_origins": [
+        "experiments4",
+        "experiments5"
+      ],
+      "stage": "support"
+    },
+    {
+      "affected_outputs": [
+        "legacy CSV metrics",
+        "console summaries",
+        "multiturn final metrics"
+      ],
+      "canonical_path": "experiments/experiments4/evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+      "code_paths": [
+        "experiments/experiments4/evaluation/evaluation_multiturn-f1-parse-aggregate.py"
+      ],
+      "distinction": "turn-specific experiments4 multiturn behavior; experiments6 is a release/path alias",
+      "experiment_id": "report4_multiturn_legacy",
+      "semantic_label": "report4_multiturn_legacy",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "reporting"
+    },
+    {
+      "affected_outputs": [
+        "session-memory singleturn reports",
+        "session-memory multiturn reports",
+        "filtered analyses"
+      ],
+      "canonical_path": "methods/our_memory/experiments4/session_memory_eval_0312/evaluate_session_memory_results_multiturn.py",
+      "code_paths": [
+        "methods/our_memory/experiments4/session_memory_eval_0312/evaluate_session_memory_results_multiturn.py",
+        "methods/our_memory/experiments4/session_memory_eval_0312/evaluate_session_memory_results_singleturn.py",
+        "methods/our_memory/experiments4/session_memory_eval_0312/generate_filtered_analysis_from_existing.py",
+        "methods/our_memory/experiments6/session_memory_eval/evaluate_session_memory_results_multiturn.py",
+        "methods/our_memory/experiments6/session_memory_eval/evaluate_session_memory_results_singleturn.py",
+        "methods/our_memory/experiments6/session_memory_eval/generate_filtered_analysis_from_existing.py"
+      ],
+      "distinction": "Single/filter files are exact; multiturn difference is only release root path.",
+      "experiment_id": "report4_session_memory",
+      "semantic_label": "report4_session_memory",
+      "source_origins": [
+        "experiments4",
+        "experiments6"
+      ],
+      "stage": "reporting"
+    },
+    {
+      "affected_outputs": [
+        "legacy CSV metrics",
+        "console summaries",
+        "singleturn final metrics"
+      ],
+      "canonical_path": "experiments/experiments4/evaluation/evaluation_singleturn-f1-aggregate.py",
+      "code_paths": [
+        "experiments/experiments4/evaluation/evaluation_singleturn-f1-aggregate.py"
+      ],
+      "distinction": "turn-specific experiments4 singleturn behavior; experiments6 is a release/path alias",
+      "experiment_id": "report4_single_legacy",
+      "semantic_label": "report4_single_legacy",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "reporting"
+    },
+    {
+      "affected_outputs": [
+        "canonical summaries",
+        "four-decimal displayed metrics"
+      ],
+      "canonical_path": "experiments/experiments5/evaluation/eval_multiturn.py",
+      "code_paths": [
+        "experiments/experiments5/evaluation/eval_multiturn.py",
+        "experiments/experiments5/evaluation/eval_singleturn.py"
+      ],
+      "distinction": "experiments5 canonical report formatting",
+      "experiment_id": "report5_canonical",
+      "semantic_label": "report5_canonical",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "reporting"
+    },
+    {
+      "affected_outputs": [
+        "provider request payloads",
+        "sampling",
+        "failure behavior",
+        "release defaults"
+      ],
+      "canonical_path": "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_singleturn_api.py",
+      "code_paths": [
+        "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_singleturn_api.py",
+        "methods/our_memory/experiments6/Preference_Memory_step2_ACTION_singleturn_api.py"
+      ],
+      "distinction": "Release path alias.",
+      "experiment_id": "runtime4_api",
+      "semantic_label": "runtime4_api",
+      "source_origins": [
+        "experiments4",
+        "experiments6"
+      ],
+      "stage": "runtime"
+    },
+    {
+      "affected_outputs": [
+        "sampling",
+        "token limits",
+        "reasoning-model requests"
+      ],
+      "canonical_path": "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_singleturn_VLLM.py",
+      "code_paths": [
+        "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_singleturn_VLLM.py",
+        "methods/our_memory/experiments6/Preference_Memory_step2_ACTION_singleturn_VLLM.py"
+      ],
+      "distinction": "Release path alias.",
+      "experiment_id": "runtime4_vllm",
+      "semantic_label": "runtime4_vllm",
+      "source_origins": [
+        "experiments4",
+        "experiments6"
+      ],
+      "stage": "runtime"
+    },
+    {
+      "affected_outputs": [
+        "provider request payloads",
+        "structured-output mode",
+        "retry/error behavior"
+      ],
+      "canonical_path": "experiments/experiments5/shared/src/llm_client.py",
+      "code_paths": [
+        "experiments/experiments5/shared/src/llm_client.py"
+      ],
+      "distinction": "experiments5 shared provider client",
+      "experiment_id": "runtime5_native",
+      "semantic_label": "runtime5_native",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "runtime"
+    },
+    {
+      "affected_outputs": [
+        "API runtime."
+      ],
+      "canonical_path": "methods/self_refine/experiments5/inference_api_multiturn.py",
+      "code_paths": [
+        "methods/self_refine/experiments5/inference_api_multiturn.py",
+        "methods/self_refine/experiments5/inference_api_singleturn.py",
+        "methods/self_refine/experiments5/run_api_multiturn.sh",
+        "methods/self_refine/experiments5/run_api_singleturn.sh"
+      ],
+      "distinction": "API runtime.",
+      "experiment_id": "self_refine5_api",
+      "paper_role": "Runnable support experiment, not a paper result source.",
+      "semantic_label": "self_refine5_api",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "vLLM runtime."
+      ],
+      "canonical_path": "methods/self_refine/experiments5/inference_api_multiturn.py",
+      "code_paths": [
+        "methods/self_refine/experiments5/inference_api_multiturn.py",
+        "methods/self_refine/experiments5/inference_api_singleturn.py",
+        "methods/self_refine/experiments5/run_vllm_multiturn.sh",
+        "methods/self_refine/experiments5/run_vllm_singleturn.sh"
+      ],
+      "distinction": "vLLM runtime.",
+      "experiment_id": "self_refine5_vllm",
+      "paper_role": "Runnable support experiment, not a paper result source.",
+      "semantic_label": "self_refine5_vllm",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "inference"
+    },
+    {
+      "affected_outputs": [
+        "Core algorithm is the same; exp5 changes the default input root. Exp6 changes the default schema path and should be provenance metadata, not a paper-output label."
+      ],
+      "canonical_path": "methods/self_refine/experiments4/self_refine_preference_to_api.py",
+      "code_paths": [
+        "methods/self_refine/experiments4/self_refine_preference_to_api.py",
+        "methods/self_refine/experiments5/self_refine_preference_to_api.py"
+      ],
+      "distinction": "Core algorithm is the same; exp5 changes the default input root. Exp6 changes the default schema path and should be provenance metadata, not a paper-output label.",
+      "experiment_id": "self_refine_core45",
+      "paper_role": "Not a reported baseline; paper only cites self-refinement as PREFINE inspiration.",
+      "semantic_label": "self_refine_core45",
+      "source_origins": [
+        "experiments4",
+        "experiments5"
+      ],
+      "stage": "support"
+    },
+    {
+      "affected_outputs": [
+        "rendered histories",
+        "multiturn prompts",
+        "multiturn predictions"
+      ],
+      "canonical_path": "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_multiturn_api.py",
+      "code_paths": [
+        "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_multiturn_api.py",
+        "methods/our_memory/experiments6/Preference_Memory_step2_ACTION_multiturn_api.py"
+      ],
+      "distinction": "Release path alias.",
+      "experiment_id": "session4_inline",
+      "semantic_label": "session4_inline",
+      "source_origins": [
+        "experiments4",
+        "experiments6"
+      ],
+      "stage": "session"
+    },
+    {
+      "affected_outputs": [
+        "rendered histories",
+        "context aliases",
+        "difficulty-specific queries"
+      ],
+      "canonical_path": "experiments/experiments5/shared/src/data_utils.py",
+      "code_paths": [
+        "experiments/experiments5/shared/src/data_utils.py"
+      ],
+      "distinction": "experiments5 shared session and query construction",
+      "experiment_id": "session5_data_utils",
+      "semantic_label": "session5_data_utils",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "session"
+    },
+    {
+      "affected_outputs": [
+        "Exp6 compare script is a path-only alias; no table15_eval6 label."
+      ],
+      "canonical_path": "methods/our_memory/experiments4/compare_iteration_caps.py",
+      "code_paths": [
+        "methods/our_memory/experiments4/compare_iteration_caps.py",
+        "methods/our_memory/experiments4/iteration_cap_comparison/multiturn_by_pref.csv",
+        "methods/our_memory/experiments4/iteration_cap_comparison/multiturn_common_subset.csv",
+        "methods/our_memory/experiments4/iteration_cap_comparison/refinement_by_model.csv",
+        "methods/our_memory/experiments4/iteration_cap_comparison/refinement_totals.csv",
+        "methods/our_memory/experiments4/iteration_cap_comparison/singleturn_by_pref.csv",
+        "methods/our_memory/experiments4/iteration_cap_comparison/singleturn_common_subset.csv",
+        "methods/our_memory/experiments4/iteration_cap_comparison/summary.md"
+      ],
+      "distinction": "Exp6 compare script is a path-only alias; no table15_eval6 label.",
+      "experiment_id": "table15_iteration_cap_eval4",
+      "paper_role": "Appendix Table 15, maximum refinement iterations 10 vs 3",
+      "semantic_label": "table15_iteration_cap_eval4",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "reporting"
+    },
+    {
+      "affected_outputs": [
+        "Uses exp4 legacy evaluators and canonical exp4 method entrypoints; exp6 is a path-only release alias."
+      ],
+      "canonical_path": "experiments/experiments4/shared/extended_schema/build_fixed_400_comparison_csvs.py",
+      "code_paths": [
+        "experiments/experiments4/shared/extended_schema/build_fixed_400_comparison_csvs.py",
+        "experiments/experiments4/shared/extended_schema/common_fixed_pairs.py",
+        "experiments/experiments4/shared/extended_schema/multiturn_comparison.csv",
+        "experiments/experiments4/shared/extended_schema/singleturn_comparison.csv",
+        "methods/langmem/experiments4/extended_schema/langmem_inference_multi_fixed_pairs.py",
+        "methods/langmem/experiments4/extended_schema/langmem_inference_single_fixed_pairs.py",
+        "methods/langmem/experiments4/extended_schema/multiturn_comparison.csv",
+        "methods/langmem/experiments4/extended_schema/singleturn_comparison.csv",
+        "methods/mem0/experiments4/extended_schema/mem0_evaluate_multiturn_fixed_pairs.py",
+        "methods/mem0/experiments4/extended_schema/mem0_evaluate_singleturn_fixed_pairs.py",
+        "methods/our_memory/experiments4/extended_schema/Preference_Memory_step2_ACTION_multiturn_api_fixed_pairs.py",
+        "methods/our_memory/experiments4/extended_schema/Preference_Memory_step2_ACTION_singleturn_api_fixed_pairs.py",
+        "methods/rag/experiments4/extended_schema/RAG_inference_multi_fixed_pairs.py",
+        "methods/rag/experiments4/extended_schema/RAG_inference_single_fixed_pairs.py",
+        "methods/vanilla_llm/experiments4/extended_schema/vanillaLLM_inference-api-multi_fixed_pairs.py",
+        "methods/vanilla_llm/experiments4/extended_schema/vanillaLLM_inference-api-single_fixed_pairs.py"
+      ],
+      "distinction": "Uses exp4 legacy evaluators and canonical exp4 method entrypoints; exp6 is a path-only release alias.",
+      "experiment_id": "table16_fixed400_eval4",
+      "paper_role": "Appendix Table 16 dynamic schemas; canonical paper-output path",
+      "semantic_label": "table16_fixed400_eval4",
+      "source_origins": [
+        "experiments4"
+      ],
+      "stage": "evaluation"
+    },
+    {
+      "affected_outputs": [
+        "Underlying exp5 shared prompt/provider/evaluator path can change outputs, so it must be labeled _eval5 rather than merged with paper _eval4."
+      ],
+      "canonical_path": "experiments/experiments5/shared/extended_schema/build_fixed_400_comparison_csvs.py",
+      "code_paths": [
+        "experiments/experiments5/shared/extended_schema/build_fixed_400_comparison_csvs.py",
+        "experiments/experiments5/shared/extended_schema/common_fixed_pairs.py",
+        "methods/langmem/experiments5/extended_schema/langmem_inference_multi_fixed_pairs.py",
+        "methods/langmem/experiments5/extended_schema/langmem_inference_single_fixed_pairs.py",
+        "methods/mem0/experiments5/extended_schema/inference_api_multiturn_fixed_pairs.py",
+        "methods/mem0/experiments5/extended_schema/inference_api_singleturn_fixed_pairs.py",
+        "methods/our_memory/experiments5/extended_schema/inference_api_multiturn_fixed_pairs.py",
+        "methods/our_memory/experiments5/extended_schema/inference_api_singleturn_fixed_pairs.py",
+        "methods/rag/experiments5/extended_schema/inference_api_multiturn_fixed_pairs.py",
+        "methods/rag/experiments5/extended_schema/inference_api_singleturn_fixed_pairs.py",
+        "methods/vanilla_llm/experiments5/extended_schema/inference_api_multiturn_fixed_pairs.py",
+        "methods/vanilla_llm/experiments5/extended_schema/inference_api_singleturn_fixed_pairs.py"
+      ],
+      "distinction": "Underlying exp5 shared prompt/provider/evaluator path can change outputs, so it must be labeled _eval5 rather than merged with paper _eval4.",
+      "experiment_id": "table16_fixed400_eval5",
+      "paper_role": "Runnable non-paper comparison variant; do not use as Table 16 provenance",
+      "semantic_label": "table16_fixed400_eval5",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "evaluation"
+    },
+    {
+      "affected_outputs": [
+        "available tool definitions",
+        "call names and arguments"
+      ],
+      "canonical_path": "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_singleturn_api.py",
+      "code_paths": [
+        "methods/our_memory/experiments4/Preference_Memory_step2_ACTION_singleturn_api.py",
+        "methods/our_memory/experiments6/Preference_Memory_step2_ACTION_singleturn_api.py"
+      ],
+      "distinction": "Release path alias; exp5 serialized schema remains distinct.",
+      "experiment_id": "toolschema4_inline",
+      "semantic_label": "toolschema4_inline",
+      "source_origins": [
+        "experiments4",
+        "experiments6"
+      ],
+      "stage": "tool_schema"
+    },
+    {
+      "affected_outputs": [
+        "serialized tool definitions",
+        "validated call names and slots"
+      ],
+      "canonical_path": "experiments/experiments5/shared/src/data_utils.py",
+      "code_paths": [
+        "experiments/experiments5/shared/src/data_utils.py"
+      ],
+      "distinction": "experiments5 data-utils schema serialization",
+      "experiment_id": "toolschema5_serialized",
+      "semantic_label": "toolschema5_serialized",
+      "source_origins": [
+        "experiments5"
+      ],
+      "stage": "tool_schema"
+    }
+  ],
+  "entry_count": 84,
+  "schema": "experiments7-experiments-index/v1"
+}

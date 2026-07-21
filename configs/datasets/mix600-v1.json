@@ -1,0 +1,74 @@
+{
+  "config_version": 1,
+  "dataset_id": "mix600-v1",
+  "description": "Deterministic six-condition preparation contract for the frozen mix600 source.",
+  "source": {
+    "default_path": "../experiments4/data/mix600.json",
+    "expected_bytes": 20040944,
+    "expected_sha256": "e0748a987fdba01ba2a68fc6ab781277028a93b2ba5de1987752298ce6609ea3"
+  },
+  "queries_config": "configs/queries/mix600-v1.json",
+  "preferences_config": "configs/preferences/mix600-v1.json",
+  "schemas_config": "configs/schemas/mix600-v1.json",
+  "output": {
+    "default_dir": "artifacts/prepared/mix600-v1",
+    "format": "jsonl"
+  },
+  "turns": [
+    "singleturn",
+    "multiturn"
+  ],
+  "difficulties": [
+    "easy",
+    "medium",
+    "hard"
+  ],
+  "expected": {
+    "source_example_count": 600,
+    "total_instances": 2638,
+    "scenarios": {
+      "singleturn.easy": {
+        "count": 554,
+        "source_examples": 335,
+        "semantic_multiset_sha256": "44c1af82d947e406ae48184956748ecad1c855d1f613abe16d2495e717ab7f25"
+      },
+      "singleturn.medium": {
+        "count": 293,
+        "source_examples": 123,
+        "semantic_multiset_sha256": "cad0b4352084eb423455d72d5ad97bdedab911a23a00b62427bf9f4fd5b18fea"
+      },
+      "singleturn.hard": {
+        "count": 472,
+        "source_examples": 123,
+        "semantic_multiset_sha256": "ea3fa34f4b3e6dee50ff4a2b5765818bcc299af29fe4e988529260563a53c25a"
+      },
+      "multiturn.easy": {
+        "count": 554,
+        "source_examples": 335,
+        "semantic_multiset_sha256": "b9ab7bcd07e0f3381c65aced9e2c5cfabaf3d58d25c2012b2e23e6b59f200f0a"
+      },
+      "multiturn.medium": {
+        "count": 293,
+        "source_examples": 123,
+        "semantic_multiset_sha256": "e4d73ad16cbcda2de01b15a8875ab99af30214949de5db636fd099c5e7eded23"
+      },
+      "multiturn.hard": {
+        "count": 472,
+        "source_examples": 123,
+        "semantic_multiset_sha256": "017f5ee8cefa0bc64baa878e4e52d15943b1b25d843202ecf2658549b943a585"
+      }
+    },
+    "schema_missing_slot_instances": {
+      "total": 463,
+      "scenarios": {
+        "singleturn.easy": 39,
+        "singleturn.medium": 12,
+        "singleturn.hard": 27,
+        "multiturn.easy": 63,
+        "multiturn.medium": 129,
+        "multiturn.hard": 193
+      }
+    },
+    "multiturn_base_preference_conflicts": 0
+  }
+}

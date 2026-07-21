@@ -1,0 +1,465 @@
+{
+  "inventory_method": "lstat totals; safe symlinks counted and not followed; payload content not rehashed",
+  "no_mutations": true,
+  "planned_only": true,
+  "record_count": 16,
+  "records": [
+    {
+      "bytes": 79729488,
+      "cutover_prerequisites": [
+        "Prepared parity remains green.",
+        "Active code no longer resolves historical copies."
+      ],
+      "disposition": "archive_after_cutover",
+      "evidence": [
+        {
+          "coverage": {
+            "limits": "Covers 443 payload copies: data/sources=41, methods=305, experiments=97.",
+            "type": "sha256_manifest"
+          },
+          "path": "readable_code_manifest.json",
+          "sha256": "4735692e063ae03f6d3a99e26a8f7ee1734f905af11b985e2316e33f164b70c1"
+        }
+      ],
+      "externalization_allowed": false,
+      "file_count": 41,
+      "path": "data/sources",
+      "reason": "Historical inputs are superseded by prepared datasets.",
+      "recovery_pointers": [
+        "readable_code_manifest.json",
+        "manifests/copies.jsonl"
+      ],
+      "symlink_count": 0
+    },
+    {
+      "bytes": 3599879,
+      "cutover_prerequisites": [
+        "All retained methods consume shared IDs/GT.",
+        "Method parity tests pass."
+      ],
+      "disposition": "archive_after_cutover",
+      "evidence": [
+        {
+          "coverage": {
+            "limits": "Covers 443 payload copies: data/sources=41, methods=305, experiments=97.",
+            "type": "sha256_manifest"
+          },
+          "path": "readable_code_manifest.json",
+          "sha256": "4735692e063ae03f6d3a99e26a8f7ee1734f905af11b985e2316e33f164b70c1"
+        }
+      ],
+      "externalization_allowed": false,
+      "file_count": 307,
+      "path": "methods",
+      "reason": "Historical method copies become provenance after method parity.",
+      "recovery_pointers": [
+        "readable_code_manifest.json",
+        "lineage/code.jsonl"
+      ],
+      "symlink_count": 0
+    },
+    {
+      "bytes": 1096628,
+      "cutover_prerequisites": [
+        "Canonical configs cover retained variants.",
+        "Evaluation parity passes."
+      ],
+      "disposition": "archive_after_cutover",
+      "evidence": [
+        {
+          "coverage": {
+            "limits": "Covers 443 payload copies: data/sources=41, methods=305, experiments=97.",
+            "type": "sha256_manifest"
+          },
+          "path": "readable_code_manifest.json",
+          "sha256": "4735692e063ae03f6d3a99e26a8f7ee1734f905af11b985e2316e33f164b70c1"
+        },
+        {
+          "coverage": {
+            "limits": "Defines registered variants; not a payload backup.",
+            "type": "audited_variant_registry"
+          },
+          "path": "configs/environment/variant-registry-audited-v2.json",
+          "sha256": "de6ca7ab3e8048e17b7fd8631f131f60650a0bdc813c066bdd2fed1a69e903f2"
+        }
+      ],
+      "externalization_allowed": false,
+      "file_count": 183,
+      "path": "experiments",
+      "reason": "Historical experiment/evaluation copies remain provenance after canonical cutover.",
+      "recovery_pointers": [
+        "readable_code_manifest.json",
+        "configs/environment/variant-registry-audited-v2.json"
+      ],
+      "symlink_count": 0
+    },
+    {
+      "bytes": 71220961,
+      "cutover_prerequisites": [
+        "Replacement runtime is sealed.",
+        "Rollback is demonstrated."
+      ],
+      "disposition": "keep_active_audit",
+      "evidence": [
+        {
+          "coverage": {
+            "limits": "Points to environment manifests and seals.",
+            "type": "environment_catalog"
+          },
+          "path": "configs/environment/catalog.json",
+          "sha256": "e2940777ff49ca7fb88cc0e05f07de8ee20de31ed4ed7c71f31488a620e5b42b"
+        }
+      ],
+      "externalization_allowed": false,
+      "file_count": 517,
+      "path": "environments",
+      "reason": "Sealed environments remain canonical runtime and rollback evidence.",
+      "recovery_pointers": [
+        "configs/environment/catalog.json",
+        "docs/runnable-environment.md"
+      ],
+      "symlink_count": 26
+    },
+    {
+      "bytes": 92219,
+      "cutover_prerequisites": [
+        "Every retained lineage ID resolves."
+      ],
+      "disposition": "keep_active_audit",
+      "evidence": [
+        {
+          "coverage": {
+            "limits": "Code lineage only.",
+            "type": "snapshot_sha256"
+          },
+          "path": "lineage/code.jsonl",
+          "sha256": "ce0d6a295fbc91f655b1a0abda439ec8d50e7645012b2ceb7a31089f6d44dc7a"
+        },
+        {
+          "coverage": {
+            "limits": "Config lineage only.",
+            "type": "snapshot_sha256"
+          },
+          "path": "lineage/config.jsonl",
+          "sha256": "71d64df6953be1ef359c06be57d4e3f300e6003a5d31f22e34a9e4c1615433ec"
+        }
+      ],
+      "externalization_allowed": false,
+      "file_count": 2,
+      "path": "lineage",
+      "reason": "Lineage explains retained historical behavior.",
+      "recovery_pointers": [
+        "lineage/code.jsonl",
+        "lineage/config.jsonl",
+        "manifests/source-pre.jsonl"
+      ],
+      "symlink_count": 0
+    },
+    {
+      "bytes": 34370859,
+      "cutover_prerequisites": [
+        "Recovery pointers resolve from a verified copy."
+      ],
+      "disposition": "keep_active_audit",
+      "evidence": [
+        {
+          "coverage": {
+            "limits": "Binds the CP0 set.",
+            "type": "seal_pointer"
+          },
+          "path": "manifests/cp0-seal.json",
+          "sha256": "127a791d91860feb01296396f246f511b198ed75b684f973f586066abeb3be1f"
+        }
+      ],
+      "externalization_allowed": false,
+      "file_count": 71,
+      "path": "manifests",
+      "reason": "Seals and source manifests are the recovery basis.",
+      "recovery_pointers": [
+        "manifests/cp0-seal.json",
+        "manifests/source-pre.jsonl",
+        "manifests/copies.jsonl"
+      ],
+      "symlink_count": 0
+    },
+    {
+      "bytes": 218624,
+      "cutover_prerequisites": [
+        "Canonical configs preserve retained IDs."
+      ],
+      "disposition": "keep_active_audit",
+      "evidence": [
+        {
+          "coverage": {
+            "limits": "Variant meaning only.",
+            "type": "audited_variant_registry"
+          },
+          "path": "configs/environment/variant-registry-audited-v2.json",
+          "sha256": "de6ca7ab3e8048e17b7fd8631f131f60650a0bdc813c066bdd2fed1a69e903f2"
+        },
+        {
+          "coverage": {
+            "limits": "Profile composition only.",
+            "type": "audited_profile_registry"
+          },
+          "path": "configs/environment/variant-profiles-audited-v2.json",
+          "sha256": "eeb071d1357574210b3c886a988842b16ba82f168ac35c35ffd0c7087513fde0"
+        }
+      ],
+      "externalization_allowed": false,
+      "file_count": 5,
+      "path": "variants",
+      "reason": "Variant metadata preserves semantic distinctions.",
+      "recovery_pointers": [
+        "configs/environment/variant-registry-audited-v2.json",
+        "configs/environment/variant-profiles-audited-v2.json"
+      ],
+      "symlink_count": 0
+    },
+    {
+      "bytes": 6879419,
+      "cutover_prerequisites": [
+        "Replacement publication validates against the seal."
+      ],
+      "disposition": "keep_active_audit",
+      "evidence": [
+        {
+          "coverage": {
+            "limits": "Authenticates the admitted final set; not an off-host backup.",
+            "type": "sealed_summary"
+          },
+          "path": "paper_outputs/final/seal.json",
+          "sha256": "725fb71084c0f8c3455034cd35abd9409ae498b8ded09565c1f059d309e0dbc4"
+        }
+      ],
+      "externalization_allowed": false,
+      "file_count": 7,
+      "path": "paper_outputs/final",
+      "reason": "The admitted final set anchors paper claims.",
+      "recovery_pointers": [
+        "paper_outputs/final/seal.json",
+        "paper_outputs/final/mapping.jsonl",
+        "paper_outputs/final/raw-manifest.jsonl"
+      ],
+      "symlink_count": 0
+    },
+    {
+      "bytes": 7686997692,
+      "cutover_prerequisites": [
+        "Record off-host immutable object versions.",
+        "Verify all 521 hashes in a restore transcript.",
+        "Preserve the two metadata files."
+      ],
+      "disposition": "externalize_after_verified_backup",
+      "evidence": [
+        {
+          "coverage": {
+            "limits": "Covers 521 payload files and 7,686,987,770 bytes; README/schema are separate.",
+            "type": "payload_sha256_manifest"
+          },
+          "path": "paper_outputs/final/raw-manifest.jsonl",
+          "sha256": "8a17911ae5d3a00d0d9b0d8fbde9853ac136678cca08a293805c8e84e361d36e"
+        },
+        {
+          "coverage": {
+            "limits": "Authenticates the admitted final set; not an off-host backup.",
+            "type": "sealed_summary"
+          },
+          "path": "paper_outputs/final/seal.json",
+          "sha256": "725fb71084c0f8c3455034cd35abd9409ae498b8ded09565c1f059d309e0dbc4"
+        }
+      ],
+      "externalization_allowed": false,
+      "file_count": 523,
+      "path": "paper_outputs/raw",
+      "payload_coverage": {
+        "bytes": 7686987770,
+        "file_count": 521,
+        "metadata_bytes": 9922,
+        "metadata_file_count": 2
+      },
+      "reason": "Raw payload can leave only after independent recovery proof.",
+      "recovery_pointers": [
+        "paper_outputs/final/raw-manifest.jsonl",
+        "paper_outputs/final/seal.json",
+        "paper_outputs/raw/README.md",
+        "paper_outputs/raw/schema.json"
+      ],
+      "symlink_count": 0,
+      "warning": "No off-host backup, object version, or restore transcript is recorded; externalization is forbidden."
+    },
+    {
+      "bytes": 2926322,
+      "cutover_prerequisites": "Equivalent admission evidence is retained.",
+      "disposition": "keep_active_audit",
+      "evidence": [
+        {
+          "coverage": {
+            "limits": "Covers the precopy bundle.",
+            "type": "admission_seal"
+          },
+          "path": "paper_outputs/admission/precopy/seal.json",
+          "sha256": "035ae9c49d9ea93470a458eefb03a7eda0918ce060bada76d307f0175d74caa4"
+        }
+      ],
+      "externalization_allowed": false,
+      "file_count": 7,
+      "path": "paper_outputs/admission",
+      "reason": "Admission evidence explains the final set.",
+      "recovery_pointers": [
+        "paper_outputs/admission/precopy/seal.json"
+      ],
+      "symlink_count": 0
+    },
+    {
+      "bytes": 2115859,
+      "cutover_prerequisites": "Equivalent inventory evidence is sealed.",
+      "disposition": "keep_active_audit",
+      "evidence": [
+        {
+          "coverage": {
+            "limits": "Task evidence only.",
+            "type": "snapshot_sha256"
+          },
+          "path": "paper_outputs/inventory/task-evidence.json",
+          "sha256": "ed72fc0b3569e0c793f86794f452b9cdb167f3a8c006f72d9b05c7ebf5ce7210"
+        }
+      ],
+      "externalization_allowed": false,
+      "file_count": 9,
+      "path": "paper_outputs/inventory",
+      "reason": "Inventory diagnostics explain artifact interpretation.",
+      "recovery_pointers": [
+        "paper_outputs/inventory/task-evidence.json"
+      ],
+      "symlink_count": 0
+    },
+    {
+      "bytes": 7333133,
+      "cutover_prerequisites": "Final mappings resolve through provenance.",
+      "disposition": "keep_active_audit",
+      "evidence": [
+        {
+          "coverage": {
+            "limits": "Description, not a full payload seal.",
+            "type": "coverage_description_sha256"
+          },
+          "path": "paper_outputs/provenance/README.md",
+          "sha256": "475bc6502a283af372c5b61443b06388603835fc1ab9e7b18c4935d842516e2a"
+        }
+      ],
+      "externalization_allowed": false,
+      "file_count": 4,
+      "path": "paper_outputs/provenance",
+      "reason": "Graph evidence preserves paper claim origins.",
+      "recovery_pointers": [
+        "paper_outputs/provenance/nodes.jsonl",
+        "paper_outputs/provenance/edges.jsonl"
+      ],
+      "symlink_count": 0
+    },
+    {
+      "bytes": 31790752,
+      "cutover_prerequisites": "The final seal identifies authoritative runs.",
+      "disposition": "keep_active_audit",
+      "evidence": [
+        {
+          "coverage": {
+            "limits": "One sealed checkpoint.",
+            "type": "strict_run_checkpoint"
+          },
+          "path": "paper_outputs/strict-runs/exp7-strict-v6-20260718T032509Z-11942ff2120f70e5fd0d18a08d70569d/checkpoints/cp0.json",
+          "sha256": "75df2845fd8d68d1bb5b720453f65cb5555284e02023695e8eba94fd8b65a9ca"
+        }
+      ],
+      "externalization_allowed": false,
+      "file_count": 47,
+      "path": "paper_outputs/strict-runs",
+      "reason": "Frozen validators preserve fail-closed publication evidence.",
+      "recovery_pointers": [
+        "paper_outputs/final/seal.json"
+      ],
+      "symlink_count": 0
+    },
+    {
+      "bytes": 3221,
+      "cutover_prerequisites": [
+        "Catalog regeneration passes."
+      ],
+      "disposition": "generated_rebuildable",
+      "evidence": [
+        {
+          "coverage": {
+            "limits": "Navigation only; not payload backup.",
+            "type": "navigation_index_sha256"
+          },
+          "path": "outputs/runs_index.json",
+          "sha256": "937faff76fd4752d476d5ebe75add2e694d2be9b6b124dae276a507b11cd9146"
+        }
+      ],
+      "externalization_allowed": false,
+      "file_count": 3,
+      "path": "outputs",
+      "reason": "Navigation indexes are deterministic and rebuildable.",
+      "recovery_pointers": [
+        "outputs/runs_index.json"
+      ],
+      "symlink_count": 0
+    },
+    {
+      "bytes": 1462,
+      "cutover_prerequisites": [
+        "Index regeneration passes."
+      ],
+      "disposition": "generated_rebuildable",
+      "evidence": [
+        {
+          "coverage": {
+            "limits": "Navigation only.",
+            "type": "navigation_index_sha256"
+          },
+          "path": "results/results_index.json",
+          "sha256": "1311484b22285ce10fe986f050c5395d1c1cc2c38662fe70e57c9946b721bf6e"
+        }
+      ],
+      "externalization_allowed": false,
+      "file_count": 2,
+      "path": "results",
+      "reason": "The result index is rebuildable from final records.",
+      "recovery_pointers": [
+        "paper_outputs/final/mapping.jsonl",
+        "paper_outputs/final/unresolved.jsonl"
+      ],
+      "symlink_count": 0
+    },
+    {
+      "bytes": 15969600,
+      "cutover_prerequisites": [
+        "Classify durable runs and smoke outputs.",
+        "Move fixtures before cleanup."
+      ],
+      "disposition": "split_before_cleanup",
+      "evidence": [
+        {
+          "coverage": {
+            "limits": "Does not identify disposable runs.",
+            "type": "navigation_index_sha256"
+          },
+          "path": "outputs/runs_index.json",
+          "sha256": "937faff76fd4752d476d5ebe75add2e694d2be9b6b124dae276a507b11cd9146"
+        }
+      ],
+      "externalization_allowed": false,
+      "file_count": 46,
+      "path": "runs",
+      "reason": "Runs mix durable evidence, smoke outputs, and fixtures.",
+      "recovery_pointers": [
+        "outputs/runs_index.json",
+        "runs/fixtures"
+      ],
+      "symlink_count": 0,
+      "warning": "Do not bulk-delete runs; preserve fixtures first."
+    }
+  ],
+  "schema": "experiments7-archive-map/v1"
+}

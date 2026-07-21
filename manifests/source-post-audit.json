@@ -1,0 +1,69 @@
+{
+  "schema": "experiments7-source-post-audit/v1",
+  "generated_at": "2026-07-17T13:06:05+09:00",
+  "baseline": {
+    "path": "manifests/source-pre.jsonl",
+    "sha256": "6ab9fd4b02a55b2c59889ee2034f42d8162bca99a6abbfc35a0d65ca02d63bbc",
+    "records": 55940,
+    "created_at": "2026-07-15T17:51:15+09:00"
+  },
+  "full_readonly_verification": {
+    "provider": "landlock_path_beneath+seccomp_metadata_deny",
+    "landlock_abi": 4,
+    "regular_files_rehashed": 22928,
+    "regular_file_bytes_rehashed": 171211126608,
+    "regular_files_content_identical": 22926,
+    "regular_files_content_drifted": 2,
+    "metadata_mismatches": 6,
+    "unexpected_paths": 371,
+    "missing_paths": 0,
+    "full_tree_byte_identical": false
+  },
+  "content_drift": [
+    {
+      "root_id": "experiments4",
+      "path": ".git/info/exclude",
+      "classification": "git_control_metadata",
+      "expected_sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+      "actual_sha256": "348e5815575cf8a1b2e0f83ec5ac7ceeeef9d6e5d5e21f48c9e39d16f12a15d1"
+    },
+    {
+      "root_id": "experiments5",
+      "path": "logs/our_memory/conflict_majority_memory_matrix_20260528/queued_runner.log",
+      "classification": "preexisting_external_runtime_log",
+      "expected_sha256": "89e606393223105dcac414d9370567c41ef759cd9ab4bc79733028469e381129",
+      "actual_sha256": "b3411357cb65a4b5e11aaa102ab18654fda96caf5560109f56766c459b7bd24a",
+      "writer_evidence": {
+        "pid": 1103036,
+        "ppid": 1,
+        "command": "bash -s",
+        "started_at": "2026-05-29T03:10:48+09:00",
+        "observed_behavior": "appends one waiting line per minute"
+      }
+    }
+  ],
+  "unexpected_path_groups": [
+    {
+      "root_id": "experiments4",
+      "top_level": ".omx",
+      "paths": 147,
+      "classification": "runtime_control_tree",
+      "attribution": "not_attributed_do_not_remove"
+    },
+    {
+      "root_id": "experiments4",
+      "top_level": "ours_memory2",
+      "paths": 224,
+      "classification": "post_baseline_standalone_tree",
+      "attribution": "not_attributed_do_not_remove"
+    }
+  ],
+  "conclusions": {
+    "baseline_code_content_mismatch_count": 0,
+    "baseline_inference_output_content_mismatch_count": 0,
+    "copy_lane_source_write_authority": false,
+    "copy_lane_envelope_id": "g0-provider-readonly-envelope-v1",
+    "user_owned_drift_preserved": true,
+    "claim": "All baseline regular content except Git control metadata and one independently growing runtime log remained byte-identical; the full source trees are not claimed byte-identical because post-baseline user/runtime paths exist."
+  }
+}

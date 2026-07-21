@@ -1,0 +1,245 @@
+{
+  "schema": "g010-ultraqa-runtime-v6-evidence-v1",
+  "generated_at_utc": "2026-07-17T15:20:39Z",
+  "scope": {
+    "story": "G010",
+    "lane": "isolated OMX runtime UltraQA",
+    "repository_files_modified_during_probes": [],
+    "protected_paths_accessed_during_probes": [],
+    "persistence_artifact": "docs/reviews/g010-ultraqa-runtime-v6.json",
+    "persistence_note": "The probes made no repository access. This requested evidence-persistence step writes only this review artifact."
+  },
+  "safety": {
+    "temporary_root": "/tmp/g010_uq_runtime_3YQrqv",
+    "working_directory": "/tmp/g010_uq_runtime_3YQrqv",
+    "environment": {
+      "OMX_ROOT": "unset",
+      "OMX_STATE_ROOT": "unset",
+      "HOME": "/tmp/g010_uq_runtime_3YQrqv"
+    },
+    "ambient_autopilot_state_read": false,
+    "ambient_autopilot_state_written": false,
+    "ambient_autopilot_state_cleared": false,
+    "experiments4_accessed": false,
+    "experiments5_accessed": false,
+    "experiments6_accessed": false,
+    "experiments7_paper_accessed": false,
+    "git_invoked": false
+  },
+  "scenario_matrix": [
+    {
+      "id": "UQ-009A",
+      "scenario": "Repeated stop, continue, and resume",
+      "status": "PASS",
+      "expected_signal": "Repeated clears are idempotent, repeated resume writes remain readable and internally consistent.",
+      "actual_signal": "Two clear operations exited 0, mode read returned exists=false, two identical resume writes exited 0, and the final read returned active=true, current_phase=ultragoal, iteration=8, run_outcome=continue.",
+      "commands": [
+        {
+          "command": "env -u OMX_ROOT -u OMX_STATE_ROOT HOME=/tmp/g010_uq_runtime_3YQrqv /home/minseo/.local/bin/omx state clear --mode autopilot --json",
+          "runs": 2,
+          "exit_codes": [
+            0,
+            0
+          ],
+          "output": "{\"cleared\":true,\"mode\":\"autopilot\",\"path\":\"/tmp/g010_uq_runtime_3YQrqv/.omx/state/autopilot-state.json\"}"
+        },
+        {
+          "command": "env -u OMX_ROOT -u OMX_STATE_ROOT HOME=/tmp/g010_uq_runtime_3YQrqv /home/minseo/.local/bin/omx state read --mode autopilot --json",
+          "runs": 1,
+          "exit_codes": [
+            0
+          ],
+          "output": "{\"exists\":false,\"mode\":\"autopilot\"}"
+        },
+        {
+          "command": "env -u OMX_ROOT -u OMX_STATE_ROOT HOME=/tmp/g010_uq_runtime_3YQrqv /home/minseo/.local/bin/omx state write --input '{\"mode\":\"autopilot\",\"active\":true,\"current_phase\":\"ultragoal\",\"iteration\":8,\"updated_at\":\"2026-07-18T00:04:00Z\"}' --json",
+          "runs": 2,
+          "exit_codes": [
+            0,
+            0
+          ],
+          "output": "{\"success\":true,\"mode\":\"autopilot\",\"path\":\"/tmp/g010_uq_runtime_3YQrqv/.omx/state/autopilot-state.json\"}"
+        },
+        {
+          "command": "env -u OMX_ROOT -u OMX_STATE_ROOT HOME=/tmp/g010_uq_runtime_3YQrqv /home/minseo/.local/bin/omx state read --mode autopilot --json",
+          "runs": 1,
+          "exit_codes": [
+            0
+          ],
+          "output": "{\"active\":true,\"current_phase\":\"ultragoal\",\"iteration\":8,\"updated_at\":\"2026-07-18T00:04:00Z\",\"tmux_pane_id\":\"%0\",\"tmux_pane_set_at\":\"2026-07-17T15:15:35.618Z\",\"run_outcome\":\"continue\"}"
+        }
+      ],
+      "cleanup": "Covered by the final isolated state and temporary-root cleanup."
+    },
+    {
+      "id": "UQ-009B",
+      "scenario": "Contradictory active and phase metadata",
+      "status": "PASS",
+      "expected_signal": "Terminal and non-terminal contradictions are rejected and do not replace the prior valid state.",
+      "actual_signal": "Both contradictory writes exited 1. A read after the first rejection retained the prior active ultragoal iteration 8 state.",
+      "commands": [
+        {
+          "command": "env -u OMX_ROOT -u OMX_STATE_ROOT HOME=/tmp/g010_uq_runtime_3YQrqv /home/minseo/.local/bin/omx state write --input '{\"mode\":\"autopilot\",\"active\":false,\"current_phase\":\"ultragoal\",\"iteration\":8,\"updated_at\":\"2000-01-01T00:00:00Z\"}' --json",
+          "exit_code": 1,
+          "output": "{\"error\":\"Cannot complete Autopilot before code-review gate: ultragoal may only advance to code-review.\"}"
+        },
+        {
+          "command": "env -u OMX_ROOT -u OMX_STATE_ROOT HOME=/tmp/g010_uq_runtime_3YQrqv /home/minseo/.local/bin/omx state read --mode autopilot --json",
+          "exit_code": 0,
+          "output": "{\"active\":true,\"current_phase\":\"ultragoal\",\"iteration\":8,\"updated_at\":\"2026-07-18T00:04:00Z\",\"tmux_pane_id\":\"%0\",\"tmux_pane_set_at\":\"2026-07-17T15:15:35.618Z\",\"run_outcome\":\"continue\"}"
+        },
+        {
+          "command": "env -u OMX_ROOT -u OMX_STATE_ROOT HOME=/tmp/g010_uq_runtime_3YQrqv /home/minseo/.local/bin/omx state write --input '{\"mode\":\"autopilot\",\"active\":true,\"current_phase\":\"complete\",\"iteration\":8,\"updated_at\":\"2026-07-18T00:06:00Z\"}' --json",
+          "exit_code": 1,
+          "output": "{\"error\":\"terminal run outcome \\\"finished\\\" requires active=false\"}"
+        }
+      ],
+      "cleanup": "No contradictory state was committed."
+    },
+    {
+      "id": "UQ-009C",
+      "scenario": "Stale iteration and timestamp regression",
+      "status": "WATCH",
+      "classification": "external_omx_dependency",
+      "expected_signal": "A same-phase update whose iteration and timestamp regress should be rejected or explicitly classified as stale.",
+      "actual_signal": "The write exited 0 and the next read returned iteration=7 and updated_at=2000-01-01T00:00:00Z, replacing the previously observed iteration=8 and 2026 timestamp.",
+      "commands": [
+        {
+          "command": "env -u OMX_ROOT -u OMX_STATE_ROOT HOME=/tmp/g010_uq_runtime_3YQrqv /home/minseo/.local/bin/omx state write --input '{\"mode\":\"autopilot\",\"active\":true,\"current_phase\":\"ultragoal\",\"iteration\":7,\"updated_at\":\"2000-01-01T00:00:00Z\"}' --json",
+          "exit_code": 0,
+          "output": "{\"success\":true,\"mode\":\"autopilot\",\"path\":\"/tmp/g010_uq_runtime_3YQrqv/.omx/state/autopilot-state.json\"}"
+        },
+        {
+          "command": "env -u OMX_ROOT -u OMX_STATE_ROOT HOME=/tmp/g010_uq_runtime_3YQrqv /home/minseo/.local/bin/omx state read --mode autopilot --json",
+          "exit_code": 0,
+          "output": "{\"active\":true,\"current_phase\":\"ultragoal\",\"iteration\":7,\"updated_at\":\"2000-01-01T00:00:00Z\",\"tmux_pane_id\":\"%0\",\"tmux_pane_set_at\":\"2026-07-17T15:15:35.618Z\",\"run_outcome\":\"continue\"}"
+        }
+      ],
+      "impact": "The external OMX state persistence surface does not enforce monotonic iteration or timestamp ordering, so a stale same-phase writer can replace a newer state.",
+      "disposition": "Visible dependency WATCH. It is not hidden or counted as a passing stale-state check, and no experiments7 source change was made for this external behavior."
+    },
+    {
+      "id": "UQ-010",
+      "scenario": "Prompt-injection text remains inert data",
+      "status": "PASS",
+      "expected_signal": "Injection-like shell syntax round-trips only as argv data and creates no sentinel.",
+      "actual_signal": "The outer probe exited 0; before=false, child_exit=0, payload_roundtrip=true, sentinel_after=false, verdict=PASS.",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python -B -c '<outer probe assembles the dollar sign with chr(36), passes the payload to a Python child as argv, checks exact JSON round-trip and sentinel absence>'",
+      "exit_code": 0,
+      "output": "{\"before\": false, \"child_exit\": 0, \"payload_roundtrip\": true, \"sentinel_after\": false, \"verdict\": \"PASS\"}",
+      "sentinel": "/tmp/g010_uq_runtime_3YQrqv/uq_injection_sentinel",
+      "cleanup": "No sentinel was created."
+    },
+    {
+      "id": "UQ-011",
+      "scenario": "Dirty-workspace safe substitute and lane-local non-modification",
+      "status": "PASS",
+      "expected_signal": "QA does not overwrite, hide, or inspect unrelated repository work while protected paths remain closed.",
+      "actual_signal": "No probe command referenced /data/minseo/experiments7 or invoked git. Every mutation target was below the temporary root. The only repository write is this separately requested evidence artifact.",
+      "evidence_method": "Command-scope isolation plus bounded process and temporary-root cleanup. No whole-tree scan or hash was used because protected paths must not be opened and other agents were concurrently modifying declared intentional files.",
+      "cleanup": "All lane-local temporary state and processes were removed."
+    },
+    {
+      "id": "UQ-012",
+      "scenario": "Bounded hung child",
+      "status": "PASS",
+      "expected_signal": "The child is terminated within two seconds, the command exits 124, and no marked process survives.",
+      "actual_signal": "The timeout command exited 124 after 1.852837385 seconds with empty output. The survivor query exited 1 with empty output.",
+      "commands": [
+        {
+          "command": "timeout --kill-after=1s 2s bash -c 'exec -a g010_uq_hung_child sleep 30'",
+          "exit_code": 124,
+          "wall_time_seconds": 1.852837385,
+          "output": ""
+        },
+        {
+          "command": "pgrep -a -f '[g]010_uq_hung_child'",
+          "exit_code": 1,
+          "output": ""
+        }
+      ],
+      "cleanup": "No marked child process survived."
+    },
+    {
+      "id": "UQ-014",
+      "scenario": "Misleading SUCCESS text with nonzero exit",
+      "status": "PASS",
+      "expected_signal": "The result classifier prioritizes the child exit code over success-looking stdout.",
+      "actual_signal": "The child printed SUCCESS: all tests passed and exited 7; the outer classifier returned verdict=FAIL and itself exited 0.",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python -B -c '<outer classifier runs a Python child that prints SUCCESS and exits 7; verdict is FAIL when returncode is nonzero>'",
+      "exit_code": 0,
+      "output": "{\"child_exit\": 7, \"stdout\": \"SUCCESS: all tests passed\", \"verdict\": \"FAIL\"}",
+      "cleanup": "No files or processes were created."
+    }
+  ],
+  "harness_setup_debris": [
+    {
+      "id": "SETUP-001",
+      "classification": "harness_setup_failure_not_product_finding",
+      "description": "The initial fixture used current_phase=executing, which is not an accepted Autopilot phase for terminalization.",
+      "command": "env -u OMX_ROOT -u OMX_STATE_ROOT HOME=/tmp/g010_uq_runtime_3YQrqv /home/minseo/.local/bin/omx state write --input '{\"mode\":\"autopilot\",\"active\":false,\"current_phase\":\"stopped\",\"iteration\":7,\"session_id\":\"uq-isolated\",\"updated_at\":\"2026-07-18T00:01:00Z\"}' --json",
+      "exit_code": 1,
+      "output": "{\"error\":\"Cannot complete Autopilot from an unknown active phase; restore a valid Autopilot phase before terminalization.\"}",
+      "remediation": "Cleared the isolated fixture and reran with current_phase=ultragoal."
+    },
+    {
+      "id": "SETUP-002",
+      "classification": "harness_setup_behavior_not_product_finding",
+      "description": "An explicit session_id write was stored under sessions/uq-isolated and was not discovered by a mode-only read without matching current-session context.",
+      "write_exit_code": 0,
+      "write_output": "{\"success\":true,\"mode\":\"autopilot\",\"path\":\"/tmp/g010_uq_runtime_3YQrqv/.omx/state/sessions/uq-isolated/autopilot-state.json\"}",
+      "read_exit_code": 0,
+      "read_output": "{\"exists\":false,\"mode\":\"autopilot\"}",
+      "remediation": "Reran the behavior checks with a mode-scoped state fixture and separately cleared the session-scoped fixture."
+    }
+  ],
+  "cleanup": {
+    "commands": [
+      {
+        "command": "env -u OMX_ROOT -u OMX_STATE_ROOT HOME=/tmp/g010_uq_runtime_3YQrqv /home/minseo/.local/bin/omx state clear --mode autopilot --json",
+        "exit_code": 0,
+        "output": "{\"cleared\":true,\"mode\":\"autopilot\",\"path\":\"/tmp/g010_uq_runtime_3YQrqv/.omx/state/autopilot-state.json\"}"
+      },
+      {
+        "command": "env -u OMX_ROOT -u OMX_STATE_ROOT HOME=/tmp/g010_uq_runtime_3YQrqv /home/minseo/.local/bin/omx state read --mode autopilot --json",
+        "exit_code": 0,
+        "output": "{\"exists\":false,\"mode\":\"autopilot\"}"
+      },
+      {
+        "command": "env -u OMX_ROOT -u OMX_STATE_ROOT HOME=/tmp/g010_uq_runtime_3YQrqv /home/minseo/.local/bin/omx state clear --input '{\"mode\":\"autopilot\",\"session_id\":\"uq-isolated\"}' --json",
+        "exit_code": 0,
+        "output": "{\"cleared\":true,\"mode\":\"autopilot\",\"path\":\"/tmp/g010_uq_runtime_3YQrqv/.omx/state/sessions/uq-isolated/autopilot-state.json\"}"
+      },
+      {
+        "command": "rm -rf /tmp/g010_uq_runtime_3YQrqv",
+        "exit_code": 0,
+        "output": ""
+      },
+      {
+        "command": "test ! -e /tmp/g010_uq_runtime_3YQrqv",
+        "exit_code": 0,
+        "output": ""
+      }
+    ],
+    "temporary_root_removed": true,
+    "sentinel_present_after_cleanup": false,
+    "surviving_marked_processes": 0,
+    "ambient_state_untouched": true
+  },
+  "overall": {
+    "status": "PASS_WITH_EXTERNAL_DEPENDENCY_WATCH",
+    "passed_scenarios": [
+      "UQ-009A",
+      "UQ-009B",
+      "UQ-010",
+      "UQ-011",
+      "UQ-012",
+      "UQ-014"
+    ],
+    "watch_scenarios": [
+      "UQ-009C"
+    ],
+    "failed_experiments7_scenarios": [],
+    "finding_summary": "The experiments7 lane stayed isolated and clean. External OMX state writes reject phase contradictions but accept same-phase iteration and timestamp regression."
+  }
+}

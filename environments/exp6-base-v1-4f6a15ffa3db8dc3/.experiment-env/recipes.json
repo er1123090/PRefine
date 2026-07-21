@@ -1,0 +1,120 @@
+{
+  "schema": "experiments7-environment-recipes/v1",
+  "profile_id": "exp6_base_eval6",
+  "variant_label": "eval6",
+  "recipes": {
+    "smoke_snapshot_eval6": {
+      "description": "Verify the sealed exp6 snapshot can execute while writing only to the experiments7 run directory.",
+      "command": [
+        "{python}",
+        "-c",
+        "import os,pathlib; p=pathlib.Path(os.environ['EXPERIMENT_RUN_DIR'])/'smoke.txt'; p.write_text('ok\\n', encoding='utf-8')"
+      ],
+      "default_args": [],
+      "output_flags": [],
+      "required_output_flags": []
+    },
+    "preference_memory_singleturn_api_eval6": {
+      "description": "Experiments6 preference-memory single-turn API inference (eval6 semantics).",
+      "command": ["scripts/run_preference_memory_singleturn_api.sh"],
+      "default_args": [
+        "--memory_path", "{run_dir}/memory.jsonl",
+        "--pref_type", "easy",
+        "--context_type", "memory_api",
+        "--output_path", "{run_dir}/output.json",
+        "--log_path", "{run_dir}/run.log"
+      ],
+      "output_flags": ["--output_path", "--log_path"],
+      "required_output_flags": ["--output_path", "--log_path"]
+    },
+    "preference_memory_multiturn_api_eval6": {
+      "description": "Experiments6 preference-memory multi-turn API inference (eval6 semantics).",
+      "command": ["scripts/run_preference_memory_multiturn_api.sh"],
+      "default_args": [
+        "--memory_path", "{run_dir}/memory.jsonl",
+        "--pref_type", "easy",
+        "--context_type", "memory_api",
+        "--output_path", "{run_dir}/output.json",
+        "--log_path", "{run_dir}/run.log"
+      ],
+      "output_flags": ["--output_path", "--log_path"],
+      "required_output_flags": ["--output_path", "--log_path"]
+    },
+    "vanilla_llm_singleturn_api_eval6": {
+      "description": "Experiments6 vanilla-LLM single-turn API baseline (eval6 semantics).",
+      "command": ["scripts/run_vanilla_llm_singleturn_api.sh"],
+      "default_args": [
+        "--pref_type", "easy",
+        "--output_path", "{run_dir}/output.json",
+        "--log_path", "{run_dir}/run.log"
+      ],
+      "output_flags": ["--output_path", "--log_path"],
+      "required_output_flags": ["--output_path", "--log_path"]
+    },
+    "vanilla_llm_multiturn_api_eval6": {
+      "description": "Experiments6 vanilla-LLM multi-turn API baseline (eval6 semantics).",
+      "command": ["scripts/run_vanilla_llm_multiturn_api.sh"],
+      "default_args": [
+        "--pref_type", "easy",
+        "--output_path", "{run_dir}/output.json",
+        "--log_path", "{run_dir}/run.log"
+      ],
+      "output_flags": ["--output_path", "--log_path"],
+      "required_output_flags": ["--output_path", "--log_path"]
+    },
+    "rag_singleturn_eval6": {
+      "description": "Experiments6 RAG single-turn baseline (eval6 semantics).",
+      "command": ["scripts/run_rag_singleturn.sh"],
+      "default_args": [
+        "--pref_type", "easy",
+        "--db_path", "{run_dir}/chroma_db",
+        "--output_path", "{run_dir}/output.json",
+        "--log_path", "{run_dir}/run.log"
+      ],
+      "output_flags": ["--db_path", "--output_path", "--log_path"],
+      "required_output_flags": ["--db_path", "--output_path", "--log_path"]
+    },
+    "mem0_singleturn_eval6": {
+      "description": "Experiments6 Mem0 single-turn baseline (eval6 semantics).",
+      "command": ["scripts/run_mem0_singleturn.sh"],
+      "default_args": [
+        "--pref_type", "easy",
+        "--context_type", "memory_api",
+        "--output_path", "{run_dir}/output.json",
+        "--log_path", "{run_dir}/run.log"
+      ],
+      "output_flags": ["--output_path", "--log_path"],
+      "required_output_flags": ["--output_path", "--log_path"]
+    },
+    "langmem_singleturn_eval6": {
+      "description": "Experiments6 LangMem single-turn baseline (eval6 semantics).",
+      "command": ["scripts/run_langmem_singleturn.sh"],
+      "default_args": [
+        "--memory_path", "{run_dir}/langmem.jsonl",
+        "--pref_type", "easy",
+        "--context_type", "memory_api",
+        "--output_path", "{run_dir}/output.json",
+        "--log_path", "{run_dir}/run.log"
+      ],
+      "output_flags": ["--output_path", "--log_path"],
+      "required_output_flags": ["--output_path", "--log_path"]
+    },
+    "evaluate_singleturn_f1_eval6": {
+      "description": "Experiments6 single-turn F1 evaluator (eval6 semantics).",
+      "command": ["scripts/evaluate_singleturn_f1.sh"],
+      "default_args": ["--json_path", "{run_dir}/input.json"],
+      "output_flags": [],
+      "required_output_flags": []
+    },
+    "evaluate_multiturn_f1_eval6": {
+      "description": "Experiments6 multi-turn F1 parser/aggregator (eval6 semantics).",
+      "command": ["scripts/evaluate_multiturn_f1.sh"],
+      "default_args": [
+        "--json_path", "{run_dir}/input.json",
+        "--out_csv", "{run_dir}/metrics.csv"
+      ],
+      "output_flags": ["--out_csv"],
+      "required_output_flags": ["--out_csv"]
+    }
+  }
+}

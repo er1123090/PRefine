@@ -1,0 +1,82 @@
+{
+  "schema": "experiments7.ultraqa.architect-diagnosis.v1",
+  "story_id": "G010",
+  "stage": "ultraqa-cycle-1",
+  "reviewer_role": "architect",
+  "review_subject": "OMX 0.20.1 state-write monotonicity",
+  "verdict": "WATCH",
+  "g010_acceptance": "CLEAR",
+  "blocking": false,
+  "classification": "external-control-plane-watch",
+  "summary": "A stale same-phase OMX state write can regress iteration and updated_at because the installed state writer has no revision or monotonicity precondition. This is non-blocking for G010 when OMX state metadata is excluded from fixture acceptance evidence and the documented single-writer/readback controls are applied.",
+  "observed_evidence": [
+    {
+      "kind": "isolated-runtime-observation",
+      "statement": "In an isolated temporary environment, an active ultragoal state at iteration 8 with a 2026 updated_at value was followed by a same-active/same-phase write at iteration 7 with a 2000 updated_at value; the write exited successfully and readback preserved the regression."
+    },
+    {
+      "kind": "isolated-runtime-observation",
+      "statement": "Contradictory active=false implementation-phase and active=true complete writes were rejected, repeated clear/resume operations succeeded, and the ambient task state was not changed."
+    },
+    {
+      "kind": "installed-version",
+      "statement": "The inspected installed package is oh-my-codex 0.20.1."
+    }
+  ],
+  "root_cause": {
+    "statement": "state_write shallow-merges caller fields over the current snapshot and atomically replaces the file without comparing iteration, updated_at, a revision number, or a compare-and-swap token. Its queue is process-local, and the runtime-context helper does not normalize either monotonic field.",
+    "evidence_references": [
+      {
+        "path": "/home/minseo/.local/lib/node_modules/oh-my-codex/dist/state/operations.js",
+        "lines": "55-73",
+        "supports": "The write queue is an in-memory Map and therefore only serializes callers sharing the same Node.js process."
+      },
+      {
+        "path": "/home/minseo/.local/lib/node_modules/oh-my-codex/dist/state/operations.js",
+        "lines": "590-604,767-768",
+        "supports": "The existing state is shallow-merged with input fields and written atomically with no freshness or monotonicity comparison."
+      },
+      {
+        "path": "/home/minseo/.local/lib/node_modules/oh-my-codex/dist/state/mode-state-context.js",
+        "lines": "29-47",
+        "supports": "Runtime-context enrichment does not stamp or validate iteration or updated_at."
+      },
+      {
+        "path": "/home/minseo/.local/lib/node_modules/oh-my-codex/dist/state/__tests__/operations.test.js",
+        "lines": "764-785",
+        "supports": "The installed concurrency test covers same-process merged-field preservation, not stale-write rejection or cross-process compare-and-swap behavior."
+      }
+    ]
+  },
+  "safety_boundary": {
+    "evidence": "Lifecycle consistency, Autopilot phase progression, and clean review/QA completion evidence are validated separately in operations.js lines 646-765 and autopilot/completion-gate.js lines 122-152.",
+    "inference": "The monotonicity gap can misreport progress or replace stale in-state metadata, but it does not directly alter experiments7 fixture artifacts or protected experiment inputs. G010 remains acceptable if its decision is based on immutable artifacts, hashes, and fresh test results rather than OMX iteration or timestamp values.",
+    "residual_risk": "A concurrent or buggy stale writer can still regress advisory state or replace shallow custom fields after a successful readback; atomic rename prevents partial-file corruption but does not establish freshness."
+  },
+  "mitigations": [
+    {
+      "id": "M1",
+      "action": "Restrict OMX state mutation for this task to one leader process; child and review lanes must not write workflow state."
+    },
+    {
+      "id": "M2",
+      "action": "For every transition, perform a fresh read, compute iteration as max(current, desired), use a current timestamp, write only the required delta, and immediately verify the complete readback."
+    },
+    {
+      "id": "M3",
+      "action": "Exclude OMX iteration and updated_at from G010 acceptance evidence; use experiments7 artifact identities, SHA-256 digests, and fresh test outputs instead."
+    },
+    {
+      "id": "M4",
+      "action": "Quiesce other state writers before terminalization and require final readback of the intended phase plus distinct clean code-review and UltraQA evidence locators before declaring completion."
+    }
+  ],
+  "scope_expansion": {
+    "is_scope_expansion": true,
+    "statement": "Patching /home/minseo/.local/lib/node_modules/oh-my-codex would modify an installed external dependency outside experiments7 and is not part of the requested experiment consolidation. A revision/CAS or monotonic-write fix should be handled as a separate OMX upstream task."
+  },
+  "constraints_observed": [
+    "No experiments4, experiments5, experiments6, _paper, or PDF path was accessed.",
+    "No installed OMX or project source file was modified as part of the diagnosis; this JSON is the delegated review artifact only."
+  ]
+}

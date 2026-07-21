@@ -1,0 +1,24 @@
+# Public release hygiene.
+#
+# JSON and JSONL files are intentionally not ignored globally. This release
+# includes datasets, schemas, query files, and small memory/config artifacts that
+# need to be visible in a paper-code repository.
+
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+.DS_Store
+
+# Generated experiment outputs.
+logs/
+output/
+outputs/
+inference/
+inference_single/
+inference_multi/
+eval_results/
+chroma_db_rag/
+memory_snapshots/
+indexes/

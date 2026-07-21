@@ -1,0 +1,3188 @@
+{
+  "schema": "experiments7-open-stage-registry/v1",
+  "registry_schema_version": 1,
+  "source_manifest": {
+    "path": "manifests/source-pre.jsonl",
+    "sha256": "6ab9fd4b02a55b2c59889ee2034f42d8162bca99a6abbfc35a0d65ca02d63bbc"
+  },
+  "selection_policy": {
+    "implicit_default": false,
+    "families_origin_neutral": true,
+    "byte_identity_is_not_stage_equivalence": true,
+    "bounded_equivalence_evidence_required": true
+  },
+  "families": [
+    {
+      "family_id": "family.dataset",
+      "kind": "neutral_family",
+      "selector": null,
+      "selectable": false,
+      "stage": "dataset",
+      "semantic_parent": null,
+      "neutral_family": "family.dataset",
+      "affected_outputs": [],
+      "description": "Origin-neutral nonselectable dataset family"
+    },
+    {
+      "family_id": "family.session",
+      "kind": "neutral_family",
+      "selector": null,
+      "selectable": false,
+      "stage": "session",
+      "semantic_parent": null,
+      "neutral_family": "family.session",
+      "affected_outputs": [],
+      "description": "Origin-neutral nonselectable session family"
+    },
+    {
+      "family_id": "family.preprocessing",
+      "kind": "neutral_family",
+      "selector": null,
+      "selectable": false,
+      "stage": "preprocessing",
+      "semantic_parent": null,
+      "neutral_family": "family.preprocessing",
+      "affected_outputs": [],
+      "description": "Origin-neutral nonselectable preprocessing family"
+    },
+    {
+      "family_id": "family.prompt",
+      "kind": "neutral_family",
+      "selector": null,
+      "selectable": false,
+      "stage": "prompt",
+      "semantic_parent": null,
+      "neutral_family": "family.prompt",
+      "affected_outputs": [],
+      "description": "Origin-neutral nonselectable prompt family"
+    },
+    {
+      "family_id": "family.tool_schema",
+      "kind": "neutral_family",
+      "selector": null,
+      "selectable": false,
+      "stage": "tool_schema",
+      "semantic_parent": null,
+      "neutral_family": "family.tool_schema",
+      "affected_outputs": [],
+      "description": "Origin-neutral nonselectable tool_schema family"
+    },
+    {
+      "family_id": "family.inference",
+      "kind": "neutral_family",
+      "selector": null,
+      "selectable": false,
+      "stage": "inference",
+      "semantic_parent": null,
+      "neutral_family": "family.inference",
+      "affected_outputs": [],
+      "description": "Origin-neutral nonselectable inference family"
+    },
+    {
+      "family_id": "family.runtime",
+      "kind": "neutral_family",
+      "selector": null,
+      "selectable": false,
+      "stage": "runtime",
+      "semantic_parent": null,
+      "neutral_family": "family.runtime",
+      "affected_outputs": [],
+      "description": "Origin-neutral nonselectable runtime family"
+    },
+    {
+      "family_id": "family.parser",
+      "kind": "neutral_family",
+      "selector": null,
+      "selectable": false,
+      "stage": "parser",
+      "semantic_parent": null,
+      "neutral_family": "family.parser",
+      "affected_outputs": [],
+      "description": "Origin-neutral nonselectable parser family"
+    },
+    {
+      "family_id": "family.normalization",
+      "kind": "neutral_family",
+      "selector": null,
+      "selectable": false,
+      "stage": "normalization",
+      "semantic_parent": null,
+      "neutral_family": "family.normalization",
+      "affected_outputs": [],
+      "description": "Origin-neutral nonselectable normalization family"
+    },
+    {
+      "family_id": "family.error_policy",
+      "kind": "neutral_family",
+      "selector": null,
+      "selectable": false,
+      "stage": "error_policy",
+      "semantic_parent": null,
+      "neutral_family": "family.error_policy",
+      "affected_outputs": [],
+      "description": "Origin-neutral nonselectable error_policy family"
+    },
+    {
+      "family_id": "family.filtering",
+      "kind": "neutral_family",
+      "selector": null,
+      "selectable": false,
+      "stage": "filtering",
+      "semantic_parent": null,
+      "neutral_family": "family.filtering",
+      "affected_outputs": [],
+      "description": "Origin-neutral nonselectable filtering family"
+    },
+    {
+      "family_id": "family.metric",
+      "kind": "neutral_family",
+      "selector": null,
+      "selectable": false,
+      "stage": "metric",
+      "semantic_parent": null,
+      "neutral_family": "family.metric",
+      "affected_outputs": [],
+      "description": "Origin-neutral nonselectable metric family"
+    },
+    {
+      "family_id": "family.denominator",
+      "kind": "neutral_family",
+      "selector": null,
+      "selectable": false,
+      "stage": "denominator",
+      "semantic_parent": null,
+      "neutral_family": "family.denominator",
+      "affected_outputs": [],
+      "description": "Origin-neutral nonselectable denominator family"
+    },
+    {
+      "family_id": "family.aggregation",
+      "kind": "neutral_family",
+      "selector": null,
+      "selectable": false,
+      "stage": "aggregation",
+      "semantic_parent": null,
+      "neutral_family": "family.aggregation",
+      "affected_outputs": [],
+      "description": "Origin-neutral nonselectable aggregation family"
+    },
+    {
+      "family_id": "family.reporting",
+      "kind": "neutral_family",
+      "selector": null,
+      "selectable": false,
+      "stage": "reporting",
+      "semantic_parent": null,
+      "neutral_family": "family.reporting",
+      "affected_outputs": [],
+      "description": "Origin-neutral nonselectable reporting family"
+    },
+    {
+      "family_id": "family.evaluation",
+      "kind": "neutral_family",
+      "selector": null,
+      "selectable": false,
+      "stage": "evaluation",
+      "semantic_parent": null,
+      "neutral_family": "family.evaluation",
+      "affected_outputs": [],
+      "description": "Origin-neutral nonselectable evaluation family"
+    }
+  ],
+  "variants": [
+    {
+      "variant_id": "aggregation4_legacy",
+      "kind": "stage_variant",
+      "selector": "aggregation=aggregation4_legacy",
+      "selectable": true,
+      "stage": "aggregation",
+      "semantic_parent": "family.aggregation",
+      "neutral_family": "family.aggregation",
+      "affected_outputs": [
+        "micro-summed TP/FP/FN",
+        "aggregate metrics"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 legacy cross-file micro aggregation",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "evaluation/evaluation_singleturn-f1-aggregate.py",
+          "sha256": "1b5aaad30416e671059d948a9235678d2b06dbed78e85710b46e20407234232e",
+          "source_manifest_record_id": "6d3e7f38334af9a1fc1de4326d0218d1c7d914f65eb1249f2a6e350a143bef00",
+          "evidence_id": "source-pre:6d3e7f38334af9a1fc1de4326d0218d1c7d914f65eb1249f2a6e350a143bef00"
+        },
+        {
+          "origin_root": "experiments4",
+          "relative_path": "evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+          "sha256": "96d1c3b7a141d1ebca13dd9c706d79896e7c7fb3b099ab6eaaf8d1cb430c3d32",
+          "source_manifest_record_id": "019b52c4ab97a2d440d01ac324a2d7ce859e861af7cb65f63c66b780a844d35f",
+          "evidence_id": "source-pre:019b52c4ab97a2d440d01ac324a2d7ce859e861af7cb65f63c66b780a844d35f"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.aggregation4_legacy.01",
+        "lin.code.aggregation4_legacy.02"
+      ],
+      "destinations": [
+        "src/adapters/aggregation/aggregation4_legacy/evaluation_singleturn-f1-aggregate.py",
+        "src/adapters/aggregation/aggregation4_legacy/evaluation_multiturn-f1-parse-aggregate.py"
+      ]
+    },
+    {
+      "variant_id": "aggregation5_canonical",
+      "kind": "stage_variant",
+      "selector": "aggregation=aggregation5_canonical",
+      "selectable": true,
+      "stage": "aggregation",
+      "semantic_parent": "family.aggregation",
+      "neutral_family": "family.aggregation",
+      "affected_outputs": [
+        "per-file and aggregate canonical metrics"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 canonical sorted-file aggregation",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "evaluation/eval_singleturn.py",
+          "sha256": "ec968290d6e52135ce8ab0884a8979996a44336061af5680292c94a148c7deed",
+          "source_manifest_record_id": "66e1510c6f44418aae2d0b43ff24a7570176baaab6c4b51b8c4c978b3ab5e11d",
+          "evidence_id": "source-pre:66e1510c6f44418aae2d0b43ff24a7570176baaab6c4b51b8c4c978b3ab5e11d"
+        },
+        {
+          "origin_root": "experiments5",
+          "relative_path": "evaluation/eval_multiturn.py",
+          "sha256": "b17df12a161672ed2c6da1dafb77e74070c0b3b07864720af4efd56e42330bc0",
+          "source_manifest_record_id": "8d4e1f974c86ae5116fa347175b96601484642cd9b8395957131902fdc242dd3",
+          "evidence_id": "source-pre:8d4e1f974c86ae5116fa347175b96601484642cd9b8395957131902fdc242dd3"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.aggregation5_canonical.01",
+        "lin.code.aggregation5_canonical.02"
+      ],
+      "destinations": [
+        "src/adapters/aggregation/aggregation5_canonical/eval_singleturn.py",
+        "src/adapters/aggregation/aggregation5_canonical/eval_multiturn.py"
+      ]
+    },
+    {
+      "variant_id": "aggregation6_release",
+      "kind": "stage_variant",
+      "selector": "aggregation=aggregation6_release",
+      "selectable": true,
+      "stage": "aggregation",
+      "semantic_parent": "family.aggregation",
+      "neutral_family": "family.aggregation",
+      "affected_outputs": [
+        "release micro-summed TP/FP/FN",
+        "aggregate metrics"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments6 release aggregation",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/evaluation/evaluation_singleturn-f1-aggregate.py",
+          "sha256": "1b5aaad30416e671059d948a9235678d2b06dbed78e85710b46e20407234232e",
+          "source_manifest_record_id": "93c4b6e92749a22c34291c1dc01812e8e37ac8a11a2eea02a29a62deb36692fc",
+          "evidence_id": "source-pre:93c4b6e92749a22c34291c1dc01812e8e37ac8a11a2eea02a29a62deb36692fc"
+        },
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+          "sha256": "5d854ba546ef17c0452983cbb9dc0276a98b642081325c16085dd0417c163ff8",
+          "source_manifest_record_id": "ed52ff2a9777d32a38debc662ad192b8862db7242ba4cac9b401320dda84bac4",
+          "evidence_id": "source-pre:ed52ff2a9777d32a38debc662ad192b8862db7242ba4cac9b401320dda84bac4"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.aggregation6_release.01",
+        "lin.code.aggregation6_release.02"
+      ],
+      "destinations": [
+        "src/adapters/aggregation/aggregation6_release/evaluation_singleturn-f1-aggregate.py",
+        "src/adapters/aggregation/aggregation6_release/evaluation_multiturn-f1-parse-aggregate.py"
+      ]
+    },
+    {
+      "variant_id": "dataset4_dev6",
+      "kind": "stage_variant",
+      "selector": "dataset=dataset4_dev6",
+      "selectable": true,
+      "stage": "dataset",
+      "semantic_parent": "family.dataset",
+      "neutral_family": "family.dataset",
+      "affected_outputs": [
+        "selected examples",
+        "session histories",
+        "all downstream inference and evaluation outputs"
+      ],
+      "equivalence_state": "unresolved_equivalence",
+      "distinction": "experiments4 root-specific dataset lineage",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "data/1229_dev_6.json",
+          "sha256": "911f37c195c52722ecf85a23bfa55be22c4c843112f49c633267f9d09b5d64ae",
+          "source_manifest_record_id": "4dc2902d284a6d123b5e20bf36609426b7eb7ed423b81e6c3b2230781baca52e",
+          "evidence_id": "source-pre:4dc2902d284a6d123b5e20bf36609426b7eb7ed423b81e6c3b2230781baca52e"
+        }
+      ],
+      "lineage_ids": [
+        "lin.config.dataset4_dev6.01"
+      ],
+      "destinations": [
+        "data/lineage/dataset4_dev6/1229_dev_6.json"
+      ]
+    },
+    {
+      "variant_id": "dataset5_dev6",
+      "kind": "stage_variant",
+      "selector": "dataset=dataset5_dev6",
+      "selectable": true,
+      "stage": "dataset",
+      "semantic_parent": "family.dataset",
+      "neutral_family": "family.dataset",
+      "affected_outputs": [
+        "selected examples",
+        "session histories",
+        "all downstream inference and evaluation outputs"
+      ],
+      "equivalence_state": "unresolved_equivalence",
+      "distinction": "experiments5 root-specific dataset lineage",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "data/1229_dev_6.json",
+          "sha256": "911f37c195c52722ecf85a23bfa55be22c4c843112f49c633267f9d09b5d64ae",
+          "source_manifest_record_id": "3a054e55d294ac231c8dab95d45815322622964cfc4e7921b7b693eb77e9f6be",
+          "evidence_id": "source-pre:3a054e55d294ac231c8dab95d45815322622964cfc4e7921b7b693eb77e9f6be"
+        }
+      ],
+      "lineage_ids": [
+        "lin.config.dataset5_dev6.01"
+      ],
+      "destinations": [
+        "data/lineage/dataset5_dev6/1229_dev_6.json"
+      ]
+    },
+    {
+      "variant_id": "dataset6_dev6",
+      "kind": "stage_variant",
+      "selector": "dataset=dataset6_dev6",
+      "selectable": true,
+      "stage": "dataset",
+      "semantic_parent": "family.dataset",
+      "neutral_family": "family.dataset",
+      "affected_outputs": [
+        "selected examples",
+        "session histories",
+        "all downstream inference and evaluation outputs"
+      ],
+      "equivalence_state": "unresolved_equivalence",
+      "distinction": "experiments6 root-specific dataset lineage",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "data/1229_dev_6.json",
+          "sha256": "911f37c195c52722ecf85a23bfa55be22c4c843112f49c633267f9d09b5d64ae",
+          "source_manifest_record_id": "9e038f93353747bfff8a0863ef221b63863133f0f93d3e15e9893ed660055089",
+          "evidence_id": "source-pre:9e038f93353747bfff8a0863ef221b63863133f0f93d3e15e9893ed660055089"
+        }
+      ],
+      "lineage_ids": [
+        "lin.config.dataset6_dev6.01"
+      ],
+      "destinations": [
+        "data/lineage/dataset6_dev6/1229_dev_6.json"
+      ]
+    },
+    {
+      "variant_id": "denominator4_legacy",
+      "kind": "stage_variant",
+      "selector": "denominator=denominator4_legacy",
+      "selectable": true,
+      "stage": "denominator",
+      "semantic_parent": "family.denominator",
+      "neutral_family": "family.denominator",
+      "affected_outputs": [
+        "precision/recall/F1 denominators",
+        "missing-value treatment"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 legacy denominator and missing-value semantics",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "evaluation/evaluation_singleturn-f1-aggregate.py",
+          "sha256": "1b5aaad30416e671059d948a9235678d2b06dbed78e85710b46e20407234232e",
+          "source_manifest_record_id": "6d3e7f38334af9a1fc1de4326d0218d1c7d914f65eb1249f2a6e350a143bef00",
+          "evidence_id": "source-pre:6d3e7f38334af9a1fc1de4326d0218d1c7d914f65eb1249f2a6e350a143bef00"
+        },
+        {
+          "origin_root": "experiments4",
+          "relative_path": "evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+          "sha256": "96d1c3b7a141d1ebca13dd9c706d79896e7c7fb3b099ab6eaaf8d1cb430c3d32",
+          "source_manifest_record_id": "019b52c4ab97a2d440d01ac324a2d7ce859e861af7cb65f63c66b780a844d35f",
+          "evidence_id": "source-pre:019b52c4ab97a2d440d01ac324a2d7ce859e861af7cb65f63c66b780a844d35f"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.denominator4_legacy.01",
+        "lin.code.denominator4_legacy.02"
+      ],
+      "destinations": [
+        "src/adapters/denominator/denominator4_legacy/evaluation_singleturn-f1-aggregate.py",
+        "src/adapters/denominator/denominator4_legacy/evaluation_multiturn-f1-parse-aggregate.py"
+      ]
+    },
+    {
+      "variant_id": "denominator5_canonical",
+      "kind": "stage_variant",
+      "selector": "denominator=denominator5_canonical",
+      "selectable": true,
+      "stage": "denominator",
+      "semantic_parent": "family.denominator",
+      "neutral_family": "family.denominator",
+      "affected_outputs": [
+        "zero-denominator values",
+        "preference-EM example count"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 canonical denominator and missing-value semantics",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "src/evaluation/metrics.py",
+          "sha256": "ae2db7707a3ba577ace94a7436b57ee5f17c0e87be1ee6376e2f50fef645e604",
+          "source_manifest_record_id": "cebe3afef77c992e9c5562d4137c1d8390fcee8f220c33383050b45afcaafca6",
+          "evidence_id": "source-pre:cebe3afef77c992e9c5562d4137c1d8390fcee8f220c33383050b45afcaafca6"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.denominator5_canonical.01"
+      ],
+      "destinations": [
+        "src/adapters/denominator/denominator5_canonical/metrics.py"
+      ]
+    },
+    {
+      "variant_id": "denominator6_release",
+      "kind": "stage_variant",
+      "selector": "denominator=denominator6_release",
+      "selectable": true,
+      "stage": "denominator",
+      "semantic_parent": "family.denominator",
+      "neutral_family": "family.denominator",
+      "affected_outputs": [
+        "precision/recall/F1 denominators",
+        "missing-value treatment"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments6 release denominator semantics",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/evaluation/evaluation_singleturn-f1-aggregate.py",
+          "sha256": "1b5aaad30416e671059d948a9235678d2b06dbed78e85710b46e20407234232e",
+          "source_manifest_record_id": "93c4b6e92749a22c34291c1dc01812e8e37ac8a11a2eea02a29a62deb36692fc",
+          "evidence_id": "source-pre:93c4b6e92749a22c34291c1dc01812e8e37ac8a11a2eea02a29a62deb36692fc"
+        },
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+          "sha256": "5d854ba546ef17c0452983cbb9dc0276a98b642081325c16085dd0417c163ff8",
+          "source_manifest_record_id": "ed52ff2a9777d32a38debc662ad192b8862db7242ba4cac9b401320dda84bac4",
+          "evidence_id": "source-pre:ed52ff2a9777d32a38debc662ad192b8862db7242ba4cac9b401320dda84bac4"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.denominator6_release.01",
+        "lin.code.denominator6_release.02"
+      ],
+      "destinations": [
+        "src/adapters/denominator/denominator6_release/evaluation_singleturn-f1-aggregate.py",
+        "src/adapters/denominator/denominator6_release/evaluation_multiturn-f1-parse-aggregate.py"
+      ]
+    },
+    {
+      "variant_id": "emem4_infer",
+      "kind": "stage_variant",
+      "selector": "inference=emem4_infer",
+      "selectable": true,
+      "stage": "inference",
+      "semantic_parent": "family.inference",
+      "neutral_family": "family.inference",
+      "affected_outputs": [
+        "E-Mem singleturn predictions",
+        "E-Mem multiturn predictions"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 E-Mem inference",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "e-mem/step2_evaluate_singleturn.py",
+          "sha256": "2c20a0f413a4982ed468084411de4e506af3d62967df0b8933ac9c219d3c8a4a",
+          "source_manifest_record_id": "89936b50818ee0d81066365d54d2389bcadcb2ef1541b2a2b38ab88955a73b23",
+          "evidence_id": "source-pre:89936b50818ee0d81066365d54d2389bcadcb2ef1541b2a2b38ab88955a73b23"
+        },
+        {
+          "origin_root": "experiments4",
+          "relative_path": "e-mem/step2_evaluate_multiturn.py",
+          "sha256": "3ec037068547378073c9d2efb5b3ce0b09042745f4216996c546eb72a2e72e4e",
+          "source_manifest_record_id": "e645e97c4f15d61bef93fdd6cd0ccad1d89aa1ee07ae4072f28678467d011838",
+          "evidence_id": "source-pre:e645e97c4f15d61bef93fdd6cd0ccad1d89aa1ee07ae4072f28678467d011838"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.emem4_infer.01",
+        "lin.code.emem4_infer.02"
+      ],
+      "destinations": [
+        "src/adapters/inference/emem4_infer/step2_evaluate_singleturn.py",
+        "src/adapters/inference/emem4_infer/step2_evaluate_multiturn.py"
+      ]
+    },
+    {
+      "variant_id": "emem4_preprocess",
+      "kind": "stage_variant",
+      "selector": "preprocessing=emem4_preprocess",
+      "selectable": true,
+      "stage": "preprocessing",
+      "semantic_parent": "family.preprocessing",
+      "neutral_family": "family.preprocessing",
+      "affected_outputs": [
+        "E-Mem index",
+        "retrieved memories"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 E-Mem build pipeline",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "e-mem/common.py",
+          "sha256": "863c9b0a85c73cc33c19638f0a4ca20889741dc018f98e07e0513b89688c2a65",
+          "source_manifest_record_id": "16b19f050b94394053183ba97e5551aef11c487cfdca7999e9a37cda02dd3386",
+          "evidence_id": "source-pre:16b19f050b94394053183ba97e5551aef11c487cfdca7999e9a37cda02dd3386"
+        },
+        {
+          "origin_root": "experiments4",
+          "relative_path": "e-mem/step1_build_memory.py",
+          "sha256": "a2e59b5e30be6ae818259f80adb5d4d898e3076f7f31557c1d9e49be5c5daa02",
+          "source_manifest_record_id": "a1a9221ae259582182423966a6d1883e0016733b6989b0e444a1c7f7615f0d8a",
+          "evidence_id": "source-pre:a1a9221ae259582182423966a6d1883e0016733b6989b0e444a1c7f7615f0d8a"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.emem4_preprocess.01",
+        "lin.code.emem4_preprocess.02"
+      ],
+      "destinations": [
+        "src/adapters/preprocessing/emem4_preprocess/common.py",
+        "src/adapters/preprocessing/emem4_preprocess/step1_build_memory.py"
+      ]
+    },
+    {
+      "variant_id": "emem4_prompt",
+      "kind": "stage_variant",
+      "selector": "prompt=emem4_prompt",
+      "selectable": true,
+      "stage": "prompt",
+      "semantic_parent": "family.prompt",
+      "neutral_family": "family.prompt",
+      "affected_outputs": [
+        "E-Mem retrieval and response prompts"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 E-Mem-local prompt",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "e-mem/prompt_inference.py",
+          "sha256": "fddb283818a8f05ec64e56fdac8a3aa84e58a0463d7765362dae87c3ec84044f",
+          "source_manifest_record_id": "5d5e1df90a3350d444a5e96b84b70785606294cc5cf96259619c086b48200e80",
+          "evidence_id": "source-pre:5d5e1df90a3350d444a5e96b84b70785606294cc5cf96259619c086b48200e80"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.emem4_prompt.01"
+      ],
+      "destinations": [
+        "src/adapters/prompt/emem4_prompt/prompt_inference.py"
+      ]
+    },
+    {
+      "variant_id": "emem5_infer",
+      "kind": "stage_variant",
+      "selector": "inference=emem5_infer",
+      "selectable": true,
+      "stage": "inference",
+      "semantic_parent": "family.inference",
+      "neutral_family": "family.inference",
+      "affected_outputs": [
+        "E-Mem singleturn predictions",
+        "E-Mem multiturn predictions"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 E-Mem inference",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/emem/step2_evaluate_singleturn.py",
+          "sha256": "9790d1656b424db0437cedae67a1b06520cd08864f9a6f9a837c0be58570e306",
+          "source_manifest_record_id": "8403a687ebf5debfab2556d3c7a45649fc3175dda11c6a1c9b0fa69d54f3feb4",
+          "evidence_id": "source-pre:8403a687ebf5debfab2556d3c7a45649fc3175dda11c6a1c9b0fa69d54f3feb4"
+        },
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/emem/step2_evaluate_multiturn.py",
+          "sha256": "f339407d994a55bf7f00820c1a318271dcfc905a147fb6e811463143f377719a",
+          "source_manifest_record_id": "aa8d716eccacc84017cf9218c8fe3859ca203742bc4defa7ae0351185c806214",
+          "evidence_id": "source-pre:aa8d716eccacc84017cf9218c8fe3859ca203742bc4defa7ae0351185c806214"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.emem5_infer.01",
+        "lin.code.emem5_infer.02"
+      ],
+      "destinations": [
+        "src/adapters/inference/emem5_infer/step2_evaluate_singleturn.py",
+        "src/adapters/inference/emem5_infer/step2_evaluate_multiturn.py"
+      ]
+    },
+    {
+      "variant_id": "emem5_preprocess",
+      "kind": "stage_variant",
+      "selector": "preprocessing=emem5_preprocess",
+      "selectable": true,
+      "stage": "preprocessing",
+      "semantic_parent": "family.preprocessing",
+      "neutral_family": "family.preprocessing",
+      "affected_outputs": [
+        "E-Mem index",
+        "retrieved memories"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 E-Mem build pipeline",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/emem/common.py",
+          "sha256": "b08e29151c71548334be2ebf505639428cf3e565ec147383e4386c4eb3b4007d",
+          "source_manifest_record_id": "9b109d237b53958e7c5ba5338785060527478bca1aa3d0632c1026cf9b358668",
+          "evidence_id": "source-pre:9b109d237b53958e7c5ba5338785060527478bca1aa3d0632c1026cf9b358668"
+        },
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/emem/step1_build_memory.py",
+          "sha256": "a3268bb486b54caa6d476fa4a38c3b9fc460e048d941ca28087af7ddc4ba8329",
+          "source_manifest_record_id": "bf40a49f796a0e711f9379d91c70ba3d61068b35b8cd0ccacbf4d192f6b97243",
+          "evidence_id": "source-pre:bf40a49f796a0e711f9379d91c70ba3d61068b35b8cd0ccacbf4d192f6b97243"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.emem5_preprocess.01",
+        "lin.code.emem5_preprocess.02"
+      ],
+      "destinations": [
+        "src/adapters/preprocessing/emem5_preprocess/common.py",
+        "src/adapters/preprocessing/emem5_preprocess/step1_build_memory.py"
+      ]
+    },
+    {
+      "variant_id": "emem5_prompt",
+      "kind": "stage_variant",
+      "selector": "prompt=emem5_prompt",
+      "selectable": true,
+      "stage": "prompt",
+      "semantic_parent": "family.prompt",
+      "neutral_family": "family.prompt",
+      "affected_outputs": [
+        "E-Mem retrieval and response prompts"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 shared prompt bundle used by E-Mem",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "src/prompts.py",
+          "sha256": "17bc15c38046ae275c5f0e7b708bc2023a77c7b5ff56320fa1a7b80bb2a9431a",
+          "source_manifest_record_id": "b9d1c4affc1224150acd50ac73bf21a7a650dad7c39dc7b2980a45acd976285d",
+          "evidence_id": "source-pre:b9d1c4affc1224150acd50ac73bf21a7a650dad7c39dc7b2980a45acd976285d"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.emem5_prompt.01"
+      ],
+      "destinations": [
+        "src/adapters/prompt/emem5_prompt/prompts.py"
+      ]
+    },
+    {
+      "variant_id": "error4_compat",
+      "kind": "stage_variant",
+      "selector": "error_policy=error4_compat",
+      "selectable": true,
+      "stage": "error_policy",
+      "semantic_parent": "family.error_policy",
+      "neutral_family": "family.error_policy",
+      "affected_outputs": [
+        "missing/invalid model outputs",
+        "retry outcomes"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 inline provider and parse error policy",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/Preference_Memory_step2_ACTION_singleturn_api.py",
+          "sha256": "372d317be9a26f10aa4e2df7fae4bcc2291299e1b277f89c7c4fc0b99c8934a9",
+          "source_manifest_record_id": "86f8a2ef2196bbfbf76f2702049cd3ecac91ab54009a449d87dc83ddcf9f0620",
+          "evidence_id": "source-pre:86f8a2ef2196bbfbf76f2702049cd3ecac91ab54009a449d87dc83ddcf9f0620"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.error4_compat.01"
+      ],
+      "destinations": [
+        "src/adapters/error_policy/error4_compat/Preference_Memory_step2_ACTION_singleturn_api.py"
+      ]
+    },
+    {
+      "variant_id": "error5_native",
+      "kind": "stage_variant",
+      "selector": "error_policy=error5_native",
+      "selectable": true,
+      "stage": "error_policy",
+      "semantic_parent": "family.error_policy",
+      "neutral_family": "family.error_policy",
+      "affected_outputs": [
+        "provider errors",
+        "parse failures",
+        "missing preference config behavior"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 shared runtime/evaluator error policy",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "src/llm_client.py",
+          "sha256": "3025111dbb26b4040b85a34a53f33bf9374c0dd7892d292567fd844dd83a82af",
+          "source_manifest_record_id": "2ee65e42aeeb9e1fdf93ec7982ab642355b9803f93e5209d953d051c5eda1e24",
+          "evidence_id": "source-pre:2ee65e42aeeb9e1fdf93ec7982ab642355b9803f93e5209d953d051c5eda1e24"
+        },
+        {
+          "origin_root": "experiments5",
+          "relative_path": "src/evaluation/metrics.py",
+          "sha256": "ae2db7707a3ba577ace94a7436b57ee5f17c0e87be1ee6376e2f50fef645e604",
+          "source_manifest_record_id": "cebe3afef77c992e9c5562d4137c1d8390fcee8f220c33383050b45afcaafca6",
+          "evidence_id": "source-pre:cebe3afef77c992e9c5562d4137c1d8390fcee8f220c33383050b45afcaafca6"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.error5_native.01",
+        "lin.code.error5_native.02"
+      ],
+      "destinations": [
+        "src/adapters/error_policy/error5_native/llm_client.py",
+        "src/adapters/error_policy/error5_native/metrics.py"
+      ]
+    },
+    {
+      "variant_id": "error6_release",
+      "kind": "stage_variant",
+      "selector": "error_policy=error6_release",
+      "selectable": true,
+      "stage": "error_policy",
+      "semantic_parent": "family.error_policy",
+      "neutral_family": "family.error_policy",
+      "affected_outputs": [
+        "missing/invalid model outputs",
+        "release retry outcomes"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments6 inline error policy",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/Preference_Memory_step2_ACTION_singleturn_api.py",
+          "sha256": "249d4dbad83d4143f865e16d17a23f26577b67f3f00b3d70e5b84642f94b2843",
+          "source_manifest_record_id": "8424f098f4069cb06d35eade5b7384dc1e8dd670ef6dbd77ab6ab8c767f107b4",
+          "evidence_id": "source-pre:8424f098f4069cb06d35eade5b7384dc1e8dd670ef6dbd77ab6ab8c767f107b4"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.error6_release.01"
+      ],
+      "destinations": [
+        "src/adapters/error_policy/error6_release/Preference_Memory_step2_ACTION_singleturn_api.py"
+      ]
+    },
+    {
+      "variant_id": "eval4_legacy",
+      "kind": "stage_variant",
+      "selector": "evaluation=eval4_legacy",
+      "selectable": true,
+      "stage": "evaluation",
+      "semantic_parent": "family.evaluation",
+      "neutral_family": "family.evaluation",
+      "affected_outputs": [
+        "legacy evaluation outputs",
+        "paper-facing aggregate metrics"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "required compatibility selector expanding to explicit evaluation substages",
+      "expands_to": {
+        "parser": "parser4_inline",
+        "normalization": "normalization4_legacy",
+        "error_policy": "error4_compat",
+        "metric": "metric4_legacy",
+        "denominator": "denominator4_legacy",
+        "aggregation": "aggregation4_legacy",
+        "reporting": "report4_legacy"
+      },
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "evaluation/evaluation_singleturn-f1-aggregate.py",
+          "sha256": "1b5aaad30416e671059d948a9235678d2b06dbed78e85710b46e20407234232e",
+          "source_manifest_record_id": "6d3e7f38334af9a1fc1de4326d0218d1c7d914f65eb1249f2a6e350a143bef00",
+          "evidence_id": "source-pre:6d3e7f38334af9a1fc1de4326d0218d1c7d914f65eb1249f2a6e350a143bef00"
+        },
+        {
+          "origin_root": "experiments4",
+          "relative_path": "evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+          "sha256": "96d1c3b7a141d1ebca13dd9c706d79896e7c7fb3b099ab6eaaf8d1cb430c3d32",
+          "source_manifest_record_id": "019b52c4ab97a2d440d01ac324a2d7ce859e861af7cb65f63c66b780a844d35f",
+          "evidence_id": "source-pre:019b52c4ab97a2d440d01ac324a2d7ce859e861af7cb65f63c66b780a844d35f"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.eval4_legacy.01",
+        "lin.code.eval4_legacy.02"
+      ],
+      "destinations": [
+        "src/adapters/evaluation/eval4_legacy/evaluation_singleturn-f1-aggregate.py",
+        "src/adapters/evaluation/eval4_legacy/evaluation_multiturn-f1-parse-aggregate.py"
+      ]
+    },
+    {
+      "variant_id": "eval4_mt_parse_0103a",
+      "kind": "stage_variant",
+      "selector": "parser=eval4_mt_parse_0103a",
+      "selectable": true,
+      "stage": "parser",
+      "semantic_parent": "family.parser",
+      "neutral_family": "family.parser",
+      "affected_outputs": [
+        "historical multiturn TP/FP/FN/F1"
+      ],
+      "equivalence_state": "unresolved_equivalence",
+      "distinction": "historical Jan-03 parser result; code snapshot unavailable",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "evaluation/eval_results/results_memory_multiturn3.csv",
+          "sha256": "65b45c941b505af4bcb78707fbff6b418616be533acaed6be1ce42099c99dab2",
+          "source_manifest_record_id": "db1242cf209b7348dadf8c150adab4004b83b5efaaa7e68f2fd69f9155ff7188",
+          "evidence_id": "source-pre:db1242cf209b7348dadf8c150adab4004b83b5efaaa7e68f2fd69f9155ff7188"
+        }
+      ],
+      "lineage_ids": [
+        "lin.config.eval4_mt_parse_0103a.01"
+      ],
+      "destinations": [
+        "lineage/reference/eval4_mt_parse_0103a/results_memory_multiturn3.csv"
+      ]
+    },
+    {
+      "variant_id": "eval4_mt_parse_0103b",
+      "kind": "stage_variant",
+      "selector": "parser=eval4_mt_parse_0103b",
+      "selectable": true,
+      "stage": "parser",
+      "semantic_parent": "family.parser",
+      "neutral_family": "family.parser",
+      "affected_outputs": [
+        "historical multiturn TP/FP/FN/F1"
+      ],
+      "equivalence_state": "unresolved_equivalence",
+      "distinction": "second historical Jan-03 parser result; code snapshot unavailable",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "evaluation/eval_results/results_memory_multiturn4.csv",
+          "sha256": "503e78a424e47d33533cbb70c0b1f25d9638f0304726ea2e12cbf704a9e02707",
+          "source_manifest_record_id": "6042e09db362dcf4b29b38ac0b25096e247e2052a9a04f4288d01764bb5ab65c",
+          "evidence_id": "source-pre:6042e09db362dcf4b29b38ac0b25096e247e2052a9a04f4288d01764bb5ab65c"
+        }
+      ],
+      "lineage_ids": [
+        "lin.config.eval4_mt_parse_0103b.01"
+      ],
+      "destinations": [
+        "lineage/reference/eval4_mt_parse_0103b/results_memory_multiturn4.csv"
+      ]
+    },
+    {
+      "variant_id": "eval5_canonical",
+      "kind": "stage_variant",
+      "selector": "evaluation=eval5_canonical",
+      "selectable": true,
+      "stage": "evaluation",
+      "semantic_parent": "family.evaluation",
+      "neutral_family": "family.evaluation",
+      "affected_outputs": [
+        "canonical evaluation outputs",
+        "paper-facing aggregate metrics"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "required compatibility selector expanding to explicit evaluation substages",
+      "expands_to": {
+        "parser": "parser5_canonical",
+        "normalization": "normalization5_canonical",
+        "error_policy": "error5_native",
+        "metric": "metric5_canonical",
+        "denominator": "denominator5_canonical",
+        "aggregation": "aggregation5_canonical",
+        "reporting": "report5_canonical"
+      },
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "evaluation/eval_singleturn.py",
+          "sha256": "ec968290d6e52135ce8ab0884a8979996a44336061af5680292c94a148c7deed",
+          "source_manifest_record_id": "66e1510c6f44418aae2d0b43ff24a7570176baaab6c4b51b8c4c978b3ab5e11d",
+          "evidence_id": "source-pre:66e1510c6f44418aae2d0b43ff24a7570176baaab6c4b51b8c4c978b3ab5e11d"
+        },
+        {
+          "origin_root": "experiments5",
+          "relative_path": "evaluation/eval_multiturn.py",
+          "sha256": "b17df12a161672ed2c6da1dafb77e74070c0b3b07864720af4efd56e42330bc0",
+          "source_manifest_record_id": "8d4e1f974c86ae5116fa347175b96601484642cd9b8395957131902fdc242dd3",
+          "evidence_id": "source-pre:8d4e1f974c86ae5116fa347175b96601484642cd9b8395957131902fdc242dd3"
+        },
+        {
+          "origin_root": "experiments5",
+          "relative_path": "src/evaluation/metrics.py",
+          "sha256": "ae2db7707a3ba577ace94a7436b57ee5f17c0e87be1ee6376e2f50fef645e604",
+          "source_manifest_record_id": "cebe3afef77c992e9c5562d4137c1d8390fcee8f220c33383050b45afcaafca6",
+          "evidence_id": "source-pre:cebe3afef77c992e9c5562d4137c1d8390fcee8f220c33383050b45afcaafca6"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.eval5_canonical.01",
+        "lin.code.eval5_canonical.02",
+        "lin.code.eval5_canonical.03"
+      ],
+      "destinations": [
+        "src/adapters/evaluation/eval5_canonical/eval_singleturn.py",
+        "src/adapters/evaluation/eval5_canonical/eval_multiturn.py",
+        "src/adapters/evaluation/eval5_canonical/metrics.py"
+      ]
+    },
+    {
+      "variant_id": "eval5_legacy_mt",
+      "kind": "stage_variant",
+      "selector": "evaluation=eval5_legacy_mt",
+      "selectable": true,
+      "stage": "evaluation",
+      "semantic_parent": "family.evaluation",
+      "neutral_family": "family.evaluation",
+      "affected_outputs": [
+        "legacy experiments5 multiturn TP/FP/FN/F1"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "additional legacy evaluator retained beside eval5_canonical",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+          "sha256": "d93cc44d6f94d87e0686e5a8fde0ea6619ef2b5aa7cf7337a9caec77cef240dd",
+          "source_manifest_record_id": "c6ce02d41ffe002287d431da63b04f9edf3819a7569d14dbdc4be4d66a5c1291",
+          "evidence_id": "source-pre:c6ce02d41ffe002287d431da63b04f9edf3819a7569d14dbdc4be4d66a5c1291"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.eval5_legacy_mt.01"
+      ],
+      "destinations": [
+        "src/adapters/evaluation/eval5_legacy_mt/evaluation_multiturn-f1-parse-aggregate.py"
+      ]
+    },
+    {
+      "variant_id": "eval6_release",
+      "kind": "stage_variant",
+      "selector": "evaluation=eval6_release",
+      "selectable": true,
+      "stage": "evaluation",
+      "semantic_parent": "family.evaluation",
+      "neutral_family": "family.evaluation",
+      "affected_outputs": [
+        "release evaluation outputs",
+        "paper-facing aggregate metrics"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "required compatibility selector expanding to explicit evaluation substages",
+      "expands_to": {
+        "parser": "parser6_inline",
+        "normalization": "normalization6_release",
+        "error_policy": "error6_release",
+        "metric": "metric6_release",
+        "denominator": "denominator6_release",
+        "aggregation": "aggregation6_release",
+        "reporting": "report6_release"
+      },
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/evaluation/evaluation_singleturn-f1-aggregate.py",
+          "sha256": "1b5aaad30416e671059d948a9235678d2b06dbed78e85710b46e20407234232e",
+          "source_manifest_record_id": "93c4b6e92749a22c34291c1dc01812e8e37ac8a11a2eea02a29a62deb36692fc",
+          "evidence_id": "source-pre:93c4b6e92749a22c34291c1dc01812e8e37ac8a11a2eea02a29a62deb36692fc"
+        },
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+          "sha256": "5d854ba546ef17c0452983cbb9dc0276a98b642081325c16085dd0417c163ff8",
+          "source_manifest_record_id": "ed52ff2a9777d32a38debc662ad192b8862db7242ba4cac9b401320dda84bac4",
+          "evidence_id": "source-pre:ed52ff2a9777d32a38debc662ad192b8862db7242ba4cac9b401320dda84bac4"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.eval6_release.01",
+        "lin.code.eval6_release.02"
+      ],
+      "destinations": [
+        "src/adapters/evaluation/eval6_release/evaluation_singleturn-f1-aggregate.py",
+        "src/adapters/evaluation/eval6_release/evaluation_multiturn-f1-parse-aggregate.py"
+      ]
+    },
+    {
+      "variant_id": "filter4_session",
+      "kind": "stage_variant",
+      "selector": "filtering=filter4_session",
+      "selectable": true,
+      "stage": "filtering",
+      "semantic_parent": "family.filtering",
+      "neutral_family": "family.filtering",
+      "affected_outputs": [
+        "included session-memory examples",
+        "filtered summaries"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 session-memory skip/filter rules",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/session_memory_eval_0312/generate_filtered_analysis_from_existing.py",
+          "sha256": "d77dc47edab7238f4c2bdaab2baa473e2325c0b993e56bdf7a416e5849c52a9d",
+          "source_manifest_record_id": "6d84b6b9023bef5993062711371a1fa554eed240c0f50609e14f2a0c956e0d08",
+          "evidence_id": "source-pre:6d84b6b9023bef5993062711371a1fa554eed240c0f50609e14f2a0c956e0d08"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.filter4_session.01"
+      ],
+      "destinations": [
+        "src/adapters/filtering/filter4_session/generate_filtered_analysis_from_existing.py"
+      ]
+    },
+    {
+      "variant_id": "filter5_data_utils",
+      "kind": "stage_variant",
+      "selector": "filtering=filter5_data_utils",
+      "selectable": true,
+      "stage": "filtering",
+      "semantic_parent": "family.filtering",
+      "neutral_family": "family.filtering",
+      "affected_outputs": [
+        "example_id_sub selection",
+        "max_queries subsampling"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 deterministic filtering/subsampling",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "src/data_utils.py",
+          "sha256": "aeee8c56727745be66ad4c7456f5315e31fb3b09c0db4fb4776cd2f00488aed5",
+          "source_manifest_record_id": "119c59a031416791fdb1275e288f745180d6d6000e4e968e071d07c38c0d4b6c",
+          "evidence_id": "source-pre:119c59a031416791fdb1275e288f745180d6d6000e4e968e071d07c38c0d4b6c"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.filter5_data_utils.01"
+      ],
+      "destinations": [
+        "src/adapters/filtering/filter5_data_utils/data_utils.py"
+      ]
+    },
+    {
+      "variant_id": "filter6_session",
+      "kind": "stage_variant",
+      "selector": "filtering=filter6_session",
+      "selectable": true,
+      "stage": "filtering",
+      "semantic_parent": "family.filtering",
+      "neutral_family": "family.filtering",
+      "affected_outputs": [
+        "included session-memory examples",
+        "filtered summaries"
+      ],
+      "equivalence_state": "unresolved_equivalence",
+      "distinction": "experiments6 session-memory skip/filter rules",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/session_memory_eval/generate_filtered_analysis_from_existing.py",
+          "sha256": "d77dc47edab7238f4c2bdaab2baa473e2325c0b993e56bdf7a416e5849c52a9d",
+          "source_manifest_record_id": "82fe7ebaa4602cf68066f752e52f34d5b6957217237a512c6638c01b4c1b6061",
+          "evidence_id": "source-pre:82fe7ebaa4602cf68066f752e52f34d5b6957217237a512c6638c01b4c1b6061"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.filter6_session.01"
+      ],
+      "destinations": [
+        "src/adapters/filtering/filter6_session/generate_filtered_analysis_from_existing.py"
+      ]
+    },
+    {
+      "variant_id": "infer4_api",
+      "kind": "stage_variant",
+      "selector": "inference=infer4_api",
+      "selectable": true,
+      "stage": "inference",
+      "semantic_parent": "family.inference",
+      "neutral_family": "family.inference",
+      "affected_outputs": [
+        "singleturn predictions",
+        "multiturn predictions"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 hosted-API implementation",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/Preference_Memory_step2_ACTION_singleturn_api.py",
+          "sha256": "372d317be9a26f10aa4e2df7fae4bcc2291299e1b277f89c7c4fc0b99c8934a9",
+          "source_manifest_record_id": "86f8a2ef2196bbfbf76f2702049cd3ecac91ab54009a449d87dc83ddcf9f0620",
+          "evidence_id": "source-pre:86f8a2ef2196bbfbf76f2702049cd3ecac91ab54009a449d87dc83ddcf9f0620"
+        },
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/Preference_Memory_step2_ACTION_multiturn_api.py",
+          "sha256": "058f12b2c61456d318d2e4f9800c623158c76d08f75efb48633fc169876f6109",
+          "source_manifest_record_id": "92af964f73a7366fdaa15626ade7bb4bb6836dbd4b118e5d939516d655de86c0",
+          "evidence_id": "source-pre:92af964f73a7366fdaa15626ade7bb4bb6836dbd4b118e5d939516d655de86c0"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.infer4_api.01",
+        "lin.code.infer4_api.02"
+      ],
+      "destinations": [
+        "src/adapters/inference/infer4_api/Preference_Memory_step2_ACTION_singleturn_api.py",
+        "src/adapters/inference/infer4_api/Preference_Memory_step2_ACTION_multiturn_api.py"
+      ]
+    },
+    {
+      "variant_id": "infer4_compat",
+      "kind": "stage_variant",
+      "selector": "inference=infer4_compat",
+      "selectable": true,
+      "stage": "inference",
+      "semantic_parent": "family.inference",
+      "neutral_family": "family.inference",
+      "affected_outputs": [
+        "experiments4-compatible predictions",
+        "downstream evaluation outputs"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "required experiments4 compatibility selector",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/Preference_Memory_step2_ACTION_singleturn_api.py",
+          "sha256": "372d317be9a26f10aa4e2df7fae4bcc2291299e1b277f89c7c4fc0b99c8934a9",
+          "source_manifest_record_id": "86f8a2ef2196bbfbf76f2702049cd3ecac91ab54009a449d87dc83ddcf9f0620",
+          "evidence_id": "source-pre:86f8a2ef2196bbfbf76f2702049cd3ecac91ab54009a449d87dc83ddcf9f0620"
+        },
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/Preference_Memory_step2_ACTION_multiturn_api.py",
+          "sha256": "058f12b2c61456d318d2e4f9800c623158c76d08f75efb48633fc169876f6109",
+          "source_manifest_record_id": "92af964f73a7366fdaa15626ade7bb4bb6836dbd4b118e5d939516d655de86c0",
+          "evidence_id": "source-pre:92af964f73a7366fdaa15626ade7bb4bb6836dbd4b118e5d939516d655de86c0"
+        },
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/Preference_Memory_step2_ACTION_singleturn_VLLM.py",
+          "sha256": "8ddfe18f1b524c01dd473d331adbcef86408e7840e242b8ff332b19a4147ea4a",
+          "source_manifest_record_id": "b773ba2e479dd5ea33bd0a5ed4819aac475004a8031a8a2d4db35fac3e2cd6ba",
+          "evidence_id": "source-pre:b773ba2e479dd5ea33bd0a5ed4819aac475004a8031a8a2d4db35fac3e2cd6ba"
+        },
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/Preference_Memory_step2_ACTION_multiturn_VLLM.py",
+          "sha256": "ecf6b4be42f05ac966813be9fcad71e34f6d88091f4074b658efd4985e4f1b4f",
+          "source_manifest_record_id": "18d436048086194b30b344b036a0096056c1512b5a06e4cd6e569a36dd14718d",
+          "evidence_id": "source-pre:18d436048086194b30b344b036a0096056c1512b5a06e4cd6e569a36dd14718d"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.infer4_compat.01",
+        "lin.code.infer4_compat.02",
+        "lin.code.infer4_compat.03",
+        "lin.code.infer4_compat.04"
+      ],
+      "destinations": [
+        "src/adapters/inference/infer4_compat/Preference_Memory_step2_ACTION_singleturn_api.py",
+        "src/adapters/inference/infer4_compat/Preference_Memory_step2_ACTION_multiturn_api.py",
+        "src/adapters/inference/infer4_compat/Preference_Memory_step2_ACTION_singleturn_VLLM.py",
+        "src/adapters/inference/infer4_compat/Preference_Memory_step2_ACTION_multiturn_VLLM.py"
+      ]
+    },
+    {
+      "variant_id": "infer4_vllm",
+      "kind": "stage_variant",
+      "selector": "inference=infer4_vllm",
+      "selectable": true,
+      "stage": "inference",
+      "semantic_parent": "family.inference",
+      "neutral_family": "family.inference",
+      "affected_outputs": [
+        "singleturn predictions",
+        "multiturn predictions"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 VLLM implementation with distinct sampling/token handling",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/Preference_Memory_step2_ACTION_singleturn_VLLM.py",
+          "sha256": "8ddfe18f1b524c01dd473d331adbcef86408e7840e242b8ff332b19a4147ea4a",
+          "source_manifest_record_id": "b773ba2e479dd5ea33bd0a5ed4819aac475004a8031a8a2d4db35fac3e2cd6ba",
+          "evidence_id": "source-pre:b773ba2e479dd5ea33bd0a5ed4819aac475004a8031a8a2d4db35fac3e2cd6ba"
+        },
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/Preference_Memory_step2_ACTION_multiturn_VLLM.py",
+          "sha256": "ecf6b4be42f05ac966813be9fcad71e34f6d88091f4074b658efd4985e4f1b4f",
+          "source_manifest_record_id": "18d436048086194b30b344b036a0096056c1512b5a06e4cd6e569a36dd14718d",
+          "evidence_id": "source-pre:18d436048086194b30b344b036a0096056c1512b5a06e4cd6e569a36dd14718d"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.infer4_vllm.01",
+        "lin.code.infer4_vllm.02"
+      ],
+      "destinations": [
+        "src/adapters/inference/infer4_vllm/Preference_Memory_step2_ACTION_singleturn_VLLM.py",
+        "src/adapters/inference/infer4_vllm/Preference_Memory_step2_ACTION_multiturn_VLLM.py"
+      ]
+    },
+    {
+      "variant_id": "infer5_native",
+      "kind": "stage_variant",
+      "selector": "inference=infer5_native",
+      "selectable": true,
+      "stage": "inference",
+      "semantic_parent": "family.inference",
+      "neutral_family": "family.inference",
+      "affected_outputs": [
+        "experiments5-native predictions",
+        "downstream evaluation outputs"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "required experiments5 native selector",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/our_memory/inference_api_singleturn.py",
+          "sha256": "1925bca13b568aa60ab2b227001373a10b8fa432775528d8c3479d52a1c1012b",
+          "source_manifest_record_id": "6d58e8138074c1f87f59da83843d6f88e8642a176c4c45fdb9134e92435d3309",
+          "evidence_id": "source-pre:6d58e8138074c1f87f59da83843d6f88e8642a176c4c45fdb9134e92435d3309"
+        },
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/our_memory/inference_api_multiturn.py",
+          "sha256": "d01bba450e4501dfba224eaec2b552f7f539cb2e124e4f5f974547ab3adf3dba",
+          "source_manifest_record_id": "744cc3456cacaffddcc34a351a6b9f8d936d4dfd0fa740e685cf0b91beb571df",
+          "evidence_id": "source-pre:744cc3456cacaffddcc34a351a6b9f8d936d4dfd0fa740e685cf0b91beb571df"
+        },
+        {
+          "origin_root": "experiments5",
+          "relative_path": "src/llm_client.py",
+          "sha256": "3025111dbb26b4040b85a34a53f33bf9374c0dd7892d292567fd844dd83a82af",
+          "source_manifest_record_id": "2ee65e42aeeb9e1fdf93ec7982ab642355b9803f93e5209d953d051c5eda1e24",
+          "evidence_id": "source-pre:2ee65e42aeeb9e1fdf93ec7982ab642355b9803f93e5209d953d051c5eda1e24"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.infer5_native.01",
+        "lin.code.infer5_native.02",
+        "lin.code.infer5_native.03"
+      ],
+      "destinations": [
+        "src/adapters/inference/infer5_native/inference_api_singleturn.py",
+        "src/adapters/inference/infer5_native/inference_api_multiturn.py",
+        "src/adapters/inference/infer5_native/llm_client.py"
+      ]
+    },
+    {
+      "variant_id": "infer5_v1_api",
+      "kind": "stage_variant",
+      "selector": "inference=infer5_v1_api",
+      "selectable": true,
+      "stage": "inference",
+      "semantic_parent": "family.inference",
+      "neutral_family": "family.inference",
+      "affected_outputs": [
+        "v1 singleturn predictions",
+        "v1 multiturn predictions"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 v1 hosted-API implementation",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/our_memory/inference_api_singleturn.py",
+          "sha256": "1925bca13b568aa60ab2b227001373a10b8fa432775528d8c3479d52a1c1012b",
+          "source_manifest_record_id": "6d58e8138074c1f87f59da83843d6f88e8642a176c4c45fdb9134e92435d3309",
+          "evidence_id": "source-pre:6d58e8138074c1f87f59da83843d6f88e8642a176c4c45fdb9134e92435d3309"
+        },
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/our_memory/inference_api_multiturn.py",
+          "sha256": "d01bba450e4501dfba224eaec2b552f7f539cb2e124e4f5f974547ab3adf3dba",
+          "source_manifest_record_id": "744cc3456cacaffddcc34a351a6b9f8d936d4dfd0fa740e685cf0b91beb571df",
+          "evidence_id": "source-pre:744cc3456cacaffddcc34a351a6b9f8d936d4dfd0fa740e685cf0b91beb571df"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.infer5_v1_api.01",
+        "lin.code.infer5_v1_api.02"
+      ],
+      "destinations": [
+        "src/adapters/inference/infer5_v1_api/inference_api_singleturn.py",
+        "src/adapters/inference/infer5_v1_api/inference_api_multiturn.py"
+      ]
+    },
+    {
+      "variant_id": "infer5_v1_vllm",
+      "kind": "stage_variant",
+      "selector": "inference=infer5_v1_vllm",
+      "selectable": true,
+      "stage": "inference",
+      "semantic_parent": "family.inference",
+      "neutral_family": "family.inference",
+      "affected_outputs": [
+        "v1 singleturn predictions",
+        "v1 multiturn predictions"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 v1 VLLM implementation",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/our_memory/inference_vllm_singleturn.py",
+          "sha256": "64dd4199d16e257998d846b147cbbb7de3bf8aef4a2269cd82e8200232d58a16",
+          "source_manifest_record_id": "25d3ae94bde825d13123a496acff1212b874271290a44c91070d0cc440bb2306",
+          "evidence_id": "source-pre:25d3ae94bde825d13123a496acff1212b874271290a44c91070d0cc440bb2306"
+        },
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/our_memory/inference_vllm_multiturn.py",
+          "sha256": "a4e51d5ec92c34d6b40090bac6958a70ced90d88aa39feb816432c94f8b28ebe",
+          "source_manifest_record_id": "208666c5f6b735bbf6d9fe58b6dc962669d2d7caef40ffe11993a3d051572e32",
+          "evidence_id": "source-pre:208666c5f6b735bbf6d9fe58b6dc962669d2d7caef40ffe11993a3d051572e32"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.infer5_v1_vllm.01",
+        "lin.code.infer5_v1_vllm.02"
+      ],
+      "destinations": [
+        "src/adapters/inference/infer5_v1_vllm/inference_vllm_singleturn.py",
+        "src/adapters/inference/infer5_v1_vllm/inference_vllm_multiturn.py"
+      ]
+    },
+    {
+      "variant_id": "infer5_v2_api",
+      "kind": "stage_variant",
+      "selector": "inference=infer5_v2_api",
+      "selectable": true,
+      "stage": "inference",
+      "semantic_parent": "family.inference",
+      "neutral_family": "family.inference",
+      "affected_outputs": [
+        "v2 singleturn predictions",
+        "v2 multiturn predictions"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 v2 hosted-API implementation",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/our_memory/v2/inference_api_singleturn.py",
+          "sha256": "9429596f36c1a29140928eaae94d79930fa917648770dcb3029c3fdc84b637d8",
+          "source_manifest_record_id": "bbe8cea0cfc77528043ac9f1b9cce6d32d28c02281bf3548102bde701ed63bda",
+          "evidence_id": "source-pre:bbe8cea0cfc77528043ac9f1b9cce6d32d28c02281bf3548102bde701ed63bda"
+        },
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/our_memory/v2/inference_api_multiturn.py",
+          "sha256": "82c4775e96418053593c8d31edca27bba2d1b4a69f3c0b35acb5c3f954f636cc",
+          "source_manifest_record_id": "b05679b363ca3878c71dd2ee3e2673c3d128af7a72f580715c38d89bd54392bd",
+          "evidence_id": "source-pre:b05679b363ca3878c71dd2ee3e2673c3d128af7a72f580715c38d89bd54392bd"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.infer5_v2_api.01",
+        "lin.code.infer5_v2_api.02"
+      ],
+      "destinations": [
+        "src/adapters/inference/infer5_v2_api/inference_api_singleturn.py",
+        "src/adapters/inference/infer5_v2_api/inference_api_multiturn.py"
+      ]
+    },
+    {
+      "variant_id": "infer5_v2_vllm",
+      "kind": "stage_variant",
+      "selector": "inference=infer5_v2_vllm",
+      "selectable": true,
+      "stage": "inference",
+      "semantic_parent": "family.inference",
+      "neutral_family": "family.inference",
+      "affected_outputs": [
+        "v2 singleturn predictions",
+        "v2 multiturn predictions"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 v2 VLLM implementation",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/our_memory/v2/inference_vllm_singleturn.py",
+          "sha256": "ed90775f6fc24aa6e32d19adba80fe0aa2aec5d1aa6675ac7860e55f63528ad4",
+          "source_manifest_record_id": "081db2d4aa21df42b77a6869aa6594ee99549bf5c278bca0a247d23fce0cc8d3",
+          "evidence_id": "source-pre:081db2d4aa21df42b77a6869aa6594ee99549bf5c278bca0a247d23fce0cc8d3"
+        },
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/our_memory/v2/inference_vllm_multiturn.py",
+          "sha256": "c879e082161cf9817f05a3cfcae96ad1dc02834285ffdcdc7cf99d4184806763",
+          "source_manifest_record_id": "109d8da56eb79bdf099e9d2f1c9a30d6643c3f903f80397a7b7234c4bc236fd9",
+          "evidence_id": "source-pre:109d8da56eb79bdf099e9d2f1c9a30d6643c3f903f80397a7b7234c4bc236fd9"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.infer5_v2_vllm.01",
+        "lin.code.infer5_v2_vllm.02"
+      ],
+      "destinations": [
+        "src/adapters/inference/infer5_v2_vllm/inference_vllm_singleturn.py",
+        "src/adapters/inference/infer5_v2_vllm/inference_vllm_multiturn.py"
+      ]
+    },
+    {
+      "variant_id": "infer5_v3_api",
+      "kind": "stage_variant",
+      "selector": "inference=infer5_v3_api",
+      "selectable": true,
+      "stage": "inference",
+      "semantic_parent": "family.inference",
+      "neutral_family": "family.inference",
+      "affected_outputs": [
+        "v3 singleturn predictions",
+        "v3 multiturn predictions"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 v3 hosted-API implementation with expanded JSON/tool logic",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/our_memory/v3/inference_api_singleturn.py",
+          "sha256": "cc17f6a031e01868329ba953b0f95eeef66f555d3621ebac50b104daff6fda1f",
+          "source_manifest_record_id": "689430327e8bf01054c7fec880b5bfad24408bc7555a0e219bf8564e0434068c",
+          "evidence_id": "source-pre:689430327e8bf01054c7fec880b5bfad24408bc7555a0e219bf8564e0434068c"
+        },
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/our_memory/v3/inference_api_multiturn.py",
+          "sha256": "353e2e20d8ef62715cdc621ddb2ceb8a25f2723a6e9b670485d75b5b935b672c",
+          "source_manifest_record_id": "aa5b54338e5216c640b9c322fbd95362857d8d8985903352a95f43cb1f73635d",
+          "evidence_id": "source-pre:aa5b54338e5216c640b9c322fbd95362857d8d8985903352a95f43cb1f73635d"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.infer5_v3_api.01",
+        "lin.code.infer5_v3_api.02"
+      ],
+      "destinations": [
+        "src/adapters/inference/infer5_v3_api/inference_api_singleturn.py",
+        "src/adapters/inference/infer5_v3_api/inference_api_multiturn.py"
+      ]
+    },
+    {
+      "variant_id": "infer5_v3_vllm",
+      "kind": "stage_variant",
+      "selector": "inference=infer5_v3_vllm",
+      "selectable": true,
+      "stage": "inference",
+      "semantic_parent": "family.inference",
+      "neutral_family": "family.inference",
+      "affected_outputs": [
+        "v3 singleturn predictions",
+        "v3 multiturn predictions"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 v3 VLLM implementation",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/our_memory/v3/inference_vllm_singleturn.py",
+          "sha256": "c90ec7b7c580d3313028d96673285d49015d6f9f228ef4465c8d0d78dc7400f9",
+          "source_manifest_record_id": "944235cce57db67cbf4ace292e585959de209a56a419a03cde40f8f115f02d0b",
+          "evidence_id": "source-pre:944235cce57db67cbf4ace292e585959de209a56a419a03cde40f8f115f02d0b"
+        },
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/our_memory/v3/inference_vllm_multiturn.py",
+          "sha256": "1f7ed9326d54937ce1c3c0192c1870e7472a8c1b1a9541124c21898ac7a280ee",
+          "source_manifest_record_id": "ab974e60db4c7c819a1c2dedad1523e9b8952f3451be93a91f4699b7028fca95",
+          "evidence_id": "source-pre:ab974e60db4c7c819a1c2dedad1523e9b8952f3451be93a91f4699b7028fca95"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.infer5_v3_vllm.01",
+        "lin.code.infer5_v3_vllm.02"
+      ],
+      "destinations": [
+        "src/adapters/inference/infer5_v3_vllm/inference_vllm_singleturn.py",
+        "src/adapters/inference/infer5_v3_vllm/inference_vllm_multiturn.py"
+      ]
+    },
+    {
+      "variant_id": "infer6_api",
+      "kind": "stage_variant",
+      "selector": "inference=infer6_api",
+      "selectable": true,
+      "stage": "inference",
+      "semantic_parent": "family.inference",
+      "neutral_family": "family.inference",
+      "affected_outputs": [
+        "release singleturn predictions",
+        "release multiturn predictions"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments6 hosted-API release implementation",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/Preference_Memory_step2_ACTION_singleturn_api.py",
+          "sha256": "249d4dbad83d4143f865e16d17a23f26577b67f3f00b3d70e5b84642f94b2843",
+          "source_manifest_record_id": "8424f098f4069cb06d35eade5b7384dc1e8dd670ef6dbd77ab6ab8c767f107b4",
+          "evidence_id": "source-pre:8424f098f4069cb06d35eade5b7384dc1e8dd670ef6dbd77ab6ab8c767f107b4"
+        },
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/Preference_Memory_step2_ACTION_multiturn_api.py",
+          "sha256": "2a2feaaf3f885e07b6cac76262e2aa366a84d404ebfe73474bfc4c0e64eda456",
+          "source_manifest_record_id": "5093a8a6f9f9b76f47b3f42d7f7726efcbfa69e73ce12bffb8938388665f5f1d",
+          "evidence_id": "source-pre:5093a8a6f9f9b76f47b3f42d7f7726efcbfa69e73ce12bffb8938388665f5f1d"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.infer6_api.01",
+        "lin.code.infer6_api.02"
+      ],
+      "destinations": [
+        "src/adapters/inference/infer6_api/Preference_Memory_step2_ACTION_singleturn_api.py",
+        "src/adapters/inference/infer6_api/Preference_Memory_step2_ACTION_multiturn_api.py"
+      ]
+    },
+    {
+      "variant_id": "infer6_release",
+      "kind": "stage_variant",
+      "selector": "inference=infer6_release",
+      "selectable": true,
+      "stage": "inference",
+      "semantic_parent": "family.inference",
+      "neutral_family": "family.inference",
+      "affected_outputs": [
+        "experiments6-release predictions",
+        "downstream evaluation outputs"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "required experiments6 release selector",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/Preference_Memory_step2_ACTION_singleturn_api.py",
+          "sha256": "249d4dbad83d4143f865e16d17a23f26577b67f3f00b3d70e5b84642f94b2843",
+          "source_manifest_record_id": "8424f098f4069cb06d35eade5b7384dc1e8dd670ef6dbd77ab6ab8c767f107b4",
+          "evidence_id": "source-pre:8424f098f4069cb06d35eade5b7384dc1e8dd670ef6dbd77ab6ab8c767f107b4"
+        },
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/Preference_Memory_step2_ACTION_multiturn_api.py",
+          "sha256": "2a2feaaf3f885e07b6cac76262e2aa366a84d404ebfe73474bfc4c0e64eda456",
+          "source_manifest_record_id": "5093a8a6f9f9b76f47b3f42d7f7726efcbfa69e73ce12bffb8938388665f5f1d",
+          "evidence_id": "source-pre:5093a8a6f9f9b76f47b3f42d7f7726efcbfa69e73ce12bffb8938388665f5f1d"
+        },
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/Preference_Memory_step2_ACTION_singleturn_VLLM.py",
+          "sha256": "15f0b6b1cab275a69379032071354d5406f4a09810be09db8d3d17c25b2facca",
+          "source_manifest_record_id": "4f3813e64fb9cb931cd95886e590baa99d9ea79bb81dd473f12f788482f90a5e",
+          "evidence_id": "source-pre:4f3813e64fb9cb931cd95886e590baa99d9ea79bb81dd473f12f788482f90a5e"
+        },
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/Preference_Memory_step2_ACTION_multiturn_VLLM.py",
+          "sha256": "c24290d2df03a4f0fd70b52ad4a6004fb2d4186cd2ba14cb8b948d23e89d6e49",
+          "source_manifest_record_id": "5d809938bc2e472668a0524a44962e00fc1c2b0d5b874becbd626ece818b3008",
+          "evidence_id": "source-pre:5d809938bc2e472668a0524a44962e00fc1c2b0d5b874becbd626ece818b3008"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.infer6_release.01",
+        "lin.code.infer6_release.02",
+        "lin.code.infer6_release.03",
+        "lin.code.infer6_release.04"
+      ],
+      "destinations": [
+        "src/adapters/inference/infer6_release/Preference_Memory_step2_ACTION_singleturn_api.py",
+        "src/adapters/inference/infer6_release/Preference_Memory_step2_ACTION_multiturn_api.py",
+        "src/adapters/inference/infer6_release/Preference_Memory_step2_ACTION_singleturn_VLLM.py",
+        "src/adapters/inference/infer6_release/Preference_Memory_step2_ACTION_multiturn_VLLM.py"
+      ]
+    },
+    {
+      "variant_id": "infer6_vllm",
+      "kind": "stage_variant",
+      "selector": "inference=infer6_vllm",
+      "selectable": true,
+      "stage": "inference",
+      "semantic_parent": "family.inference",
+      "neutral_family": "family.inference",
+      "affected_outputs": [
+        "release singleturn predictions",
+        "release multiturn predictions"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments6 VLLM release implementation",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/Preference_Memory_step2_ACTION_singleturn_VLLM.py",
+          "sha256": "15f0b6b1cab275a69379032071354d5406f4a09810be09db8d3d17c25b2facca",
+          "source_manifest_record_id": "4f3813e64fb9cb931cd95886e590baa99d9ea79bb81dd473f12f788482f90a5e",
+          "evidence_id": "source-pre:4f3813e64fb9cb931cd95886e590baa99d9ea79bb81dd473f12f788482f90a5e"
+        },
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/Preference_Memory_step2_ACTION_multiturn_VLLM.py",
+          "sha256": "c24290d2df03a4f0fd70b52ad4a6004fb2d4186cd2ba14cb8b948d23e89d6e49",
+          "source_manifest_record_id": "5d809938bc2e472668a0524a44962e00fc1c2b0d5b874becbd626ece818b3008",
+          "evidence_id": "source-pre:5d809938bc2e472668a0524a44962e00fc1c2b0d5b874becbd626ece818b3008"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.infer6_vllm.01",
+        "lin.code.infer6_vllm.02"
+      ],
+      "destinations": [
+        "src/adapters/inference/infer6_vllm/Preference_Memory_step2_ACTION_singleturn_VLLM.py",
+        "src/adapters/inference/infer6_vllm/Preference_Memory_step2_ACTION_multiturn_VLLM.py"
+      ]
+    },
+    {
+      "variant_id": "latentpref4_api",
+      "kind": "stage_variant",
+      "selector": "preprocessing=latentpref4_api",
+      "selectable": true,
+      "stage": "preprocessing",
+      "semantic_parent": "family.preprocessing",
+      "neutral_family": "family.preprocessing",
+      "affected_outputs": [
+        "latent preference memories",
+        "downstream tool calls"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 API latent-preference extraction",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/Preference_Memory_step1_LATENTPREF.py",
+          "sha256": "2b62f0eeb890070e2c06584e2e7dac3fa5c70e3cc2af51185a302acb954873b1",
+          "source_manifest_record_id": "0f1ab9095bc9786cb36e5c8a10444980949c4850cb57b095a8a1afabb551290c",
+          "evidence_id": "source-pre:0f1ab9095bc9786cb36e5c8a10444980949c4850cb57b095a8a1afabb551290c"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.latentpref4_api.01"
+      ],
+      "destinations": [
+        "src/adapters/preprocessing/latentpref4_api/Preference_Memory_step1_LATENTPREF.py"
+      ]
+    },
+    {
+      "variant_id": "latentpref4_vllm",
+      "kind": "stage_variant",
+      "selector": "preprocessing=latentpref4_vllm",
+      "selectable": true,
+      "stage": "preprocessing",
+      "semantic_parent": "family.preprocessing",
+      "neutral_family": "family.preprocessing",
+      "affected_outputs": [
+        "latent preference memories",
+        "downstream tool calls"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 VLLM latent-preference extraction",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/Preference_Memory_step1_LATENTPREF_VLLM.py",
+          "sha256": "988fca5e600ca27fcb189d21a123a494e998f60e2830a5bbae2710a55666a6b4",
+          "source_manifest_record_id": "63ef5740fa05b5fa701c6fbac2773f7d28e0245017d909587e56734046468548",
+          "evidence_id": "source-pre:63ef5740fa05b5fa701c6fbac2773f7d28e0245017d909587e56734046468548"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.latentpref4_vllm.01"
+      ],
+      "destinations": [
+        "src/adapters/preprocessing/latentpref4_vllm/Preference_Memory_step1_LATENTPREF_VLLM.py"
+      ]
+    },
+    {
+      "variant_id": "latentpref6_api",
+      "kind": "stage_variant",
+      "selector": "preprocessing=latentpref6_api",
+      "selectable": true,
+      "stage": "preprocessing",
+      "semantic_parent": "family.preprocessing",
+      "neutral_family": "family.preprocessing",
+      "affected_outputs": [
+        "latent preference memories",
+        "downstream tool calls"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments6 API release extraction",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/Preference_Memory_step1_LATENTPREF.py",
+          "sha256": "7ad451f4587abd7f2915c52a954a31d337bfc7b5719728c5613ea8296facbc37",
+          "source_manifest_record_id": "29a2a620c73039be58f876c19f414ee089757c1949ec5fcd754849c04095b370",
+          "evidence_id": "source-pre:29a2a620c73039be58f876c19f414ee089757c1949ec5fcd754849c04095b370"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.latentpref6_api.01"
+      ],
+      "destinations": [
+        "src/adapters/preprocessing/latentpref6_api/Preference_Memory_step1_LATENTPREF.py"
+      ]
+    },
+    {
+      "variant_id": "latentpref6_vllm",
+      "kind": "stage_variant",
+      "selector": "preprocessing=latentpref6_vllm",
+      "selectable": true,
+      "stage": "preprocessing",
+      "semantic_parent": "family.preprocessing",
+      "neutral_family": "family.preprocessing",
+      "affected_outputs": [
+        "latent preference memories",
+        "downstream tool calls"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments6 VLLM release extraction",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/Preference_Memory_step1_LATENTPREF_VLLM.py",
+          "sha256": "d24d1567e8cf8805ecdccc3aea6b55c2dd372c6657d0d4868ac681bf3e8d4c31",
+          "source_manifest_record_id": "67f27250e10731efd6302b86038eb94ba166fa6d53dfdcc98f3182c098edac4d",
+          "evidence_id": "source-pre:67f27250e10731efd6302b86038eb94ba166fa6d53dfdcc98f3182c098edac4d"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.latentpref6_vllm.01"
+      ],
+      "destinations": [
+        "src/adapters/preprocessing/latentpref6_vllm/Preference_Memory_step1_LATENTPREF_VLLM.py"
+      ]
+    },
+    {
+      "variant_id": "metric4_legacy",
+      "kind": "stage_variant",
+      "selector": "metric=metric4_legacy",
+      "selectable": true,
+      "stage": "metric",
+      "semantic_parent": "family.metric",
+      "neutral_family": "family.metric",
+      "affected_outputs": [
+        "slot TP/FP/FN",
+        "precision",
+        "recall",
+        "F1",
+        "preference EM"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 legacy metric implementation",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "evaluation/evaluation_singleturn-f1-aggregate.py",
+          "sha256": "1b5aaad30416e671059d948a9235678d2b06dbed78e85710b46e20407234232e",
+          "source_manifest_record_id": "6d3e7f38334af9a1fc1de4326d0218d1c7d914f65eb1249f2a6e350a143bef00",
+          "evidence_id": "source-pre:6d3e7f38334af9a1fc1de4326d0218d1c7d914f65eb1249f2a6e350a143bef00"
+        },
+        {
+          "origin_root": "experiments4",
+          "relative_path": "evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+          "sha256": "96d1c3b7a141d1ebca13dd9c706d79896e7c7fb3b099ab6eaaf8d1cb430c3d32",
+          "source_manifest_record_id": "019b52c4ab97a2d440d01ac324a2d7ce859e861af7cb65f63c66b780a844d35f",
+          "evidence_id": "source-pre:019b52c4ab97a2d440d01ac324a2d7ce859e861af7cb65f63c66b780a844d35f"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.metric4_legacy.01",
+        "lin.code.metric4_legacy.02"
+      ],
+      "destinations": [
+        "src/adapters/metric/metric4_legacy/evaluation_singleturn-f1-aggregate.py",
+        "src/adapters/metric/metric4_legacy/evaluation_multiturn-f1-parse-aggregate.py"
+      ]
+    },
+    {
+      "variant_id": "metric5_canonical",
+      "kind": "stage_variant",
+      "selector": "metric=metric5_canonical",
+      "selectable": true,
+      "stage": "metric",
+      "semantic_parent": "family.metric",
+      "neutral_family": "family.metric",
+      "affected_outputs": [
+        "slot TP/FP/FN",
+        "precision",
+        "recall",
+        "F1",
+        "preference EM"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 canonical metric implementation",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "src/evaluation/metrics.py",
+          "sha256": "ae2db7707a3ba577ace94a7436b57ee5f17c0e87be1ee6376e2f50fef645e604",
+          "source_manifest_record_id": "cebe3afef77c992e9c5562d4137c1d8390fcee8f220c33383050b45afcaafca6",
+          "evidence_id": "source-pre:cebe3afef77c992e9c5562d4137c1d8390fcee8f220c33383050b45afcaafca6"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.metric5_canonical.01"
+      ],
+      "destinations": [
+        "src/adapters/metric/metric5_canonical/metrics.py"
+      ]
+    },
+    {
+      "variant_id": "metric6_release",
+      "kind": "stage_variant",
+      "selector": "metric=metric6_release",
+      "selectable": true,
+      "stage": "metric",
+      "semantic_parent": "family.metric",
+      "neutral_family": "family.metric",
+      "affected_outputs": [
+        "slot TP/FP/FN",
+        "precision",
+        "recall",
+        "F1",
+        "preference EM"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments6 release metric implementation",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/evaluation/evaluation_singleturn-f1-aggregate.py",
+          "sha256": "1b5aaad30416e671059d948a9235678d2b06dbed78e85710b46e20407234232e",
+          "source_manifest_record_id": "93c4b6e92749a22c34291c1dc01812e8e37ac8a11a2eea02a29a62deb36692fc",
+          "evidence_id": "source-pre:93c4b6e92749a22c34291c1dc01812e8e37ac8a11a2eea02a29a62deb36692fc"
+        },
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+          "sha256": "5d854ba546ef17c0452983cbb9dc0276a98b642081325c16085dd0417c163ff8",
+          "source_manifest_record_id": "ed52ff2a9777d32a38debc662ad192b8862db7242ba4cac9b401320dda84bac4",
+          "evidence_id": "source-pre:ed52ff2a9777d32a38debc662ad192b8862db7242ba4cac9b401320dda84bac4"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.metric6_release.01",
+        "lin.code.metric6_release.02"
+      ],
+      "destinations": [
+        "src/adapters/metric/metric6_release/evaluation_singleturn-f1-aggregate.py",
+        "src/adapters/metric/metric6_release/evaluation_multiturn-f1-parse-aggregate.py"
+      ]
+    },
+    {
+      "variant_id": "normalization4_legacy",
+      "kind": "stage_variant",
+      "selector": "normalization=normalization4_legacy",
+      "selectable": true,
+      "stage": "normalization",
+      "semantic_parent": "family.normalization",
+      "neutral_family": "family.normalization",
+      "affected_outputs": [
+        "normalized slot values",
+        "legacy TP/FP/FN"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 legacy normalization",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+          "sha256": "96d1c3b7a141d1ebca13dd9c706d79896e7c7fb3b099ab6eaaf8d1cb430c3d32",
+          "source_manifest_record_id": "019b52c4ab97a2d440d01ac324a2d7ce859e861af7cb65f63c66b780a844d35f",
+          "evidence_id": "source-pre:019b52c4ab97a2d440d01ac324a2d7ce859e861af7cb65f63c66b780a844d35f"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.normalization4_legacy.01"
+      ],
+      "destinations": [
+        "src/adapters/normalization/normalization4_legacy/evaluation_multiturn-f1-parse-aggregate.py"
+      ]
+    },
+    {
+      "variant_id": "normalization5_canonical",
+      "kind": "stage_variant",
+      "selector": "normalization=normalization5_canonical",
+      "selectable": true,
+      "stage": "normalization",
+      "semantic_parent": "family.normalization",
+      "neutral_family": "family.normalization",
+      "affected_outputs": [
+        "date/time and slot normalization",
+        "canonical TP/FP/FN"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 canonical normalization with optional dateparser capability",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "src/evaluation/metrics.py",
+          "sha256": "ae2db7707a3ba577ace94a7436b57ee5f17c0e87be1ee6376e2f50fef645e604",
+          "source_manifest_record_id": "cebe3afef77c992e9c5562d4137c1d8390fcee8f220c33383050b45afcaafca6",
+          "evidence_id": "source-pre:cebe3afef77c992e9c5562d4137c1d8390fcee8f220c33383050b45afcaafca6"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.normalization5_canonical.01"
+      ],
+      "destinations": [
+        "src/adapters/normalization/normalization5_canonical/metrics.py"
+      ]
+    },
+    {
+      "variant_id": "normalization6_release",
+      "kind": "stage_variant",
+      "selector": "normalization=normalization6_release",
+      "selectable": true,
+      "stage": "normalization",
+      "semantic_parent": "family.normalization",
+      "neutral_family": "family.normalization",
+      "affected_outputs": [
+        "normalized slot values",
+        "release TP/FP/FN"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments6 release normalization",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+          "sha256": "5d854ba546ef17c0452983cbb9dc0276a98b642081325c16085dd0417c163ff8",
+          "source_manifest_record_id": "ed52ff2a9777d32a38debc662ad192b8862db7242ba4cac9b401320dda84bac4",
+          "evidence_id": "source-pre:ed52ff2a9777d32a38debc662ad192b8862db7242ba4cac9b401320dda84bac4"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.normalization6_release.01"
+      ],
+      "destinations": [
+        "src/adapters/normalization/normalization6_release/evaluation_multiturn-f1-parse-aggregate.py"
+      ]
+    },
+    {
+      "variant_id": "parser4_inline",
+      "kind": "stage_variant",
+      "selector": "parser=parser4_inline",
+      "selectable": true,
+      "stage": "parser",
+      "semantic_parent": "family.parser",
+      "neutral_family": "family.parser",
+      "affected_outputs": [
+        "parsed tool calls",
+        "parse failures"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 inline inference-output parser",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/Preference_Memory_step2_ACTION_singleturn_api.py",
+          "sha256": "372d317be9a26f10aa4e2df7fae4bcc2291299e1b277f89c7c4fc0b99c8934a9",
+          "source_manifest_record_id": "86f8a2ef2196bbfbf76f2702049cd3ecac91ab54009a449d87dc83ddcf9f0620",
+          "evidence_id": "source-pre:86f8a2ef2196bbfbf76f2702049cd3ecac91ab54009a449d87dc83ddcf9f0620"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.parser4_inline.01"
+      ],
+      "destinations": [
+        "src/adapters/parser/parser4_inline/Preference_Memory_step2_ACTION_singleturn_api.py"
+      ]
+    },
+    {
+      "variant_id": "parser5_canonical",
+      "kind": "stage_variant",
+      "selector": "parser=parser5_canonical",
+      "selectable": true,
+      "stage": "parser",
+      "semantic_parent": "family.parser",
+      "neutral_family": "family.parser",
+      "affected_outputs": [
+        "evaluation tool-call extraction",
+        "TP/FP/FN inputs"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 canonical JSON/regex/braced-call parser",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "src/evaluation/metrics.py",
+          "sha256": "ae2db7707a3ba577ace94a7436b57ee5f17c0e87be1ee6376e2f50fef645e604",
+          "source_manifest_record_id": "cebe3afef77c992e9c5562d4137c1d8390fcee8f220c33383050b45afcaafca6",
+          "evidence_id": "source-pre:cebe3afef77c992e9c5562d4137c1d8390fcee8f220c33383050b45afcaafca6"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.parser5_canonical.01"
+      ],
+      "destinations": [
+        "src/adapters/parser/parser5_canonical/metrics.py"
+      ]
+    },
+    {
+      "variant_id": "parser5_native",
+      "kind": "stage_variant",
+      "selector": "parser=parser5_native",
+      "selectable": true,
+      "stage": "parser",
+      "semantic_parent": "family.parser",
+      "neutral_family": "family.parser",
+      "affected_outputs": [
+        "parsed structured text/tool calls",
+        "parse failures"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 provider-aware text-call parser",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "src/llm_client.py",
+          "sha256": "3025111dbb26b4040b85a34a53f33bf9374c0dd7892d292567fd844dd83a82af",
+          "source_manifest_record_id": "2ee65e42aeeb9e1fdf93ec7982ab642355b9803f93e5209d953d051c5eda1e24",
+          "evidence_id": "source-pre:2ee65e42aeeb9e1fdf93ec7982ab642355b9803f93e5209d953d051c5eda1e24"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.parser5_native.01"
+      ],
+      "destinations": [
+        "src/adapters/parser/parser5_native/llm_client.py"
+      ]
+    },
+    {
+      "variant_id": "parser6_inline",
+      "kind": "stage_variant",
+      "selector": "parser=parser6_inline",
+      "selectable": true,
+      "stage": "parser",
+      "semantic_parent": "family.parser",
+      "neutral_family": "family.parser",
+      "affected_outputs": [
+        "parsed tool calls",
+        "parse failures"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments6 release inline parser",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/Preference_Memory_step2_ACTION_singleturn_api.py",
+          "sha256": "249d4dbad83d4143f865e16d17a23f26577b67f3f00b3d70e5b84642f94b2843",
+          "source_manifest_record_id": "8424f098f4069cb06d35eade5b7384dc1e8dd670ef6dbd77ab6ab8c767f107b4",
+          "evidence_id": "source-pre:8424f098f4069cb06d35eade5b7384dc1e8dd670ef6dbd77ab6ab8c767f107b4"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.parser6_inline.01"
+      ],
+      "destinations": [
+        "src/adapters/parser/parser6_inline/Preference_Memory_step2_ACTION_singleturn_api.py"
+      ]
+    },
+    {
+      "variant_id": "preference_config4",
+      "kind": "stage_variant",
+      "selector": "dataset=preference_config4",
+      "selectable": true,
+      "stage": "dataset",
+      "semantic_parent": "family.dataset",
+      "neutral_family": "family.dataset",
+      "affected_outputs": [
+        "preference labels",
+        "preference exact-match",
+        "grouped reports"
+      ],
+      "equivalence_state": "unresolved_equivalence",
+      "distinction": "experiments4 root-level preference config",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "pref_list.json",
+          "sha256": "f5994dab209909ed31d15cbabe6a88a84ef5d95f85c156795549c96fd5126091",
+          "source_manifest_record_id": "653f29bfddf75869a81e6e2e704b841a43394edcaf4529df5f61b91c0d1d3611",
+          "evidence_id": "source-pre:653f29bfddf75869a81e6e2e704b841a43394edcaf4529df5f61b91c0d1d3611"
+        },
+        {
+          "origin_root": "experiments4",
+          "relative_path": "pref_group.json",
+          "sha256": "aac0cc9210a59b15e1422d0946bab0e37c9c38b538f29a2d7c24b84ccd8348fb",
+          "source_manifest_record_id": "2cadfcc908b54780054dab35eee0ce6e7d23c42f5c5eaf37484c9257884641c8",
+          "evidence_id": "source-pre:2cadfcc908b54780054dab35eee0ce6e7d23c42f5c5eaf37484c9257884641c8"
+        }
+      ],
+      "lineage_ids": [
+        "lin.config.preference_config4.01",
+        "lin.config.preference_config4.02"
+      ],
+      "destinations": [
+        "data/lineage/preference_config4/pref_list.json",
+        "data/lineage/preference_config4/pref_group.json"
+      ]
+    },
+    {
+      "variant_id": "preference_config5",
+      "kind": "stage_variant",
+      "selector": "dataset=preference_config5",
+      "selectable": true,
+      "stage": "dataset",
+      "semantic_parent": "family.dataset",
+      "neutral_family": "family.dataset",
+      "affected_outputs": [
+        "preference labels",
+        "preference exact-match",
+        "grouped reports"
+      ],
+      "equivalence_state": "unresolved_equivalence",
+      "distinction": "experiments5 config-directory preference config",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "config/pref_list.json",
+          "sha256": "f5994dab209909ed31d15cbabe6a88a84ef5d95f85c156795549c96fd5126091",
+          "source_manifest_record_id": "c2dfd1d9cab2312a6c82062ef1416849ec07601807b42afd02686788e2279e7a",
+          "evidence_id": "source-pre:c2dfd1d9cab2312a6c82062ef1416849ec07601807b42afd02686788e2279e7a"
+        },
+        {
+          "origin_root": "experiments5",
+          "relative_path": "config/pref_group.json",
+          "sha256": "aac0cc9210a59b15e1422d0946bab0e37c9c38b538f29a2d7c24b84ccd8348fb",
+          "source_manifest_record_id": "e65839c47ea55ef673edddf74400b2b5dde7b35cd068631a7f7403018aa6f25c",
+          "evidence_id": "source-pre:e65839c47ea55ef673edddf74400b2b5dde7b35cd068631a7f7403018aa6f25c"
+        }
+      ],
+      "lineage_ids": [
+        "lin.config.preference_config5.01",
+        "lin.config.preference_config5.02"
+      ],
+      "destinations": [
+        "data/lineage/preference_config5/pref_list.json",
+        "data/lineage/preference_config5/pref_group.json"
+      ]
+    },
+    {
+      "variant_id": "preference_config6",
+      "kind": "stage_variant",
+      "selector": "dataset=preference_config6",
+      "selectable": true,
+      "stage": "dataset",
+      "semantic_parent": "family.dataset",
+      "neutral_family": "family.dataset",
+      "affected_outputs": [
+        "preference labels",
+        "preference exact-match",
+        "grouped reports"
+      ],
+      "equivalence_state": "unresolved_equivalence",
+      "distinction": "experiments6 configs-directory preference config",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "configs/pref_list.json",
+          "sha256": "f5994dab209909ed31d15cbabe6a88a84ef5d95f85c156795549c96fd5126091",
+          "source_manifest_record_id": "0cb0cd5b61d8e1d4ef3cd05bd4f2c0bd85fbedb445f5253e1a72ed7dccc18197",
+          "evidence_id": "source-pre:0cb0cd5b61d8e1d4ef3cd05bd4f2c0bd85fbedb445f5253e1a72ed7dccc18197"
+        },
+        {
+          "origin_root": "experiments6",
+          "relative_path": "configs/pref_group.json",
+          "sha256": "aac0cc9210a59b15e1422d0946bab0e37c9c38b538f29a2d7c24b84ccd8348fb",
+          "source_manifest_record_id": "21dd3a1fef8db07f5ed677ed72256db0ef451fd9bce75bf3fa606cbad98b6b0d",
+          "evidence_id": "source-pre:21dd3a1fef8db07f5ed677ed72256db0ef451fd9bce75bf3fa606cbad98b6b0d"
+        }
+      ],
+      "lineage_ids": [
+        "lin.config.preference_config6.01",
+        "lin.config.preference_config6.02"
+      ],
+      "destinations": [
+        "data/lineage/preference_config6/pref_list.json",
+        "data/lineage/preference_config6/pref_group.json"
+      ]
+    },
+    {
+      "variant_id": "preprocess5_v1",
+      "kind": "stage_variant",
+      "selector": "preprocessing=preprocess5_v1",
+      "selectable": true,
+      "stage": "preprocessing",
+      "semantic_parent": "family.preprocessing",
+      "neutral_family": "family.preprocessing",
+      "affected_outputs": [
+        "typed memories",
+        "downstream v1 calls"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 v1 extraction",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/our_memory/step1_extract.py",
+          "sha256": "351afa741cb9fbd9365f22985f2d98c903f60c85f0e73e78c1688c5c265c08c1",
+          "source_manifest_record_id": "dccc1db8d8159f8cec8c3f321b367afe6c57ba4fe11deaed50195e199e12d6f8",
+          "evidence_id": "source-pre:dccc1db8d8159f8cec8c3f321b367afe6c57ba4fe11deaed50195e199e12d6f8"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.preprocess5_v1.01"
+      ],
+      "destinations": [
+        "src/adapters/preprocessing/preprocess5_v1/step1_extract.py"
+      ]
+    },
+    {
+      "variant_id": "preprocess5_v2",
+      "kind": "stage_variant",
+      "selector": "preprocessing=preprocess5_v2",
+      "selectable": true,
+      "stage": "preprocessing",
+      "semantic_parent": "family.preprocessing",
+      "neutral_family": "family.preprocessing",
+      "affected_outputs": [
+        "typed memories",
+        "downstream v2 calls"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 v2 extraction",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/our_memory/v2/step1_extract.py",
+          "sha256": "343c8f254816d29c31f2ea4df0e16262fecd9902b984bb92ca33c3946cea7262",
+          "source_manifest_record_id": "2cd595cb385054aed8845fddecb8f68dc5ae2c794af799c46a1ddcfeeebcb019",
+          "evidence_id": "source-pre:2cd595cb385054aed8845fddecb8f68dc5ae2c794af799c46a1ddcfeeebcb019"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.preprocess5_v2.01"
+      ],
+      "destinations": [
+        "src/adapters/preprocessing/preprocess5_v2/step1_extract.py"
+      ]
+    },
+    {
+      "variant_id": "preprocess5_v3",
+      "kind": "stage_variant",
+      "selector": "preprocessing=preprocess5_v3",
+      "selectable": true,
+      "stage": "preprocessing",
+      "semantic_parent": "family.preprocessing",
+      "neutral_family": "family.preprocessing",
+      "affected_outputs": [
+        "typed memories",
+        "downstream v3 calls"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 v3 extraction",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "methods/our_memory/v3/step1_extract.py",
+          "sha256": "3afd67db7c802aff461f8ab97501fedde8f2dd1d4c4637692aaaa91466dc80f6",
+          "source_manifest_record_id": "a4368a8efb3cd9d79a01eec82d675fb31c6c43c13d7cdb3e5dcfaae692315b0f",
+          "evidence_id": "source-pre:a4368a8efb3cd9d79a01eec82d675fb31c6c43c13d7cdb3e5dcfaae692315b0f"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.preprocess5_v3.01"
+      ],
+      "destinations": [
+        "src/adapters/preprocessing/preprocess5_v3/step1_extract.py"
+      ]
+    },
+    {
+      "variant_id": "prompt4_inference",
+      "kind": "stage_variant",
+      "selector": "prompt=prompt4_inference",
+      "selectable": true,
+      "stage": "prompt",
+      "semantic_parent": "family.prompt",
+      "neutral_family": "family.prompt",
+      "affected_outputs": [
+        "tool-call prompt text",
+        "model predictions"
+      ],
+      "equivalence_state": "unresolved_equivalence",
+      "distinction": "experiments4 inference template",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/prompt_inference.py",
+          "sha256": "7206b5e2251c654108d8ab46ae263daf08fa3ff66b02f99db4f45e4630ba11ff",
+          "source_manifest_record_id": "b71ff81b4f8fa2fd6e97cf715a9f623bcdbbe74116994cbf835c26fae9089e35",
+          "evidence_id": "source-pre:b71ff81b4f8fa2fd6e97cf715a9f623bcdbbe74116994cbf835c26fae9089e35"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.prompt4_inference.01"
+      ],
+      "destinations": [
+        "src/adapters/prompt/prompt4_inference/prompt_inference.py"
+      ]
+    },
+    {
+      "variant_id": "prompt4_update0",
+      "kind": "stage_variant",
+      "selector": "prompt=prompt4_update0",
+      "selectable": true,
+      "stage": "prompt",
+      "semantic_parent": "family.prompt",
+      "neutral_family": "family.prompt",
+      "affected_outputs": [
+        "two-layer abstract and instantiated constraints",
+        "model predictions"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 update0 prompt contract",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/prompt_update0.py",
+          "sha256": "b4480c0e45ffb31cd2d687d1e7f507c76951befa5ec267bc69d8ceed0668c406",
+          "source_manifest_record_id": "e2f082fd9a1b439ed14e87d841e32fe3559bb51fa9f9bab5efcf039d5be6c75d",
+          "evidence_id": "source-pre:e2f082fd9a1b439ed14e87d841e32fe3559bb51fa9f9bab5efcf039d5be6c75d"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.prompt4_update0.01"
+      ],
+      "destinations": [
+        "src/adapters/prompt/prompt4_update0/prompt_update0.py"
+      ]
+    },
+    {
+      "variant_id": "prompt4_update2",
+      "kind": "stage_variant",
+      "selector": "prompt=prompt4_update2",
+      "selectable": true,
+      "stage": "prompt",
+      "semantic_parent": "family.prompt",
+      "neutral_family": "family.prompt",
+      "affected_outputs": [
+        "implicit preference constraint",
+        "model predictions"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 update2 prompt contract",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/prompt_update2.py",
+          "sha256": "527d8b097f9c54ee23099879d435bd569c988b6f7362f5766c73ac2f70da8169",
+          "source_manifest_record_id": "3201c8febc4529fccfa32225459eea0d5b63fabe40146a77eb2893ae6126b053",
+          "evidence_id": "source-pre:3201c8febc4529fccfa32225459eea0d5b63fabe40146a77eb2893ae6126b053"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.prompt4_update2.01"
+      ],
+      "destinations": [
+        "src/adapters/prompt/prompt4_update2/prompt_update2.py"
+      ]
+    },
+    {
+      "variant_id": "prompt4_update3",
+      "kind": "stage_variant",
+      "selector": "prompt=prompt4_update3",
+      "selectable": true,
+      "stage": "prompt",
+      "semantic_parent": "family.prompt",
+      "neutral_family": "family.prompt",
+      "affected_outputs": [
+        "stable-pattern implicit constraint",
+        "model predictions"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 update3 prompt contract",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/prompt_update3.py",
+          "sha256": "7aeb63ec768d694a5e776d5cdb780abd462a17e31bf42dd583787ebc3f63e843",
+          "source_manifest_record_id": "68f912d7c13c97224d3c7ed9a512e6bfa07861d5bf4a78eedac83757a7be7995",
+          "evidence_id": "source-pre:68f912d7c13c97224d3c7ed9a512e6bfa07861d5bf4a78eedac83757a7be7995"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.prompt4_update3.01"
+      ],
+      "destinations": [
+        "src/adapters/prompt/prompt4_update3/prompt_update3.py"
+      ]
+    },
+    {
+      "variant_id": "prompt5_bundle",
+      "kind": "stage_variant",
+      "selector": "prompt=prompt5_bundle",
+      "selectable": true,
+      "stage": "prompt",
+      "semantic_parent": "family.prompt",
+      "neutral_family": "family.prompt",
+      "affected_outputs": [
+        "memory and tool-call prompt text",
+        "model predictions"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 bundled prompt module",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "src/prompts.py",
+          "sha256": "17bc15c38046ae275c5f0e7b708bc2023a77c7b5ff56320fa1a7b80bb2a9431a",
+          "source_manifest_record_id": "b9d1c4affc1224150acd50ac73bf21a7a650dad7c39dc7b2980a45acd976285d",
+          "evidence_id": "source-pre:b9d1c4affc1224150acd50ac73bf21a7a650dad7c39dc7b2980a45acd976285d"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.prompt5_bundle.01"
+      ],
+      "destinations": [
+        "src/adapters/prompt/prompt5_bundle/prompts.py"
+      ]
+    },
+    {
+      "variant_id": "prompt6_inference",
+      "kind": "stage_variant",
+      "selector": "prompt=prompt6_inference",
+      "selectable": true,
+      "stage": "prompt",
+      "semantic_parent": "family.prompt",
+      "neutral_family": "family.prompt",
+      "affected_outputs": [
+        "tool-call prompt text",
+        "model predictions"
+      ],
+      "equivalence_state": "unresolved_equivalence",
+      "distinction": "experiments6 release-root template",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/prompt_inference.py",
+          "sha256": "7206b5e2251c654108d8ab46ae263daf08fa3ff66b02f99db4f45e4630ba11ff",
+          "source_manifest_record_id": "e0ed77616ffa6735b2748a19b79c353bb845316c01d306ab429a157c44296298",
+          "evidence_id": "source-pre:e0ed77616ffa6735b2748a19b79c353bb845316c01d306ab429a157c44296298"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.prompt6_inference.01"
+      ],
+      "destinations": [
+        "src/adapters/prompt/prompt6_inference/prompt_inference.py"
+      ]
+    },
+    {
+      "variant_id": "prompt6_update0",
+      "kind": "stage_variant",
+      "selector": "prompt=prompt6_update0",
+      "selectable": true,
+      "stage": "prompt",
+      "semantic_parent": "family.prompt",
+      "neutral_family": "family.prompt",
+      "affected_outputs": [
+        "two-layer abstract and instantiated constraints",
+        "model predictions"
+      ],
+      "equivalence_state": "unresolved_equivalence",
+      "distinction": "experiments6 update0 root-specific lineage",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/prompt_update0.py",
+          "sha256": "b4480c0e45ffb31cd2d687d1e7f507c76951befa5ec267bc69d8ceed0668c406",
+          "source_manifest_record_id": "43de6ae1469c8d9de2131baa5933181a82dab42c2d101eb5759f4ed6d3143d15",
+          "evidence_id": "source-pre:43de6ae1469c8d9de2131baa5933181a82dab42c2d101eb5759f4ed6d3143d15"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.prompt6_update0.01"
+      ],
+      "destinations": [
+        "src/adapters/prompt/prompt6_update0/prompt_update0.py"
+      ]
+    },
+    {
+      "variant_id": "prompt6_update2",
+      "kind": "stage_variant",
+      "selector": "prompt=prompt6_update2",
+      "selectable": true,
+      "stage": "prompt",
+      "semantic_parent": "family.prompt",
+      "neutral_family": "family.prompt",
+      "affected_outputs": [
+        "implicit preference constraint",
+        "model predictions"
+      ],
+      "equivalence_state": "unresolved_equivalence",
+      "distinction": "experiments6 update2 root-specific lineage",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/prompt_update2.py",
+          "sha256": "527d8b097f9c54ee23099879d435bd569c988b6f7362f5766c73ac2f70da8169",
+          "source_manifest_record_id": "6a48d8daa78199161b562b7c3f87f6c9e7a3866389fd34b229659153b6e82cdf",
+          "evidence_id": "source-pre:6a48d8daa78199161b562b7c3f87f6c9e7a3866389fd34b229659153b6e82cdf"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.prompt6_update2.01"
+      ],
+      "destinations": [
+        "src/adapters/prompt/prompt6_update2/prompt_update2.py"
+      ]
+    },
+    {
+      "variant_id": "prompt6_update3",
+      "kind": "stage_variant",
+      "selector": "prompt=prompt6_update3",
+      "selectable": true,
+      "stage": "prompt",
+      "semantic_parent": "family.prompt",
+      "neutral_family": "family.prompt",
+      "affected_outputs": [
+        "stable-pattern implicit constraint",
+        "model predictions"
+      ],
+      "equivalence_state": "unresolved_equivalence",
+      "distinction": "experiments6 update3 root-specific lineage",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/prompt_update3.py",
+          "sha256": "7aeb63ec768d694a5e776d5cdb780abd462a17e31bf42dd583787ebc3f63e843",
+          "source_manifest_record_id": "5a11b6b14a22485fade3792f4fead7a712cb296226aefa50ad632b880117f11b",
+          "evidence_id": "source-pre:5a11b6b14a22485fade3792f4fead7a712cb296226aefa50ad632b880117f11b"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.prompt6_update3.01"
+      ],
+      "destinations": [
+        "src/adapters/prompt/prompt6_update3/prompt_update3.py"
+      ]
+    },
+    {
+      "variant_id": "report4_legacy",
+      "kind": "stage_variant",
+      "selector": "reporting=report4_legacy",
+      "selectable": true,
+      "stage": "reporting",
+      "semantic_parent": "family.reporting",
+      "neutral_family": "family.reporting",
+      "affected_outputs": [
+        "legacy CSV metrics",
+        "console summaries"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 legacy report formatting",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "evaluation/evaluation_singleturn-f1-aggregate.py",
+          "sha256": "1b5aaad30416e671059d948a9235678d2b06dbed78e85710b46e20407234232e",
+          "source_manifest_record_id": "6d3e7f38334af9a1fc1de4326d0218d1c7d914f65eb1249f2a6e350a143bef00",
+          "evidence_id": "source-pre:6d3e7f38334af9a1fc1de4326d0218d1c7d914f65eb1249f2a6e350a143bef00"
+        },
+        {
+          "origin_root": "experiments4",
+          "relative_path": "evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+          "sha256": "96d1c3b7a141d1ebca13dd9c706d79896e7c7fb3b099ab6eaaf8d1cb430c3d32",
+          "source_manifest_record_id": "019b52c4ab97a2d440d01ac324a2d7ce859e861af7cb65f63c66b780a844d35f",
+          "evidence_id": "source-pre:019b52c4ab97a2d440d01ac324a2d7ce859e861af7cb65f63c66b780a844d35f"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.report4_legacy.01",
+        "lin.code.report4_legacy.02"
+      ],
+      "destinations": [
+        "src/adapters/reporting/report4_legacy/evaluation_singleturn-f1-aggregate.py",
+        "src/adapters/reporting/report4_legacy/evaluation_multiturn-f1-parse-aggregate.py"
+      ]
+    },
+    {
+      "variant_id": "report4_session_memory",
+      "kind": "stage_variant",
+      "selector": "reporting=report4_session_memory",
+      "selectable": true,
+      "stage": "reporting",
+      "semantic_parent": "family.reporting",
+      "neutral_family": "family.reporting",
+      "affected_outputs": [
+        "session-memory singleturn reports",
+        "session-memory multiturn reports",
+        "filtered analyses"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 session-memory reporting pipeline",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/session_memory_eval_0312/evaluate_session_memory_results_singleturn.py",
+          "sha256": "401838dfad65034fb31b6eebf627d2df1e202c492f3a16445d07dc58c4f850e6",
+          "source_manifest_record_id": "9a257b17b8920084c5f5e07ab826d3f86b18f404ee8baab17342e0a991a0ff5e",
+          "evidence_id": "source-pre:9a257b17b8920084c5f5e07ab826d3f86b18f404ee8baab17342e0a991a0ff5e"
+        },
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/session_memory_eval_0312/evaluate_session_memory_results_multiturn.py",
+          "sha256": "d1bc8c6933bdf0753aeca690102bd3d87d7c2b658fbe676de4a989a0fc145185",
+          "source_manifest_record_id": "b030072103640e3242061fbddfaacced0669a18a1bcdd48b6ffb58645af91262",
+          "evidence_id": "source-pre:b030072103640e3242061fbddfaacced0669a18a1bcdd48b6ffb58645af91262"
+        },
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/session_memory_eval_0312/generate_filtered_analysis_from_existing.py",
+          "sha256": "d77dc47edab7238f4c2bdaab2baa473e2325c0b993e56bdf7a416e5849c52a9d",
+          "source_manifest_record_id": "6d84b6b9023bef5993062711371a1fa554eed240c0f50609e14f2a0c956e0d08",
+          "evidence_id": "source-pre:6d84b6b9023bef5993062711371a1fa554eed240c0f50609e14f2a0c956e0d08"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.report4_session_memory.01",
+        "lin.code.report4_session_memory.02",
+        "lin.code.report4_session_memory.03"
+      ],
+      "destinations": [
+        "src/adapters/reporting/report4_session_memory/evaluate_session_memory_results_singleturn.py",
+        "src/adapters/reporting/report4_session_memory/evaluate_session_memory_results_multiturn.py",
+        "src/adapters/reporting/report4_session_memory/generate_filtered_analysis_from_existing.py"
+      ]
+    },
+    {
+      "variant_id": "report5_canonical",
+      "kind": "stage_variant",
+      "selector": "reporting=report5_canonical",
+      "selectable": true,
+      "stage": "reporting",
+      "semantic_parent": "family.reporting",
+      "neutral_family": "family.reporting",
+      "affected_outputs": [
+        "canonical summaries",
+        "four-decimal displayed metrics"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 canonical report formatting",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "evaluation/eval_singleturn.py",
+          "sha256": "ec968290d6e52135ce8ab0884a8979996a44336061af5680292c94a148c7deed",
+          "source_manifest_record_id": "66e1510c6f44418aae2d0b43ff24a7570176baaab6c4b51b8c4c978b3ab5e11d",
+          "evidence_id": "source-pre:66e1510c6f44418aae2d0b43ff24a7570176baaab6c4b51b8c4c978b3ab5e11d"
+        },
+        {
+          "origin_root": "experiments5",
+          "relative_path": "evaluation/eval_multiturn.py",
+          "sha256": "b17df12a161672ed2c6da1dafb77e74070c0b3b07864720af4efd56e42330bc0",
+          "source_manifest_record_id": "8d4e1f974c86ae5116fa347175b96601484642cd9b8395957131902fdc242dd3",
+          "evidence_id": "source-pre:8d4e1f974c86ae5116fa347175b96601484642cd9b8395957131902fdc242dd3"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.report5_canonical.01",
+        "lin.code.report5_canonical.02"
+      ],
+      "destinations": [
+        "src/adapters/reporting/report5_canonical/eval_singleturn.py",
+        "src/adapters/reporting/report5_canonical/eval_multiturn.py"
+      ]
+    },
+    {
+      "variant_id": "report6_release",
+      "kind": "stage_variant",
+      "selector": "reporting=report6_release",
+      "selectable": true,
+      "stage": "reporting",
+      "semantic_parent": "family.reporting",
+      "neutral_family": "family.reporting",
+      "affected_outputs": [
+        "release CSV metrics",
+        "console summaries"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments6 release report formatting",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/evaluation/evaluation_singleturn-f1-aggregate.py",
+          "sha256": "1b5aaad30416e671059d948a9235678d2b06dbed78e85710b46e20407234232e",
+          "source_manifest_record_id": "93c4b6e92749a22c34291c1dc01812e8e37ac8a11a2eea02a29a62deb36692fc",
+          "evidence_id": "source-pre:93c4b6e92749a22c34291c1dc01812e8e37ac8a11a2eea02a29a62deb36692fc"
+        },
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/evaluation/evaluation_multiturn-f1-parse-aggregate.py",
+          "sha256": "5d854ba546ef17c0452983cbb9dc0276a98b642081325c16085dd0417c163ff8",
+          "source_manifest_record_id": "ed52ff2a9777d32a38debc662ad192b8862db7242ba4cac9b401320dda84bac4",
+          "evidence_id": "source-pre:ed52ff2a9777d32a38debc662ad192b8862db7242ba4cac9b401320dda84bac4"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.report6_release.01",
+        "lin.code.report6_release.02"
+      ],
+      "destinations": [
+        "src/adapters/reporting/report6_release/evaluation_singleturn-f1-aggregate.py",
+        "src/adapters/reporting/report6_release/evaluation_multiturn-f1-parse-aggregate.py"
+      ]
+    },
+    {
+      "variant_id": "report6_session_memory",
+      "kind": "stage_variant",
+      "selector": "reporting=report6_session_memory",
+      "selectable": true,
+      "stage": "reporting",
+      "semantic_parent": "family.reporting",
+      "neutral_family": "family.reporting",
+      "affected_outputs": [
+        "session-memory singleturn reports",
+        "session-memory multiturn reports",
+        "filtered analyses"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments6 release session-memory reporting pipeline",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/session_memory_eval/evaluate_session_memory_results_singleturn.py",
+          "sha256": "401838dfad65034fb31b6eebf627d2df1e202c492f3a16445d07dc58c4f850e6",
+          "source_manifest_record_id": "11d2e47693de48f746557db2f1e6a12d390bcb41fc94314eac9897aa2ad37fe4",
+          "evidence_id": "source-pre:11d2e47693de48f746557db2f1e6a12d390bcb41fc94314eac9897aa2ad37fe4"
+        },
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/session_memory_eval/evaluate_session_memory_results_multiturn.py",
+          "sha256": "927382aa303e37c21118d17180f7b88fe271eacd70060b87abbecbe25b15cd62",
+          "source_manifest_record_id": "bb4bf9d755047281fe9f9efdda9aaa00d9f4662741ddfb53cee03cffe96f882e",
+          "evidence_id": "source-pre:bb4bf9d755047281fe9f9efdda9aaa00d9f4662741ddfb53cee03cffe96f882e"
+        },
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/session_memory_eval/generate_filtered_analysis_from_existing.py",
+          "sha256": "d77dc47edab7238f4c2bdaab2baa473e2325c0b993e56bdf7a416e5849c52a9d",
+          "source_manifest_record_id": "82fe7ebaa4602cf68066f752e52f34d5b6957217237a512c6638c01b4c1b6061",
+          "evidence_id": "source-pre:82fe7ebaa4602cf68066f752e52f34d5b6957217237a512c6638c01b4c1b6061"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.report6_session_memory.01",
+        "lin.code.report6_session_memory.02",
+        "lin.code.report6_session_memory.03"
+      ],
+      "destinations": [
+        "src/adapters/reporting/report6_session_memory/evaluate_session_memory_results_singleturn.py",
+        "src/adapters/reporting/report6_session_memory/evaluate_session_memory_results_multiturn.py",
+        "src/adapters/reporting/report6_session_memory/generate_filtered_analysis_from_existing.py"
+      ]
+    },
+    {
+      "variant_id": "runtime4_api",
+      "kind": "stage_variant",
+      "selector": "runtime=runtime4_api",
+      "selectable": true,
+      "stage": "runtime",
+      "semantic_parent": "family.runtime",
+      "neutral_family": "family.runtime",
+      "affected_outputs": [
+        "provider request payloads",
+        "sampling",
+        "failure behavior"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 API provider/runtime branch",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/Preference_Memory_step2_ACTION_singleturn_api.py",
+          "sha256": "372d317be9a26f10aa4e2df7fae4bcc2291299e1b277f89c7c4fc0b99c8934a9",
+          "source_manifest_record_id": "86f8a2ef2196bbfbf76f2702049cd3ecac91ab54009a449d87dc83ddcf9f0620",
+          "evidence_id": "source-pre:86f8a2ef2196bbfbf76f2702049cd3ecac91ab54009a449d87dc83ddcf9f0620"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.runtime4_api.01"
+      ],
+      "destinations": [
+        "src/adapters/runtime/runtime4_api/Preference_Memory_step2_ACTION_singleturn_api.py"
+      ]
+    },
+    {
+      "variant_id": "runtime4_vllm",
+      "kind": "stage_variant",
+      "selector": "runtime=runtime4_vllm",
+      "selectable": true,
+      "stage": "runtime",
+      "semantic_parent": "family.runtime",
+      "neutral_family": "family.runtime",
+      "affected_outputs": [
+        "sampling",
+        "token limits",
+        "reasoning-model requests"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 VLLM runtime branch",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/Preference_Memory_step2_ACTION_singleturn_VLLM.py",
+          "sha256": "8ddfe18f1b524c01dd473d331adbcef86408e7840e242b8ff332b19a4147ea4a",
+          "source_manifest_record_id": "b773ba2e479dd5ea33bd0a5ed4819aac475004a8031a8a2d4db35fac3e2cd6ba",
+          "evidence_id": "source-pre:b773ba2e479dd5ea33bd0a5ed4819aac475004a8031a8a2d4db35fac3e2cd6ba"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.runtime4_vllm.01"
+      ],
+      "destinations": [
+        "src/adapters/runtime/runtime4_vllm/Preference_Memory_step2_ACTION_singleturn_VLLM.py"
+      ]
+    },
+    {
+      "variant_id": "runtime5_native",
+      "kind": "stage_variant",
+      "selector": "runtime=runtime5_native",
+      "selectable": true,
+      "stage": "runtime",
+      "semantic_parent": "family.runtime",
+      "neutral_family": "family.runtime",
+      "affected_outputs": [
+        "provider request payloads",
+        "structured-output mode",
+        "retry/error behavior"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 shared provider client",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "src/llm_client.py",
+          "sha256": "3025111dbb26b4040b85a34a53f33bf9374c0dd7892d292567fd844dd83a82af",
+          "source_manifest_record_id": "2ee65e42aeeb9e1fdf93ec7982ab642355b9803f93e5209d953d051c5eda1e24",
+          "evidence_id": "source-pre:2ee65e42aeeb9e1fdf93ec7982ab642355b9803f93e5209d953d051c5eda1e24"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.runtime5_native.01"
+      ],
+      "destinations": [
+        "src/adapters/runtime/runtime5_native/llm_client.py"
+      ]
+    },
+    {
+      "variant_id": "runtime6_api",
+      "kind": "stage_variant",
+      "selector": "runtime=runtime6_api",
+      "selectable": true,
+      "stage": "runtime",
+      "semantic_parent": "family.runtime",
+      "neutral_family": "family.runtime",
+      "affected_outputs": [
+        "provider request payloads",
+        "release defaults",
+        "failure behavior"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments6 API runtime branch",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/Preference_Memory_step2_ACTION_singleturn_api.py",
+          "sha256": "249d4dbad83d4143f865e16d17a23f26577b67f3f00b3d70e5b84642f94b2843",
+          "source_manifest_record_id": "8424f098f4069cb06d35eade5b7384dc1e8dd670ef6dbd77ab6ab8c767f107b4",
+          "evidence_id": "source-pre:8424f098f4069cb06d35eade5b7384dc1e8dd670ef6dbd77ab6ab8c767f107b4"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.runtime6_api.01"
+      ],
+      "destinations": [
+        "src/adapters/runtime/runtime6_api/Preference_Memory_step2_ACTION_singleturn_api.py"
+      ]
+    },
+    {
+      "variant_id": "runtime6_vllm",
+      "kind": "stage_variant",
+      "selector": "runtime=runtime6_vllm",
+      "selectable": true,
+      "stage": "runtime",
+      "semantic_parent": "family.runtime",
+      "neutral_family": "family.runtime",
+      "affected_outputs": [
+        "sampling",
+        "token limits",
+        "reasoning-model requests"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments6 VLLM runtime branch",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/Preference_Memory_step2_ACTION_singleturn_VLLM.py",
+          "sha256": "15f0b6b1cab275a69379032071354d5406f4a09810be09db8d3d17c25b2facca",
+          "source_manifest_record_id": "4f3813e64fb9cb931cd95886e590baa99d9ea79bb81dd473f12f788482f90a5e",
+          "evidence_id": "source-pre:4f3813e64fb9cb931cd95886e590baa99d9ea79bb81dd473f12f788482f90a5e"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.runtime6_vllm.01"
+      ],
+      "destinations": [
+        "src/adapters/runtime/runtime6_vllm/Preference_Memory_step2_ACTION_singleturn_VLLM.py"
+      ]
+    },
+    {
+      "variant_id": "session4_inline",
+      "kind": "stage_variant",
+      "selector": "session=session4_inline",
+      "selectable": true,
+      "stage": "session",
+      "semantic_parent": "family.session",
+      "neutral_family": "family.session",
+      "affected_outputs": [
+        "rendered histories",
+        "multiturn prompts",
+        "multiturn predictions"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 inline session rendering",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/Preference_Memory_step2_ACTION_multiturn_api.py",
+          "sha256": "058f12b2c61456d318d2e4f9800c623158c76d08f75efb48633fc169876f6109",
+          "source_manifest_record_id": "92af964f73a7366fdaa15626ade7bb4bb6836dbd4b118e5d939516d655de86c0",
+          "evidence_id": "source-pre:92af964f73a7366fdaa15626ade7bb4bb6836dbd4b118e5d939516d655de86c0"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.session4_inline.01"
+      ],
+      "destinations": [
+        "src/adapters/session/session4_inline/Preference_Memory_step2_ACTION_multiturn_api.py"
+      ]
+    },
+    {
+      "variant_id": "session5_data_utils",
+      "kind": "stage_variant",
+      "selector": "session=session5_data_utils",
+      "selectable": true,
+      "stage": "session",
+      "semantic_parent": "family.session",
+      "neutral_family": "family.session",
+      "affected_outputs": [
+        "rendered histories",
+        "context aliases",
+        "difficulty-specific queries"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 shared session and query construction",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "src/data_utils.py",
+          "sha256": "aeee8c56727745be66ad4c7456f5315e31fb3b09c0db4fb4776cd2f00488aed5",
+          "source_manifest_record_id": "119c59a031416791fdb1275e288f745180d6d6000e4e968e071d07c38c0d4b6c",
+          "evidence_id": "source-pre:119c59a031416791fdb1275e288f745180d6d6000e4e968e071d07c38c0d4b6c"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.session5_data_utils.01"
+      ],
+      "destinations": [
+        "src/adapters/session/session5_data_utils/data_utils.py"
+      ]
+    },
+    {
+      "variant_id": "session6_inline",
+      "kind": "stage_variant",
+      "selector": "session=session6_inline",
+      "selectable": true,
+      "stage": "session",
+      "semantic_parent": "family.session",
+      "neutral_family": "family.session",
+      "affected_outputs": [
+        "rendered histories",
+        "multiturn prompts",
+        "multiturn predictions"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments6 release-path inline session rendering",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/Preference_Memory_step2_ACTION_multiturn_api.py",
+          "sha256": "2a2feaaf3f885e07b6cac76262e2aa366a84d404ebfe73474bfc4c0e64eda456",
+          "source_manifest_record_id": "5093a8a6f9f9b76f47b3f42d7f7726efcbfa69e73ce12bffb8938388665f5f1d",
+          "evidence_id": "source-pre:5093a8a6f9f9b76f47b3f42d7f7726efcbfa69e73ce12bffb8938388665f5f1d"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.session6_inline.01"
+      ],
+      "destinations": [
+        "src/adapters/session/session6_inline/Preference_Memory_step2_ACTION_multiturn_api.py"
+      ]
+    },
+    {
+      "variant_id": "toolschema4_inline",
+      "kind": "stage_variant",
+      "selector": "tool_schema=toolschema4_inline",
+      "selectable": true,
+      "stage": "tool_schema",
+      "semantic_parent": "family.tool_schema",
+      "neutral_family": "family.tool_schema",
+      "affected_outputs": [
+        "available tool definitions",
+        "call names and arguments"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments4 inline tool-schema rendering",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments4",
+          "relative_path": "ours_memory/Preference_Memory_step2_ACTION_singleturn_api.py",
+          "sha256": "372d317be9a26f10aa4e2df7fae4bcc2291299e1b277f89c7c4fc0b99c8934a9",
+          "source_manifest_record_id": "86f8a2ef2196bbfbf76f2702049cd3ecac91ab54009a449d87dc83ddcf9f0620",
+          "evidence_id": "source-pre:86f8a2ef2196bbfbf76f2702049cd3ecac91ab54009a449d87dc83ddcf9f0620"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.toolschema4_inline.01"
+      ],
+      "destinations": [
+        "src/adapters/tool_schema/toolschema4_inline/Preference_Memory_step2_ACTION_singleturn_api.py"
+      ]
+    },
+    {
+      "variant_id": "toolschema5_serialized",
+      "kind": "stage_variant",
+      "selector": "tool_schema=toolschema5_serialized",
+      "selectable": true,
+      "stage": "tool_schema",
+      "semantic_parent": "family.tool_schema",
+      "neutral_family": "family.tool_schema",
+      "affected_outputs": [
+        "serialized tool definitions",
+        "validated call names and slots"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments5 data-utils schema serialization",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments5",
+          "relative_path": "src/data_utils.py",
+          "sha256": "aeee8c56727745be66ad4c7456f5315e31fb3b09c0db4fb4776cd2f00488aed5",
+          "source_manifest_record_id": "119c59a031416791fdb1275e288f745180d6d6000e4e968e071d07c38c0d4b6c",
+          "evidence_id": "source-pre:119c59a031416791fdb1275e288f745180d6d6000e4e968e071d07c38c0d4b6c"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.toolschema5_serialized.01"
+      ],
+      "destinations": [
+        "src/adapters/tool_schema/toolschema5_serialized/data_utils.py"
+      ]
+    },
+    {
+      "variant_id": "toolschema6_inline",
+      "kind": "stage_variant",
+      "selector": "tool_schema=toolschema6_inline",
+      "selectable": true,
+      "stage": "tool_schema",
+      "semantic_parent": "family.tool_schema",
+      "neutral_family": "family.tool_schema",
+      "affected_outputs": [
+        "available tool definitions",
+        "call names and arguments"
+      ],
+      "equivalence_state": "retained_distinct",
+      "distinction": "experiments6 release inline tool-schema rendering",
+      "origin_evidence": [
+        {
+          "origin_root": "experiments6",
+          "relative_path": "src/preference_memory/Preference_Memory_step2_ACTION_singleturn_api.py",
+          "sha256": "249d4dbad83d4143f865e16d17a23f26577b67f3f00b3d70e5b84642f94b2843",
+          "source_manifest_record_id": "8424f098f4069cb06d35eade5b7384dc1e8dd670ef6dbd77ab6ab8c767f107b4",
+          "evidence_id": "source-pre:8424f098f4069cb06d35eade5b7384dc1e8dd670ef6dbd77ab6ab8c767f107b4"
+        }
+      ],
+      "lineage_ids": [
+        "lin.code.toolschema6_inline.01"
+      ],
+      "destinations": [
+        "src/adapters/tool_schema/toolschema6_inline/Preference_Memory_step2_ACTION_singleturn_api.py"
+      ]
+    }
+  ]
+}
+
