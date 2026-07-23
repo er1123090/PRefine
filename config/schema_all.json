@@ -1,0 +1,497 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "GetAirConditioner",
+      "description": "Control air conditioning.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "enum": ["turn_off", "turn_on"]},
+          "area": {"type": "string", "enum": ["balcony", "bathroom", "corridor", "ding_room", "foyer", "garage", "guest_bedroom", "kitchen", "living_room", "master_bedroom", "store_room", "study_room"]},
+          "temperature": {"type": "string"},
+          "mode": {"type": "string", "enum": ["cool", "dry", "fan_only", "heat"]},
+          "fan_speed": {"type": "string", "enum": ["auto", "high", "low", "medium"]},
+          "swing": {"type": "string", "enum": ["auto", "down", "middle", "up"]},
+          "eco_mode": {"type": "string", "enum": ["on"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetAirPurifiers",
+      "description": "Control air purifiers.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "enum": ["turn_off", "turn_on"]},
+          "area": {"type": "string", "enum": ["ding_room", "garage", "guest_bedroom", "living_room", "master_bedroom", "store_room", "study_room"]},
+          "fan_speed": {"type": "string", "enum": ["auto", "high", "low", "medium"]},
+          "mode": {"type": "string", "enum": ["auto", "sleep"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetAromatherapy",
+      "description": "Control aromatherapy devices.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "enum": ["turn_off", "turn_on"]},
+          "area": {"type": "string", "enum": ["balcony", "corridor", "foyer", "guest_bedroom", "living_room", "master_bedroom"]},
+          "intensity": {"type": "string"},
+          "interval": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetBanks",
+      "description": "Find bank services.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "recipient_account_type": {"type": "string", "enum": ["checking", "savings"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetBlinds",
+      "description": "Control window blinds.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "enum": ["close", "open"]},
+          "area": {"type": "string", "enum": ["bathroom", "ding_room", "garage", "kitchen"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetBuses",
+      "description": "Find bus tickets.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "departure_date": {"type": "string"},
+          "departure_time": {"type": "string"},
+          "destination": {"type": "string", "enum": ["Anaheim", "Fresno", "Las Vegas", "Long Beach", "Los Angeles", "New York", "Philadelphia", "Portland", "Sacramento", "San Diego", "San Francisco", "Seattle", "Vancouver", "Washington"]},
+          "group_size": {"type": "string"},
+          "origin": {"type": "string", "enum": ["Anaheim", "Fresno", "Las Vegas", "Long Beach", "Los Angeles", "New York", "Philadelphia", "Portland", "Sacramento", "San Diego", "San Francisco", "San Jose", "Seattle", "Vancouver", "Washington"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetCurtain",
+      "description": "Control curtains.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "enum": ["close", "open"]},
+          "area": {"type": "string", "enum": ["balcony", "guest_bedroom", "living_room", "master_bedroom", "study_room"]},
+          "degree": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetDehumidifiers",
+      "description": "Control dehumidifiers.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "enum": ["turn_off", "turn_on"]},
+          "area": {"type": "string", "enum": ["ding_room", "guest_bedroom", "living_room", "master_bedroom", "store_room", "study_room"]},
+          "intensity": {"type": "string"},
+          "mode": {"type": "string", "enum": ["auto", "sleep"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetEvents",
+      "description": "Find events.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {"type": "string", "enum": ["Music", "Sports"]},
+          "city": {"type": "string"},
+          "date": {"type": "string"},
+          "event_name": {"type": "string"},
+          "event_type": {"type": "string", "enum": ["American Football", "Baseball", "Basketball", "Blues", "Christian", "Country", "Electronica", "Football", "Hip Hop", "Jazz", "Pop", "Rock"]},
+          "number_of_tickets": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetFan",
+      "description": "Control fans.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "enum": ["turn_off", "turn_on"]},
+          "area": {"type": "string", "enum": ["ding_room", "guest_bedroom", "kitchen", "living_room", "master_bedroom", "study_room"]},
+          "speed": {"type": "string", "enum": ["auto", "high", "low", "medium"]},
+          "swing": {"type": "string", "enum": ["auto", "down", "middle", "up"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetFlights",
+      "description": "Search for flights.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "airlines": {"type": "string", "enum": ["Alaska Airlines", "American Airlines", "Delta Airlines", "Southwest Airlines", "United Airlines"]},
+          "departure_date": {"type": "string"},
+          "destination": {"type": "string", "enum": ["Atlanta", "Chicago", "Delhi", "Denver", "Kuala Lumpur", "Las Vegas", "London", "Los Angeles", "Mexico City", "Nairobi", "New York", "Paris", "Philadelphia", "Phoenix", "Portland", "San Diego", "San Francisco", "Seattle", "Sydney", "Toronto", "Vancouver", "Washington"]},
+          "flight_class": {"type": "string", "enum": ["Economy", "Premium Economy"]},
+          "origin": {"type": "string", "enum": ["Atlanta", "Chicago", "Delhi", "Las Vegas", "London", "Los Angeles", "Mexico City", "Nairobi", "New York", "Paris", "Philadelphia", "Phoenix", "Portland", "San Diego", "San Francisco", "Seattle", "Sydney", "Toronto", "Vancouver", "Washington"]},
+          "passengers": {"type": "string"},
+          "return_date": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetFood",
+      "description": "Find food.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "food_name": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetGarageDoor",
+      "description": "Control the garage door.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "enum": ["close", "open"]},
+          "area": {"type": "string", "enum": ["garage"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetHeating",
+      "description": "Control heating.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "enum": ["turn_off", "turn_on"]},
+          "area": {"type": "string", "enum": ["balcony", "bathroom", "ding_room", "foyer", "garage", "guest_bedroom", "kitchen", "living_room", "master_bedroom", "store_room", "study_room"]},
+          "temperature": {"type": "string"},
+          "mode": {"type": "string", "enum": ["fan_only", "heat"]},
+          "fan_speed": {"type": "string", "enum": ["auto", "high", "low", "medium"]},
+          "eco_mode": {"type": "string", "enum": ["on"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetHomes",
+      "description": "Search for home rentals.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "area": {"type": "string", "enum": ["Castro Valley", "Concord", "Dublin", "Fairfield", "Foster City", "Fremont", "Hayward", "Livermore", "Mountain View", "Napa", "Newark", "Novato", "Palo Alto", "Rohnert Park", "San Jose", "San Leandro", "San Ramon", "Santa Clara", "Santa Rosa", "Sebastopol", "Suisun City", "Sunnyvale", "Union City", "Vacaville"]},
+          "number_of_baths": {"type": "string"},
+          "number_of_beds": {"type": "string"},
+          "pets_allowed": {"type": "boolean"},
+          "property_name": {"type": "string"},
+          "visit_date": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetHotels",
+      "description": "Search for hotels.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "average_star": {"type": "string"},
+          "check_in_date": {"type": "string"},
+          "has_wifi": {"type": "boolean"},
+          "hotel_name": {"type": "string"},
+          "location": {"type": "string", "enum": ["Anaheim", "Atlanta", "Chicago", "Delhi", "Fresno", "Kuala Lumpur", "Las Vegas", "London", "Long Beach", "Los Angeles", "Nairobi", "New York", "Palo Alto", "Paris", "Philadelphia", "Phoenix", "Portland", "Sacramento", "San Diego", "San Francisco", "Seattle", "Sydney", "Toronto", "Vallejo", "Vancouver", "Washington D.C."]},
+          "number_of_days": {"type": "string"},
+          "number_of_rooms": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetHumidifier",
+      "description": "Control humidifiers.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "enum": ["turn_off", "turn_on"]},
+          "area": {"type": "string", "enum": ["ding_room", "guest_bedroom", "living_room", "master_bedroom", "store_room", "study_room"]},
+          "intensity": {"type": "string"},
+          "mode": {"type": "string", "enum": ["auto", "sleep"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetLight",
+      "description": "Control lighting.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "enum": ["turn_off", "turn_on"]},
+          "area": {"type": "string", "enum": ["balcony", "bathroom", "corridor", "ding_room", "foyer", "garage", "guest_bedroom", "kitchen", "living_room", "master_bedroom", "store_room", "study_room"]},
+          "brightness": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetMedia",
+      "description": "Find media.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "genre": {"type": "string", "enum": ["Adventure", "Animation", "Biographical", "Comedy", "Documentary", "Drama", "Fantasy", "Mafia", "Musical", "Mystery", "Romance", "Sports", "Thriller", "War"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetMediaPlayer",
+      "description": "Control media playback.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "enum": ["pause", "play", "stop"]},
+          "area": {"type": "string", "enum": ["balcony", "garage", "living_room", "master_bedroom"]},
+          "volume": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetMovies",
+      "description": "Find movies.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "genre": {"type": "string", "enum": ["Adventure", "Animation", "Comedy", "Drama", "Fantasy", "Horror", "Mystery", "Romance", "Thriller"]},
+          "movie_name": {"type": "string"},
+          "starring": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetMusic",
+      "description": "Find music.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "artist": {"type": "string"},
+          "playback_device": {"type": "string", "enum": ["Bedroom speaker", "Kitchen speaker", "TV"]},
+          "song_name": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetRentalCars",
+      "description": "Search for rental cars.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "car_type": {"type": "string", "enum": ["Compact", "Full-size", "Standard"]},
+          "dropoff_date": {"type": "string"},
+          "pickup_city": {"type": "string", "enum": ["Anaheim", "Atlanta", "Chicago", "Concord", "Fremont", "Las Vegas", "London", "Long Beach", "Los Angeles", "Mexico City", "Nairobi", "New York", "Paris", "Philadelphia", "Phoenix", "Portland", "Sacramento", "San Diego", "San Francisco", "San Jose", "Seattle", "Vancouver", "Walnut Creek", "Washington"]},
+          "pickup_date": {"type": "string"},
+          "pickup_location": {"type": "string"},
+          "pickup_time": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetRestaurants",
+      "description": "Find restaurants.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {"type": "string", "enum": ["American", "Asian", "Breakfast", "Brunch", "Burmese", "Burrito", "Chinese", "Coffeehouse", "Ethiopian", "French", "Greek", "Halal", "Indian", "Italian", "Japanese", "Korean", "Mexican", "Moroccan", "Nicaraguan", "Sandwich", "Sushi", "Take-out", "Tapas", "Thai"]},
+          "city": {"type": "string"},
+          "date": {"type": "string"},
+          "number_of_seats": {"type": "string"},
+          "price_range": {"type": "string", "enum": ["cheap", "moderate", "pricey"]},
+          "restaurant_name": {"type": "string"},
+          "time": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetRideSharing",
+      "description": "Request ride sharing.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "destination": {"type": "string"},
+          "number_of_seats": {"type": "string"},
+          "pickup_time": {"type": "string"},
+          "shared_ride": {"type": "boolean"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetTrash",
+      "description": "Handle household trash.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "enum": ["pack"]},
+          "area": {"type": "string", "enum": ["balcony", "bathroom", "ding_room", "garage", "guest_bedroom", "kitchen", "living_room", "master_bedroom", "study_room"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetTravel",
+      "description": "Find travel attractions.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {"type": "string", "enum": ["Historical Landmark", "Museum", "Nature Preserve", "Park", "Performing Arts Venue", "Place of Worship", "Shopping Area", "Sports Venue", "Theme Park", "Tourist Attraction"]},
+          "departure_date": {"type": "string"},
+          "destination": {"type": "string"},
+          "free_entry": {"type": "boolean"},
+          "good_for_kids": {"type": "boolean"},
+          "location": {"type": "string", "enum": ["Anaheim", "Atlanta", "Chicago", "Delhi", "Fresno", "Kuala Lumpur", "Las Vegas", "London", "Long Beach", "Los Angeles", "Mexico City", "Nairobi", "New York", "Paris", "Philadelphia", "Phoenix", "Portland", "Sacramento", "San Diego", "San Francisco", "Seattle", "Sydney", "Toronto", "Vancouver", "Washington D.C."]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetWaterHeater",
+      "description": "Control water heaters.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "enum": ["turn_off", "turn_on"]},
+          "area": {"type": "string", "enum": ["balcony", "bathroom", "corridor", "ding_room", "foyer", "garage", "guest_bedroom", "kitchen", "living_room", "master_bedroom", "store_room", "study_room"]},
+          "temperature": {"type": "string"},
+          "mode": {"type": "string", "enum": ["heating"]},
+          "eco_mode": {"type": "string", "enum": ["on"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetWeather",
+      "description": "Get weather information.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": {"type": "string"},
+          "date": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  }
+]

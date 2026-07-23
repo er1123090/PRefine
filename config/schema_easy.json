@@ -1,0 +1,368 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "GetAirConditioner",
+      "description": "Control air conditioning according to user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "temperature": {"type": "string"},
+          "mode": {"type": "string", "enum": ["cool", "dry", "fan_only", "heat"]},
+          "fan_speed": {"type": "string", "enum": ["auto", "high", "low", "medium"]},
+          "swing": {"type": "string", "enum": ["auto", "down", "middle", "up"]},
+          "eco_mode": {"type": "string", "enum": ["on"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetAirPurifiers",
+      "description": "Control air purifiers according to user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "fan_speed": {"type": "string", "enum": ["auto", "high", "low", "medium"]},
+          "mode": {"type": "string", "enum": ["auto", "sleep"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetAromatherapy",
+      "description": "Control aromatherapy according to user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "intensity": {"type": "string"},
+          "interval": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetBanks",
+      "description": "Find bank services based on user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "recipient_account_type": {"type": "string", "enum": ["checking", "savings"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetBuses",
+      "description": "Find bus tickets based on user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "group_size": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetDehumidifiers",
+      "description": "Control dehumidifiers according to user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "intensity": {"type": "string"},
+          "mode": {"type": "string", "enum": ["auto", "sleep"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetEvents",
+      "description": "Find events based on user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "number_of_tickets": {"type": "string"},
+          "category": {"type": "string", "enum": ["Music", "Sports"]},
+          "event_type": {"type": "string", "enum": ["American Football", "Baseball", "Basketball", "Blues", "Christian", "Country", "Electronica", "Football", "Hip Hop", "Jazz", "Pop", "Rock"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetFan",
+      "description": "Control fans according to user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "speed": {"type": "string", "enum": ["auto", "high", "low", "medium"]},
+          "swing": {"type": "string", "enum": ["auto", "down", "middle", "up"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetFlights",
+      "description": "Search for flights based on user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "flight_class": {"type": "string", "enum": ["Economy", "Premium Economy"]},
+          "passengers": {"type": "string"},
+          "airlines": {"type": "string", "enum": ["Alaska Airlines", "American Airlines", "Delta Airlines", "Southwest Airlines", "United Airlines"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetFood",
+      "description": "Find food based on user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "food_name": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetHeating",
+      "description": "Control heating according to user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "temperature": {"type": "string"},
+          "mode": {"type": "string", "enum": ["fan_only", "heat"]},
+          "fan_speed": {"type": "string", "enum": ["auto", "high", "low", "medium"]},
+          "eco_mode": {"type": "string", "enum": ["on"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetHomes",
+      "description": "Search for home rentals based on user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "number_of_beds": {"type": "string"},
+          "number_of_baths": {"type": "string"},
+          "pets_allowed": {"type": "boolean"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetHotels",
+      "description": "Search for hotels based on user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "average_star": {"type": "string"},
+          "number_of_rooms": {"type": "string"},
+          "has_wifi": {"type": "boolean"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetHumidifier",
+      "description": "Control humidifiers according to user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "intensity": {"type": "string"},
+          "mode": {"type": "string", "enum": ["auto", "sleep"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetLight",
+      "description": "Control lighting according to user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "brightness": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetMedia",
+      "description": "Find media based on user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "genre": {"type": "string", "enum": ["Adventure", "Animation", "Biographical", "Comedy", "Documentary", "Drama", "Fantasy", "Mafia", "Musical", "Mystery", "Romance", "Sports", "Thriller", "War"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetMediaPlayer",
+      "description": "Control media playback according to user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "volume": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetMovies",
+      "description": "Find movies based on user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "genre": {"type": "string", "enum": ["Adventure", "Animation", "Comedy", "Drama", "Fantasy", "Horror", "Mystery", "Romance", "Thriller"]},
+          "starring": {"type": "string"},
+          "movie_name": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetMusic",
+      "description": "Find music based on user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "artist": {"type": "string"},
+          "song_name": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetRentalCars",
+      "description": "Search for rental cars based on user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "car_type": {"type": "string", "enum": ["Compact", "Full-size", "Standard"]}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetRestaurants",
+      "description": "Find restaurants based on user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "price_range": {"type": "string", "enum": ["cheap", "moderate", "pricey"]},
+          "number_of_seats": {"type": "string"},
+          "restaurant_name": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetRideSharing",
+      "description": "Request ride sharing based on user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "shared_ride": {"type": "boolean"},
+          "number_of_seats": {"type": "string"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetTravel",
+      "description": "Find travel attractions based on user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "free_entry": {"type": "boolean"},
+          "category": {"type": "string", "enum": ["Historical Landmark", "Museum", "Nature Preserve", "Park", "Performing Arts Venue", "Place of Worship", "Shopping Area", "Sports Venue", "Theme Park", "Tourist Attraction"]},
+          "good_for_kids": {"type": "boolean"}
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "GetWaterHeater",
+      "description": "Control water heaters according to user preferences.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "temperature": {"type": "string"},
+          "mode": {"type": "string", "enum": ["heating"]},
+          "eco_mode": {"type": "string", "enum": ["on"]}
+        },
+        "required": []
+      }
+    }
+  }
+]

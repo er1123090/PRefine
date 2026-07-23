@@ -1,0 +1,33 @@
+[
+  {
+    "example_id": "mptv2_test_1",
+    "example_id_sub": "mptv2_test_1_0",
+    "reference_ground_truth": [
+      "GetHotels(stars=\"4\")",
+      "GetHotels(stars=\"5\")"
+    ],
+    "llm_output": "{\"GetHotels\": {\"stars\": \"5\"}}",
+    "model_input": "Find a hotel matching the user's usual quality preference.",
+    "token_counts": {
+      "input_tokens": 11,
+      "output_tokens": 6,
+      "reasoning_tokens": 0,
+      "total_tokens": 17
+    }
+  },
+  {
+    "example_id": "mptv2_test_2",
+    "example_id_sub": "mptv2_test_2_0",
+    "reference_ground_truth": [
+      "GetFlights(seat_class=\"economy\")"
+    ],
+    "llm_output": "GetFlights(seat_class=\"business\")",
+    "model_input": "Book a flight.",
+    "token_counts": {
+      "input_tokens": 8,
+      "output_tokens": 5,
+      "reasoning_tokens": 0,
+      "total_tokens": 13
+    }
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "dataset": "MPT_v2_mix600",
+  "fixed_evaluator": "experiment5/src/evaluation/metrics.py",
+  "gvr_conditions": {
+    "g_only": {
+      "memory_mode": "generation_only",
+      "components": ["generator"]
+    },
+    "gv_no_refine": {
+      "memory_mode": "generate_verify",
+      "components": ["generator", "verifier"]
+    },
+    "gr_no_verifier": {
+      "memory_mode": "blind_refine_1",
+      "components": ["generator", "refiner"]
+    },
+    "gvr": {
+      "memory_mode": "verified_refine",
+      "components": ["generator", "verifier", "refiner"]
+    }
+  },
+  "inference_axes": {
+    "turn": ["single", "multi"],
+    "query": ["hint", "nohint"],
+    "schema": ["easy", "all"],
+    "difficulty": ["easy", "medium", "hard"]
+  },
+  "reporting": [
+    "overall_micro_f1",
+    "preference_exact_match",
+    "non_preference_micro_f1",
+    "argument_match_rate",
+    "provider_token_usage",
+    "local_prompt_and_memory_tokens"
+  ]
+}
