@@ -24,6 +24,11 @@ from tqdm.auto import tqdm
 from typing_extensions import Literal
 
 try:
+    from .majority_preference import select_query_preferences, select_query_rules
+except ImportError:
+    from majority_preference import select_query_preferences, select_query_rules
+
+try:
     from google import genai
     from google.genai import types as genai_types
 except ImportError:
@@ -845,7 +850,7 @@ def assign_singleturn_utterances(
                     )
         return results
 
-    prefs = example.get("api_calls_pref", [])
+    prefs = select_query_preferences(example)
     if not isinstance(prefs, list) or not prefs:
         return []
     if not pref_group_path or not os.path.exists(pref_group_path):
@@ -857,7 +862,11 @@ def assign_singleturn_utterances(
             group_name = pref.get("value_group")
             if group_name not in pref_group_data:
                 continue
-            group_rules = pref_group_data[group_name].get("rules", [])
+            group_rules = select_query_rules(
+                example,
+                pref,
+                pref_group_data[group_name].get("rules", []),
+            )
             domain_data_map: Dict[str, Dict[str, set[str]]] = {}
             for evidence in pref.get("evidence", []):
                 domain = evidence.get("domain")
@@ -891,7 +900,11 @@ def assign_singleturn_utterances(
                 for evidence in pref.get("evidence", [])
                 if evidence.get("domain")
             }
-            rules = pref_group_data[group_name].get("rules", [])
+            rules = select_query_rules(
+                example,
+                pref,
+                pref_group_data[group_name].get("rules", []),
+            )
             candidate_domains = {
                 rule.get("domain")
                 for rule in rules
@@ -960,7 +973,7 @@ def assign_multiturn_utterances(
                         results.append(result)
         return results
 
-    prefs = example.get("api_calls_pref", [])
+    prefs = select_query_preferences(example)
     if not isinstance(prefs, list) or not prefs:
         return []
     if not pref_group_path or not os.path.exists(pref_group_path):
@@ -972,7 +985,11 @@ def assign_multiturn_utterances(
             group_name = pref.get("value_group")
             if group_name not in pref_group_data:
                 continue
-            group_rules = pref_group_data[group_name].get("rules", [])
+            group_rules = select_query_rules(
+                example,
+                pref,
+                pref_group_data[group_name].get("rules", []),
+            )
             domain_data_map: Dict[str, Dict[str, set[str]]] = {}
             for evidence in pref.get("evidence", []):
                 domain = evidence.get("domain")
@@ -1006,7 +1023,11 @@ def assign_multiturn_utterances(
                 for evidence in pref.get("evidence", [])
                 if evidence.get("domain")
             }
-            rules = pref_group_data[group_name].get("rules", [])
+            rules = select_query_rules(
+                example,
+                pref,
+                pref_group_data[group_name].get("rules", []),
+            )
             candidate_domains = {
                 rule.get("domain")
                 for rule in rules

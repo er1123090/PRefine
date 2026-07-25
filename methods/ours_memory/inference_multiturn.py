@@ -2,12 +2,11 @@ import tqdm
 import os
 import json
 import argparse
+import sys
+from pathlib import Path
 try:
     import pandas as pd
 except ImportError:
-    import sys
-    from pathlib import Path
-
     _ROOT = Path(__file__).resolve().parents[2]
     if str(_ROOT) not in sys.path:
         sys.path.insert(0, str(_ROOT))
@@ -19,6 +18,14 @@ import copy
 import asyncio
 import itertools
 from openai import AsyncOpenAI
+
+_ROOT = Path(__file__).resolve().parents[2]
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+from src.exp4_runtime.majority_preference import (
+    select_query_preferences,
+    select_query_rules,
+)
 
 # Gemini Library Import
 try:
@@ -357,7 +364,7 @@ def assign_user_utterances(
                     
     # [CASE 2] medium
     elif pref_type == "medium":
-        prefs = example.get("api_calls_pref", [])
+        prefs = select_query_preferences(example)
         if not isinstance(prefs, list) or not prefs: return []
         if not pref_group_path or not os.path.exists(pref_group_path): return []
         
@@ -367,7 +374,11 @@ def assign_user_utterances(
             group_name = pref.get("value_group")
             if group_name not in pref_group_data: continue
             
-            group_rules = pref_group_data[group_name].get("rules", [])
+            group_rules = select_query_rules(
+                example,
+                pref,
+                pref_group_data[group_name].get("rules", []),
+            )
             domain_data_map = {} 
 
             for evidence in pref.get("evidence", []):
@@ -395,7 +406,7 @@ def assign_user_utterances(
         if not pref_group_path or not os.path.exists(pref_group_path): return []
         with open(pref_group_path, "r", encoding="utf-8") as f: pref_group_data = json.load(f)
         
-        prefs = example.get("api_calls_pref", [])
+        prefs = select_query_preferences(example)
         if not isinstance(prefs, list) or not prefs: return []
 
         for pref in prefs:
@@ -403,7 +414,11 @@ def assign_user_utterances(
             if not current_group_name or current_group_name not in pref_group_data: continue
             
             used_domains = {e.get("domain") for e in pref.get("evidence", []) if e.get("domain")}
-            rules = pref_group_data[current_group_name].get("rules", [])
+            rules = select_query_rules(
+                example,
+                pref,
+                pref_group_data[current_group_name].get("rules", []),
+            )
             
             candidate_domains = set()
             for rule in rules:

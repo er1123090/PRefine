@@ -1,18 +1,27 @@
 # utils_mem0.py
 import os
 import json
+import itertools
+import sys
+from pathlib import Path
 try:
     import pandas as pd
 except ImportError:
-    import sys
-    from pathlib import Path
-
     _ROOT = Path(__file__).resolve().parents[2]
     if str(_ROOT) not in sys.path:
         sys.path.insert(0, str(_ROOT))
     from src.exp4_runtime import tabular as pd
 import re
 from typing import List, Dict, Any, Tuple
+
+_ROOT = Path(__file__).resolve().parents[2]
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+from src.exp4_runtime.majority_preference import (
+    has_query_majority,
+    select_query_preferences,
+    select_query_rules,
+)
 
 # --- Prompt Templates ---
 EXPLICIT_ZS_PROMPT_TEMPLATE = "Relevant Memories:\n{retrieved_memories}\n\nHistory:\n{dialogue_history}\nUser: {user_utterance}"
@@ -112,22 +121,66 @@ def assign_user_utterances(
     # [CASE 2] medium (Explicit Evidence Usage)
     # -------------------------------------------------------
     elif pref_type == "medium":
-        prefs = example.get("api_calls_pref", [])
+        prefs = select_query_preferences(example)
         if not isinstance(prefs, list) or not prefs: return []
 
-        for pref in prefs:
-            evidence_list = pref.get("evidence", [])
-            if not isinstance(evidence_list, list): continue
-            
-            for evidence in evidence_list:
-                domain = evidence.get("domain")
-                if domain and domain in query_map:
-                    if 'api_call' in evidence:
-                         ground_truth_str = evidence['api_call']
+        if not has_query_majority(example):
+            for pref in prefs:
+                evidence_list = pref.get("evidence", [])
+                if not isinstance(evidence_list, list):
+                    continue
+                for evidence in evidence_list:
+                    domain = evidence.get("domain")
+                    if not domain or domain not in query_map:
+                        continue
+                    if "api_call" in evidence:
+                        ground_truth_str = evidence["api_call"]
                     else:
-                        slots_str_list = [f'{evidence["slot"]}="{evidence["value"]}"']
-                        ground_truth_str = f"{domain}({', '.join(slots_str_list)})"
-                    
+                        ground_truth_str = (
+                            f'{domain}({evidence["slot"]}="{evidence["value"]}")'
+                        )
+                    results.append((query_map[domain], ground_truth_str))
+            return results
+
+        if not pref_group_path or not os.path.exists(pref_group_path):
+            return []
+        with open(pref_group_path, "r", encoding="utf-8") as f:
+            pref_group_data = json.load(f)
+
+        for pref in prefs:
+            group_name = pref.get("value_group")
+            if group_name not in pref_group_data:
+                continue
+            group_rules = select_query_rules(
+                example,
+                pref,
+                pref_group_data[group_name].get("rules", []),
+            )
+            domain_data_map = {}
+            for evidence in pref.get("evidence", []):
+                domain = evidence.get("domain")
+                slot = evidence.get("slot")
+                if not domain or not slot or domain not in query_map:
+                    continue
+                candidate_values = [
+                    rule.get("value")
+                    for rule in group_rules
+                    if rule.get("domain") == domain and rule.get("slot") == slot
+                ]
+                if candidate_values:
+                    domain_data_map.setdefault(domain, {}).setdefault(slot, set()).update(
+                        candidate_values
+                    )
+
+            for domain, slot_map in domain_data_map.items():
+                slots = sorted(slot_map)
+                values = [sorted(slot_map[slot], key=str) for slot in slots]
+                for combination in itertools.product(*values):
+                    args = ", ".join(
+                        f'{slot}="{value}"'
+                        for slot, value in zip(slots, combination)
+                    )
+                    ground_truth_str = f"{domain}({args})"
                     results.append((query_map[domain], ground_truth_str))
         return results
 
@@ -142,7 +195,7 @@ def assign_user_utterances(
         with open(pref_group_path, "r", encoding="utf-8") as f:
             pref_group_data = json.load(f)
 
-        prefs = example.get("api_calls_pref", [])
+        prefs = select_query_preferences(example)
         if not isinstance(prefs, list) or not prefs: return []
 
         for pref in prefs:
@@ -157,7 +210,11 @@ def assign_user_utterances(
                 if d: used_domains.add(d)
 
             # Find Unseen Domain & Construct GT
-            group_rules = pref_group_data[current_group_name].get("rules", [])
+            group_rules = select_query_rules(
+                example,
+                pref,
+                pref_group_data[current_group_name].get("rules", []),
+            )
             for rule in group_rules:
                 candidate_domain = rule.get("domain")
                 
