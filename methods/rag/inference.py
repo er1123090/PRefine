@@ -40,6 +40,8 @@ def main() -> None:
     parser.add_argument("--reasoning_effort", default=None)
     parser.add_argument("--base_url", default=None)
     parser.add_argument("--api_key", default=None)
+    parser.add_argument("--embedding_base_url", default=None)
+    parser.add_argument("--embedding_api_key", default=None)
     parser.add_argument("--max_queries", type=int, default=None)
     args = parser.parse_args()
 
@@ -49,8 +51,17 @@ def main() -> None:
     except ImportError as exc:
         raise RuntimeError("chromadb is required for RAG inference") from exc
 
+    embedding_api_key = (
+        args.embedding_api_key
+        or args.api_key
+        or os.environ.get("OPENAI_API_KEY")
+        or os.environ.get("OPENROUTER_API_KEY")
+    )
+    if args.embedding_base_url and not embedding_api_key:
+        raise RuntimeError("OPENAI_API_KEY is required when --embedding_base_url is set.")
     embedding = embedding_functions.OpenAIEmbeddingFunction(
-        api_key=args.api_key or os.environ.get("OPENAI_API_KEY"),
+        api_key=embedding_api_key,
+        api_base=args.embedding_base_url,
         model_name="text-embedding-3-small",
     )
     client = chromadb.PersistentClient(path=args.db_path)

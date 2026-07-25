@@ -30,7 +30,14 @@ def load_chains_dataset(fpath: str) -> pd.DataFrame:
 # ---------------------------------------------------------
 # RAG Ingestion Logic
 # ---------------------------------------------------------
-def run_ingestion(input_path: str, db_path: str, collection_name: str):
+def run_ingestion(
+    input_path: str,
+    db_path: str,
+    collection_name: str,
+    embedding_model: str = "text-embedding-3-small",
+    embedding_api_key: str | None = None,
+    embedding_base_url: str | None = None,
+):
     try:
         import chromadb
         from chromadb.utils import embedding_functions
@@ -38,9 +45,12 @@ def run_ingestion(input_path: str, db_path: str, collection_name: str):
         raise RuntimeError("chromadb is required for RAG index construction") from exc
 
     # 1. Initialize ChromaDB Client
+    if not embedding_api_key:
+        raise RuntimeError("OPENAI_API_KEY is required for embeddings.")
     openai_ef = embedding_functions.OpenAIEmbeddingFunction(
-        api_key=os.environ.get("OPENAI_API_KEY"),
-        model_name="text-embedding-3-small"
+        api_key=embedding_api_key,
+        api_base=embedding_base_url,
+        model_name=embedding_model
     )
     
     client = chromadb.PersistentClient(path=db_path)
@@ -121,10 +131,25 @@ if __name__ == "__main__":
     parser.add_argument("--input_path", type=str, default="/data/minseo/experiment8/data/MPT_v2_mix600.json")
     parser.add_argument("--db_path", type=str, default="./chroma_db_rag", help="Path to save vector database")
     parser.add_argument("--collection_name", type=str, default="user_memories")
+    parser.add_argument("--base_url", type=str, default=None, help="Optional embeddings/base model endpoint override.")
+    parser.add_argument("--api_key", type=str, default=None, help="Optional embeddings API key.")
+    parser.add_argument("--embedding_base_url", type=str, default=None, help="Optional embedding-only endpoint override.")
+    parser.add_argument("--embedding_api_key", type=str, default=None, help="Optional embedding-only API key.")
+    parser.add_argument("--embedding_model", type=str, default="text-embedding-3-small")
     args = parser.parse_args()
 
-    if not os.environ.get("OPENAI_API_KEY"):
+    embedding_api_key = args.embedding_api_key or args.api_key
+    embedding_base_url = args.embedding_base_url or args.base_url
+
+    if not embedding_api_key:
         print("[Error] OPENAI_API_KEY environment variable is required for embeddings.")
         exit(1)
 
-    run_ingestion(args.input_path, args.db_path, args.collection_name)
+    run_ingestion(
+        args.input_path,
+        args.db_path,
+        args.collection_name,
+        embedding_model=args.embedding_model,
+        embedding_api_key=embedding_api_key,
+        embedding_base_url=embedding_base_url,
+    )

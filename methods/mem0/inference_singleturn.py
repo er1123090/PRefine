@@ -581,7 +581,9 @@ async def process_with_llm_async(
     tools_schema_path: str,
     prompt_template: str, context_type: str, pref_type: str,
     model_name: str, concurrency: int = 10,
-    reasoning_effort: str = None 
+    reasoning_effort: str = None,
+    base_url: str = None,
+    api_key: str = None,
 ):
     df = load_chains_dataset(input_path)
     query_map = load_query_map(query_map_path)
@@ -589,8 +591,29 @@ async def process_with_llm_async(
     
     # Initialize Clients
     openai_client = None
-    if os.environ.get("OPENAI_API_KEY"):
-        openai_client = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+    if "gemini" not in model_name.lower():
+        client_args = {}
+        if base_url:
+            print(f"[Info] Using Custom LLM Base URL: {base_url}")
+            client_args["base_url"] = base_url
+            resolved_api_key = (
+                api_key
+                or os.environ.get("OPENAI_API_KEY")
+                or os.environ.get("OPENROUTER_API_KEY")
+                or "EMPTY"
+            )
+            client_args["api_key"] = resolved_api_key
+        else:
+            print(f"[Info] Using Standard OpenAI API for model: {model_name}")
+            resolved_api_key = (
+                api_key
+                or os.environ.get("OPENAI_API_KEY")
+                or os.environ.get("OPENROUTER_API_KEY")
+            )
+            if resolved_api_key:
+                client_args["api_key"] = resolved_api_key
+        if "api_key" in client_args:
+            openai_client = AsyncOpenAI(**client_args)
     
     # Initialize mem0 Client
     if MemoryClient is None:
@@ -689,6 +712,8 @@ if __name__ == "__main__":
     parser.add_argument("--model_name", type=str, default="gpt-4o-mini-2024-07-18")
     parser.add_argument("--concurrency", type=int, default=20)
     parser.add_argument("--reasoning_effort", type=str, choices=["minimal", 'low', "medium", "high"], default=None)
+    parser.add_argument("--base_url", type=str, default=None, help="LLM base URL (optional)")
+    parser.add_argument("--api_key", type=str, default=None, help="LLM API Key (optional)")
 
     args = parser.parse_args()
 
@@ -711,6 +736,8 @@ if __name__ == "__main__":
             pref_type=args.pref_type,
             model_name=args.model_name,
             concurrency=args.concurrency,
-            reasoning_effort=args.reasoning_effort
+            reasoning_effort=args.reasoning_effort,
+            base_url=args.base_url,
+            api_key=args.api_key,
         )
     )
