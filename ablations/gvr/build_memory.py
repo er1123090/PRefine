@@ -4,7 +4,8 @@ Our Memory — Step 1: Latent Preference Extraction.
 Processes each user's session history through a generate → verify → refine loop
 and writes per-user preference records to a JSONL file.
 
-Supports OpenAI (including vLLM-hosted models) and Google Gemini providers.
+Supports OpenAI-compatible endpoints (including OpenRouter and vLLM) and Google
+Gemini providers.
 """
 
 import argparse
@@ -34,6 +35,7 @@ from src.construction_usage import (
     set_usage_session,
 )
 from src.token_measurement import count_json_tokens, encoding_metadata
+from src.provider_config import resolve_openai_compatible_endpoint
 
 
 LATENT_PREF_BLIND_REFINEMENT_PROMPT = """
@@ -173,7 +175,7 @@ class PreferenceAggregator:
                 f"Choose one of {sorted(valid_memory_modes)}."
             )
 
-        if self.provider == "openai":
+        if self.provider in {"openai", "openrouter"}:
             self.client = AsyncOpenAI(api_key=self.api_key, base_url=self.api_base)
         elif self.provider == "google":
             if not GOOGLE_AVAILABLE:
@@ -208,7 +210,7 @@ class PreferenceAggregator:
     async def _call_llm(self, system_prompt: str, user_prompt: str,
                         temperature: float = 0.0,
                         component: str = "generator") -> str:
-        if self.provider == "openai":
+        if self.provider in {"openai", "openrouter"}:
             messages = [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
@@ -230,7 +232,7 @@ class PreferenceAggregator:
                 return response.choices[0].message.content
             except Exception as e:
                 if "System role not supported" not in str(e):
-                    print(f"[OpenAI Error] {e}")
+                    print(f"[OpenAI-compatible Error] {e}")
                     return "{}"
 
             merged_prompt = f"{system_prompt.strip()}\n\n{user_prompt.strip()}"
@@ -251,7 +253,7 @@ class PreferenceAggregator:
                 )
                 return response.choices[0].message.content
             except Exception as e:
-                print(f"[OpenAI Error] {e}")
+                print(f"[OpenAI-compatible Error] {e}")
                 return "{}"
 
         elif self.provider == "google":
@@ -722,6 +724,12 @@ async def process_single_user(
 
 async def run_pipeline(args: argparse.Namespace) -> None:
     api_key = args.api_key
+    if args.provider in {"openai", "openrouter"}:
+        args.api_base, api_key = resolve_openai_compatible_endpoint(
+            provider=args.provider,
+            base_url=args.api_base,
+            api_key=api_key,
+        )
     if args.provider == "openai":
         api_key = api_key or os.environ.get("OPENAI_API_KEY") or "EMPTY"
     elif args.provider == "google":
@@ -769,7 +777,7 @@ async def run_pipeline(args: argparse.Namespace) -> None:
     await asyncio.gather(*tasks)
     pbar.close()
 
-    if args.provider == "openai":
+    if args.provider in {"openai", "openrouter"}:
         await aggregator.client.close()
 
     print(f"\nResults -> {args.output}")
@@ -788,7 +796,11 @@ if __name__ == "__main__":
     parser.add_argument("--verifier_output", default="outputs/our_memory/verifier_logs.jsonl")
     parser.add_argument("--refinement_output",
                         default="outputs/our_memory/refinement_logs.jsonl")
-    parser.add_argument("--provider", default="openai", choices=["openai", "google"])
+    parser.add_argument(
+        "--provider",
+        default="openai",
+        choices=["openai", "openrouter", "google"],
+    )
     parser.add_argument("--model", default="gpt-4o-mini")
     parser.add_argument("--api_base", default=None)
     parser.add_argument("--api_key", default=None)

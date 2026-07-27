@@ -34,6 +34,7 @@ if str(_EXPERIMENT_ROOT) not in sys.path:
     sys.path.insert(0, str(_EXPERIMENT_ROOT))
 
 from src.construction_usage import record_response_usage
+from src.provider_config import provider_label
 from src.exp4_runtime.majority_preference import (
     select_query_preferences,
     select_query_rules,
@@ -84,6 +85,9 @@ EMBEDDING_DIMS_BY_MODEL = {
     "text-embedding-3-small": 1536,
     "text-embedding-3-large": 3072,
     "text-embedding-ada-002": 1536,
+    "openai/text-embedding-3-small": 1536,
+    "openai/text-embedding-3-large": 3072,
+    "openai/text-embedding-ada-002": 1536,
 }
 
 
@@ -471,7 +475,7 @@ def infer_embedding_dimensions(
         record_response_usage(
             response,
             component="embedding_dimension_probe",
-            provider="openai",
+            provider=provider_label("auto", base_url),
             model=embedding_model,
         )
     except Exception as exc:
@@ -520,7 +524,7 @@ def build_openai_compatible_embeddings(
                 record_response_usage(
                     response,
                     component="embedding",
-                    provider="openai",
+                    provider=provider_label("auto", base_url),
                     model=embedding_model,
                 )
                 return [item.embedding for item in response.data]
@@ -544,7 +548,7 @@ def build_openai_compatible_embeddings(
                         record_response_usage(
                             response,
                             component="embedding",
-                            provider="openai",
+                            provider=provider_label("auto", base_url),
                             model=embedding_model,
                         )
                     except Exception as inner_exc:
@@ -573,7 +577,7 @@ def build_openai_compatible_embeddings(
                 record_response_usage(
                     response,
                     component="embedding",
-                    provider="openai",
+                    provider=provider_label("auto", base_url),
                     model=embedding_model,
                 )
                 return [item.embedding for item in response.data]
@@ -597,7 +601,7 @@ def build_openai_compatible_embeddings(
                         record_response_usage(
                             response,
                             component="embedding",
-                            provider="openai",
+                            provider=provider_label("auto", base_url),
                             model=embedding_model,
                         )
                     except Exception as inner_exc:

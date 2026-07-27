@@ -18,6 +18,11 @@ from src.exp4_prompts import (
     IMPLICIT_ZS_PROMPT_MEMORY_TEMPLATE_MULTITURN,
 )
 from src.exp4_runtime.inference import prepare_items, run_inference
+from src.provider_config import (
+    is_openrouter_endpoint,
+    resolve_embedding_endpoint,
+    resolve_openai_compatible_endpoint,
+)
 
 
 def main() -> None:
@@ -38,8 +43,10 @@ def main() -> None:
     parser.add_argument("--log_path", required=True)
     parser.add_argument("--concurrency", type=int, default=20)
     parser.add_argument("--reasoning_effort", default=None)
+    parser.add_argument("--provider", choices=["auto", "openrouter"], default="auto")
     parser.add_argument("--base_url", default=None)
     parser.add_argument("--api_key", default=None)
+    parser.add_argument("--embedding_model", default="text-embedding-3-small")
     parser.add_argument("--embedding_base_url", default=None)
     parser.add_argument("--embedding_api_key", default=None)
     parser.add_argument("--max_queries", type=int, default=None)
@@ -51,19 +58,41 @@ def main() -> None:
     except ImportError as exc:
         raise RuntimeError("chromadb is required for RAG inference") from exc
 
+    base_url, api_key = resolve_openai_compatible_endpoint(
+        provider=args.provider,
+        base_url=args.base_url,
+        api_key=args.api_key,
+    )
+    embedding_base_url = args.embedding_base_url
+    if embedding_base_url is None and is_openrouter_endpoint(base_url):
+        embedding_base_url = base_url
     embedding_api_key = (
         args.embedding_api_key
-        or args.api_key
+        or (api_key if is_openrouter_endpoint(embedding_base_url) else None)
         or os.environ.get("OPENAI_API_KEY")
-        or os.environ.get("OPENROUTER_API_KEY")
     )
-    if args.embedding_base_url and not embedding_api_key:
-        raise RuntimeError("OPENAI_API_KEY is required when --embedding_base_url is set.")
-    embedding = embedding_functions.OpenAIEmbeddingFunction(
-        api_key=embedding_api_key,
-        api_base=args.embedding_base_url,
-        model_name="text-embedding-3-small",
+    embedding_model, embedding_base_url, embedding_api_key = (
+        resolve_embedding_endpoint(
+            provider=args.provider,
+            embedding_model=args.embedding_model,
+            base_url=embedding_base_url,
+            api_key=embedding_api_key,
+        )
     )
+    if not embedding_api_key:
+        if embedding_base_url:
+            embedding_api_key = "EMPTY"
+        else:
+            raise RuntimeError(
+                "OPENAI_API_KEY is required for the default embedding endpoint."
+            )
+    embedding_kwargs = {
+        "api_key": embedding_api_key,
+        "model_name": embedding_model,
+    }
+    if embedding_base_url:
+        embedding_kwargs["api_base"] = embedding_base_url
+    embedding = embedding_functions.OpenAIEmbeddingFunction(**embedding_kwargs)
     client = chromadb.PersistentClient(path=args.db_path)
     collection = client.get_collection(
         name=args.collection_name,
@@ -123,8 +152,8 @@ def main() -> None:
             reasoning_effort=args.reasoning_effort,
             method_name="rag",
             retriever=retrieve,
-            base_url=args.base_url,
-            api_key=args.api_key,
+            base_url=base_url,
+            api_key=api_key,
         )
     )
 

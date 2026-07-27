@@ -60,17 +60,18 @@ copies.
 ## Environment
 
 ```bash
-source /data/minseo/.venvs/vllm/bin/activate
 cd /data/minseo/experiment8
+python3 -m venv /data/minseo/.venvs/experiment8
+source /data/minseo/.venvs/experiment8/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 python scripts/verify_layout.py
 ```
 
-Install only the method-specific missing dependencies from `requirements.txt`;
-API keys are read from the normal provider environment variables. The copied
-JSON loaders have a small pandas-free compatibility path, so the base vLLM
-environment can run vanilla/Ours CLI parsing and the offline checks. RAG still
-requires `chromadb`, Mem0 requires `mem0ai`, and LangMem construction/inference
-requires the LangMem/LangGraph packages. Local token re-counting also requires
+The common inference and GVR launchers automatically prefer this Experiment8
+environment when it exists. Local vLLM GPU launchers continue to use the
+separate `/data/minseo/.venvs/vllm` environment. API keys are read from the
+normal provider environment variables. Local token re-counting also requires
 the selected tiktoken encoding to be cached; provider-reported usage works
 without that cache by adding `--skip-local`.
 
@@ -95,6 +96,18 @@ python methods/rag/build_index.py \
   --db_path outputs/rag/chroma
 ```
 
+To build the RAG index with OpenRouter embeddings:
+
+```bash
+export OPENROUTER_API_KEY='...'
+
+python methods/rag/build_index.py \
+  --provider openrouter \
+  --input_path data/MPT_v2_conflict_mixed_noise.json \
+  --db_path outputs/rag/conflict_noise_chroma \
+  --embedding_model openai/text-embedding-3-small
+```
+
 Mem0:
 
 ```bash
@@ -102,6 +115,17 @@ python methods/mem0/build_memory.py \
   --input_path data/MPT_v2_mix600.json \
   --metrics_output outputs/mem0/construction_metrics.jsonl
 ```
+
+Local Mem0 OSS with `gpt-oss-20b`:
+
+```bash
+bash methods/mem0_local/setup_local_env.sh
+CUDA_DEVICE=0 bash methods/mem0_local/run_gpt_oss20b.sh
+```
+
+This path uses the pinned official `mem0ai/mem0` checkout, local vLLM, local
+Qdrant, and does not require `MEM0_API_KEY`. See
+`methods/mem0_local/README.md` for resume and token-ablation details.
 
 LangMem:
 
@@ -112,11 +136,55 @@ python methods/langmem/build_memory.py \
   --manifest_path outputs/langmem/memory.manifest.json
 ```
 
+For OpenRouter-based LangMem construction, add `--provider openrouter`, use an
+OpenRouter chat-model slug for `--memory_model`, and use an OpenRouter
+embedding-model slug for `--embedding_model`.
+
+To resume the checkpointed 0725 LangMem construction through ordinary OpenAI
+API calls without submitting new Batch jobs:
+
+```bash
+export OPENAI_API_KEY='...'
+
+python methods/langmem/build_memory_batch.py direct \
+  --input_path data/MPT_v2_0725.json \
+  --output_dir outputs/langmem/MPT_v2_0725_gpt-5-mini_batch \
+  --model gpt-5-mini \
+  --reasoning_effort minimal \
+  --direct_concurrency 10
+```
+
+Completed ordinary responses are checkpointed individually. Re-running the
+same command resumes only missing responses, while preserving construction
+usage, memory accumulation, and token/session ablation metadata.
+
+A-MEM:
+
+```bash
+export OPENAI_API_KEY='...'
+
+python methods/amem/build_memory_batch.py run \
+  --input_path data/MPT_v2_0725.json \
+  --output_dir outputs/amem/MPT_v2_0725_gpt-5-mini_batch \
+  --model gpt-5-mini \
+  --reasoning_effort minimal
+```
+
+This adapter is pinned to the official
+[`WujiangXu/A-mem`](https://github.com/WujiangXu/A-mem) reproduction at commit
+`0c8039f28fdcc08189a23c07a3437d9d2482f9c2`. Each dialogue turn is an
+immutable note. Construction preserves the official two-call order:
+metadata analysis, raw-content `k=5` neighbor search, then memory evolution.
+The two calls become separate causal Batch jobs. For a bounded smoke test on
+the first dataset row's first dialogue, add `--max_examples 1
+--max_sessions 1`. Provenance and adapter boundaries are recorded in
+`methods/amem/UPSTREAM.md`.
+
 Vanilla LLM has no construction stage.
 
 ## Run inference
 
-The common CLI fixes dataset/config paths and keeps the method-specific runtime.
+The common CLI supplies dataset/config defaults and keeps the method-specific runtime.
 
 ```bash
 python scripts/run_inference.py \
@@ -128,9 +196,151 @@ python scripts/run_inference.py \
   --model gpt-4o-mini
 ```
 
-For `ours_memory` and `langmem`, add `--memory_path`. For RAG, use
-`--db_path`; Mem0 uses `MEM0_API_KEY`. Add `--dry_run` to inspect the exact
-command without calling a model.
+In Experiment8 methods, OpenRouter can be used for inference through its
+OpenAI-compatible endpoint via `--provider openrouter`. Use an OpenRouter model
+slug and keep the key out of the command line:
+
+```bash
+export OPENROUTER_API_KEY='...'
+
+# Vanilla
+python scripts/run_inference.py \
+  --method vanilla_llm \
+  --provider openrouter \
+  --turn single \
+  --input_path data/MPT_v2_conflict_mixed_noise.json \
+  --query hint \
+  --schema easy \
+  --pref_type medium \
+  --model openai/gpt-4o
+```
+
+```bash
+# RAG
+python scripts/run_inference.py \
+  --method rag \
+  --provider openrouter \
+  --turn single \
+  --input_path data/MPT_v2_conflict_mixed_noise.json \
+  --db_path outputs/rag/chroma \
+  --query hint \
+  --schema all \
+  --pref_type medium \
+  --model openai/gpt-4o
+```
+
+```bash
+# Mem0 (single)
+python scripts/run_inference.py \
+  --method mem0 \
+  --provider openrouter \
+  --turn single \
+  --input_path data/MPT_v2_conflict_mixed_noise.json \
+  --query hint \
+  --schema easy \
+  --pref_type medium \
+  --model openai/gpt-4o
+```
+
+```bash
+# LangMem
+python scripts/run_inference.py \
+  --method langmem \
+  --provider openrouter \
+  --turn single \
+  --input_path data/MPT_v2_conflict_mixed_noise.json \
+  --memory_path outputs/langmem/memory.jsonl \
+  --query hint \
+  --schema easy \
+  --pref_type medium \
+  --model openai/gpt-4o
+```
+
+```bash
+# A-MEM
+python scripts/run_inference.py \
+  --method amem \
+  --turn single \
+  --input_path data/MPT_v2_0725.json \
+  --memory_path outputs/amem/MPT_v2_0725_gpt-5-mini_batch/memory.jsonl \
+  --query hint \
+  --schema easy \
+  --pref_type medium \
+  --model gpt-5-mini \
+  --reasoning_effort minimal
+```
+
+A-MEM inference defaults to the official-style semantic top 10 plus one-hop
+directed-link expansion (up to 10 linked notes per semantic hit). The common
+Experiment8 evaluation prompt and per-`example_id` memory isolation remain
+unchanged.
+
+To smoke-test the final A-MEM prediction through Batch API as well, use the
+same flags for every lifecycle command:
+
+```bash
+python methods/amem/inference_batch.py prepare \
+  --memory_path outputs/amem/MPT_v2_0725_gpt-5-mini_batch/memory.jsonl \
+  --input_path data/MPT_v2_0725.json \
+  --output_dir outputs/amem/MPT_v2_0725_gpt-5-mini_batch/inference_smoke \
+  --model gpt-5-mini --reasoning_effort minimal --max_queries 1
+
+python methods/amem/inference_batch.py submit \
+  --memory_path outputs/amem/MPT_v2_0725_gpt-5-mini_batch/memory.jsonl \
+  --input_path data/MPT_v2_0725.json \
+  --output_dir outputs/amem/MPT_v2_0725_gpt-5-mini_batch/inference_smoke \
+  --model gpt-5-mini --reasoning_effort minimal --max_queries 1
+
+python methods/amem/inference_batch.py status \
+  --memory_path outputs/amem/MPT_v2_0725_gpt-5-mini_batch/memory.jsonl \
+  --input_path data/MPT_v2_0725.json \
+  --output_dir outputs/amem/MPT_v2_0725_gpt-5-mini_batch/inference_smoke \
+  --model gpt-5-mini --reasoning_effort minimal --max_queries 1
+
+python methods/amem/inference_batch.py collect \
+  --memory_path outputs/amem/MPT_v2_0725_gpt-5-mini_batch/memory.jsonl \
+  --input_path data/MPT_v2_0725.json \
+  --output_dir outputs/amem/MPT_v2_0725_gpt-5-mini_batch/inference_smoke \
+  --model gpt-5-mini --reasoning_effort minimal --max_queries 1
+```
+
+`--provider openrouter` defaults to `https://openrouter.ai/api/v1` and reads
+`OPENROUTER_API_KEY`. Explicit `--base_url` and `--api_key` values still
+override those defaults. Use a concrete OpenRouter model slug when experiment
+reproducibility matters.
+
+The same provider flag works for `ours_memory`, RAG, Mem0 single/multi, and
+LangMem. For `ours_memory` and LangMem, add `--memory_path`. For RAG, use the
+same embedding model at index and inference time and pass `--db_path`. Mem0
+still uses `MEM0_API_KEY` for its managed memory store; OpenRouter supplies
+only the inference LLM. Add `--dry_run` to inspect the exact command without
+calling a model.
+
+For local `gpt-oss-20b` reasoning-high inference on GPUs 0–3, use the
+optimized four-replica launcher. It runs one TP1 vLLM replica per GPU, routes
+requests through the least-loaded proxy, and uses concurrency 256 with async
+scheduling:
+
+```bash
+scripts/run_gpt_oss20b_high_dp4_inference.sh \
+  --method vanilla_llm \
+  --turn single \
+  --query hint \
+  --schema easy \
+  --pref_type easy
+
+scripts/run_gpt_oss20b_high_dp4_inference.sh \
+  --method ours_memory \
+  --turn single \
+  --query hint \
+  --schema easy \
+  --pref_type easy \
+  --memory_path outputs/ours_memory/.../memory.jsonl
+```
+
+The inference prompt, memory retrieval, and prediction output schema are
+unchanged; only server placement, request scheduling, and client timeout/retry
+settings differ.
 
 ## Evaluate with experiment5
 
@@ -176,6 +386,21 @@ plus aggregate `evaluation.json`. Submission refuses to create another billable
 batch when a provider state file already exists unless
 `--force-resubmit` is explicitly supplied.
 
+For the provider-specific reusable checkpoints in `MPT_v2_0725`, use the
+resume runner. It computes a separate exact complement for OpenAI and
+Anthropic, excludes easy conflict rows, and merges completed Batch results
+back into the existing 4,695-row checkpoints:
+
+```bash
+python scripts/run_mpt0725_vanilla_api_resume.py prepare
+python scripts/run_mpt0725_vanilla_api_resume.py submit --provider both
+python scripts/run_mpt0725_vanilla_api_resume.py status --provider both
+python scripts/run_mpt0725_vanilla_api_resume.py collect --provider both
+```
+
+Preparation and submission refuse to overwrite recorded batch state. Provider
+credentials are read only from `OPENAI_API_KEY` and `ANTHROPIC_API_KEY`.
+
 ## MPT_v2 ablations
 
 For G-V-R, experiment5 is the best source among experiments 4–7:
@@ -193,6 +418,22 @@ condition.
 bash ablations/gvr/run_mpt_v2.sh --dry-run
 bash ablations/gvr/run_mpt_v2.sh
 ```
+
+The same construction ablation can run through OpenRouter:
+
+```bash
+export OPENROUTER_API_KEY='...'
+
+PROVIDER=openrouter \
+MODEL=openai/gpt-4o \
+INPUT_PATH=data/MPT_v2_conflict_mixed_noise.json \
+bash ablations/gvr/run_mpt_v2.sh
+```
+
+Each resulting `memory.jsonl` can be passed to
+`scripts/run_inference.py --method ours_memory --provider openrouter` for the
+inference side of the ablation. Token-count and API-argument analyses consume
+the resulting artifacts and are provider-independent.
 
 The four controlled conditions are:
 

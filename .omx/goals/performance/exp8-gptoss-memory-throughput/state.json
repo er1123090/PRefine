@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "workflow": "performance-goal",
+  "slug": "exp8-gptoss-memory-throughput",
+  "objective": "Maximize experiment8 gpt-oss-20b ours_memory construction throughput on GPUs 0-3 without output corruption or request failures",
+  "status": "complete",
+  "createdAt": "2026-07-23T14:39:57.782Z",
+  "updatedAt": "2026-07-23T14:51:40.539Z",
+  "evaluator": {
+    "command": "/data/minseo/.venvs/vllm/bin/python /data/minseo/experiment8/scripts/evaluate_ours_memory_gpu_throughput.py",
+    "contract": "PASS when all four replicas are healthy, each sustains 64 in-flight requests, backend failures are zero, and recent aggregate generation throughput is at least 6500 tokens/s (2x the c128 baseline)"
+  },
+  "artifactPaths": {
+    "state": ".omx/goals/performance/exp8-gptoss-memory-throughput/state.json",
+    "ledger": ".omx/goals/performance/exp8-gptoss-memory-throughput/ledger.jsonl",
+    "evaluator": ".omx/goals/performance/exp8-gptoss-memory-throughput/evaluator.md"
+  },
+  "startedAt": "2026-07-23T14:39:58.139Z",
+  "lastValidation": {
+    "status": "pass",
+    "evidence": "Sustained c512/b8192 evaluator PASS: 7345.6 aggregate generation tok/s after initial 9012.2 sample; 4x128 in-flight, all replicas healthy, zero backend/proxy errors, zero preemptions/OOM. This is 2.25x the c128 baseline and the highest stable tested configuration.",
+    "recordedAt": "2026-07-23T14:50:35.584Z"
+  },
+  "completedAt": "2026-07-23T14:51:40.539Z"
+}

@@ -294,7 +294,11 @@ def format_text_preview(text: Any, limit: int = 120) -> str:
 
 
 def resolve_api_key(api_key: Optional[str], allow_empty: bool = False) -> str:
-    resolved = api_key or os.environ.get("OPENAI_API_KEY")
+    resolved = (
+        api_key
+        or os.environ.get("OPENAI_API_KEY")
+        or os.environ.get("OPENROUTER_API_KEY")
+    )
     if resolved:
         return resolved
     if allow_empty:
@@ -317,11 +321,17 @@ def create_async_openai_client(
     api_key: Optional[str] = None,
     base_url: Optional[str] = None,
     allow_empty: bool = False,
+    timeout: Optional[float] = None,
+    max_retries: Optional[int] = None,
 ) -> AsyncOpenAI:
     resolved_api_key = resolve_api_key(api_key, allow_empty=allow_empty)
     kwargs: Dict[str, Any] = {"api_key": resolved_api_key}
     if base_url:
         kwargs["base_url"] = base_url
+    if timeout is not None:
+        kwargs["timeout"] = timeout
+    if max_retries is not None:
+        kwargs["max_retries"] = max_retries
     return AsyncOpenAI(**kwargs)
 
 
@@ -912,7 +922,7 @@ def assign_singleturn_utterances(
                 and rule.get("domain") in query_map
                 and rule.get("domain") not in used_domains
             }
-            for domain in candidate_domains:
+            for domain in sorted(candidate_domains):
                 slot_values_map: Dict[str, List[str]] = {}
                 for rule in rules:
                     if rule.get("domain") != domain:
@@ -1035,7 +1045,7 @@ def assign_multiturn_utterances(
                 and rule.get("domain") in multiturn_data
                 and rule.get("domain") not in used_domains
             }
-            for domain in candidate_domains:
+            for domain in sorted(candidate_domains):
                 slot_values_map: Dict[str, List[str]] = {}
                 for rule in rules:
                     if rule.get("domain") != domain:

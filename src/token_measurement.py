@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 from functools import lru_cache
-from typing import Any, Iterable, Optional, Tuple
+from typing import Any, Dict, Iterable, Optional, Tuple
 
 try:
     import tiktoken
@@ -55,6 +55,34 @@ def count_json_tokens(
         json.dumps(value, ensure_ascii=False, sort_keys=True),
         encoding_name,
     )
+
+
+def memory_construction_lower_bound(
+    input_tokens: Optional[int],
+    before_memory_tokens: Optional[int],
+    after_memory_tokens: Optional[int],
+) -> Dict[str, Optional[int]]:
+    """Return the E8 Mem0 construction lower bound for one session."""
+    if (
+        input_tokens is None
+        or before_memory_tokens is None
+        or after_memory_tokens is None
+    ):
+        return {
+            "stored_memory_delta_tokens": None,
+            "construction_input_tokens_lower_bound": input_tokens,
+            "construction_output_tokens_lower_bound": None,
+            "construction_total_tokens_lower_bound": None,
+        }
+
+    delta = after_memory_tokens - before_memory_tokens
+    output_lower_bound = max(delta, 0)
+    return {
+        "stored_memory_delta_tokens": delta,
+        "construction_input_tokens_lower_bound": input_tokens,
+        "construction_output_tokens_lower_bound": output_lower_bound,
+        "construction_total_tokens_lower_bound": input_tokens + output_lower_bound,
+    }
 
 
 def encoding_metadata(name: str = "cl100k_base") -> dict:

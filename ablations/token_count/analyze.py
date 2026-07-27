@@ -331,6 +331,15 @@ def main() -> None:
                 "local_construction_input_tokens": row.get(
                     "local_construction_input_tokens"
                 ),
+                "construction_input_tokens_lower_bound": row.get(
+                    "construction_input_tokens_lower_bound"
+                ),
+                "construction_output_tokens_lower_bound": row.get(
+                    "construction_output_tokens_lower_bound"
+                ),
+                "construction_total_tokens_lower_bound": row.get(
+                    "construction_total_tokens_lower_bound"
+                ),
             }
             for canonical, aliases in USAGE_ALIASES.items():
                 item[canonical] = usage_value(row, aliases)
@@ -387,6 +396,23 @@ def main() -> None:
                 / 1_000_000
                 if isinstance(local_construction_tokens, (int, float))
                 and args.input_cost_per_million is not None
+                else None
+            )
+            lower_bound_input = item.get("construction_input_tokens_lower_bound")
+            lower_bound_output = item.get("construction_output_tokens_lower_bound")
+            item["construction_lower_bound_proxy_cost_usd"] = (
+                calculate_cost_usd(
+                    input_tokens=float(lower_bound_input),
+                    cached_input_tokens=0,
+                    output_tokens=float(lower_bound_output),
+                    input_cost_per_million=args.input_cost_per_million,
+                    output_cost_per_million=args.output_cost_per_million,
+                    cached_input_cost_per_million=args.cached_input_cost_per_million,
+                )
+                if isinstance(lower_bound_input, (int, float))
+                and isinstance(lower_bound_output, (int, float))
+                and args.input_cost_per_million is not None
+                and args.output_cost_per_million is not None
                 else None
             )
 
@@ -459,6 +485,18 @@ def main() -> None:
                     "local_construction_input_tokens": session.get(
                         "local_construction_input_tokens"
                     ),
+                    "construction_input_tokens_lower_bound": session.get(
+                        "construction_input_tokens_lower_bound"
+                    ),
+                    "construction_output_tokens_lower_bound": session.get(
+                        "construction_output_tokens_lower_bound"
+                    ),
+                    "construction_total_tokens_lower_bound": session.get(
+                        "construction_total_tokens_lower_bound"
+                    ),
+                    "stored_memory_delta_tokens": session.get(
+                        "stored_memory_delta_tokens"
+                    ),
                     "memory_count_after_session": session.get(
                         "memory_count_after_session"
                     ),
@@ -501,6 +539,27 @@ def main() -> None:
                     and args.input_cost_per_million is not None
                     else None
                 )
+                session_lower_input = session_row.get(
+                    "construction_input_tokens_lower_bound"
+                )
+                session_lower_output = session_row.get(
+                    "construction_output_tokens_lower_bound"
+                )
+                session_row["construction_lower_bound_proxy_cost_usd"] = (
+                    calculate_cost_usd(
+                        input_tokens=float(session_lower_input),
+                        cached_input_tokens=0,
+                        output_tokens=float(session_lower_output),
+                        input_cost_per_million=args.input_cost_per_million,
+                        output_cost_per_million=args.output_cost_per_million,
+                        cached_input_cost_per_million=args.cached_input_cost_per_million,
+                    )
+                    if isinstance(session_lower_input, (int, float))
+                    and isinstance(session_lower_output, (int, float))
+                    and args.input_cost_per_million is not None
+                    and args.output_cost_per_million is not None
+                    else None
+                )
                 session_detail.append(session_row)
 
     numeric_fields: List[str] = [
@@ -509,6 +568,9 @@ def main() -> None:
         "retrieved_memory_tokens",
         "retrieval_prompt_tokens",
         "local_construction_input_tokens",
+        "construction_input_tokens_lower_bound",
+        "construction_output_tokens_lower_bound",
+        "construction_total_tokens_lower_bound",
         "final_stored_memory_tokens",
         "provider_usage_coverage",
         "construction_provider_usage_coverage",
@@ -518,6 +580,7 @@ def main() -> None:
         "setup_estimated_cost_usd",
         "retrieval_estimated_input_cost_usd",
         "local_construction_input_estimated_cost_usd",
+        "construction_lower_bound_proxy_cost_usd",
         "final_stored_memory_estimated_input_cost_usd",
     ]
     for row in detail:
@@ -528,6 +591,10 @@ def main() -> None:
     session_numeric_fields = [
         "session_input_tokens",
         "local_construction_input_tokens",
+        "construction_input_tokens_lower_bound",
+        "construction_output_tokens_lower_bound",
+        "construction_total_tokens_lower_bound",
+        "stored_memory_delta_tokens",
         "memory_count_after_session",
         "stored_memory_tokens_after_session",
         "provider_usage_coverage",
@@ -535,6 +602,7 @@ def main() -> None:
         "construction_estimated_cost_usd",
         "stored_memory_estimated_input_cost_usd",
         "local_construction_input_estimated_cost_usd",
+        "construction_lower_bound_proxy_cost_usd",
     ]
     summary = {
         "files": len(paths),

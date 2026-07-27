@@ -2,15 +2,24 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-PYTHON_BIN="${PYTHON_BIN:-/data/minseo/.venvs/vllm/bin/python}"
+DEFAULT_PYTHON="/data/minseo/.venvs/experiment8/bin/python"
+if [[ ! -x "${DEFAULT_PYTHON}" ]]; then
+  DEFAULT_PYTHON="/data/minseo/.venvs/vllm/bin/python"
+fi
+PYTHON_BIN="${PYTHON_BIN:-${DEFAULT_PYTHON}}"
 MODEL="${MODEL:-gpt-4o-mini}"
 PROVIDER="${PROVIDER:-openai}"
 API_BASE="${API_BASE:-}"
-API_KEY="${API_KEY:-${OPENAI_API_KEY:-}}"
+API_KEY="${API_KEY:-}"
+INPUT_PATH="${INPUT_PATH:-${ROOT_DIR}/data/MPT_v2_mix600.json}"
 CONCURRENCY="${CONCURRENCY:-20}"
 MAX_RETRIES="${MAX_RETRIES:-10}"
 OUTPUT_ROOT="${OUTPUT_ROOT:-${ROOT_DIR}/outputs/ablations/gvr}"
 DRY_RUN=0
+
+if [[ "${PROVIDER}" == "openrouter" && -z "${API_BASE}" ]]; then
+  API_BASE="https://openrouter.ai/api/v1"
+fi
 
 if [[ "${1:-}" == "--dry-run" ]]; then
   DRY_RUN=1
@@ -30,7 +39,7 @@ for condition in "${conditions[@]}"; do
 
   cmd=(
     "${PYTHON_BIN}" "${ROOT_DIR}/ablations/gvr/build_memory.py"
-    --input "${ROOT_DIR}/data/MPT_v2_mix600.json"
+    --input "${INPUT_PATH}"
     --output "${output_dir}/memory.jsonl"
     --verifier_output "${output_dir}/verifier.jsonl"
     --refinement_output "${output_dir}/refinement.jsonl"

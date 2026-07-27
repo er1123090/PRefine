@@ -23,6 +23,7 @@ from src.construction_usage import (
     set_usage_session,
     usage_from_response,
 )
+from src.token_measurement import memory_construction_lower_bound
 
 
 def openai_response(
@@ -123,6 +124,28 @@ class ConstructionUsageTest(unittest.TestCase):
         self.assertEqual(usage["total_tokens"], 0)
 
 
+class MemoryConstructionLowerBoundTest(unittest.TestCase):
+    def test_positive_stored_memory_growth_is_added_to_input(self) -> None:
+        lower_bound = memory_construction_lower_bound(300, 100, 170)
+        self.assertEqual(lower_bound["stored_memory_delta_tokens"], 70)
+        self.assertEqual(
+            lower_bound["construction_output_tokens_lower_bound"], 70
+        )
+        self.assertEqual(
+            lower_bound["construction_total_tokens_lower_bound"], 370
+        )
+
+    def test_negative_stored_memory_growth_is_clamped_to_zero(self) -> None:
+        lower_bound = memory_construction_lower_bound(300, 170, 100)
+        self.assertEqual(lower_bound["stored_memory_delta_tokens"], -70)
+        self.assertEqual(
+            lower_bound["construction_output_tokens_lower_bound"], 0
+        )
+        self.assertEqual(
+            lower_bound["construction_total_tokens_lower_bound"], 300
+        )
+
+
 class CostCalculationTest(unittest.TestCase):
     def test_cached_input_uses_its_own_rate(self) -> None:
         self.assertAlmostEqual(
@@ -197,6 +220,9 @@ class CostCalculationTest(unittest.TestCase):
                 "example_id": "mem0",
                 "method": "mem0",
                 "local_construction_input_tokens": 500,
+                "construction_input_tokens_lower_bound": 500,
+                "construction_output_tokens_lower_bound": 50,
+                "construction_total_tokens_lower_bound": 550,
                 "token_counts": missing_summary,
                 "construction_token_usage": {
                     "summary": missing_summary,
@@ -207,6 +233,10 @@ class CostCalculationTest(unittest.TestCase):
                     {
                         "session_index": 1,
                         "local_construction_input_tokens": 500,
+                        "construction_input_tokens_lower_bound": 500,
+                        "construction_output_tokens_lower_bound": 50,
+                        "construction_total_tokens_lower_bound": 550,
+                        "stored_memory_delta_tokens": 50,
                         "stored_memory_tokens_after_session": 50,
                     }
                 ],
@@ -250,6 +280,10 @@ class CostCalculationTest(unittest.TestCase):
         self.assertIsNone(mem0["construction_estimated_cost_usd"])
         self.assertAlmostEqual(
             mem0["local_construction_input_estimated_cost_usd"], 0.001
+        )
+        self.assertEqual(mem0["construction_total_tokens_lower_bound"], 550)
+        self.assertAlmostEqual(
+            mem0["construction_lower_bound_proxy_cost_usd"], 0.0015
         )
         self.assertEqual(
             analysis["sessions"][1]["provider_usage_coverage"], 0

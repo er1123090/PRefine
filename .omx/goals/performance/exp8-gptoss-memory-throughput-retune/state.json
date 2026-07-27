@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "workflow": "performance-goal",
+  "slug": "exp8-gptoss-memory-throughput-retune",
+  "objective": "Maximize sustained experiment8 gpt-oss-20b ours_memory throughput on GPUs 0-3 from the current checkpoint without output corruption",
+  "status": "complete",
+  "createdAt": "2026-07-23T15:25:38.103Z",
+  "updatedAt": "2026-07-23T15:46:49.682Z",
+  "evaluator": {
+    "command": "/data/minseo/.venvs/vllm/bin/python /data/minseo/experiment8/scripts/evaluate_ours_memory_gpu_throughput.py",
+    "contract": "PASS when a sustained live sample improves aggregate generation tokens/s or completed model calls/hour over the mature c512 baseline, all four replicas remain healthy, backend failures are zero, and memory.jsonl remains valid and duplicate-free"
+  },
+  "artifactPaths": {
+    "state": ".omx/goals/performance/exp8-gptoss-memory-throughput-retune/state.json",
+    "ledger": ".omx/goals/performance/exp8-gptoss-memory-throughput-retune/ledger.jsonl",
+    "evaluator": ".omx/goals/performance/exp8-gptoss-memory-throughput-retune/evaluator.md"
+  },
+  "startedAt": "2026-07-23T15:25:38.468Z",
+  "lastValidation": {
+    "status": "pass",
+    "evidence": "Final c256/b8192 async prompt-JSON configuration PASS: two mature samples 9661.2 and 9789.8 aggregate generation tok/s, all four A100s at 100% utilization, 4x64 in-flight, all replicas healthy, zero backend failures. First newly committed row validated with reasoning_effort=high, 6 sessions/6 attempts, valid draft/verifier/final JSON; memory.jsonl 46/46 unique valid rows. No Gen/Ver/FSM/OOM/preemption errors; bash and Python syntax checks pass.",
+    "recordedAt": "2026-07-23T15:46:28.650Z"
+  },
+  "completedAt": "2026-07-23T15:46:49.682Z"
+}

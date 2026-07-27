@@ -2,16 +2,19 @@ import tqdm
 import os
 import argparse
 import json
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 try:
     import pandas as pd
 except ImportError:
-    import sys
-    from pathlib import Path
-
-    _ROOT = Path(__file__).resolve().parents[2]
-    if str(_ROOT) not in sys.path:
-        sys.path.insert(0, str(_ROOT))
     from src.exp4_runtime import tabular as pd
+
+from src.provider_config import resolve_embedding_endpoint
 
 # ---------------------------------------------------------
 # Helper: Load Dataset
@@ -34,6 +37,7 @@ def run_ingestion(
     input_path: str,
     db_path: str,
     collection_name: str,
+    provider: str = "auto",
     embedding_model: str = "text-embedding-3-small",
     embedding_api_key: str | None = None,
     embedding_base_url: str | None = None,
@@ -44,14 +48,29 @@ def run_ingestion(
     except ImportError as exc:
         raise RuntimeError("chromadb is required for RAG index construction") from exc
 
-    # 1. Initialize ChromaDB Client
-    if not embedding_api_key:
-        raise RuntimeError("OPENAI_API_KEY is required for embeddings.")
-    openai_ef = embedding_functions.OpenAIEmbeddingFunction(
-        api_key=embedding_api_key,
-        api_base=embedding_base_url,
-        model_name=embedding_model
+    embedding_model, embedding_base_url, embedding_api_key = (
+        resolve_embedding_endpoint(
+            provider=provider,
+            embedding_model=embedding_model,
+            base_url=embedding_base_url,
+            api_key=embedding_api_key,
+        )
     )
+    if not embedding_api_key:
+        if embedding_base_url:
+            embedding_api_key = "EMPTY"
+        else:
+            raise RuntimeError(
+                "OPENAI_API_KEY is required for the default embedding endpoint."
+            )
+
+    embedding_kwargs = {
+        "api_key": embedding_api_key,
+        "model_name": embedding_model,
+    }
+    if embedding_base_url:
+        embedding_kwargs["api_base"] = embedding_base_url
+    openai_ef = embedding_functions.OpenAIEmbeddingFunction(**embedding_kwargs)
     
     client = chromadb.PersistentClient(path=db_path)
     
@@ -131,6 +150,7 @@ if __name__ == "__main__":
     parser.add_argument("--input_path", type=str, default="/data/minseo/experiment8/data/MPT_v2_mix600.json")
     parser.add_argument("--db_path", type=str, default="./chroma_db_rag", help="Path to save vector database")
     parser.add_argument("--collection_name", type=str, default="user_memories")
+    parser.add_argument("--provider", choices=["auto", "openrouter"], default="auto")
     parser.add_argument("--base_url", type=str, default=None, help="Optional embeddings/base model endpoint override.")
     parser.add_argument("--api_key", type=str, default=None, help="Optional embeddings API key.")
     parser.add_argument("--embedding_base_url", type=str, default=None, help="Optional embedding-only endpoint override.")
@@ -139,16 +159,15 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     embedding_api_key = args.embedding_api_key or args.api_key
+    if args.provider != "openrouter":
+        embedding_api_key = embedding_api_key or os.environ.get("OPENAI_API_KEY")
     embedding_base_url = args.embedding_base_url or args.base_url
-
-    if not embedding_api_key:
-        print("[Error] OPENAI_API_KEY environment variable is required for embeddings.")
-        exit(1)
 
     run_ingestion(
         args.input_path,
         args.db_path,
         args.collection_name,
+        provider=args.provider,
         embedding_model=args.embedding_model,
         embedding_api_key=embedding_api_key,
         embedding_base_url=embedding_base_url,

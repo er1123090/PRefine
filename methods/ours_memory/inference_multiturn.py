@@ -26,6 +26,7 @@ from src.exp4_runtime.majority_preference import (
     select_query_preferences,
     select_query_rules,
 )
+from src.provider_config import resolve_openai_compatible_endpoint
 
 # Gemini Library Import
 try:
@@ -557,7 +558,8 @@ async def call_llm_api_async(
     model_name: str, 
     openai_client: AsyncOpenAI = None, 
     tools_schema: List[Dict] = None,
-    reasoning_effort: str = None
+    reasoning_effort: str = None,
+    use_openai_compatible: bool = False,
 ) -> Dict[str, Any]:
     """
     Returns a dictionary:
@@ -577,7 +579,7 @@ async def call_llm_api_async(
 
     try:
         # --- GEMINI ---
-        if "gemini" in model_name.lower():
+        if "gemini" in model_name.lower() and not use_openai_compatible:
             if not os.environ.get("GOOGLE_API_KEY"):
                 return {"error": "API_KEY_MISSING_GOOGLE"}
             
@@ -696,7 +698,8 @@ async def process_single_item(
     semaphore: asyncio.Semaphore,
     file_lock: asyncio.Lock,
     pbar: tqdm.tqdm,
-    reasoning_effort: str = None 
+    reasoning_effort: str = None,
+    use_openai_compatible: bool = False,
 ):
     async with semaphore:
         prompt = build_memory_input_prompt(
@@ -710,7 +713,12 @@ async def process_single_item(
 
         # 1. Call LLM (Returns Dictionary now)
         llm_result = await call_llm_api_async(
-            prompt, model_name, openai_client, tools_schema, reasoning_effort
+            prompt,
+            model_name,
+            openai_client,
+            tools_schema,
+            reasoning_effort,
+            use_openai_compatible,
         )
 
         # 2. Unpack Result
@@ -767,8 +775,11 @@ async def process_with_llm_async(
     prompt_template: str, context_type: str, pref_type: str,
     model_name: str, concurrency: int = 10,
     reasoning_effort: str = None,
+    provider: str = "auto",
     base_url: str = None,
     api_key: str = None,
+    request_timeout_seconds: Optional[float] = None,
+    client_max_retries: Optional[int] = None,
     max_queries: Optional[int] = None,
     example_id_sub_filter_path: Optional[str] = None,
 ):
@@ -776,20 +787,30 @@ async def process_with_llm_async(
     memory_map = load_memory_file(memory_path)
     multiturn_data = load_multiturn_data(multiturn_path)
     tools_schema = load_tools_from_file(tools_schema_path)
+
+    base_url, api_key = resolve_openai_compatible_endpoint(
+        provider=provider,
+        base_url=base_url,
+        api_key=api_key,
+    )
     
     # -------------------------------------------------------------
     # Client Initialization
     # -------------------------------------------------------------
     openai_client = None
-    if "gemini" not in model_name.lower():
+    use_openai_compatible = bool(base_url) or "gemini" not in model_name.lower()
+    if use_openai_compatible:
         client_args = {}
         if base_url:
             print(f"[Info] Using Custom/vLLM Base URL: {base_url}")
             client_args["base_url"] = base_url
             client_args["api_key"] = api_key if api_key else "EMPTY"
-        else:
-            if os.environ.get("OPENAI_API_KEY"):
-                client_args["api_key"] = os.environ.get("OPENAI_API_KEY")
+        elif api_key or os.environ.get("OPENAI_API_KEY"):
+            client_args["api_key"] = api_key or os.environ.get("OPENAI_API_KEY")
+        if request_timeout_seconds is not None:
+            client_args["timeout"] = request_timeout_seconds
+        if client_max_retries is not None:
+            client_args["max_retries"] = client_max_retries
         
         if "api_key" in client_args:
             openai_client = AsyncOpenAI(**client_args)
@@ -861,7 +882,8 @@ async def process_with_llm_async(
                 semaphore=semaphore,
                 file_lock=file_lock,
                 pbar=pbar,
-                reasoning_effort=reasoning_effort
+                reasoning_effort=reasoning_effort,
+                use_openai_compatible=use_openai_compatible,
             )
         )
         tasks.append(task)
@@ -900,12 +922,15 @@ if __name__ == "__main__":
     parser.add_argument("--model_name", type=str, default="meta-llama/Llama-3.1-8B-Instruct", help="Model name as served in vLLM")
     parser.add_argument("--concurrency", type=int, default=50, help="Concurrency level (Higher for vLLM)")
     parser.add_argument("--reasoning_effort", type=str, choices=["minimal", 'low', "medium", "high"], default=None)
+    parser.add_argument("--provider", choices=["auto", "openrouter"], default="auto")
+    parser.add_argument("--request_timeout_seconds", type=float, default=None)
+    parser.add_argument("--client_max_retries", type=int, default=None)
     parser.add_argument("--max_queries", type=int, default=None)
     parser.add_argument("--example_id_sub_filter_path", type=str, default=None)
 
     # vLLM Specific Settings
-    parser.add_argument("--base_url", type=str, default="http://localhost:8001/v1", help="vLLM server URL")
-    parser.add_argument("--api_key", type=str, default="EMPTY", help="API Key for vLLM")
+    parser.add_argument("--base_url", type=str, default=None, help="LLM base URL (optional)")
+    parser.add_argument("--api_key", type=str, default=None, help="API Key for LLM endpoint")
 
     args = parser.parse_args()
 
@@ -925,8 +950,11 @@ if __name__ == "__main__":
             model_name=args.model_name,
             concurrency=args.concurrency,
             reasoning_effort=args.reasoning_effort,
+            provider=args.provider,
             base_url=args.base_url,
             api_key=args.api_key,
+            request_timeout_seconds=args.request_timeout_seconds,
+            client_max_retries=args.client_max_retries,
             max_queries=args.max_queries,
             example_id_sub_filter_path=args.example_id_sub_filter_path,
         )

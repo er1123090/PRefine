@@ -10,6 +10,9 @@ Parsing supports:
     - Function-call syntax: Domain(slot="val", ...)
     - JSON variants: flat, nested, key-as-function
     - Braced function syntax: {Domain}(...)
+    - Markdown-bold function names: **Domain**(...)
+    - Quoted/braced model variants: {"Domain"(...)}
+    - A single missing closing parenthesis in an otherwise clear wrapped call
     - Markdown code fences
     - <think> tag stripping
     - Date/time normalisation for date/time slots
@@ -19,6 +22,7 @@ import json
 import re
 from collections import defaultdict
 from dataclasses import dataclass
+from functools import lru_cache
 from typing import Any, Dict, List, Optional, Set, Tuple, Union
 
 try:
@@ -34,6 +38,19 @@ except ImportError:
 
 _CALL_RE = re.compile(r"([A-Za-z_]\w*)\s*\((.*?)\)")
 _BRACED_FUNC_RE = re.compile(r"\{([A-Za-z_]\w*)\}\s*\(")
+_BOLD_FUNC_RE = re.compile(r"\*{2}\s*([A-Za-z_]\w*)\s*\*{2}\s*\(")
+_QUOTED_BRACED_FUNC_RE = re.compile(
+    r"""\{\s*(?P<quote>["'])(?P<func>[A-Za-z_]\w*)(?P=quote)"""
+    r"""\s*(?:\}\s*|:\s*)?\("""
+)
+_COMMA_WRAPPED_FUNC_RE = re.compile(
+    r"""^\s*\{\s*(?P<quote>["'])(?P<func>[A-Za-z_]\w*)(?P=quote)"""
+    r"""\s*,\s*(?P<args>.+?)\s*\}\s*$""",
+    re.DOTALL,
+)
+_QUOTED_ARG_NAME_RE = re.compile(
+    r"""(?P<quote>["'])(?P<slot>[A-Za-z_]\w*)(?P=quote)\s*="""
+)
 _CODE_FENCE_RE = re.compile(r"^\s*```(?:json)?\s*|\s*```\s*$", re.IGNORECASE)
 
 
@@ -47,6 +64,59 @@ def _strip_code_fences(s: str) -> str:
 
 def _normalize_braced_func(s: str) -> str:
     return _BRACED_FUNC_RE.sub(r"\1(", s)
+
+
+def _normalize_malformed_func(s: str) -> str:
+    comma_wrapped = _COMMA_WRAPPED_FUNC_RE.fullmatch(s)
+    if comma_wrapped and "=" in comma_wrapped.group("args"):
+        s = (
+            f"{comma_wrapped.group('func')}"
+            f"({comma_wrapped.group('args')})"
+        )
+
+    s = _BOLD_FUNC_RE.sub(r"\1(", s)
+    s = _QUOTED_BRACED_FUNC_RE.sub(
+        lambda match: f"{match.group('func')}(",
+        s,
+    )
+    return _QUOTED_ARG_NAME_RE.sub(
+        lambda match: f"{match.group('slot')}=",
+        s,
+    )
+
+
+def _parenthesis_balance(s: str) -> int:
+    balance = 0
+    in_quote: Optional[str] = None
+    escaped = False
+    for char in s:
+        if escaped:
+            escaped = False
+            continue
+        if char == "\\":
+            escaped = True
+            continue
+        if in_quote:
+            if char == in_quote:
+                in_quote = None
+            continue
+        if char in {'"', "'"}:
+            in_quote = char
+        elif char == "(":
+            balance += 1
+        elif char == ")":
+            balance -= 1
+    return balance
+
+
+def _repair_single_missing_closing_paren(s: str) -> str:
+    stripped = s.strip()
+    if not re.match(r"^\{?\s*[A-Za-z_]\w*\s*\(", stripped):
+        return s
+    if not stripped.endswith("}") or _parenthesis_balance(stripped) != 1:
+        return s
+    closing_brace = s.rfind("}")
+    return f"{s[:closing_brace]}){s[closing_brace:]}"
 
 
 def _strip_think_tags(s: str) -> str:
@@ -140,6 +210,29 @@ def _try_parse_json_to_calls(s: str) -> List[str]:
         return []
 
 
+@lru_cache(maxsize=32768)
+def _extract_calls_from_string(x: str) -> Tuple[str, ...]:
+    s = x.strip()
+    if not s:
+        return ()
+
+    s = _strip_think_tags(s)
+    s = _remove_code_fences_keep_content(s)
+    s = _strip_code_fences(s)
+    s = _normalize_braced_func(s)
+    s = _normalize_malformed_func(s)
+    s = _repair_single_missing_closing_paren(s)
+
+    json_calls = _try_parse_json_to_calls(s)
+    if json_calls:
+        return tuple(json_calls)
+
+    calls = [m.group(0) for m in _CALL_RE.finditer(s)]
+    if not calls and _CALL_RE.fullmatch(s):
+        calls = [s]
+    return tuple(calls)
+
+
 def extract_calls(x: Union[str, List[str], None]) -> List[str]:
     """Extract all function-call strings from a model output field."""
     if x is None:
@@ -152,24 +245,7 @@ def extract_calls(x: Union[str, List[str], None]) -> List[str]:
         return out
     if not isinstance(x, str):
         return []
-
-    s = x.strip()
-    if not s:
-        return []
-
-    s = _strip_think_tags(s)
-    s = _remove_code_fences_keep_content(s)
-    s = _strip_code_fences(s)
-    s = _normalize_braced_func(s)
-
-    json_calls = _try_parse_json_to_calls(s)
-    if json_calls:
-        return json_calls
-
-    calls = [m.group(0) for m in _CALL_RE.finditer(s)]
-    if not calls and _CALL_RE.fullmatch(s):
-        calls = [s]
-    return calls
+    return list(_extract_calls_from_string(x))
 
 
 # ---------------------------------------------------------------------------
@@ -187,6 +263,7 @@ def _process_value(val_str: str) -> str:
     return s
 
 
+@lru_cache(maxsize=32768)
 def _normalize_date_time_value(slot: str, value: str) -> str:
     """Normalise date/time slot values for fair comparison."""
     if not _DATEPARSER_AVAILABLE:
@@ -244,16 +321,18 @@ def _split_args(arg_str: str) -> List[str]:
     return parts
 
 
-def parse_call_to_slotvals(call: str) -> List[Tuple[str, str, str]]:
-    """Parse 'Domain(slot="val", ...)' into [(domain, slot, value), ...]."""
+@lru_cache(maxsize=32768)
+def _parse_call_to_slotvals_cached(
+    call: str,
+) -> Tuple[Tuple[str, str, str], ...]:
     call = call.strip()
     m = _CALL_RE.fullmatch(call)
     if not m:
-        return []
+        return ()
     domain = m.group(1).strip()
     args_str = m.group(2).strip()
     if not args_str:
-        return []
+        return ()
     out: List[Tuple[str, str, str]] = []
     for part in _split_args(args_str):
         if "=" not in part:
@@ -263,7 +342,12 @@ def parse_call_to_slotvals(call: str) -> List[Tuple[str, str, str]]:
         val = _process_value(v.strip())
         val = _normalize_date_time_value(slot, val)
         out.append((domain, slot, val))
-    return out
+    return tuple(out)
+
+
+def parse_call_to_slotvals(call: str) -> List[Tuple[str, str, str]]:
+    """Parse 'Domain(slot="val", ...)' into [(domain, slot, value), ...]."""
+    return list(_parse_call_to_slotvals_cached(call))
 
 
 # ---------------------------------------------------------------------------

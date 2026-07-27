@@ -38,6 +38,12 @@ from src.construction_usage import (
     record_response_usage,
     set_usage_session,
 )
+from src.provider_config import (
+    is_openrouter_endpoint,
+    provider_label,
+    resolve_embedding_endpoint,
+    resolve_openai_compatible_endpoint,
+)
 
 try:
     from langchain_core.callbacks import BaseCallbackHandler
@@ -49,14 +55,15 @@ except ImportError:
 class ConstructionUsageCallback(BaseCallbackHandler):
     """Capture token usage emitted by LangMem's internal ChatOpenAI calls."""
 
-    def __init__(self, model: str):
+    def __init__(self, model: str, provider: str = "openai"):
         self.model = model
+        self.provider = provider
 
     def on_llm_end(self, response: Any, **_: Any) -> None:
         record_response_usage(
             response,
             component="memory_manager",
-            provider="openai",
+            provider=self.provider,
             model=self.model,
         )
 
@@ -154,6 +161,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--memory_model", type=str, default="gpt-4o-mini")
     parser.add_argument("--embedding_model", type=str, default=DEFAULT_EMBEDDING_MODEL)
+    parser.add_argument("--provider", choices=["auto", "openrouter"], default="auto")
     parser.add_argument("--base_url", type=str, default=None)
     parser.add_argument("--api_key", type=str, default=None)
     parser.add_argument("--embedding_base_url", type=str, default=None)
@@ -357,6 +365,7 @@ async def extract_compact_memories_with_structured_output(
     client: Any,
     memory_model: str,
     messages: List[Dict[str, str]],
+    usage_provider: str = "openai",
 ) -> List[Dict[str, Any]]:
     prompt = build_compact_structured_output_prompt(messages)
     for max_tokens in (192, 256, 384):
@@ -373,7 +382,7 @@ async def extract_compact_memories_with_structured_output(
         record_response_usage(
             response,
             component="memory_extractor",
-            provider="openai",
+            provider=usage_provider,
             model=memory_model,
         )
         raw_content = response.choices[0].message.content or "{}"
@@ -452,6 +461,7 @@ async def extract_memories_with_structured_output(
     logger: Any | None = None,
     example_id: str | None = None,
     session_index: int | None = None,
+    usage_provider: str = "openai",
 ) -> List[Dict[str, Any]]:
     max_memories = structured_output_memory_limit(memory_model)
     prompt = build_structured_output_prompt(messages, max_memories=max_memories)
@@ -474,7 +484,7 @@ async def extract_memories_with_structured_output(
         record_response_usage(
             response,
             component="memory_extractor",
-            provider="openai",
+            provider=usage_provider,
             model=memory_model,
         )
         raw_content = response.choices[0].message.content or "{}"
@@ -508,6 +518,7 @@ async def extract_memories_with_structured_output(
                 client,
                 memory_model,
                 messages,
+                usage_provider=usage_provider,
             )
             if compact_memories:
                 if logger is not None:
@@ -548,6 +559,29 @@ async def extract_memories_with_structured_output(
 
 async def main() -> None:
     args = parse_args()
+    args.base_url, args.api_key = resolve_openai_compatible_endpoint(
+        provider=args.provider,
+        base_url=args.base_url,
+        api_key=args.api_key,
+    )
+    embedding_base_url = args.embedding_base_url
+    if embedding_base_url is None and is_openrouter_endpoint(args.base_url):
+        embedding_base_url = args.base_url
+    embedding_api_key = (
+        args.embedding_api_key
+        or (args.api_key if is_openrouter_endpoint(embedding_base_url) else None)
+    )
+    (
+        args.embedding_model,
+        args.embedding_base_url,
+        args.embedding_api_key,
+    ) = resolve_embedding_endpoint(
+        provider=args.provider,
+        embedding_model=args.embedding_model,
+        base_url=embedding_base_url,
+        api_key=embedding_api_key,
+    )
+    usage_provider = provider_label(args.provider, args.base_url)
     run_log_path = args.run_log_path or default_run_log_path(args.output_path)
     logger = setup_logger("langmem_build", run_log_path)
     memory_backend = resolve_memory_backend(args.memory_backend, args.memory_model)
@@ -620,7 +654,10 @@ async def main() -> None:
             base_url=args.base_url,
             allow_empty=bool(args.base_url),
         )
-    construction_callback = ConstructionUsageCallback(args.memory_model)
+    construction_callback = ConstructionUsageCallback(
+        args.memory_model,
+        provider=usage_provider,
+    )
 
     async def process_example(example: Dict[str, Any]) -> None:
         async with semaphore:
@@ -657,6 +694,7 @@ async def main() -> None:
                             logger,
                             example_id,
                             session_index,
+                            usage_provider=usage_provider,
                         )
                         async with store_lock:
                             await asyncio.to_thread(
@@ -745,6 +783,7 @@ async def main() -> None:
         "input_path": args.input_path,
         "output_path": args.output_path,
         "memory_model": args.memory_model,
+        "provider": usage_provider,
         "embedding_model": args.embedding_model,
         "embedding_dimensions": runtime.embedding_dimensions,
         "memory_base_url": args.base_url,

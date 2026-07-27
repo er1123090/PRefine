@@ -39,6 +39,8 @@ async def run_inference(
     concurrency: int,
     reasoning_effort: Optional[str],
     method_name: str,
+    request_timeout_seconds: Optional[float] = None,
+    client_max_retries: Optional[int] = None,
     retriever: Retriever = empty_retriever,
     base_url: Optional[str] = None,
     api_key: Optional[str] = None,
@@ -50,6 +52,8 @@ async def run_inference(
             api_key=api_key,
             base_url=base_url,
             allow_empty=bool(base_url),
+            timeout=request_timeout_seconds,
+            max_retries=client_max_retries,
         )
 
     semaphore = asyncio.Semaphore(concurrency)

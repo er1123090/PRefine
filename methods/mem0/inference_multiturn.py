@@ -27,6 +27,7 @@ from src.exp4_runtime.majority_preference import (
     select_query_preferences,
     select_query_rules,
 )
+from src.provider_config import resolve_openai_compatible_endpoint
 try:
     from mem0 import MemoryClient
 except ImportError:
@@ -354,7 +355,8 @@ async def call_llm_api_async(
     model_name: str, 
     openai_client: AsyncOpenAI = None, 
     tools_schema: List[Dict] = None,
-    reasoning_effort: str = None
+    reasoning_effort: str = None,
+    use_openai_compatible: bool = False,
 ) -> Dict[str, Any]:
     result = {
         "content": "",
@@ -365,7 +367,7 @@ async def call_llm_api_async(
 
     try:
         # --- GEMINI ---
-        if "gemini" in model_name.lower():
+        if "gemini" in model_name.lower() and not use_openai_compatible:
             if not os.environ.get("GOOGLE_API_KEY"):
                 return {"error": "API_KEY_MISSING_GOOGLE"}
             
@@ -477,7 +479,8 @@ async def process_single_item(
     semaphore: asyncio.Semaphore,
     file_lock: asyncio.Lock,
     pbar: tqdm.tqdm,
-    reasoning_effort: str = None 
+    reasoning_effort: str = None,
+    use_openai_compatible: bool = False,
 ):
     async with semaphore:
         user_id = str(original_ex.get("example_id", "unknown_user"))
@@ -526,7 +529,12 @@ async def process_single_item(
 
         # Call LLM
         llm_result = await call_llm_api_async(
-            prompt, model_name, openai_client, tools_schema, reasoning_effort
+            prompt,
+            model_name,
+            openai_client,
+            tools_schema,
+            reasoning_effort,
+            use_openai_compatible,
         )
 
         # Unpack
@@ -593,28 +601,37 @@ async def process_with_llm_async(
     prompt_template: str, context_type: str, pref_type: str,
     model_name: str, concurrency: int = 10,
     reasoning_effort: str = None,
+    provider: str = "auto",
     base_url: str = None,
     api_key: str = None
 ):
     df = load_chains_dataset(input_path)
     multiturn_data = load_multiturn_data(multiturn_path)
     tools_schema = load_tools_from_file(tools_schema_path)
+
+    base_url, api_key = resolve_openai_compatible_endpoint(
+        provider=provider,
+        base_url=base_url,
+        api_key=api_key,
+    )
     
     # -------------------------------------------------------------
     # Client Initialization
     # -------------------------------------------------------------
     openai_client = None
-    if "gemini" not in model_name.lower():
+    use_openai_compatible = bool(base_url) or "gemini" not in model_name.lower()
+    if use_openai_compatible:
         client_args = {}
         # FIX: Check if base_url is explicitly provided and not empty
         if base_url:
             print(f"[Info] Using Custom/vLLM Base URL: {base_url}")
             client_args["base_url"] = base_url
-            client_args["api_key"] = api_key if api_key else "EMPTY"
+            client_args["api_key"] = api_key or "EMPTY"
         else:
             print(f"[Info] Using Standard OpenAI API for model: {model_name}")
-            if os.environ.get("OPENAI_API_KEY"):
-                client_args["api_key"] = os.environ.get("OPENAI_API_KEY")
+            resolved_api_key = api_key or os.environ.get("OPENAI_API_KEY")
+            if resolved_api_key:
+                client_args["api_key"] = resolved_api_key
         
         if "api_key" in client_args:
             openai_client = AsyncOpenAI(**client_args)
@@ -677,7 +694,8 @@ async def process_with_llm_async(
                 semaphore=semaphore,
                 file_lock=file_lock,
                 pbar=pbar,
-                reasoning_effort=reasoning_effort
+                reasoning_effort=reasoning_effort,
+                use_openai_compatible=use_openai_compatible,
             )
         )
         tasks.append(task)
@@ -715,6 +733,7 @@ if __name__ == "__main__":
     parser.add_argument("--model_name", type=str, default="gpt-4o-mini", help="Model name")
     parser.add_argument("--concurrency", type=int, default=20)
     parser.add_argument("--reasoning_effort", type=str, choices=["minimal", 'low', "medium", "high"], default="high")
+    parser.add_argument("--provider", choices=["auto", "openrouter"], default="auto")
 
     # vLLM Specific Settings
     # FIX: Default to None so we don't accidentally hit localhost if we want standard OpenAI
@@ -744,6 +763,7 @@ if __name__ == "__main__":
             model_name=args.model_name,
             concurrency=args.concurrency,
             reasoning_effort=args.reasoning_effort,
+            provider=args.provider,
             base_url=args.base_url,
             api_key=args.api_key
         )

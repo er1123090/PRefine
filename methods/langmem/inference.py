@@ -18,6 +18,11 @@ from src.exp4_prompts import (
     IMPLICIT_ZS_PROMPT_MEMORY_TEMPLATE,
     IMPLICIT_ZS_PROMPT_MEMORY_TEMPLATE_MULTITURN,
 )
+from src.provider_config import (
+    is_openrouter_endpoint,
+    resolve_embedding_endpoint,
+    resolve_openai_compatible_endpoint,
+)
 
 
 def main() -> None:
@@ -38,6 +43,7 @@ def main() -> None:
     parser.add_argument("--memory_top_k", type=int, default=5)
     parser.add_argument("--concurrency", type=int, default=20)
     parser.add_argument("--reasoning_effort", default=None)
+    parser.add_argument("--provider", choices=["auto", "openrouter"], default="auto")
     parser.add_argument("--embedding_model", default="text-embedding-3-small")
     parser.add_argument("--embedding_base_url", default=None)
     parser.add_argument("--embedding_api_key", default=None)
@@ -45,6 +51,29 @@ def main() -> None:
     parser.add_argument("--api_key", default=None)
     parser.add_argument("--max_queries", type=int, default=None)
     args = parser.parse_args()
+
+    args.base_url, args.api_key = resolve_openai_compatible_endpoint(
+        provider=args.provider,
+        base_url=args.base_url,
+        api_key=args.api_key,
+    )
+    embedding_base_url = args.embedding_base_url
+    if embedding_base_url is None and is_openrouter_endpoint(args.base_url):
+        embedding_base_url = args.base_url
+    embedding_api_key = (
+        args.embedding_api_key
+        or (args.api_key if is_openrouter_endpoint(embedding_base_url) else None)
+    )
+    (
+        args.embedding_model,
+        args.embedding_base_url,
+        args.embedding_api_key,
+    ) = resolve_embedding_endpoint(
+        provider=args.provider,
+        embedding_model=args.embedding_model,
+        base_url=embedding_base_url,
+        api_key=embedding_api_key,
+    )
 
     common_args = {
         "input_path": args.input_path,

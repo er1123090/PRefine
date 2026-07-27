@@ -119,7 +119,24 @@ def resolve_providers(provider: str) -> Sequence[str]:
     return ("openai", "anthropic") if provider == "both" else (provider,)
 
 
-def build_population(query: str, context_type: str) -> List[Dict[str, Any]]:
+def is_conflict_example(example: Mapping[str, Any]) -> bool:
+    meta = example.get("meta")
+    if not isinstance(meta, Mapping):
+        return False
+    return str(meta.get("subset", "")).startswith("conflict_")
+
+
+def build_population(
+    query: str,
+    context_type: str,
+    input_path: str | Path | None = None,
+    exclude_easy_conflict: bool = False,
+) -> List[Dict[str, Any]]:
+    resolved_input_path = (
+        Path(input_path).resolve()
+        if input_path is not None
+        else ROOT / "data" / "MPT_v2_mix600.json"
+    )
     population: List[Dict[str, Any]] = []
     population_index = 0
     for condition in CONDITIONS:
@@ -128,7 +145,7 @@ def build_population(query: str, context_type: str) -> List[Dict[str, Any]]:
         schema = condition["schema"]
         items = prepare_items(
             turn=turn,
-            input_path=str(ROOT / "data" / "MPT_v2_mix600.json"),
+            input_path=str(resolved_input_path),
             query_path=str(ROOT / "config" / f"query_{turn}turn_{query}.json"),
             pref_list_path=str(ROOT / "config" / "pref_list.json"),
             pref_group_path=str(ROOT / "config" / "pref_group.json"),
@@ -140,6 +157,12 @@ def build_population(query: str, context_type: str) -> List[Dict[str, Any]]:
         )
         for item in items:
             example = item["original_ex"]
+            if (
+                exclude_easy_conflict
+                and pref_type == "easy"
+                and is_conflict_example(example)
+            ):
+                continue
             example_id = str(example.get("example_id", "unknown_user"))
             sub_idx = int(item["sub_idx"])
             prompt = common.build_memory_prompt(
@@ -650,11 +673,29 @@ def metric_row(rows: Sequence[Dict[str, Any]], pref_map: Any) -> Dict[str, Any]:
 
 def evaluation_report(predictions: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
     pref_map = load_pref_list(str(ROOT / "config" / "pref_list.json"))
-    report = {"overall": metric_row(predictions, pref_map), "conditions": {}}
+    report = {
+        "overall": metric_row(predictions, pref_map),
+        "conditions": {},
+        "condition_conflict": {},
+    }
     condition_values = sorted({row["condition"] for row in predictions})
     for condition in condition_values:
         subset = [row for row in predictions if row["condition"] == condition]
         report["conditions"][condition] = metric_row(subset, pref_map)
+        report["condition_conflict"][condition] = {
+            label: metric_row(
+                [
+                    row
+                    for row in subset
+                    if is_conflict_example(row) is want_conflict
+                ],
+                pref_map,
+            )
+            for label, want_conflict in (
+                ("non_conflict", False),
+                ("conflict", True),
+            )
+        }
     usage_fields = (
         "total_tokens",
         "input_tokens",
