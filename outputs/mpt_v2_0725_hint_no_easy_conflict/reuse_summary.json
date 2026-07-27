@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-07-25T14:56:06.396976+00:00",
+  "dataset": {
+    "old": "/data/minseo/experiment8/data/MPT_v2_mix600.json",
+    "old_sha256": "679fd024219953b49e565c9bd401e9bd0af33297c1a1d683634d8cc2e4abd01b",
+    "new": "/data/minseo/experiment8/data/MPT_v2_0725.json",
+    "new_sha256": "d88ec1bb16b05ddaa9a75e73f3c11b2be3e6b9ff5e3916f38747cb988008c814"
+  },
+  "archive_outputs": "/data/minseo/experiment8/archive/mix600_20260725_233232/outputs",
+  "target": {
+    "query": "hint",
+    "exclude_easy_conflict": true,
+    "population_count": 4695,
+    "reusable_examples": 299,
+    "reusable_population_rows": 3775,
+    "conflict_population_rows": 920
+  },
+  "reuse_policy": {
+    "memory": "same example_id and identical sessions/api_calls/api_calls_drop/api_calls_pref",
+    "inference": "reusable memory identity plus identical turn/difficulty/query/ground-truth set/full prompt and a complete source record"
+  },
+  "memory": {
+    "qwen3_8b": {
+      "source": "/data/minseo/experiment8/archive/mix600_20260725_233232/outputs/ours_memory/cross_model_mix600_high_reasoning_20260721/qwen3_8b/memory.jsonl",
+      "destination": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/memory/qwen3_8b/memory.jsonl",
+      "reused_examples": 299,
+      "remaining_examples": 160,
+      "sha256": "345c2e0deccbf717514d00437ecd63d636fdeddbe86ba552b3837da4d8585d57"
+    },
+    "gemma4_12b_it": {
+      "source": "/data/minseo/experiment8/archive/mix600_20260725_233232/outputs/ours_memory/cross_model_mix600_high_reasoning_20260721/gemma4_12b_it/memory.jsonl",
+      "destination": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/memory/gemma4_12b_it/memory.jsonl",
+      "reused_examples": 299,
+      "remaining_examples": 160,
+      "sha256": "97f0689d3fa7a1459ad30e7f5ce7826a0d3934969f96bcd2dab79054ed5c3e15"
+    },
+    "gpt_oss_20b": {
+      "source": "/data/minseo/experiment8/archive/mix600_20260725_233232/outputs/ours_memory/cross_model_mix600_high_reasoning_20260721/gpt_oss_20b/memory.jsonl",
+      "destination": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/memory/gpt_oss_20b/memory.jsonl",
+      "reused_examples": 299,
+      "remaining_examples": 160,
+      "sha256": "811b191cea7553ee034890acb67d69f54ac08fae7585c71232d44324dcf9756f",
+      "refinement_logs.jsonl": {
+        "source": "/data/minseo/experiment8/archive/mix600_20260725_233232/outputs/ours_memory/cross_model_mix600_high_reasoning_20260721/gpt_oss_20b/refinement_logs.jsonl",
+        "reused_rows": 12695
+      },
+      "verifier_logs.jsonl": {
+        "source": "/data/minseo/experiment8/archive/mix600_20260725_233232/outputs/ours_memory/cross_model_mix600_high_reasoning_20260721/gpt_oss_20b/verifier_logs.jsonl",
+        "reused_rows": 12695
+      }
+    }
+  },
+  "vanilla_llm": {
+    "anthropic_claude-haiku-4-5_non_reasoning": {
+      "source": "/data/minseo/experiment8/archive/mix600_20260725_233232/outputs/vanilla_llm/full_6508/anthropic_claude-haiku-4-5_non_reasoning/inference.jsonl",
+      "destination": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/vanilla_llm/anthropic_claude-haiku-4-5_non_reasoning/inference.jsonl",
+      "reused_rows": 3699,
+      "pending_rows": 996,
+      "sha256": "1378b09f26cadf28c4b5ccb5af6d1e3e05f0783b286802091b5cf8f92e518489"
+    },
+    "google_gemma-4-12b-it_thinking_off_optimized": {
+      "source": "/data/minseo/experiment8/archive/mix600_20260725_233232/outputs/vanilla_llm/full_6508/google_gemma-4-12b-it_thinking_off_optimized/inference.jsonl",
+      "destination": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/vanilla_llm/google_gemma-4-12b-it_thinking_off_optimized/inference.jsonl",
+      "reused_rows": 3775,
+      "pending_rows": 920,
+      "sha256": "38d8d944127ee7b2e91b1f7ae697dfe3a9166a7b381fe03b0139db7e82ddf0cb"
+    },
+    "openai_gpt-5_minimal": {
+      "source": "/data/minseo/experiment8/archive/mix600_20260725_233232/outputs/vanilla_llm/full_6508/openai_gpt-5_minimal/inference.jsonl",
+      "destination": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/vanilla_llm/openai_gpt-5_minimal/inference.jsonl",
+      "reused_rows": 3709,
+      "pending_rows": 986,
+      "sha256": "7d437f5fcce48aeb088e45e75e0295679825744eb7dc8fd202135e7760f3cb8a"
+    },
+    "openai_gpt-oss-20b_thinking_off_reasoning_low_optimized": {
+      "source": "/data/minseo/experiment8/archive/mix600_20260725_233232/outputs/vanilla_llm/full_6508/openai_gpt-oss-20b_thinking_off_reasoning_low_optimized/inference.jsonl",
+      "destination": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/vanilla_llm/openai_gpt-oss-20b_thinking_off_reasoning_low_optimized/inference.jsonl",
+      "reused_rows": 3775,
+      "pending_rows": 920,
+      "sha256": "9023c327103664e5269a7ecf7a1e9184af136125118ebc1464c5620917d53d75"
+    },
+    "qwen_qwen3-8b_thinking_off_optimized": {
+      "source": "/data/minseo/experiment8/archive/mix600_20260725_233232/outputs/vanilla_llm/full_6508/qwen_qwen3-8b_thinking_off_optimized/inference.jsonl",
+      "destination": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/vanilla_llm/qwen_qwen3-8b_thinking_off_optimized/inference.jsonl",
+      "reused_rows": 3767,
+      "pending_rows": 928,
+      "sha256": "ad476cb2f3faf65e340c5a9b9b8bab5439d9709e07f2ae554caf871a06749703"
+    }
+  },
+  "ours_memory": {
+    "gemma4_12b_it_memory__to__gemma4_12b_it_high_reasoning_optimized": {
+      "source": "/data/minseo/experiment8/archive/mix600_20260725_233232/outputs/ours_memory/full_6508/gemma4_12b_it_memory__to__gemma4_12b_it_high_reasoning_optimized/inference.jsonl",
+      "destination": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/ours_memory/gemma4_12b_it_memory__to__gemma4_12b_it_high_reasoning_optimized/inference.jsonl",
+      "memory_path": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/memory/gemma4_12b_it/memory.jsonl",
+      "reused_rows": 3724,
+      "pending_rows": 971,
+      "sha256": "0da7cfe2d07d1d68802fb2f7055c1cedc90d5612bd503cce310e69b4a9ad41f3"
+    },
+    "gemma4_12b_it_memory__to__qwen3_8b_high_reasoning_optimized": {
+      "source": "/data/minseo/experiment8/archive/mix600_20260725_233232/outputs/ours_memory/full_6508/gemma4_12b_it_memory__to__qwen3_8b_high_reasoning_optimized/inference.jsonl",
+      "destination": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/ours_memory/gemma4_12b_it_memory__to__qwen3_8b_high_reasoning_optimized/inference.jsonl",
+      "memory_path": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/memory/gemma4_12b_it/memory.jsonl",
+      "reused_rows": 3775,
+      "pending_rows": 920,
+      "sha256": "43e0ef383fd3ccfa833d6661f6cbc1a5f15d0ac21446a0f95c9945e69838609f"
+    },
+    "gpt_oss_20b_memory__to__qwen3_8b_high_reasoning_optimized": {
+      "source": "/data/minseo/experiment8/archive/mix600_20260725_233232/outputs/ours_memory/full_6508/gpt_oss_20b_memory__to__qwen3_8b_high_reasoning_optimized/inference.jsonl",
+      "destination": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/ours_memory/gpt_oss_20b_memory__to__qwen3_8b_high_reasoning_optimized/inference.jsonl",
+      "memory_path": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/memory/gpt_oss_20b/memory.jsonl",
+      "reused_rows": 3775,
+      "pending_rows": 920,
+      "sha256": "a36c10e5afca73a17f354c83e64236ee4f7e814c646a689a790e4a6602d7be4e"
+    },
+    "qwen3_8b_memory__to__gemma4_12b_it_high_reasoning_optimized": {
+      "source": "/data/minseo/experiment8/archive/mix600_20260725_233232/outputs/ours_memory/full_6508/qwen3_8b_memory__to__gemma4_12b_it_high_reasoning_optimized/inference.jsonl",
+      "destination": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/ours_memory/qwen3_8b_memory__to__gemma4_12b_it_high_reasoning_optimized/inference.jsonl",
+      "memory_path": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/memory/qwen3_8b/memory.jsonl",
+      "reused_rows": 3701,
+      "pending_rows": 994,
+      "sha256": "9030cffdc4333c41d42e384dfc3d39b898408a90c94ac02c134802b518c82d03"
+    },
+    "qwen3_8b_memory__to__qwen3_8b_high_reasoning_optimized": {
+      "source": "/data/minseo/experiment8/archive/mix600_20260725_233232/outputs/ours_memory/full_6508/qwen3_8b_memory__to__qwen3_8b_high_reasoning_optimized/inference.jsonl",
+      "destination": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/ours_memory/qwen3_8b_memory__to__qwen3_8b_high_reasoning_optimized/inference.jsonl",
+      "memory_path": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/memory/qwen3_8b/memory.jsonl",
+      "reused_rows": 3747,
+      "pending_rows": 948,
+      "sha256": "4d828c74b07bbdd20875d7af6481b37a69b67819c98b78a88d20c80c3957e598"
+    }
+  }
+}

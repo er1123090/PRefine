@@ -1,0 +1,43 @@
+{
+  "method": "ours_memory",
+  "model": "openrouter/qwen3_8b-high-reasoning",
+  "request_model": "qwen/qwen3-8b",
+  "api_provider": "openrouter",
+  "input_path": "/data/minseo/experiment8/data/MPT_v2_0725.json",
+  "exclude_easy_conflict": true,
+  "thinking": true,
+  "reasoning_effort": "high",
+  "max_tokens": 8192,
+  "max_retry_tokens": 32768,
+  "temperature": 0.0,
+  "requests_per_second": 4.0,
+  "top_p": 1.0,
+  "top_k": -1,
+  "min_p": 0.0,
+  "seed": 42,
+  "expected": 4695,
+  "checkpoint_unique": 4695,
+  "prediction_count": 4695,
+  "status_counts": {
+    "OK": 4695
+  },
+  "token_usage": {
+    "total_tokens": 31897498.0,
+    "input_tokens": 27106689.0,
+    "output_tokens": 4790809.0,
+    "reasoning_tokens": 4655864.0,
+    "cached_input_tokens": 0.0,
+    "cost_usd": 5.351300707999991
+  },
+  "condition_counts": {
+    "multi_easy": 648,
+    "multi_hard": 688,
+    "multi_medium": 972,
+    "single_easy": 727,
+    "single_hard": 688,
+    "single_medium": 972
+  },
+  "elapsed_seconds": 1895.2550633512437,
+  "completed_at": "2026-07-26T04:59:03.552742+00:00",
+  "memory_path": "/data/minseo/experiment8/outputs/mpt_v2_0725_hint_no_easy_conflict/memory/qwen3_8b/_memory.jsonl"
+}
